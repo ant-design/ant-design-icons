@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>check-square-fill</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M689,353h-46.9c-10.2,0-19.9,4.9-25.9,13.3L459,584.3l-71.2-98.8c-6-8.3-15.6-13.3-25.9-13.3H315
+		c-6.5,0-10.3,7.4-6.5,12.7l124.6,172.8c12.7,17.7,39,17.7,51.7,0l210.6-292C699.3,360.4,695.5,353,689,353z"/>
+	<path d="M880,112H144c-17.7,0-32,14.3-32,32v736c0,17.7,14.3,32,32,32h736c17.7,0,32-14.3,32-32V144C912,126.3,897.7,112,880,112z
+		 M695.5,365.7l-210.6,292c-12.7,17.7-39,17.7-51.7,0L308.5,484.9c-3.8-5.3,0-12.7,6.5-12.7h46.9c10.2,0,19.9,4.9,25.9,13.3
+		l71.2,98.8l157.2-218c6-8.3,15.6-13.3,25.9-13.3H689C695.5,353,699.3,360.4,695.5,365.7z"/>
+</g>
+</svg>

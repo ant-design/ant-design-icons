@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<title>calendar-fill</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path d="M112,880c0,17.7,14.3,32,32,32h736c17.7,0,32-14.3,32-32V460H112V880z"/>
+	<path d="M880,184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4,0-8,3.6-8,8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4,0-8,3.6-8,8v64H144
+		c-17.7,0-32,14.3-32,32v176h800V216C912,198.3,897.7,184,880,184z"/>
+</g>
+</svg>

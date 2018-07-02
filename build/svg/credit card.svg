@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>credit card</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M136,792h752V440H136V792z M643,648c0-4.4,3.6-8,8-8h165c4.4,0,8,3.6,8,8v72c0,4.4-3.6,8-8,8H651
+		c-4.4,0-8-3.6-8-8V648z"/>
+	<rect x="136" y="232" class="st0" width="752" height="120"/>
+	<path d="M928,160H96c-17.7,0-32,14.3-32,32v640c0,17.7,14.3,32,32,32h832c17.7,0,32-14.3,32-32V192C960,174.3,945.7,160,928,160z
+		 M136,232h752v120H136V232z M888,792H136V440h752V792z"/>
+	<path d="M651,728h165c4.4,0,8-3.6,8-8v-72c0-4.4-3.6-8-8-8H651c-4.4,0-8,3.6-8,8v72C643,724.4,646.6,728,651,728z"/>
+</g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<title>font-size</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path d="M920,416h-48H664h-48c-4.4,0-8,3.6-8,8v48v64c0,4.4,3.6,8,8,8h48c4.4,0,8-3.6,8-8v-56h60v320h-46c-4.4,0-8,3.6-8,8v48
+		c0,4.4,3.6,8,8,8h164c4.4,0,8-3.6,8-8v-48c0-4.4-3.6-8-8-8h-46V480h60v56c0,4.4,3.6,8,8,8h48c4.4,0,8-3.6,8-8v-64v-48
+		C928,419.6,924.4,416,920,416z"/>
+	<path d="M656,296v-72v-56c0-4.4-3.6-8-8-8h-56H160h-56c-4.4,0-8,3.6-8,8v56v72c0,4.4,3.6,8,8,8h56c4.4,0,8-3.6,8-8v-64h168v560h-92
+		c-4.4,0-8,3.6-8,8v56c0,4.4,3.6,8,8,8h264c4.4,0,8-3.6,8-8v-56c0-4.4-3.6-8-8-8h-92V232h168v64c0,4.4,3.6,8,8,8h56
+		C652.4,304,656,300.4,656,296z"/>
+</g>
+</svg>

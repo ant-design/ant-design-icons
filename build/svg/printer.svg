@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>printer</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<rect x="360" y="568" class="st0" width="304" height="276"/>
+	<rect x="360" y="180" class="st0" width="304" height="152"/>
+	<path class="st0" d="M852,400H732H292H172c-6.6,0-12,5.4-12,12v292h132V500h440v204h132V412C864,405.4,858.6,400,852,400z M828,484
+		c0,4.4-3.6,8-8,8h-40c-4.4,0-8-3.6-8-8v-40c0-4.4,3.6-8,8-8h40c4.4,0,8,3.6,8,8V484z"/>
+	<path d="M820,436h-40c-4.4,0-8,3.6-8,8v40c0,4.4,3.6,8,8,8h40c4.4,0,8-3.6,8-8v-40C828,439.6,824.4,436,820,436z"/>
+	<path d="M852,332H732V120c0-4.4-3.6-8-8-8H300c-4.4,0-8,3.6-8,8v212H172c-44.2,0-80,35.8-80,80v328c0,17.7,14.3,32,32,32h168v132
+		c0,4.4,3.6,8,8,8h424c4.4,0,8-3.6,8-8V772h168c17.7,0,32-14.3,32-32V412C932,367.8,896.2,332,852,332z M360,180h304v152H360V180z
+		 M664,844H360V568h304V844z M864,704H732V500H292v204H160V412c0-6.6,5.4-12,12-12h120h440h120c6.6,0,12,5.4,12,12V704z"/>
+</g>
+</svg>

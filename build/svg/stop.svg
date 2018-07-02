@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>stop</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M140,512c0,205.4,166.6,372,372,372c89,0,170.8-31.3,234.8-83.5L223.5,277.2C171.3,341.2,140,423,140,512z"/>
+	<path class="st0" d="M512,140c-89,0-170.8,31.3-234.8,83.5l523.3,523.3C852.7,682.8,884,601,884,512C884,306.6,717.4,140,512,140z"
+		/>
+	<path d="M512,64C264.6,64,64,264.6,64,512s200.6,448,448,448s448-200.6,448-448S759.4,64,512,64z M512,884
+		c-205.4,0-372-166.6-372-372c0-89,31.3-170.8,83.5-234.8l523.3,523.3C682.8,852.7,601,884,512,884z M800.5,746.8L277.2,223.5
+		C341.2,171.3,423,140,512,140c205.4,0,372,166.6,372,372C884,601,852.7,682.8,800.5,746.8z"/>
+</g>
+</svg>

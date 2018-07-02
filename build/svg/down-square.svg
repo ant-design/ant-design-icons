@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>down-square-o</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M184,840h656V184H184V840z M334,400h46.9c10.2,0,19.9,4.9,25.9,13.2L512,558.6l105.2-145.4
+		c6-8.3,15.6-13.2,25.9-13.2H690c6.5,0,10.3,7.4,6.5,12.7l-178,246c-3.2,4.4-9.7,4.4-12.9,0l-178-246C323.7,407.4,327.5,400,334,400
+		z"/>
+	<path d="M505.5,658.7c3.2,4.4,9.7,4.4,12.9,0l178-246c3.8-5.3,0-12.7-6.5-12.7h-46.9c-10.2,0-19.9,4.9-25.9,13.2L512,558.6
+		L406.8,413.2c-6-8.3-15.6-13.2-25.9-13.2H334c-6.5,0-10.3,7.4-6.5,12.7L505.5,658.7z"/>
+	<path d="M880,112H144c-17.7,0-32,14.3-32,32v736c0,17.7,14.3,32,32,32h736c17.7,0,32-14.3,32-32V144C912,126.3,897.7,112,880,112z
+		 M840,840H184V184h656V840z"/>
+</g>
+</svg>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>gift</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M408,306h70v-70c0-38.6-31.4-70-70-70c-38.6,0-70,31.4-70,70S369.4,306,408,306z"/>
+	<rect x="228" y="550" class="st0" width="250" height="308"/>
+	<polygon class="st0" points="228,482 478,482 478,378 180,378 180,482 224,482 	"/>
+	<path class="st0" d="M686,236c0-38.6-31.4-70-70-70c-38.6,0-70,31.4-70,70v70h70C654.6,306,686,274.6,686,236z"/>
+	<rect x="546" y="550" class="st0" width="250" height="308"/>
+	<polygon class="st0" points="546,482 796,482 824,482 844,482 844,378 546,378 	"/>
+	<path d="M880,310H732.4c13.6-21.4,21.6-46.8,21.6-74c0-76.1-61.9-138-138-138c-41.4,0-78.7,18.4-104,47.4
+		c-25.3-29-62.6-47.4-104-47.4c-76.1,0-138,61.9-138,138c0,27.2,7.9,52.6,21.6,74H144c-17.7,0-32,14.3-32,32v200c0,4.4,3.6,8,8,8h40
+		v344c0,17.7,14.3,32,32,32h640c17.7,0,32-14.3,32-32V550h40c4.4,0,8-3.6,8-8V342C912,324.3,897.7,310,880,310z M546,236
+		c0-38.6,31.4-70,70-70c38.6,0,70,31.4,70,70s-31.4,70-70,70h-70V236z M408,166c38.6,0,70,31.4,70,70v70h-70c-38.6,0-70-31.4-70-70
+		S369.4,166,408,166z M180,482V378h298v104H228h-4H180z M228,550h250v308H228V550z M796,858H546V550h250V858z M844,482h-20h-28H546
+		V378h298V482z"/>
+</g>
+</svg>

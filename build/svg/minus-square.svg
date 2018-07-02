@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>minus-square-o</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M184,840h656V184H184V840z M320,488c0-4.4,3.6-8,8-8h368c4.4,0,8,3.6,8,8v48c0,4.4-3.6,8-8,8H328
+		c-4.4,0-8-3.6-8-8V488z"/>
+	<path d="M328,544h368c4.4,0,8-3.6,8-8v-48c0-4.4-3.6-8-8-8H328c-4.4,0-8,3.6-8,8v48C320,540.4,323.6,544,328,544z"/>
+	<path d="M880,112H144c-17.7,0-32,14.3-32,32v736c0,17.7,14.3,32,32,32h736c17.7,0,32-14.3,32-32V144C912,126.3,897.7,112,880,112z
+		 M840,840H184V184h656V840z"/>
+</g>
+</svg>

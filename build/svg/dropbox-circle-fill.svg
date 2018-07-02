@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>dropbox-circle-fill</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<polygon class="st0" points="256,537.9 407,637.1 512.3,549.4 360.5,455.5 	"/>
+	<polygon class="st0" points="407,274 256,371.2 360.5,455.5 512.3,361.7 	"/>
+	<polygon class="st0" points="512.6,568.2 407,655.9 361.6,626.4 361.6,659.5 512.6,750 663.2,659.5 663.2,626.4 618.2,655.9 	"/>
+	<polygon class="st0" points="768,372.1 617.6,274 512.3,361.7 663.8,455.5 663.8,455.5 663.8,455.5 663.8,455.5 512.3,549.4 
+		617.6,637.1 768,539 663.8,455.5 	"/>
+	<polygon points="663.8,455.5 663.8,455.5 663.8,455.5 	"/>
+	<polygon points="512.3,361.7 360.5,455.5 512.3,549.4 663.8,455.5 	"/>
+	<path d="M512,64C264.6,64,64,264.6,64,512s200.6,448,448,448s448-200.6,448-448S759.4,64,512,64z M663.2,659.5L512.6,750l-151-90.5
+		v-33.1l45.4,29.4l105.6-87.7l105.6,87.7l45.1-29.4V659.5z M617.6,637.1l-105.3-87.7L407,637.1l-151-99.2l104.5-82.4L256,371.2
+		L407,274l105.3,87.7L617.6,274L768,372.1l-104.2,83.5L768,539L617.6,637.1z"/>
+</g>
+</svg>

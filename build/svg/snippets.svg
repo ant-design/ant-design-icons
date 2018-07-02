@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>snippets</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M450,510V336H232v552h432V550H490C467.9,550,450,532.1,450,510z"/>
+	<polygon class="st0" points="514,336 514,486 664,486 664,485.8 514.2,336 	"/>
+	<path class="st0" d="M724,216c0,4.4-3.6,8-8,8h-56c-4.4,0-8-3.6-8-8v-32H500v32c0,4.4-3.6,8-8,8h-56c-4.4,0-8-3.6-8-8v-32h-68v80
+		h184l192,192v304h56V184h-68V216z"/>
+	<path d="M832,112H724V72c0-4.4-3.6-8-8-8h-56c-4.4,0-8,3.6-8,8v40H500V72c0-4.4-3.6-8-8-8h-56c-4.4,0-8,3.6-8,8v40H320
+		c-17.7,0-32,14.3-32,32v120h-96c-17.7,0-32,14.3-32,32v632c0,17.7,14.3,32,32,32h512c17.7,0,32-14.3,32-32v-96h96
+		c17.7,0,32-14.3,32-32V144C864,126.3,849.7,112,832,112z M664,888H232V336h218v174c0,22.1,17.9,40,40,40h174V888z M664,486H514V336
+		h0.2L664,485.8V486z M792,760h-56V456L544,264H360v-80h68v32c0,4.4,3.6,8,8,8h56c4.4,0,8-3.6,8-8v-32h152v32c0,4.4,3.6,8,8,8h56
+		c4.4,0,8-3.6,8-8v-32h68V760z"/>
+</g>
+</svg>

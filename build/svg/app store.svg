@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>app store</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<rect x="612" y="612" class="st0" width="200" height="200"/>
+	<rect x="212" y="612" class="st0" width="200" height="200"/>
+	<rect x="212" y="212" class="st0" width="200" height="200"/>
+	<rect x="612" y="212" class="st0" width="200" height="200"/>
+	<path d="M464,144H160c-8.8,0-16,7.2-16,16v304c0,8.8,7.2,16,16,16h304c8.8,0,16-7.2,16-16V160C480,151.2,472.8,144,464,144z
+		 M412,412H212V212h200V412z"/>
+	<path d="M864,144H560c-8.8,0-16,7.2-16,16v304c0,8.8,7.2,16,16,16h304c8.8,0,16-7.2,16-16V160C880,151.2,872.8,144,864,144z
+		 M812,412H612V212h200V412z"/>
+	<path d="M464,544H160c-8.8,0-16,7.2-16,16v304c0,8.8,7.2,16,16,16h304c8.8,0,16-7.2,16-16V560C480,551.2,472.8,544,464,544z
+		 M412,812H212V612h200V812z"/>
+	<path d="M864,544H560c-8.8,0-16,7.2-16,16v304c0,8.8,7.2,16,16,16h304c8.8,0,16-7.2,16-16V560C880,551.2,872.8,544,864,544z
+		 M812,812H612V612h200V812z"/>
+</g>
+</svg>

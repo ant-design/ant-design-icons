@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>bank</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<rect x="264" y="462" class="st0" width="117" height="374"/>
+	<rect x="453" y="462" class="st0" width="117" height="374"/>
+	<polygon class="st0" points="512,196.7 240.9,393.9 783.1,393.9 	"/>
+	<rect x="642" y="462" class="st0" width="118" height="374"/>
+	<path d="M894,462c30.9,0,43.8-39.7,18.7-58L530.8,126.2c-11.2-8.2-26.4-8.2-37.6,0L111.3,404c-25.1,18.2-12.2,58,18.8,58H192v374
+		h-72c-4.4,0-8,3.6-8,8v52c0,4.4,3.6,8,8,8h784c4.4,0,8-3.6,8-8v-52c0-4.4-3.6-8-8-8h-72V462H894z M512,196.7l271.1,197.2H240.9
+		L512,196.7z M264,462h117v374H264V462z M453,462h117v374H453V462z M760,836H642V462h118V836z"/>
+</g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>flag</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<rect x="184" y="232" class="st0" width="368" height="336"/>
+	<path class="st0" d="M624,632c0,4.4-3.6,8-8,8H504v73h336V377H624V632z"/>
+	<path d="M880,305H624V192c0-17.7-14.3-32-32-32H184v-40c0-4.4-3.6-8-8-8h-56c-4.4,0-8,3.6-8,8v48v464v272c0,4.4,3.6,8,8,8h56
+		c4.4,0,8-3.6,8-8V640h248v113c0,17.7,14.3,32,32,32h416c17.7,0,32-14.3,32-32V337C912,319.3,897.7,305,880,305z M184,568V232h368
+		v336H184z M840,713H504v-73h112c4.4,0,8-3.6,8-8V377h216V713z"/>
+</g>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>database</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M232,616h560V408H232V616z M344,472c22.1,0,40,17.9,40,40c0,22.1-17.9,40-40,40s-40-17.9-40-40
+		C304,489.9,321.9,472,344,472z"/>
+	<path class="st0" d="M792,136H232v208h560V136z M344,280c-22.1,0-40-17.9-40-40s17.9-40,40-40s40,17.9,40,40S366.1,280,344,280z"/>
+	<path class="st0" d="M232,888h560V680H232V888z M344,744c22.1,0,40,17.9,40,40s-17.9,40-40,40s-40-17.9-40-40S321.9,744,344,744z"
+		/>
+	<path d="M832,64H192c-17.7,0-32,14.3-32,32v832c0,17.7,14.3,32,32,32h640c17.7,0,32-14.3,32-32V96C864,78.3,849.7,64,832,64z
+		 M232,136h560v208H232V136z M792,616H232V408h560V616z M792,888H232V680h560V888z"/>
+	<circle cx="344" cy="240" r="40"/>
+	<circle cx="344" cy="512" r="40"/>
+	<circle cx="344" cy="784" r="40"/>
+</g>
+</svg>

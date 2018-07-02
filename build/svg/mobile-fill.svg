@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>mobile-fill</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<circle class="st0" cx="512" cy="784" r="40"/>
+	<path d="M744,62H280c-35.3,0-64,28.7-64,64v768c0,35.3,28.7,64,64,64h464c35.3,0,64-28.7,64-64V126C808,90.7,779.3,62,744,62z
+		 M512,824c-22.1,0-40-17.9-40-40s17.9-40,40-40s40,17.9,40,40S534.1,824,512,824z"/>
+</g>
+</svg>

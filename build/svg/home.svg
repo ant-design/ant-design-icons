@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>home</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M535.1,195.7L512,172.6L142,542.3h96V868H392V640c0-22.1,17.9-40,40-40h160c22.1,0,40,17.9,40,40v228h153.9
+		V542.3H882L535.1,195.7L535.1,195.7z"/>
+	<rect x="456" y="664" class="st0" width="112" height="204"/>
+	<path d="M946.5,505L560.1,118.8l-25.9-25.9l0,0c-12.3-12.2-32.1-12.2-44.4,0L77.5,505c-12.3,12.3-18.9,28.6-18.8,46
+		c0.4,35.2,29.7,63.3,64.9,63.3h42.5V940h691.8V614.3h43.4c17.1,0,33.2-6.7,45.3-18.8c12.1-12.1,18.7-28.2,18.7-45.3
+		C965.3,533.2,958.6,517.1,946.5,505z M568,868H456V664h112V868z M785.9,542.3V868H632V640c0-22.1-17.9-40-40-40H432
+		c-22.1,0-40,17.9-40,40v228H238.1V542.3h-96l370-369.7l23.1,23.1l0,0L882,542.3H785.9z"/>
+</g>
+</svg>

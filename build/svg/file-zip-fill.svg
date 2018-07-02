@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>file-zip-fill</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="file-zip-fill" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(160.000000, 64.000000)" fill="#000000">
+            <path d="M694.6,224.7 C700.6,230.7 704,238.8 704,247.3 L704,864 C704,881.7 689.7,896 672,896 L32,896 C14.3,896 0,881.7 0,864 L0,32 C0,14.3 14.3,0 32,0 L456.7,0 C465.2,0 473.4,3.4 479.4,9.4 L694.6,224.7 Z M630.2,262 L442,73.8 L442,262 L630.2,262 Z M136,72 L136,136 L200,136 L200,72 L136,72 Z M200,136 L200,200 L264,200 L264,136 L200,136 Z M136,200 L136,264 L200,264 L200,200 L136,200 Z M200,264 L200,328 L264,328 L264,264 L200,264 Z M136,328 L136,392 L200,392 L200,328 L136,328 Z M200,392 L200,456 L264,456 L264,392 L200,392 Z M136,456 L136,520 L200,520 L200,456 L136,456 Z M136,520 L136,680 L264,680 L264,520 L136,520 Z M184,568 L216,568 L216,632 L184,632 L184,568 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

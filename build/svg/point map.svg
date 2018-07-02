@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<title>point map</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path d="M888,792H200V168c0-4.4-3.6-8-8-8h-56c-4.4,0-8,3.6-8,8v632v56c0,4.4,3.6,8,8,8h56h696c4.4,0,8-3.6,8-8v-56
+		C896,795.6,892.4,792,888,792z"/>
+	<circle cx="352" cy="604" r="64"/>
+	<circle cx="454" cy="380" r="48"/>
+	<circle cx="660" cy="608" r="96"/>
+	<circle cx="768" cy="294" r="56"/>
+</g>
+</svg>

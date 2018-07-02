@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>folder-open</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<polygon class="st0" points="159,768 771.3,768 874.6,512 262.3,512 	"/>
+	<path class="st0" d="M238,444h510v-73.6H444.1L324.5,256H136v387.2L208.3,464C213.2,451.9,225,444,238,444z"/>
+	<path d="M928,444H820V330.4c0-17.7-14.3-32-32-32H473L355.7,186.2c-1.5-1.4-3.5-2.2-5.5-2.2H96c-17.7,0-32,14.3-32,32v592
+		c0,17.7,14.3,32,32,32h8h684h6c13,0,24.8-7.9,29.7-20l134-332c1.5-3.8,2.3-7.9,2.3-12C960,458.3,945.7,444,928,444z M136,256h188.5
+		l119.6,114.4H748V444H238c-13,0-24.8,7.9-29.7,20L136,643.2V256z M771.3,768H159l103.3-256h612.4L771.3,768z"/>
+</g>
+</svg>

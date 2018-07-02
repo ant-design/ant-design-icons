@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#030303;}
+</style>
+<title>delete</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M352,184h8v-8C360,180.4,356.4,184,352,184z"/>
+	<path class="st0" d="M664,176v8h8C667.6,184,664,180.4,664,176z"/>
+	<rect x="360" y="184" class="st0" width="304" height="72"/>
+	<polygon class="st0" points="664,328 360,328 288,328 268.5,328 292.7,840 731.3,840 755.5,328 736,328 	"/>
+	<path class="st1" d="M360,184h-8c4.4,0,8-3.6,8-8V184h304v-8c0,4.4,3.6,8,8,8h-8v72h72v-80c0-35.3-28.7-64-64-64H352
+		c-35.3,0-64,28.7-64,64v80h72V184z"/>
+	<path d="M864,256h-33h-72.1H736h-72H360h-72h-22.9H193h-33c-17.7,0-32,14.3-32,32v32c0,4.4,3.6,8,8,8h60.4l24.7,523
+		c1.6,34.1,29.8,61,63.9,61H739c34.2,0,62.3-26.8,63.9-61l24.7-523H888c4.4,0,8-3.6,8-8v-32C896,270.3,881.7,256,864,256z
+		 M731.3,840H292.7l-24.2-512H288h72h304h72h19.5L731.3,840z"/>
+</g>
+</svg>
