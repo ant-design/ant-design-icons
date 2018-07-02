@@ -1,0 +1,28 @@
+{
+  "name": "ant-design-icons",
+  "version": "0.1.0",
+  "description": "Ant Design Icons",
+  "main": "index.js",
+  "repository": "https://github.com/ant-design/ant-design-icons",
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "rollup --config",
+    "generate": "node build"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^2.0.0",
+    "@svgr/core": "^2.0.0",
+    "@types/react": "^16.4.6",
+    "chalk": "^2.4.1",
+    "globby": "^8.0.1",
+    "mz-modules": "^2.1.0",
+    "rollup": "^0.62.0",
+    "rollup-plugin-typescript2": "^0.15.1",
+    "typescript": "^2.9.2"
+  },
+  "peerDependencies": {
+    "react": "^16.4.1"
+  }
+}
