@@ -1,10 +1,13 @@
 {
-  "name": "ant-design-icons",
+  "name": "antd-icons",
   "version": "0.0.1-alpha.0",
   "description": "Ant Design Icons",
   "module": "lib/index.js",
   "sideEffects": false,
   "repository": "https://github.com/ant-design/ant-design-icons",
+  "contributors": [
+    "HeskeyBaozi <hezhiyu233@foxmail.com>"
+  ],
   "license": "MIT",
   "dependencies": {},
   "scripts": {
