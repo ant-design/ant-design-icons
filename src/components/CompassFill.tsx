@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const CompassFill: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M697.1 322l-225.5 98.7 132.1 132.1 98.7-225.5c.4-1.1.4-2.2 0-3.2-.9-2.1-3.3-3-5.3-2.1zM322 697.1c-.4 1-.4 2.2 0 3.2.9 2.1 3.3 3 5.3 2.1l225.5-98.7-132.1-132.1L322 697.1z"

@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Gold: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M217.2 620l-20.7 128h201l-20.7-128zM592.8 276H433.2l-20.7 128h201zM647.2 620l-20.7 128h201l-20.7-128z"

@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Audit: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M746 620c0-27.6-22.4-50-50-50s-50 22.4-50 50 22.4 50 50 50 50-22.4 50-50zM566 826h260v60H566z"

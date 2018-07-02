@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const SaveFill: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M384 176h256v112H384zM512 442c-79.5 0-144 64.5-144 144s64.5 144 144 144 144-64.5 144-144-64.5-144-144-144zm0 224c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80z"

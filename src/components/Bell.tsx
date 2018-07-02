@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Bell: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M512 888c26.5 0 48-21.5 48-48h-96c0 26.5 21.5 48 48 48zM659.1 280.9C619.8 241.6 567.6 220 512 220c-55.6 0-107.8 21.6-147.1 60.9S304 372.4 304 428v340h416V428c0-55.6-21.6-107.8-60.9-147.1z"

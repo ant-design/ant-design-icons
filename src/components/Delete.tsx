@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Delete: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M352 184h8v-8c0 4.4-3.6 8-8 8zM664 176v8h8c-4.4 0-8-3.6-8-8zM360 184h304v72H360zM664 328H268.5l24.2 512h438.6l24.2-512H736z"

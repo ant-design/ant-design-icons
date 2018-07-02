@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Car: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M184 517v237h656V517l-15.6-43H199.6L184 517zm576 24c22.1 0 40 17.9 40 40s-17.9 40-40 40-40-17.9-40-40 17.9-40 40-40zm-388 71c0-4.4 3.6-8 8-8h40c4.4 0 8 3.6 8 8v36h168v-36c0-4.4 3.6-8 8-8h40c4.4 0 8 3.6 8 8v84c0 4.4-3.6 8-8 8H380c-4.4 0-8-3.6-8-8v-84zm-108-71c22.1 0 40 17.9 40 40s-17.9 40-40 40-40-17.9-40-40 17.9-40 40-40zM728.8 210H301.2c-3.5 0-6.5 2.2-7.6 5.5l-.4 1.3-.5 1.3L220 418h584.1l-75.3-208z"

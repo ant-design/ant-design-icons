@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const SecurityScan: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M214 226.7v427.6l298 232.2 298-232.2V226.7L512 125.1 214 226.7zm412.8 123.5c56.3 56.3 56.3 147.5 0 203.8-48.5 48.5-123 55.2-178.6 20.1l-77.5 77.5c-3.1 3.1-8.2 3.1-11.3 0l-34-34c-3.1-3.1-3.1-8.2 0-11.3l77.5-77.5c-35.1-55.7-28.4-130.1 20.1-178.6 56.3-56.3 147.5-56.3 203.8 0z"

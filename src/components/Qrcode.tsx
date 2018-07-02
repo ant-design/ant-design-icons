@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Qrcode: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M192 832h220V612H192v220zm74-138c0-4.4 3.6-8 8-8h56c4.4 0 8 3.6 8 8v56c0 4.4-3.6 8-8 8h-56c-4.4 0-8-3.6-8-8v-56zM192 412h220V192H192v220zm74-138c0-4.4 3.6-8 8-8h56c4.4 0 8 3.6 8 8v56c0 4.4-3.6 8-8 8h-56c-4.4 0-8-3.6-8-8v-56zM612 412h220V192H612v220zm74-138c0-4.4 3.6-8 8-8h56c4.4 0 8 3.6 8 8v56c0 4.4-3.6 8-8 8h-56c-4.4 0-8-3.6-8-8v-56z"

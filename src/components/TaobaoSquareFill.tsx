@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const TaobaoSquareFill: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M280.9 410.6l-32.7 50.2 60.2 37.5s40.3 20.6 21.1 58.9C311.7 593.7 224 673.5 224 673.5l78.5 49c54.3-117.9 50.8-102.2 64.4-144.5 14-43.3 17.1-76.2-6.7-100.1-30.6-30.7-33.9-33.6-79.3-67.3z"

@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const PlayCircle: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path className="st0" d="M461.8 633.1L628.5 512 461.8 390.9z" />
     <path
       className="st0"

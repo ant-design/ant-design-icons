@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Reconciliation: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <circle className="st0" cx={676} cy={657} r={34} />
     <path
       className="st0"

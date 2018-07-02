@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const FileMarkdown: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M534 352V136H232v752h560V394H576c-23.2 0-42-18.8-42-42zm72.3 122H641c6.6 0 12 5.4 12 12v272c0 6.6-5.4 12-12 12h-27.3c-6.6 0-12-5.4-12-12V581.6l-66.8 150.6c-1.9 4.3-6.2 7.1-11 7.1h-24.1c-4.7 0-9-2.8-11-7.1L422 582v176c0 6.6-5.4 12-12 12h-27c-6.6 0-12-5.4-12-12V486c0-6.6 5.4-12 12-12h35c4.8 0 9.1 2.8 11 7.2l83.1 191 83.1-191c2-4.4 6.3-7.2 11.1-7.2z"

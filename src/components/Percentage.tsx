@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Percentage: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M304 376c39.7 0 72-32.3 72-72s-32.3-72-72-72-72 32.3-72 72 32.3 72 72 72zM720 648c-39.7 0-72 32.3-72 72s32.3 72 72 72 72-32.3 72-72-32.3-72-72-72z"

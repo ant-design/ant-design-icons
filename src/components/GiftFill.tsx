@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const GiftFill: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M616 166c-38.6 0-70 31.4-70 70v70h70c38.6 0 70-31.4 70-70s-31.4-70-70-70zM408 166c-38.6 0-70 31.4-70 70s31.4 70 70 70h70v-70c0-38.6-31.4-70-70-70z"

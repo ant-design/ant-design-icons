@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Bank: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M264 462h117v374H264zM453 462h117v374H453zM512 196.7L240.9 393.9h542.2zM642 462h118v374H642z"

@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Gateway: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M144 240h88v88h-88zM792 240h88v88h-88zM144 696h88v88h-88zM728 376v-56H296v56c0 8.8-7.2 16-16 16h-56v240h56c8.8 0 16 7.2 16 16v56h432v-56c0-8.8 7.2-16 16-16h56V392h-56c-8.8 0-16-7.2-16-16zM792 696h88v88h-88z"

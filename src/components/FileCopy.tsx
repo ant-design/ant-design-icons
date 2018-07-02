@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const FileCopy: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M232 706h142c22.1 0 40 17.9 40 40v142h250V264H232v442z"

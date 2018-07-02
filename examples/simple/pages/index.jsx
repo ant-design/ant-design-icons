@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Alibaba } from '../../../lib';
 
 
-export default class Index extends React.Component<{}> {
+export default class Index extends React.Component {
   render() {
     return (
       <div>

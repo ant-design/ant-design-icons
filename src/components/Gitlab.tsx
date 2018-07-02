@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Gitlab: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M271.2 193.1c-.5-1.6-.7-1.7-3.4-1.7-1.1 0-2.5.3-3.4 2.9l-57.9 199.9h132.1l-67.4-201.1zM158.8 558.7l230.6 172.9L187 461.4zM232.7 442.3l212.9 284.2-90.8-284.2zM758.6 194.4c-.9-2.6-2.3-3-3.4-3-.6 0-2.5.1-3.5 1.9l-67.3 200.9H818l-59.4-199.8zM630.1 736.2l236.7-177.5-29.4-99.2zM670.8 442.3L580 723.1l210.3-280.8zM405.7 442.3L512.9 776 620 442.3z"

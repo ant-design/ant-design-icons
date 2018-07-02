@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Crown: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M512 252.9L336.3 487.3l-139.8-86.1 53.8 409.4h523.3l53.9-409.4-139.8 86.1L512 252.9zm0 481.3c-62.1 0-112.6-50.5-112.6-112.6S449.9 509 512 509s112.6 50.5 112.6 112.6S574.1 734.2 512 734.2z"

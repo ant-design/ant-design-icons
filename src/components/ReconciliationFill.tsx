@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const ReconciliationFill: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M676 232h-72v-56h-64v56h-72v48h208zM176 464h272v88H176zM176 616h272v232H176zM592 440c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-48zM760 400h-48c-4.4 0-8 3.6-8 8v96c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-96c0-4.4-3.6-8-8-8z"

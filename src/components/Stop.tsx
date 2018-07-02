@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Stop: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M140 512c0 205.4 166.6 372 372 372 89 0 170.8-31.3 234.8-83.5L223.5 277.2C171.3 341.2 140 423 140 512zM512 140c-89 0-170.8 31.3-234.8 83.5l523.3 523.3C852.7 682.8 884 601 884 512c0-205.4-166.6-372-372-372z"

@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const DatabaseFill: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <circle className="st0" cx={288} cy={832} r={40} />
     <circle className="st0" cx={288} cy={512} r={40} />
     <circle className="st0" cx={288} cy={192} r={40} />

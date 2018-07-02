@@ -14,7 +14,7 @@ yarn-error.log*
 *.sln
 
 # raw-svg
-build/svg
+build/svg/
 
 # rollup cache
 .rpt2_cache

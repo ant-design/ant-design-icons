@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Weibo: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M443.9 619.2c-8.5-3.4-19.1.7-24.1 9.1-4.8 8.4-2.2 18 6.4 21.5 8.7 3.6 19.7-.5 24.7-9.1 4.7-8.6 1.6-18.3-7-21.5z"

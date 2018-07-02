@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const LinkedinFill: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M290 222.1c-38 0-68.8 30.8-68.8 68.8s30.8 68.8 68.8 68.8c37.9 0 68.8-30.8 68.8-68.8-.1-37.9-30.9-68.8-68.8-68.8zM230.6 411.9h118.7v381.8H230.6zM651.4 402.4c-57.7 0-96.4 31.7-112.3 61.7h-1.6v-52.2H423.7v381.8h118.6V604.8c0-49.8 9.5-98 71.2-98 60.8 0 61.7 56.9 61.7 101.2v185.7h118.6V584.3c-.1-102.8-22.3-181.9-142.4-181.9z"

@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Filter: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M411 561.4l9.5 16.6h183l9.5-16.6L811.3 226H212.7zM420.6 642h182.9v156H420.6z"

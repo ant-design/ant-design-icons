@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const RadarChart: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M484 373.3l-134.3 97.1L484 514.1zM512 599.2l-93.9 128.9h187.8zM540.1 373.3v140.8l134.2-43.7zM740.1 449l98.5-32-298.5-217.1v104.4zM466 567.2l-144.3-46.9 55.2 169.2zM377.3 784l-50.2 69h369.8l-50.3-69zM702.3 520.3L558 567.2l89.1 122.3zM687.8 745.3l53.8 73.9 113.1-348.4-86.5 28.1zM484 304.3V199.9L185.4 417l98.5 32zM255.8 498.9l-86.5-28.1 113.1 348.4 53.8-73.9z"

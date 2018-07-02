@@ -1,7 +1,13 @@
 import * as React from "react";
 
 const Code: React.SFC<object> = (props: object) => (
-  <svg viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       d="M438.4 849.1l222.7-646.7c.2-.5.3-1.1.4-1.6L438.4 849.1z"
       opacity={0.224}

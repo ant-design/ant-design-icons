@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Notification: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M305.9 417.9H184v188.2h121.9l12.9 5.2L840 820.7V203.3L318.8 412.7zM296 714.5c0 26.4 21.5 47.8 48 47.8 25.2 0 45.9-19.5 47.8-44.1L307 684.1c-7.1 8.5-11 19.2-11 30.4z"

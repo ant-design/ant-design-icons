@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const FileExclamation: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path className="st0" d="M602 326h188.2L602 137.8z" />
     <path
       className="st0"

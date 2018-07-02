@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const AndroidFill: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M409.5 190.4c-14.9 0-26.9 12.1-26.9 26.9 0 14.9 12.1 26.9 26.9 26.9s26.8-12.1 26.9-26.9c0-14.9-12.1-26.9-26.9-26.9zM617.9 190.4c-14.9 0-26.9 12.1-26.9 26.9 0 14.9 12.1 26.9 26.9 26.9 14.8 0 26.8-12.1 26.9-26.9 0-14.9-12.1-26.9-26.9-26.9z"

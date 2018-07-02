@@ -1,10 +1,16 @@
 import * as React from "react";
 
 const Error: React.SFC<object> = (props: object) => (
-  <svg viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       d="M172.2 828.1h679.5L512 239.9 172.2 828.1zM560 720c0 26.5-21.5 48-48 48s-48-21.5-48-48 21.5-48 48-48 48 21.5 48 48zm-16-304v184c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V416c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8z"
-      fill="currentColor"
+      fill="none"
     />
     <circle cx={512} cy={720} r={48} />
     <path d="M480 416v184c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V416c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8z" />

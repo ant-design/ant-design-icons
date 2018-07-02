@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Trophy: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M320 480c0 49.1 19.1 95.4 53.9 130.1 34.8 34.8 81 53.9 130.1 53.9h16c49.1 0 95.4-19.1 130.1-53.9 34.8-34.8 53.9-81 53.9-130.1V184H320v296zM248 232h-64v120c0 41 26.9 75.8 64 87.6V232zM776 439.6c37.1-11.9 64-46.7 64-87.6V232h-64v207.6z"

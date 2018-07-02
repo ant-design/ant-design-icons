@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const LockFill: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M636 184H388c-30.9 0-56 25.1-56 56v224h360V240c0-30.9-25.1-56-56-56zM512 614c-26.5 0-48 21.5-48 48 0 16.1 7.9 30.3 20 39v53c0 4.4 3.6 8 8 8h40c4.4 0 8-3.6 8-8v-53c12.1-8.7 20-22.9 20-39 0-26.5-21.5-48-48-48z"

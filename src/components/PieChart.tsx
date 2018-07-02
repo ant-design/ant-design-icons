@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const PieChart: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M619.8 147.6v256.6l256.4-.6c-13-62.6-44.2-120.6-90-166.2-45.7-45.6-103.7-76.8-166.4-89.8z"

@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Bold: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M579.1 542.7H328v238.7h251.1c63.8 0 115.5-51 115.5-113.9v-10.8c0-63-51.7-114-115.5-114zM656 346.7v-9.5c0-54.8-46.3-99.3-103.3-99.3H328v208h224.7c57 .1 103.3-44.3 103.3-99.2z"

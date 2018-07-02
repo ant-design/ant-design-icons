@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Hourglass: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M512 548c-42.2 0-81.9 16.4-111.7 46.3C370.4 624.1 354 663.8 354 706v134h316V706c0-42.2-16.4-81.9-46.3-111.7C593.9 564.4 554.2 548 512 548zM354 318c0 42.2 16.4 81.9 46.3 111.7C430.1 459.6 469.8 476 512 476s81.9-16.4 111.7-46.3C653.6 399.9 670 360.2 670 318V184H354v134z"

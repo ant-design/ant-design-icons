@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const FunnelPlot: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M411 571.4l8.3 14.6h185.4l8.3-14.6L689.6 438H334.4zM420.6 650h182.9v148H420.6zM297.7 374h428.6l85-148H212.7z"

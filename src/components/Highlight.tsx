@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Highlight: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M229.6 796.2h160.2l54.4-54-80.1-78.9zM373.2 565.2l171.4 168.9 68.6-67.6-171.4-168.9zM450.3 399.1L713.1 658l147.3-145-262.8-259z"

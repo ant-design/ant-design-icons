@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const DropboxSquareFill: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M407 274l-151 97.2 104.5 84.3 151.8-93.8zM256 537.9l151 99.2 105.3-87.7-151.8-93.9z"

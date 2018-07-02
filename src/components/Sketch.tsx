@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Sketch: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M378.8 206.4l-34.5 133.9 132.6-133.9zM325.4 213.4L188.1 384.9h93.2zM653.4 384.9L512 242 370.6 384.9zM645.2 206.4h-98.1l132.6 133.9zM194.6 434.9l220.3 247.7L289 434.9zM345.1 434.9L512 763.4l166.9-328.5zM742.7 384.9h93.2L698.6 213.4zM609.1 682.6l220.3-247.7H735z"

@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const FilePdf: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M421.6 726.3c-10.3 9.4-23.4 22.4-30.1 34.7 5.7-4.4 16.2-14.6 30.1-34.7zM546.7 657.5c-15-11.9-28.4-27.7-39.1-46.2-7.7 20-18.7 47.3-32.1 71.5 4-1.6 8-3.3 12.3-5 17.5-7.3 37.3-15.4 58.9-20.3zM602 326h188.2L602 137.8zM509.8 540.2c4-13.6 4.7-40.5-.5-49.4-.7-1.2-1.5-1.9-2.2-2-3 3.3-2.2 31.5 2.7 51.4z"

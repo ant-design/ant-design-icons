@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Behance: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M395.8 401.4c0-45.3-35.1-56.3-74.2-56.3H220.2V460h109.7c38.6 0 65.9-16.8 65.9-58.6zM338 534.3H220.1v135.6h115.6c44.1 0 80-15.6 80-65.3 0-50.4-30-70.3-77.7-70.3zM735.1 460.8c-46.8 0-78.1 29.3-81.2 76.2h159.3c-4.4-47.3-28.9-76.2-78.1-76.2z"

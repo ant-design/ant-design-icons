@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Table: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M412 432h200v160H412zM412 232h200v136H412zM136 432h212v160H136zM676 232h212v136H676zM676 432h212v160H676zM412 656h200v136H412zM676 656h212v136H676zM136 232h212v136H136zM136 656h212v136H136z"

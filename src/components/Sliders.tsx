@@ -1,7 +1,14 @@
 import * as React from "react";
 
 const Sliders: React.SFC<object> = (props: object) => (
-  <svg id="图层_1" viewBox="0 0 1024 1024" width="1em" height="1em" {...props}>
+  <svg
+    fill="currentColor"
+    id="图层_1"
+    viewBox="0 0 1024 1024"
+    width="1em"
+    height="1em"
+    {...props}
+  >
     <path
       className="st0"
       d="M549 472h-74c-1.6 0-3 1.3-3 3v74c0 1.6 1.3 3 3 3h74c1.6 0 3-1.3 3-3v-74c0-1.7-1.3-3-3-3zM180 292h80v440h-80zM764 364h80v296h-80z"
