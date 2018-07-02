@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Alibaba } from '../../../lib';
+import { Alibaba, Instagram, DribbbleCircleFill } from '../../../lib';
 
 
 export default class Index extends React.Component {
@@ -9,6 +9,8 @@ export default class Index extends React.Component {
         <div style={{ color: 'lightblue', fontSize: '3rem' }}>
           <span>Test Icon</span>
           <Alibaba/>
+          <Instagram/>
+          <DribbbleCircleFill/>
         </div>
       </div>
     );

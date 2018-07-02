@@ -20,3 +20,4 @@ yarn-error.log*
 # auto generated
 src/components/
 src/index.ts
+src/metadata.ts

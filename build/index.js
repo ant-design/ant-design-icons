@@ -13,11 +13,17 @@ const { rimraf, mkdirp } = require('mz-modules');
 const chalk = require('chalk');
 
 /**
+ * util lib
+ */
+const kebabcase = require('lodash.kebabcase');
+
+/**
  * paths
  */
 const SVG_DIR = path.resolve(__dirname, '../src/svg');
 const OUTPUT_DIR = path.resolve(__dirname, '../src/components');
 const OUTPUT_INDEX = path.resolve(OUTPUT_DIR, '../index.ts');
+const OUTPUT_METADATA = path.resolve(OUTPUT_DIR, '../metadata.ts');
 
 /**
  * template
@@ -36,10 +42,12 @@ const svgrConfig = require('./svgr.config');
  * @returns {Promise<void>}
  */
 async function build(svgrConfig = {}) {
+
   if (!fs.existsSync(SVG_DIR)) {
     console.error(chalk.red(`[Generate SVG Component] Cannot find the svg files. Check the dir: ${SVG_DIR}.`));
     return;
   }
+
   const svgFileNames = await globby([ '*.svg' ], { cwd: SVG_DIR });
   const svgFilePaths = svgFileNames.map((name) => path.resolve(SVG_DIR, name));
 
@@ -49,6 +57,7 @@ async function build(svgrConfig = {}) {
   console.log(chalk.green(`[Generate SVG Component] Icon Amount: ${svgFileNames.length}`));
 
   const componentNames = [];
+  const metaData = {};
 
   for (const svgPath of svgFilePaths) {
     const svgCode = fs.readFileSync(svgPath);
@@ -56,6 +65,7 @@ async function build(svgrConfig = {}) {
     const svgName = `${getComponentName({ filePath: svgPath })}`;
     fs.writeFileSync(path.resolve(OUTPUT_DIR, `${svgName}.tsx`), componentCode);
     componentNames.push(svgName);
+    metaData[ kebabcase(svgName) ] = svgName;
   }
 
   console.log(chalk.green(`[Generate SVG Component] Icon Components Generated!`));
@@ -63,6 +73,10 @@ async function build(svgrConfig = {}) {
   fs.writeFileSync(OUTPUT_INDEX, indexTemplate('./components', componentNames));
 
   console.log(chalk.green(`[Generate SVG Component] Entry Generated!`));
+
+  fs.writeFileSync(OUTPUT_METADATA, `export default ${JSON.stringify(metaData)};\n`);
+
+  console.log(chalk.green(`[Generate SVG Component] Meta Data Generated!`));
 }
 
 /**
