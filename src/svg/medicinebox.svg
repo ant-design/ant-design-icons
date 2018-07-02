@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>medicinebox</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M736,328H288h-43.7L184,513.4V840h656V513.4L779.7,328H736z M660,628c0,4.4-3.6,8-8,8H544v108c0,4.4-3.6,8-8,8
+		h-48c-4.4,0-8-3.6-8-8V636H372c-4.4,0-8-3.6-8-8v-48c0-4.4,3.6-8,8-8h108V464c0-4.4,3.6-8,8-8h48c4.4,0,8,3.6,8,8v108h108
+		c4.4,0,8,3.6,8,8V628z"/>
+	<rect x="360" y="184" class="st0" width="304" height="72"/>
+	<path d="M839.2,278.1c-4.3-13.2-16.6-22.1-30.4-22.1H736V144c0-17.7-14.3-32-32-32H320c-17.7,0-32,14.3-32,32v112h-72.8
+		c-13.9,0-26.1,8.9-30.4,22.1L112,502v378c0,17.7,14.3,32,32,32h736c17.7,0,32-14.3,32-32V502L839.2,278.1z M360,184h304v72H360V184
+		z M840,840H184V513.4L244.3,328H288h448h43.7L840,513.4V840z"/>
+	<path d="M652,572H544V464c0-4.4-3.6-8-8-8h-48c-4.4,0-8,3.6-8,8v108H372c-4.4,0-8,3.6-8,8v48c0,4.4,3.6,8,8,8h108v108
+		c0,4.4,3.6,8,8,8h48c4.4,0,8-3.6,8-8V636h108c4.4,0,8-3.6,8-8v-48C660,575.6,656.4,572,652,572z"/>
+</g>
+</svg>

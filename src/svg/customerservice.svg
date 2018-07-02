@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>customerservice</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<polygon class="st0" points="696,632 696,824 824,824 824,645 824,632 	"/>
+	<polygon class="st0" points="200,824 328,824 328,632 200,632 200,645 	"/>
+	<path d="M512,128c-212.1,0-384,171.9-384,384v48v85v227c0,13.3,10.7,24,24,24h184c35.3,0,64-28.7,64-64V624c0-35.3-28.7-64-64-64
+		H200v-48c0-172.3,139.7-312,312-312s312,139.7,312,312v48H688c-35.3,0-64,28.7-64,64v208c0,35.3,28.7,64,64,64h184
+		c13.3,0,24-10.7,24-24V645v-85v-48C896,299.9,724.1,128,512,128z M328,632v192H200V645v-13H328z M824,824H696V632h128v13V824z"/>
+</g>
+</svg>

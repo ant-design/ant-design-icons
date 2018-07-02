@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>CodeSandbox</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<polygon class="st0" points="650.9,243.6 511.8,323.5 372.9,243.8 238.2,321.5 512.2,479.7 786.1,321.6 	"/>
+	<polygon class="st0" points="210,547.8 339.6,621.4 339.6,761 482.7,843.6 482.7,530.2 210,372.9 	"/>
+	<polygon class="st0" points="541.3,843.6 685.2,760.5 685.2,621.4 814,548.3 814,373.1 541.3,530.4 	"/>
+	<path d="M709.6,210l0.4-0.2h0.2L512,96L313.9,209.8h-0.2l0.7,0.3L151.5,304v416L512,928l360.5-208V304L709.6,210z M482.7,843.6
+		L339.6,761V621.4L210,547.8V372.9l272.7,157.3V843.6z M238.2,321.5l134.7-77.8l138.9,79.7l139.1-79.9l135.2,78l-273.9,158
+		L238.2,321.5z M814,548.3l-128.8,73.1v139.1l-143.9,83V530.4L814,373.1V548.3z"/>
+</g>
+</svg>

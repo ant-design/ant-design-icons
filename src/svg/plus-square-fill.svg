@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>plus-square-fill</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M696,480H544V328c0-4.4-3.6-8-8-8h-48c-4.4,0-8,3.6-8,8v152H328c-4.4,0-8,3.6-8,8v48c0,4.4,3.6,8,8,8h152v152
+		c0,4.4,3.6,8,8,8h48c4.4,0,8-3.6,8-8V544h152c4.4,0,8-3.6,8-8v-48C704,483.6,700.4,480,696,480z"/>
+	<path d="M880,112H144c-17.7,0-32,14.3-32,32v736c0,17.7,14.3,32,32,32h736c17.7,0,32-14.3,32-32V144C912,126.3,897.7,112,880,112z
+		 M704,536c0,4.4-3.6,8-8,8H544v152c0,4.4-3.6,8-8,8h-48c-4.4,0-8-3.6-8-8V544H328c-4.4,0-8-3.6-8-8v-48c0-4.4,3.6-8,8-8h152V328
+		c0-4.4,3.6-8,8-8h48c4.4,0,8,3.6,8,8v152h152c4.4,0,8,3.6,8,8V536z"/>
+</g>
+</svg>

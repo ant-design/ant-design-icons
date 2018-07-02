@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>laptop</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<rect x="200.4" y="208" class="st0" width="624" height="395"/>
+	<polygon class="st0" points="436.9,779 428.7,816 595.3,816 587.1,779 	"/>
+	<path class="st0" d="M193.3,667L151,816h220.2l19.1-86.7c0.8-3.7,4.1-6.3,7.8-6.3h227.6c3.8,0,7,2.6,7.8,6.3l19.1,86.7h221
+		l-42.3-149H193.3z"/>
+	<path d="M956.9,845.1L896.4,632V168c0-17.7-14.3-32-32-32h-704c-17.7,0-32,14.3-32,32v464L67.9,845.1C60.4,866,75.8,888,98,888
+		h828.8C949,888,964.4,866,956.9,845.1z M200.4,208h624v395h-624V208z M428.7,816l8.1-37h150.3l8.1,37H428.7z M652.7,816l-19.1-86.7
+		c-0.8-3.7-4.1-6.3-7.8-6.3H398.2c-3.8,0-7,2.6-7.8,6.3L371.3,816H151l42.3-149h638.2l42.3,149H652.7z"/>
+</g>
+</svg>

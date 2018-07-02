@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#010101;}
+</style>
+<title>mail</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<polygon class="st0" points="833.6,232 190.4,232 512,482 	"/>
+	<path class="st0" d="M477.6,536.4L136,270.8V792h752V270.8L546.4,536.4C526.2,552.1,497.8,552.1,477.6,536.4z"/>
+	<path class="st1" d="M928,160H96c-17.7,0-32,14.3-32,32v640c0,17.7,14.3,32,32,32h832c17.7,0,32-14.3,32-32V192
+		C960,174.3,945.7,160,928,160z M888,270.8V792H136V270.8l-27.6-21.5l39.3-50.5l42.8,33.3h643.1l42.8-33.3l39.3,50.5L888,270.8z"/>
+	<path d="M833.6,232L512,482L190.4,232l-42.8-33.3l-39.3,50.5l27.6,21.5l341.6,265.6c20.2,15.7,48.5,15.7,68.7,0L888,270.8
+		l27.6-21.5l-39.3-50.5L833.6,232z"/>
+</g>
+</svg>

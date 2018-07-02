@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>minus-circle-o</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M512,140c-205.4,0-372,166.6-372,372s166.6,372,372,372s372-166.6,372-372S717.4,140,512,140z M704,536
+		c0,4.4-3.6,8-8,8H328c-4.4,0-8-3.6-8-8v-48c0-4.4,3.6-8,8-8h368c4.4,0,8,3.6,8,8V536z"/>
+	<path d="M696,480H328c-4.4,0-8,3.6-8,8v48c0,4.4,3.6,8,8,8h368c4.4,0,8-3.6,8-8v-48C704,483.6,700.4,480,696,480z"/>
+	<path d="M512,64C264.6,64,64,264.6,64,512s200.6,448,448,448s448-200.6,448-448S759.4,64,512,64z M512,884
+		c-205.4,0-372-166.6-372-372s166.6-372,372-372s372,166.6,372,372S717.4,884,512,884z"/>
+</g>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>file-image-fill</title>
+<desc>Created with Sketch.</desc>
+<g id="Group" transform="translate(320.000000, 402.000000)">
+</g>
+<g>
+	<path class="st0" d="M565.7,509.1c-3.2-4.1-9.4-4.1-12.6,0l-77.8,99.2l-41.1-52.4c-3.2-4.1-9.4-4.1-12.6,0l-99.8,127.2
+		c-4.1,5.2-0.4,12.9,6.3,12.9H696c6.7,0,10.4-7.7,6.3-12.9L565.7,509.1z"/>
+	<circle class="st0" cx="400" cy="442" r="40"/>
+	<polygon class="st0" points="602,326 790.2,326 602,137.8 	"/>
+	<path d="M854.6,288.7L639.4,73.4c-6-6-14.2-9.4-22.7-9.4H192c-17.7,0-32,14.3-32,32v832c0,17.7,14.3,32,32,32h640
+		c17.7,0,32-14.3,32-32V311.3C864,302.8,860.6,294.7,854.6,288.7z M400,402c22.1,0,40,17.9,40,40c0,22.1-17.9,40-40,40
+		c-22.1,0-40-17.9-40-40C360,419.9,377.9,402,400,402z M696,696H328c-6.7,0-10.4-7.7-6.3-12.9l99.8-127.2c3.2-4.1,9.4-4.1,12.6,0
+		l41.1,52.4l77.8-99.2c3.2-4.1,9.4-4.1,12.6,0l136.5,174C706.4,688.3,702.6,696,696,696z M602,326V137.8L790.2,326H602z"/>
+</g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>file-text-fill</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="file-text-fill" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M854.6,288.7 C860.6,294.7 864,302.8 864,311.3 L864,928 C864,945.7 849.7,960 832,960 L192,960 C174.3,960 160,945.7 160,928 L160,96 C160,78.3 174.3,64 192,64 L616.7,64 C625.2,64 633.4,67.4 639.4,73.4 L854.6,288.7 Z M790.2,326 L602,137.8 L602,326 L790.2,326 Z M320,482 C315.581722,482 312,485.581722 312,490 L312,538 C312,542.418278 315.581722,546 320,546 L704,546 C708.418278,546 712,542.418278 712,538 L712,490 C712,485.581722 708.418278,482 704,482 L320,482 Z M320,618 C315.581722,618 312,621.581722 312,626 L312,674 C312,678.418278 315.581722,682 320,682 L504,682 C508.418278,682 512,678.418278 512,674 L512,626 C512,621.581722 508.418278,618 504,618 L320,618 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

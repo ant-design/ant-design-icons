@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>play-square-o</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M184,840h656V184H184V840z M424,355.3c0-9.4,10.9-14.7,18.3-8.8l199.4,156.7c5.7,4.5,5.7,13.1,0,17.7
+		L442.3,677.6c-7.4,5.8-18.3,0.6-18.3-8.8V355.3z"/>
+	<path d="M442.3,677.6l199.4-156.7c5.7-4.5,5.7-13.1,0-17.7L442.3,346.4c-7.4-5.8-18.3-0.6-18.3,8.8v313.5
+		C424,678.1,434.9,683.4,442.3,677.6z"/>
+	<path d="M880,112H144c-17.7,0-32,14.3-32,32v736c0,17.7,14.3,32,32,32h736c17.7,0,32-14.3,32-32V144C912,126.3,897.7,112,880,112z
+		 M840,840H184V184h656V840z"/>
+</g>
+</svg>

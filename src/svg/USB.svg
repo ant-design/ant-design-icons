@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>SUB</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M336,184v248h352V184H336z M464,304c0,4.4-3.6,8-8,8h-48c-4.4,0-8-3.6-8-8v-48c0-4.4,3.6-8,8-8h48
+		c4.4,0,8,3.6,8,8V304z M624,304c0,4.4-3.6,8-8,8h-48c-4.4,0-8-3.6-8-8v-48c0-4.4,3.6-8,8-8h48c4.4,0,8,3.6,8,8V304z"/>
+	<path d="M760,432V144c0-17.7-14.3-32-32-32H296c-17.7,0-32,14.3-32,32v288c-66.2,0-120,52.1-120,116v356c0,4.4,3.6,8,8,8h56
+		c4.4,0,8-3.6,8-8V548c0-24.3,21.6-44,48.1-44H336h352h71.9c26.5,0,48.1,19.7,48.1,44v356c0,4.4,3.6,8,8,8h56c4.4,0,8-3.6,8-8V548
+		C880,484.1,826.2,432,760,432z M336,432V184h352v248H336z"/>
+	<path d="M456,248h-48c-4.4,0-8,3.6-8,8v48c0,4.4,3.6,8,8,8h48c4.4,0,8-3.6,8-8v-48C464,251.6,460.4,248,456,248z"/>
+	<path d="M616,248h-48c-4.4,0-8,3.6-8,8v48c0,4.4,3.6,8,8,8h48c4.4,0,8-3.6,8-8v-48C624,251.6,620.4,248,616,248z"/>
+</g>
+</svg>

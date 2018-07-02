@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>book</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<polygon class="st0" points="668,345.9 668,136 572,136 572,347.4 621.5,312 	"/>
+	<path class="st0" d="M728,432.5c0,8.8-7.2,16-16,16c-3.4,0-6.7-1.1-9.4-3.1L621.1,386l-83.8,59.9c-7.2,5.1-17.2,3.5-22.3-3.7
+		c-1.9-2.7-3-6-3-9.3V136H232v752h560V136h-64V432.5z"/>
+	<path d="M832,64H728H512H192c-17.7,0-32,14.3-32,32v832c0,17.7,14.3,32,32,32h640c17.7,0,32-14.3,32-32V96
+		C864,78.3,849.7,64,832,64z M572,136h96v209.9L621.5,312L572,347.4V136z M792,888H232V136h280v296.9c0,3.3,1,6.6,3,9.3
+		c5.1,7.2,15.1,8.9,22.3,3.7l83.8-59.9l81.4,59.4c2.7,2,6,3.1,9.4,3.1c8.8,0,16-7.2,16-16V136h64V888z"/>
+</g>
+</svg>

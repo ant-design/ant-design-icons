@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>file-add-fill</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="file-add-fill" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(160.000000, 64.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M320,516 L212,516 C207.581722,516 204,519.581722 204,524 L204,572 C204,576.418278 207.581722,580 212,580 L320,580 L320,688 C320,692.418278 323.581722,696 328,696 L376,696 C380.418278,696 384,692.418278 384,688 L384,580 L492,580 C496.418278,580 500,576.418278 500,572 L500,524 C500,519.581722 496.418278,516 492,516 L384,516 L384,408 C384,403.581722 380.418278,400 376,400 L328,400 C323.581722,400 320,403.581722 320,408 L320,516 Z M694.6,224.7 C700.6,230.7 704,238.8 704,247.3 L704,864 C704,881.7 689.7,896 672,896 L32,896 C14.3,896 0,881.7 0,864 L0,32 C0,14.3 14.3,0 32,0 L456.7,0 C465.2,0 473.4,3.4 479.4,9.4 L694.6,224.7 Z M630.2,262 L442,73.8 L442,262 L630.2,262 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

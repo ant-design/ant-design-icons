@@ -15,7 +15,7 @@ const chalk = require('chalk');
 /**
  * paths
  */
-const SVG_DIR = path.resolve(__dirname, './svg');
+const SVG_DIR = path.resolve(__dirname, '../src/svg');
 const OUTPUT_DIR = path.resolve(__dirname, '../src/components');
 const OUTPUT_INDEX = path.resolve(OUTPUT_DIR, '../index.ts');
 
@@ -38,6 +38,7 @@ const svgrConfig = require('./svgr.config');
 async function build(svgrConfig = {}) {
   if (!fs.existsSync(SVG_DIR)) {
     console.error(chalk.red(`[Generate SVG Component] Cannot find the svg files. Check the dir: ${SVG_DIR}.`));
+    return;
   }
   const svgFileNames = await globby([ '*.svg' ], { cwd: SVG_DIR });
   const svgFilePaths = svgFileNames.map((name) => path.resolve(SVG_DIR, name));

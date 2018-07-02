@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>pic-right</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<rect x="472" y="436" class="st0" width="400" height="152"/>
+	<path d="M952,792H72c-4.4,0-8,3.6-8,8v56c0,4.4,3.6,8,8,8h880c4.4,0,8-3.6,8-8v-56C960,795.6,956.4,792,952,792z"/>
+	<path d="M952,160H72c-4.4,0-8,3.6-8,8v56c0,4.4,3.6,8,8,8h880c4.4,0,8-3.6,8-8v-56C960,163.6,956.4,160,952,160z"/>
+	<path d="M928,660c8.8,0,16-7.2,16-16V380c0-8.8-7.2-16-16-16H416c-8.8,0-16,7.2-16,16v264c0,8.8,7.2,16,16,16H928z M472,436h400
+		v152H472V436z"/>
+	<path d="M80,646c0,4.4,3.6,8,8,8h224c4.4,0,8-3.6,8-8v-56c0-4.4-3.6-8-8-8H88c-4.4,0-8,3.6-8,8V646z"/>
+	<path d="M88,442h224c4.4,0,8-3.6,8-8v-56c0-4.4-3.6-8-8-8H88c-4.4,0-8,3.6-8,8v56C80,438.4,83.6,442,88,442z"/>
+</g>
+</svg>

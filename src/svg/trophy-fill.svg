@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>trophy-fill</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M776,439.6c37.1-11.9,64-46.7,64-87.6V232h-64V439.6z"/>
+	<path class="st0" d="M184,352c0,41,26.9,75.8,64,87.6V232h-64V352z"/>
+	<path d="M868,160h-92v-40c0-4.4-3.6-8-8-8H256c-4.4,0-8,3.6-8,8v40h-92c-24.3,0-44,19.7-44,44v148c0,81.7,60,149.6,138.2,162
+		C265.6,630.2,359,721.8,476,734.5v105.2H280c-17.7,0-32,14.3-32,32V904c0,4.4,3.6,8,8,8h512c4.4,0,8-3.6,8-8v-32.3
+		c0-17.7-14.3-32-32-32H548V734.5C665,721.8,758.4,630.2,773.8,514C852,501.6,912,433.7,912,352V204C912,179.7,892.3,160,868,160z
+		 M248,439.6c-37.1-11.9-64-46.7-64-87.6V232h64V439.6z M840,352c0,41-26.9,75.8-64,87.6V232h64V352z"/>
+</g>
+</svg>

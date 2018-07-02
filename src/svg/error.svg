@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>error</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path class="st0" d="M172.2,828.1h679.5L512,239.9L172.2,828.1z M560,720c0,26.5-21.5,48-48,48s-48-21.5-48-48s21.5-48,48-48
+		S560,693.5,560,720z M544,416v184c0,4.4-3.6,8-8,8h-48c-4.4,0-8-3.6-8-8V416c0-4.4,3.6-8,8-8h48C540.4,408,544,411.6,544,416z"/>
+	<circle cx="512" cy="720" r="48"/>
+	<path d="M480,416v184c0,4.4,3.6,8,8,8h48c4.4,0,8-3.6,8-8V416c0-4.4-3.6-8-8-8h-48C483.6,408,480,411.6,480,416z"/>
+	<path d="M955.7,856L539.7,136c-6.2-10.7-16.9-16-27.7-16c-10.8,0-21.6,5.3-27.7,16L68.3,856C56,877.4,71.4,904,96,904H928
+		C952.6,904,968,877.4,955.7,856z M172.2,828.1L512,239.9l339.8,588.2H172.2z"/>
+</g>
+</svg>

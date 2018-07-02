@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>sever-fill</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<circle class="st0" cx="736" cy="832" r="40"/>
+	<path class="st0" d="M264,544h184c4.4,0,8-3.6,8-8v-48c0-4.4-3.6-8-8-8H264c-4.4,0-8,3.6-8,8v48C256,540.4,259.6,544,264,544z"/>
+	<path class="st0" d="M448,160H264c-4.4,0-8,3.6-8,8v48c0,4.4,3.6,8,8,8h184c4.4,0,8-3.6,8-8v-48C456,163.6,452.4,160,448,160z"/>
+	<path d="M832,64H192c-17.7,0-32,14.3-32,32v224h704V96C864,78.3,849.7,64,832,64z M456,216c0,4.4-3.6,8-8,8H264c-4.4,0-8-3.6-8-8
+		v-48c0-4.4,3.6-8,8-8h184c4.4,0,8,3.6,8,8V216z"/>
+	<path d="M160,928c0,17.7,14.3,32,32,32h640c17.7,0,32-14.3,32-32V704H160V928z M736,792c22.1,0,40,17.9,40,40s-17.9,40-40,40
+		s-40-17.9-40-40S713.9,792,736,792z"/>
+	<path d="M160,640h704V384H160V640z M256,488c0-4.4,3.6-8,8-8h184c4.4,0,8,3.6,8,8v48c0,4.4-3.6,8-8,8H264c-4.4,0-8-3.6-8-8V488z"/>
+</g>
+</svg>

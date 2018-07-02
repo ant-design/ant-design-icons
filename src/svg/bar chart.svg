@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<title>bar chart</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<path d="M888,792H200V168c0-4.4-3.6-8-8-8h-56c-4.4,0-8,3.6-8,8v632v56c0,4.4,3.6,8,8,8h56h696c4.4,0,8-3.6,8-8v-56
+		C896,795.6,892.4,792,888,792z"/>
+	<path d="M288,712h56c4.4,0,8-3.6,8-8V560c0-4.4-3.6-8-8-8h-56c-4.4,0-8,3.6-8,8v144C280,708.4,283.6,712,288,712z"/>
+	<path d="M440,712h56c4.4,0,8-3.6,8-8V384c0-4.4-3.6-8-8-8h-56c-4.4,0-8,3.6-8,8v320C432,708.4,435.6,712,440,712z"/>
+	<path d="M592,712h56c4.4,0,8-3.6,8-8V462c0-4.4-3.6-8-8-8h-56c-4.4,0-8,3.6-8,8v242C584,708.4,587.6,712,592,712z"/>
+	<path d="M744,712h56c4.4,0,8-3.6,8-8V304c0-4.4-3.6-8-8-8h-56c-4.4,0-8,3.6-8,8v400C736,708.4,739.6,712,744,712z"/>
+</g>
+</svg>

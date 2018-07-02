@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+</style>
+<title>save-fill</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<rect x="384" y="176" class="st0" width="256" height="112"/>
+	<path class="st0" d="M512,442c-79.5,0-144,64.5-144,144s64.5,144,144,144s144-64.5,144-144S591.5,442,512,442z M512,666
+		c-44.2,0-80-35.8-80-80s35.8-80,80-80s80,35.8,80,80S556.2,666,512,666z"/>
+	<path d="M893.3,293.3L730.7,130.7c-12-12-28.3-18.7-45.3-18.7H144c-17.7,0-32,14.3-32,32v736c0,17.7,14.3,32,32,32h736
+		c17.7,0,32-14.3,32-32V338.5C912,321.5,905.3,305.3,893.3,293.3z M384,176h256v112H384V176z M512,730c-79.5,0-144-64.5-144-144
+		s64.5-144,144-144s144,64.5,144,144S591.5,730,512,730z"/>
+	<path d="M512,506c-44.2,0-80,35.8-80,80s35.8,80,80,80s80-35.8,80-80S556.2,506,512,506z"/>
+</g>
+</svg>
