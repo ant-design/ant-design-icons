@@ -16,3 +16,7 @@ yarn-error.log*
 
 # rollup cache
 .rpt2_cache
+
+# auto generated
+src/components/
+src/index.ts
