@@ -2,12 +2,12 @@
   "name": "ant-design-icons",
   "version": "0.1.0",
   "description": "Ant Design Icons",
-  "main": "index.js",
+  "module": "lib/index.js",
+  "sideEffects": false,
   "repository": "https://github.com/ant-design/ant-design-icons",
   "license": "MIT",
   "dependencies": {},
   "scripts": {
-    "dev": "webpack --mode development",
     "build": "rollup --config",
     "generate": "node build"
   },
