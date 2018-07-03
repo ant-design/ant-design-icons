@@ -5,7 +5,6 @@ const list: string[] = [
 <% COMPONENT_NAMES_LIST %>
 ];
 
-const sprites = list.join('\n');
+export const sprites = list.join('\n');
 
-export default sprites;
-
+export const prefix = 'antd-icon-';

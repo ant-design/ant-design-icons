@@ -4,4 +4,4 @@
 
 export { default as metadata } from './metadata';
 
-export { default as symbols } from './symbols';
+export { prefix as prefix, sprites as symbols } from './symbols';
