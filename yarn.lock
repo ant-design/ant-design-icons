@@ -13,17 +13,6 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@svgr/cli@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@svgr/cli/-/cli-2.0.0.tgz#a0f67123bbf16dab5a44565e36b43fbce349d82f"
-  dependencies:
-    "@svgr/core" "^2.0.0"
-    chalk "^2.4.1"
-    commander "^2.15.1"
-    glob "^7.1.2"
-    output-file-sync "^2.0.1"
-    recursive-readdir "^2.2.2"
-
 "@svgr/core@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@svgr/core/-/core-2.0.0.tgz#c458fdf18a99ac843483c0178215a500eaef3b92"
