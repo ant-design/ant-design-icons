@@ -5,11 +5,7 @@ const list: string[] = [
 <% COMPONENT_NAMES_LIST %>
 ];
 
-const sprites = `<svg>
-<defs>
-  ${list.join('\n')}
-</defs>
-</svg>`;
+const sprites = list.join('\n');
 
 export default sprites;
 

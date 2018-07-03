@@ -3,35 +3,35 @@ import BatchFolding from './svg/Batch folding.svg';
 import CiCircleFill from './svg/CI-circle-fill.svg';
 import Ci from './svg/CI.svg';
 import CodeSandboxCircleFill from './svg/CodeSandbox-circle-fill.svg';
+import CodeSandboxSquareFill from './svg/CodeSandbox-square-fill.svg';
 import CodeSandbox from './svg/CodeSandbox.svg';
 import DollarCircleFill from './svg/Dollar-circle-fill.svg';
 import Dollar from './svg/Dollar.svg';
-import CodeSandboxSquareFill from './svg/CodeSandbox-square-fill.svg';
 import EuroCircleFill from './svg/EURO-circle-fill.svg';
 import Euro from './svg/EURO.svg';
 import GitlabFill from './svg/Gitlab-fill.svg';
 import Gitlab from './svg/Gitlab.svg';
 import Html5Fill from './svg/HTML5-fill.svg';
-import Html5 from './svg/HTML5.svg';
-import IeCircleFill from './svg/IE-circle-fill.svg';
 import IeSquareFill from './svg/IE-square-fill.svg';
+import IeCircleFill from './svg/IE-circle-fill.svg';
+import Html5 from './svg/HTML5.svg';
 import Ie from './svg/IE.svg';
 import Import from './svg/Import.svg';
-import QqCircleFill from './svg/QQ-circle-fill.svg';
-import Pound from './svg/Pound.svg';
 import PoundCircleFill from './svg/Pound-circle-fill.svg';
-import Qq from './svg/QQ.svg';
+import Pound from './svg/Pound.svg';
+import QqCircleFill from './svg/QQ-circle-fill.svg';
 import QqSquareFill from './svg/QQ-square-fill.svg';
-import Usb from './svg/USB.svg';
+import Qq from './svg/QQ.svg';
 import UsbFill from './svg/USB-fill.svg';
+import Usb from './svg/USB.svg';
 import YuanCircleFill from './svg/YUAN-circle-fill.svg';
 import Yuan from './svg/YUAN.svg';
 import YoutubeFill from './svg/Youtube-fill.svg';
 import Youtube from './svg/Youtube.svg';
 import AccountBookFill from './svg/account book-fill.svg';
 import AccountBook from './svg/account book.svg';
-import AddUser from './svg/add user.svg';
 import Addteam from './svg/addteam.svg';
+import AddUser from './svg/add user.svg';
 import AlertFill from './svg/alert-fill.svg';
 import Alert from './svg/alert.svg';
 import Alibaba from './svg/alibaba.svg';
@@ -39,8 +39,8 @@ import Alibabacloud from './svg/alibabacloud.svg';
 import AlignCenter from './svg/align-center.svg';
 import AlignLeft from './svg/align-left.svg';
 import AlignRight from './svg/align-right.svg';
-import AlipayCircleFill from './svg/alipay-circle-fill.svg';
 import AlipaySquareFill from './svg/alipay-square-fill.svg';
+import AlipayCircleFill from './svg/alipay-circle-fill.svg';
 import Alipay from './svg/alipay.svg';
 import AliwangwangFill from './svg/aliwangwang-fill.svg';
 import Aliwangwang from './svg/aliwangwang.svg';
@@ -56,31 +56,31 @@ import ApiFill from './svg/api-fill.svg';
 import Api from './svg/api.svg';
 import AppStoreFill from './svg/app store-fill.svg';
 import AppStore from './svg/app store.svg';
-import Apple from './svg/apple.svg';
 import AppleFill from './svg/apple-fill.svg';
+import Apple from './svg/apple.svg';
 import AreaChart from './svg/area chart.svg';
-import Arrawsalt from './svg/arrawsalt.svg';
 import Arrowdown from './svg/arrowdown.svg';
+import Arrawsalt from './svg/arrawsalt.svg';
 import Arrowleft from './svg/arrowleft.svg';
-import Arrowup from './svg/arrowup.svg';
 import Arrowright from './svg/arrowright.svg';
-import Attachment from './svg/attachment.svg';
+import Arrowup from './svg/arrowup.svg';
 import Audit from './svg/audit.svg';
 import BankFill from './svg/bank-fill.svg';
+import Attachment from './svg/attachment.svg';
 import Bank from './svg/bank.svg';
 import BarChart from './svg/bar chart.svg';
 import Barcode from './svg/barcode.svg';
 import BatchFoldingFill from './svg/batch folding-fill.svg';
 import BehanceCircleFill from './svg/behance-circle-fill.svg';
-import BehanceSquareFill from './svg/behance-square-fill.svg';
 import Behance from './svg/behance.svg';
+import BehanceSquareFill from './svg/behance-square-fill.svg';
 import BellFill from './svg/bell-fill.svg';
 import Bell from './svg/bell.svg';
 import BgColors from './svg/bg-colors.svg';
 import Block from './svg/block.svg';
 import Bold from './svg/bold.svg';
-import Book from './svg/book.svg';
 import BookFill from './svg/book-fill.svg';
+import Book from './svg/book.svg';
 import BorderBottom from './svg/border-bottom.svg';
 import BorderHorizontal from './svg/border-horizontal.svg';
 import BorderInner from './svg/border-inner.svg';
@@ -109,20 +109,20 @@ import CarFill from './svg/car-fill.svg';
 import Car from './svg/car.svg';
 import CarryOutFill from './svg/carry out-fill.svg';
 import CarryOut from './svg/carry out.svg';
-import CheckCloseCircle from './svg/check-close-circle.svg';
 import CheckCircleFill from './svg/check-circle-fill.svg';
+import CheckCloseCircle from './svg/check-close-circle.svg';
 import CheckSquareFill from './svg/check-square-fill.svg';
 import CheckSquare from './svg/check-square.svg';
-import ChromeFill from './svg/chrome-fill.svg';
 import Check from './svg/check.svg';
-import CloseCircleFill from './svg/close-circle-fill.svg';
+import ChromeFill from './svg/chrome-fill.svg';
 import Chrome from './svg/chrome.svg';
+import CloseCircleFill from './svg/close-circle-fill.svg';
 import CloseCircle from './svg/close-circle.svg';
 import CloseSquareFill from './svg/close-square-fill.svg';
-import Close from './svg/close.svg';
 import CloseSquare from './svg/close-square.svg';
-import CloudServer from './svg/cloud server.svg';
+import Close from './svg/close.svg';
 import CloudDownload from './svg/cloud download.svg';
+import CloudServer from './svg/cloud server.svg';
 import CloudSync from './svg/cloud sync.svg';
 import CloudUpload from './svg/cloud upload.svg';
 import CloudFill from './svg/cloud-fill.svg';
@@ -138,8 +138,8 @@ import ColumHeight from './svg/colum-height.svg';
 import ColumnWidth from './svg/column-width.svg';
 import CompassFill from './svg/compass-fill.svg';
 import Compass from './svg/compass.svg';
-import Contacts from './svg/contacts.svg';
 import ContactsFill from './svg/contacts-fill.svg';
+import Contacts from './svg/contacts.svg';
 import ContainerFill from './svg/container-fill.svg';
 import Container from './svg/container.svg';
 import ControlFill from './svg/control-fill.svg';
@@ -153,20 +153,20 @@ import Crown from './svg/crown.svg';
 import CustomerserviceFill from './svg/customerservice-fill.svg';
 import Customerservice from './svg/customerservice.svg';
 import Dash from './svg/dash.svg';
-import Dashboard from './svg/dashboard.svg';
 import DashboardFill from './svg/dashboard-fill.svg';
+import Dashboard from './svg/dashboard.svg';
 import DatabaseFill from './svg/database-fill.svg';
 import Database from './svg/database.svg';
-import DeleteUser from './svg/delete user.svg';
 import DeleteTeam from './svg/delete team.svg';
+import DeleteUser from './svg/delete user.svg';
 import DeleteFill from './svg/delete-fill.svg';
 import Delete from './svg/delete.svg';
 import DeploymentUnit from './svg/deployment unit.svg';
 import Desktop from './svg/desktop.svg';
 import DetailFill from './svg/detail-fill.svg';
 import Detail from './svg/detail.svg';
-import Diff from './svg/diff.svg';
 import DiffFill from './svg/diff-fill.svg';
+import Diff from './svg/diff.svg';
 import DingtalkCircleFill from './svg/dingtalk-circle-fill.svg';
 import DingtalkSquareFill from './svg/dingtalk-square-fill.svg';
 import Dingtalk from './svg/dingtalk.svg';
@@ -195,8 +195,8 @@ import Enter from './svg/enter.svg';
 import ErrorFill from './svg/error-fill.svg';
 import Error from './svg/error.svg';
 import Exclaimination from './svg/exclaimination.svg';
-import Experiment from './svg/experiment.svg';
 import ExperimentFill from './svg/experiment-fill.svg';
+import Experiment from './svg/experiment.svg';
 import Export from './svg/export.svg';
 import EyeFill from './svg/eye-fill.svg';
 import Eye from './svg/eye.svg';
@@ -214,8 +214,8 @@ import FileCopyFill from './svg/file-copy-fill.svg';
 import FileCopy from './svg/file-copy.svg';
 import FileExcelFill from './svg/file-excel-fill.svg';
 import FileExcel from './svg/file-excel.svg';
-import FileExclamation from './svg/file-exclamation.svg';
 import FileExclamationFill from './svg/file-exclamation-fill.svg';
+import FileExclamation from './svg/file-exclamation.svg';
 import FileFill from './svg/file-fill.svg';
 import FileImageFill from './svg/file-image-fill.svg';
 import FileImage from './svg/file-image.svg';
@@ -232,8 +232,8 @@ import FileUnknown from './svg/file-unknown.svg';
 import FileWordFill from './svg/file-word-fill.svg';
 import FileWord from './svg/file-word.svg';
 import FileZipFill from './svg/file-zip-fill.svg';
-import File from './svg/file.svg';
 import FileZip from './svg/file-zip.svg';
+import File from './svg/file.svg';
 import FilterFill from './svg/filter-fill.svg';
 import Filter from './svg/filter.svg';
 import FireFill from './svg/fire-fill.svg';
@@ -242,8 +242,8 @@ import FlagFill from './svg/flag-fill.svg';
 import Flag from './svg/flag.svg';
 import FolderAddFill from './svg/folder-add-fill.svg';
 import FolderAdd from './svg/folder-add.svg';
-import FolderOpenFill from './svg/folder-open-fill.svg';
 import FolderFill from './svg/folder-fill.svg';
+import FolderOpenFill from './svg/folder-open-fill.svg';
 import FolderOpen from './svg/folder-open.svg';
 import Folder from './svg/folder.svg';
 import FontColors from './svg/font-colors.svg';
@@ -532,35 +532,35 @@ const list: string[] = [
   CiCircleFill, 
   Ci, 
   CodeSandboxCircleFill, 
+  CodeSandboxSquareFill, 
   CodeSandbox, 
   DollarCircleFill, 
   Dollar, 
-  CodeSandboxSquareFill, 
   EuroCircleFill, 
   Euro, 
   GitlabFill, 
   Gitlab, 
   Html5Fill, 
-  Html5, 
-  IeCircleFill, 
   IeSquareFill, 
+  IeCircleFill, 
+  Html5, 
   Ie, 
   Import, 
-  QqCircleFill, 
-  Pound, 
   PoundCircleFill, 
-  Qq, 
+  Pound, 
+  QqCircleFill, 
   QqSquareFill, 
-  Usb, 
+  Qq, 
   UsbFill, 
+  Usb, 
   YuanCircleFill, 
   Yuan, 
   YoutubeFill, 
   Youtube, 
   AccountBookFill, 
   AccountBook, 
-  AddUser, 
   Addteam, 
+  AddUser, 
   AlertFill, 
   Alert, 
   Alibaba, 
@@ -568,8 +568,8 @@ const list: string[] = [
   AlignCenter, 
   AlignLeft, 
   AlignRight, 
-  AlipayCircleFill, 
   AlipaySquareFill, 
+  AlipayCircleFill, 
   Alipay, 
   AliwangwangFill, 
   Aliwangwang, 
@@ -585,31 +585,31 @@ const list: string[] = [
   Api, 
   AppStoreFill, 
   AppStore, 
-  Apple, 
   AppleFill, 
+  Apple, 
   AreaChart, 
-  Arrawsalt, 
   Arrowdown, 
+  Arrawsalt, 
   Arrowleft, 
-  Arrowup, 
   Arrowright, 
-  Attachment, 
+  Arrowup, 
   Audit, 
   BankFill, 
+  Attachment, 
   Bank, 
   BarChart, 
   Barcode, 
   BatchFoldingFill, 
   BehanceCircleFill, 
-  BehanceSquareFill, 
   Behance, 
+  BehanceSquareFill, 
   BellFill, 
   Bell, 
   BgColors, 
   Block, 
   Bold, 
-  Book, 
   BookFill, 
+  Book, 
   BorderBottom, 
   BorderHorizontal, 
   BorderInner, 
@@ -638,20 +638,20 @@ const list: string[] = [
   Car, 
   CarryOutFill, 
   CarryOut, 
-  CheckCloseCircle, 
   CheckCircleFill, 
+  CheckCloseCircle, 
   CheckSquareFill, 
   CheckSquare, 
-  ChromeFill, 
   Check, 
-  CloseCircleFill, 
+  ChromeFill, 
   Chrome, 
+  CloseCircleFill, 
   CloseCircle, 
   CloseSquareFill, 
-  Close, 
   CloseSquare, 
-  CloudServer, 
+  Close, 
   CloudDownload, 
+  CloudServer, 
   CloudSync, 
   CloudUpload, 
   CloudFill, 
@@ -667,8 +667,8 @@ const list: string[] = [
   ColumnWidth, 
   CompassFill, 
   Compass, 
-  Contacts, 
   ContactsFill, 
+  Contacts, 
   ContainerFill, 
   Container, 
   ControlFill, 
@@ -682,20 +682,20 @@ const list: string[] = [
   CustomerserviceFill, 
   Customerservice, 
   Dash, 
-  Dashboard, 
   DashboardFill, 
+  Dashboard, 
   DatabaseFill, 
   Database, 
-  DeleteUser, 
   DeleteTeam, 
+  DeleteUser, 
   DeleteFill, 
   Delete, 
   DeploymentUnit, 
   Desktop, 
   DetailFill, 
   Detail, 
-  Diff, 
   DiffFill, 
+  Diff, 
   DingtalkCircleFill, 
   DingtalkSquareFill, 
   Dingtalk, 
@@ -724,8 +724,8 @@ const list: string[] = [
   ErrorFill, 
   Error, 
   Exclaimination, 
-  Experiment, 
   ExperimentFill, 
+  Experiment, 
   Export, 
   EyeFill, 
   Eye, 
@@ -743,8 +743,8 @@ const list: string[] = [
   FileCopy, 
   FileExcelFill, 
   FileExcel, 
-  FileExclamation, 
   FileExclamationFill, 
+  FileExclamation, 
   FileFill, 
   FileImageFill, 
   FileImage, 
@@ -761,8 +761,8 @@ const list: string[] = [
   FileWordFill, 
   FileWord, 
   FileZipFill, 
-  File, 
   FileZip, 
+  File, 
   FilterFill, 
   Filter, 
   FireFill, 
@@ -771,8 +771,8 @@ const list: string[] = [
   Flag, 
   FolderAddFill, 
   FolderAdd, 
-  FolderOpenFill, 
   FolderFill, 
+  FolderOpenFill, 
   FolderOpen, 
   Folder, 
   FontColors, 
@@ -1057,11 +1057,7 @@ const list: string[] = [
   Zhihu
 ];
 
-const sprites = `<svg>
-<defs>
-  ${list.join('\n')}
-</defs>
-</svg>`;
+const sprites = list.join('\n');
 
 export default sprites;
 
