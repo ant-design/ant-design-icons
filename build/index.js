@@ -74,7 +74,8 @@ async function build(svgrConfig = {}) {
 
   console.log(chalk.green(`[Generate SVG Component] Entry Generated!`));
 
-  fs.writeFileSync(OUTPUT_METADATA, `export default ${JSON.stringify(metaData)};\n`);
+  fs.writeFileSync(OUTPUT_METADATA, `const metaData: { [key: string]: string | undefined } = ${JSON.stringify(metaData)};
+  export default metaData;\n`);
 
   console.log(chalk.green(`[Generate SVG Component] Meta Data Generated!`));
 }
