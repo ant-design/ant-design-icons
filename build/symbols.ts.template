@@ -1,0 +1,15 @@
+// example: import Alibaba from './svg/alibaba.svg';
+<% IMPORT_HOLDER %>
+
+const list: string[] = [
+<% COMPONENT_NAMES_LIST %>
+];
+
+const sprites = `<svg>
+<defs>
+  ${list.join('\n')}
+</defs>
+</svg>`;
+
+export default sprites;
+

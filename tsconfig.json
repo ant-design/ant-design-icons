@@ -9,5 +9,8 @@
   },
   "exclude": [
     "examples/"
+  ],
+  "include": [
+    "src/"
   ]
 }

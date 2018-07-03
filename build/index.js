@@ -24,11 +24,8 @@ const SVG_DIR = path.resolve(__dirname, '../src/svg');
 const OUTPUT_DIR = path.resolve(__dirname, '../src/components');
 const OUTPUT_INDEX = path.resolve(OUTPUT_DIR, '../index.ts');
 const OUTPUT_METADATA = path.resolve(OUTPUT_DIR, '../metadata.ts');
-
-/**
- * template
- */
-const indexTemplate = require('./index.template');
+const OUTPUT_SYMBOLS = path.resolve(OUTPUT_DIR, '../symbols.ts');
+const outputDirs = [OUTPUT_DIR, OUTPUT_INDEX, OUTPUT_METADATA, OUTPUT_SYMBOLS];
 
 /**
  * default svgr config
@@ -48,10 +45,10 @@ async function build(svgrConfig = {}) {
     return;
   }
 
-  const svgFileNames = await globby([ '*.svg' ], { cwd: SVG_DIR });
+  const svgFileNames = await globby(['*.svg'], { cwd: SVG_DIR });
   const svgFilePaths = svgFileNames.map((name) => path.resolve(SVG_DIR, name));
 
-  await rimraf(OUTPUT_DIR);
+  await Promise.all(outputDirs.map((dir) => rimraf(dir)));
   await mkdirp(OUTPUT_DIR);
 
   console.log(chalk.green(`[Generate SVG Component] Icon Amount: ${svgFileNames.length}`));
@@ -65,19 +62,32 @@ async function build(svgrConfig = {}) {
     const svgName = `${getComponentName({ filePath: svgPath })}`;
     fs.writeFileSync(path.resolve(OUTPUT_DIR, `${svgName}.tsx`), componentCode);
     componentNames.push(svgName);
-    metaData[ kebabcase(svgName) ] = svgName;
+    metaData[kebabcase(svgName)] = svgName;
   }
 
   console.log(chalk.green(`[Generate SVG Component] Icon Components Generated!`));
 
-  fs.writeFileSync(OUTPUT_INDEX, indexTemplate('./components', componentNames));
+  fs.writeFileSync(OUTPUT_INDEX,
+    fs.readFileSync(path.resolve(__dirname, './index.ts.template'), { encoding: 'utf8' })
+      .replace('<% EXPORT_ALL_REACT_COMPONENTS %>', componentNames.map((name) => `export { default as ${name} } from './components/${name}';`).join('\n'))
+  );
 
   console.log(chalk.green(`[Generate SVG Component] Entry Generated!`));
 
-  fs.writeFileSync(OUTPUT_METADATA, `const metaData: { [key: string]: string | undefined } = ${JSON.stringify(metaData)};
-  export default metaData;\n`);
+  fs.writeFileSync(OUTPUT_METADATA,
+    fs.readFileSync(path.resolve(__dirname, './metadata.ts.template'), { encoding: 'utf8' })
+      .replace('<% METADATA_JSON %>', JSON.stringify(metaData))
+  );
 
   console.log(chalk.green(`[Generate SVG Component] Meta Data Generated!`));
+
+  fs.writeFileSync(OUTPUT_SYMBOLS,
+    fs.readFileSync(path.resolve(__dirname, './symbols.ts.template'), { encoding: 'utf8' })
+      .replace('<% IMPORT_HOLDER %>', componentNames.map((name, i) => `import ${name} from './svg/${svgFileNames[i]}';`).join('\n'))
+      .replace('<% COMPONENT_NAMES_LIST %>', '  ' + componentNames.join(', \n  '))
+  );
+
+  console.log(chalk.green(`[Generate SVG Component] Symbols Generated!`));
 }
 
 /**
