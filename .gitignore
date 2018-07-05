@@ -22,3 +22,4 @@ yarn-error.log*
 src/components/
 src/index.ts
 src/metadata.ts
+src/symbols.ts
