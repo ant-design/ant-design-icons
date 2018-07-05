@@ -5,7 +5,11 @@
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
-    "declaration": true
+    "declaration": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ]
   },
   "exclude": [
     "examples/"

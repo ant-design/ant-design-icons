@@ -1,10 +1,11 @@
 // example: import Alibaba from './svg/alibaba.svg';
 <% IMPORT_HOLDER %>
 
-const list: string[] = [
+export const antDesignIcons: IconDefinition[] = [
 <% COMPONENT_NAMES_LIST %>
 ];
 
-export const sprites = list.join('\n');
-
-export const prefix = 'antd-icon-';
+export interface IconDefinition {
+  iconName: string;
+  content: string;
+}

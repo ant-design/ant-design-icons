@@ -15,7 +15,7 @@ export default [
       typescript(),
       svgToSymbol({
         extractId({ name, filePath }) {
-          return `antd-icon-${kebabcase(getComponentName({ filePath }))}`;
+          return `${pkg.iconPrefix}${kebabcase(getComponentName({ filePath }))}`;
         }
       })
     ],
@@ -31,7 +31,7 @@ export default [
       typescript(),
       svgToSymbol({
         extractId({ name, filePath }) {
-          return `antd-icon-${kebabcase(getComponentName({ filePath }))}`;
+          return `${pkg.iconPrefix}${kebabcase(getComponentName({ filePath }))}`;
         }
       })
     ],

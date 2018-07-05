@@ -31,14 +31,21 @@ const outputDirs = [OUTPUT_DIR, OUTPUT_INDEX, OUTPUT_METADATA, OUTPUT_SYMBOLS];
  * default svgr config
  */
 const svgrConfig = require('./svgr.config');
+const pkg = require('../package.json');
+const generateConfig = {
+  shouldGenerateReactComponent: false
+};
 
 
 /**
- * Generate react component from raw svg files.
+ * Generate from raw svg files.
  * @param svgrConfig {object} the svgr config.
  * @returns {Promise<void>}
  */
-async function build(svgrConfig = {}) {
+async function build(svgrConfig = {}, opts = {}) {
+  const {
+    shouldGenerateReactComponent = false
+  } = opts;
 
   if (!fs.existsSync(SVG_DIR)) {
     console.error(chalk.red(`[Generate SVG Component] Cannot find the svg files. Check the dir: ${SVG_DIR}.`));
@@ -49,27 +56,39 @@ async function build(svgrConfig = {}) {
   const svgFilePaths = svgFileNames.map((name) => path.resolve(SVG_DIR, name));
 
   await Promise.all(outputDirs.map((dir) => rimraf(dir)));
-  await mkdirp(OUTPUT_DIR);
+
+  if (shouldGenerateReactComponent) {
+    await mkdirp(OUTPUT_DIR);
+  }
 
   console.log(chalk.green(`[Generate SVG Component] Icon Amount: ${svgFileNames.length}`));
 
   const componentNames = [];
   const metaData = {};
+  const mirrorMetaData = {};
 
   for (const svgPath of svgFilePaths) {
     const svgCode = fs.readFileSync(svgPath);
-    const componentCode = await svgr(svgCode, svgrConfig, { filePath: svgPath });
     const svgName = `${getComponentName({ filePath: svgPath })}`;
-    fs.writeFileSync(path.resolve(OUTPUT_DIR, `${svgName}.tsx`), componentCode);
     componentNames.push(svgName);
-    metaData[kebabcase(svgName)] = svgName;
+    const kebabcaseName = kebabcase(svgName);
+    metaData[kebabcaseName] = svgName;
+    mirrorMetaData[svgName] = kebabcaseName;
+
+    if (shouldGenerateReactComponent) {
+      const componentCode = await svgr(svgCode, svgrConfig, { filePath: svgPath });
+      fs.writeFileSync(path.resolve(OUTPUT_DIR, `${svgName}.tsx`), componentCode);
+    }
   }
 
-  console.log(chalk.green(`[Generate SVG Component] Icon Components Generated!`));
+  if (shouldGenerateReactComponent) {
+    console.log(chalk.green(`[Generate SVG Component] Icon Components Generated!`));
+  }
+
 
   fs.writeFileSync(OUTPUT_INDEX,
     fs.readFileSync(path.resolve(__dirname, './index.ts.template'), { encoding: 'utf8' })
-      .replace('<% EXPORT_ALL_REACT_COMPONENTS %>', componentNames.map((name) => `export { default as ${name} } from './components/${name}';`).join('\n'))
+      .replace('<% EXPORT_ALL_REACT_COMPONENTS %>', shouldGenerateReactComponent ? componentNames.map((name) => `export { default as ${name} } from './components/${name}';`).join('\n') : '')
   );
 
   console.log(chalk.green(`[Generate SVG Component] Entry Generated!`));
@@ -83,7 +102,9 @@ async function build(svgrConfig = {}) {
 
   fs.writeFileSync(OUTPUT_SYMBOLS,
     fs.readFileSync(path.resolve(__dirname, './symbols.ts.template'), { encoding: 'utf8' })
-      .replace('<% IMPORT_HOLDER %>', componentNames.map((name, i) => `import ${name} from './svg/${svgFileNames[i]}';`).join('\n'))
+      .replace('<% IMPORT_HOLDER %>', componentNames.map((name, i) => `import ${name}Content from './svg/${svgFileNames[i]}';
+export const ${name}: IconDefinition = { iconName: '${mirrorMetaData[name]}', content: ${`${name}Content`}, prefix: '${pkg.iconPrefix}' };
+`).join('\n') + `import { IconDefinition } from './type';\n`)
       .replace('<% COMPONENT_NAMES_LIST %>', '  ' + componentNames.join(', \n  '))
   );
 
@@ -93,4 +114,4 @@ async function build(svgrConfig = {}) {
 /**
  * start
  */
-build(svgrConfig);
+build(svgrConfig, generateConfig);

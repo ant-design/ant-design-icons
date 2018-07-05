@@ -1,9 +1,10 @@
 {
   "name": "antd-icons",
-  "version": "0.0.1-alpha.8",
+  "version": "0.0.2-alpha.0",
   "description": "Ant Design Icons",
   "module": "esm/index.js",
   "main": "lib/index.js",
+  "iconPrefix": "antd-icon-",
   "sideEffects": false,
   "repository": "https://github.com/ant-design/ant-design-icons",
   "contributors": [
@@ -13,7 +14,8 @@
   "dependencies": {},
   "scripts": {
     "build": "rollup --config",
-    "generate": "node build"
+    "generate": "node build",
+    "g": "npm run generate"
   },
   "devDependencies": {
     "@svgr/core": "^2.0.0",
