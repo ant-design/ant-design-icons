@@ -5,7 +5,6 @@ export const antDesignIcons: IconDefinition[] = [
 <% COMPONENT_NAMES_LIST %>
 ];
 
-export interface IconDefinition {
-  iconName: string;
-  content: string;
-}
+export const prefix = <% PREFIX %>;
+
+import { IconDefinition } from './library';

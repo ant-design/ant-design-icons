@@ -1,5 +1,3 @@
-import { IconDefinition } from './type';
-
 export class Library {
   definitions: {
     [key: string]: IconDefinition
@@ -38,6 +36,12 @@ export const dom = {
     }
   }
 };
+
+export interface IconDefinition {
+  iconName: string;
+  content: string;
+  prefix: string;
+}
 
 function canUseDomAPI() {
   function noop() { }

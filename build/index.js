@@ -104,8 +104,9 @@ async function build(svgrConfig = {}, opts = {}) {
     fs.readFileSync(path.resolve(__dirname, './symbols.ts.template'), { encoding: 'utf8' })
       .replace('<% IMPORT_HOLDER %>', componentNames.map((name, i) => `import ${name}Content from './svg/${svgFileNames[i]}';
 export const ${name}: IconDefinition = { iconName: '${mirrorMetaData[name]}', content: ${`${name}Content`}, prefix: '${pkg.iconPrefix}' };
-`).join('\n') + `import { IconDefinition } from './type';\n`)
+`).join('\n'))
       .replace('<% COMPONENT_NAMES_LIST %>', '  ' + componentNames.join(', \n  '))
+      .replace('<% PREFIX %>', `'${pkg.iconPrefix}'`)
   );
 
   console.log(chalk.green(`[Generate SVG Component] Symbols Generated!`));
