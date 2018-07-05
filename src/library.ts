@@ -26,8 +26,8 @@ export class Library {
 export const library = new Library();
 
 export const dom = {
-  mountSVGDefinitions() {
-    let template = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">'
+  mountSVGDefinitions(elementId: string) {
+    let template = '<svg id="' + elementId + '" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">'
       + '<%= SYMBOLS %>'
       + '</svg>';
     const html = template.replace('<%= SYMBOLS %>', Object.keys(library.definitions).map((key) => {
