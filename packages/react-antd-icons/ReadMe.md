@@ -19,7 +19,7 @@ After that, you can use antd icons in your React components as simply as this:
 
 ```jsx
 import { AntdIcon } from 'react-antd-icons';
-import { render } from 'ract-dom';
+import { render } from 'react-dom';
 
 render(<AntdIcon className={'my-icon'} type={'alibaba'} />, mountedNode);
 ```
