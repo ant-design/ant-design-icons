@@ -8,7 +8,11 @@
 yarn add antd-icons # or npm install antd-icons
 ```
 
-## Usage
+## Use Libraries Adapter
+
+- React: See [react-antd-icons](./packages/react-antd-icons)
+
+## Basic Usage
 
 Use a SVG icon.
 
