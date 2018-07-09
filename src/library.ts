@@ -3,6 +3,8 @@ export class Library {
     [key: string]: IconDefinition
   } = {};
 
+  mountElementId: string = '';
+
   reset() {
     this.definitions = {};
   }
@@ -19,23 +21,33 @@ export class Library {
       this.definitions[key] = this.definitions[key] || additions[key];
     });
   }
+
+  dom = {
+    mount: (elementId: string) => {
+      let template = '<svg id="' + elementId + '" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">'
+        + '<%= SYMBOLS %>'
+        + '</svg>';
+      const html = template.replace('<%= SYMBOLS %>', Object.keys(library.definitions).map((key) => {
+        return library.definitions[key].content;
+      }).join('\n'));
+      if (canUseDomAPI()) {
+        this.mountElementId = elementId;
+        document.body.insertAdjacentHTML('afterbegin', html);
+      }
+    },
+    unmount: () => {
+      if (canUseDomAPI()) {
+        const mountedNode = document.getElementById(this.mountElementId);
+        if (mountedNode) {
+          document.body.removeChild(mountedNode);
+          this.mountElementId = '';
+        }
+      }
+    }
+  }
 }
 
 export const library = new Library();
-
-export const dom = {
-  mountSVGDefinitions(elementId: string) {
-    let template = '<svg id="' + elementId + '" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">'
-      + '<%= SYMBOLS %>'
-      + '</svg>';
-    const html = template.replace('<%= SYMBOLS %>', Object.keys(library.definitions).map((key) => {
-      return library.definitions[key].content;
-    }).join('\n'));
-    if (canUseDomAPI()) {
-      document.body.insertAdjacentHTML('afterbegin', html);
-    }
-  }
-};
 
 export interface IconDefinition {
   iconName: string;

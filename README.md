@@ -1,8 +1,22 @@
 # Ant Design Icons
 
-## status: **WIP**
+## status: **Alpha**
 
-Please don't use in any production environment.
+## Install
+
+```bash
+yarn add antd-icons # or npm install antd-icons
+```
+
+## Usage
+
+Use a SVG icon.
+
+```ts
+import { library, dom, Alibaba, prefix } from '../../../esm';
+
+library.add(Alibaba); // add icon to the library.
+```
 
 ## build
 ```bash

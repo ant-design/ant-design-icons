@@ -21,3 +21,6 @@ yarn-error.log*
 src/components/
 src/index.ts
 src/metadata.ts
+
+# examples
+examples/
