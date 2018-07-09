@@ -2,7 +2,7 @@
 
 ## status: **Alpha**
 
-The APIs and icons may change in the future, pleas **do NOT** use in any production environment.
+The APIs and icons may change in the future, please **do NOT** use in any production environment.
 
 ## Install
 
