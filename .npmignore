@@ -24,3 +24,6 @@ src/metadata.ts
 
 # examples
 examples/
+
+# packages
+packages/
