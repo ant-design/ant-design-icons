@@ -24,13 +24,13 @@ export class Library {
 
   dom = {
     mount: (elementId: string) => {
-      let template = '<svg id="' + elementId + '" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">'
+      if (canUseDomAPI()) {
+        let template = '<svg id="' + elementId + '" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">'
         + '<%= SYMBOLS %>'
         + '</svg>';
       const html = template.replace('<%= SYMBOLS %>', Object.keys(library.definitions).map((key) => {
         return library.definitions[key].content;
       }).join('\n'));
-      if (canUseDomAPI()) {
         this.mountElementId = elementId;
         document.body.insertAdjacentHTML('afterbegin', html);
       }
