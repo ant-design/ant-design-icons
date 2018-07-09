@@ -6,5 +6,8 @@
     "jsx": "react",
     "moduleResolution": "node",
     "declaration": true
-  }
+  },
+  "include": [
+    "src/"
+  ]
 }

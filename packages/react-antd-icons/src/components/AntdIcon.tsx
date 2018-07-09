@@ -1,8 +1,9 @@
-import { library, prefix } from 'antd-icons';
+import { library, prefix as antdIconPrefix } from 'antd-icons';
 import * as React from 'react';
 
 export interface IAntdIconProps {
   type: string;
+  prefix?: string;
   className?: string;
   onClick?: React.MouseEventHandler<SVGSVGElement>;
   style?: React.CSSProperties;
@@ -14,10 +15,10 @@ export default class AntdIcon extends React.Component<IAntdIconProps> {
   static NODE_ID = '__REACT_ANTD_ICONS__';
 
   render() {
-    const { type, ...rest } = this.props;
+    const { type, prefix, ...rest } = this.props;
     return (
       <svg data-icon={type} width={'1em'} height={'1em'} fill={'currentColor'} {...rest}>
-        <use xlinkHref={`#${prefix}${type}`} />
+        <use xlinkHref={`#${typeof prefix === 'string' ? prefix : antdIconPrefix}${type}`} />
       </svg>
     );
   }
