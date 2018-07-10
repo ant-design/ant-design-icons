@@ -61,9 +61,6 @@ export default class Index extends React.Component {
 }
 ```
 
-- Preview:
-![antd-icons](./docs/test-icons.png)
-
 ## Build
 ```bash
 npm run generate # generate react-component
