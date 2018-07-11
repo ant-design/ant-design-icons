@@ -18,8 +18,24 @@ library.add(Alibaba);
 After that, you can use antd icons in your React components as simply as this:
 
 ```jsx
-import { AntdIcon } from 'react-antd-icons/esm';
-import { render } from 'react-dom';
+// examples/simple/pages/index.jsx
+import * as React from 'react';
+import styles from './index.less';
+import { library, Alibaba, Dashboard, DashboardFill } from 'antd-icons/esm';
+import AntdIcon from 'react-antd-icons/esm';
 
-render(<AntdIcon className={'my-icon'} type={'alibaba'} />, mountedNode);
+library.add(Alibaba, Dashboard, DashboardFill);
+
+export default class IndexPage extends React.Component {
+  render() {
+    return (
+      <div className={styles.container}>
+        <AntdIcon type={'alibaba'} />
+        <AntdIcon type={'dashboard'} />
+        <AntdIcon type={'dashboard-fill'} />
+        <AntdIcon type={'it will cause error'} />
+      </div>
+    );
+  }
+}
 ```
