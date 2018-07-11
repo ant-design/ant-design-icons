@@ -11,14 +11,14 @@ yarn add react-antd-icons
 First, you should add the icons that you need into the library.
 
 ```ts
-import { library, Alibaba } from 'antd-icons';
+import { library, Alibaba } from 'antd-icons/esm';
 library.add(Alibaba);
 ```
 
 After that, you can use antd icons in your React components as simply as this:
 
 ```jsx
-import { AntdIcon } from 'react-antd-icons';
+import { AntdIcon } from 'react-antd-icons/esm';
 import { render } from 'react-dom';
 
 render(<AntdIcon className={'my-icon'} type={'alibaba'} />, mountedNode);
