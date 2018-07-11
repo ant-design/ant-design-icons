@@ -17,12 +17,13 @@ describe('React AntdIcon Component', () => {
       type: 'alibaba',
       style: {
         fontSize: '3rem'
-      }
+      },
+      className: 'my-icon'
     })!;
 
     assert(vm.type === 'svg');
     assert(vm.props['data-icon'] === 'alibaba');
+    assert(vm.props.className === 'my-icon');
     assert(vm.props.style.fontSize === '3rem');
-    assert(document.getElementById(ReactAntdIcon.NODE_ID)!.children.length === 1);
   });
 });
