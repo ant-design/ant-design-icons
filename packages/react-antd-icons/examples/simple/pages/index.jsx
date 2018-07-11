@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from './index.less';
 import { library, Alibaba, Dashboard, DashboardFill } from 'antd-icons/esm';
-import { AntdIcon } from 'react-antd-icons/esm';
+import AntdIcon from 'react-antd-icons/esm';
 
 library.add(Alibaba, Dashboard, DashboardFill);
 

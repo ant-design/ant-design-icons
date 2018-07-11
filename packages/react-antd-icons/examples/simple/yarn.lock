@@ -7610,9 +7610,9 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-antd-icons@^0.1.0-alpha.2:
-  version "0.1.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/react-antd-icons/-/react-antd-icons-0.1.0-alpha.2.tgz#d943266a3aab76b8803189b9ee05bd070db719d2"
+react-antd-icons@^0.1.0-alpha.3:
+  version "0.1.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/react-antd-icons/-/react-antd-icons-0.1.0-alpha.3.tgz#cd06d7fdc015b5d715877f6e31f1195d0c751d61"
 
 react-dev-utils@^5.0.0:
   version "5.0.1"
