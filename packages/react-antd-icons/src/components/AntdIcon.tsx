@@ -16,7 +16,7 @@ const AntdIcon: React.SFC<IAntdIconProps> = (props) => {
   const target = library.definitions[type];
   if (!target) {
     if (!(process && process.env && process.env.NODE_ENV === 'production')) {
-      console.error('[react-antd-icons]: Could not find icon: ', type);
+      console.error('[react-antd-icons]: Could not find icon:', type);
     }
     return null;
   }

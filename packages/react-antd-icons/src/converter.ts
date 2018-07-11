@@ -1,6 +1,25 @@
 import { IconDefinition } from 'antd-icons/esm';
 import * as React from 'react';
 
+interface IAttrs {
+  [key: string]: string;
+}
+
+function normalizeAttrs(attrs: IAttrs = {}): IAttrs {
+  return Object.keys(attrs).reduce((acc: IAttrs, key) => {
+    const val = attrs[key];
+    switch (key) {
+      case 'class':
+        acc.className = val;
+        delete acc.class;
+        break;
+      default:
+        acc[key] = val;
+    }
+    return acc;
+  }, {});
+}
+
 export function convert(
   createElement: typeof React.createElement,
   icon: IconDefinition,
@@ -10,7 +29,7 @@ export function convert(
     children.push(createElement('style', { key: `${icon.name}-style` }, icon.style));
   }
   const iconChildren = icon.children
-    .map(({ tag, attrs }, index) => createElement(tag, { ...attrs, key: `${tag}-${index}` }));
+    .map(({ tag, attrs }, index) => createElement(tag, { ...normalizeAttrs(attrs), key: `${tag}-${index}` }));
   children.push(...iconChildren);
   return createElement(
     'svg',

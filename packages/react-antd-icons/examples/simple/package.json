@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "antd-icons": "^0.1.0-alpha.1",
-    "react-antd-icons": "^0.1.0-alpha.1",
+    "react-antd-icons": "^0.1.0-alpha.2",
     "umi": "^1.3.14"
   }
 }
