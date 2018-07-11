@@ -7,7 +7,7 @@ export function convert(
   extraProps: { [key: string]: any }) {
   const children = [];
   if (icon.style) {
-    children.push(createElement('style', {}, icon.style));
+    children.push(createElement('style', { key: `${icon.name}-style` }, icon.style));
   }
   const iconChildren = icon.children
     .map(({ tag, attrs }, index) => createElement(tag, { ...attrs, key: `${tag}-${index}` }));
@@ -17,6 +17,7 @@ export function convert(
     {
       ...extraProps,
       ['data-icon']: icon.name,
+      viewBox: `0 0 ${icon.width} ${icon.height}`,
       width: '1em',
       height: '1em',
       fill: 'currentColor'

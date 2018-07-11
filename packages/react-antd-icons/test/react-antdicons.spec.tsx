@@ -1,10 +1,10 @@
-import * as antdicons from 'antd-icons';
+import { Alibaba, library } from 'antd-icons';
 import assert = require('assert');
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import ReactAntdIcon, { IAntdIconProps } from '../src/components/AntdIcon';
 
-antdicons.library.add(antdicons.Alibaba);
+library.add(Alibaba);
 
 function mount(props: IAntdIconProps) {
   const component = renderer.create(<ReactAntdIcon {...props} />);
@@ -25,5 +25,6 @@ describe('React AntdIcon Component', () => {
     assert(vm.props['data-icon'] === 'alibaba');
     assert(vm.props.className === 'my-icon');
     assert(vm.props.style.fontSize === '3rem');
+    assert(vm.props.viewBox === `0 0 ${Alibaba.width} ${Alibaba.height}`);
   });
 });
