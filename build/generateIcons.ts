@@ -8,11 +8,13 @@ import path = require('path');
 import SVGO = require('svgo');
 // tslint:disable-next-line:no-var-requires
 const pkg = require('../package.json');
+// tslint:disable-next-line:no-var-requires
+const { rimraf } = require('mz-modules');
 import assert = require('assert');
 import chalk from 'chalk';
 import { generateAbstractTree, getSVGOPlugin, IconDefinition, INode } from './utils';
 
-const environment = {
+const environment: IEnvironment = {
   paths: {
     SVG_DIR: path.resolve(__dirname, '../src/svg'),
     SVGS_TS_TEMPLATE: path.resolve(__dirname, './templates/svgs.ts.template'),
@@ -20,6 +22,7 @@ const environment = {
     MANIFEST_TS_TEMPLATE: path.resolve(__dirname, './templates/manifest.ts.template'),
     MANIFEST_TS_OUTPUT: path.resolve(__dirname, '../src/manifest.ts')
   },
+  base: path.resolve(__dirname, '../'),
   options: {
     svgo: {
       plugins: getSVGOPlugin()
@@ -27,10 +30,24 @@ const environment = {
   }
 };
 
-type Environment = typeof environment;
+interface IEnvironment {
+  paths: { [key: string]: string };
+  base: string;
+  options: {
+    svgo: SVGO.Options
+  };
+}
 
-async function build(env: Environment) {
+async function build(env: IEnvironment) {
   console.time('Build Time');
+
+  // clear.
+  console.log(chalk.green(`🌟 [Generate SVG] Clear folders.`));
+  await Promise.all(
+    Object.keys(env.paths)
+      .filter((key) => key.endsWith('OUTPUT')) // DO NOT DELETE THIS LINE!!!
+      .map((key) => rimraf(env.paths[key])) // This is evil. Make sure you just delete the OUTPUT.
+  );
 
   // get names and paths.
   const svgFileNames: string[] = await globby(['*.svg'], { cwd: env.paths.SVG_DIR });
