@@ -1,15 +1,13 @@
 import { IconDefinition, library } from 'antd-icons';
-import { FunctionalComponentOptions } from 'vue';
-import { RecordPropsDefinition } from 'vue/types/options';
+import Vue from 'vue';
 import { convert } from '../converter';
 
 export interface IAntdIconProps {
   type: string | IconDefinition;
 }
 
-const AntdIcon: FunctionalComponentOptions<IAntdIconProps, RecordPropsDefinition<IAntdIconProps>> = {
+const AntdIcon = Vue.extend<{}, {}, {}, IAntdIconProps>({
   name: 'AntdIcon',
-  functional: true,
   props: {
     type: {
       validator(value: any) {
@@ -18,8 +16,8 @@ const AntdIcon: FunctionalComponentOptions<IAntdIconProps, RecordPropsDefinition
       required: true
     }
   },
-  render(h, context) {
-    const { type, ...rest } = context.props;
+  render(h) {
+    const type = this.type;
     let target: IconDefinition | null = null;
     if (isIconDefinition(type)) {
       target = type;
@@ -38,9 +36,9 @@ const AntdIcon: FunctionalComponentOptions<IAntdIconProps, RecordPropsDefinition
       }
       return h();
     }
-    return convert(h, target, rest);
+    return convert(h, target, {});
   }
-};
+});
 
 function isIconDefinition(target: any): target is IconDefinition {
   return typeof target === 'object' && typeof target.width === 'number'

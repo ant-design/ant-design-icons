@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup --config",
-    "test": "cross-env TS_NODE_PROJECT=test/tsconfig.json mocha --require espower-typescript/guess test/**/*.{ts,tsx}"
+    "test": "cross-env TS_NODE_PROJECT=test/tsconfig.json mocha --require espower-typescript/guess test/**/*.ts"
   },
   "peerDependencies": {
     "antd-icons": "^0.1.0-alpha.1",
