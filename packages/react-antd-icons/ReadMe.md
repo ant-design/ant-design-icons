@@ -21,7 +21,7 @@ After that, you can use antd icons in your React components as simply as this:
 // examples/simple/pages/index.jsx
 import * as React from 'react';
 import styles from './index.less';
-import { library, Alibaba, Dashboard, DashboardFill } from 'antd-icons/esm';
+import { library, Alibaba, Dashboard, DashboardFill, Twitter } from 'antd-icons/esm';
 import AntdIcon from 'react-antd-icons/esm';
 
 library.add(Alibaba, Dashboard, DashboardFill);
@@ -31,9 +31,9 @@ export default class IndexPage extends React.Component {
     return (
       <div className={styles.container}>
         <AntdIcon type={'alibaba'} />
-        <AntdIcon type={'dashboard'} />
         <AntdIcon type={'dashboard-fill'} />
-        <AntdIcon type={'it will cause error'} />
+        <AntdIcon type={123} />
+        <AntdIcon type={Twitter} />
       </div>
     );
   }
