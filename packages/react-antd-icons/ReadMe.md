@@ -40,3 +40,13 @@ export default class IndexPage extends React.Component {
   }
 }
 ```
+
+## Component Interface
+```ts
+interface IAntdIconProps {
+    type: string | IconDefinition;
+    className?: string;
+    onClick?: React.MouseEventHandler<SVGSVGElement>;
+    style?: React.CSSProperties;
+}
+```
