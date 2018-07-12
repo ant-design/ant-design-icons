@@ -35,4 +35,24 @@ describe('React AntdIcon Component', () => {
 
     assert(vm!.children![1].props.className === 'st0');
   });
+
+  it('should allow explicit import.', () => {
+    const vm = mount({
+      type: CiCircleFill
+    });
+    assert(vm!.children![1].props.className === 'st0');
+  });
+
+  it('should render null, when the type is invalid.', () => {
+    const vm = mount({
+      type: { invalid: true }
+    } as any);
+
+    const vm2 = mount({
+      type: 'Later is better than never.'
+    });
+
+    assert(vm === null);
+    assert(vm2 === null);
+  });
 });

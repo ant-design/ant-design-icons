@@ -1,6 +1,6 @@
 {
   "name": "react-antd-icons",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0-alpha.4",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "repository": "https://github.com/ant-design/ant-design-icons/tree/dev/packages/react-antd-icons",
