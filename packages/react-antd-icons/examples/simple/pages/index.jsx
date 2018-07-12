@@ -10,8 +10,8 @@ export default class IndexPage extends React.Component {
     return (
       <div className={styles.container}>
         <AntdIcon type={'alibaba'} />
-        <AntdIcon type={'dashboard'} />
         <AntdIcon type={'dashboard-fill'} />
+        <AntdIcon type={123} />
         <AntdIcon type={Twitter} />
       </div>
     );
