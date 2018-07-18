@@ -85,7 +85,6 @@ async function build(env: IEnvironment) {
     chalk.green(`🌟 [Generate SVG] Generate "svgs.ts" to ${path.relative(__dirname, env.paths.SVGS_TS_TEMPLATE)}.`)
   );
   const svgsTs = fs.readFileSync(env.paths.SVGS_TS_TEMPLATE, 'utf8');
-  assert(typeof pkg.iconPrefix === 'string');
   const renderedSvgsTs = svgsTs
     .replace(
       '<% EXPORT_CONST %>',

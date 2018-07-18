@@ -4,7 +4,6 @@
   "description": "Ant Design Icons",
   "module": "esm/index.js",
   "main": "lib/index.js",
-  "iconPrefix": "antd-icon-",
   "sideEffects": false,
   "repository": "https://github.com/ant-design/ant-design-icons",
   "contributors": [
