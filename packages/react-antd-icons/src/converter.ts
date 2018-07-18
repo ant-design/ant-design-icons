@@ -39,7 +39,8 @@ export function convert(
       viewBox: `0 0 ${icon.width} ${icon.height}`,
       width: '1em',
       height: '1em',
-      fill: 'currentColor'
+      fill: 'currentColor',
+      ['aria-hidden']: 'true'
     },
     children
   );
