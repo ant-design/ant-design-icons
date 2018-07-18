@@ -10,9 +10,11 @@ The APIs and icons may change in the future, please **do NOT** use in any produc
 yarn add antd-icons # or npm install antd-icons
 ```
 
-## Use Libraries Adapter
+## Use Library Adapter
 
 - React: See [react-antd-icons](./packages/react-antd-icons)
+- Vue: WIP
+- Angular: WIP
 
 ## Usage
 ```ts
@@ -23,6 +25,6 @@ library.add(Alibaba);
 
 ## Build
 ```bash
-npm run g # generate react-component
-npm run build # generate es module bundle
+npm run generate # generate src/svgs.ts
+npm run build # generate module bundle
 ```
