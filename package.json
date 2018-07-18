@@ -1,5 +1,5 @@
 {
-  "name": "antd-icons",
+  "name": "@ant-design/icons",
   "version": "0.1.0-alpha.1",
   "description": "Ant Design Icons",
   "module": "esm/index.js",
@@ -14,7 +14,6 @@
   "dependencies": {},
   "scripts": {
     "build": "rollup --config",
-    "g": "yarn run generate",
     "generate": "cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/generateIcons.ts"
   },
   "directories": {

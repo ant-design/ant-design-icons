@@ -7,8 +7,6 @@ export const antDesignIcons: IconDefinition[] = [
 <% COMPONENT_NAMES_LIST %>
 ];
 
-export const prefix = <% PREFIX %>;
-
 export interface IAbstractTree {
   width: number;
   height: number;

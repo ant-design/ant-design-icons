@@ -94,10 +94,6 @@ async function build(env: IEnvironment) {
     .replace(
       '<% COMPONENT_NAMES_LIST %>',
       components.map(({ name }) => `  ${name},`).join('\n')
-    )
-    .replace(
-      '<% PREFIX %>',
-      `'${pkg.iconPrefix}'` // see packge.json's iconPrefix field.
     );
   fs.writeFileSync(env.paths.SVGS_TS_OUTPUT, renderedSvgsTs, 'utf8');
 
