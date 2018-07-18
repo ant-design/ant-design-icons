@@ -1,13 +1,15 @@
 # Ant Design Icons
 
-## status: **Alpha**
+⭐ The abstract trees of the Ant Design SVG icons.
+
+## Status: **Alpha**
 
 The APIs and icons may change in the future, please **do NOT** use in any production environment.
 
 ## Install
 
 ```bash
-yarn add antd-icons # or npm install antd-icons
+yarn add @ant-design/icons # or npm install @ant-design/icons --save
 ```
 
 ## Use Library Adapter
@@ -18,9 +20,35 @@ yarn add antd-icons # or npm install antd-icons
 
 ## Usage
 ```ts
-import { library, Alibaba } from 'antd-icons/esm';
+import { Alibaba } from 'antd-icons/esm';
 
-library.add(Alibaba);
+console.log(Alibaba);
+
+// Output:
+// { width: 1024,
+//   height: 1024,
+//   style: '',
+//   children:
+//    [ { tag: 'path', attrs: [Object] },
+//      { tag: 'path', attrs: [Object] } ],
+//   name: 'alibaba' }
+```
+
+## Interface
+
+This library export all SVG files as `IconDefinition`.
+
+```ts
+interface IconDefinition extends IAbstractTree {
+  name: string; // kebab-case-style
+}
+
+interface IAbstractTree {
+  width: number;
+  height: number;
+  style?: string;
+  children: Array<{ tag: string, attrs: { [key: string]: string } }>;
+}
 ```
 
 ## Build
