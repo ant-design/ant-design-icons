@@ -13,7 +13,7 @@ First, you should add the icons that you need into the library.
 ```ts
 import { Alibaba, Dashboard, DashboardFill, Twitter } from '@ant-design/icons/esm';
 import AntdIcon from '@ant-design/icons-react/esm';
-AntdIcon.library.add(Alibaba, Dashboard, DashboardFill);
+AntdIcon.add(Alibaba, Dashboard, DashboardFill);
 ```
 
 After that, you can use antd icons in your React components as simply as this:
@@ -25,7 +25,7 @@ import styles from './index.less';
 import { Alibaba, Dashboard, DashboardFill, Twitter } from '@ant-design/icons/esm';
 import AntdIcon from '@ant-design/icons-react/esm';
 
-AntdIcon.library.add(Alibaba, Dashboard, DashboardFill);
+AntdIcon.add(Alibaba, Dashboard, DashboardFill);
 
 export default class IndexPage extends React.Component {
   render() {

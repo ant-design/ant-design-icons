@@ -4,7 +4,7 @@ import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import ReactAntdIcon, { AntdIconProps } from '../src/components/AntdIcon';
 
-ReactAntdIcon.library.add(Alibaba, CiCircleFill);
+ReactAntdIcon.add(Alibaba, CiCircleFill);
 
 function mount(props: AntdIconProps) {
   const component = renderer.create(<ReactAntdIcon {...props} />);

@@ -1,7 +1,6 @@
 import { IconDefinition } from '@ant-design/icons';
 import * as React from 'react';
 import { convertThunk } from '../converter';
-import { Library } from '../library';
 import { isIconDefinition, log } from '../utils';
 
 export interface AntdIconProps {
@@ -13,8 +12,19 @@ export interface AntdIconProps {
 
 class AntdIcon extends React.Component<AntdIconProps> {
 
-  static library = new Library();
   static displayName = 'AntdIcon';
+  static definitions = new Map<string, IconDefinition>();
+  static add(...icons: IconDefinition[]) {
+    icons.forEach((icon) => {
+      this.definitions.set(icon.name, icon);
+    });
+  }
+  static clear() {
+    this.definitions.clear();
+  }
+  static get(key: string) {
+    return this.definitions.get(key);
+  }
 
   render() {
     const { type, ...rest } = this.props;
@@ -22,7 +32,7 @@ class AntdIcon extends React.Component<AntdIconProps> {
     if (isIconDefinition(type)) {
       target = type;
     } else if (typeof type === 'string') {
-      target = AntdIcon.library.get(type);
+      target = AntdIcon.get(type);
       if (!target) {
         log(`Could not find icon: ${type}`);
         return null;
