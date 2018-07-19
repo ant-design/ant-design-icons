@@ -3,7 +3,7 @@ import styles from './index.less';
 import { Alibaba, Dashboard, DashboardFill, Twitter } from '@ant-design/icons/esm';
 import AntdIcon from '@ant-design/icons-react/esm';
 
-AntdIcon.library.add(Alibaba, Dashboard, DashboardFill);
+AntdIcon.add(Alibaba, Dashboard, DashboardFill);
 
 export default class IndexPage extends React.Component {
   render() {
@@ -16,7 +16,7 @@ export default class IndexPage extends React.Component {
           <span style={{ fontSize: '64px' }}>
             64px ABC
           </span>
-          <AntdIcon data-test={'test'} style={{ fontSize: '64px' }} type={Twitter} />
+          <AntdIcon data-test={'test'} style={{ fontSize: '64px', verticalAlign: '-.125em' }} type={Twitter} />
           <p>SVG element could not align to text.<br/>You should set <code>vertical-align: -.125em</code></p>
         </div>
       </div>

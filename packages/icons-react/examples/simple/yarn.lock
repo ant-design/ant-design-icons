@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@ant-design/icons-react@^0.1.0-alpha.5":
-  version "0.1.0-alpha.5"
-  resolved "https://registry.yarnpkg.com/@ant-design/icons-react/-/icons-react-0.1.0-alpha.5.tgz#737a25847b6e1399cf59b2599c01540756178fe6"
+"@ant-design/icons-react@^0.1.0-alpha.6":
+  version "0.1.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/@ant-design/icons-react/-/icons-react-0.1.0-alpha.6.tgz#512ea10555608497a3602555d1842ea0f63d64f8"
 
 "@ant-design/icons@^0.1.0-alpha.2":
   version "0.1.0-alpha.2"
