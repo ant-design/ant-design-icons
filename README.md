@@ -14,13 +14,13 @@ yarn add @ant-design/icons # or npm install @ant-design/icons --save
 
 ## Use Library Adapter
 
-- React: See [react-antd-icons](./packages/react-antd-icons)
+- React: See [@ant-design/icons-react](./packages/icons-react)
 - Vue: WIP
 - Angular: WIP
 
 ## Usage
 ```ts
-import { Alibaba } from 'antd-icons/esm';
+import { Alibaba } from '@ant-design/icons/esm';
 
 console.log(Alibaba);
 
