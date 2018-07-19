@@ -12,9 +12,10 @@
     ]
   },
   "exclude": [
-    "examples/"
-  ],
-  "include": [
-    "src/"
+    "examples/",
+    "node_modules/",
+    "build/",
+    "packages/",
+    "test/"
   ]
 }

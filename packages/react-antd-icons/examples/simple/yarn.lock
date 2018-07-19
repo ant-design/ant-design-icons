@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@ant-design/icons-react@^0.1.0-alpha.5":
+  version "0.1.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@ant-design/icons-react/-/icons-react-0.1.0-alpha.5.tgz#737a25847b6e1399cf59b2599c01540756178fe6"
+
+"@ant-design/icons@^0.1.0-alpha.2":
+  version "0.1.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@ant-design/icons/-/icons-0.1.0-alpha.2.tgz#e1da389b1ca4ce5f93d2b8649aa305ac72a38272"
+
 "@babel/code-frame@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0-beta.44.tgz#2a02643368de80916162be70865c97774f3adbd9"
@@ -1073,10 +1081,6 @@ ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
   dependencies:
     color-convert "^1.9.0"
-
-antd-icons@^0.1.0-alpha.1:
-  version "0.1.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/antd-icons/-/antd-icons-0.1.0-alpha.1.tgz#2b20d5379cf4163f065e50bf9a0dcc43f05fe9ba"
 
 antd-mobile@^2.0.0:
   version "2.2.1"
@@ -7610,10 +7614,6 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-antd-icons@^0.1.0-alpha.4:
-  version "0.1.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/react-antd-icons/-/react-antd-icons-0.1.0-alpha.4.tgz#4359f9e9a1c469bf26c4c60988e01b64ea2de4af"
-
 react-dev-utils@^5.0.0:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-5.0.1.tgz#1f396e161fe44b595db1b186a40067289bf06613"
@@ -9235,9 +9235,9 @@ uglifyjs-webpack-plugin@^0.4.6:
     uglify-js "^2.8.29"
     webpack-sources "^1.0.1"
 
-umi-build-dev@^0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/umi-build-dev/-/umi-build-dev-0.21.0.tgz#65bbf921097bd9af6ad9c9ba7de759f4cc7672b0"
+umi-build-dev@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/umi-build-dev/-/umi-build-dev-0.21.1.tgz#18aba92e3c19591ed744ab3a81b9e75c2fff6bb4"
   dependencies:
     "@babel/runtime" "7.0.0-beta.46"
     address "^1.0.3"
@@ -9311,9 +9311,9 @@ umi-test@^0.5.5:
     ts-jest-babel-7 "^22.0.6"
     typescript "^2.8.1"
 
-umi@^1.3.14:
-  version "1.3.14"
-  resolved "https://registry.yarnpkg.com/umi/-/umi-1.3.14.tgz#289a19876157f3d86efc1aa1d5ce04ae2e68268a"
+umi@^1.3.15:
+  version "1.3.15"
+  resolved "https://registry.yarnpkg.com/umi/-/umi-1.3.15.tgz#762f31b70a8ac32995938db0590cd724ec085acb"
   dependencies:
     "@babel/runtime" "7.0.0-beta.46"
     "@types/react" "^16.1.0"
@@ -9325,7 +9325,7 @@ umi@^1.3.14:
     path-is-absolute "^1.0.1"
     query-string "^5.0.0"
     slash2 "^2.0.0"
-    umi-build-dev "^0.21.0"
+    umi-build-dev "^0.21.1"
     umi-test "^0.5.5"
     update-notifier "^2.3.0"
     uppercamelcase "^3.0.0"

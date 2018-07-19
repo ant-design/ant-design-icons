@@ -4,6 +4,7 @@
     "tslint-react"
   ],
   "rules": {
+    "interface-name": false,
     "quotemark": [
       true,
       "single",

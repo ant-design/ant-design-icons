@@ -1,41 +1,39 @@
-import { IconDefinition, library } from 'antd-icons';
+import { IconDefinition } from '@ant-design/icons';
 import * as React from 'react';
 import { convertThunk } from '../converter';
+import { Library } from '../library';
+import { isIconDefinition, log } from '../utils';
 
-export interface IAntdIconProps {
+export interface AntdIconProps {
   type: string | IconDefinition;
   className?: string;
   onClick?: React.MouseEventHandler<SVGSVGElement>;
   style?: React.CSSProperties;
 }
 
-const AntdIcon: React.SFC<IAntdIconProps> = (props) => {
-  const { type, ...rest } = props;
-  let target: IconDefinition | null = null;
-  if (isIconDefinition(type)) {
-    target = type;
-  } else if (typeof type === 'string') {
-    target = library.definitions[type];
-    if (!target) {
-      if (!(process && process.env && process.env.NODE_ENV === 'production')) {
-        console.error('[react-antd-icons]: Could not find icon:', type);
+class AntdIcon extends React.Component<AntdIconProps> {
+
+  static library = new Library();
+  static displayName = 'AntdIcon';
+
+  render() {
+    const { type, ...rest } = this.props;
+    let target: IconDefinition | undefined;
+    if (isIconDefinition(type)) {
+      target = type;
+    } else if (typeof type === 'string') {
+      target = AntdIcon.library.get(type);
+      if (!target) {
+        log(`Could not find icon: ${type}`);
+        return null;
       }
+    }
+    if (!target) {
+      log(`type should be string or icon definiton, but got ${type}`);
       return null;
     }
+    return convertThunk(target, rest);
   }
-  if (!target) {
-    if (!(process && process.env && process.env.NODE_ENV === 'production')) {
-      console.error('[react-antd-icons]: type should be string or icon definiton, but got', type);
-    }
-    return null;
-  }
-  return convertThunk(target, rest);
-};
-
-function isIconDefinition(target: any): target is IconDefinition {
-  return typeof target === 'object' && target.name && target.width && Array.isArray(target.children);
 }
-
-AntdIcon.displayName = 'AntdIcon';
 
 export default AntdIcon;

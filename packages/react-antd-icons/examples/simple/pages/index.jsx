@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styles from './index.less';
-import { library, Alibaba, Dashboard, DashboardFill, Twitter } from 'antd-icons/esm';
-import AntdIcon from 'react-antd-icons/esm';
+import { Alibaba, Dashboard, DashboardFill, Twitter } from '@ant-design/icons/esm';
+import AntdIcon from '@ant-design/icons-react/esm';
 
-library.add(Alibaba, Dashboard, DashboardFill);
+AntdIcon.library.add(Alibaba, Dashboard, DashboardFill);
 
 export default class IndexPage extends React.Component {
   render() {
@@ -11,7 +11,6 @@ export default class IndexPage extends React.Component {
       <div className={styles.container}>
         <AntdIcon type={'alibaba'} />
         <AntdIcon type={'dashboard-fill'} />
-        <AntdIcon type={123} />
         <AntdIcon type={Twitter} />
       </div>
     );

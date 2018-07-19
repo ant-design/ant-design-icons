@@ -1,4 +1,4 @@
-import { IconDefinition } from 'antd-icons/esm';
+import { IconDefinition } from '@ant-design/icons';
 import * as React from 'react';
 
 interface IAttrs {

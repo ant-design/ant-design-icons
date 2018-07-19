@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@ant-design/icons@^0.1.0-alpha.2":
+  version "0.1.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@ant-design/icons/-/icons-0.1.0-alpha.2.tgz#e1da389b1ca4ce5f93d2b8649aa305ac72a38272"
+
 "@types/estree@0.0.39":
   version "0.0.39"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
@@ -70,10 +74,6 @@ ansi-styles@^3.2.1:
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
   dependencies:
     color-convert "^1.9.0"
-
-antd-icons@^0.1.0-alpha.1:
-  version "0.1.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/antd-icons/-/antd-icons-0.1.0-alpha.1.tgz#2b20d5379cf4163f065e50bf9a0dcc43f05fe9ba"
 
 argparse@^1.0.7:
   version "1.0.10"

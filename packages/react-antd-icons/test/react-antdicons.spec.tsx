@@ -1,12 +1,12 @@
-import { Alibaba, CiCircleFill, library } from 'antd-icons';
+import { Alibaba, CiCircleFill } from '@ant-design/icons';
 import assert = require('assert');
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
-import ReactAntdIcon, { IAntdIconProps } from '../src/components/AntdIcon';
+import ReactAntdIcon, { AntdIconProps } from '../src/components/AntdIcon';
 
-library.add(Alibaba, CiCircleFill);
+ReactAntdIcon.library.add(Alibaba, CiCircleFill);
 
-function mount(props: IAntdIconProps) {
+function mount(props: AntdIconProps) {
   const component = renderer.create(<ReactAntdIcon {...props} />);
   return component.toJSON();
 }

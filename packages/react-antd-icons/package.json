@@ -1,8 +1,9 @@
 {
-  "name": "react-antd-icons",
+  "name": "@ant-design/icons-react",
   "version": "0.1.0-alpha.5",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
+  "sideEffects": false,
   "repository": "https://github.com/ant-design/ant-design-icons/tree/dev/packages/react-antd-icons",
   "contributors": [
     "HeskeyBaozi<hezhiyu233@foxmail.com>"
@@ -13,7 +14,7 @@
     "test": "cross-env TS_NODE_PROJECT=test/tsconfig.json mocha --require espower-typescript/guess --require jsdom-global/register test/**/*.{ts,tsx}"
   },
   "peerDependencies": {
-    "antd-icons": "^0.1.0-alpha.1",
+    "@ant-design/icons": "^0.1.0-alpha.2",
     "react": "^16.4.1"
   },
   "devDependencies": {
@@ -21,7 +22,6 @@
     "@types/node": "^10.5.2",
     "@types/react": "^16.4.6",
     "@types/react-test-renderer": "^16.0.1",
-    "antd-icons": "^0.1.0-alpha.1",
     "cross-env": "^5.2.0",
     "espower-typescript": "^9.0.0",
     "jsdom": "^11.11.0",

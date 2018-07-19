@@ -2,8 +2,8 @@
 
 ## Install
 ```bash
-yarn add antd-icons
-yarn add react-antd-icons
+yarn add @ant-design/icons
+yarn add @ant-design/icons-react
 ```
 
 ## Usage
@@ -11,8 +11,9 @@ yarn add react-antd-icons
 First, you should add the icons that you need into the library.
 
 ```ts
-import { library, Alibaba } from 'antd-icons/esm';
-library.add(Alibaba);
+import { Alibaba, Dashboard, DashboardFill, Twitter } from '@ant-design/icons/esm';
+import AntdIcon from '@ant-design/icons-react/esm';
+AntdIcon.library.add(Alibaba, Dashboard, DashboardFill);
 ```
 
 After that, you can use antd icons in your React components as simply as this:
@@ -21,10 +22,10 @@ After that, you can use antd icons in your React components as simply as this:
 // examples/simple/pages/index.jsx
 import * as React from 'react';
 import styles from './index.less';
-import { library, Alibaba, Dashboard, Twitter } from 'antd-icons/esm';
-import AntdIcon from 'react-antd-icons/esm';
+import { Alibaba, Dashboard, DashboardFill, Twitter } from '@ant-design/icons/esm';
+import AntdIcon from '@ant-design/icons-react/esm';
 
-library.add(Alibaba, Dashboard, DashboardFill);
+AntdIcon.library.add(Alibaba, Dashboard, DashboardFill);
 
 export default class IndexPage extends React.Component {
   render() {
@@ -41,7 +42,7 @@ export default class IndexPage extends React.Component {
 
 ## Component Interface
 ```ts
-interface IAntdIconProps {
+interface AntdIconProps {
     type: string | IconDefinition;
     className?: string;
     onClick?: React.MouseEventHandler<SVGSVGElement>;

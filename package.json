@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "Ant Design Icons",
   "module": "esm/index.js",
   "main": "lib/index.js",
