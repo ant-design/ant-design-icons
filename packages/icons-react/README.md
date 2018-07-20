@@ -1,6 +1,7 @@
-# React Antd Icons
+# Ant Design Icons for React
 
 ## Install
+
 ```bash
 yarn add @ant-design/icons
 yarn add @ant-design/icons-react
@@ -41,11 +42,12 @@ export default class IndexPage extends React.Component {
 ```
 
 ## Component Interface
+
 ```ts
 interface AntdIconProps {
-    type: string | IconDefinition;
-    className?: string;
-    onClick?: React.MouseEventHandler<SVGSVGElement>;
-    style?: React.CSSProperties;
+  type: string | IconDefinition;
+  className?: string;
+  onClick?: React.MouseEventHandler<SVGSVGElement>;
+  style?: React.CSSProperties;
 }
 ```
