@@ -1,18 +1,13 @@
 'use strict';
-
 import fs = require('fs');
 import globby = require('globby');
 import _ = require('lodash');
 import parse5 = require('parse5');
 import path = require('path');
+import rimraf = require('rimraf');
 import SVGO = require('svgo');
-// tslint:disable-next-line:no-var-requires
-const pkg = require('../package.json');
-// tslint:disable-next-line:no-var-requires
-const { rimraf } = require('mz-modules');
-import assert = require('assert');
-import chalk from 'chalk';
-import { generateAbstractTree, getSVGOPlugin, IconDefinition, INode } from './utils';
+import { IconDefinition, Node } from './typings';
+import { generateAbstractTree, getSVGOPlugin, log } from './utils';
 
 const environment: IEnvironment = {
   paths: {
@@ -39,14 +34,18 @@ interface IEnvironment {
 }
 
 async function build(env: IEnvironment) {
-  console.time('Build Time');
+  const startTime = Date.now();
 
   // clear.
-  console.log(chalk.green(`🌟 [Generate SVG] Clear folders.`));
+  log(`Clear folders.`);
   await Promise.all(
     Object.keys(env.paths)
       .filter((key) => key.endsWith('OUTPUT')) // DO NOT DELETE THIS LINE!!!
-      .map((key) => rimraf(env.paths[key])) // This is evil. Make sure you just delete the OUTPUT.
+      .map((key) => {
+        // This is evil. Make sure you just delete the OUTPUT.
+        log(`Delete ${env.paths[key]}.`);
+        return new Promise((resolve) => rimraf(env.paths[key], resolve));
+      })
   );
 
   // get names and paths.
@@ -54,7 +53,7 @@ async function build(env: IEnvironment) {
   const kebabCaseNames = svgFileNames.map((name) => _.kebabCase(name.replace(/\.svg$/, '')));
   const componentNames = kebabCaseNames.map((name) => _.upperFirst(_.camelCase(name)));
   const svgFilePaths = svgFileNames.map((name) => path.resolve(env.paths.SVG_DIR, name));
-  console.log(chalk.green(`🌟 [Generate SVG] Icon Amount: ${svgFileNames.length}.`));
+  log(`Icon Amount: ${svgFileNames.length}.`);
 
   // optimizing SVG files.
   const svgo = new SVGO(env.options.svgo);
@@ -68,7 +67,7 @@ async function build(env: IEnvironment) {
     const componentName = componentNames[i];
     const compressedSvg = await svgo.optimize(svg);
     const domFragment: any = parse5.parseFragment(compressedSvg.data);
-    const ast = generateAbstractTree(domFragment.childNodes[0] as INode, kebabCaseName);
+    const ast = generateAbstractTree(domFragment.childNodes[0] as Node, kebabCaseName);
     const icon: IconDefinition = {
       ...ast,
       name: kebabCaseName
@@ -81,9 +80,7 @@ async function build(env: IEnvironment) {
   }
 
   // render svgs.ts
-  console.log(
-    chalk.green(`🌟 [Generate SVG] Generate "svgs.ts" to ${path.relative(__dirname, env.paths.SVGS_TS_TEMPLATE)}.`)
-  );
+  log(`Generate "svgs.ts" to ${path.relative(__dirname, env.paths.SVGS_TS_TEMPLATE)}.`);
   const svgsTs = fs.readFileSync(env.paths.SVGS_TS_TEMPLATE, 'utf8');
   const renderedSvgsTs = svgsTs
     .replace(
@@ -97,11 +94,7 @@ async function build(env: IEnvironment) {
   fs.writeFileSync(env.paths.SVGS_TS_OUTPUT, renderedSvgsTs, 'utf8');
 
   // render manifest.ts
-  console.log(
-    chalk.green(
-      `🌟 [Generate SVG] Generate "manifest.ts" to ${path.relative(__dirname, env.paths.MANIFEST_TS_TEMPLATE)}.`
-    )
-  );
+  log(`Generate "manifest.ts" to ${path.relative(__dirname, env.paths.MANIFEST_TS_TEMPLATE)}.`);
   const manifestTs = fs.readFileSync(env.paths.MANIFEST_TS_TEMPLATE, 'utf8');
   const renderedManifestTs = manifestTs
     .replace(
@@ -109,8 +102,9 @@ async function build(env: IEnvironment) {
       components.map(({ icon, name }) => `  '${icon.name}': '${name}'`).join(',\n')
     );
   fs.writeFileSync(env.paths.MANIFEST_TS_OUTPUT, renderedManifestTs, 'utf8');
-  console.log(chalk.green(`🌟 [Generate SVG] Finished.`));
-  console.timeEnd('Build Time');
+  log(`Finished.`);
+
+  log(`Build Time: ${(Date.now() - startTime) / 1000}s.`);
 }
 
 // run

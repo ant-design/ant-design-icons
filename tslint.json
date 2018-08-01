@@ -3,6 +3,7 @@
     "tslint:latest"
   ],
   "rules": {
+    "interface-name": false,
     "quotemark": [
       true,
       "single",
