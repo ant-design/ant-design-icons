@@ -1,7 +1,6 @@
 .DS_Store
 node_modules/
 dist/
-# lib/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -25,3 +24,6 @@ examples/
 
 # packages
 packages/
+
+# tests
+test/

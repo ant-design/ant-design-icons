@@ -2,7 +2,7 @@
   "name": "@ant-design/icons",
   "version": "0.1.0-alpha.2",
   "description": "Ant Design Icons",
-  "module": "esm/index.js",
+  "module": "es/index.js",
   "main": "lib/index.js",
   "sideEffects": false,
   "repository": "https://github.com/ant-design/ant-design-icons",
@@ -12,7 +12,8 @@
   "license": "MIT",
   "dependencies": {},
   "scripts": {
-    "build": "rollup --config",
+    "build": "rimraf lib && tsc",
+    "build:es": "rimraf es && tsc --outDir es --module esnext",
     "generate": "cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/generateIcons.ts"
   },
   "directories": {
@@ -34,8 +35,6 @@
     "parse5": "^5.0.0",
     "power-assert": "^1.6.0",
     "rimraf": "^2.6.2",
-    "rollup": "^0.63.4",
-    "rollup-plugin-typescript2": "^0.16.1",
     "svgo": "^1.0.5",
     "ts-node": "^7.0.0",
     "tslint": "^5.11.0",

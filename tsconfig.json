@@ -2,20 +2,13 @@
   "compilerOptions": {
     "strict": true,
     "target": "es5",
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
-    "jsx": "react",
     "declaration": true,
-    "lib": [
-      "es2015",
-      "dom"
-    ]
+    "outDir": "lib",
+    "removeComments": true
   },
-  "exclude": [
-    "examples/",
-    "node_modules/",
-    "build/",
-    "packages/",
-    "test/"
+  "include": [
+    "src/**/*"
   ]
 }
