@@ -1,19 +1,74 @@
-import { Alibaba, Dashboard, DashboardFill, Twitter } from '@ant-design/icons';
+import { Alibaba, Dashboard, Twitter } from '@ant-design/icons';
 import * as React from 'react';
 import { render } from 'react-dom';
+import styled from 'styled-components';
 import AntdIcon from '../src';
 
-AntdIcon.add(Dashboard, DashboardFill);
+AntdIcon.add(Dashboard);
+
+const Div = styled.div`
+  position: relative;
+  margin-bottom: 1rem;
+  line-height: 1;
+  &:after {
+    width: 100%;
+    height: 1px;
+    content: "";
+    position: absolute;
+    bottom: .125em;
+    left: 0;
+    background-color: lightblue;
+    z-index: -100;
+  }
+  &:before {
+    width:  100%;
+    height: 1px;
+    content:  "";
+    position: absolute;
+    top:  .125em;
+    left: 0;
+    background-color: lightblue;
+    z-index:  -100;
+  }
+`;
+
+const AlignAntdIcon = styled(AntdIcon)`
+  vertical-align: -.125em;
+`;
 
 class SimpleDemo extends React.Component<{}> {
+
+  static displaySize = [
+    '64px', '48px', '32px', '24px', '16px', '12px', '8px'
+  ];
+
+  static relatedHref = 'https://blog.prototypr.io/align-' +
+    'svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4';
+
+  renderStatement(fontSize: string) {
+    const style: React.CSSProperties = {
+      fontSize, color: fontSize === '48px' && 'lightblue' || 'inherit'
+    };
+    return (
+      <Div key={fontSize} style={style}>
+        {fontSize} Ant Design <AlignAntdIcon type={Alibaba} /> 0123
+        <AlignAntdIcon type={'dashboard'} /> 你好 <AlignAntdIcon type={Twitter} />
+      </Div>
+    );
+  }
+
+  renderStatements() {
+    return SimpleDemo.displaySize.map((fontSize) => {
+      return this.renderStatement(fontSize);
+    });
+  }
+
   render() {
     return (
       <div>
-        <h1>Simple Demo</h1>
-        <AntdIcon type={Alibaba} />
-        <AntdIcon type={'dashboard'} />
-        <AntdIcon type={'dashboard-fill'} />
-        <AntdIcon type={Twitter} />
+        <h1>Simple Demo - Icons Alignments</h1>
+        {this.renderStatements()}
+        See <a href={SimpleDemo.relatedHref} target={'_blank'}>related blog</a> for detail.
       </div>
     );
   }
