@@ -1,6 +1,6 @@
 import { IconDefinition } from '@ant-design/icons';
 import * as React from 'react';
-import { isIconDefinition, log, normalizeAttrs } from '../utils';
+import { isIconDefinition, log, MiniMap, normalizeAttrs } from '../utils';
 
 export interface AntdIconProps {
   type: string | IconDefinition;
@@ -12,7 +12,7 @@ export interface AntdIconProps {
 class AntdIcon extends React.Component<AntdIconProps> {
 
   static displayName = 'AntdIcon';
-  static definitions = new Map<string, IconDefinition>();
+  static definitions = new MiniMap<IconDefinition>();
   static add(...icons: IconDefinition[]) {
     icons.forEach((icon) => {
       this.definitions.set(icon.name, icon);

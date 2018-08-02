@@ -7,7 +7,9 @@ export function log(message: string) {
 }
 
 export function isIconDefinition(target: any): target is IconDefinition {
-  return typeof target === 'object' && target.name && target.width && Array.isArray(target.children);
+  return typeof target === 'object' &&
+    target.name && target.width && Array.isArray(target.children) &&
+    typeof target.viewBox === 'string';
 }
 
 export function normalizeAttrs(attrs: Attrs = {}): Attrs {
@@ -27,4 +29,27 @@ export function normalizeAttrs(attrs: Attrs = {}): Attrs {
 
 export interface Attrs {
   [key: string]: string;
+}
+
+export class MiniMap<V> {
+  get size() {
+    return Object.keys(this.collection).length;
+  }
+  private collection: { [key: string]: V } = {};
+  clear(): void {
+    this.collection = {};
+  }
+  delete(key: string): boolean {
+    return delete this.collection[key];
+  }
+  get(key: string): V | undefined {
+    return this.collection[key];
+  }
+  has(key: string): boolean {
+    return Boolean(this.collection[key]);
+  }
+  set(key: string, value: V): this {
+    this.collection[key] = value;
+    return this;
+  }
 }

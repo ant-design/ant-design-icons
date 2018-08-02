@@ -26,4 +26,5 @@ yarn-error.log*
 
 lib/
 esm/
+es/
 examples/**/*/node_modules/

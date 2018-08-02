@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "esnext",
     "strict": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "moduleResolution": "node",
     "declaration": true,
-    "importHelpers": true,
-    "lib": [
-      "es2015"
-    ]
+    "importHelpers": true
   },
   "include": [
-    "src/"
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

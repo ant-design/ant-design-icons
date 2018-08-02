@@ -10,18 +10,21 @@
   ],
   "license": "MIT",
   "scripts": {
+    "start": "rc-tools run server",
+    "compile": "rc-tools run compile --babel-runtime",
     "build": "rollup --config",
     "test": "cross-env TS_NODE_PROJECT=test/tsconfig.json mocha --require espower-typescript/guess --require jsdom-global/register test/**/*.{ts,tsx}"
   },
   "peerDependencies": {
-    "@ant-design/icons": "^0.1.1-alpha.1",
+    "@ant-design/icons": "^0.1.2-alpha.1",
     "react": "16.x"
   },
   "devDependencies": {
-    "@ant-design/icons": "^0.1.1-alpha.1",
+    "@ant-design/icons": "^0.1.2-alpha.1",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.5.5",
     "@types/react": "^16.4.7",
+    "@types/react-dom": "^16.0.6",
     "@types/react-test-renderer": "^16.0.1",
     "cross-env": "^5.2.0",
     "espower-typescript": "^9.0.0",
@@ -31,12 +34,23 @@
     "power-assert": "^1.6.0",
     "rc-tools": "^8.1.5",
     "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "react-test-renderer": "^16.4.2",
-    "rollup": "^0.63.5",
-    "rollup-plugin-typescript2": "^0.16.1",
     "tslint": "^5.11.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "tslib": "^1.9.3"
+  },
+  "config": {
+    "port": 9527,
+    "entry": {
+      "@ant-design/icons-react": [
+        "./src/index.ts",
+        "./assets/index.less"
+      ]
+    }
+  }
 }
