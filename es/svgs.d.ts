@@ -20,8 +20,8 @@ export declare const PoundCircleFill: IconDefinition;
 export declare const Pound: IconDefinition;
 export declare const QqCircleFill: IconDefinition;
 export declare const QqSquareFill: IconDefinition;
-export declare const UsbFill: IconDefinition;
 export declare const Qq: IconDefinition;
+export declare const UsbFill: IconDefinition;
 export declare const Usb: IconDefinition;
 export declare const YuanCircleFill: IconDefinition;
 export declare const Yuan: IconDefinition;
@@ -441,9 +441,9 @@ export declare const Slack: IconDefinition;
 export declare const SlidersFill: IconDefinition;
 export declare const Sliders: IconDefinition;
 export declare const SmallDash: IconDefinition;
-export declare const SmileFill: IconDefinition;
 export declare const Smile: IconDefinition;
 export declare const SnippetsFill: IconDefinition;
+export declare const SmileFill: IconDefinition;
 export declare const Snippets: IconDefinition;
 export declare const Solution: IconDefinition;
 export declare const SortAscending: IconDefinition;
@@ -453,8 +453,8 @@ export declare const Sound: IconDefinition;
 export declare const StarFill: IconDefinition;
 export declare const Star: IconDefinition;
 export declare const Stock: IconDefinition;
-export declare const StopFill: IconDefinition;
 export declare const Stop: IconDefinition;
+export declare const StopFill: IconDefinition;
 export declare const Strikethrough: IconDefinition;
 export declare const Swap: IconDefinition;
 export declare const Sync: IconDefinition;
@@ -526,7 +526,7 @@ export declare const ZhihuCircleFill: IconDefinition;
 export declare const ZhihuSquareFill: IconDefinition;
 export declare const Zhihu: IconDefinition;
 export declare const antDesignIcons: IconDefinition[];
-export interface IAbstractTree {
+export interface AbstractTree {
     width: number;
     height: number;
     style?: string;
@@ -537,6 +537,6 @@ export interface IAbstractTree {
         };
     }>;
 }
-export interface IconDefinition extends IAbstractTree {
+export interface IconDefinition extends AbstractTree {
     name: string;
 }

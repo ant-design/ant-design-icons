@@ -1,3 +1,5 @@
+import SVGO = require('svgo');
+
 export interface Node {
   nodeName: string;
   tagName?: string;
@@ -11,6 +13,14 @@ export interface AbstractTree {
   height: number;
   style?: string;
   children: Array<{ tag: string, attrs: { [key: string]: string } }>;
+}
+
+export interface Environment {
+  readonly paths: { [key: string]: string };
+  readonly base: string;
+  readonly options: {
+    svgo: SVGO.Options
+  };
 }
 
 export interface IconDefinition extends AbstractTree {

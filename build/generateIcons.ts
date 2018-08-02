@@ -6,34 +6,11 @@ import parse5 = require('parse5');
 import path = require('path');
 import rimraf = require('rimraf');
 import SVGO = require('svgo');
-import { IconDefinition, Node } from './typings';
-import { generateAbstractTree, getSVGOPlugin, log } from './utils';
+import { environment } from './env';
+import { Environment, IconDefinition, Node } from './typings';
+import { generateAbstractTree, log } from './utils';
 
-const environment: IEnvironment = {
-  paths: {
-    SVG_DIR: path.resolve(__dirname, '../src/svg'),
-    SVGS_TS_TEMPLATE: path.resolve(__dirname, './templates/svgs.ts.template'),
-    SVGS_TS_OUTPUT: path.resolve(__dirname, '../src/svgs.ts'),
-    MANIFEST_TS_TEMPLATE: path.resolve(__dirname, './templates/manifest.ts.template'),
-    MANIFEST_TS_OUTPUT: path.resolve(__dirname, '../src/manifest.ts')
-  },
-  base: path.resolve(__dirname, '../'),
-  options: {
-    svgo: {
-      plugins: getSVGOPlugin()
-    }
-  }
-};
-
-interface IEnvironment {
-  paths: { [key: string]: string };
-  base: string;
-  options: {
-    svgo: SVGO.Options
-  };
-}
-
-async function build(env: IEnvironment) {
+export async function build(env: Environment) {
   const startTime = Date.now();
 
   // clear.

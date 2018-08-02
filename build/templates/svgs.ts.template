@@ -7,13 +7,13 @@ export const antDesignIcons: IconDefinition[] = [
 <% COMPONENT_NAMES_LIST %>
 ];
 
-export interface IAbstractTree {
+export interface AbstractTree {
   width: number;
   height: number;
   style?: string;
   children: Array<{ tag: string, attrs: { [key: string]: string } }>;
 }
 
-export interface IconDefinition extends IAbstractTree {
+export interface IconDefinition extends AbstractTree {
   name: string; // kebab-case-style
 }
