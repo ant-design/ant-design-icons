@@ -11,6 +11,7 @@ export interface Node {
 export interface AbstractTree {
   width: number;
   height: number;
+  viewBox: string;
   style?: string;
   children: Array<{ tag: string, attrs: { [key: string]: string } }>;
 }

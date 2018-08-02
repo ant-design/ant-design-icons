@@ -11,9 +11,9 @@ import { AbstractTree, Node } from './typings';
 export function generateAbstractTree(node: Node, debugName?: string): AbstractTree {
   assert(node, debugName);
   assert(node.tagName === 'svg', debugName);
-  const viewBox = node.attrs.find(({ name }) => name === 'viewBox');
+  const viewBox = node.attrs.find(({ name }) => name === 'viewBox')!;
   assert(viewBox, debugName);
-  const size: number[] = viewBox!.value.split(' ').slice(2).map((str) => Number.parseInt(str));
+  const size: number[] = viewBox!.value.split(' ').slice(2).map((str) => Number.parseInt(str, 10));
   assert(
     size.length === 2,
     `The size tuple should be [ width, height ], but got [ ${size[0]}, ${size[1]} ] [${debugName}]`
@@ -40,6 +40,7 @@ export function generateAbstractTree(node: Node, debugName?: string): AbstractTr
   return {
     width: size[0],
     height: size[1],
+    viewBox: viewBox.value,
     style: styleContent,
     children: p
   };
