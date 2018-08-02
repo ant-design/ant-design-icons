@@ -14,10 +14,11 @@
     "test": "cross-env TS_NODE_PROJECT=test/tsconfig.json mocha --require espower-typescript/guess --require jsdom-global/register test/**/*.{ts,tsx}"
   },
   "peerDependencies": {
-    "@ant-design/icons": "^0.1.0-alpha.2",
-    "react": "^16.4.1"
+    "@ant-design/icons": "^0.1.1-alpha.1",
+    "react": "16.x"
   },
   "devDependencies": {
+    "@ant-design/icons": "^0.1.1-alpha.1",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.5.5",
     "@types/react": "^16.4.7",
@@ -28,6 +29,7 @@
     "jsdom-global": "^3.0.2",
     "mocha": "^5.2.0",
     "power-assert": "^1.6.0",
+    "rc-tools": "^8.1.5",
     "react": "^16.4.2",
     "react-test-renderer": "^16.4.2",
     "rollup": "^0.63.5",
@@ -35,5 +37,6 @@
     "tslint": "^5.11.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.0.1"
-  }
+  },
+  "dependencies": {}
 }

@@ -6,6 +6,7 @@
     "jsx": "react",
     "moduleResolution": "node",
     "declaration": true,
+    "importHelpers": true,
     "lib": [
       "es2015"
     ]

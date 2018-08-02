@@ -1,7 +1,6 @@
 import { IconDefinition } from '@ant-design/icons';
 import * as React from 'react';
-import { convertThunk } from '../converter';
-import { isIconDefinition, log } from '../utils';
+import { isIconDefinition, log, normalizeAttrs } from '../utils';
 
 export interface AntdIconProps {
   type: string | IconDefinition;
@@ -42,7 +41,40 @@ class AntdIcon extends React.Component<AntdIconProps> {
       log(`type should be string or icon definiton, but got ${type}`);
       return null;
     }
-    return convertThunk(target, rest);
+
+    const children = [];
+    if (target.style) {
+      children.push(
+        <style key={`${target.name}-style`}>
+          {target.style}
+        </style>
+      );
+    }
+    children.push(
+      ...target.children
+        .map(({ tag, attrs }, index) => {
+          return React.createElement(
+            tag,
+            {
+              ...normalizeAttrs(attrs),
+              key: `${tag}-${index}`
+            }
+          );
+        })
+    );
+    return (
+      <svg
+        {...rest}
+        data-icon={target.name}
+        viewBox={`0 0 ${target.width} ${target.height}`}
+        width={`1em`}
+        height={`1em`}
+        fill={`currentColor`}
+        aria-hidden={`true`}
+      >
+        {children}
+      </svg>
+    );
   }
 }
 
