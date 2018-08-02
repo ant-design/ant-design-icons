@@ -24,6 +24,7 @@ describe('build/generateIcon.ts', () => {
   const closeTarget = {
     width: 1024,
     height: 1024,
+    viewBox: '0 0 1024 1024',
     style: '',
     children: [
       {
@@ -47,6 +48,6 @@ describe('build/generateIcon.ts', () => {
     const raw = /export const Close: IconDefinition = .+/.exec(svgTsString);
     assert(raw !== null);
     const actualCloseObject = JSON.parse(raw![0].replace('export const Close: IconDefinition = ', ''));
-    assert.deepEqual(JSON.parse(actualCloseObject), closeTarget);
+    assert.deepEqual(actualCloseObject, closeTarget);
   });
 });
