@@ -25,3 +25,4 @@ lib/
 es/
 dist/
 build/
+.vscode

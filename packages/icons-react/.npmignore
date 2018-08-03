@@ -25,3 +25,4 @@ src/
 examples/
 test/
 build/
+.vscode/

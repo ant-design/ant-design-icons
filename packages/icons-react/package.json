@@ -14,9 +14,9 @@
     "lint": "rc-tools run lint",
     "compile": "rc-tools run compile --babel-runtime",
     "build": "rc-tools run build",
-    "prepublish": "rc-tools run guard",
     "dist": "rc-tools run dist",
-    "test": "jest"
+    "test": "jest",
+    "pub": "rc-tools run pub --babel-runtime"
   },
   "peerDependencies": {
     "@ant-design/icons": "^0.1.2-alpha.1",
