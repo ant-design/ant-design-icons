@@ -27,6 +27,7 @@ console.log(Alibaba);
 // Output:
 // { width: 1024,
 //   height: 1024,
+//   viewBox: '0 0 1024 1024',
 //   style: '',
 //   children:
 //    [ { tag: 'path', attrs: [Object] },
