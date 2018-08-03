@@ -55,6 +55,7 @@ interface AbstractTree {
 
 ## Build
 ```bash
-npm run generate # generate src/svgs.ts
-npm run build # generate module bundle
+npm run generate # Generate files to ./src
+npm run build # Build library
+npm run test # Runing Test
 ```

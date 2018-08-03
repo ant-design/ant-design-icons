@@ -17,29 +17,50 @@
     "build:es": "rimraf es && tsc --outDir es --module esnext",
     "generate": "cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/generateIcons.ts",
     "test": "npm run test:unit",
-    "test:unit": "cross-env TS_NODE_PROJECT=test/tsconfig.json mocha --require espower-typescript/guess test/**/*.ts -t 5000"
+    "test:unit": "jest"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.55",
     "@svgr/core": "^2.1.1",
     "@types/globby": "^8.0.0",
+    "@types/jest": "^23.3.1",
     "@types/lodash": "^4.14.115",
-    "@types/mocha": "^5.2.5",
     "@types/node": "^10.5.5",
     "@types/parse5": "^5.0.0",
     "@types/rimraf": "^2.0.2",
     "@types/svgo": "^1.0.1",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
     "chalk": "^2.4.1",
     "cross-env": "^5.2.0",
-    "espower-typescript": "^9.0.0",
     "globby": "^8.0.1",
+    "jest": "^23.4.2",
     "lodash": "^4.17.10",
-    "mocha": "^5.2.0",
     "parse5": "^5.0.0",
-    "power-assert": "^1.6.0",
     "rimraf": "^2.6.2",
     "svgo": "^1.0.5",
-    "ts-node": "^7.0.0",
+    "ts-jest": "^23.1.0",
     "tslint": "^5.11.0",
     "typescript": "^3.0.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "./test/tsconfig.json"
+      }
+    },
+    "testURL": "http://localhost"
   }
 }

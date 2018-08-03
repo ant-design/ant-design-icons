@@ -1,4 +1,3 @@
-import assert = require('assert');
 import fs = require('fs');
 import path = require('path');
 import { build } from '../build/generateIcons';
@@ -46,8 +45,8 @@ describe('build/generateIcon.ts', () => {
     await build(env);
     const svgTsString = fs.readFileSync(env.paths.SVGS_TS_OUTPUT, 'utf8');
     const raw = /export const Close: IconDefinition = .+/.exec(svgTsString);
-    assert(raw !== null);
+    expect(raw).not.toBeNull();
     const actualCloseObject = JSON.parse(raw![0].replace('export const Close: IconDefinition = ', ''));
-    assert.deepEqual(actualCloseObject, closeTarget);
+    expect(actualCloseObject).toEqual(closeTarget);
   });
 });
