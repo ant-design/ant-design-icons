@@ -2,16 +2,15 @@ import { IconDefinition } from '@ant-design/icons';
 import * as React from 'react';
 import { isIconDefinition, log, MiniMap, normalizeAttrs } from '../utils';
 
-export interface AntdIconProps {
+export interface IconProps {
   type: string | IconDefinition;
   className?: string;
   onClick?: React.MouseEventHandler<SVGSVGElement>;
   style?: React.CSSProperties;
 }
 
-class AntdIcon extends React.Component<AntdIconProps> {
-
-  static displayName = 'AntdIcon';
+class Icon extends React.Component<IconProps> {
+  static displayName = 'IconReact';
   static definitions = new MiniMap<IconDefinition>();
   static add(...icons: IconDefinition[]) {
     icons.forEach((icon) => {
@@ -27,11 +26,12 @@ class AntdIcon extends React.Component<AntdIconProps> {
 
   render() {
     const { type, ...rest } = this.props;
+
     let target: IconDefinition | undefined;
     if (isIconDefinition(type)) {
       target = type;
     } else if (typeof type === 'string') {
-      target = AntdIcon.get(type);
+      target = Icon.get(type);
       if (!target) {
         log(`Could not find icon: ${type}`);
         return null;
@@ -78,4 +78,4 @@ class AntdIcon extends React.Component<AntdIconProps> {
   }
 }
 
-export default AntdIcon;
+export default Icon;

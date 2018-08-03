@@ -1,1 +1,1 @@
-export { default, AntdIconProps } from './components/AntdIcon';
+export { default, IconProps } from './components/Icon';
