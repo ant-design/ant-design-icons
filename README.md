@@ -20,7 +20,7 @@ yarn add @ant-design/icons # or npm install @ant-design/icons --save
 
 ## Usage
 ```ts
-import { Alibaba } from '@ant-design/icons/esm';
+import { Alibaba } from '@ant-design/icons/es';
 
 console.log(Alibaba);
 
@@ -39,13 +39,14 @@ console.log(Alibaba);
 This library export all SVG files as `IconDefinition`.
 
 ```ts
-interface IconDefinition extends IAbstractTree {
+interface IconDefinition extends AbstractTree {
   name: string; // kebab-case-style
 }
 
-interface IAbstractTree {
+interface AbstractTree {
   width: number;
   height: number;
+  viewBox: string;
   style?: string;
   children: Array<{ tag: string, attrs: { [key: string]: string } }>;
 }
