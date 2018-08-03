@@ -26,3 +26,5 @@ yarn-error.log*
 
 src/
 examples/
+test/
+dist/

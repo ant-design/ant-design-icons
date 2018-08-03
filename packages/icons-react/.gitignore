@@ -25,6 +25,5 @@ yarn-error.log*
 /.idea
 
 lib/
-esm/
 es/
-examples/**/*/node_modules/
+dist/

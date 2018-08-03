@@ -1,8 +1,15 @@
 {
-  "extends": "../tsconfig.json",
   "compilerOptions": {
+    "strict": true,
+    "target": "esnext",
     "module": "commonjs",
     "sourceMap": true,
-    "jsx": "react"
-  }
+    "moduleResolution": "node",
+  },
+  "include": [
+    "test"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

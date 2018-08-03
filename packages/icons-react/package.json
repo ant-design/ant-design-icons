@@ -14,7 +14,9 @@
     "lint": "rc-tools run lint",
     "compile": "rc-tools run compile --babel-runtime",
     "build": "rollup --config",
-    "test": "cross-env TS_NODE_PROJECT=test/tsconfig.json mocha --require espower-typescript/guess test/**/*.{ts,tsx}"
+    "prepublish": "rc-tools run guard",
+    "dist": "rc-tools run dist",
+    "test": "jest"
   },
   "peerDependencies": {
     "@ant-design/icons": "^0.1.2-alpha.1",
@@ -22,15 +24,14 @@
   },
   "devDependencies": {
     "@ant-design/icons": "^0.1.2-alpha.1",
-    "@types/mocha": "^5.2.5",
+    "@types/jest": "^23.3.1",
     "@types/node": "^10.5.5",
     "@types/react": "^16.4.7",
     "@types/react-dom": "^16.0.6",
     "@types/react-test-renderer": "^16.0.1",
+    "babel-core": "^6.26.3",
     "cross-env": "^5.2.0",
-    "espower-typescript": "^9.0.0",
-    "mocha": "^5.2.0",
-    "power-assert": "^1.6.0",
+    "jest": "^23.4.2",
     "rc-tools": "^8.1.5",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -38,7 +39,7 @@
     "styled-components": "^3.3.3",
     "tslint": "^5.11.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.0.1"
+    "typescript": "^2.9.2"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0"
@@ -50,5 +51,20 @@
         "./src/index.ts"
       ]
     }
+  },
+  "jest": {
+    "testURL": "http://localhost",
+    "transform": {
+      "\\.tsx?$": "./node_modules/rc-tools/scripts/jestPreprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
