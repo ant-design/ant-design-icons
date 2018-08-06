@@ -27,3 +27,6 @@ packages/
 
 # tests
 test/
+
+_site/
+site/
