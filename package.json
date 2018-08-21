@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons",
-  "version": "0.1.2-alpha.1",
+  "version": "0.1.2-alpha.2",
   "description": "Ant Design Icons",
   "module": "es/index.js",
   "main": "lib/index.js",
@@ -8,6 +8,11 @@
   "repository": "https://github.com/ant-design/ant-design-icons",
   "contributors": [
     "HeskeyBaozi <hezhiyu233@foxmail.com>"
+  ],
+  "files": [
+    "es",
+    "lib",
+    "README.md"
   ],
   "license": "MIT",
   "dependencies": {},
