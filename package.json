@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons",
-  "version": "0.1.2-alpha.7",
+  "version": "0.1.2-alpha.8",
   "description": "Ant Design Icons",
   "module": "es/index.js",
   "main": "lib/index.js",
@@ -11,7 +11,8 @@
   ],
   "files": [
     "es",
-    "lib"
+    "lib",
+    "svg"
   ],
   "license": "MIT",
   "dependencies": {},
@@ -22,8 +23,9 @@
     "generate": "cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/generateIcons.ts",
     "test": "npm run test:unit",
     "test:unit": "jest",
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' 'site/**/*.{ts,tsx}'",
-    "start": "rimraf _site && cross-env NODE_ENV=development bisheng start -c ./site/bisheng.config.js"
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' 'site/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+    "start": "rimraf _site && cross-env NODE_ENV=development bisheng start -c ./site/bisheng.config.js",
+    "clean": "rimraf _site es lib src/manifest.ts src/svgs.ts"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.55",
@@ -49,6 +51,7 @@
     "rimraf": "^2.6.2",
     "svgo": "^1.0.5",
     "ts-jest": "^23.1.0",
+    "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.0.1",
     "webpack": "3.x",

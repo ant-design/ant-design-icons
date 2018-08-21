@@ -6,8 +6,8 @@ before_script:
 script:
   - yarn run lint
   - yarn run test
-  - yarn run build
   - yarn run generate
+  - yarn run build
 branches:
   only:
     - master
