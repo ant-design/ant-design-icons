@@ -75,6 +75,10 @@
         "tsConfigFile": "./test/tsconfig.json"
       }
     },
-    "testURL": "http://localhost"
+    "testURL": "http://localhost",
+    "testPathIgnorePatterns": [
+      "<rootDir>/packages/",
+      "<rootDir>/node_modules/"
+    ]
   }
 }
