@@ -23,6 +23,7 @@
     "generate": "cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/generateIcons.ts",
     "test": "npm run test:unit",
     "test:unit": "jest",
+    "lint": "tslint --project ./tsconfig.json",
     "start": "rimraf _site && cross-env NODE_ENV=development bisheng start -c ./site/bisheng.config.js"
   },
   "devDependencies": {
