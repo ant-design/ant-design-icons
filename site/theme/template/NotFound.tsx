@@ -7,7 +7,7 @@ interface NotFoundProps {
 export default class NotFound extends React.Component<NotFoundProps> {
   render() {
     return (
-      <div>
+      <div >
         Not Found
       </div>
     );
