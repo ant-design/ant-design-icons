@@ -1,10 +1,10 @@
 import * as React from 'react';
-import './index.less';
+import { PageProps } from '../../types';
 
-interface LayoutProps {
+interface LayoutProps extends PageProps<{}, {}> {
 }
 
-export default class Layout extends React.Component<LayoutProps> {
+export default class Layout extends React.PureComponent<LayoutProps> {
   render() {
     return (
       <div className={'container'}>

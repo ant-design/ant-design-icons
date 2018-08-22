@@ -1,10 +1,10 @@
 import * as React from 'react';
+import { PageProps } from '../types';
 
-interface NotFoundProps {
-
+interface NotFoundProps extends PageProps<{}, {}> {
 }
 
-export default class NotFound extends React.Component<NotFoundProps> {
+export default class NotFound extends React.PureComponent<NotFoundProps> {
   render() {
     return (
       <div >
