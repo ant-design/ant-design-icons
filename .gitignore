@@ -24,3 +24,5 @@ src/manifest.ts
 src/svgs.ts
 
 _site/
+.cache
+public
