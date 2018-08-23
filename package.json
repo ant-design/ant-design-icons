@@ -24,7 +24,6 @@
     "test": "npm run test:unit",
     "test:unit": "jest",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' 'site/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
-    "start": "rimraf _site && cross-env NODE_ENV=development bisheng start -c ./site/bisheng.config.js",
     "clean": "rimraf _site es lib src/manifest.ts src/svgs.ts"
   },
   "devDependencies": {
@@ -42,7 +41,6 @@
     "antd": "^3.8.2",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.2",
-    "bisheng": "^0.28.0",
     "chalk": "^2.4.1",
     "cross-env": "^5.2.0",
     "globby": "^8.0.1",
