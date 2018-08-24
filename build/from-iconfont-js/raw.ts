@@ -5,7 +5,7 @@ import { log } from '../utils';
 const splitSymbol = '@@space@@';
 const header = '<?xml version="1.0" encoding="utf-8"?>';
 const svgsXML = fs.readFileSync(path.resolve(__dirname, './svgs.xml'), 'utf8');
-const getTokenReg = / id=".+" /;
+const getTokenReg = / id="[^\"]+" /;
 
 const svgs = svgsXML.split(splitSymbol);
 
@@ -21,7 +21,7 @@ for (const svg of svgs) {
   const id = getIdFromSvgAttr(svg);
   if (typeof id === 'string') {
     log(`Generate SVG: ${id}`);
-    const content = header + '\n' + svg;
+    const content = header + svg;
     fs.writeFileSync(path.resolve(__dirname, `./svg/${id}.svg`), content, 'utf8');
   }
 }
