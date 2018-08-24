@@ -1,6 +1,10 @@
-# Ant Design Icons
+<h1 align="center">
+Ant Design Icons
+</h1>
 
+<p align="center">
 ⭐ The abstract trees of the Ant Design SVG icons.
+</p>
 
 ## Status: **Beta**
 
@@ -18,9 +22,9 @@ yarn add @ant-design/icons # or npm install @ant-design/icons --save
 
 ## Usage
 ```ts
-import { Alibaba } from '@ant-design/icons/es';
+import { AntDesign } from '@ant-design/icons/es';
 
-console.log(Alibaba);
+console.log(AntDesign);
 
 // Output:
 // { width: 1024,
@@ -30,7 +34,7 @@ console.log(Alibaba);
 //   children:
 //    [ { tag: 'path', attrs: [Object] },
 //      { tag: 'path', attrs: [Object] } ],
-//   name: 'alibaba' }
+//   name: 'ant-design' }
 ```
 
 ## Interface
