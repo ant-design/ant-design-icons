@@ -23,11 +23,11 @@
     "lib"
   ],
   "peerDependencies": {
-    "@ant-design/icons": "^0.1.2-alpha.8",
+    "@ant-design/icons": "^0.2.0-beta.1",
     "react": "16.x"
   },
   "devDependencies": {
-    "@ant-design/icons": "^0.1.2-alpha.8",
+    "@ant-design/icons": "^0.2.0-beta.1",
     "@types/jest": "^23.3.1",
     "@types/node": "^10.5.5",
     "@types/react": "^16.4.7",

@@ -1,4 +1,4 @@
-import { Alibaba, Dashboard, Twitter } from '@ant-design/icons';
+import { AntDesign, Dashboard, Twitter } from '@ant-design/icons';
 import * as React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
@@ -51,8 +51,13 @@ class SimpleDemo extends React.Component<{}> {
     };
     return (
       <Div key={fontSize} style={style}>
-        {fontSize} Ant Design <AlignAntdIcon type={Alibaba} /> 0123
-        <AlignAntdIcon type={'dashboard'} /> 你好 <AlignAntdIcon type={Twitter} />
+        {fontSize}
+        Ant Design
+        <AlignAntdIcon type={AntDesign} />
+        0123
+        <AlignAntdIcon type={'dashboard'} />
+        你好
+        <AlignAntdIcon type={Twitter} />
       </Div>
     );
   }
