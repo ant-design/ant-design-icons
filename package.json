@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons",
-  "version": "0.2.1-beta.3",
+  "version": "0.2.1-beta.4",
   "description": "Ant Design Icons",
   "module": "es/index.js",
   "main": "lib/index.js",
@@ -21,7 +21,7 @@
     "build:lib": "rimraf lib && tsc --project ./tsconfig.json",
     "build:es": "rimraf es && tsc  --project ./tsconfig.json --outDir es --module esnext",
     "generate": "cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/generateIcons.ts",
-    "raw": "cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/from-iconfont-js/raw.ts",
+    "raw": "rimraf svg && mkdir build/from-iconfont-js/svg && cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/from-iconfont-js/raw.ts",
     "test": "npm run test:unit",
     "test:unit": "jest",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' 'site/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
