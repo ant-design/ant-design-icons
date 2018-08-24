@@ -6,6 +6,9 @@ Ant Design Icons
 ⭐ The abstract trees of the Ant Design SVG icons.
 </p>
 
+[![NPM version](https://img.shields.io/npm/v/@ant-design/icons.svg?style=flat)](https://npmjs.org/package/@ant-design/icons)
+[![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons.svg?style=flat)](https://npmjs.org/package/@ant-design/icons)
+
 ## Status: **Beta**
 
 The APIs and icons may change in the future, please **do NOT** use in any production environment.
