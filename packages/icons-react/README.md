@@ -1,5 +1,6 @@
-# Ant Design Icons for React
----
+<h1 align="center">
+Ant Design Icons for React
+<h1>
 
 ## Install
 
