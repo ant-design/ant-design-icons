@@ -27,7 +27,12 @@ export async function build(env: Environment) {
 
   // get names and paths.
   const svgFileNames: string[] = await globby(['*.svg'], { cwd: env.paths.SVG_DIR });
-  const kebabCaseNames = svgFileNames.map((name) => _.kebabCase(name.replace(/\.svg$/, '')));
+  const kebabCaseNames = svgFileNames.map((name) => {
+    if (name === 'html5.svg') { // html5 is special.
+      return name.replace(/\.svg$/, '');
+    }
+    return _.kebabCase(name.replace(/\.svg$/, ''));
+  });
   const componentNames = kebabCaseNames.map((name) => _.upperFirst(_.camelCase(name)));
   const svgFilePaths = svgFileNames.map((name) => path.resolve(env.paths.SVG_DIR, name));
   log(`Icon Amount: ${svgFileNames.length}.`);
