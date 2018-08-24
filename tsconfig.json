@@ -6,9 +6,17 @@
     "moduleResolution": "node",
     "declaration": true,
     "outDir": "lib",
-    "removeComments": true
+    "removeComments": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ]
   },
   "include": [
-    "src/**/*"
+    "src"
+  ],
+  "exclude": [
+    "site",
+    "node_modules"
   ]
 }

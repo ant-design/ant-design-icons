@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;}
-</style>
-<title>mobile</title>
-<desc>Created with Sketch.</desc>
-<g>
-	<path class="st0" d="M288,886h448V134H288V886z M512,744c22.1,0,40,17.9,40,40s-17.9,40-40,40c-22.1,0-40-17.9-40-40
-		S489.9,744,512,744z"/>
-	<path d="M744,62H280c-35.3,0-64,28.7-64,64v768c0,35.3,28.7,64,64,64h464c35.3,0,64-28.7,64-64V126C808,90.7,779.3,62,744,62z
-		 M736,886H288V134h448V886z"/>
-	<circle cx="512" cy="784" r="40"/>
-</g>
+
+<svg id="mobile" viewBox="0 0 1024 1024">
+  <path d="M760 0H264c-39.8 0-72 32.2-72 72v880c0 39.8 32.2 72 72 72h496c39.8 0 72-32.2 72-72V72c0-39.8-32.2-72-72-72zM542 960h-60c-19.9 0-34-14.3-34-32s14.1-32 34-32h60c19.9 0 34 14.3 34 32s-14.1 32-34 32z m218-129H264V127h496v704z"></path>
 </svg>

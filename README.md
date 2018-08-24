@@ -2,7 +2,7 @@
 
 ⭐ The abstract trees of the Ant Design SVG icons.
 
-## Status: **Alpha**
+## Status: **Beta**
 
 The APIs and icons may change in the future, please **do NOT** use in any production environment.
 

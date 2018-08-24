@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
-<title>down</title>
-<desc>Created with Sketch.</desc>
-<path d="M884,256h-75c-5.1,0-9.9,2.5-12.9,6.6L512,654.2L227.9,262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5,0-10.3,7.4-6.5,12.7
-	l352.6,486.1c12.8,17.6,39,17.6,51.7,0l352.6-486.1C894.3,263.4,890.5,256,884,256z"/>
+
+<svg id="down" viewBox="0 0 1024 1024">
+  <path d="M895.7 300.1c0 9.6-3.2 19.3-9.6 27.4L545.2 751.3c-8.3 10.3-20.8 16.3-34.1 16.3-13.2 0-25.8-6-34-16.3l-339.1-422c-15.1-18.8-12.1-46.3 6.7-61.4 18.8-15.1 46.3-12.1 61.4 6.7l305.1 379.6L818 272.7c15.1-18.8 42.6-21.8 61.4-6.7C890.1 274.7 895.7 287.3 895.7 300.1z"></path>
 </svg>
