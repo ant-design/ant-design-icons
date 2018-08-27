@@ -1384,17 +1384,13 @@
   version "0.12.6"
   resolved "http://registry.npm.alibaba-inc.com/@types/graphql/download/@types/graphql-0.12.6.tgz#3d619198585fcabe5f4e1adfb5cf5f3388c66c13"
 
-"@types/history@*":
+"@types/history@*", "@types/history@^4.7.0":
   version "4.7.0"
-  resolved "http://registry.npm.alibaba-inc.com/@types/history/download/@types/history-4.7.0.tgz#2fac51050c68f7d6f96c5aafc631132522f4aa3f"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.0.tgz#2fac51050c68f7d6f96c5aafc631132522f4aa3f"
 
 "@types/history@^3":
   version "3.2.2"
   resolved "http://registry.npm.alibaba-inc.com/@types/history/download/@types/history-3.2.2.tgz#b6affa240cb10b5f841c6443d8a24d7f3fc8bb0c"
-
-"@types/history@^4.7.0":
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.0.tgz#2fac51050c68f7d6f96c5aafc631132522f4aa3f"
 
 "@types/jest@^23.3.1":
   version "23.3.1"
@@ -9325,6 +9321,12 @@ rx-lite-aggregates@^4.0.8:
 rx-lite@*, rx-lite@^4.0.8:
   version "4.0.8"
   resolved "http://registry.npm.alibaba-inc.com/rx-lite/download/rx-lite-4.0.8.tgz#0b1e11af8bc44836f04a6407e92da42467b79444"
+
+rxjs@^6.2.2:
+  version "6.2.2"
+  resolved "http://registry.npm.alibaba-inc.com/rxjs/download/rxjs-6.2.2.tgz#eb75fa3c186ff5289907d06483a77884586e1cf9"
+  dependencies:
+    tslib "^1.9.0"
 
 safe-buffer@5.1.1:
   version "5.1.1"

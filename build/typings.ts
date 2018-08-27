@@ -30,8 +30,14 @@ export interface IconDefinition extends AbstractTree {
 
 export interface NamesAndPaths {
   kebabCaseNames: string[];
-  componentNames: string[];
+  identifiers: string[];
   svgFilePaths: string[];
+}
+
+export interface NameAndPath {
+  kebabCaseName: string;
+  identifier: string;
+  svgFilePath: string;
 }
 
 export interface BuildTimeIconMetaData {
