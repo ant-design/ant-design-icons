@@ -1,6 +1,6 @@
-import { AbstractNode, IconDefinition } from '@ant-design/icons';
+import { IconDefinition } from '@ant-design/icons';
 import * as React from 'react';
-import { isIconDefinition, log, MiniMap, normalizeAttrs } from '../utils';
+import { generate, isIconDefinition, log, MiniMap } from '../utils';
 
 export interface IconProps {
   type: string | IconDefinition;
@@ -24,33 +24,6 @@ class Icon extends React.Component<IconProps> {
     return this.definitions.get(key);
   }
 
-  static generate(
-    node: AbstractNode,
-    key: string,
-    rootProps?: { [key: string]: any } | false
-  ): any {
-    if (!rootProps) {
-      return React.createElement(
-        node.tag,
-        { key, ...normalizeAttrs(node.attrs) },
-        node.children.map((child, index) =>
-          this.generate(child, `${key}-${node.tag}-${index}`)
-        )
-      );
-    }
-    return React.createElement(
-      node.tag,
-      {
-        key,
-        ...normalizeAttrs(node.attrs),
-        ...rootProps
-      },
-      node.children.map((child, index) =>
-        this.generate(child, `${key}-${node.tag}-${index}`)
-      )
-    );
-  }
-
   render() {
     const { type, className, onClick, style } = this.props;
 
@@ -68,7 +41,7 @@ class Icon extends React.Component<IconProps> {
       log(`type should be string or icon definiton, but got ${type}`);
       return null;
     }
-    return Icon.generate(target, `svg-${target.name}`, {
+    return generate(target, `svg-${target.name}`, {
       className,
       onClick,
       style,

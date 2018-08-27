@@ -1,4 +1,5 @@
-import { IconDefinition } from '@ant-design/icons';
+import { AbstractNode, IconDefinition } from '@ant-design/icons';
+import * as React from 'react';
 
 export function log(message: string) {
   if (!(process && process.env && process.env.NODE_ENV === 'production')) {
@@ -55,4 +56,31 @@ export class MiniMap<V> {
     this.collection[key] = value;
     return this;
   }
+}
+
+export function generate(
+  node: AbstractNode,
+  key: string,
+  rootProps?: { [key: string]: any } | false
+): any {
+  if (!rootProps) {
+    return React.createElement(
+      node.tag,
+      { key, ...normalizeAttrs(node.attrs) },
+      node.children.map((child, index) =>
+        generate(child, `${key}-${node.tag}-${index}`)
+      )
+    );
+  }
+  return React.createElement(
+    node.tag,
+    {
+      key,
+      ...normalizeAttrs(node.attrs),
+      ...rootProps
+    },
+    node.children.map((child, index) =>
+      generate(child, `${key}-${node.tag}-${index}`)
+    )
+  );
 }

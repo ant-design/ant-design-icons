@@ -125,7 +125,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.4.7":
+"@types/react@*", "@types/react@^16.4.12":
   version "16.4.12"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.12.tgz#c554005770b06c7cbcd6b0b19721e180deab7a02"
   dependencies:
@@ -6903,7 +6903,7 @@ raw-body@^2.2.0:
     iconv-lite "0.4.23"
     unpipe "1.0.0"
 
-rc-tools@^8.1.5:
+rc-tools@^8.1.6:
   version "8.1.6"
   resolved "https://registry.yarnpkg.com/rc-tools/-/rc-tools-8.1.6.tgz#f16f355e2b2694ba4610ae049eca1e5c1f02db50"
   dependencies:
