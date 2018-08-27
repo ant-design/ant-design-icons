@@ -14,7 +14,7 @@ yarn add @ant-design/icons-react
 First, you should add the icons that you need into the library.
 
 ```ts
-import { Alibaba, Dashboard, Twitter } from '@ant-design/icons';
+import { AntDesign, Dashboard, Twitter } from '@ant-design/icons';
 import AntdIcon from '@ant-design/icons-react';
 AntdIcon.add(Alibaba, Dashboard);
 ```
@@ -22,8 +22,8 @@ AntdIcon.add(Alibaba, Dashboard);
 After that, you can use antd icons in your React components as simply as this:
 
 ```jsx
-<AntdIcon type={'alibaba'} />
-<AntdIcon type={'dashboard-fill'} />
+<AntdIcon type="ant-design" />
+<AntdIcon type="dashboard" />
 <AntdIcon type={Twitter} />
 ```
 
