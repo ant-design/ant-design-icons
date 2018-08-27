@@ -6,6 +6,11 @@ import parse5 = require('parse5');
 import path = require('path');
 import rimraf = require('rimraf');
 import SVGO = require('svgo');
+import {
+  COMPONENT_NAMES_LIST,
+  EXPORT_CONST,
+  MANIFEST_CONTENT
+} from './constants';
 import { environment } from './env';
 import {
   BuildTimeIconMetaData,
@@ -115,7 +120,7 @@ async function writeFile(
   const svgsTs = fs.readFileSync(env.paths.SVGS_TS_TEMPLATE, 'utf8');
   const renderedSvgsTs = svgsTs
     .replace(
-      '<% EXPORT_CONST %>',
+      EXPORT_CONST,
       buildTimeIconMetaData
         .map(
           ({ identifier, icon }) =>
@@ -126,7 +131,7 @@ async function writeFile(
         .join('\n')
     )
     .replace(
-      '<% COMPONENT_NAMES_LIST %>',
+      COMPONENT_NAMES_LIST,
       buildTimeIconMetaData
         .map(({ identifier }) => `  ${identifier},`)
         .join('\n')
@@ -142,7 +147,7 @@ async function writeFile(
   );
   const manifestTs = fs.readFileSync(env.paths.MANIFEST_TS_TEMPLATE, 'utf8');
   const renderedManifestTs = manifestTs.replace(
-    '<% MANIFEST_CONTENT %>',
+    MANIFEST_CONTENT,
     buildTimeIconMetaData
       .map(({ icon, identifier }) => `  '${icon.name}': '${identifier}'`)
       .join(',\n')
