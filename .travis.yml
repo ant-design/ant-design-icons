@@ -4,10 +4,10 @@ node_js:
 before_script:
   - rm -rf _site
 script:
-  - yarn run lint
-  - yarn run test
-  - yarn run generate
-  - yarn run build
+  - npm run lint
+  - npm run test
+  - npm run generate
+  - npm run build
 branches:
   only:
     - master
