@@ -90,13 +90,15 @@
     ],
     "globals": {
       "ts-jest": {
-        "tsConfigFile": "./test/tsconfig.json"
+        "tsConfigFile": "./test/tsconfig.json",
+        "skipBabel": true
       }
     },
     "testURL": "http://localhost",
     "testPathIgnorePatterns": [
       "<rootDir>/packages/",
-      "<rootDir>/node_modules/"
+      "<rootDir>/node_modules/",
+      "<rootDir>/.cache/"
     ]
   }
 }

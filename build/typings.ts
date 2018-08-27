@@ -3,7 +3,7 @@ import SVGO = require('svgo');
 export interface Node {
   nodeName: string;
   tagName?: string;
-  attrs: Array<{ name: string, value: string }>;
+  attrs: Array<{ name: string; value: string }>;
   value?: string;
   childNodes: Node[];
 }
@@ -13,17 +13,28 @@ export interface AbstractTree {
   height: number;
   viewBox: string;
   style?: string;
-  children: Array<{ tag: string, attrs: { [key: string]: string } }>;
+  children: Array<{ tag: string; attrs: { [key: string]: string } }>;
 }
 
 export interface Environment {
   readonly paths: { [key: string]: string };
   readonly base: string;
   readonly options: {
-    svgo: SVGO.Options
+    svgo: SVGO.Options;
   };
 }
 
 export interface IconDefinition extends AbstractTree {
   name: string;
+}
+
+export interface NamesAndPaths {
+  kebabCaseNames: string[];
+  componentNames: string[];
+  svgFilePaths: string[];
+}
+
+export interface BuildTimeIconMetaData {
+  identifier: string;
+  icon: IconDefinition;
 }
