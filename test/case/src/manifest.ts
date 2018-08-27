@@ -2,5 +2,6 @@
 // tslint:disable
 
 export const manifest: { [key: string]: string } = {
-  'close': 'Close'
+  'close': 'Close',
+
 };

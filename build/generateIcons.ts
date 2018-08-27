@@ -6,7 +6,7 @@ import parse5 = require('parse5');
 import path = require('path');
 import rimraf = require('rimraf');
 import { from } from 'rxjs';
-import { map, mergeMap, reduce } from 'rxjs/operators';
+import { combineLatest, map, mergeMap, reduce } from 'rxjs/operators';
 import SVGO = require('svgo');
 import {
   COMPONENT_NAMES_LIST,
@@ -112,7 +112,7 @@ export async function build(env: Environment) {
   const manifestTsFile$ = svgMetaData$.pipe(
     reduce<BuildTimeIconMetaData, string>(
       (manifestContent, { icon, identifier }) =>
-        manifestContent + `  '${icon.name}': '${identifier}'\n`,
+        manifestContent + `  '${icon.name}': '${identifier}',\n`,
       ''
     ),
     map((manifestContent) =>
@@ -122,28 +122,36 @@ export async function build(env: Environment) {
     )
   );
 
-  /**
-   * Subscriptions
-   * write two files ('svgs.ts' and 'manifest.ts') to 'src' directory
-   */
-  svgsTsFile$.subscribe((content) => {
-    log(
-      `Generate "svgs.ts" to ${path.relative(
-        __dirname,
-        env.paths.SVGS_TS_TEMPLATE
-      )}.`
+  return new Promise<void>((resolve, reject) => {
+    /**
+     * Subscriptions
+     * write two files ('svgs.ts' and 'manifest.ts') to 'src' directory
+     */
+    const files$ = manifestTsFile$.pipe(combineLatest(svgsTsFile$));
+    files$.subscribe(
+      ([manifestTsContent, svgsTsContent]) => {
+        log(
+          `Generate "manifest.ts" to ${path.relative(
+            __dirname,
+            env.paths.MANIFEST_TS_TEMPLATE
+          )}.`
+        );
+        fs.writeFileSync(
+          env.paths.MANIFEST_TS_OUTPUT,
+          manifestTsContent,
+          'utf8'
+        );
+        log(
+          `Generate "svgs.ts" to ${path.relative(
+            __dirname,
+            env.paths.SVGS_TS_TEMPLATE
+          )}.`
+        );
+        fs.writeFileSync(env.paths.SVGS_TS_OUTPUT, svgsTsContent, 'utf8');
+      },
+      reject,
+      resolve
     );
-    fs.writeFileSync(env.paths.SVGS_TS_OUTPUT, content, 'utf8');
-  });
-
-  manifestTsFile$.subscribe((content) => {
-    log(
-      `Generate "manifest.ts" to ${path.relative(
-        __dirname,
-        env.paths.MANIFEST_TS_TEMPLATE
-      )}.`
-    );
-    fs.writeFileSync(env.paths.MANIFEST_TS_OUTPUT, content, 'utf8');
   });
 }
 

@@ -8,14 +8,6 @@ export interface Node {
   childNodes: Node[];
 }
 
-export interface AbstractTree {
-  width: number;
-  height: number;
-  viewBox: string;
-  style?: string;
-  children: Array<{ tag: string; attrs: { [key: string]: string } }>;
-}
-
 export interface Environment {
   readonly paths: { [key: string]: string };
   readonly base: string;
@@ -24,14 +16,16 @@ export interface Environment {
   };
 }
 
-export interface IconDefinition extends AbstractTree {
-  name: string;
+export interface AbstractNode {
+  tag: string;
+  attrs: {
+    [key: string]: string;
+  };
+  children: AbstractNode[];
 }
 
-export interface NamesAndPaths {
-  kebabCaseNames: string[];
-  identifiers: string[];
-  svgFilePaths: string[];
+export interface IconDefinition extends AbstractNode {
+  name: string; // kebab-case-style
 }
 
 export interface NameAndPath {

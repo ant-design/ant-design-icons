@@ -33,16 +33,15 @@ yarn add @ant-design/icons # or npm install @ant-design/icons --save
 import { AntDesign } from '@ant-design/icons/es';
 
 console.log(AntDesign);
-
 // Output:
-// { width: 1024,
-//   height: 1024,
-//   viewBox: '0 0 1024 1024',
-//   style: '',
+// { name: 'ant-design',
+//   tag: 'svg',
+//   attrs:
+//    { xmlns: 'http://www.w3.org/2000/svg',
+//      viewBox: '0 0 1024 1024' },
 //   children:
-//    [ { tag: 'path', attrs: [Object] },
-//      { tag: 'path', attrs: [Object] } ],
-//   name: 'ant-design' }
+//    [ { tag: 'path', attrs: [Object], children: [] },
+//      { tag: 'path', attrs: [Object], children: [] } ] }
 ```
 
 ## Interface
@@ -50,16 +49,16 @@ console.log(AntDesign);
 This library export all SVG files as `IconDefinition`.
 
 ```ts
-interface IconDefinition extends AbstractTree {
-  name: string; // kebab-case-style
+interface AbstractNode {
+  tag: string;
+  attrs: {
+    [key: string]: string;
+  };
+  children: AbstractNode[];
 }
 
-interface AbstractTree {
-  width: number;
-  height: number;
-  viewBox: string;
-  style?: string;
-  children: Array<{ tag: string, attrs: { [key: string]: string } }>;
+interface IconDefinition extends AbstractNode {
+  name: string; // kebab-case-style
 }
 ```
 
