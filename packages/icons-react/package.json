@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-react",
-  "version": "0.2.0-beta.1",
+  "version": "0.3.0-beta.1",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
@@ -23,9 +23,11 @@
     "lib"
   ],
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.x",
+    "@ant-design/icons-react": "0.3.0-beta.1"
   },
   "devDependencies": {
+    "@ant-design/icons-react": "^0.2.0-beta.1",
     "@types/jest": "^23.3.1",
     "@types/node": "^10.5.5",
     "@types/react": "^16.4.7",
