@@ -16,7 +16,7 @@ First, you should add the icons that you need into the library.
 ```ts
 import { AntDesign, Dashboard, Twitter } from '@ant-design/icons';
 import AntdIcon from '@ant-design/icons-react';
-AntdIcon.add(Alibaba, Dashboard);
+AntdIcon.add(AntDesign, Dashboard);
 ```
 
 After that, you can use antd icons in your React components as simply as this:
