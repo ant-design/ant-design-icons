@@ -7,9 +7,12 @@ export function log(message: string) {
 }
 
 export function isIconDefinition(target: any): target is IconDefinition {
-  return typeof target === 'object' &&
-    target.name && target.width && Array.isArray(target.children) &&
-    typeof target.viewBox === 'string';
+  return (
+    typeof target === 'object' &&
+    target.name &&
+    typeof target.attrs === 'object' &&
+    Array.isArray(target.children)
+  );
 }
 
 export function normalizeAttrs(attrs: Attrs = {}): Attrs {

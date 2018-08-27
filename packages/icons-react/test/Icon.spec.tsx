@@ -1,9 +1,9 @@
-import { Alibaba, CiCircleFill } from '@ant-design/icons';
+import { AntDesign, Twitter } from '@ant-design/icons';
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import Icon, { IconProps } from '../src/components/Icon';
 
-Icon.add(Alibaba, CiCircleFill);
+Icon.add(AntDesign, Twitter);
 
 function mount(props: IconProps) {
   const component = renderer.create(<Icon {...props} />);
@@ -13,7 +13,7 @@ function mount(props: IconProps) {
 describe('React AntdIcon Component', () => {
   it('should create SVG element.', () => {
     const icon = mount({
-      type: 'alibaba',
+      type: 'ant-design',
       style: {
         fontSize: '3rem'
       },
@@ -23,18 +23,11 @@ describe('React AntdIcon Component', () => {
     expect(icon).toMatchSnapshot();
   });
 
-  it('should convert "class" into "className".', () => {
-    const icon = mount({
-      type: 'ci-circle-fill'
-    });
-    expect(icon!.children![1].props.className).toBe('st0');
-  });
-
   it('should allow explicit import.', () => {
     const icon = mount({
-      type: CiCircleFill
+      type: Twitter
     });
-    expect(icon!.children![1].props.className).toBe('st0');
+    expect(typeof icon!.children![0].props.d).toBe('string');
   });
 
   it('should render null, when the type is invalid.', () => {

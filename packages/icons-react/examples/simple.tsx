@@ -13,41 +13,40 @@ const Div = styled.div`
   &:after {
     width: 100%;
     height: 1px;
-    content: "";
+    content: '';
     position: absolute;
-    bottom: .125em;
+    bottom: 0.125em;
     left: 0;
     background-color: lightblue;
     z-index: -100;
   }
   &:before {
-    width:  100%;
+    width: 100%;
     height: 1px;
-    content:  "";
+    content: '';
     position: absolute;
-    top:  .125em;
+    top: 0.125em;
     left: 0;
     background-color: lightblue;
-    z-index:  -100;
+    z-index: -100;
   }
 `;
 
 const AlignAntdIcon = styled(AntdIcon)`
-  vertical-align: -.125em;
+  vertical-align: -0.125em;
 `;
 
 class SimpleDemo extends React.Component<{}> {
+  static displaySize = ['64px', '48px', '32px', '24px', '16px', '12px', '8px'];
 
-  static displaySize = [
-    '64px', '48px', '32px', '24px', '16px', '12px', '8px'
-  ];
-
-  static relatedHref = 'https://blog.prototypr.io/align-' +
+  static relatedHref =
+    'https://blog.prototypr.io/align-' +
     'svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4';
 
   renderStatement(fontSize: string) {
     const style: React.CSSProperties = {
-      fontSize, color: fontSize === '48px' && 'lightblue' || 'inherit'
+      fontSize,
+      color: (fontSize === '48px' && 'lightblue') || 'inherit'
     };
     return (
       <Div key={fontSize} style={style}>
@@ -73,7 +72,11 @@ class SimpleDemo extends React.Component<{}> {
       <div>
         <h1>Simple Demo - Icons Alignments</h1>
         {this.renderStatements()}
-        See <a href={SimpleDemo.relatedHref} target={'_blank'}>related blog</a> for detail.
+        See{' '}
+        <a href={SimpleDemo.relatedHref} target={'_blank'}>
+          related blog
+        </a>{' '}
+        for detail.
       </div>
     );
   }
