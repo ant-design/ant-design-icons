@@ -2,6 +2,13 @@
 Ant Design Icons for React
 <h1>
 
+<div align="center">
+
+[![NPM version](https://img.shields.io/npm/v/@ant-design/icons-react.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-react)
+[![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-react.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-react)
+
+</div>
+
 ## Install
 
 ```bash
