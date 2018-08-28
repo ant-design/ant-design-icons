@@ -14,7 +14,6 @@ import {
   ICON_IDENTIFIER,
   ICON_JSON
 } from './constants';
-import { environment } from './env';
 import {
   BuildTimeIconMetaData,
   Environment,
@@ -30,7 +29,10 @@ export async function build(env: Environment) {
 
   await clear(env);
 
-  const svgFileNames = await globby(['*.svg'], { cwd: env.paths.SVG_DIR });
+  const svgFileNames = await globby(['*.svg'], {
+    cwd: env.paths.SVG_DIR,
+    deep: false
+  });
 
   /**
    * SVG Meta Data Flow
@@ -132,19 +134,19 @@ export async function build(env: Environment) {
   const files$ = iconFiles$.pipe(concat(indexFile$));
 
   return new Promise<void>((resolve, reject) => {
-    files$.subscribe(
-      ({ path: writeFilePath, content }) => {
-        log.info(`Generate ${path.relative(env.base, writeFilePath)}.`);
-        fse.writeFileSync(writeFilePath, content, 'utf8');
-      },
-      reject,
-      resolve
-    );
+    files$
+      .pipe(
+        mergeMap(async ({ path: writeFilePath, content }) => {
+          await fse.writeFile(writeFilePath, content, 'utf8');
+          log.info(`Generated ./${path.relative(env.base, writeFilePath)}.`);
+        })
+      )
+      .subscribe(undefined, reject, () => {
+        log.notice('Done.');
+        resolve();
+      });
   });
 }
-
-// Start
-build(environment);
 
 /**
  * Clear by using 'rimraf'.

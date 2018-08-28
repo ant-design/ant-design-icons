@@ -19,7 +19,7 @@
     "build": "npm run build:lib && npm run build:index-es",
     "build:lib": "cross-env NODE_ENV=production && rimraf lib && tsc --project ./tsconfig.json --outDir lib",
     "build:index-es": "cross-env NODE_ENV=production && rimraf lib/index.es.js && babel --extensions '.ts' --presets @babel/preset-typescript src/index.ts --out-file lib/index.es.js",
-    "generate": "cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/generateIcons.ts",
+    "generate": "cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/index.ts",
     "raw": "rimraf svg build/from-iconfont-js/svg && mkdir build/from-iconfont-js/svg && cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/from-iconfont-js/raw.ts",
     "test": "npm run test:unit",
     "test:unit": "jest",

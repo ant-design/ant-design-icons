@@ -1,61 +1,48 @@
-import fs = require('fs');
+import fs = require('fs-extra');
 import path = require('path');
+import { environment } from '../build/env';
 import { build } from '../build/generateIcons';
 import { Environment } from '../build/typings';
-import { getSVGOPlugin } from '../build/utils';
 
 describe('build/generateIcon.ts', () => {
   const env: Environment = {
     paths: {
       SVG_DIR: path.resolve(__dirname, './case/svgs'),
-      SVGS_TS_TEMPLATE: path.resolve(
+      ICON_TEMPLATE: path.resolve(
         __dirname,
-        '../build/templates/svgs.ts.template'
+        '../build/templates/icon.ts.template'
       ),
-      SVGS_TS_OUTPUT: path.resolve(__dirname, './case/src/svgs.ts'),
-      MANIFEST_TS_TEMPLATE: path.resolve(
+      ICON_IMPORT_TEMPLATE: path.resolve(
         __dirname,
-        '../build/templates/manifest.ts.template'
+        '../build/templates/icon-import.ts.template'
       ),
-      MANIFEST_TS_OUTPUT: path.resolve(__dirname, './case/src/manifest.ts')
+      INDEX_TEMPLATE: path.resolve(
+        __dirname,
+        '../build/templates/index.ts.template'
+      ),
+      ICON_OUTPUT_DIR: path.resolve(__dirname, './case/src/'),
+      ALL_ICON_OUTPUT: path.resolve(__dirname, './case/src/*.ts'),
+      INDEX_OUTPUT: path.resolve(__dirname, './case/src/index.ts')
     },
-    base: path.resolve(__dirname, '../'),
+    base: path.resolve(__dirname, './'),
     options: {
-      svgo: {
-        plugins: getSVGOPlugin()
-      }
+      svgo: environment.options.svgo,
+      prettier: environment.options.prettier
     }
   };
-  const closeTarget = {
-    tag: 'svg',
-    attrs: {
-      viewBox: '0 0 1024 1024',
-      xmlns: 'http://www.w3.org/2000/svg'
-    },
-    children: [
-      {
-        tag: 'path',
-        attrs: {
-          d:
-            'M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.' +
-            '1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.' +
-            '8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9c-4.4 5.2-.7 13.1 6.1 1' +
-            '3.1h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 ' +
-            '5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z'
-        },
-        children: []
-      }
-    ],
-    name: 'close'
-  };
+  const closePath =
+    'M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.' +
+    '7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-' +
+    '5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.' +
+    '9 824.9c-4.4 5.2-.7 13.1 6.1 13.1h79.8c4.7 0 9.2-2.1 12.' +
+    '3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.' +
+    '8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z';
   it('should work.', async () => {
     await build(env);
-    const svgTsString = fs.readFileSync(env.paths.SVGS_TS_OUTPUT, 'utf8');
-    const raw = /export const Close: IconDefinition = .+/.exec(svgTsString);
-    expect(raw).not.toBeNull();
-    const actualCloseObject = JSON.parse(
-      raw![0].replace('export const Close: IconDefinition = ', '')
+    const closeString = await fs.readFile(
+      `${env.paths.ICON_OUTPUT_DIR}/Close.ts`,
+      'utf8'
     );
-    expect(actualCloseObject).toEqual(closeTarget);
+    expect(closeString).toContain(closePath);
   });
 });
