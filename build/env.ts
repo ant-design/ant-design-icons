@@ -12,7 +12,8 @@ export const environment: Environment = {
     INDEX_TEMPLATE: path.resolve(__dirname, './templates/index.ts.template'),
     ICON_OUTPUT_DIR: path.resolve(__dirname, '../src/'),
     ALL_ICON_OUTPUT: path.resolve(__dirname, '../src/*.ts'),
-    INDEX_OUTPUT: path.resolve(__dirname, '../src/index.ts')
+    INDEX_OUTPUT: path.resolve(__dirname, '../src/index.ts'),
+    MANIFEST_DIR: path.resolve(__dirname, '../src/manifest/')
   },
   base: path.resolve(__dirname, '../'),
   options: {

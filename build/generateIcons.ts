@@ -23,16 +23,14 @@ import {
   WriteFileMetaData
 } from './typings';
 import { generateAbstractTree, log } from './utils';
+import { normalize } from './utils/normalizeNames';
 
 export async function build(env: Environment) {
   const svgo = new SVGO(env.options.svgo);
 
   await clear(env);
 
-  const svgFileNames = await globby(['*.svg'], {
-    cwd: env.paths.SVG_DIR,
-    deep: false
-  });
+  const svgBasicNames = await normalize(env);
 
   /**
    * SVG Meta Data Flow
@@ -59,12 +57,9 @@ export async function build(env: Environment) {
    *    }
    *  }
    */
-  const svgMetaData$ = from(svgFileNames).pipe(
-    map<string, NameAndPath>((fileNameWithExtension) => {
-      const fileName = fileNameWithExtension.replace(/\.svg$/, '');
-      const kebabCaseName =
-        fileName === 'html5' ? fileName : _.kebabCase(fileName); // 'html5' is not kebab-case but used in <Icon />.
-      const identifier = _.upperFirst(_.camelCase(fileName));
+  const svgMetaData$ = from(svgBasicNames).pipe(
+    map<string, NameAndPath>((kebabCaseName) => {
+      const identifier = _.upperFirst(_.camelCase(kebabCaseName));
       const svgFilePath = path.resolve(
         env.paths.SVG_DIR,
         fileNameWithExtension

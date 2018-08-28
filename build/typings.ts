@@ -28,10 +28,10 @@ export interface AbstractNode {
 
 export interface IconDefinition extends AbstractNode {
   name: string; // kebab-case-style
-  // theme: IconTheme;
+  theme: IconTheme;
 }
 
-export type IconTheme = 'outlined' | 'two-tone' | 'default';
+export type IconTheme = 'outlined' | 'two-tone' | 'filled';
 
 export interface NameAndPath {
   kebabCaseName: string;
@@ -48,3 +48,6 @@ export interface WriteFileMetaData {
   path: string;
   content: string;
 }
+
+// svg folder names
+export type ThemeType = 'fill' | 'outline' | 'twotone';
