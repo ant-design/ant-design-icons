@@ -27,3 +27,4 @@ _site/
 .cache
 public
 build/from-iconfont-js/svg
+src/*.ts

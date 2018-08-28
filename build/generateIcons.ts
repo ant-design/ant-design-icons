@@ -1,25 +1,23 @@
 'use strict';
-import fs = require('fs');
+import fse = require('fs-extra');
 import globby = require('globby');
 import _ = require('lodash');
 import parse5 = require('parse5');
 import path = require('path');
+import Prettier = require('prettier');
 import rimraf = require('rimraf');
 import { from } from 'rxjs';
-import { combineLatest, map, mergeMap, reduce } from 'rxjs/operators';
+import { concat, map, mergeMap, reduce } from 'rxjs/operators';
 import SVGO = require('svgo');
-import {
-  COMPONENT_NAMES_LIST,
-  EXPORT_CONST,
-  MANIFEST_CONTENT
-} from './constants';
+import { ICON_IDENTIFIER, ICON_JSON } from './constants';
 import { environment } from './env';
 import {
   BuildTimeIconMetaData,
   Environment,
   IconDefinition,
   NameAndPath,
-  Node
+  Node,
+  WriteFileMetaData
 } from './typings';
 import { generateAbstractTree, log } from './utils';
 
@@ -70,7 +68,7 @@ export async function build(env: Environment) {
     mergeMap<NameAndPath, BuildTimeIconMetaData>(
       async ({ kebabCaseName, identifier, svgFilePath }) => {
         const { data } = await svgo.optimize(
-          fs.readFileSync(svgFilePath, 'utf8')
+          await fse.readFile(svgFilePath, 'utf8')
         );
         const icon: IconDefinition = {
           name: kebabCaseName,
@@ -85,69 +83,48 @@ export async function build(env: Environment) {
   );
 
   /**
-   * File 'svgs.ts' content flow.
+   * Icon files content flow.
    */
-  const svgsTsFile$ = svgMetaData$.pipe(
-    reduce<BuildTimeIconMetaData, [string, string]>(
-      ([exportConst, componentName], { identifier, icon }) => [
-        exportConst +
-          `export const ${identifier}: IconDefinition = ${JSON.stringify(
-            icon
-          )}\n`,
-        componentName + `  ${identifier},\n`
-      ],
-      ['', '']
+  const iconTsTemplate = await fse.readFile(env.paths.ICON_TEMPLATE, 'utf8');
+  const iconFiles$ = svgMetaData$.pipe(
+    map<BuildTimeIconMetaData, { identifier: string; content: string }>(
+      ({ identifier, icon }) => ({
+        identifier,
+        content: Prettier.format(
+          iconTsTemplate
+            .replace(ICON_IDENTIFIER, identifier)
+            .replace(ICON_JSON, JSON.stringify(icon)),
+          env.options.prettier
+        )
+      })
     ),
-    map(([exportConst, componentName]) =>
-      fs
-        .readFileSync(env.paths.SVGS_TS_TEMPLATE, 'utf8')
-        .replace(EXPORT_CONST, exportConst)
-        .replace(COMPONENT_NAMES_LIST, componentName)
+    map<{ identifier: string; content: string }, WriteFileMetaData>(
+      ({ identifier, content }) => ({
+        path: path.resolve(env.paths.ICON_OUTPUT_DIR, `./${identifier}.ts`),
+        content
+      })
     )
   );
 
-  /**
-   * File 'manifest.ts' content flow.
-   */
-  const manifestTsFile$ = svgMetaData$.pipe(
+  const indexFile$ = svgMetaData$.pipe(
     reduce<BuildTimeIconMetaData, string>(
-      (manifestContent, { icon, identifier }) =>
-        manifestContent + `  '${icon.name}': '${identifier}',\n`,
+      (acc, { identifier }) =>
+        acc + `export { default as ${identifier} } from './${identifier}';\n`,
       ''
     ),
-    map((manifestContent) =>
-      fs
-        .readFileSync(env.paths.MANIFEST_TS_TEMPLATE, 'utf8')
-        .replace(MANIFEST_CONTENT, manifestContent)
-    )
+    map<string, WriteFileMetaData>((content) => ({
+      path: env.paths.INDEX_OUTPUT,
+      content
+    }))
   );
 
+  const files$ = iconFiles$.pipe(concat(indexFile$));
+
   return new Promise<void>((resolve, reject) => {
-    /**
-     * Subscriptions
-     * write two files ('svgs.ts' and 'manifest.ts') to 'src' directory
-     */
-    const files$ = manifestTsFile$.pipe(combineLatest(svgsTsFile$));
     files$.subscribe(
-      ([manifestTsContent, svgsTsContent]) => {
-        log(
-          `Generate "manifest.ts" to ${path.relative(
-            __dirname,
-            env.paths.MANIFEST_TS_TEMPLATE
-          )}.`
-        );
-        fs.writeFileSync(
-          env.paths.MANIFEST_TS_OUTPUT,
-          manifestTsContent,
-          'utf8'
-        );
-        log(
-          `Generate "svgs.ts" to ${path.relative(
-            __dirname,
-            env.paths.SVGS_TS_TEMPLATE
-          )}.`
-        );
-        fs.writeFileSync(env.paths.SVGS_TS_OUTPUT, svgsTsContent, 'utf8');
+      ({ path: writeFilePath, content }) => {
+        log.info(`Generate ${path.relative(env.base, writeFilePath)}.`);
+        fse.writeFileSync(writeFilePath, content, 'utf8');
       },
       reject,
       resolve
@@ -162,13 +139,13 @@ build(environment);
  * Clear by using 'rimraf'.
  */
 async function clear(env: Environment) {
-  log(`Clear folders.`);
+  log.notice(`Clear folders.`);
   return Promise.all(
     Object.keys(env.paths)
       .filter((key) => key.endsWith('OUTPUT')) // DO NOT DELETE THIS LINE!!!
       .map((key) => {
         // This is evil. Make sure you just delete the OUTPUT.
-        log(`Delete ${env.paths[key]}.`);
+        log.notice(`Delete ${path.relative(env.base, env.paths[key])}.`);
         return new Promise((resolve) => rimraf(env.paths[key], resolve));
       })
   );

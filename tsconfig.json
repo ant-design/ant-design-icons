@@ -5,7 +5,6 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
-    "outDir": "lib",
     "removeComments": true,
     "lib": [
       "esnext",

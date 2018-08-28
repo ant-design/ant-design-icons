@@ -1,4 +1,4 @@
-// placeholder
-export const EXPORT_CONST = '<% EXPORT_CONST %>';
-export const COMPONENT_NAMES_LIST = '<% COMPONENT_NAMES_LIST %>';
-export const MANIFEST_CONTENT = '<% MANIFEST_CONTENT %>';
+// icon placeholder
+export const ICON_IDENTIFIER = /<% ICON_IDENTIFIER %>/g;
+export const ICON_JSON = /<% ICON_JSON %>/g;
+export const ICON_IMPORT_PATH = /<% ICON_IMPORT_PATH %>/g;

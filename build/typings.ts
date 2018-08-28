@@ -1,3 +1,4 @@
+import Prettier = require('prettier');
 import SVGO = require('svgo');
 
 export interface Node {
@@ -13,6 +14,7 @@ export interface Environment {
   readonly base: string;
   readonly options: {
     svgo: SVGO.Options;
+    prettier: Prettier.Options;
   };
 }
 
@@ -26,7 +28,10 @@ export interface AbstractNode {
 
 export interface IconDefinition extends AbstractNode {
   name: string; // kebab-case-style
+  theme: IconTheme;
 }
+
+export type IconTheme = 'outlined' | 'two-tone' | 'default';
 
 export interface NameAndPath {
   kebabCaseName: string;
@@ -37,4 +42,9 @@ export interface NameAndPath {
 export interface BuildTimeIconMetaData {
   identifier: string;
   icon: IconDefinition;
+}
+
+export interface WriteFileMetaData {
+  path: string;
+  content: string;
 }
