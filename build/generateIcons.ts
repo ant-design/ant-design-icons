@@ -9,7 +9,11 @@ import rimraf = require('rimraf');
 import { from } from 'rxjs';
 import { concat, map, mergeMap, reduce } from 'rxjs/operators';
 import SVGO = require('svgo');
-import { ICON_IDENTIFIER, ICON_JSON } from './constants';
+import {
+  EXPORT_DEFAULT_COMPONENT_FROM_DIR,
+  ICON_IDENTIFIER,
+  ICON_JSON
+} from './constants';
 import { environment } from './env';
 import {
   BuildTimeIconMetaData,
@@ -106,6 +110,10 @@ export async function build(env: Environment) {
     )
   );
 
+  /**
+   * Index File content flow
+   */
+  const indexTsTemplate = await fse.readFile(env.paths.INDEX_TEMPLATE, 'utf8');
   const indexFile$ = svgMetaData$.pipe(
     reduce<BuildTimeIconMetaData, string>(
       (acc, { identifier }) =>
@@ -114,7 +122,10 @@ export async function build(env: Environment) {
     ),
     map<string, WriteFileMetaData>((content) => ({
       path: env.paths.INDEX_OUTPUT,
-      content
+      content: Prettier.format(
+        indexTsTemplate.replace(EXPORT_DEFAULT_COMPONENT_FROM_DIR, content),
+        env.options.prettier
+      )
     }))
   );
 

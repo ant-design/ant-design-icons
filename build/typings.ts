@@ -28,7 +28,7 @@ export interface AbstractNode {
 
 export interface IconDefinition extends AbstractNode {
   name: string; // kebab-case-style
-  theme: IconTheme;
+  // theme: IconTheme;
 }
 
 export type IconTheme = 'outlined' | 'two-tone' | 'default';
