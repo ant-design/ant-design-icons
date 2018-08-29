@@ -22,14 +22,22 @@ describe('build/generateIcon.ts', () => {
       ),
       TWO_TONE_ICON_TEMPLATE: path.resolve(
         __dirname,
-        '../build/templates/two-tone-icon.ts.template'
+        '../build/templates/twoToneIcon.ts.template'
+      ),
+      MAP_NAME_TO_IDENTIFIER_TEMPLATE: path.resolve(
+        __dirname,
+        '../build/templates/mapNameToIdentifier.ts.template'
       ),
       MANIFEST_OUTPUT: path.resolve(__dirname, './root/src/manifest.ts'),
       ICON_OUTPUT_DIR: path.resolve(__dirname, './root/src/'),
       THEME_FILL_OUTPUT: path.resolve(__dirname, './root/src/fill/*.ts'),
       THEME_OUTLINE_OUTPUT: path.resolve(__dirname, './root/src/outline/*.ts'),
       THEME_TWO_TONE_OUTPUT: path.resolve(__dirname, './root/src/twotone/*.ts'),
-      INDEX_OUTPUT: path.resolve(__dirname, './root/src/index.ts')
+      INDEX_OUTPUT: path.resolve(__dirname, './root/src/index.ts'),
+      MAP_NAME_TO_IDENTIFIER_OUTPUT: path.resolve(
+        __dirname,
+        './root/src/mapNameToIdentifier.ts'
+      )
     },
     base: path.resolve(__dirname, './'),
     options: {

@@ -9,6 +9,7 @@ import { concat, map, mergeMap, reduce } from 'rxjs/operators';
 import SVGO = require('svgo');
 import {
   EXPORT_DEFAULT_COMPONENT_FROM_DIR,
+  EXPORT_DEFAULT_MAPPER,
   ICON_GETTER_FUNCTION,
   ICON_IDENTIFIER,
   ICON_JSON
@@ -27,7 +28,8 @@ import {
   generateAbstractTree,
   getIdentifier,
   getRollbackSVGPath,
-  log
+  log,
+  withSuffix
 } from './utils';
 import { normalize } from './utils/normalizeNames';
 
@@ -164,7 +166,33 @@ export async function build(env: Environment) {
     }))
   );
 
-  const files$ = iconFiles$.pipe(concat(indexFile$));
+  // Map name to identifier File content flow
+  const mapNameToIdentifierTsTemplate = await fs.readFile(
+    env.paths.MAP_NAME_TO_IDENTIFIER_TEMPLATE,
+    'utf8'
+  );
+  const mapNameToIdentifierFile$ = svgMetaDataWithTheme$.pipe(
+    mergeMap<Observable<BuildTimeIconMetaData>, BuildTimeIconMetaData>(
+      (metaData$) => metaData$
+    ),
+    reduce<BuildTimeIconMetaData, string>(
+      (acc, { identifier, icon }) =>
+        acc + `['${withSuffix(icon.name, icon.theme)}']: '${identifier}',\n`,
+      ''
+    ),
+    map<string, WriteFileMetaData>((content) => ({
+      path: env.paths.MAP_NAME_TO_IDENTIFIER_OUTPUT,
+      content: Prettier.format(
+        mapNameToIdentifierTsTemplate.replace(EXPORT_DEFAULT_MAPPER, content),
+        env.options.prettier
+      )
+    }))
+  );
+
+  const files$ = iconFiles$.pipe(
+    concat(indexFile$),
+    concat(mapNameToIdentifierFile$)
+  );
 
   return new Promise<void>((resolve, reject) => {
     files$

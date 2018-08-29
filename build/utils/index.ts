@@ -74,7 +74,22 @@ export function getIdentifier(identifier: string, theme: ThemeType) {
     case 'twotone':
       return `${identifier}TwoTone`;
     default:
-      throw new TypeError(`Unknown theme type: ${theme}`);
+      throw new TypeError(
+        `Unknown theme type: ${theme}, identifier: ${identifier}`
+      );
+  }
+}
+
+export function withSuffix(name: string, theme: ThemeType) {
+  switch (theme) {
+    case 'fill':
+      return `${name}`;
+    case 'outline':
+      return `${name}-o`;
+    case 'twotone':
+      return `${name}-twotone`;
+    default:
+      throw new TypeError(`Unknown theme type: ${theme}, name: ${name}`);
   }
 }
 

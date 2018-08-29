@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@ant-design/icons@^1.0.0-alpha.2":
-  version "1.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/@ant-design/icons/-/icons-1.0.0-alpha.2.tgz#26877f5f9d4f0e051740acad92c7c0ac4cf43ea7"
+"@ant-design/icons@^1.0.0-alpha.3":
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@ant-design/icons/-/icons-1.0.0-alpha.3.tgz#16c6b34e822ed5d1b5ef17043c5d4a1413166117"
 
 "@babel/code-frame@7.0.0-beta.44":
   version "7.0.0-beta.44"

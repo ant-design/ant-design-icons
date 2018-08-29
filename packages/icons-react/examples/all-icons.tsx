@@ -1,13 +1,10 @@
 import * as icons from '@ant-design/icons';
 import manifest from '@ant-design/icons/lib/manifest';
+import mapper from '@ant-design/icons/lib/mapNameToIdentifier';
 import * as React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
 import AntdIcon from '../src';
-
-const objs = Object.keys(icons).map((key) => icons[key]);
-
-AntdIcon.add(...objs);
 
 const Container = styled.div`
   display: flex;
@@ -35,7 +32,11 @@ class AllIconDemo extends React.Component<{}> {
   renderIcons(names: string[]) {
     return names.map((name) => (
       <Card key={name}>
-        <AntdIcon style={{ fontSize: '24px' }} key={name} type={name} />
+        <AntdIcon
+          style={{ fontSize: '24px' }}
+          key={name}
+          type={icons[mapper[name]]}
+        />
         <NameDescription>{name}</NameDescription>
       </Card>
     ));
