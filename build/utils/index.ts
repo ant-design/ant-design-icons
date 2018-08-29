@@ -83,7 +83,7 @@ export function getIdentifier(identifier: string, theme: ThemeType) {
 export function withSuffix(name: string, theme: ThemeType) {
   switch (theme) {
     case 'fill':
-      return `${name}`;
+      return `${name}-fill`;
     case 'outline':
       return `${name}-o`;
     case 'twotone':
@@ -93,30 +93,24 @@ export function withSuffix(name: string, theme: ThemeType) {
   }
 }
 
-export async function getRollbackSVGPath(
+export function getRollbackTheme(
   env: Environment,
   kebabCaseName: string,
-  currentTheme: ThemeType,
   rollbackList: ThemeType[]
 ) {
-  const paths = [currentTheme, ...rollbackList].map((theme) => ({
+  const paths = rollbackList.map((theme) => ({
     theme,
     url: path.resolve(env.paths.SVG_DIR, theme, `${kebabCaseName}.svg`)
   }));
   for (const { theme, url } of paths) {
     try {
-      await fs.access(url);
-      if (theme !== currentTheme) {
-        log.notice(`Rollback ${kebabCaseName}: ${currentTheme} -> ${theme}`);
-      }
-      return url;
+      fs.accessSync(url);
+      return theme;
     } catch (error) {
       // noop
     }
   }
-  throw new Error(
-    `There is no SVG of the icon: ${kebabCaseName} (${currentTheme})`
-  );
+  throw new Error(`There is no SVG of the icon: ${kebabCaseName}`);
 }
 
 /**
@@ -133,4 +127,15 @@ export async function clear(env: Environment) {
         return new Promise((resolve) => rimraf(env.paths[key], resolve));
       })
   );
+}
+
+export function isAccessable(url: string) {
+  let accessable = false;
+  try {
+    fs.accessSync(url);
+    accessable = true;
+  } catch (error) {
+    accessable = false;
+  }
+  return accessable;
 }

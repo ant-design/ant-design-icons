@@ -54,6 +54,10 @@ export function manulRename(kebabCaseName: string): string {
       return 'customer-service';
     case 'html-5':
       return 'html5';
+    case 'time-circle':
+      return 'clock-circle';
+    case 'video':
+      return 'video-camera';
     default:
       return kebabCaseName;
   }

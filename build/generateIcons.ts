@@ -13,7 +13,8 @@ import {
   EXPORT_DEFAULT_MAPPER,
   ICON_GETTER_FUNCTION,
   ICON_IDENTIFIER,
-  ICON_JSON
+  ICON_JSON,
+  manulMapper
 } from './constants';
 import {
   BuildTimeIconMetaData,
@@ -28,7 +29,8 @@ import {
   clear,
   generateAbstractTree,
   getIdentifier,
-  getRollbackSVGPath,
+  getRollbackTheme,
+  isAccessable,
   log,
   withSuffix
 } from './utils';
@@ -65,18 +67,11 @@ export async function build(env: Environment) {
           );
           return { kebabCaseName, identifier };
         }),
-        filter(({ kebabCaseName }) => {
-          let isAccessable = false;
-          try {
-            fs.accessSync(
-              path.resolve(env.paths.SVG_DIR, theme, `${kebabCaseName}.svg`)
-            );
-            isAccessable = true;
-          } catch (error) {
-            isAccessable = false;
-          }
-          return isAccessable;
-        }),
+        filter(({ kebabCaseName }) =>
+          isAccessable(
+            path.resolve(env.paths.SVG_DIR, theme, `${kebabCaseName}.svg`)
+          )
+        ),
         mergeMap<NameAndPath, BuildTimeIconMetaData>(
           async ({ kebabCaseName, identifier }) => {
             const tryUrl = path.resolve(
@@ -212,6 +207,41 @@ export async function build(env: Environment) {
         acc + `['${withSuffix(icon.name, icon.theme)}']: '${identifier}',\n`,
       ''
     ),
+    map<string, string>((contentWithTheme) => {
+      const computedMapper = svgBasicNames
+        .map((basicName) => {
+          const rollbackTheme = getRollbackTheme(env, basicName, [
+            'outline',
+            'fill',
+            'twotone'
+          ]);
+          const computedIdentifier = getIdentifier(
+            _.upperFirst(_.camelCase(basicName)),
+            rollbackTheme
+          );
+          return {
+            basicName,
+            computedIdentifier
+          };
+        })
+        .reduce<{ [key: string]: string }>(
+          (acc, { basicName, computedIdentifier }) => {
+            acc[basicName] = computedIdentifier;
+            return acc;
+          },
+          {}
+        );
+      const resultMapper = {
+        ...computedMapper,
+        ...manulMapper
+      };
+      return (
+        contentWithTheme +
+        Object.keys(resultMapper)
+          .map((key) => `['${key}']: '${resultMapper[key]}',`)
+          .join('\n')
+      );
+    }),
     map<string, WriteFileMetaData>((content) => ({
       path: env.paths.MAP_NAME_TO_IDENTIFIER_OUTPUT,
       content: Prettier.format(
