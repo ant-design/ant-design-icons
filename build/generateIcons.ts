@@ -4,11 +4,12 @@ import _ = require('lodash');
 import parse5 = require('parse5');
 import path = require('path');
 import Prettier = require('prettier');
-import { from, Observable } from 'rxjs';
-import { concat, map, mergeMap, reduce } from 'rxjs/operators';
+import { from, Observable, of } from 'rxjs';
+import { concat, filter, map, mergeMap, reduce } from 'rxjs/operators';
 import SVGO = require('svgo');
 import {
   EXPORT_DEFAULT_COMPONENT_FROM_DIR,
+  EXPORT_DEFAULT_MANIFEST,
   EXPORT_DEFAULT_MAPPER,
   ICON_GETTER_FUNCTION,
   ICON_IDENTIFIER,
@@ -64,18 +65,31 @@ export async function build(env: Environment) {
           );
           return { kebabCaseName, identifier };
         }),
+        filter(({ kebabCaseName }) => {
+          let isAccessable = false;
+          try {
+            fs.accessSync(
+              path.resolve(env.paths.SVG_DIR, theme, `${kebabCaseName}.svg`)
+            );
+            isAccessable = true;
+          } catch (error) {
+            isAccessable = false;
+          }
+          return isAccessable;
+        }),
         mergeMap<NameAndPath, BuildTimeIconMetaData>(
           async ({ kebabCaseName, identifier }) => {
-            const url = await getRollbackSVGPath(env, kebabCaseName, theme, [
-              'fill',
-              'outline'
-            ]);
+            const tryUrl = path.resolve(
+              env.paths.SVG_DIR,
+              theme,
+              `${kebabCaseName}.svg`
+            );
             let optimizer = svgo;
             if (singleType.includes(theme)) {
               optimizer = svgoForSingleIcon;
             }
             const { data } = await optimizer.optimize(
-              await fs.readFile(url, 'utf8')
+              await fs.readFile(tryUrl, 'utf8')
             );
             const icon: IconDefinition = {
               name: kebabCaseName,
@@ -166,6 +180,24 @@ export async function build(env: Environment) {
     }))
   );
 
+  // Manifest File content flow
+  const manifestTsTemplate = await fs.readFile(
+    env.paths.MANIFEST_TEMPLATE,
+    'utf8'
+  );
+  const manifestFile$ = of(svgBasicNames).pipe(
+    map<string[], WriteFileMetaData>((names) => ({
+      path: env.paths.MANIFEST_OUTPUT,
+      content: Prettier.format(
+        manifestTsTemplate.replace(
+          EXPORT_DEFAULT_MANIFEST,
+          `export default ${JSON.stringify(names)};`
+        ),
+        env.options.prettier
+      )
+    }))
+  );
+
   // Map name to identifier File content flow
   const mapNameToIdentifierTsTemplate = await fs.readFile(
     env.paths.MAP_NAME_TO_IDENTIFIER_TEMPLATE,
@@ -190,6 +222,7 @@ export async function build(env: Environment) {
   );
 
   const files$ = iconFiles$.pipe(
+    concat(manifestFile$),
     concat(indexFile$),
     concat(mapNameToIdentifierFile$)
   );

@@ -1,5 +1,6 @@
 import fs = require('fs-extra');
 import globby = require('globby');
+import _ = require('lodash');
 import path = require('path');
 import Prettier = require('prettier');
 import { EXPORT_DEFAULT_MANIFEST } from '../../constants';
@@ -14,25 +15,17 @@ export async function normalize(env: Environment) {
     await normalizeNamesFromDir(dir);
     log.notice(`Normalize ${dir}`);
   }
-  const defaultDirName: ThemeType = 'outline';
-  const listNames = (await globby(['*.svg'], {
-    cwd: path.join(env.paths.SVG_DIR, defaultDirName),
-    deep: false
-  })).map((name) => name.replace(/\.svg$/, ''));
-  const manifestTsTemplate = await fs.readFile(
-    env.paths.MANIFEST_TEMPLATE,
-    'utf8'
-  );
-  await fs.writeFile(
-    env.paths.MANIFEST_OUTPUT,
-    Prettier.format(
-      manifestTsTemplate.replace(
-        EXPORT_DEFAULT_MANIFEST,
-        `export default ${JSON.stringify(listNames)};`
-      ),
-      env.options.prettier
+  const listNames = _.uniq(
+    _.flatten(
+      await Promise.all(
+        (['fill', 'outline', 'twotone'] as ThemeType[]).map((theme) => {
+          return globby(['*.svg'], {
+            cwd: path.join(env.paths.SVG_DIR, theme),
+            deep: false
+          });
+        })
+      )
     )
-  );
-  log.info(`Generate ${env.paths.MANIFEST_OUTPUT}`);
+  ).map((name) => name.replace(/\.svg$/, ''));
   return listNames;
 }

@@ -44,7 +44,7 @@ class AllIconDemo extends React.Component<{}> {
 
   render() {
     return (
-      <div>
+      <div style={{ color: '#555' }}>
         <h1 style={{ textAlign: 'center' }}>All Icons</h1>
         <Container>{this.renderIcons(manifest)}</Container>
       </div>

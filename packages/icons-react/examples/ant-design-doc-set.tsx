@@ -18,14 +18,11 @@ const ContainerItem = styled.li`
   width: 16.66%;
   text-align: center;
   list-style: none;
-  cursor: pointer;
   height: 100px;
-  color: #555;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   position: relative;
   margin: 3px 0;
   border-radius: 4px;
-  background-color: #fff;
   overflow: hidden;
   padding: 10px 0 0;
 `;
@@ -344,7 +341,7 @@ export default class IconSet extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ color: '#555' }}>
         <Title>Direction</Title>
         <Container>{this.renderIcons('direction')}</Container>
         <Title>Suggestion</Title>
