@@ -89,6 +89,7 @@ export async function build(env: Environment) {
             const icon: IconDefinition = {
               name: kebabCaseName,
               theme,
+              nameWithTheme: withSuffix(kebabCaseName, theme),
               ...generateAbstractTree(
                 (parse5.parseFragment(data) as any).childNodes[0] as Node,
                 kebabCaseName

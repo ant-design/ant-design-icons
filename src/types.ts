@@ -9,6 +9,7 @@ export interface AbstractNode {
 export interface IconDefinition extends AbstractNode {
   name: string; // kebab-case-style
   theme: IconTheme;
+  nameWithTheme: string;
 }
 
 export type IconTheme = 'outline' | 'twotone' | 'fill';

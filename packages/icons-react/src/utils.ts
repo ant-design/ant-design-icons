@@ -1,4 +1,4 @@
-import { AbstractNode, IconDefinition } from '@ant-design/icons';
+import { AbstractNode, IconDefinition } from '@ant-design/icons/lib/types';
 import * as React from 'react';
 
 export function log(message: string) {

@@ -1,4 +1,4 @@
-import { IconDefinition } from '@ant-design/icons';
+import { IconDefinition } from '@ant-design/icons/lib/types';
 import * as React from 'react';
 import { generate, isIconDefinition, log, MiniMap } from '../utils';
 
@@ -14,7 +14,7 @@ class Icon extends React.Component<IconProps> {
   static definitions = new MiniMap<IconDefinition>();
   static add(...icons: IconDefinition[]) {
     icons.forEach((icon) => {
-      this.definitions.set(icon.name, icon);
+      this.definitions.set(icon.nameWithTheme, icon);
     });
   }
   static clear() {

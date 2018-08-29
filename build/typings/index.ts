@@ -43,6 +43,7 @@ export interface AbstractNode {
 export interface IconDefinition extends AbstractNode {
   name: string; // kebab-case-style
   theme: ThemeType;
+  nameWithTheme: string;
 }
 
 export type IconDefinitionGetter = (

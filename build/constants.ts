@@ -1,3 +1,5 @@
+import { theseShouldBeWithTheme } from './utils';
+
 // icon placeholder
 export const ICON_IDENTIFIER = /<% ICON_IDENTIFIER %>/g;
 export const ICON_JSON = /<% ICON_JSON %>/g;
@@ -9,6 +11,23 @@ export const EXPORT_DEFAULT_MAPPER = /<% EXPORT_DEFAULT_MAPPER %>/g;
 
 // manul map
 export const manulMapper: { [key: string]: string } = {
-  like: 'LikeFill',
-  unlike: 'UnlikeFill'
+  ...theseShouldBeWithTheme(
+    [
+      'like',
+      'dislike',
+      'up-circle',
+      'right-circle',
+      'down-circle',
+      'left-circle',
+      'play-circle',
+      'up-square',
+      'right-square',
+      'down-square',
+      'left-square',
+      'question-circle',
+      'plus-circle',
+      'pause-circle'
+    ],
+    'fill'
+  )
 };

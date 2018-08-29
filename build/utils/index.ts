@@ -1,6 +1,7 @@
 import assert = require('assert');
 import chalk from 'chalk';
 import fs = require('fs-extra');
+import _ = require('lodash');
 import path = require('path');
 import rimraf = require('rimraf');
 import { AbstractNode, Environment, Node, ThemeType } from '../typings';
@@ -138,4 +139,16 @@ export function isAccessable(url: string) {
     accessable = false;
   }
   return accessable;
+}
+
+export function theseShouldBeWithTheme(basicNames: string[], theme: ThemeType) {
+  return basicNames
+    .map((basicName) => ({
+      key: basicName,
+      value: getIdentifier(_.upperFirst(_.camelCase(basicName)), theme)
+    }))
+    .reduce<{ [key: string]: string }>((acc, { key, value }) => {
+      acc[key] = value;
+      return acc;
+    }, {});
 }

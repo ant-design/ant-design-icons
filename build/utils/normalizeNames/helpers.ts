@@ -39,26 +39,27 @@ export function normalizeName(fileName: string): string {
 }
 
 export function manulRename(kebabCaseName: string): string {
-  switch (kebabCaseName) {
-    case 'arrawsalt':
-      return 'arrows-alt';
-    case 'arrowdown':
-      return 'arrow-down';
-    case 'arrowleft':
-      return 'arrow-left';
-    case 'arrowright':
-      return 'arrow-right';
-    case 'arrowup':
-      return 'arrow-up';
-    case 'customerservice':
-      return 'customer-service';
-    case 'html-5':
-      return 'html5';
-    case 'time-circle':
-      return 'clock-circle';
-    case 'video':
-      return 'video-camera';
-    default:
-      return kebabCaseName;
+  const mapper: { [key: string]: string | undefined } = {
+    ['arrawsalt']: 'arrows-alt',
+    ['arrowdown']: 'arrow-down',
+    ['arrowleft']: 'arrow-left',
+    ['arrowright']: 'arrow-right',
+    ['arrowup']: 'arrow-up',
+    ['customerservice']: 'customer-service',
+    ['html-5']: 'html5',
+    ['time-circle']: 'clock-circle',
+    ['video']: 'video-camera',
+    ['unlike']: 'dislike',
+    ['verticle-left']: 'verticle-left',
+    ['verticle-right']: 'vertical-right',
+    ['doubleleft']: 'double-left',
+    ['indent']: 'menu-unfold',
+    ['outdent']: 'menu-fold',
+    ['time-out']: 'pause-circle'
+  };
+  const result = mapper[kebabCaseName];
+  if (result) {
+    return result;
   }
+  return kebabCaseName;
 }
