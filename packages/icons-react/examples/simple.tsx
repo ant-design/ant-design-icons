@@ -1,10 +1,10 @@
-import { AntDesign, Dashboard, Twitter } from '@ant-design/icons';
+import { AntDesignOutline, DashboardOutline, TwitterOutline } from '@ant-design/icons';
 import * as React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
 import AntdIcon from '../src';
 
-AntdIcon.add(Dashboard);
+AntdIcon.add(DashboardOutline);
 
 const Div = styled.div`
   position: relative;
@@ -52,11 +52,11 @@ class SimpleDemo extends React.Component<{}> {
       <Div key={fontSize} style={style}>
         {fontSize}
         Ant Design
-        <AlignAntdIcon type={AntDesign} />
+        <AlignAntdIcon type={AntDesignOutline} />
         0123
         <AlignAntdIcon type={'dashboard'} />
         你好
-        <AlignAntdIcon type={Twitter} />
+        <AlignAntdIcon type={TwitterOutline} />
       </Div>
     );
   }
