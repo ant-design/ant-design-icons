@@ -2,6 +2,7 @@ import fs = require('fs-extra');
 import globby = require('globby');
 import path = require('path');
 import Prettier = require('prettier');
+import { EXPORT_DEFAULT_MANIFEST } from '../../constants';
 import { Environment, ThemeType } from '../../typings';
 import { log } from '../../utils';
 import { normalizeNamesFromDir } from './helpers';
@@ -18,14 +19,20 @@ export async function normalize(env: Environment) {
     cwd: path.join(env.paths.SVG_DIR, defaultDirName),
     deep: false
   })).map((name) => name.replace(/\.svg$/, ''));
-  await fs.writeFile(
-    path.join(env.paths.MANIFEST_DIR, './index.json'),
-    Prettier.format(JSON.stringify(listNames), {
-      ...env.options.prettier,
-      singleQuote: false,
-      semi: false
-    }).replace(';', '')
+  const manifestTsTemplate = await fs.readFile(
+    env.paths.MANIFEST_TEMPLATE,
+    'utf8'
   );
-  log.info(`Generate ${path.join(env.paths.MANIFEST_DIR, './index.json')}`);
+  await fs.writeFile(
+    env.paths.MANIFEST_OUTPUT,
+    Prettier.format(
+      manifestTsTemplate.replace(
+        EXPORT_DEFAULT_MANIFEST,
+        `export default ${JSON.stringify(listNames)};`
+      ),
+      env.options.prettier
+    )
+  );
+  log.info(`Generate ${env.paths.MANIFEST_OUTPUT}`);
   return listNames;
 }

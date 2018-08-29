@@ -10,7 +10,19 @@ export interface Node {
 }
 
 export interface Environment {
-  readonly paths: { [key: string]: string };
+  readonly paths: {
+    SVG_DIR: string;
+    ICON_TEMPLATE: string;
+    INDEX_TEMPLATE: string;
+    MANIFEST_TEMPLATE: string;
+    TWO_TONE_ICON_TEMPLATE: string;
+    ICON_OUTPUT_DIR: string;
+    THEME_FILL_OUTPUT: string;
+    THEME_OUTLINE_OUTPUT: string;
+    THEME_TWO_TONE_OUTPUT: string;
+    INDEX_OUTPUT: string;
+    MANIFEST_OUTPUT: string;
+  };
   readonly base: string;
   readonly options: {
     svgo: SVGO.Options;
@@ -28,15 +40,17 @@ export interface AbstractNode {
 
 export interface IconDefinition extends AbstractNode {
   name: string; // kebab-case-style
-  theme: IconTheme;
+  theme: ThemeType;
 }
 
-export type IconTheme = 'outlined' | 'two-tone' | 'filled';
+export type IconDefinitionGetter = (
+  primaryColor?: string,
+  secondaryColor?: string
+) => IconDefinition;
 
 export interface NameAndPath {
   kebabCaseName: string;
   identifier: string;
-  svgFilePath: string;
 }
 
 export interface BuildTimeIconMetaData {

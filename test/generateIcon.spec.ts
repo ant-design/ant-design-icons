@@ -4,7 +4,7 @@ import { environment } from '../build/env';
 import { build } from '../build/generateIcons';
 import { Environment } from '../build/typings';
 
-describe.skip('build/generateIcon.ts', () => {
+describe('build/generateIcon.ts', () => {
   const env: Environment = {
     paths: {
       SVG_DIR: path.resolve(__dirname, './root/svg'),
@@ -12,17 +12,24 @@ describe.skip('build/generateIcon.ts', () => {
         __dirname,
         '../build/templates/icon.ts.template'
       ),
-      ICON_IMPORT_TEMPLATE: path.resolve(
-        __dirname,
-        '../build/templates/icon-import.ts.template'
-      ),
       INDEX_TEMPLATE: path.resolve(
         __dirname,
         '../build/templates/index.ts.template'
       ),
-      ICON_OUTPUT_DIR: path.resolve(__dirname, './case/src/'),
-      ALL_ICON_OUTPUT: path.resolve(__dirname, './case/src/*.ts'),
-      INDEX_OUTPUT: path.resolve(__dirname, './case/src/index.ts')
+      MANIFEST_TEMPLATE: path.resolve(
+        __dirname,
+        '../build/templates/manifest.ts.template'
+      ),
+      TWO_TONE_ICON_TEMPLATE: path.resolve(
+        __dirname,
+        '../build/templates/two-tone-icon.ts.template'
+      ),
+      MANIFEST_OUTPUT: path.resolve(__dirname, './root/src/manifest.ts'),
+      ICON_OUTPUT_DIR: path.resolve(__dirname, './root/src/'),
+      THEME_FILL_OUTPUT: path.resolve(__dirname, './root/src/fill/*.ts'),
+      THEME_OUTLINE_OUTPUT: path.resolve(__dirname, './root/src/outline/*.ts'),
+      THEME_TWO_TONE_OUTPUT: path.resolve(__dirname, './root/src/twotone/*.ts'),
+      INDEX_OUTPUT: path.resolve(__dirname, './root/src/index.ts')
     },
     base: path.resolve(__dirname, './'),
     options: {
@@ -39,10 +46,10 @@ describe.skip('build/generateIcon.ts', () => {
     '8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z';
   it('should work.', async () => {
     await build(env);
-    const closeString = await fs.readFile(
-      `${env.paths.ICON_OUTPUT_DIR}/Close.ts`,
+    const outlineString = await fs.readFile(
+      `${env.paths.ICON_OUTPUT_DIR}/outline/CloseOutline.ts`,
       'utf8'
     );
-    expect(closeString).toContain(closePath);
+    expect(outlineString).toContain(closePath);
   });
 });
