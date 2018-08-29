@@ -1,16 +1,15 @@
 'use strict';
-import fse = require('fs-extra');
-import globby = require('globby');
+import fs = require('fs-extra');
 import _ = require('lodash');
 import parse5 = require('parse5');
 import path = require('path');
 import Prettier = require('prettier');
-import rimraf = require('rimraf');
-import { from } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { concat, map, mergeMap, reduce } from 'rxjs/operators';
 import SVGO = require('svgo');
 import {
   EXPORT_DEFAULT_COMPONENT_FROM_DIR,
+  ICON_GETTER_FUNCTION,
   ICON_IDENTIFIER,
   ICON_JSON
 } from './constants';
@@ -20,106 +19,140 @@ import {
   IconDefinition,
   NameAndPath,
   Node,
+  ThemeType,
   WriteFileMetaData
 } from './typings';
-import { generateAbstractTree, log } from './utils';
+import {
+  clear,
+  generateAbstractTree,
+  getIdentifier,
+  getRollbackSVGPath,
+  log
+} from './utils';
+import { normalize } from './utils/normalizeNames';
 
 export async function build(env: Environment) {
   const svgo = new SVGO(env.options.svgo);
+  const singleType: ThemeType[] = ['fill', 'outline'];
+  const svgoForSingleIcon = new SVGO({
+    ...env.options.svgo,
+    plugins: [
+      ...env.options.svgo.plugins!,
+      // single color should remove the `fill` attribute.
+      { removeAttrs: { attrs: ['fill'] } }
+    ]
+  });
 
   await clear(env);
 
-  const svgFileNames = await globby(['*.svg'], {
-    cwd: env.paths.SVG_DIR,
-    deep: false
-  });
+  const svgBasicNames = await normalize(env);
 
-  /**
-   * SVG Meta Data Flow
-   * An example:
-   * 'alipay-circle.svg'
-   *         ↓
-   *  {
-   *    kebabCaseName: 'alipay-circle',
-   *    identifier: 'AlipayCircle',
-   *    svgFilePath: '<path-to-your-dir>/alipay-circle.svg'
-   *  }
-   *         ↓
-   *  {
-   *    identifier: 'AlipayCircle',
-   *    icon: {
-   *      name: 'alipay-circle',
-   *      width: 1024,
-   *      height: 1024,
-   *      viewBox: '0 0 1024 1024',
-   *      style: '',
-   *      children: [
-   *        { tag: 'path', attrs: { d: 'M230.404 576.536c-12.087 9.728-25.043 23.93...' } }
-   *      ]
-   *    }
-   *  }
-   */
-  const svgMetaData$ = from(svgFileNames).pipe(
-    map<string, NameAndPath>((fileNameWithExtension) => {
-      const fileName = fileNameWithExtension.replace(/\.svg$/, '');
-      const kebabCaseName =
-        fileName === 'html5' ? fileName : _.kebabCase(fileName); // 'html5' is not kebab-case but used in <Icon />.
-      const identifier = _.upperFirst(_.camelCase(fileName));
-      const svgFilePath = path.resolve(
-        env.paths.SVG_DIR,
-        fileNameWithExtension
-      );
-      return { kebabCaseName, identifier, svgFilePath };
-    }),
-    mergeMap<NameAndPath, BuildTimeIconMetaData>(
-      async ({ kebabCaseName, identifier, svgFilePath }) => {
-        const { data } = await svgo.optimize(
-          await fse.readFile(svgFilePath, 'utf8')
-        );
-        const icon: IconDefinition = {
-          name: kebabCaseName,
-          ...generateAbstractTree(
-            (parse5.parseFragment(data) as any).childNodes[0] as Node,
-            kebabCaseName
-          )
-        };
-        return { identifier, icon };
-      }
-    )
-  );
-
-  /**
-   * Icon files content flow.
-   */
-  const iconTsTemplate = await fse.readFile(env.paths.ICON_TEMPLATE, 'utf8');
-  const iconFiles$ = svgMetaData$.pipe(
-    map<BuildTimeIconMetaData, { identifier: string; content: string }>(
-      ({ identifier, icon }) => ({
-        identifier,
-        content: Prettier.format(
-          iconTsTemplate
-            .replace(ICON_IDENTIFIER, identifier)
-            .replace(ICON_JSON, JSON.stringify(icon)),
-          env.options.prettier
+  // SVG Meta Data Flow
+  const svgMetaDataWithTheme$ = from<ThemeType>([
+    'fill',
+    'outline',
+    'twotone'
+  ]).pipe(
+    map<ThemeType, Observable<BuildTimeIconMetaData>>((theme) =>
+      from(svgBasicNames).pipe(
+        map<string, NameAndPath>((kebabCaseName) => {
+          const identifier = getIdentifier(
+            _.upperFirst(_.camelCase(kebabCaseName)),
+            theme
+          );
+          return { kebabCaseName, identifier };
+        }),
+        mergeMap<NameAndPath, BuildTimeIconMetaData>(
+          async ({ kebabCaseName, identifier }) => {
+            const url = await getRollbackSVGPath(env, kebabCaseName, theme, [
+              'fill',
+              'outline'
+            ]);
+            let optimizer = svgo;
+            if (singleType.includes(theme)) {
+              optimizer = svgoForSingleIcon;
+            }
+            const { data } = await optimizer.optimize(
+              await fs.readFile(url, 'utf8')
+            );
+            const icon: IconDefinition = {
+              name: kebabCaseName,
+              theme,
+              ...generateAbstractTree(
+                (parse5.parseFragment(data) as any).childNodes[0] as Node,
+                kebabCaseName
+              )
+            };
+            return { identifier, icon };
+          }
         )
-      })
-    ),
-    map<{ identifier: string; content: string }, WriteFileMetaData>(
-      ({ identifier, content }) => ({
-        path: path.resolve(env.paths.ICON_OUTPUT_DIR, `./${identifier}.ts`),
-        content
-      })
+      )
     )
   );
 
-  /**
-   * Index File content flow
-   */
-  const indexTsTemplate = await fse.readFile(env.paths.INDEX_TEMPLATE, 'utf8');
-  const indexFile$ = svgMetaData$.pipe(
+  // Icon files content flow.
+  const iconTsTemplate = await fs.readFile(env.paths.ICON_TEMPLATE, 'utf8');
+  const twoToneIconTsTemplate = await fs.readFile(
+    env.paths.TWO_TONE_ICON_TEMPLATE,
+    'utf8'
+  );
+  const iconFiles$ = svgMetaDataWithTheme$.pipe(
+    mergeMap<Observable<BuildTimeIconMetaData>, BuildTimeIconMetaData>(
+      (metaData$) => metaData$
+    ),
+    map<
+      BuildTimeIconMetaData,
+      { identifier: string; content: string; theme: ThemeType }
+    >(({ identifier, icon }) => ({
+      identifier,
+      theme: icon.theme,
+      content:
+        icon.theme === 'twotone'
+          ? Prettier.format(
+              twoToneIconTsTemplate
+                .replace(ICON_IDENTIFIER, identifier)
+                .replace(
+                  ICON_GETTER_FUNCTION,
+                  `function ${identifier}(primaryColor = '#333', secondaryColor = '#E6E6E6') { return ${JSON.stringify(
+                    icon
+                  )
+                    .replace(/"#333"/g, 'primaryColor')
+                    .replace(/"#E6E6E6"/g, 'secondaryColor')} };`
+                ),
+              env.options.prettier
+            )
+          : Prettier.format(
+              iconTsTemplate
+                .replace(ICON_IDENTIFIER, identifier)
+                .replace(ICON_JSON, JSON.stringify(icon)),
+              env.options.prettier
+            )
+    })),
+    map<
+      { identifier: string; content: string; theme: ThemeType },
+      WriteFileMetaData
+    >(({ identifier, content, theme }) => ({
+      path: path.resolve(
+        env.paths.ICON_OUTPUT_DIR,
+        theme,
+        `./${identifier}.ts`
+      ),
+      content
+    }))
+  );
+
+  // Index File content flow
+  const indexTsTemplate = await fs.readFile(env.paths.INDEX_TEMPLATE, 'utf8');
+  const indexFile$ = svgMetaDataWithTheme$.pipe(
+    mergeMap<Observable<BuildTimeIconMetaData>, BuildTimeIconMetaData>(
+      (metaData$) => metaData$
+    ),
     reduce<BuildTimeIconMetaData, string>(
-      (acc, { identifier }) =>
-        acc + `export { default as ${identifier} } from './${identifier}';\n`,
+      (acc, { identifier, icon }) =>
+        acc +
+        `export { default as ${identifier} } from './${
+          icon.theme
+        }/${identifier}';\n`,
       ''
     ),
     map<string, WriteFileMetaData>((content) => ({
@@ -137,7 +170,7 @@ export async function build(env: Environment) {
     files$
       .pipe(
         mergeMap(async ({ path: writeFilePath, content }) => {
-          await fse.writeFile(writeFilePath, content, 'utf8');
+          await fs.writeFile(writeFilePath, content, 'utf8');
           log.info(`Generated ./${path.relative(env.base, writeFilePath)}.`);
         })
       )
@@ -146,20 +179,4 @@ export async function build(env: Environment) {
         resolve();
       });
   });
-}
-
-/**
- * Clear by using 'rimraf'.
- */
-async function clear(env: Environment) {
-  log.notice(`Clear folders.`);
-  return Promise.all(
-    Object.keys(env.paths)
-      .filter((key) => key.endsWith('OUTPUT')) // DO NOT DELETE THIS LINE!!!
-      .map((key) => {
-        // This is evil. Make sure you just delete the OUTPUT.
-        log.notice(`Delete ${path.relative(env.base, env.paths[key])}.`);
-        return new Promise((resolve) => rimraf(env.paths[key], resolve));
-      })
-  );
 }

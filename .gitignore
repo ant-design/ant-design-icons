@@ -20,11 +20,18 @@ yarn-error.log*
 .rpt2_cache
 
 # auto generated
-src/manifest.ts
-src/svgs.ts
-
 _site/
 .cache
 public
-build/from-iconfont-js/svg
-src/*.ts
+src/fill/*.ts
+src/outline/*.ts
+src/twotone/*.ts
+src/index.ts
+src/manifest.ts
+
+# test generated
+test/root/src/fill/*.ts
+test/root/src/outline/*.ts
+test/root/src/twotone/*.ts
+test/root/src/index.ts
+test/root/src/manifest.ts

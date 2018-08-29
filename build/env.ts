@@ -5,14 +5,21 @@ export const environment: Environment = {
   paths: {
     SVG_DIR: path.resolve(__dirname, '../svg'),
     ICON_TEMPLATE: path.resolve(__dirname, './templates/icon.ts.template'),
-    ICON_IMPORT_TEMPLATE: path.resolve(
-      __dirname,
-      './templates/icon-import.ts.template'
-    ),
     INDEX_TEMPLATE: path.resolve(__dirname, './templates/index.ts.template'),
+    MANIFEST_TEMPLATE: path.resolve(
+      __dirname,
+      './templates/manifest.ts.template'
+    ),
+    TWO_TONE_ICON_TEMPLATE: path.resolve(
+      __dirname,
+      './templates/two-tone-icon.ts.template'
+    ),
     ICON_OUTPUT_DIR: path.resolve(__dirname, '../src/'),
-    ALL_ICON_OUTPUT: path.resolve(__dirname, '../src/*.ts'),
-    INDEX_OUTPUT: path.resolve(__dirname, '../src/index.ts')
+    THEME_FILL_OUTPUT: path.resolve(__dirname, '../src/fill/*.ts'),
+    THEME_OUTLINE_OUTPUT: path.resolve(__dirname, '../src/outline/*.ts'),
+    THEME_TWO_TONE_OUTPUT: path.resolve(__dirname, '../src/twotone/*.ts'),
+    INDEX_OUTPUT: path.resolve(__dirname, '../src/index.ts'),
+    MANIFEST_OUTPUT: path.resolve(__dirname, '../src/manifest.ts')
   },
   base: path.resolve(__dirname, '../'),
   options: {
@@ -30,15 +37,13 @@ export const environment: Environment = {
         { removeTitle: true },
         { removeDesc: true },
         { removeUselessDefs: true },
-        { removeXMLNS: true },
         { removeEditorsNSData: true },
         { removeEmptyAttrs: true },
         { removeHiddenElems: true },
         { removeEmptyText: true },
         { removeEmptyContainers: true },
-        { removeViewBox: true },
+        { removeViewBox: false },
         { cleanupEnableBackground: true },
-        { minifyStyles: true },
         { convertStyleToAttrs: true },
         { convertColors: true },
         { convertPathData: true },
@@ -49,19 +54,14 @@ export const environment: Environment = {
         { removeUnusedNS: true },
         { cleanupIDs: true },
         { cleanupNumericValues: true },
-        { cleanupListOfValues: true },
         { moveElemsAttrsToGroup: true },
         { moveGroupAttrsToElems: true },
         { collapseGroups: true },
-        { removeRasterImages: true },
+        { removeRasterImages: false },
         { mergePaths: true },
         { convertShapeToPath: true },
         { sortAttrs: true },
-        { removeDimensions: true },
-        { removeAttrs: true },
-        { removeElementsByAttr: true },
-        { removeStyleElement: true },
-        { removeScriptElement: true }
+        { removeDimensions: true }
       ]
     },
     prettier: {
