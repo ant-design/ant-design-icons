@@ -101,5 +101,6 @@ export function getIconNameAccordingToSuffix(type: string): string | undefined {
   if (suffixTests.test(type)) {
     return type;
   }
+  // use mapper from '@ant-design/icons/lib/mapNameToThemedName'
   return (mapper as { [key: string]: string | undefined })[type];
 }
