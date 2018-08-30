@@ -1,9 +1,11 @@
 import * as icons from '@ant-design/icons';
-import mapper from '@ant-design/icons/lib/mapNameToIdentifier';
+import mapper from '@ant-design/icons/lib/mapNameToThemedName';
 import * as React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
 import AntdIcon from '../src';
+
+AntdIcon.add(...Object.keys(icons).map((key) => icons[key]));
 
 type Category = 'direction' | 'suggestion' | 'logo' | 'other';
 
@@ -333,7 +335,7 @@ export default class IconSet extends React.Component {
   renderIcons(catigory: Category) {
     return this.icons[catigory].map((type) => (
       <ContainerItem key={type}>
-        <AntdIcon style={{ fontSize: '24px' }} type={icons[mapper[type]]} />
+        <AntdIcon style={{ fontSize: '24px' }} type={type} />
         <p>{type}</p>
       </ContainerItem>
     ));

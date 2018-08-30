@@ -51,7 +51,8 @@ export function manulRename(kebabCaseName: string): string {
     ['video']: 'video-camera',
     ['unlike']: 'dislike',
     ['verticle-left']: 'verticle-left',
-    ['verticle-right']: 'vertical-right',
+    ['verticle-right']: 'verticle-right',
+    ['vertical-right']: 'verticle-right',
     ['doubleleft']: 'double-left',
     ['indent']: 'menu-unfold',
     ['outdent']: 'menu-fold',
@@ -60,6 +61,8 @@ export function manulRename(kebabCaseName: string): string {
     ['warning-circle']: 'exclamation-circle',
     ['code-library']: 'code',
     ['yuan-circle']: 'pay-circle',
+    ['yuan']: 'pay-circle',
+    ['pay-cirlce']: 'pay-circle',
     ['app-store']: 'appstore',
     ['pie-chart-circle-fil']: 'pie-chart',
     ['image']: 'picture',
@@ -76,7 +79,16 @@ export function manulRename(kebabCaseName: string): string {
     ['calendar-check']: 'schedule',
     ['earth']: 'global',
     ['edit-square']: 'form',
-    ['file-exception']: 'exception'
+    ['file-exception']: 'exception',
+    ['add-user']: 'user-add',
+    ['addteam']: 'usergroup-add',
+    ['delete-team']: 'usergroup-delete',
+    ['delete-user']: 'user-delete',
+    ['user-delete']: 'user-delete',
+    ['alibabacloud']: 'aliyun',
+    ['share']: 'share-alt',
+    ['attachment']: 'paper-clip',
+    ['wrench']: 'tool'
   };
   const result = mapper[kebabCaseName];
   if (result) {

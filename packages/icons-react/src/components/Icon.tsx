@@ -1,6 +1,12 @@
 import { IconDefinition } from '@ant-design/icons/lib/types';
 import * as React from 'react';
-import { generate, isIconDefinition, log, MiniMap } from '../utils';
+import {
+  generate,
+  getIconNameAccordingToSuffix,
+  isIconDefinition,
+  log,
+  MiniMap
+} from '../utils';
 
 export interface IconProps {
   type: string | IconDefinition;
@@ -20,8 +26,10 @@ class Icon extends React.Component<IconProps> {
   static clear() {
     this.definitions.clear();
   }
-  static get(key: string) {
-    return this.definitions.get(key);
+  static get(key?: string) {
+    if (key) {
+      return this.definitions.get(key);
+    }
   }
 
   render() {
@@ -31,7 +39,7 @@ class Icon extends React.Component<IconProps> {
     if (isIconDefinition(type)) {
       target = type;
     } else if (typeof type === 'string') {
-      target = Icon.get(type);
+      target = Icon.get(getIconNameAccordingToSuffix(type));
       if (!target) {
         log(`Could not find icon: ${type}`);
         return null;

@@ -1,3 +1,4 @@
+import mapper from '@ant-design/icons/lib/mapNameToThemedName';
 import { AbstractNode, IconDefinition } from '@ant-design/icons/lib/types';
 import * as React from 'react';
 
@@ -83,4 +84,12 @@ export function generate(
       generate(child, `${key}-${node.tag}-${index}`)
     )
   );
+}
+
+const suffixTests = /(-o|-fill|-twotone)$/;
+export function getIconNameAccordingToSuffix(type: string): string | undefined {
+  if (suffixTests.test(type)) {
+    return type;
+  }
+  return (mapper as { [key: string]: string | undefined })[type];
 }
