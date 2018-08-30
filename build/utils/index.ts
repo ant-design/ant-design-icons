@@ -141,11 +141,17 @@ export function isAccessable(url: string) {
   return accessable;
 }
 
-export function theseShouldBeWithTheme(basicNames: string[], theme: ThemeType) {
+export function theseShouldBeWithTheme(
+  basicNames: string[],
+  theme: ThemeType,
+  isKebabCase?: boolean
+) {
   return basicNames
     .map((basicName) => ({
       key: basicName,
-      value: getIdentifier(_.upperFirst(_.camelCase(basicName)), theme)
+      value: isKebabCase
+        ? withSuffix(basicName, theme)
+        : getIdentifier(_.upperFirst(_.camelCase(basicName)), theme)
     }))
     .reduce<{ [key: string]: string }>((acc, { key, value }) => {
       acc[key] = value;

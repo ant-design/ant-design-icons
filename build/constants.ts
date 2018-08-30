@@ -10,24 +10,29 @@ export const EXPORT_DEFAULT_MANIFEST = /<% EXPORT_DEFAULT_MANIFEST %>/g;
 export const EXPORT_DEFAULT_MAPPER = /<% EXPORT_DEFAULT_MAPPER %>/g;
 
 // manul map
-export const manulMapper: { [key: string]: string } = {
-  ...theseShouldBeWithTheme(
-    [
-      'like',
-      'dislike',
-      'up-circle',
-      'right-circle',
-      'down-circle',
-      'left-circle',
-      'play-circle',
-      'up-square',
-      'right-square',
-      'down-square',
-      'left-square',
-      'question-circle',
-      'plus-circle',
-      'pause-circle'
-    ],
-    'fill'
-  )
-};
+export function getManulMapper(
+  toKebabCase?: boolean
+): { [key: string]: string } {
+  return {
+    ...theseShouldBeWithTheme(
+      [
+        'like',
+        'dislike',
+        'up-circle',
+        'right-circle',
+        'down-circle',
+        'left-circle',
+        'play-circle',
+        'up-square',
+        'right-square',
+        'down-square',
+        'left-square',
+        'question-circle',
+        'plus-circle',
+        'pause-circle'
+      ],
+      'fill',
+      toKebabCase
+    )
+  };
+}

@@ -18,6 +18,10 @@ export const environment: Environment = {
       __dirname,
       './templates/mapNameToIdentifier.ts.template'
     ),
+    MAP_NAME_TO_THEMED_NAME_TEMPLATE: path.resolve(
+      __dirname,
+      './templates/mapNameToThemedName.ts.template'
+    ),
     ICON_OUTPUT_DIR: path.resolve(__dirname, '../src/'),
     THEME_FILL_OUTPUT: path.resolve(__dirname, '../src/fill/*.ts'),
     THEME_OUTLINE_OUTPUT: path.resolve(__dirname, '../src/outline/*.ts'),
@@ -27,6 +31,10 @@ export const environment: Environment = {
     MAP_NAME_TO_IDENTIFIER_OUTPUT: path.resolve(
       __dirname,
       '../src/mapNameToIdentifier.ts'
+    ),
+    MAP_NAME_TO_THEMED_NAME_OUTPUT: path.resolve(
+      __dirname,
+      '../src/mapNameToThemedName.ts'
     )
   },
   base: path.resolve(__dirname, '../'),

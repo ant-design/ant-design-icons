@@ -11,10 +11,10 @@ import {
   EXPORT_DEFAULT_COMPONENT_FROM_DIR,
   EXPORT_DEFAULT_MANIFEST,
   EXPORT_DEFAULT_MAPPER,
+  getManulMapper,
   ICON_GETTER_FUNCTION,
   ICON_IDENTIFIER,
-  ICON_JSON,
-  manulMapper
+  ICON_JSON
 } from './constants';
 import {
   BuildTimeIconMetaData,
@@ -194,6 +194,47 @@ export async function build(env: Environment) {
     }))
   );
 
+  // Map name to themed name File content flow
+  const mapNameToThemedNameTsTemplate = await fs.readFile(
+    env.paths.MAP_NAME_TO_THEMED_NAME_TEMPLATE,
+    'utf8'
+  );
+  const mapNameToThemedNameFile$ = of(svgBasicNames).pipe(
+    map<string[], string>((basicNames) => {
+      const computedMapper = basicNames
+        .map((basicName) => {
+          const rollbackTheme = getRollbackTheme(env, basicName, [
+            'outline',
+            'fill',
+            'twotone'
+          ]);
+          const themedName = withSuffix(basicName, rollbackTheme);
+          return {
+            basicName,
+            themedName
+          };
+        })
+        .reduce<{ [key: string]: string }>((acc, { basicName, themedName }) => {
+          acc[basicName] = themedName;
+          return acc;
+        }, {});
+      const resultMapper = {
+        ...computedMapper,
+        ...getManulMapper(true)
+      };
+      return Object.keys(resultMapper)
+        .map((key) => `['${key}']: '${resultMapper[key]}',`)
+        .join('\n');
+    }),
+    map<string, WriteFileMetaData>((content) => ({
+      path: env.paths.MAP_NAME_TO_THEMED_NAME_OUTPUT,
+      content: Prettier.format(
+        mapNameToIdentifierTsTemplate.replace(EXPORT_DEFAULT_MAPPER, content),
+        env.options.prettier
+      )
+    }))
+  );
+
   // Map name to identifier File content flow
   const mapNameToIdentifierTsTemplate = await fs.readFile(
     env.paths.MAP_NAME_TO_IDENTIFIER_TEMPLATE,
@@ -234,7 +275,7 @@ export async function build(env: Environment) {
         );
       const resultMapper = {
         ...computedMapper,
-        ...manulMapper
+        ...getManulMapper()
       };
       return (
         contentWithTheme +
@@ -255,7 +296,8 @@ export async function build(env: Environment) {
   const files$ = iconFiles$.pipe(
     concat(manifestFile$),
     concat(indexFile$),
-    concat(mapNameToIdentifierFile$)
+    concat(mapNameToIdentifierFile$),
+    concat(mapNameToThemedNameFile$)
   );
 
   return new Promise<void>((resolve, reject) => {
