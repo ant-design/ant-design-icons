@@ -125,7 +125,7 @@ export async function build(env: Environment) {
                 .replace(ICON_IDENTIFIER, identifier)
                 .replace(
                   ICON_GETTER_FUNCTION,
-                  `function ${identifier}(primaryColor = '#333', secondaryColor = '#E6E6E6') { return ${JSON.stringify(
+                  `function ${identifier}(primaryColor, secondaryColor) { return ${JSON.stringify(
                     icon
                   )
                     .replace(/"#333"/g, 'primaryColor')

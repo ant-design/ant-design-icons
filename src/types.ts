@@ -15,6 +15,6 @@ export interface IconDefinition extends AbstractNode {
 export type IconTheme = 'outline' | 'twotone' | 'fill';
 
 export type IconDefinitionGetter = (
-  primaryColor?: string,
-  secondaryColor?: string
+  primaryColor: string,
+  secondaryColor: string
 ) => IconDefinition;

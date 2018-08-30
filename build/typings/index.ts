@@ -49,8 +49,8 @@ export interface IconDefinition extends AbstractNode {
 }
 
 export type IconDefinitionGetter = (
-  primaryColor?: string,
-  secondaryColor?: string
+  primaryColor: string,
+  secondaryColor: string
 ) => IconDefinition;
 
 export interface NameAndPath {
