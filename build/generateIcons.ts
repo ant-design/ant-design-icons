@@ -14,7 +14,8 @@ import {
   getManulMapper,
   ICON_GETTER_FUNCTION,
   ICON_IDENTIFIER,
-  ICON_JSON
+  ICON_JSON,
+  NAME_WITH_THEME
 } from './constants';
 import {
   BuildTimeIconMetaData,
@@ -125,12 +126,13 @@ export async function build(env: Environment) {
                 .replace(ICON_IDENTIFIER, identifier)
                 .replace(
                   ICON_GETTER_FUNCTION,
-                  `function ${identifier}(primaryColor, secondaryColor) { return ${JSON.stringify(
+                  `function ${identifier}(primaryColor: string, secondaryColor: string) { return ${JSON.stringify(
                     icon
                   )
                     .replace(/"#333"/g, 'primaryColor')
-                    .replace(/"#E6E6E6"/g, 'secondaryColor')} };`
-                ),
+                    .replace(/"#E6E6E6"/g, 'secondaryColor')}; }`
+                )
+                .replace(NAME_WITH_THEME, icon.nameWithTheme),
               env.options.prettier
             )
           : Prettier.format(

@@ -1,19 +1,29 @@
-import { IconDefinition } from '@ant-design/icons/lib/types';
+import {
+  IconDefinition,
+  IconDefinitionGetter
+} from '@ant-design/icons/lib/types';
+import { generate as generateColor } from 'ant-design-palettes';
 import * as React from 'react';
 import {
   generate,
   getIconNameAccordingToSuffix,
   isIconDefinition,
+  isIconDefinitionGetter,
   log,
   MiniMap
 } from '../utils';
 
 export interface IconProps {
-  type: string | IconDefinition;
+  type: string | IconDefinition | IconDefinitionGetter;
   className?: string;
   onClick?: React.MouseEventHandler<SVGSVGElement>;
   style?: React.CSSProperties;
 }
+
+const twoToneColorPalette = {
+  primaryColor: '#333',
+  secondaryColor: '#E6E6E6'
+};
 
 class Icon extends React.Component<IconProps> {
   static displayName = 'IconReact';
@@ -28,8 +38,22 @@ class Icon extends React.Component<IconProps> {
   }
   static get(key?: string) {
     if (key) {
-      return this.definitions.get(key);
+      let result = this.definitions.get(key);
+      if (isIconDefinitionGetter(result)) {
+        result = result(
+          twoToneColorPalette.primaryColor,
+          twoToneColorPalette.secondaryColor
+        );
+      }
+      return result;
     }
+  }
+
+  static setTwoTonePrimaryColor(primaryColor: string) {
+    twoToneColorPalette.primaryColor = primaryColor;
+    twoToneColorPalette.secondaryColor = generateColor(
+      twoToneColorPalette.primaryColor
+    )[1]; // choose the second color
   }
 
   render() {
@@ -38,6 +62,11 @@ class Icon extends React.Component<IconProps> {
     let target: IconDefinition | undefined;
     if (isIconDefinition(type)) {
       target = type;
+    } else if (isIconDefinitionGetter(type)) {
+      target = type(
+        twoToneColorPalette.primaryColor,
+        twoToneColorPalette.secondaryColor
+      );
     } else if (typeof type === 'string') {
       target = Icon.get(getIconNameAccordingToSuffix(type));
       if (!target) {

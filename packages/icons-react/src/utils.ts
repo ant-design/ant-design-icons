@@ -1,5 +1,9 @@
 import mapper from '@ant-design/icons/lib/mapNameToThemedName';
-import { AbstractNode, IconDefinition } from '@ant-design/icons/lib/types';
+import {
+  AbstractNode,
+  IconDefinition,
+  IconDefinitionGetter
+} from '@ant-design/icons/lib/types';
 import * as React from 'react';
 
 export function log(message: string) {
@@ -15,6 +19,12 @@ export function isIconDefinition(target: any): target is IconDefinition {
     typeof target.attrs === 'object' &&
     Array.isArray(target.children)
   );
+}
+
+export function isIconDefinitionGetter(
+  target: any
+): target is IconDefinitionGetter {
+  return typeof target === 'function';
 }
 
 export function normalizeAttrs(attrs: Attrs = {}): Attrs {

@@ -48,10 +48,10 @@ export interface IconDefinition extends AbstractNode {
   nameWithTheme: string;
 }
 
-export type IconDefinitionGetter = (
-  primaryColor: string,
-  secondaryColor: string
-) => IconDefinition;
+export interface IconDefinitionGetter {
+  (primaryColor: string, secondaryColor: string): IconDefinition;
+  nameWithTheme: string;
+}
 
 export interface NameAndPath {
   kebabCaseName: string;
