@@ -49,11 +49,11 @@ class Icon extends React.Component<IconProps> {
     }
   }
 
-  static setTwoTonePrimaryColor(primaryColor: string) {
+  static setTwoTonePrimaryColor(primaryColor: string, secondaryColor?: string) {
     twoToneColorPalette.primaryColor = primaryColor;
-    twoToneColorPalette.secondaryColor = generateColor(
-      twoToneColorPalette.primaryColor
-    )[1]; // choose the second color
+    twoToneColorPalette.secondaryColor =
+      // choose the second color
+      secondaryColor || generateColor(twoToneColorPalette.primaryColor)[1];
   }
 
   render() {
