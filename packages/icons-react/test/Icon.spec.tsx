@@ -1,9 +1,9 @@
-import { AntDesign, Twitter } from '@ant-design/icons';
+import { AntDesignOutline, TwitterOutline } from '@ant-design/icons';
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
 import Icon, { IconProps } from '../src/components/Icon';
 
-Icon.add(AntDesign, Twitter);
+Icon.add(AntDesignOutline, TwitterOutline);
 
 function mount(props: IconProps) {
   const component = renderer.create(<Icon {...props} />);
@@ -25,7 +25,7 @@ describe('React AntdIcon Component', () => {
 
   it('should allow explicit import.', () => {
     const icon = mount({
-      type: Twitter
+      type: TwitterOutline
     });
     expect(typeof icon!.children![0].props.d).toBe('string');
   });
