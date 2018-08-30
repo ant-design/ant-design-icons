@@ -2,11 +2,11 @@ import {
   IconDefinition,
   IconDefinitionGetter
 } from '@ant-design/icons/lib/types';
-import { generate as generateColor } from 'ant-design-palettes';
 import * as React from 'react';
 import {
   generate,
   getIconNameAccordingToSuffix,
+  getSecondaryColor,
   isIconDefinition,
   isIconDefinitionGetter,
   log,
@@ -18,9 +18,16 @@ export interface IconProps {
   className?: string;
   onClick?: React.MouseEventHandler<SVGSVGElement>;
   style?: React.CSSProperties;
+  primaryColor?: string; // only for two-tone
+  secondaryColor?: string; // only for two-tone
 }
 
-const twoToneColorPalette = {
+export interface TwoToneColorPalette {
+  primaryColor: string;
+  secondaryColor: string;
+}
+
+const twoToneColorPalette: TwoToneColorPalette = {
   primaryColor: '#333',
   secondaryColor: '#E6E6E6'
 };
@@ -36,14 +43,12 @@ class Icon extends React.Component<IconProps> {
   static clear() {
     this.definitions.clear();
   }
-  static get(key?: string) {
+
+  static get(key?: string, colors: TwoToneColorPalette = twoToneColorPalette) {
     if (key) {
       let result = this.definitions.get(key);
       if (isIconDefinitionGetter(result)) {
-        result = result(
-          twoToneColorPalette.primaryColor,
-          twoToneColorPalette.secondaryColor
-        );
+        result = result(colors.primaryColor, colors.secondaryColor);
       }
       return result;
     }
@@ -52,23 +57,33 @@ class Icon extends React.Component<IconProps> {
   static setTwoTonePrimaryColor(primaryColor: string, secondaryColor?: string) {
     twoToneColorPalette.primaryColor = primaryColor;
     twoToneColorPalette.secondaryColor =
-      // choose the second color
-      secondaryColor || generateColor(twoToneColorPalette.primaryColor)[1];
+      secondaryColor || getSecondaryColor(primaryColor);
   }
 
   render() {
-    const { type, className, onClick, style } = this.props;
+    const {
+      type,
+      className,
+      onClick,
+      style,
+      primaryColor,
+      secondaryColor
+    } = this.props;
 
     let target: IconDefinition | undefined;
+    let colors: TwoToneColorPalette = twoToneColorPalette;
+    if (primaryColor) {
+      colors = {
+        primaryColor,
+        secondaryColor: secondaryColor || getSecondaryColor(primaryColor)
+      };
+    }
     if (isIconDefinition(type)) {
       target = type;
     } else if (isIconDefinitionGetter(type)) {
-      target = type(
-        twoToneColorPalette.primaryColor,
-        twoToneColorPalette.secondaryColor
-      );
+      target = type(colors.primaryColor, colors.secondaryColor);
     } else if (typeof type === 'string') {
-      target = Icon.get(getIconNameAccordingToSuffix(type));
+      target = Icon.get(getIconNameAccordingToSuffix(type), colors);
       if (!target) {
         log(`Could not find icon: ${type}`);
         return null;

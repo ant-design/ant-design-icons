@@ -4,6 +4,7 @@ import {
   IconDefinition,
   IconDefinitionGetter
 } from '@ant-design/icons/lib/types';
+import { generate as generateColor } from 'ant-design-palettes';
 import * as React from 'react';
 
 export function log(message: string) {
@@ -103,4 +104,9 @@ export function getIconNameAccordingToSuffix(type: string): string | undefined {
   }
   // use mapper from '@ant-design/icons/lib/mapNameToThemedName'
   return (mapper as { [key: string]: string | undefined })[type];
+}
+
+export function getSecondaryColor(primaryColor: string): string {
+  // choose the second color
+  return generateColor(primaryColor)[0];
 }
