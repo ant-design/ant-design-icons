@@ -67,7 +67,8 @@ export function getManulMapper(
         'linkedin',
         'facebook',
         'yuque',
-        'html5'
+        'html5',
+        'appstore'
       ],
       'fill',
       toKebabCase

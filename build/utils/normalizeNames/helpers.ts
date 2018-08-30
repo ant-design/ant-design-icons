@@ -61,7 +61,22 @@ export function manulRename(kebabCaseName: string): string {
     ['code-library']: 'code',
     ['yuan-circle']: 'pay-circle',
     ['app-store']: 'appstore',
-    ['pie-chart-circle-fil']: 'pie-chart'
+    ['pie-chart-circle-fil']: 'pie-chart',
+    ['image']: 'picture',
+    ['poweroff-circle']: 'pause-circle',
+    ['dingtalk']: 'dingding',
+    ['point-map']: 'dot-chart',
+    ['totop']: 'to-top',
+    ['id-card']: 'idcard',
+    ['infomation']: 'info',
+    ['location']: 'environment',
+    ['error']: 'warning',
+    ['file-copy']: 'copy',
+    ['detail']: 'profile',
+    ['calendar-check']: 'schedule',
+    ['earth']: 'global',
+    ['edit-square']: 'form',
+    ['file-exception']: 'exception'
   };
   const result = mapper[kebabCaseName];
   if (result) {
