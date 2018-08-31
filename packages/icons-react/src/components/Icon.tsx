@@ -22,8 +22,12 @@ export interface IconProps {
   secondaryColor?: string; // only for two-tone
 }
 
-export interface TwoToneColorPalette {
+export interface TwoToneColorPaletteSetter {
   primaryColor: string;
+  secondaryColor?: string;
+}
+
+export interface TwoToneColorPalette extends TwoToneColorPaletteSetter {
   secondaryColor: string;
 }
 
@@ -54,14 +58,19 @@ class Icon extends React.Component<IconProps> {
     }
   }
 
-  static setTwoTonePrimaryColor(primaryColor: string, secondaryColor?: string) {
+  static setTwoToneColors({
+    primaryColor,
+    secondaryColor
+  }: TwoToneColorPaletteSetter) {
     twoToneColorPalette.primaryColor = primaryColor;
     twoToneColorPalette.secondaryColor =
       secondaryColor || getSecondaryColor(primaryColor);
   }
 
-  static getTwoTonePrimaryColor() {
-    return twoToneColorPalette.primaryColor;
+  static getTwoToneColors(): TwoToneColorPalette {
+    return {
+      ...twoToneColorPalette
+    };
   }
 
   render() {
