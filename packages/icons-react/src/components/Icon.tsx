@@ -60,6 +60,10 @@ class Icon extends React.Component<IconProps> {
       secondaryColor || getSecondaryColor(primaryColor);
   }
 
+  static getTwoTonePrimaryColor() {
+    return twoToneColorPalette.primaryColor;
+  }
+
   render() {
     const {
       type,
