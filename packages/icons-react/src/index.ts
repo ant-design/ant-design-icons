@@ -1,1 +1,6 @@
-export { default, IconProps } from './components/Icon';
+export {
+  default,
+  IconProps,
+  TwoToneColorPaletteSetter,
+  TwoToneColorPalette
+} from './components/Icon';
