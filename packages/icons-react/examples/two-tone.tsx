@@ -40,14 +40,18 @@ class AllIconDemo extends React.Component {
 
   onPrimaryColorChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
     console.log(e.currentTarget.value);
-    AntdIcon.setTwoTonePrimaryColor(e.currentTarget.value);
+    AntdIcon.setTwoToneColors({
+      primaryColor: e.currentTarget.value
+    });
     this.setState({
       primaryColor: e.currentTarget.value
     });
   }
 
   componentWillMount() {
-    AntdIcon.setTwoTonePrimaryColor(this.state.primaryColor);
+    AntdIcon.setTwoToneColors({
+      primaryColor: this.state.primaryColor
+    });
   }
 
   renderIcons(names: string[]) {
