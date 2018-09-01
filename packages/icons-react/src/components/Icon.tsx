@@ -5,7 +5,6 @@ import {
 import * as React from 'react';
 import {
   generate,
-  getIconNameAccordingToSuffix,
   getSecondaryColor,
   isIconDefinition,
   isIconDefinitionGetter,
@@ -38,8 +37,8 @@ const twoToneColorPalette: TwoToneColorPalette = {
 
 class Icon extends React.Component<IconProps> {
   static displayName = 'IconReact';
-  static definitions = new MiniMap<IconDefinition>();
-  static add(...icons: IconDefinition[]) {
+  static definitions = new MiniMap<IconDefinition | IconDefinitionGetter>();
+  static add(...icons: Array<IconDefinition | IconDefinitionGetter>) {
     icons.forEach((icon) => {
       this.definitions.set(icon.nameWithTheme, icon);
     });
@@ -96,7 +95,7 @@ class Icon extends React.Component<IconProps> {
     } else if (isIconDefinitionGetter(type)) {
       target = type(colors.primaryColor, colors.secondaryColor);
     } else if (typeof type === 'string') {
-      target = Icon.get(getIconNameAccordingToSuffix(type), colors);
+      target = Icon.get(type, colors);
       if (!target) {
         log(`Could not find icon: ${type}`);
         return null;

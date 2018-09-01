@@ -70,3 +70,9 @@ export interface WriteFileMetaData {
 
 // svg folder names
 export type ThemeType = 'fill' | 'outline' | 'twotone';
+
+export interface Manifest {
+  fill: string[];
+  outline: string[];
+  twotone: string[];
+}

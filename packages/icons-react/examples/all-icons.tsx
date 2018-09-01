@@ -1,11 +1,23 @@
 import * as icons from '@ant-design/icons';
 import manifest from '@ant-design/icons/lib/manifest';
+import {
+  IconDefinition,
+  IconDefinitionGetter,
+  Manifest,
+  ThemeType
+} from '@ant-design/icons/lib/types';
+import { action, computed, observable } from 'mobx';
+import { observer } from 'mobx-react';
 import * as React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
 import AntdIcon from '../src';
 
-AntdIcon.add(...Object.keys(icons).map((key) => icons[key]));
+const antDesignIcons = icons as {
+  [key: string]: IconDefinition | IconDefinitionGetter;
+};
+
+AntdIcon.add(...Object.keys(antDesignIcons).map((key) => antDesignIcons[key]));
 
 const Container = styled.div`
   display: flex;
@@ -29,25 +41,64 @@ const NameDescription = styled.p`
   white-space: nowrap;
 `;
 
+@observer
 class AllIconDemo extends React.Component<{}> {
-  renderIcons(names: string[]) {
-    return names.map((name) => (
-      <Card key={name}>
-        <AntdIcon
-          style={{ fontSize: '24px' }}
-          key={name}
-          type={name}
-        />
-        <NameDescription>{name}</NameDescription>
-      </Card>
-    ));
+  @observable
+  names: Manifest = manifest;
+
+  @observable
+  currentTheme: ThemeType = 'outline';
+
+  @computed
+  get Icons() {
+    return this.names[this.currentTheme].map((name) => {
+      let computedName = name;
+      switch (this.currentTheme) {
+        case 'fill':
+          computedName += '-fill';
+          break;
+        case 'outline':
+          computedName += '-o';
+          break;
+        case 'twotone':
+          computedName += '-twotone';
+          break;
+      }
+      return (
+        <Card key={name}>
+          <AntdIcon
+            style={{ fontSize: '24px' }}
+            key={computedName}
+            type={computedName}
+          />
+          <NameDescription>{computedName}</NameDescription>
+        </Card>
+      );
+    });
+  }
+
+  @action
+  handleSelectChange: React.ChangeEventHandler<HTMLSelectElement> = (e) => {
+    const value = e.currentTarget.value as ThemeType;
+    this.currentTheme = value;
   }
 
   render() {
     return (
       <div style={{ color: '#555' }}>
         <h1 style={{ textAlign: 'center' }}>All Icons</h1>
-        <Container>{this.renderIcons(manifest)}</Container>
+        <div style={{ textAlign: 'center' }}>
+          <select
+            name={'theme-select'}
+            value={this.currentTheme}
+            onChange={this.handleSelectChange}
+          >
+            <option value={'fill'}>Filled</option>
+            <option value={'outline'}>Outlined</option>
+            <option value={'twotone'}>Two-Tone</option>
+          </select>
+        </div>
+        <Container>{this.Icons}</Container>
       </div>
     );
   }

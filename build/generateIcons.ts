@@ -21,6 +21,7 @@ import {
   BuildTimeIconMetaData,
   Environment,
   IconDefinition,
+  Manifest,
   NameAndPath,
   Node,
   ThemeType,
@@ -183,8 +184,21 @@ export async function build(env: Environment) {
     env.paths.MANIFEST_TEMPLATE,
     'utf8'
   );
-  const manifestFile$ = of(svgBasicNames).pipe(
-    map<string[], WriteFileMetaData>((names) => ({
+  const manifestFile$ = from<ThemeType>(['fill', 'outline', 'twotone']).pipe(
+    map<ThemeType, { theme: ThemeType; names: string[] }>((theme) => ({
+      theme,
+      names: svgBasicNames.filter((name) =>
+        isAccessable(path.resolve(env.paths.SVG_DIR, theme, `${name}.svg`))
+      )
+    })),
+    reduce<{ theme: ThemeType; names: string[] }, Manifest>(
+      (acc, { theme, names }) => {
+        acc[theme] = names;
+        return acc;
+      },
+      { fill: [], outline: [], twotone: [] }
+    ),
+    map<Manifest, WriteFileMetaData>((names) => ({
       path: env.paths.MANIFEST_OUTPUT,
       content: Prettier.format(
         manifestTsTemplate.replace(
@@ -196,110 +210,9 @@ export async function build(env: Environment) {
     }))
   );
 
-  // Map name to themed name File content flow
-  const mapNameToThemedNameTsTemplate = await fs.readFile(
-    env.paths.MAP_NAME_TO_THEMED_NAME_TEMPLATE,
-    'utf8'
-  );
-  const mapNameToThemedNameFile$ = of(svgBasicNames).pipe(
-    map<string[], string>((basicNames) => {
-      const computedMapper = basicNames
-        .map((basicName) => {
-          const rollbackTheme = getRollbackTheme(env, basicName, [
-            'outline',
-            'fill',
-            'twotone'
-          ]);
-          const themedName = withSuffix(basicName, rollbackTheme);
-          return {
-            basicName,
-            themedName
-          };
-        })
-        .reduce<{ [key: string]: string }>((acc, { basicName, themedName }) => {
-          acc[basicName] = themedName;
-          return acc;
-        }, {});
-      const resultMapper = {
-        ...computedMapper,
-        ...getManulMapper(true)
-      };
-      return Object.keys(resultMapper)
-        .map((key) => `['${key}']: '${resultMapper[key]}',`)
-        .join('\n');
-    }),
-    map<string, WriteFileMetaData>((content) => ({
-      path: env.paths.MAP_NAME_TO_THEMED_NAME_OUTPUT,
-      content: Prettier.format(
-        mapNameToIdentifierTsTemplate.replace(EXPORT_DEFAULT_MAPPER, content),
-        env.options.prettier
-      )
-    }))
-  );
-
-  // Map name to identifier File content flow
-  const mapNameToIdentifierTsTemplate = await fs.readFile(
-    env.paths.MAP_NAME_TO_IDENTIFIER_TEMPLATE,
-    'utf8'
-  );
-  const mapNameToIdentifierFile$ = svgMetaDataWithTheme$.pipe(
-    mergeMap<Observable<BuildTimeIconMetaData>, BuildTimeIconMetaData>(
-      (metaData$) => metaData$
-    ),
-    reduce<BuildTimeIconMetaData, string>(
-      (acc, { identifier, icon }) =>
-        acc + `['${withSuffix(icon.name, icon.theme)}']: '${identifier}',\n`,
-      ''
-    ),
-    map<string, string>((contentWithTheme) => {
-      const computedMapper = svgBasicNames
-        .map((basicName) => {
-          const rollbackTheme = getRollbackTheme(env, basicName, [
-            'outline',
-            'fill',
-            'twotone'
-          ]);
-          const computedIdentifier = getIdentifier(
-            _.upperFirst(_.camelCase(basicName)),
-            rollbackTheme
-          );
-          return {
-            basicName,
-            computedIdentifier
-          };
-        })
-        .reduce<{ [key: string]: string }>(
-          (acc, { basicName, computedIdentifier }) => {
-            acc[basicName] = computedIdentifier;
-            return acc;
-          },
-          {}
-        );
-      const resultMapper = {
-        ...computedMapper,
-        ...getManulMapper()
-      };
-      return (
-        contentWithTheme +
-        Object.keys(resultMapper)
-          .map((key) => `['${key}']: '${resultMapper[key]}',`)
-          .join('\n')
-      );
-    }),
-    map<string, WriteFileMetaData>((content) => ({
-      path: env.paths.MAP_NAME_TO_IDENTIFIER_OUTPUT,
-      content: Prettier.format(
-        mapNameToIdentifierTsTemplate.replace(EXPORT_DEFAULT_MAPPER, content),
-        env.options.prettier
-      )
-    }))
-  );
-
   const files$ = iconFiles$.pipe(
     concat(manifestFile$),
-    concat(indexFile$),
-    concat(mapNameToIdentifierFile$),
-    concat(mapNameToThemedNameFile$)
+    concat(indexFile$)
   );
 
   return new Promise<void>((resolve, reject) => {
