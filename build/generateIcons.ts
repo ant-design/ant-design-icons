@@ -117,32 +117,41 @@ export async function build(env: Environment) {
     map<
       BuildTimeIconMetaData,
       { identifier: string; content: string; theme: ThemeType }
-    >(({ identifier, icon }) => ({
-      identifier,
-      theme: icon.theme,
-      content:
-        icon.theme === 'twotone'
-          ? Prettier.format(
-              twoToneIconTsTemplate
-                .replace(ICON_IDENTIFIER, identifier)
-                .replace(
-                  ICON_GETTER_FUNCTION,
-                  `function ${identifier}(primaryColor: string, secondaryColor: string) { return ${JSON.stringify(
-                    icon
+    >(({ identifier, icon }) => {
+      if (icon.theme === 'twotone') {
+        icon = _.cloneDeep(icon);
+        icon.children.forEach((pathElment) => {
+          pathElment.attrs.fill = pathElment.attrs.fill || '#333';
+        });
+      }
+      return {
+        identifier,
+        theme: icon.theme,
+        content:
+          icon.theme === 'twotone'
+            ? Prettier.format(
+                twoToneIconTsTemplate
+                  .replace(ICON_IDENTIFIER, identifier)
+                  .replace(
+                    ICON_GETTER_FUNCTION,
+                    `function ${identifier}(primaryColor: string, secondaryColor: string) { return ${JSON.stringify(
+                      icon
+                    )
+                      .replace(/"#333"/g, 'primaryColor')
+                      .replace(/"#E6E6E6"/g, 'secondaryColor')
+                      .replace(/"#D9D9D9"/g, 'secondaryColor')}; }`
                   )
-                    .replace(/"#333"/g, 'primaryColor')
-                    .replace(/"#E6E6E6"/g, 'secondaryColor')}; }`
-                )
-                .replace(NAME_WITH_THEME, icon.nameWithTheme),
-              env.options.prettier
-            )
-          : Prettier.format(
-              iconTsTemplate
-                .replace(ICON_IDENTIFIER, identifier)
-                .replace(ICON_JSON, JSON.stringify(icon)),
-              env.options.prettier
-            )
-    })),
+                  .replace(NAME_WITH_THEME, icon.nameWithTheme),
+                env.options.prettier
+              )
+            : Prettier.format(
+                iconTsTemplate
+                  .replace(ICON_IDENTIFIER, identifier)
+                  .replace(ICON_JSON, JSON.stringify(icon)),
+                env.options.prettier
+              )
+      };
+    }),
     map<
       { identifier: string; content: string; theme: ThemeType },
       WriteFileMetaData

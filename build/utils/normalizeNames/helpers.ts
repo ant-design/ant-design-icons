@@ -88,7 +88,8 @@ export function manulRename(kebabCaseName: string): string {
     ['alibabacloud']: 'aliyun',
     ['share']: 'share-alt',
     ['attachment']: 'paper-clip',
-    ['wrench']: 'tool'
+    ['wrench']: 'tool',
+    ['batch-folding']: 'switcher'
   };
   const result = mapper[kebabCaseName];
   if (result) {

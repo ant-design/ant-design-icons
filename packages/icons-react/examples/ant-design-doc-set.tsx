@@ -1,5 +1,4 @@
 import * as icons from '@ant-design/icons';
-import mapper from '@ant-design/icons/lib/mapNameToThemedName';
 import * as React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
