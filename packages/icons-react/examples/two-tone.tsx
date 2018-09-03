@@ -1,11 +1,13 @@
 import * as icons from '@ant-design/icons';
-import manifest from '@ant-design/icons/lib/manifest';
 import * as React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
 import AntdIcon from '../src';
 
-AntdIcon.add(...Object.keys(icons).map((key) => icons[key]));
+const iconsList = Object.keys(icons).map((key) => icons[key]);
+const manifest = iconsList.filter((icon) => !icon.theme).map((icon) => icon.nameWithTheme);
+console.log(manifest);
+AntdIcon.add(...iconsList);
 
 const Container = styled.div`
   display: flex;
@@ -56,13 +58,13 @@ class AllIconDemo extends React.Component {
 
   renderIcons(names: string[]) {
     return names.map((name) => (
-      <Card key={`${name}-twotone`}>
+      <Card key={name}>
         <AntdIcon
           style={{ fontSize: '24px' }}
-          key={`${name}-twotone`}
-          type={`${name}-twotone`}
+          key={name}
+          type={name}
         />
-        <NameDescription>{`${name}-twotone`}</NameDescription>
+        <NameDescription>{name}</NameDescription>
       </Card>
     ));
   }
