@@ -139,7 +139,8 @@ export async function build(env: Environment) {
                     )
                       .replace(/"#333"/g, 'primaryColor')
                       .replace(/"#E6E6E6"/g, 'secondaryColor')
-                      .replace(/"#D9D9D9"/g, 'secondaryColor')}; }`
+                      .replace(/"#D9D9D9"/g, 'secondaryColor')
+                      .replace(/"#D8D8D8"/g, 'secondaryColor')}; }`
                   )
                   .replace(NAME_WITH_THEME, icon.nameWithTheme),
                 env.options.prettier
