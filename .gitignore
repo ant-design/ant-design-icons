@@ -23,13 +23,6 @@ yarn-error.log*
 _site/
 .cache
 public
-src/fill/*.ts
-src/outline/*.ts
-src/twotone/*.ts
-src/index.ts
-src/manifest.ts
-src/mapNameToIdentifier.ts
-src/mapNameToThemedName.ts
 
 # test generated
 test/root/src/fill/*.ts
