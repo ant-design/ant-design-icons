@@ -16,6 +16,10 @@ yarn-error.log*
 *.njsproj
 *.sln
 
+# lock
+package-lock.json
+yarn.lock
+
 # rollup cache
 .rpt2_cache
 
