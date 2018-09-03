@@ -220,6 +220,7 @@ export default {
   outline: [
     'account-book',
     'alert',
+    'alipay-circle',
     'aliwangwang',
     'android',
     'api',
@@ -364,6 +365,7 @@ export default {
     'tablet',
     'tag',
     'tags',
+    'taobao-circle',
     'thunderbolt',
     'tool',
     'trophy',
@@ -374,6 +376,7 @@ export default {
     'video-camera',
     'wallet',
     'warning',
+    'weibo-circle',
     'windows',
     'yahoo',
     'youtube',

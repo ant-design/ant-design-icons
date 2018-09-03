@@ -1,11 +1,21 @@
 import * as icons from '@ant-design/icons';
+import {
+  IconDefinition,
+  IconDefinitionGetter
+} from '@ant-design/icons/lib/types';
 import * as React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
 import AntdIcon from '../src';
 
-const iconsList = Object.keys(icons).map((key) => icons[key]);
-const manifest = iconsList.filter((icon) => !icon.theme).map((icon) => icon.nameWithTheme);
+const allIcons: {
+  [key: string]: IconDefinition | IconDefinitionGetter;
+} = icons;
+
+const iconsList = Object.keys(allIcons).map((key) => allIcons[key]);
+const manifest = iconsList
+  .filter((icon) => !('theme' in icon))
+  .map((icon) => icon.nameWithTheme);
 console.log(manifest);
 AntdIcon.add(...iconsList);
 
@@ -48,7 +58,7 @@ class AllIconDemo extends React.Component {
     this.setState({
       primaryColor: e.currentTarget.value
     });
-  }
+  };
 
   componentWillMount() {
     AntdIcon.setTwoToneColors({
@@ -59,11 +69,7 @@ class AllIconDemo extends React.Component {
   renderIcons(names: string[]) {
     return names.map((name) => (
       <Card key={name}>
-        <AntdIcon
-          style={{ fontSize: '24px' }}
-          key={name}
-          type={name}
-        />
+        <AntdIcon style={{ fontSize: '24px' }} key={name} type={name} />
         <NameDescription>{name}</NameDescription>
       </Card>
     ));
