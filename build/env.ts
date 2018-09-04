@@ -43,11 +43,12 @@ export const environment: Environment = {
     // refer from @material-ui/icons
     // https://github.com/mui-org/material-ui/blob/master/packages/material-ui-icons/builder.js#L18
     svgo: {
-      floatPrecision: 4,
+      floatPrecision: 1,
       plugins: [
         { cleanupAttrs: true },
         { removeDoctype: true },
         { removeXMLProcInst: true },
+        { removeXMLNS: true },
         { removeComments: true },
         { removeMetadata: true },
         { removeTitle: true },
@@ -77,7 +78,8 @@ export const environment: Environment = {
         { mergePaths: true },
         { convertShapeToPath: true },
         { sortAttrs: true },
-        { removeDimensions: true }
+        { removeDimensions: true },
+        { removeAttrs: { attrs: 'class' } }
       ]
     },
     prettier: {

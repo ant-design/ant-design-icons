@@ -28,6 +28,15 @@ _site/
 .cache
 public
 
+# auto src generated
+src/fill/*.ts
+src/outline/*.ts
+src/twotone/*.ts
+src/index.ts
+src/manifest.ts
+src/mapNameToIdentifier.ts
+src/mapNameToThemedName.ts
+
 # test generated
 test/root/src/fill/*.ts
 test/root/src/outline/*.ts
