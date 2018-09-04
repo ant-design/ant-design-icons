@@ -79,7 +79,7 @@ export const environment: Environment = {
         { convertShapeToPath: true },
         { sortAttrs: true },
         { removeDimensions: true },
-        { removeAttrs: { attrs: 'class' } }
+        { removeAttrs: { attrs: ['class'] } }
       ]
     },
     prettier: {

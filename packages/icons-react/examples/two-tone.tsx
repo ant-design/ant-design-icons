@@ -58,7 +58,7 @@ class AllIconDemo extends React.Component {
     this.setState({
       primaryColor: e.currentTarget.value
     });
-  };
+  }
 
   componentWillMount() {
     AntdIcon.setTwoToneColors({
@@ -69,7 +69,7 @@ class AllIconDemo extends React.Component {
   renderIcons(names: string[]) {
     return names.map((name) => (
       <Card key={name}>
-        <AntdIcon style={{ fontSize: '24px' }} key={name} type={name} />
+        <AntdIcon style={{ fontSize: '16px' }} key={name} type={name} />
         <NameDescription>{name}</NameDescription>
       </Card>
     ));
