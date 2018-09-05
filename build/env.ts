@@ -14,28 +14,12 @@ export const environment: Environment = {
       __dirname,
       './templates/twoToneIcon.ts.template'
     ),
-    MAP_NAME_TO_IDENTIFIER_TEMPLATE: path.resolve(
-      __dirname,
-      './templates/mapNameToIdentifier.ts.template'
-    ),
-    MAP_NAME_TO_THEMED_NAME_TEMPLATE: path.resolve(
-      __dirname,
-      './templates/mapNameToThemedName.ts.template'
-    ),
     ICON_OUTPUT_DIR: path.resolve(__dirname, '../src/'),
     THEME_FILL_OUTPUT: path.resolve(__dirname, '../src/fill/*.ts'),
     THEME_OUTLINE_OUTPUT: path.resolve(__dirname, '../src/outline/*.ts'),
     THEME_TWO_TONE_OUTPUT: path.resolve(__dirname, '../src/twotone/*.ts'),
     INDEX_OUTPUT: path.resolve(__dirname, '../src/index.ts'),
-    MANIFEST_OUTPUT: path.resolve(__dirname, '../src/manifest.ts'),
-    MAP_NAME_TO_IDENTIFIER_OUTPUT: path.resolve(
-      __dirname,
-      '../src/mapNameToIdentifier.ts'
-    ),
-    MAP_NAME_TO_THEMED_NAME_OUTPUT: path.resolve(
-      __dirname,
-      '../src/mapNameToThemedName.ts'
-    )
+    MANIFEST_OUTPUT: path.resolve(__dirname, '../src/manifest.ts')
   },
   base: path.resolve(__dirname, '../'),
   options: {

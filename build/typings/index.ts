@@ -15,8 +15,6 @@ export interface Environment {
     ICON_TEMPLATE: string;
     INDEX_TEMPLATE: string;
     MANIFEST_TEMPLATE: string;
-    MAP_NAME_TO_IDENTIFIER_TEMPLATE: string;
-    MAP_NAME_TO_THEMED_NAME_TEMPLATE: string;
     TWO_TONE_ICON_TEMPLATE: string;
     ICON_OUTPUT_DIR: string;
     THEME_FILL_OUTPUT: string;
@@ -24,8 +22,6 @@ export interface Environment {
     THEME_TWO_TONE_OUTPUT: string;
     INDEX_OUTPUT: string;
     MANIFEST_OUTPUT: string;
-    MAP_NAME_TO_IDENTIFIER_OUTPUT: string;
-    MAP_NAME_TO_THEMED_NAME_OUTPUT: string;
   };
   readonly base: string;
   readonly options: {
