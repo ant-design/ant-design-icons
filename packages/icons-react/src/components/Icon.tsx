@@ -92,7 +92,7 @@ class Icon extends React.Component<IconProps> {
     } else if (typeof type === 'string') {
       target = Icon.get(type, colors);
       if (!target) {
-        log(`Could not find icon: ${type}`);
+        // log(`Could not find icon: ${type}`);
         return null;
       }
     }
