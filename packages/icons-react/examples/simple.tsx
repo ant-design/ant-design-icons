@@ -17,7 +17,7 @@ const Div = styled.div`
     position: absolute;
     bottom: 0.125em;
     left: 0;
-    background-color: lightblue;
+    background-color: hotpink;
     z-index: -100;
   }
   &:before {
@@ -27,7 +27,7 @@ const Div = styled.div`
     position: absolute;
     top: 0.125em;
     left: 0;
-    background-color: lightblue;
+    background-color: hotpink;
     z-index: -100;
   }
 `;
@@ -54,7 +54,7 @@ class SimpleDemo extends React.Component<{}> {
         Ant Design
         <AlignAntdIcon type={AntDesignOutline} />
         0123
-        <AlignAntdIcon type={'dashboard'} />
+        <AlignAntdIcon type={'dashboard-o'} />
         你好
         <AlignAntdIcon type={TwitterOutline} />
       </Div>
