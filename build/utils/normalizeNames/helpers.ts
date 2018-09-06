@@ -89,7 +89,8 @@ export function manulRename(kebabCaseName: string): string {
     ['attachment']: 'paper-clip',
     ['wrench']: 'tool',
     ['batch-folding']: 'switcher',
-    ['sever']: 'hdd'
+    ['sever']: 'hdd',
+    ['medicinebox']: 'medicine-box'
   };
   const result = mapper[kebabCaseName];
   if (result) {
