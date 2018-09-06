@@ -244,23 +244,44 @@ export async function build(env: Environment) {
     map<BuildTimeIconMetaData, string>(({ identifier, icon }) => {
       let content = '';
       if (icon.theme === 'twotone') {
-        content = Prettier.format(
-          `export const ${identifier}: IconDefinition = ` +
-            JSON.stringify({ ...icon, icon: 'FUNCTION' }).replace(
-              `"FUNCTION"`,
-              `function (primaryColor: string, secondaryColor: string) {` +
-                ` return ${replaceFillColor(JSON.stringify(icon.icon))};` +
-                ` }`
-            ),
-          { ...env.options.prettier, parser: 'typescript' }
-        );
+        if (typeof icon.icon !== 'function') {
+          const paths = (icon.icon.children || [])
+            .map(({ attrs }) => {
+              const { fill, d } = attrs;
+              if (fill && d) {
+                return `['${fill}', '${d}']`;
+              }
+              return `'${d}'`;
+            })
+            .join(',');
+          content = Prettier.format(
+            `export const ${identifier}: IconDefinition = ` +
+              `getIcon('${icon.name}', '${icon.theme}', ${replaceFillColor(
+                `function (primaryColor: string, secondaryColor: string) {` +
+                  ` return getNode('${icon.icon.attrs.viewBox}', ${paths}) }`
+              )})`,
+            { ...env.options.prettier, parser: 'typescript' }
+          );
+        }
       } else {
-        content = Prettier.format(
-          `export const ${identifier}: IconDefinition = ${JSON.stringify(
-            icon
-          )};`,
-          env.options.prettier
-        );
+        if (typeof icon.icon !== 'function') {
+          const paths = (icon.icon.children || [])
+            .map(({ attrs }) => {
+              const { fill, d } = attrs;
+              if (fill && d) {
+                return `['${fill}', '${d}']`;
+              }
+              return `'${d}'`;
+            })
+            .join(',');
+          content = Prettier.format(
+            `export const ${identifier}: IconDefinition = ` +
+              `getIcon('${icon.name}', '${icon.theme}', ` +
+              `getNode('${icon.icon.attrs.viewBox}', ${paths})` +
+              `);`,
+            env.options.prettier
+          );
+        }
       }
       content = content
         .replace(NORMAL_VIEWBOX, 'normalViewBox')
