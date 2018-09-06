@@ -3,7 +3,7 @@ export interface AbstractNode {
   attrs: {
     [key: string]: string;
   };
-  children: AbstractNode[];
+  children?: AbstractNode[];
 }
 
 export interface IconDefinition {

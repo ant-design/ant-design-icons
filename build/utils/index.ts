@@ -18,11 +18,14 @@ export function normalizeNode(node: Node, debugName?: string): AbstractNode {
   const children = node.childNodes.map((child) =>
     normalizeNode(child, debugName)
   );
-  return {
+  const result: AbstractNode = {
     tag,
-    attrs,
-    children
+    attrs
   };
+  if (children.length) {
+    result.children = children;
+  }
+  return result;
 }
 
 /**

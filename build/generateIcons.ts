@@ -12,7 +12,12 @@ import {
   EXPORT_DEFAULT_MANIFEST,
   EXPORT_DIST,
   ICON_IDENTIFIER,
-  ICON_JSON
+  ICON_JSON,
+  NEW_VIEWBOX,
+  NORMAL_VIEWBOX,
+  THEME_FILL,
+  THEME_OUTLINE,
+  THEME_TWOTONE
 } from './constants';
 import {
   BuildTimeIconMetaData,
@@ -116,7 +121,7 @@ export async function build(env: Environment) {
         }
         if (icon.theme === 'twotone') {
           icon = _.cloneDeep(icon);
-          if (typeof icon.icon !== 'function') {
+          if (typeof icon.icon !== 'function' && icon.icon.children) {
             icon.icon.children.forEach((pathElment) => {
               pathElment.attrs.fill = pathElment.attrs.fill || '#333';
             });
@@ -234,8 +239,9 @@ export async function build(env: Environment) {
   const distTsTemplate = await fs.readFile(env.paths.DIST_TEMPLATE, 'utf8');
   const dist$ = BuildTimeIconMetaData$.pipe(
     map<BuildTimeIconMetaData, string>(({ identifier, icon }) => {
+      let content = '';
       if (icon.theme === 'twotone') {
-        return Prettier.format(
+        content = Prettier.format(
           `export const ${identifier}: IconDefinition = ` +
             JSON.stringify({ ...icon, icon: 'FUNCTION' }).replace(
               `"FUNCTION"`,
@@ -245,11 +251,21 @@ export async function build(env: Environment) {
             ),
           { ...env.options.prettier, parser: 'typescript' }
         );
+      } else {
+        content = Prettier.format(
+          `export const ${identifier}: IconDefinition = ${JSON.stringify(
+            icon
+          )};`,
+          env.options.prettier
+        );
       }
-      return Prettier.format(
-        `export const ${identifier}: IconDefinition = ${JSON.stringify(icon)};`,
-        env.options.prettier
-      );
+      content = content
+        .replace(NORMAL_VIEWBOX, 'normalViewBox')
+        .replace(NEW_VIEWBOX, 'newViewBox')
+        .replace(THEME_FILL, 'fill')
+        .replace(THEME_OUTLINE, 'outline')
+        .replace(THEME_TWOTONE, 'twotone');
+      return content;
     }),
     reduce<string, string>((acc, nextContent) => acc + nextContent, ''),
     map<string, WriteFileMetaData>((content) => ({

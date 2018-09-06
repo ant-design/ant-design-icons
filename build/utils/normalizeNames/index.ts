@@ -1,9 +1,6 @@
-import fs = require('fs-extra');
 import globby = require('globby');
 import _ = require('lodash');
 import path = require('path');
-import Prettier = require('prettier');
-import { EXPORT_DEFAULT_MANIFEST } from '../../constants';
 import { Environment, ThemeType } from '../../typings';
 import { log } from '../../utils';
 import { normalizeNamesFromDir } from './helpers';
