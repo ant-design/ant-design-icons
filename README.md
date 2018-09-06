@@ -16,7 +16,7 @@ Ant Design Icons
 ## Install
 
 ```bash
-yarn add @ant-design/icons # or npm install @ant-design/icons --save
+yarn add @ant-design/icons@next # or npm install @ant-design/icons@next --save
 ```
 
 ## Use Library Adapter
