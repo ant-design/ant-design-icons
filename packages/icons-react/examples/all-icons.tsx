@@ -1,8 +1,7 @@
-import * as icons from '@ant-design/icons';
+import * as icons from '@ant-design/icons/lib/dist';
 import manifest from '@ant-design/icons/lib/manifest';
 import {
   IconDefinition,
-  IconDefinitionGetter,
   Manifest,
   ThemeType
 } from '@ant-design/icons/lib/types';
@@ -14,7 +13,7 @@ import styled from 'styled-components';
 import AntdIcon from '../src';
 
 const antDesignIcons = icons as {
-  [key: string]: IconDefinition | IconDefinitionGetter;
+  [key: string]: IconDefinition;
 };
 
 AntdIcon.add(...Object.keys(antDesignIcons).map((key) => antDesignIcons[key]));
