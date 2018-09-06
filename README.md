@@ -25,18 +25,26 @@ yarn add @ant-design/icons # or npm install @ant-design/icons --save
 
 ## Usage
 ```ts
-import { AntDesign } from '@ant-design/icons/es';
+import { AlertOutline } from '@ant-design/icons';
 
-console.log(AntDesign);
+console.log(AlertOutline);
 // Output:
-// { name: 'ant-design',
-//   tag: 'svg',
-//   attrs:
-//    { xmlns: 'http://www.w3.org/2000/svg',
-//      viewBox: '0 0 1024 1024' },
-//   children:
-//    [ { tag: 'path', attrs: [Object], children: [] },
-//      { tag: 'path', attrs: [Object], children: [] } ] }
+// {
+//     name: 'alert',
+//     theme: 'outline',
+//     icon: {
+//         tag: 'svg',
+//         attrs: { viewBox: '0 0 1024 1024' },
+//         children: [
+//             {
+//                 tag: 'path',
+//                 attrs: {
+//                     d: 'M193 796a32 32 0 0 0 32 32h574a32....'
+//                 }
+//             }
+//         ]
+//     }
+// }
 ```
 
 ## Interface
@@ -49,11 +57,15 @@ interface AbstractNode {
   attrs: {
     [key: string]: string;
   };
-  children: AbstractNode[];
+  children?: AbstractNode[];
 }
 
-interface IconDefinition extends AbstractNode {
+interface IconDefinition {
   name: string; // kebab-case-style
+  theme: ThemeType;
+  icon:
+    | ((primaryColor: string, secondaryColor: string) => AbstractNode)
+    | AbstractNode;
 }
 ```
 
