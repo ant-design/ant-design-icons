@@ -1,22 +1,18 @@
 import * as icons from '@ant-design/icons';
-import {
-  IconDefinition,
-  IconDefinitionGetter
-} from '@ant-design/icons/lib/types';
+import { IconDefinition } from '@ant-design/icons/lib/types';
 import * as React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
 import AntdIcon from '../src';
 
 const allIcons: {
-  [key: string]: IconDefinition | IconDefinitionGetter;
+  [key: string]: IconDefinition;
 } = icons;
 
 const iconsList = Object.keys(allIcons).map((key) => allIcons[key]);
 const manifest = iconsList
-  .filter((icon) => !('theme' in icon))
-  .map((icon) => icon.nameWithTheme);
-console.log(manifest);
+  .filter((icon) => icon.theme === 'twotone')
+  .map(({name}) => `${name}-twotone`);
 AntdIcon.add(...iconsList);
 
 const Container = styled.div`

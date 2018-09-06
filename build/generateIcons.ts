@@ -114,17 +114,16 @@ export async function build(env: Environment) {
     ),
     map<BuildTimeIconMetaData, BuildTimeIconMetaData>(
       ({ identifier, icon }) => {
-        if (typeof icon.icon !== 'function' && icon.icon.attrs.class) {
-          icon = _.cloneDeep(icon);
-          if (typeof icon.icon !== 'function') {
+        icon = _.cloneDeep(icon);
+        if (typeof icon.icon !== 'function') {
+          if (!oldIcons.includes(icon.name)) {
+            icon.icon.attrs.viewBox = '64 64 896 896';
+          }
+          if (icon.icon.attrs.class) {
             icon.icon.attrs = _.omit(icon.icon.attrs, ['class']);
-            if (!oldIcons.includes(icon.name)) {
-              icon.icon.attrs.viewBox = '64 64 896 896';
-            }
           }
         }
         if (icon.theme === 'twotone') {
-          icon = _.cloneDeep(icon);
           if (typeof icon.icon !== 'function' && icon.icon.children) {
             icon.icon.children.forEach((pathElment) => {
               pathElment.attrs.fill = pathElment.attrs.fill || '#333';

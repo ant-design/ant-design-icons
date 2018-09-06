@@ -46,11 +46,14 @@ class Icon extends React.Component<IconProps> {
 
   static get(key?: string, colors: TwoToneColorPalette = twoToneColorPalette) {
     if (key) {
-      const result = this.definitions.get(key);
-      if (result && typeof result.icon === 'function') {
-        result.icon = result.icon(colors.primaryColor, colors.secondaryColor);
+      let target = this.definitions.get(key);
+      if (target && typeof target.icon === 'function') {
+        target = {
+          ...target,
+          icon: target.icon(colors.primaryColor, colors.secondaryColor)
+        };
       }
-      return result;
+      return target;
     }
   }
 
@@ -102,7 +105,10 @@ class Icon extends React.Component<IconProps> {
       return null;
     }
     if (target && typeof target.icon === 'function') {
-      target.icon = target.icon(colors.primaryColor, colors.secondaryColor);
+      target = {
+        ...target,
+        icon: target.icon(colors.primaryColor, colors.secondaryColor)
+      };
     }
     return generate(target.icon as AbstractNode, `svg-${target.name}`, {
       className,
