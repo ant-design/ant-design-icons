@@ -13,12 +13,13 @@ function mount(props: IconProps) {
 describe('React AntdIcon Component', () => {
   it('should create SVG element.', () => {
     const icon = mount({
-      type: 'ant-design',
+      type: 'ant-design-o',
       style: {
         fontSize: '3rem'
       },
-      className: 'my-icon'
-    })!;
+      className: 'my-icon',
+      extraProps: { hello: 'world' }
+    } as any)!;
 
     expect(icon).toMatchSnapshot();
   });
