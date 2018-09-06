@@ -90,5 +90,6 @@ export const oldIcons = [
   'file-jpg',
   'inbox',
   'shopping-cart',
-  'safety'
+  'safety',
+  'medium-workmark'
 ];
