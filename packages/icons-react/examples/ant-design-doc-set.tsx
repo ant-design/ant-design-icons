@@ -59,8 +59,8 @@ export default class IconSet extends React.Component {
       'left-circle-o',
       'double-right',
       'double-left',
-      'verticle-left',
-      'verticle-right',
+      'vertical-left',
+      'vertical-right',
       'forward',
       'backward',
       'rollback',
@@ -334,7 +334,10 @@ export default class IconSet extends React.Component {
   renderIcons(catigory: Category) {
     return this.icons[catigory].map((type) => (
       <ContainerItem key={type}>
-        <AntdIcon style={{ fontSize: '24px' }} type={type} />
+        <AntdIcon
+          style={{ fontSize: '24px' }}
+          type={type.replace(/-o$/, '').replace(/$/, '-o')}
+        />
         <p>{type}</p>
       </ContainerItem>
     ));
