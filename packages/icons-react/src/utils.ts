@@ -1,8 +1,4 @@
-import {
-  AbstractNode,
-  IconDefinition,
-  IconDefinitionGetter
-} from '@ant-design/icons/lib/types';
+import { AbstractNode, IconDefinition } from '@ant-design/icons/lib/types';
 import { generate as generateColor } from 'ant-design-palettes';
 import * as React from 'react';
 
@@ -15,16 +11,10 @@ export function log(message: string) {
 export function isIconDefinition(target: any): target is IconDefinition {
   return (
     typeof target === 'object' &&
-    target.name &&
-    typeof target.attrs === 'object' &&
-    Array.isArray(target.children)
+    typeof target.name === 'string' &&
+    typeof target.theme === 'string' &&
+    (typeof target.icon === 'object' || typeof target.icon === 'function')
   );
-}
-
-export function isIconDefinitionGetter(
-  target: any
-): target is IconDefinitionGetter {
-  return typeof target === 'function';
 }
 
 export function normalizeAttrs(attrs: Attrs = {}): Attrs {
@@ -78,7 +68,7 @@ export function generate(
     return React.createElement(
       node.tag,
       { key, ...normalizeAttrs(node.attrs) },
-      node.children.map((child, index) =>
+      (node.children || []).map((child, index) =>
         generate(child, `${key}-${node.tag}-${index}`)
       )
     );
@@ -90,7 +80,7 @@ export function generate(
       ...normalizeAttrs(node.attrs),
       ...rootProps
     },
-    node.children.map((child, index) =>
+    (node.children || []).map((child, index) =>
       generate(child, `${key}-${node.tag}-${index}`)
     )
   );
@@ -99,4 +89,20 @@ export function generate(
 export function getSecondaryColor(primaryColor: string): string {
   // choose the second color
   return generateColor(primaryColor)[0];
+}
+
+export function withSuffix(
+  name: string,
+  theme: 'fill' | 'outline' | 'twotone'
+) {
+  switch (theme) {
+    case 'fill':
+      return `${name}-fill`;
+    case 'outline':
+      return `${name}-o`;
+    case 'twotone':
+      return `${name}-twotone`;
+    default:
+      throw new TypeError(`Unknown theme type: ${theme}, name: ${name}`);
+  }
 }

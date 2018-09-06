@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import styled from 'styled-components';
 import AntdIcon from '../src';
 
-AntdIcon.add(...Object.keys(icons).map((key) => icons[key]));
+AntdIcon.add(...Object.keys(icons).map((key) => (icons as any)[key]));
 
 type Category = 'direction' | 'suggestion' | 'logo' | 'other';
 

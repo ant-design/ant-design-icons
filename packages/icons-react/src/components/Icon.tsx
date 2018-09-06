@@ -1,19 +1,16 @@
-import {
-  IconDefinition,
-  IconDefinitionGetter
-} from '@ant-design/icons/lib/types';
+import { AbstractNode, IconDefinition } from '@ant-design/icons/lib/types';
 import * as React from 'react';
 import {
   generate,
   getSecondaryColor,
   isIconDefinition,
-  isIconDefinitionGetter,
   log,
-  MiniMap
+  MiniMap,
+  withSuffix
 } from '../utils';
 
 export interface IconProps {
-  type: string | IconDefinition | IconDefinitionGetter;
+  type: string | IconDefinition;
   className?: string;
   onClick?: React.MouseEventHandler<SVGSVGElement>;
   style?: React.CSSProperties;
@@ -37,10 +34,10 @@ const twoToneColorPalette: TwoToneColorPalette = {
 
 class Icon extends React.Component<IconProps> {
   static displayName = 'IconReact';
-  static definitions = new MiniMap<IconDefinition | IconDefinitionGetter>();
-  static add(...icons: Array<IconDefinition | IconDefinitionGetter>) {
+  static definitions = new MiniMap<IconDefinition>();
+  static add(...icons: IconDefinition[]) {
     icons.forEach((icon) => {
-      this.definitions.set(icon.nameWithTheme, icon);
+      this.definitions.set(withSuffix(icon.name, icon.theme), icon);
     });
   }
   static clear() {
@@ -49,9 +46,9 @@ class Icon extends React.Component<IconProps> {
 
   static get(key?: string, colors: TwoToneColorPalette = twoToneColorPalette) {
     if (key) {
-      let result = this.definitions.get(key);
-      if (isIconDefinitionGetter(result)) {
-        result = result(colors.primaryColor, colors.secondaryColor);
+      const result = this.definitions.get(key);
+      if (result && typeof result.icon === 'function') {
+        result.icon = result.icon(colors.primaryColor, colors.secondaryColor);
       }
       return result;
     }
@@ -92,8 +89,6 @@ class Icon extends React.Component<IconProps> {
     }
     if (isIconDefinition(type)) {
       target = type;
-    } else if (isIconDefinitionGetter(type)) {
-      target = type(colors.primaryColor, colors.secondaryColor);
     } else if (typeof type === 'string') {
       target = Icon.get(type, colors);
       if (!target) {
@@ -105,7 +100,10 @@ class Icon extends React.Component<IconProps> {
       log(`type should be string or icon definiton, but got ${type}`);
       return null;
     }
-    return generate(target, `svg-${target.name}`, {
+    if (target && typeof target.icon === 'function') {
+      target.icon = target.icon(colors.primaryColor, colors.secondaryColor);
+    }
+    return generate(target.icon as AbstractNode, `svg-${target.name}`, {
       className,
       onClick,
       style,
