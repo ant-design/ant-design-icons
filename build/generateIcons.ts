@@ -15,6 +15,7 @@ import {
   ICON_JSON,
   NEW_VIEWBOX,
   NORMAL_VIEWBOX,
+  oldIcons,
   THEME_FILL,
   THEME_OUTLINE,
   THEME_TWOTONE
@@ -117,6 +118,9 @@ export async function build(env: Environment) {
           icon = _.cloneDeep(icon);
           if (typeof icon.icon !== 'function') {
             icon.icon.attrs = _.omit(icon.icon.attrs, ['class']);
+            if (!oldIcons.includes(icon.name)) {
+              icon.icon.attrs.viewBox = '64 64 896 896';
+            }
           }
         }
         if (icon.theme === 'twotone') {

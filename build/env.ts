@@ -27,7 +27,7 @@ export const environment: Environment = {
     // refer from @material-ui/icons
     // https://github.com/mui-org/material-ui/blob/master/packages/material-ui-icons/builder.js#L18
     svgo: {
-      floatPrecision: 1,
+      floatPrecision: 2,
       plugins: [
         { cleanupAttrs: true },
         { removeDoctype: true },
