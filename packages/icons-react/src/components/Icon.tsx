@@ -76,7 +76,8 @@ class Icon extends React.Component<IconProps> {
       onClick,
       style,
       primaryColor,
-      secondaryColor
+      secondaryColor,
+      ...rest
     } = this.props;
 
     let target: IconDefinition | undefined;
@@ -111,7 +112,8 @@ class Icon extends React.Component<IconProps> {
       width: '1em',
       height: '1em',
       fill: 'currentColor',
-      ['aria-hidden']: 'true'
+      ['aria-hidden']: 'true',
+      ...rest
     });
   }
 }
