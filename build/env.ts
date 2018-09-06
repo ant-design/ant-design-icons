@@ -10,16 +10,16 @@ export const environment: Environment = {
       __dirname,
       './templates/manifest.ts.template'
     ),
-    TWO_TONE_ICON_TEMPLATE: path.resolve(
-      __dirname,
-      './templates/twoToneIcon.ts.template'
-    ),
     ICON_OUTPUT_DIR: path.resolve(__dirname, '../src/'),
     THEME_FILL_OUTPUT: path.resolve(__dirname, '../src/fill/*.ts'),
     THEME_OUTLINE_OUTPUT: path.resolve(__dirname, '../src/outline/*.ts'),
     THEME_TWO_TONE_OUTPUT: path.resolve(__dirname, '../src/twotone/*.ts'),
     INDEX_OUTPUT: path.resolve(__dirname, '../src/index.ts'),
-    MANIFEST_OUTPUT: path.resolve(__dirname, '../src/manifest.ts')
+    MANIFEST_OUTPUT: path.resolve(__dirname, '../src/manifest.ts'),
+    DIST_TEMPLATE: path.resolve(__dirname, './templates/dist.ts.template'),
+    DIST_OUTPUT: path.resolve(__dirname, '../src/dist.ts'),
+    TYPES_TEMPLATE: path.resolve(__dirname, './typings/types.ts'),
+    TYPES_OUTPUT: path.resolve(__dirname, '../src/types.ts')
   },
   base: path.resolve(__dirname, '../'),
   options: {

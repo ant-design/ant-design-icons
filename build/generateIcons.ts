@@ -4,18 +4,15 @@ import _ = require('lodash');
 import parse5 = require('parse5');
 import path = require('path');
 import Prettier = require('prettier');
-import { from, Observable, of } from 'rxjs';
+import { from, Observable, of, Subscription } from 'rxjs';
 import { concat, filter, map, mergeMap, reduce } from 'rxjs/operators';
 import SVGO = require('svgo');
 import {
   EXPORT_DEFAULT_COMPONENT_FROM_DIR,
   EXPORT_DEFAULT_MANIFEST,
-  EXPORT_DEFAULT_MAPPER,
-  getManulMapper,
-  ICON_GETTER_FUNCTION,
+  EXPORT_DIST,
   ICON_IDENTIFIER,
-  ICON_JSON,
-  NAME_WITH_THEME
+  ICON_JSON
 } from './constants';
 import {
   BuildTimeIconMetaData,
@@ -31,10 +28,9 @@ import {
   clear,
   generateAbstractTree,
   getIdentifier,
-  getRollbackTheme,
   isAccessable,
   log,
-  withSuffix
+  replaceFillColor
 } from './utils';
 import { normalize } from './utils/normalizeNames';
 
@@ -91,11 +87,12 @@ export async function build(env: Environment) {
             const icon: IconDefinition = {
               name: kebabCaseName,
               theme,
-              nameWithTheme: withSuffix(kebabCaseName, theme),
-              ...generateAbstractTree(
-                (parse5.parseFragment(data) as any).childNodes[0] as Node,
-                kebabCaseName
-              )
+              icon: {
+                ...generateAbstractTree(
+                  (parse5.parseFragment(data) as any).childNodes[0] as Node,
+                  kebabCaseName
+                )
+              }
             };
             return { identifier, icon };
           }
@@ -104,46 +101,59 @@ export async function build(env: Environment) {
     )
   );
 
-  // Icon files content flow.
-  const iconTsTemplate = await fs.readFile(env.paths.ICON_TEMPLATE, 'utf8');
-  const twoToneIconTsTemplate = await fs.readFile(
-    env.paths.TWO_TONE_ICON_TEMPLATE,
-    'utf8'
-  );
-  const iconFiles$ = svgMetaDataWithTheme$.pipe(
+  // Nomalized build time icon meta data
+  const BuildTimeIconMetaData$ = svgMetaDataWithTheme$.pipe(
     mergeMap<Observable<BuildTimeIconMetaData>, BuildTimeIconMetaData>(
       (metaData$) => metaData$
     ),
+    map<BuildTimeIconMetaData, BuildTimeIconMetaData>(
+      ({ identifier, icon }) => {
+        if (typeof icon.icon !== 'function' && icon.icon.attrs.class) {
+          icon = _.cloneDeep(icon);
+          if (typeof icon.icon !== 'function') {
+            icon.icon.attrs = _.omit(icon.icon.attrs, ['class']);
+          }
+        }
+        if (icon.theme === 'twotone') {
+          icon = _.cloneDeep(icon);
+          if (typeof icon.icon !== 'function') {
+            icon.icon.children.forEach((pathElment) => {
+              pathElment.attrs.fill = pathElment.attrs.fill || '#333';
+            });
+          }
+        }
+        return { identifier, icon };
+      }
+    )
+  );
+
+  // Icon files content flow.
+  const iconTsTemplate = await fs.readFile(env.paths.ICON_TEMPLATE, 'utf8');
+  const iconFiles$ = BuildTimeIconMetaData$.pipe(
     map<
       BuildTimeIconMetaData,
       { identifier: string; content: string; theme: ThemeType }
     >(({ identifier, icon }) => {
-      if (icon.theme === 'twotone') {
-        icon = _.cloneDeep(icon);
-        icon.children.forEach((pathElment) => {
-          pathElment.attrs.fill = pathElment.attrs.fill || '#333';
-        });
-      }
       return {
         identifier,
         theme: icon.theme,
         content:
           icon.theme === 'twotone'
             ? Prettier.format(
-                twoToneIconTsTemplate
+                iconTsTemplate
                   .replace(ICON_IDENTIFIER, identifier)
                   .replace(
-                    ICON_GETTER_FUNCTION,
-                    `function ${identifier}(primaryColor: string, secondaryColor: string) { return ${JSON.stringify(
-                      icon
+                    ICON_JSON,
+                    JSON.stringify({ ...icon, icon: 'FUNCTION' }).replace(
+                      `"FUNCTION"`,
+                      `function (primaryColor: string, secondaryColor: string) {` +
+                        ` return ${replaceFillColor(
+                          JSON.stringify(icon.icon)
+                        )};` +
+                        ` }`
                     )
-                      .replace(/"#333"/g, 'primaryColor')
-                      .replace(/"#E6E6E6"/g, 'secondaryColor')
-                      .replace(/"#D9D9D9"/g, 'secondaryColor')
-                      .replace(/"#D8D8D8"/g, 'secondaryColor')}; }`
-                  )
-                  .replace(NAME_WITH_THEME, icon.nameWithTheme),
-                env.options.prettier
+                  ),
+                { ...env.options.prettier, parser: 'typescript' }
               )
             : Prettier.format(
                 iconTsTemplate
@@ -220,13 +230,50 @@ export async function build(env: Environment) {
     }))
   );
 
-  const files$ = iconFiles$.pipe(
-    concat(manifestFile$),
-    concat(indexFile$)
+  // Dist File content flow
+  const distTsTemplate = await fs.readFile(env.paths.DIST_TEMPLATE, 'utf8');
+  const dist$ = BuildTimeIconMetaData$.pipe(
+    map<BuildTimeIconMetaData, string>(({ identifier, icon }) => {
+      if (icon.theme === 'twotone') {
+        return Prettier.format(
+          `export const ${identifier}: IconDefinition = ` +
+            JSON.stringify({ ...icon, icon: 'FUNCTION' }).replace(
+              `"FUNCTION"`,
+              `function (primaryColor: string, secondaryColor: string) {` +
+                ` return ${replaceFillColor(JSON.stringify(icon.icon))};` +
+                ` }`
+            ),
+          { ...env.options.prettier, parser: 'typescript' }
+        );
+      }
+      return Prettier.format(
+        `export const ${identifier}: IconDefinition = ${JSON.stringify(icon)};`,
+        env.options.prettier
+      );
+    }),
+    reduce<string, string>((acc, nextContent) => acc + nextContent, ''),
+    map<string, WriteFileMetaData>((content) => ({
+      path: env.paths.DIST_OUTPUT,
+      content: distTsTemplate.replace(EXPORT_DIST, content)
+    }))
   );
 
-  return new Promise<void>((resolve, reject) => {
-    files$
+  // Types file content flow
+  const typesTsTemplate = await fs.readFile(env.paths.TYPES_TEMPLATE, 'utf8');
+  const types$ = of<WriteFileMetaData>({
+    path: env.paths.TYPES_OUTPUT,
+    content: typesTsTemplate
+  });
+
+  const files$ = iconFiles$.pipe(
+    concat(manifestFile$),
+    concat(indexFile$),
+    concat(dist$),
+    concat(types$)
+  );
+
+  return new Promise<Subscription>((resolve, reject) => {
+    const subscription = files$
       .pipe(
         mergeMap(async ({ path: writeFilePath, content }) => {
           await fs.writeFile(writeFilePath, content, 'utf8');
@@ -235,7 +282,7 @@ export async function build(env: Environment) {
       )
       .subscribe(undefined, reject, () => {
         log.notice('Done.');
-        resolve();
+        resolve(subscription);
       });
   });
 }

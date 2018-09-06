@@ -20,16 +20,19 @@ describe('build/generateIcon.ts', () => {
         __dirname,
         '../build/templates/manifest.ts.template'
       ),
-      TWO_TONE_ICON_TEMPLATE: path.resolve(
-        __dirname,
-        '../build/templates/twoToneIcon.ts.template'
-      ),
       MANIFEST_OUTPUT: path.resolve(__dirname, './root/src/manifest.ts'),
       ICON_OUTPUT_DIR: path.resolve(__dirname, './root/src/'),
       THEME_FILL_OUTPUT: path.resolve(__dirname, './root/src/fill/*.ts'),
       THEME_OUTLINE_OUTPUT: path.resolve(__dirname, './root/src/outline/*.ts'),
       THEME_TWO_TONE_OUTPUT: path.resolve(__dirname, './root/src/twotone/*.ts'),
-      INDEX_OUTPUT: path.resolve(__dirname, './root/src/index.ts')
+      INDEX_OUTPUT: path.resolve(__dirname, './root/src/index.ts'),
+      DIST_TEMPLATE: path.resolve(
+        __dirname,
+        '../build/templates/dist.ts.template'
+      ),
+      DIST_OUTPUT: path.resolve(__dirname, './root/src/dist.ts'),
+      TYPES_TEMPLATE: path.resolve(__dirname, '../build/typings/types.ts'),
+      TYPES_OUTPUT: path.resolve(__dirname, './root/src/types.ts')
     },
     base: path.resolve(__dirname, './'),
     options: {

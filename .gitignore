@@ -29,19 +29,7 @@ _site/
 public
 
 # auto src generated
-src/fill/*.ts
-src/outline/*.ts
-src/twotone/*.ts
-src/index.ts
-src/manifest.ts
-src/mapNameToIdentifier.ts
-src/mapNameToThemedName.ts
+src/**/*.ts
 
 # test generated
-test/root/src/fill/*.ts
-test/root/src/outline/*.ts
-test/root/src/twotone/*.ts
-test/root/src/index.ts
-test/root/src/manifest.ts
-test/root/src/mapNameToIdentifier.ts
-test/root/src/mapNameToThemedName.ts
+test/root/src/**/*.ts

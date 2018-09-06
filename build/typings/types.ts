@@ -6,18 +6,16 @@ export interface AbstractNode {
   children: AbstractNode[];
 }
 
-export interface IconDefinition extends AbstractNode {
+export interface IconDefinition {
   name: string; // kebab-case-style
   theme: ThemeType;
-  nameWithTheme: string;
+  icon:
+    | ((primaryColor: string, secondaryColor: string) => AbstractNode)
+    | AbstractNode;
 }
 
+// svg folder names
 export type ThemeType = 'fill' | 'outline' | 'twotone';
-
-export interface IconDefinitionGetter {
-  (primaryColor: string, secondaryColor: string): IconDefinition;
-  nameWithTheme: string;
-}
 
 export interface Manifest {
   fill: string[];

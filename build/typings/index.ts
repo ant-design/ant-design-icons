@@ -1,6 +1,9 @@
 import Prettier = require('prettier');
 import SVGO = require('svgo');
 
+import { IconDefinition } from './types';
+export { AbstractNode, IconDefinition, ThemeType, Manifest } from './types';
+
 export interface Node {
   nodeName: string;
   tagName?: string;
@@ -15,38 +18,22 @@ export interface Environment {
     ICON_TEMPLATE: string;
     INDEX_TEMPLATE: string;
     MANIFEST_TEMPLATE: string;
-    TWO_TONE_ICON_TEMPLATE: string;
     ICON_OUTPUT_DIR: string;
     THEME_FILL_OUTPUT: string;
     THEME_OUTLINE_OUTPUT: string;
     THEME_TWO_TONE_OUTPUT: string;
     INDEX_OUTPUT: string;
     MANIFEST_OUTPUT: string;
+    DIST_TEMPLATE: string;
+    DIST_OUTPUT: string;
+    TYPES_TEMPLATE: string;
+    TYPES_OUTPUT: string;
   };
   readonly base: string;
   readonly options: {
     svgo: SVGO.Options;
     prettier: Prettier.Options;
   };
-}
-
-export interface AbstractNode {
-  tag: string;
-  attrs: {
-    [key: string]: string;
-  };
-  children: AbstractNode[];
-}
-
-export interface IconDefinition extends AbstractNode {
-  name: string; // kebab-case-style
-  theme: ThemeType;
-  nameWithTheme: string;
-}
-
-export interface IconDefinitionGetter {
-  (primaryColor: string, secondaryColor: string): IconDefinition;
-  nameWithTheme: string;
 }
 
 export interface NameAndPath {
@@ -62,13 +49,4 @@ export interface BuildTimeIconMetaData {
 export interface WriteFileMetaData {
   path: string;
   content: string;
-}
-
-// svg folder names
-export type ThemeType = 'fill' | 'outline' | 'twotone';
-
-export interface Manifest {
-  fill: string[];
-  outline: string[];
-  twotone: string[];
 }
