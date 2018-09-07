@@ -25,8 +25,7 @@
     "test:unit": "jest",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' 'site/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "clean:build": "rimraf .cache es lib",
-    "start": "gatsby develop",
-    "normalize-name": "cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/utils/normalizeNames"
+    "start": "gatsby develop"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
