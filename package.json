@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Ant Design Icons",
   "module": "lib/index.es.js",
   "main": "lib/index.js",
@@ -16,16 +16,17 @@
   "license": "MIT",
   "dependencies": {},
   "scripts": {
-    "build": "npm run build:lib && npm run build:index-es",
-    "build:lib": "cross-env NODE_ENV=production && rimraf lib && tsc --project ./tsconfig.json --outDir lib",
-    "build:index-es": "cross-env NODE_ENV=production && rimraf lib/index.es.js && babel --extensions '.ts' --presets @babel/preset-typescript src/index.ts --out-file lib/index.es.js",
+    "build": "npm run build:lib && npm run build:index-es &&  npm run build:umd",
+    "build:lib": "cross-env NODE_ENV=production rimraf lib && tsc --project ./tsconfig.json --outDir lib",
+    "build:index-es": "cross-env NODE_ENV=production rimraf lib/index.es.js && babel --extensions '.ts' --presets @babel/preset-typescript src/index.ts --out-file lib/index.es.js",
     "generate": "cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/index.ts",
     "clean:src": "cross-env TS_NODE_PROJECT=build/tsconfig.json node --require ts-node/register build/scripts/clean.ts",
     "test": "npm run test:unit",
     "test:unit": "jest",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' 'site/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "clean:build": "rimraf .cache es lib",
-    "start": "gatsby develop"
+    "start": "gatsby develop",
+    "build:umd": "webpack --config umd.webpack.config.js -p"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -78,7 +79,7 @@
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.0.1",
-    "webpack": "3.x",
+    "webpack-cli": "^3.1.0",
     "webpackbar": "^2.6.1"
   },
   "jest": {
