@@ -246,6 +246,7 @@ export async function build(env: Environment) {
       if (icon.theme === 'twotone') {
         if (typeof icon.icon !== 'function') {
           const paths = (icon.icon.children || [])
+            .filter(({ attrs }) => typeof attrs.d === 'string') // fix the <defs> element in the top level children
             .map(({ attrs }) => {
               const { fill, d } = attrs;
               if (fill && d) {
@@ -266,6 +267,7 @@ export async function build(env: Environment) {
       } else {
         if (typeof icon.icon !== 'function') {
           const paths = (icon.icon.children || [])
+            .filter(({ attrs }) => typeof attrs.d === 'string')
             .map(({ attrs }) => {
               const { fill, d } = attrs;
               if (fill && d) {
