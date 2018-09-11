@@ -1,0 +1,16 @@
+{
+  "$schema": "../node_modules/ng-packagr/ng-package.schema.json",
+  "name": "@ant-design/icons-angular",
+  "dest": "../dist/ant-icons-angular",
+  "deleteDestPath": true,
+  "lib": {
+    "entryFile": "public_api.ts"
+  },
+  "whitelistedNonPeerDependencies": [
+    "tslib",
+    "angular",
+    "date-fns",
+    "@ant-design/icons",
+    "ant-design-palettes"
+  ]
+}

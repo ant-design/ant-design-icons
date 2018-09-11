@@ -1,0 +1,16 @@
+<h1>Ant Design Icon for Angular</h1>
+
+<h2>Based on SVG</h2>
+
+<p>
+  With 3 themes&nbsp;
+  <select [(ngModel)]="currentTheme" (change)="changeIcons()">
+    <option value='fill'>Fill</option>
+    <option value='outline'>Outline</option>
+    <option value='twotone'>Two Tone</option>
+  </select>
+</p>
+
+<ng-container *ngFor="let name of icons; let i = index">
+  <i antIcon [type]="name" [theme]="currentTheme"></i>
+</ng-container>
