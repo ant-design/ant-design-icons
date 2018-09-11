@@ -16,7 +16,7 @@ Ant Design Icons
 ## Install
 
 ```bash
-yarn add @ant-design/icons@next # or npm install @ant-design/icons@next --save
+yarn add @ant-design/icons # or npm install @ant-design/icons --save
 ```
 
 ## Use Library Adapter
@@ -26,6 +26,7 @@ yarn add @ant-design/icons@next # or npm install @ant-design/icons@next --save
 ## Usage
 ```ts
 import { AlertOutline } from '@ant-design/icons';
+// or import AlertOutline from '@ant-design/icons/lib/outline/AlertOutline';
 
 console.log(AlertOutline);
 // Output:
