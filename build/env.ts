@@ -18,8 +18,10 @@ export const environment: Environment = {
     MANIFEST_OUTPUT: path.resolve(__dirname, '../src/manifest.ts'),
     DIST_TEMPLATE: path.resolve(__dirname, './templates/dist.ts.template'),
     DIST_OUTPUT: path.resolve(__dirname, '../src/dist.ts'),
-    TYPES_TEMPLATE: path.resolve(__dirname, './typings/types.ts'),
-    TYPES_OUTPUT: path.resolve(__dirname, '../src/types.ts')
+    TYPES_TEMPLATE: path.resolve(__dirname, './templates/types.ts'),
+    TYPES_OUTPUT: path.resolve(__dirname, '../src/types.ts'),
+    HELPERS_TEMPLATE: path.resolve(__dirname, './templates/helpers.ts'),
+    HELPERS_OUTPUT: path.resolve(__dirname, '../src/helpers.ts')
   },
   base: path.resolve(__dirname, '../'),
   options: {

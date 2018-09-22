@@ -307,11 +307,22 @@ export async function build(env: Environment) {
     content: typesTsTemplate
   });
 
+  // Helpers file content flow
+  const helpersTsTemplate = await fs.readFile(
+    env.paths.HELPERS_TEMPLATE,
+    'utf8'
+  );
+  const helpers$ = of<WriteFileMetaData>({
+    path: env.paths.HELPERS_OUTPUT,
+    content: helpersTsTemplate
+  });
+
   const files$ = iconFiles$.pipe(
     concat(manifestFile$),
     concat(indexFile$),
     concat(dist$),
-    concat(types$)
+    concat(types$),
+    concat(helpers$)
   );
 
   return new Promise<Subscription>((resolve, reject) => {

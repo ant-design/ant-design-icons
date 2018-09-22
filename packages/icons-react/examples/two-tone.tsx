@@ -1,4 +1,4 @@
-import * as icons from '@ant-design/icons';
+import * as icons from '@ant-design/icons/lib/dist';
 import { IconDefinition } from '@ant-design/icons/lib/types';
 import * as React from 'react';
 import { render } from 'react-dom';

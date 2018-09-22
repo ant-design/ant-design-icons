@@ -28,6 +28,8 @@ export interface Environment {
     DIST_OUTPUT: string;
     TYPES_TEMPLATE: string;
     TYPES_OUTPUT: string;
+    HELPERS_TEMPLATE: string;
+    HELPERS_OUTPUT: string;
   };
   readonly base: string;
   readonly options: {

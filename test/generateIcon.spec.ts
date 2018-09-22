@@ -31,8 +31,13 @@ describe('build/generateIcon.ts', () => {
         '../build/templates/dist.ts.template'
       ),
       DIST_OUTPUT: path.resolve(__dirname, './root/src/dist.ts'),
-      TYPES_TEMPLATE: path.resolve(__dirname, '../build/typings/types.ts'),
-      TYPES_OUTPUT: path.resolve(__dirname, './root/src/types.ts')
+      TYPES_TEMPLATE: path.resolve(__dirname, '../build/templates/types.ts'),
+      TYPES_OUTPUT: path.resolve(__dirname, './root/src/types.ts'),
+      HELPERS_TEMPLATE: path.resolve(
+        __dirname,
+        '../build/templates/helpers.ts'
+      ),
+      HELPERS_OUTPUT: path.resolve(__dirname, './root/src/helpers.ts')
     },
     base: path.resolve(__dirname, './'),
     options: {
