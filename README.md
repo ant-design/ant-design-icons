@@ -89,7 +89,6 @@ console.log(svgHTMLString);
 - Interfaces
 
 ```ts
-
 declare function renderIconDefinitionToSVGElement(icon: IconDefinition, options?: HelperRenderOptions): string;
 
 interface HelperRenderOptions {
