@@ -20,6 +20,7 @@ import {
   THEME_OUTLINE,
   THEME_TWOTONE
 } from './constants';
+import { renderIconDefinitionToSVGElement } from './templates/helpers';
 import {
   BuildTimeIconMetaData,
   Environment,
@@ -133,6 +134,20 @@ export async function build(env: Environment) {
         return { identifier, icon };
       }
     )
+  );
+
+  // Inline SVG files content flow.
+  const inlineSVGFiles$ = BuildTimeIconMetaData$.pipe(
+    map<BuildTimeIconMetaData, WriteFileMetaData>(({ icon }) => {
+      return {
+        path: path.resolve(
+          env.paths.INLINE_SVG_OUTPUT_DIR,
+          icon.theme,
+          `./${icon.name}.svg`
+        ),
+        content: renderIconDefinitionToSVGElement(icon)
+      };
+    })
   );
 
   // Icon files content flow.
@@ -318,6 +333,7 @@ export async function build(env: Environment) {
   });
 
   const files$ = iconFiles$.pipe(
+    concat(inlineSVGFiles$),
     concat(manifestFile$),
     concat(indexFile$),
     concat(dist$),

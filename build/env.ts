@@ -21,7 +21,20 @@ export const environment: Environment = {
     TYPES_TEMPLATE: path.resolve(__dirname, './templates/types.ts'),
     TYPES_OUTPUT: path.resolve(__dirname, '../src/types.ts'),
     HELPERS_TEMPLATE: path.resolve(__dirname, './templates/helpers.ts'),
-    HELPERS_OUTPUT: path.resolve(__dirname, '../src/helpers.ts')
+    HELPERS_OUTPUT: path.resolve(__dirname, '../src/helpers.ts'),
+    INLINE_SVG_OUTPUT_DIR: path.resolve(__dirname, '../inline-svg/'),
+    INLINE_SVG_THEME_FILL_OUTPUT: path.resolve(
+      __dirname,
+      '../inline-svg/fill/*.svg'
+    ),
+    INLINE_SVG_THEME_OUTLINE_OUTPUT: path.resolve(
+      __dirname,
+      '../inline-svg/outline/*.svg'
+    ),
+    INLINE_SVG_THEME_TWO_TONE_OUTPUT: path.resolve(
+      __dirname,
+      '../inline-svg/twotone/*.svg'
+    )
   },
   base: path.resolve(__dirname, '../'),
   options: {

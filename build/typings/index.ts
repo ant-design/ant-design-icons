@@ -30,6 +30,10 @@ export interface Environment {
     TYPES_OUTPUT: string;
     HELPERS_TEMPLATE: string;
     HELPERS_OUTPUT: string;
+    INLINE_SVG_OUTPUT_DIR: string;
+    INLINE_SVG_THEME_FILL_OUTPUT: string;
+    INLINE_SVG_THEME_OUTLINE_OUTPUT: string;
+    INLINE_SVG_THEME_TWO_TONE_OUTPUT: string;
   };
   readonly base: string;
   readonly options: {

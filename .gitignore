@@ -33,3 +33,7 @@ src/**/*.ts
 
 # test generated
 test/root/src/**/*.ts
+test/root/inline-svg/**/*.svg
+
+# inline generated
+inline-svg/**/*.svg

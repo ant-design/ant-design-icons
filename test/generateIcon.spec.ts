@@ -37,7 +37,20 @@ describe('build/generateIcon.ts', () => {
         __dirname,
         '../build/templates/helpers.ts'
       ),
-      HELPERS_OUTPUT: path.resolve(__dirname, './root/src/helpers.ts')
+      HELPERS_OUTPUT: path.resolve(__dirname, './root/src/helpers.ts'),
+      INLINE_SVG_OUTPUT_DIR: path.resolve(__dirname, './root/inline-svg/'),
+      INLINE_SVG_THEME_FILL_OUTPUT: path.resolve(
+        __dirname,
+        './root/inline-svg/fill/*.svg'
+      ),
+      INLINE_SVG_THEME_OUTLINE_OUTPUT: path.resolve(
+        __dirname,
+        './root/inline-svg/outline/*.svg'
+      ),
+      INLINE_SVG_THEME_TWO_TONE_OUTPUT: path.resolve(
+        __dirname,
+        './root/inline-svg/twotone/*.svg'
+      )
     },
     base: path.resolve(__dirname, './'),
     options: {
