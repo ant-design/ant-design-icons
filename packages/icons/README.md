@@ -21,7 +21,7 @@ yarn add @ant-design/icons # or npm install @ant-design/icons --save
 
 ## Use Library Adapter
 
-- React: See [@ant-design/icons-react](./packages/icons-react) to learn about detail usage.
+- React: See [@ant-design/icons-react](../icons-react) to learn about detail usage.
 
 ## Basic Usage
 
