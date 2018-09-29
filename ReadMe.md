@@ -1,11 +1,7 @@
 <div align="center">
 <img 
- width="70%" alt="logo" src="https://user-images.githubusercontent.com/15819224/45196822-c120ff00-b290-11e8-83ca-eb76378f5cc1.png" />
+ width="450px" alt="logo" src="https://user-images.githubusercontent.com/15819224/45196822-c120ff00-b290-11e8-83ca-eb76378f5cc1.png" />
 </div>
-
-<h1 align="center">
-Ant Design Icons
-</h1>
 
 <p align="center">
 ⭐ The abstract trees of the Ant Design SVG icons.
