@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-angular",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.1",
   "main": "./lib/index.js",
   "license": "MIT",
   "dependencies": {
