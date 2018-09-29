@@ -3,5 +3,6 @@
   "version": "independent",
   "bootstrap": {
     "npmClientArgs": []
-  }
+  },
+  "npmClient": "npm"
 }
