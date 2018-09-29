@@ -26,3 +26,6 @@ es/
 dist/
 build/
 .vscode
+
+# publish
+*.tgz
