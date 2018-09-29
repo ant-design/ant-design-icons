@@ -62,6 +62,8 @@ class AllIconDemo extends React.Component<{}> {
         case 'twotone':
           computedName += '-twotone';
           break;
+        default:
+          throw new TypeError(`Unknown theme ${this.currentTheme}`);
       }
       return (
         <Card key={name}>
