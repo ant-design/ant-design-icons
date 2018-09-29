@@ -3,16 +3,16 @@
  width="450px" alt="logo" src="https://user-images.githubusercontent.com/15819224/45196822-c120ff00-b290-11e8-83ca-eb76378f5cc1.png" />
 </div>
 
-<p align="center">
-⭐ The abstract trees of the Ant Design SVG icons.
-</p>
-
 <div align="center">
 
 [![travis](https://img.shields.io/travis/ant-design/ant-design-icons/master.svg?style=flat&label=travis)](https://travis-ci.org/ant-design/ant-design-icons)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
 </div>
+
+<p align="center">
+⭐ The abstract trees of the Ant Design SVG icons.
+</p>
 
 ## Packages
 
