@@ -6,7 +6,9 @@
     "icons:generate": "lerna run --scope @ant-design/icons generate",
     "icons:build": "lerna run --scope @ant-design/icons build",
     "react:compile": "lerna run --scope @ant-design/icons-react compile",
-    "react:example": "lerna run --scope @ant-design/icons-react start"
+    "react:example": "lerna run --scope @ant-design/icons-react start",
+    "lint": "lerna run lint",
+    "test": "lerna run test"
   },
   "devDependencies": {
     "lerna": "^3.4.0"

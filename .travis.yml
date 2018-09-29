@@ -9,8 +9,8 @@ before_script:
 script:
   - yarn run lint
   - yarn run test
-  - yarn run generate
-  - yarn run build
+  - yarn run icons:generate
+  - yarn run icons:build
 branches:
   only:
     - master
