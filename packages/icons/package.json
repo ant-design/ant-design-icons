@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons",
-  "version": "1.1.13",
+  "version": "1.1.14-alpha.0",
   "description": "Ant Design Icons",
   "module": "lib/index.es.js",
   "main": "lib/index.js",
@@ -15,7 +15,6 @@
     "inline-svg"
   ],
   "license": "MIT",
-  "dependencies": {},
   "scripts": {
     "build": "npm run build:lib && npm run build:index-es &&  npm run build:umd",
     "build:lib": "cross-env NODE_ENV=production rimraf lib && tsc --project ./tsconfig.json --outDir lib",
