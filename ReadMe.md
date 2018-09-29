@@ -7,6 +7,13 @@
 ⭐ The abstract trees of the Ant Design SVG icons.
 </p>
 
+<div align="center">
+
+[![travis](https://img.shields.io/travis/ant-design/ant-design-icons/master.svg?style=flat&label=travis)](https://travis-ci.org/ant-design/ant-design-icons)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
+
+</div>
+
 ## Packages
 
 - [@ant-design/icons](./packages/icons) [![NPM version](https://img.shields.io/npm/v/@ant-design/icons.svg?style=flat)](https://npmjs.org/package/@ant-design/icons) [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons.svg?style=flat)](https://npmjs.org/package/@ant-design/icons)
