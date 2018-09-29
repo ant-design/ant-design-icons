@@ -8,6 +8,8 @@
     "icons:test": "lerna run --scope @ant-design/icons test",
     "react:compile": "lerna run --scope @ant-design/icons-react compile",
     "react:example": "lerna run --scope @ant-design/icons-react start",
+    "angular:compile": "lerna run --scope @ant-design/icons-angular-workspace compile",
+    "angular:example": "lerna run --scope @ant-design/icons-angular-workspace start",
     "lint": "lerna run lint"
   },
   "devDependencies": {
