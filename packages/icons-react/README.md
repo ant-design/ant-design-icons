@@ -16,7 +16,7 @@ yarn add @ant-design/icons
 yarn add @ant-design/icons-react
 ```
 
-## Usage
+## Basic Usage
 
 First, you should add the icons that you need into the library.
 
