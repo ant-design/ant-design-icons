@@ -37,3 +37,6 @@ test/root/inline-svg/**/*.svg
 
 # inline generated
 inline-svg/**/*.svg
+
+# publish
+*.tgz
