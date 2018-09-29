@@ -102,7 +102,7 @@ interface HelperRenderOptions {
 }
 ```
 
-## Build
+## Build Project
 ```bash
 npm run generate # Generate files to ./src
 npm run build # Build library
