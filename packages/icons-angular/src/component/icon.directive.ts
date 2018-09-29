@@ -5,7 +5,7 @@ import {
   Directive, Renderer2
 } from '@angular/core';
 import { IconService } from './icon.service';
-import { IconDefinition, StringifyIconDefinition, ThemeType } from '../types';
+import { StringifyIconDefinition, ThemeType } from '../types';
 import { isStringifyIconDefinition, printErr, withSuffix } from '../utils';
 
 /**

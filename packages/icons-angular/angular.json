@@ -23,7 +23,7 @@
               "examples/assets",
               {
                 "glob": "**/*",
-                "input": "./src/node_modules/@ant-design/icons/inline-svg/",
+                "input": "./node_modules/@ant-design/icons/inline-svg/",
                 "output": "/assets/"
               }
             ],
