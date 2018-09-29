@@ -9,7 +9,7 @@ before_script:
   - yarn run bootstrap
 script:
   - yarn run lint
-  - yarn run test
+  - yarn run icons:test
   - yarn run icons:generate
   - yarn run icons:build
 branches:
