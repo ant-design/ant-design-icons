@@ -22,6 +22,13 @@ yarn add @ant-design/icons
 
 - React: See [@ant-design/icons-react](./packages/icons-react) to learn about detail usage.
 
+## Build Project
+
+```bash
+npm run icons:generate # Generate @ant-design/icons files to packages/icons/src
+npm run icons:build # Build  @ant-design/icons library
+```
+
 ## Basic Usage
 
 ```ts
@@ -102,11 +109,4 @@ interface HelperRenderOptions {
     [key: string]: string;
   };
 }
-```
-
-## Build Project
-
-```bash
-npm run icons:generate # Generate @ant-design/icons files to packages/icons/src
-npm run icons:build # Build  @ant-design/icons library
 ```
