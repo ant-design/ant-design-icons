@@ -1,0 +1,25 @@
+.simple-wrap {
+  position: relative;
+  margin-bottom: 1rem;
+  line-height: 1;
+  &:after {
+    width: 100%;
+    height: 1px;
+    content: '';
+    position: absolute;
+    bottom: 0.125em;
+    left: 0;
+    background-color: hotpink;
+    z-index: -100;
+  }
+  &:before {
+    width: 100%;
+    height: 1px;
+    content: '';
+    position: absolute;
+    top: 0.125em;
+    left: 0;
+    background-color: hotpink;
+    z-index: -100;
+  }
+}
