@@ -16,7 +16,7 @@
     "build": "rc-tools run build",
     "dist": "rc-tools run dist",
     "test": "jest",
-    "pub": "rc-tools run pub --babel-runtime"
+    "prepublish": "npm run compile"
   },
   "files": [
     "es",
