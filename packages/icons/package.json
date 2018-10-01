@@ -26,7 +26,8 @@
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' 'site/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "clean:build": "rimraf .cache es lib",
     "start": "gatsby develop",
-    "build:umd": "webpack --config umd.webpack.config.js -p"
+    "build:umd": "webpack --config umd.webpack.config.js -p",
+    "prepublish": "npm run test && npm run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
