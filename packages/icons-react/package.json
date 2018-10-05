@@ -16,7 +16,7 @@
     "build": "rc-tools run build",
     "dist": "rc-tools run dist",
     "test": "jest",
-    "prepublish": "npm run compile"
+    "prepublish": "npm run lint && npm run test && npm run compile"
   },
   "files": [
     "es",
