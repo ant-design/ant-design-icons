@@ -2,12 +2,18 @@
 Ant Design Icons for Angular
 </h1>
 
+<div align="center">
+
+[![NPM version](https://img.shields.io/npm/v/@ant-design/icons-angular.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-angular)
+[![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-angular.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-angular)
+
+</div>
+
 ## Install
 
 ```bash
 ng add @ant-design/icons-angular
-
-npm install @ant-design/icons-angular
+# or npm install @ant-design/icons-angular
 ```
 
 ## Usage
@@ -29,11 +35,8 @@ And register the icons that you need to `IconService` (all or explicitly):
 
 ```ts
 import { Component, OnInit } from '@angular/core';
-import manifest from '@ant-design/icons/lib/manifest';
-import { IconDefinition } from '@ant-design/icons/lib/types';
-import * as AllIcons from '@ant-design/icons/lib/dist';
-import { IconService } from '../../src/component/icon.service';
-import { Manifest, ThemeType } from '../../src/types';
+import { IconDefinition, IconService } from 'ant-icons-angular';
+import * as AllIcons from 'ant-icons-angular/icons';
 
 @Component({
   selector   : 'app-root',
@@ -41,14 +44,6 @@ import { Manifest, ThemeType } from '../../src/types';
   styleUrls  : ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  currentTheme: ThemeType = 'fill';
-  changed = true;
-  names: Manifest = manifest;
-  icons: string[] = [];
-
-  changeIcons(): void {
-    this.icons = this.names[this.currentTheme];
-  }
 
   constructor(private _iconService: IconService) {
     const antDesignIcons = AllIcons as {
@@ -57,12 +52,7 @@ export class AppComponent implements OnInit {
     this._iconService.addIcon(...Object.keys(antDesignIcons).map(key => antDesignIcons[key]));
     this._iconService.twoToneColor = { primaryColor: '#1890ff' };
   }
-
-  ngOnInit(): void {
-    this.changeIcons();
-  }
 }
-
 ```
 
 When you want to render an icon:
@@ -74,3 +64,13 @@ When you want to render an icon:
 Checkout the example for more information.
 
 For icons provided by Ant Design, we provide dynamic loading strategy to reduce bundled size. Just config your `angular.json` and you even don't need to register the icons! Checkout our `examples` dir.
+
+### Directive Inputs
+
+```ts
+class IconDirevtive {
+  @Input() type: string | StringifyIconDefinition;
+  @Input() theme: ThemeType;
+  @Input() twoToneColor: string;
+}
+```

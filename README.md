@@ -18,6 +18,7 @@
 
 - [@ant-design/icons](./packages/icons) [![NPM version](https://img.shields.io/npm/v/@ant-design/icons.svg?style=flat)](https://npmjs.org/package/@ant-design/icons) [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons.svg?style=flat)](https://npmjs.org/package/@ant-design/icons)
 - [@ant-design/icons-react](./packages/icons-react) [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-react.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-react) [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-react.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-react)
+- [@ant-design/icons-angular](./packages/icons-angular) [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-angular.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-angular) [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-angular.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-angular)
 
 ## Install
 
