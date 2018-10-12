@@ -9,6 +9,8 @@ const antDesignIcons = icons;
 
 AntdIcon.add(...Object.keys(antDesignIcons).map((key) => antDesignIcons[key]));
 
+Vue.use(AntdIcon)
+
 const AllIconDemo = {
   data() {
     return {
@@ -35,7 +37,7 @@ const AllIconDemo = {
         }
         return (
           <div class="card" key={name}>
-            <AntdIcon
+            <antd-icon
               style={{ fontSize: '24px' }}
               key={computedName}
               type={computedName}

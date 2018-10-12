@@ -13,6 +13,7 @@ const twoToneColorPalette = {
 }
 
 const Icon = {
+  name: 'AntdIcon',
   props: ['type', 'primaryColor', 'secondaryColor'],
   displayName: 'IconVue',
   definitions: new MiniMap(),
@@ -112,6 +113,11 @@ const Icon = {
       },
     })
   },
+}
+
+/* istanbul ignore next */
+Icon.install = function (Vue) {
+  Vue.component(Icon.name, Icon)
 }
 
 export default Icon
