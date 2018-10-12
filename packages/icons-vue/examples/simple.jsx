@@ -50,7 +50,7 @@ const  SimpleDemo = {
 }
 
 new Vue({
-  el: '#__vue-content',
+  el: '#__vue-content>div',
   render(){
     return <SimpleDemo/>
   }
