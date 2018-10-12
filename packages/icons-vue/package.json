@@ -1,10 +1,10 @@
 {
-  "name": "@ant-design/icons-vue-test",
+  "name": "@ant-design/icons-vue",
   "version": "1.0.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
-  "repository": "https://github.com/ant-design/ant-design-icons/tree/dev/packages/react-antd-icons",
+  "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-vue",
   "contributors": [
     "tangjinzhou<415800467@qq.com>"
   ],
@@ -38,9 +38,6 @@
     "cross-env": "^5.2.0",
     "jest": "^23.4.2",
     "jest-serializer-vue": "^2.0.2",
-    "tslint": "^5.11.0",
-    "tslint-react": "^3.6.0",
-    "typescript": "^3.1.1",
     "vc-tools": "^1.0.0",
     "vue": ">=2.5.0",
     "vue-jest": "^2.5.0",
