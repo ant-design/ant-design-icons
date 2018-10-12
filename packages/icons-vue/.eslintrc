@@ -6,7 +6,9 @@
         "jest": true,
         "es6": true
     },
-    "parser": "babel-eslint",
+    "parserOptions": {
+        "parser": "babel-eslint"
+    },
     "extends": ["plugin:vue-libs/recommended"],
     "rules": {
         "comma-dangle": [2, "always-multiline"],

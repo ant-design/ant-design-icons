@@ -1,5 +1,5 @@
 {
-  "name": "@ant-design/icons-vue",
+  "name": "@ant-design/icons-vue-test",
   "version": "1.0.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
@@ -11,11 +11,11 @@
   "license": "MIT",
   "scripts": {
     "start": "vc-tools run server",
-    "lint": "vc-tools run lint",
+    "lint": "eslint -c ./.eslintrc --fix --ext .jsx,.js,.vue ./src",
     "compile": "vc-tools run compile --babel-runtime",
     "build": "vc-tools run build",
     "dist": "vc-tools run dist",
-    "test": "jest",
+    "test": "cross-env NODE_ENV=test jest --config .jest.js",
     "pub": "vc-tools run pub --babel-runtime"
   },
   "files": [
@@ -37,6 +37,7 @@
     "babel-core": "^6.26.3",
     "cross-env": "^5.2.0",
     "jest": "^23.4.2",
+    "jest-serializer-vue": "^2.0.2",
     "tslint": "^5.11.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.1.1",
