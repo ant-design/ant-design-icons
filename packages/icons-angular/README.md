@@ -12,6 +12,9 @@ Ant Design Icons for Angular
 > With a better taste.
 
 
+![](./demo.png)
+
+
 ## Installation
 
 ```bash
@@ -103,7 +106,7 @@ $ ./build.sh
 
 ### Demo
 
-Since the demo use packaged `@ant-design/icons-angular`, you should build the library because you run `ng serve`.
+Since the demo use packaged `@ant-design/icons-angular`, you should build the library before you run `ng serve`.
 
 ### Extension
 
