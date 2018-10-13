@@ -23,7 +23,7 @@
               "examples/assets",
               {
                 "glob": "**/*",
-                "input": "./node_modules/@ant-design/icons/inline-svg/",
+                "input": "lib/inline-svg",
                 "output": "/assets/"
               }
             ],
@@ -100,16 +100,15 @@
         }
       }
     },
-    "icons-angular-lib": {
+    "ant-design-icons-angular": {
       "root": "src",
       "projectType": "library",
-      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "src/tsconfig.lib.json",
-            "project": "src/ng-package.json"
+            "tsConfig": "lib/tsconfig.lib.json",
+            "project": "lib/ng-package.json"
           }
         }
       }

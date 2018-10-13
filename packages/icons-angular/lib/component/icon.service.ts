@@ -9,19 +9,16 @@ import {
   TwoToneColorPalette,
   TwoToneColorPaletteSetter,
   ThemeType,
-  StringifyIconDefinition
 } from '../types';
 import {
   getSecondaryColor,
   withSuffix,
-  isStringifyIconDefinition,
+  isIconDefinition,
   printErr,
   cloneSVG,
   withSuffixAndColor,
   getIconDefinitionFromAbbr, replaceFillColor
 } from '../utils';
-import { renderIconDefinitionToSVGElement } from '@ant-design/icons/lib/helpers';
-export { renderIconDefinitionToSVGElement } from '@ant-design/icons/lib/helpers';
 
 export class IconService {
   defaultTheme: ThemeType = 'outline';
@@ -31,7 +28,7 @@ export class IconService {
   /**
    * Register icons.
    */
-  protected _svgDefinitions = new Map<string, StringifyIconDefinition>();
+  protected _svgDefinitions = new Map<string, IconDefinition>();
 
   /**
    * Register rendered (with color) SVG icons.
@@ -64,22 +61,7 @@ export class IconService {
    * @param icons
    */
   addIcon(...icons: IconDefinition[]): void {
-    const parsedIcons = icons.map(icon => {
-      const stringify = renderIconDefinitionToSVGElement(icon, {
-        extraSVGAttrs: {
-          width : '1em',
-          height: '1em',
-          fill  : 'currentColor'
-        }
-      });
-      return {
-        name : icon.name,
-        theme: icon.theme,
-        icon : stringify
-      } as StringifyIconDefinition;
-    });
-
-    this._addIconLiteral(...parsedIcons);
+    this._addIconLiteral(...icons);
   }
 
   changeAssetsSource(prefix: string): void {
@@ -91,22 +73,22 @@ export class IconService {
    * @param icons Icons that users want to use in their projects. User defined icons and predefined
    *   icons provided by ant-design should implement IconDefinition both.
    */
-  protected _addIconLiteral(...icons: StringifyIconDefinition[]): void {
+  protected _addIconLiteral(...icons: IconDefinition[]): void {
     icons.forEach(icon => {
       this._svgDefinitions.set(withSuffix(icon.name, icon.theme), icon);
     });
   }
 
-  protected _get(key: string): StringifyIconDefinition | null {
+  protected _get(key: string): IconDefinition | null {
     return this._svgDefinitions.get(key) || null;
   }
 
   /**
    * Get an static file and return it as a string, create a IconDefinition and cache it or return null.
    */
-  protected _getFromRemote(url: string): Observable<StringifyIconDefinition | null> {
+  protected _getFromRemote(url: string): Observable<IconDefinition | null> {
     if (this._http) {
-      const icon: StringifyIconDefinition = getIconDefinitionFromAbbr(url);
+      const icon: IconDefinition = getIconDefinitionFromAbbr(url);
       return this._http.get(
         `${this._assetsSource}assets/${icon.theme}/${icon.name}.svg`,
         { responseType: 'text' }
@@ -133,9 +115,9 @@ export class IconService {
    *
    * TODO: namespace in the future
    */
-  getRenderedContent(icon: StringifyIconDefinition | string, twoToneColor?: string): Observable<SVGElement | null> {
-    const definitionOrNull: StringifyIconDefinition | null = isStringifyIconDefinition(icon)
-      ? icon as StringifyIconDefinition
+  getRenderedContent(icon: IconDefinition | string, twoToneColor?: string): Observable<SVGElement | null> {
+    const definitionOrNull: IconDefinition | null = isIconDefinition(icon)
+      ? icon as IconDefinition
       : this._get(icon as string);
     const $icon = definitionOrNull ? observableOf(definitionOrNull) : this._getFromRemote(icon as string);
 
@@ -150,7 +132,7 @@ export class IconService {
       }));
   }
 
-  protected _loadSVGFromCacheOrCreateNew(icon: StringifyIconDefinition, twoToneColor?: string): SVGElement {
+  protected _loadSVGFromCacheOrCreateNew(icon: IconDefinition, twoToneColor?: string): SVGElement {
     let svg: SVGElement;
     const pri = twoToneColor || this._twoToneColorPalette.primaryColor;
     const sec = getSecondaryColor(pri) || this._twoToneColorPalette.secondaryColor;

@@ -1,12 +1,11 @@
-import { ThemeType } from '@ant-design/icons/lib/types';
-
-export { IconDefinition, ThemeType } from '@ant-design/icons/lib/types';
-
-export interface StringifyIconDefinition {
-  name: string;
+export interface IconDefinition {
+  name: string; // kebab-case-style
   theme: ThemeType;
   icon: string;
 }
+
+// svg folder names
+export type ThemeType = 'fill' | 'outline' | 'twotone';
 
 export interface Manifest {
   fill: string[];

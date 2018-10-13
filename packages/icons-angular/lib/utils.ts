@@ -1,5 +1,5 @@
 import { generate as generateColor } from 'ant-design-palettes';
-import { IconDefinition, StringifyIconDefinition, ThemeType } from './types';
+import { IconDefinition, ThemeType } from './types';
 
 export function printErr(message: string) {
   console.error(`[@ant-design/icons-angular]: ${message}.`);
@@ -34,7 +34,7 @@ export function withSuffixAndColor(name: string, theme: ThemeType, pri: string, 
   return `${withSuffix(name, theme)}-${pri}-${sec}`;
 }
 
-export function isStringifyIconDefinition(target: any): target is IconDefinition {
+export function isIconDefinition(target: any): target is IconDefinition {
   return (
     typeof target === 'object' &&
     typeof target.name === 'string' &&
@@ -45,7 +45,7 @@ export function isStringifyIconDefinition(target: any): target is IconDefinition
   );
 }
 
-export function getIconDefinitionFromAbbr(str: string): StringifyIconDefinition {
+export function getIconDefinitionFromAbbr(str: string): IconDefinition {
   const arr = str.split('-');
   const theme = mapAbbrToTheme(arr.splice(arr.length - 1, 1)[0]);
   const name = arr.join('-');
@@ -54,7 +54,7 @@ export function getIconDefinitionFromAbbr(str: string): StringifyIconDefinition 
     name,
     theme,
     icon: ''
-  } as StringifyIconDefinition;
+  } as IconDefinition;
 }
 
 export function cloneSVG(svg: SVGElement): SVGElement {

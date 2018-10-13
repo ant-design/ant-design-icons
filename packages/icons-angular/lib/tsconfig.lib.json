@@ -10,12 +10,15 @@
     "newLine": "lf",
     "module": "es2015",
     "moduleResolution": "node",
-    "outDir": "../dist/ant-icons-angular",
+    "outDir": "./dist/icons",
     "rootDir": ".",
     "sourceMap": true,
     "inlineSources": true,
     "target": "es2015",
-    "lib": ["es2015", "dom"],
+    "lib": [
+      "es2015",
+      "dom"
+    ],
     "skipLibCheck": true,
     "types": [],
     "baseUrl": "."
