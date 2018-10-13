@@ -89,7 +89,7 @@ class IconDirevtive {
 This package, unlike `@ant-design/icons-react`, does not list `@ant-design/icons` as a dependency. It has its own build up tooling chain which brings benefits like:
 
 * **Tree shake**.
-* Provide dynamic and static loading with tree shake supported.
+* Providing dynamic and static loading.
 * Reduced bundle size (500KB less if you only use dynamic loading).
 * Better performance because of no `svg => abstract node => svg` process.
 
