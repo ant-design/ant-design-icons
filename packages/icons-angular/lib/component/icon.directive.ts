@@ -5,8 +5,8 @@ import {
   Directive, Renderer2
 } from '@angular/core';
 import { IconService } from './icon.service';
-import { StringifyIconDefinition, ThemeType } from '../types';
-import { isStringifyIconDefinition, printErr, withSuffix } from '../utils';
+import { IconDefinition, ThemeType } from '../types';
+import { isIconDefinition, printErr, withSuffix } from '../utils';
 
 /**
  * Developers use this component to render an SVG element.
@@ -17,7 +17,7 @@ import { isStringifyIconDefinition, printErr, withSuffix } from '../utils';
   selector: '[antIcon]'
 })
 export class IconDirective implements OnChanges {
-  @Input() type: string | StringifyIconDefinition;
+  @Input() type: string | IconDefinition;
   @Input() theme: ThemeType;
   @Input() twoToneColor: string;
 
@@ -38,8 +38,8 @@ export class IconDirective implements OnChanges {
     });
   }
 
-  protected _parseIconType(type: string | StringifyIconDefinition, theme: ThemeType): StringifyIconDefinition | string {
-    if (isStringifyIconDefinition(type)) {
+  protected _parseIconType(type: string | IconDefinition, theme: ThemeType): IconDefinition | string {
+    if (isIconDefinition(type)) {
       return type;
     } else {
       const typeTr = type as string;

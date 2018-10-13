@@ -15,11 +15,11 @@
       "dom"
     ],
     "paths": {
-      "ant-icons-angular": [
-        "dist/ant-icons-angular"
+      "@ant-design/icons-angular": [
+        "dist/icons"
       ],
-      "ant-icons-angular/*": [
-        "dist/ant-icons-angular/*"
+      "@ant-design/icons-angular/icons": [
+        "dist/icons/icons/"
       ]
     }
   }
