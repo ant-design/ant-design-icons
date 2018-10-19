@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpBackend } from '@angular/common/http';
 import { Optional, Inject, Renderer2, RendererFactory2 } from '@angular/core';
 import { Observable, of as observableOf } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
@@ -15,6 +15,7 @@ import {
   withSuffix,
   isIconDefinition,
   printErr,
+  printWarn,
   cloneSVG,
   withSuffixAndColor,
   getIconDefinitionFromAbbr, replaceFillColor
@@ -24,6 +25,7 @@ export class IconService {
   defaultTheme: ThemeType = 'outline';
 
   protected _renderer: Renderer2;
+  protected _http: HttpClient;
 
   /**
    * Register icons.
@@ -104,6 +106,7 @@ export class IconService {
         })
       );
     } else {
+      printWarn('You need to import HttpClient module to use dynamic importing');
       return observableOf(null);
     }
   }
@@ -199,10 +202,13 @@ export class IconService {
 
   constructor(
     protected _rendererFactory: RendererFactory2,
-    @Optional() protected _http: HttpClient,
+    @Optional() protected _handler: HttpBackend,
     @Optional() @Inject(DOCUMENT) protected _document: any
   ) {
     // For SSR.
     this._renderer = this._rendererFactory.createRenderer(null, null);
+    if (this._handler) {
+      this._http = new HttpClient(this._handler);
+    }
   }
 }
