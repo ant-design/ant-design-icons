@@ -2,13 +2,13 @@ import { DOCUMENT } from '@angular/common';
 import { HttpClient, HttpBackend } from '@angular/common/http';
 import { Optional, Inject, Renderer2, RendererFactory2 } from '@angular/core';
 import { Observable, of as observableOf } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, map, share, tap } from 'rxjs/operators';
 import {
   IconDefinition,
   CachedIconDefinition,
   TwoToneColorPalette,
   TwoToneColorPaletteSetter,
-  ThemeType,
+  ThemeType
 } from '../types';
 import {
   getSecondaryColor,
@@ -18,8 +18,13 @@ import {
   printWarn,
   cloneSVG,
   withSuffixAndColor,
-  getIconDefinitionFromAbbr, replaceFillColor
+  getIconDefinitionFromAbbr,
+  replaceFillColor
 } from '../utils';
+
+export interface ReqIconTask {
+  ob: Observable<IconDefinition | null>;
+}
 
 export class IconService {
   defaultTheme: ThemeType = 'outline';
@@ -46,6 +51,11 @@ export class IconService {
   };
 
   protected _assetsSource = '';
+
+  /**
+   * To note whether a request to an icon is under processing.
+   */
+  protected _httpQueue = new Map<string, ReqIconTask>();
 
   set twoToneColor({ primaryColor, secondaryColor }: TwoToneColorPaletteSetter) {
     if (primaryColor && typeof primaryColor === 'string' && typeof secondaryColor === 'string' || typeof secondaryColor === 'undefined') {
@@ -90,25 +100,43 @@ export class IconService {
    */
   protected _getFromRemote(url: string): Observable<IconDefinition | null> {
     if (this._http) {
-      const icon: IconDefinition = getIconDefinitionFromAbbr(url);
-      return this._http.get(
-        `${this._assetsSource}assets/${icon.theme}/${icon.name}.svg`,
-        { responseType: 'text' }
-      ).pipe(
-        map((svgString: string) => {
-          icon.icon = svgString;
-          this._addIconLiteral(icon);
-          return icon;
-        }),
-        catchError(() => {
-          printErr(`the icon ${url} does not exist in your assets folder`);
-          return observableOf(null);
-        })
-      );
+      let task = this._httpQueue.get(url);
+      let ob: Observable<IconDefinition | null>;
+      if (task) {
+        ob = task.ob;
+      } else {
+        ob = this._createObservableRequest(url);
+        task = { ob };
+        this._httpQueue.set(url, task);
+      }
+      return ob;
     } else {
       printWarn('You need to import HttpClient module to use dynamic importing');
       return observableOf(null);
     }
+  }
+
+  private _createObservableRequest(url: string): Observable<IconDefinition | null> {
+    const icon: IconDefinition = getIconDefinitionFromAbbr(url);
+    return this._http.get(
+      `${this._assetsSource}assets/${icon.theme}/${icon.name}.svg`,
+      { responseType: 'text' }
+    ).pipe(
+      share(), // Use `share` so if multi directives request the same icon, HTTP request would only be fired once.
+      tap(() => {
+        this._httpQueue.delete(url);
+      }),
+      map(svgString => {
+        icon.icon = svgString;
+        this._addIconLiteral(icon);
+        return icon;
+      }),
+      catchError(() => {
+        printErr(`the icon ${url} does not exist in your assets folder`);
+        this._httpQueue.delete(url);
+        return observableOf(null);
+      })
+    );
   }
 
   /**
