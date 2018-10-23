@@ -9,10 +9,16 @@ export function printWarn(message: string) {
   console.warn(`[@ant-design/icons-angular]: ${message}.`);
 }
 
+/**
+ * Use ant-design-palettes to generate a secondary color.
+ */
 export function getSecondaryColor(primaryColor: string): string {
   return generateColor(primaryColor)[0];
 }
 
+/**
+ * Append a theme suffix to a type.
+ */
 export function withSuffix(name: string, theme: ThemeType): string {
   switch (theme) {
     case 'fill':
@@ -26,12 +32,16 @@ export function withSuffix(name: string, theme: ThemeType): string {
   }
 }
 
-function mapAbbrToTheme(abbr: string): ThemeType {
+export function withSuffixAndColor(name: string, theme: ThemeType, pri: string, sec: string): string {
+  return `${withSuffix(name, theme)}-${pri}-${sec}`;
+}
+
+export function mapAbbrToTheme(abbr: string): ThemeType {
   return abbr === 'o' ? 'outline' : abbr as ThemeType;
 }
 
-export function withSuffixAndColor(name: string, theme: ThemeType, pri: string, sec: string): string {
-  return `${withSuffix(name, theme)}-${pri}-${sec}`;
+export function alreadyHasAThemeSuffix(name: string): boolean {
+  return name.endsWith('-fill') || name.endsWith('-o') || name.endsWith('-twotone');
 }
 
 export function isIconDefinition(target: any): target is IconDefinition {

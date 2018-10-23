@@ -46,10 +46,13 @@ export class IconService {
    * Default color settings.
    */
   protected _twoToneColorPalette: TwoToneColorPalette = {
-    primaryColor  : '#333333',
+    primaryColor: '#333333',
     secondaryColor: '#E6E6E6'
   };
 
+  /**
+   * A url prefix so users can determinte a static asset root.
+   */
   protected _assetsSource = '';
 
   /**
@@ -68,16 +71,16 @@ export class IconService {
     return { ...this.twoToneColor } as TwoToneColorPalette; // Make a copy to avoid unexpected changes.
   }
 
+  changeAssetsSource(prefix: string): void {
+    this._assetsSource = prefix.endsWith('/') ? prefix : prefix + '/';
+  }
+
   /**
    * Register IconDefinition provided by Ant Design, parsing AbstractNode to svg string.
    * @param icons
    */
   addIcon(...icons: IconDefinition[]): void {
     this._addIconLiteral(...icons);
-  }
-
-  changeAssetsSource(prefix: string): void {
-    this._assetsSource = prefix.endsWith('/') ? prefix : prefix + '/';
   }
 
   /**
@@ -123,9 +126,7 @@ export class IconService {
       { responseType: 'text' }
     ).pipe(
       share(), // Use `share` so if multi directives request the same icon, HTTP request would only be fired once.
-      tap(() => {
-        this._httpQueue.delete(url);
-      }),
+      tap(() => this._httpQueue.delete(url)),
       map(svgString => {
         icon.icon = svgString;
         this._addIconLiteral(icon);
@@ -141,10 +142,8 @@ export class IconService {
 
   /**
    * Icon component would call this method to get a SVG element.
-   * This method returns a Observable SVG element because when user wants to get an icon from URL, it would be async,
+   * This method returns a Observable SVG element because when user wants to get an icon dynamically, that would be async,
    * so we provided a unified interface here.
-   *
-   * TODO: namespace in the future
    */
   getRenderedContent(icon: IconDefinition | string, twoToneColor?: string): Observable<SVGElement | null> {
     const definitionOrNull: IconDefinition | null = isIconDefinition(icon)
@@ -174,10 +173,10 @@ export class IconService {
     // Otherwise, generate one from string or SVG element, and cache it.
     if (!cached) {
       svg = this._setSVGAttribute(this._colorizeSVGIcon(
-        typeof icon.icon === 'string'
-          ? this._createSVGElementFromString(icon.icon)
-          : icon.icon
-        , (icon.theme === 'twotone'), pri, sec
+        typeof icon.icon === 'string' ? this._createSVGElementFromString(icon.icon) : icon.icon,
+        icon.theme === 'twotone',
+        pri,
+        sec
       ));
       this._svgCachedDefinitions.set(key, { ...icon, icon: svg } as CachedIconDefinition);
     } else {
@@ -209,7 +208,7 @@ export class IconService {
       const children = svg.childNodes;
       const length = children.length;
       for (let i = 0; i < length; i++) {
-        const child: HTMLElement = children[ i ] as HTMLElement;
+        const child: HTMLElement = children[i] as HTMLElement;
         if (child.getAttribute('fill') === 'secondaryColor') {
           this._renderer.setAttribute(child, 'fill', sec);
         } else {
@@ -221,9 +220,6 @@ export class IconService {
     return svg;
   }
 
-  /**
-   * Clear all cached icons.
-   */
   clear(): void {
     this._svgDefinitions.clear();
   }
@@ -233,10 +229,7 @@ export class IconService {
     @Optional() protected _handler: HttpBackend,
     @Optional() @Inject(DOCUMENT) protected _document: any
   ) {
-    // For SSR.
     this._renderer = this._rendererFactory.createRenderer(null, null);
-    if (this._handler) {
-      this._http = new HttpClient(this._handler);
-    }
+    this._http = this._handler ? new HttpClient(this._handler) : undefined;
   }
 }
