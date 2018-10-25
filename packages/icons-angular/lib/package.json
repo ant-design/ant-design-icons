@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-angular",
-  "version": "1.0.0",
+  "version": "2.0.0-beta.1",
   "license": "MIT",
   "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-angular",
   "contributors": [
@@ -10,12 +10,9 @@
     "ant-design-palettes": "^1.1.3"
   },
   "peerDependencies": {
-    "@angular/animations": "^6.0.0",
-    "@angular/cdk": "^6.0.0",
-    "@angular/common": "^6.0.0",
-    "@angular/core": "^6.0.0",
-    "@angular/forms": "^6.0.0",
+    "@angular/common": "^7.0.0",
+    "@angular/core": "^7.0.0",
     "tslib": "^1.9.0",
-    "typescript": "^2.7.0"
+    "typescript": "~3.1.3"
   }
 }

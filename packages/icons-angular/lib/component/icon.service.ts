@@ -68,7 +68,7 @@ export class IconService {
   }
 
   get twoToneColor(): TwoToneColorPaletteSetter {
-    return { ...this.twoToneColor } as TwoToneColorPalette; // Make a copy to avoid unexpected changes.
+    return { ...this._twoToneColorPalette } as TwoToneColorPalette; // Make a copy to avoid unexpected changes.
   }
 
   changeAssetsSource(prefix: string): void {
