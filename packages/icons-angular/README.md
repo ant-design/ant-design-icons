@@ -11,9 +11,7 @@ Ant Design Icons for Angular
 
 > With a better taste.
 
-
 ![](./demo.png)
-
 
 ## Installation
 
@@ -96,6 +94,14 @@ This package, unlike `@ant-design/icons-react`, does not list `@ant-design/icons
 * Reduced bundle size (500KB less if you only use dynamic loading).
 * Better performance because of no `svg => abstract node => svg` process.
 
+### Setup
+
+Install dependencies of `@ant-design/icons-angular`, and run `npm run generate`.
+
+### Demo
+
+Run `ng serve` after `npm run generate`.
+
 ### Build
 
 Build the library by running the script we provide.
@@ -104,10 +110,11 @@ Build the library by running the script we provide.
 $ ./build.sh
 ```
 
-### Demo
-
-Since the demo use packaged `@ant-design/icons-angular`, you should build the library before you run `ng serve`.
-
 ### Extension
 
 You can simply extend this package by creating directives or services that extends `IconDirective` and `IconService`. And it is worth mentioning that `_changeIcon` method returns a `Promise<svg>` using which you could add extra modifications. [ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/icon) is a good example of extending this package.
+
+## Road map
+
+- [ ] Register icons using `InjectToken` for a cleaner API.
+- [ ] Namespace for users to register their icons.

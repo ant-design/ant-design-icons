@@ -46,12 +46,12 @@ export class IconService {
    * Default color settings.
    */
   protected _twoToneColorPalette: TwoToneColorPalette = {
-    primaryColor: '#333333',
+    primaryColor  : '#333333',
     secondaryColor: '#E6E6E6'
   };
 
   /**
-   * A url prefix so users can determinte a static asset root.
+   * A url prefix so users can determine a static asset root.
    */
   protected _assetsSource = '';
 
@@ -208,7 +208,7 @@ export class IconService {
       const children = svg.childNodes;
       const length = children.length;
       for (let i = 0; i < length; i++) {
-        const child: HTMLElement = children[i] as HTMLElement;
+        const child: HTMLElement = children[ i ] as HTMLElement;
         if (child.getAttribute('fill') === 'secondaryColor') {
           this._renderer.setAttribute(child, 'fill', sec);
         } else {
@@ -230,6 +230,8 @@ export class IconService {
     @Optional() @Inject(DOCUMENT) protected _document: any
   ) {
     this._renderer = this._rendererFactory.createRenderer(null, null);
-    this._http = this._handler ? new HttpClient(this._handler) : undefined;
+    if (this._handler) {
+      this._http = new HttpClient(this._handler);
+    }
   }
 }

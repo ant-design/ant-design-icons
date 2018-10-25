@@ -1,7 +1,11 @@
 {
   "name": "@ant-design/icons-angular",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "license": "MIT",
+  "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-angular",
+  "contributors": [
+    "Wendell<wendzhue@gmail.com>"
+  ],
   "dependencies": {
     "ant-design-palettes": "^1.1.3"
   },

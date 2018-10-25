@@ -27,7 +27,8 @@ export class IconDirective implements OnChanges {
       if (!this.type) {
         this._clearSVGElement();
       } else {
-        this._iconService.getRenderedContent(this._parseIconType(this.type, this.theme), this.twoToneColor).subscribe(svg => {
+        this._iconService.getRenderedContent(this._parseIcon(this.type, this.theme), this.twoToneColor)
+        .subscribe(svg => {
           if (svg) {
             this._setSVGElement(svg);
             resolve(svg as SVGAElement);
@@ -42,23 +43,23 @@ export class IconDirective implements OnChanges {
   /**
    * Parse an icon's type.
    */
-  protected _parseIconType(type: string | IconDefinition, theme: ThemeType): IconDefinition | string {
-    if (typeof type === 'string') {
+  protected _parseIcon(type: string | IconDefinition, theme: ThemeType): IconDefinition | string {
+    if (isIconDefinition(type)) {
+      return type;
+    } else {
       if (alreadyHasAThemeSuffix(type)) {
-        if (!!theme) { printErr(`'type' ${type} already gets a theme inside so 'theme' ${theme} would be ignored`); }
+        if (!!theme) {
+          printErr(`'type' ${type} already gets a theme inside so 'theme' ${theme} would be ignored`);
+        }
         return type;
       } else {
         return withSuffix(type, theme || this._iconService.defaultTheme);
       }
-    } else if (isIconDefinition(type)) {
-      return type;
-    } else {
-      return null;
     }
   }
 
   /**
-   * Render an SVG element into the direvtive after removing other icons.
+   * Render an SVG element into the directive after removing other icons.
    */
   protected _setSVGElement(svg: SVGElement): void {
     const self: HTMLElement = this._elementRef.nativeElement;
@@ -71,7 +72,7 @@ export class IconDirective implements OnChanges {
     const children = self.childNodes;
     const childCount = children.length;
     for (let i = childCount - 1; i >= 0; i--) {
-      const child = children[i] as HTMLElement;
+      const child = children[ i ] as HTMLElement;
       if (child.tagName.toLowerCase() === 'svg') {
         this._renderer.removeChild(self, child);
       }
@@ -86,6 +87,7 @@ export class IconDirective implements OnChanges {
   }
 
   ngOnChanges(): void {
-    this._changeIcon();
+    this._changeIcon().then(() => {
+    });
   }
 }
