@@ -4,10 +4,10 @@ import { IconService } from './icon.service';
 import { IconDirective } from './icon.directive';
 
 @NgModule({
-  imports     : [ CommonModule ],
-  exports     : [ IconDirective ],
-  declarations: [ IconDirective ],
-  providers   : [ IconService ]
+  imports: [CommonModule],
+  exports: [IconDirective],
+  declarations: [IconDirective],
+  providers: [IconService]
 })
 export class IconModule {
 }

@@ -1,16 +1,15 @@
 import {
+  Directive,
+  ElementRef,
   Input,
   OnChanges,
-  ElementRef,
-  Directive, Renderer2
+  Renderer2,
+  SimpleChanges
 } from '@angular/core';
 import { IconService } from './icon.service';
 import { IconDefinition, ThemeType } from '../types';
-import { isIconDefinition, printErr, withSuffix, alreadyHasAThemeSuffix } from '../utils';
+import { isIconDefinition, printErr, withSuffix, alreadyHasAThemeSuffix, getNameAndNamespace } from '../utils';
 
-/**
- * Developers use this component to render an SVG element.
- */
 @Directive({
   selector: '[antIcon]'
 })
@@ -19,75 +18,62 @@ export class IconDirective implements OnChanges {
   @Input() theme: ThemeType;
   @Input() twoToneColor: string;
 
-  /**
-   * Render an icon with given type and theme. Return an SVG element for extra behaviors (extended by child classes).
-   */
-  protected _changeIcon(): Promise<SVGAElement | null> {
-    return new Promise((resolve, reject) => {
+  protected _changeIcon(): Promise<SVGElement | null> {
+    return new Promise<SVGElement | null>(resolve => {
       if (!this.type) {
         this._clearSVGElement();
+        resolve(null);
       } else {
-        this._iconService.getRenderedContent(this._parseIcon(this.type, this.theme), this.twoToneColor)
-        .subscribe(svg => {
-          if (svg) {
-            this._setSVGElement(svg);
-            resolve(svg as SVGAElement);
-          } else {
-            reject(null);
-          }
+        this._iconService.getRenderedContent(this._parseIconType(this.type, this.theme), this.twoToneColor).subscribe(svg => {
+          this._setSVGElement(svg);
+          resolve(svg);
         });
       }
     });
   }
 
-  /**
-   * Parse an icon's type.
-   */
-  protected _parseIcon(type: string | IconDefinition, theme: ThemeType): IconDefinition | string {
+  protected _parseIconType(type: string | IconDefinition, theme: ThemeType): IconDefinition | string {
     if (isIconDefinition(type)) {
       return type;
     } else {
-      if (alreadyHasAThemeSuffix(type)) {
-        if (!!theme) {
-          printErr(`'type' ${type} already gets a theme inside so 'theme' ${theme} would be ignored`);
-        }
+      const [ name, namespace ] = getNameAndNamespace(type);
+      if (namespace) {
         return type;
+      }
+      if (alreadyHasAThemeSuffix(name)) {
+        if (!!theme) {
+          printErr(`'type' ${name} already gets a theme inside so 'theme' ${theme} would be ignored`);
+        }
+        return name;
       } else {
-        return withSuffix(type, theme || this._iconService.defaultTheme);
+        return withSuffix(name, theme || this._iconService.defaultTheme);
       }
     }
   }
 
-  /**
-   * Render an SVG element into the directive after removing other icons.
-   */
   protected _setSVGElement(svg: SVGElement): void {
-    const self: HTMLElement = this._elementRef.nativeElement;
     this._clearSVGElement();
-    this._renderer.appendChild(self, svg);
+    this._renderer.appendChild(this._elementRef.nativeElement, svg);
   }
 
   protected _clearSVGElement(): void {
-    const self: HTMLElement = this._elementRef.nativeElement;
-    const children = self.childNodes;
-    const childCount = children.length;
-    for (let i = childCount - 1; i >= 0; i--) {
-      const child = children[ i ] as HTMLElement;
+    const el: HTMLElement = this._elementRef.nativeElement;
+    const children = el.childNodes;
+    const length = children.length;
+    for (let i = length - 1; i >= 0; i--) {
+      const child = children[i] as HTMLElement;
       if (child.tagName.toLowerCase() === 'svg') {
-        this._renderer.removeChild(self, child);
+        this._renderer.removeChild(el, child);
       }
     }
   }
 
-  constructor(
-    protected _iconService: IconService,
-    protected _elementRef: ElementRef,
-    protected _renderer: Renderer2
-  ) {
+  constructor(protected _iconService: IconService, protected _elementRef: ElementRef, protected _renderer: Renderer2) {
   }
 
-  ngOnChanges(): void {
-    this._changeIcon().then(() => {
-    });
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.type || changes.theme || changes.twoToneColor) {
+      this._changeIcon().then();
+    }
   }
 }

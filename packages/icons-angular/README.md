@@ -75,15 +75,13 @@ Checkout the demo for more details.
 
 For icons provided by Ant Design, we provide **dynamic loading** strategy to reduce bundle's size. Just config your `angular.json` and you even don't need to register the icons! Checkout our `examples` dir and `angular.json` file for more details.
 
-### Directive Inputs
+### Namespace
 
-```ts
-class IconDirevtive {
-  @Input() type: string | StringifyIconDefinition;
-  @Input() theme: ThemeType;
-  @Input() twoToneColor: string;
-}
-```
+Namespace is a new feature first introduced in `2.0.0-beta.2`. It allows users to register their own icons with simple API, support both dynamic loading and static loading.
+
+Say you want to add a `panda` icon in `animal` namespace. For static loading, you should call `addIconLiteral('animal:panda', '<svg>...</svg>')`. For dynamic loading, just put `panda.svg` under `assets/animal`. And render a panda like: `<i antIcon type="animal:panda">`.
+
+Please checkout the demo for more details.
 
 ## Development
 
@@ -113,8 +111,3 @@ $ ./build.sh
 ### Extension
 
 You can simply extend this package by creating directives or services that extends `IconDirective` and `IconService`. And it is worth mentioning that `_changeIcon` method returns a `Promise<svg>` using which you could add extra modifications. [ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/icon) is a good example of extending this package.
-
-## Road map
-
-- [ ] Register icons using `InjectToken` for a cleaner API.
-- [ ] Namespace for users to register their icons.

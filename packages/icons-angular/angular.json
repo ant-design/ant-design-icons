@@ -20,7 +20,11 @@
             "tsConfig": "examples/tsconfig.app.json",
             "assets": [
               "examples/favicon.ico",
-              "examples/assets",
+              {
+                "glob": "**/*",
+                "input": "examples/assets",
+                "output": "/assets/"
+              },
               {
                 "glob": "**/*",
                 "input": "lib/inline-svg",

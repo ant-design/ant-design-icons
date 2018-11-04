@@ -1,34 +1,27 @@
 import { generate as generateColor } from 'ant-design-palettes';
 import { IconDefinition, ThemeType } from './types';
 
+export const antIconConsolePrefix = '[@ant-design/icons-angular]: ';
+
 export function printErr(message: string) {
-  console.error(`[@ant-design/icons-angular]: ${message}.`);
+  console.error(`${antIconConsolePrefix}${message}.`);
 }
 
 export function printWarn(message: string) {
-  console.warn(`[@ant-design/icons-angular]: ${message}.`);
+  console.warn(`${antIconConsolePrefix}${message}.`);
 }
 
-/**
- * Use ant-design-palettes to generate a secondary color.
- */
 export function getSecondaryColor(primaryColor: string): string {
   return generateColor(primaryColor)[0];
 }
 
-/**
- * Append a theme suffix to a type.
- */
-export function withSuffix(name: string, theme: ThemeType): string {
+export function withSuffix(name: string, theme: ThemeType | undefined): string {
   switch (theme) {
-    case 'fill':
-      return `${name}-fill`;
-    case 'outline':
-      return `${name}-o`;
-    case 'twotone':
-      return `${name}-twotone`;
-    default:
-      throw new TypeError(`Unknown theme type: ${theme}, name: ${name}`);
+    case 'fill': return `${name}-fill`;
+    case 'outline': return `${name}-o`;
+    case 'twotone': return `${name}-twotone`;
+    case undefined: return name;
+    default: throw new Error(`${antIconConsolePrefix}Theme "${theme}" is not a recognized theme!`);
   }
 }
 
@@ -48,13 +41,14 @@ export function isIconDefinition(target: any): target is IconDefinition {
   return (
     typeof target === 'object' &&
     typeof target.name === 'string' &&
-    typeof target.theme === 'string' &&
-    // IconDefinition.icon could be a SVG: We render SVG only once (the first time a icon is used)
-    // and return a copy every time after that.
-    (target.icon instanceof SVGElement || typeof target.icon === 'string')
+    (typeof target.theme === 'string' || target.theme === undefined) &&
+    typeof target.icon === 'string'
   );
 }
 
+/**
+ * Get an `IconDefinition` object from abbreviation type, like `account-book-fill`.
+ */
 export function getIconDefinitionFromAbbr(str: string): IconDefinition {
   const arr = str.split('-');
   const theme = mapAbbrToTheme(arr.splice(arr.length - 1, 1)[0]);
@@ -71,10 +65,29 @@ export function cloneSVG(svg: SVGElement): SVGElement {
   return svg.cloneNode(true) as SVGElement;
 }
 
+/**
+ * Parse inline SVG string and replace colors with placeholders. For twotone icons only.
+ */
 export function replaceFillColor(raw: string): string {
   return raw
     .replace(/['"]#333['"]/g, '"primaryColor"')
     .replace(/['"]#E6E6E6['"]/g, '"secondaryColor"')
     .replace(/['"]#D9D9D9['"]/g, '"secondaryColor"')
     .replace(/['"]#D8D8D8['"]/g, '"secondaryColor"');
+}
+
+/**
+ * Split a name with namespace in it into a tuple like [ name, namespace ].
+ */
+export function getNameAndNamespace(type: string): [string, string] {
+  const split = type.split(':');
+  switch (split.length) {
+    case 1: return [type, ''];
+    case 2: return [split[1], split[0]];
+    default: throw new Error(`${antIconConsolePrefix}The icon type ${type} is not valid!`);
+  }
+}
+
+export function hasNamespace(type: string): boolean {
+  return getNameAndNamespace(type)[1] !== '';
 }
