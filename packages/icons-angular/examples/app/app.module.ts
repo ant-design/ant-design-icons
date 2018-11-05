@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { IconModule } from 'ant-icons-angular';
+import { AppInterceptor } from './app-interceptor.module';
+import { IconModule } from '@ant-design/icons-angular';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -18,7 +19,13 @@ import { AppComponent } from './app.component';
     IconModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide : HTTP_INTERCEPTORS,
+      useClass: AppInterceptor,
+      multi   : true
+    },
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

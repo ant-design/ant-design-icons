@@ -9,6 +9,24 @@
   </select>
 </p>
 
-<ng-container *ngFor="let name of icons; let i = index">
+<ng-container *ngFor="let name of icons;">
   <i antIcon [type]="name" [theme]="currentTheme"></i>
 </ng-container>
+
+<!-- To test `share` dynamic importing.  -->
+
+<br><br>
+
+<ng-container *ngIf="currentTheme === 'fill'">
+  <i antIcon [type]="'account-book'" [theme]="'fill'"></i>
+  <i antIcon [type]="'account-book'" [theme]="'fill'"></i>
+  <i antIcon [type]="'account-book'" [theme]="'fill'"></i>
+  <i antIcon [type]="'account-book'" [theme]="'fill'"></i>
+  <i antIcon [type]="'account-book'" [theme]="'fill'"></i>
+  <i antIcon [type]="'account-book'" [theme]="'fill'"></i>
+  <i antIcon [type]="'account-book'" [theme]="'fill'"></i>
+  <i antIcon [type]="'account-book'" [theme]="'fill'"></i>
+  <i antIcon [type]="'account-book'" [theme]="'fill'"></i>
+  <i antIcon [type]="'account-book'" [theme]="'fill'"></i>
+</ng-container>
+

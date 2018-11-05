@@ -1,4 +1,3 @@
-
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
@@ -20,12 +19,24 @@ yarn-error.log*
 
 # IDE
 /.idea
-
-lib/
-es/
-dist/
-build/
 .vscode
+
+# assets
+dist/
+
+lib/manifest.ts
+lib/types.ts
+
+lib/icons/fill/*.ts
+lib/icons/outline/*.ts
+lib/icons/twotone/*.ts
+lib/icons/public_api.ts
+
+lib/inline-svg/fill/*.svg
+lib/inline-svg/outline/*.svg
+lib/inline-svg/twotone/*.svg
 
 # publish
 *.tgz
+
+package-lock.json
