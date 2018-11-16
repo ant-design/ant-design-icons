@@ -27,7 +27,7 @@ const AllIconDemo = {
       console.log(e.currentTarget.value);
       AntdIcon.setTwoToneColors({
         primaryColor: e.currentTarget.value
-      }).update();
+      })
       this.primaryColor = e.currentTarget.value
     },
     renderIcons(names) {

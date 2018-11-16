@@ -17,20 +17,10 @@ const Icon = {
   props: ['type', 'primaryColor', 'secondaryColor'],
   displayName: 'IconVue',
   definitions: new MiniMap(),
-  symbolState: { trigger: Symbol() },
   data () {
     return {
-      symbolState: Icon.symbolState,
+      twoToneColorPalette
     }
-  },
-  watch: {
-    'symbolState.trigger': function (val) {
-      this.$forceUpdate()
-    },
-  },
-  // Icon主题配置变化后(twoToneColorPalette、definitions等)，用来触发组件更新
-  update () {
-    Icon.symbolState.trigger = Symbol()
   },
   add (...icons) {
     icons.forEach((icon) => {
@@ -59,7 +49,6 @@ const Icon = {
     twoToneColorPalette.primaryColor = primaryColor
     twoToneColorPalette.secondaryColor =
       secondaryColor || getSecondaryColor(primaryColor)
-    return Icon
   },
   getTwoToneColors () {
     return {
