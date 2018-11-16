@@ -19,7 +19,7 @@ const Icon = {
   definitions: new MiniMap(),
   data () {
     return {
-      twoToneColorPalette
+      twoToneColorPalette,
     }
   },
   add (...icons) {

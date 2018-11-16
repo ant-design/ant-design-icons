@@ -16,8 +16,7 @@
     "build": "vc-tools run build",
     "dist": "vc-tools run dist",
     "test": "cross-env NODE_ENV=test jest --config .jest.js",
-    "prepublish": "npm run lint && npm run test && npm run compile",
-    "pub": "vc-tools run pub --babel-runtime"
+    "prepublish": "npm run lint && npm run test && npm run compile"
   },
   "files": [
     "es",
