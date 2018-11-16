@@ -4,9 +4,12 @@
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
-  "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-vue",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-vue"
+  },
   "contributors": [
-    "tangjinzhou<415800467@qq.com>"
+    "tangjinzhou <415800467@qq.com>"
   ],
   "license": "MIT",
   "scripts": {
@@ -54,5 +57,6 @@
         "./src/index.jsx"
       ]
     }
-  }
+  },
+  "description": "<h1 align=\"center\"> Ant Design Icons for Vue </h1>"
 }
