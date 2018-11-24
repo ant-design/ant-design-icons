@@ -17,9 +17,13 @@ yarn add @ant-design/icons-react-native
 
 ## Linking
 
-Run command `react-native link @ant-design/icons-react-native` will copy fonts to `ios` and `android` assets folder.
+```bash
+react-native link @ant-design/icons-react-native
+```
 
-After linking succeeded you need run your app from `xcode` or `android studio` or start it from terminal `react-native run-ios or react-native run-android`
+will copy fonts to `ios` and `android` assets folder.
+
+After linking succeeded you need run your app from `xcode` or `android studio` or start it from terminal `react-native run-ios` or `react-native run-android`
 
 ## Basic Usage
 
