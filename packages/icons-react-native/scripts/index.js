@@ -48,7 +48,7 @@ export default class Icon${uppercaseName} extends React.PureComponent<Icon${
       ...props
     } = this.props;
     const styleOverrides: TextStyle = {
-      fontFamily: "antfill",
+      fontFamily: "ant${name}",
       fontWeight: "normal",
       fontStyle: "normal",
       fontSize: size,
