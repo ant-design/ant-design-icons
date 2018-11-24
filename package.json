@@ -4,6 +4,7 @@
     "bootstrap": "lerna bootstrap",
     "bootstrap:china": "lerna bootstrap --registry=https://registry.npm.taobao.org",
     "icons:generate": "lerna run --scope @ant-design/icons generate",
+    "posticons:generate": "lerna run --scope @ant-design/icons-react-native generate",
     "icons:build": "lerna run --scope @ant-design/icons build",
     "icons:test": "lerna run --scope @ant-design/icons test",
     "react:compile": "lerna run --scope @ant-design/icons-react compile",

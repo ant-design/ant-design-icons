@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-react"
+  ],
+  "rules": {
+    "interface-name": false,
+    "quotemark": [
+      true,
+      "single",
+      "jsx-single"
+    ],
+    "member-access": false,
+    "no-submodule-imports": false,
+    "jsx-curly-spacing": [
+      "always"
+    ],
+    "no-console": false,
+    "object-literal-sort-keys": false,
+    "no-implicit-dependencies": false,
+    "no-empty-interface": false,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ]
+  }
+}
