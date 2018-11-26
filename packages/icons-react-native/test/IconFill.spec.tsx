@@ -9,9 +9,19 @@ function mount(props: IconFillProps) {
 }
 
 describe('IconFill', () => {
+  it('should create fillGlyphMap', () => {
+    expect(fillGlyphMap).toMatchSnapshot();
+  });
+
   it('should create Icon element.', () => {
     const icon = mount({ name: 'account-book' });
-    expect(icon!.children![0]).toBe(String.fromCharCode(fillGlyphMap['account-book']));
+    expect(icon!.children![0]).toBe(
+      String.fromCharCode(fillGlyphMap['account-book'])
+    );
+    expect(icon).toMatchSnapshot();
+  });
+  it('props exists', () => {
+    const icon = mount({ name: 'alipay-circle', size: 24, color: 'black' });
     expect(icon).toMatchSnapshot();
   });
 });

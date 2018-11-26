@@ -9,7 +9,7 @@
   },
   "include": [
 		"../src/*.tsx",
-    "Icon.spec.tsx"
+    "./*.tsx"
   ],
   "exclude": [
     "node_modules"

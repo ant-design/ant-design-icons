@@ -17,8 +17,10 @@
     "build": "rc-tools run build",
     "dist": "rc-tools run dist",
     "test": "jest",
-    "generate": "node scripts/index.js",
-    "prepublish": "npm run lint && npm run test && npm run compile"
+		"generate": "node scripts/index.js",
+		"pregenerate": "npm run clean",
+		"clean": "rimraf -rf fonts iconfont src/*.tsx",
+    "prepublishOnly": "npm run lint && npm run test && npm run compile"
   },
   "files": [
     "es",
@@ -42,6 +44,7 @@
     "react": "^16.6.3",
     "react-dom": "^16.4.2",
     "react-test-renderer": "^16.4.2",
+    "rimraf": "^2.6.2",
     "tslint": "^5.11.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.0.3"
