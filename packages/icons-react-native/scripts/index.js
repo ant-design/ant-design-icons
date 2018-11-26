@@ -76,7 +76,7 @@ export default class Icon${uppercaseName} extends React.PureComponent<Icon${
 
 // index.tsx
 const contents = fonts.map(font => {
-  return `export { default as Icon${upperName(font)} } from './${font}';\n`;
+  return `export { default as Icon${upperName(font)}, Icon${upperName(font)}Props, ${upperName(font)}GlyphMapType } from './${font}';\n`;
 });
 
 fs.writeFileSync('src/index.tsx', contents.join(''))
