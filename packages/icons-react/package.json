@@ -4,7 +4,7 @@
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
-  "repository": "https://github.com/ant-design/ant-design-icons/tree/dev/packages/react-antd-icons",
+  "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-react",
   "contributors": [
     "HeskeyBaozi<hezhiyu233@foxmail.com>"
   ],
