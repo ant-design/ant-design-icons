@@ -17,9 +17,9 @@
     "build": "rc-tools run build",
     "dist": "rc-tools run dist",
     "test": "jest",
-		"generate": "node scripts/index.js",
-		"pregenerate": "npm run clean",
-		"clean": "rimraf -rf fonts iconfont src/*.tsx",
+    "generate": "node scripts/index.js",
+    "pregenerate": "npm run clean",
+    "clean": "rimraf -rf fonts iconfont src/*.tsx",
     "prepublishOnly": "npm run lint && npm run test && npm run compile"
   },
   "files": [
