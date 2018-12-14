@@ -3,15 +3,15 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
+    "sourceMap": false,
+    "declaration": true,
     "module": "es2015",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
     "lib": [
-      "es2017",
+      "es2015",
       "dom"
     ],
     "paths": {

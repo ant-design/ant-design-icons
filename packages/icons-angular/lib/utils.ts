@@ -3,11 +3,11 @@ import { IconDefinition, ThemeType } from './types';
 
 export const antIconConsolePrefix = '[@ant-design/icons-angular]: ';
 
-export function printErr(message: string) {
+export function printErr(message: string): void {
   console.error(`${antIconConsolePrefix}${message}.`);
 }
 
-export function printWarn(message: string) {
+export function printWarn(message: string): void {
   console.warn(`${antIconConsolePrefix}${message}.`);
 }
 
@@ -37,7 +37,7 @@ export function alreadyHasAThemeSuffix(name: string): boolean {
   return name.endsWith('-fill') || name.endsWith('-o') || name.endsWith('-twotone');
 }
 
-export function isIconDefinition(target: any): target is IconDefinition {
+export function isIconDefinition(target: string | IconDefinition): target is IconDefinition {
   return (
     typeof target === 'object' &&
     typeof target.name === 'string' &&
@@ -48,6 +48,7 @@ export function isIconDefinition(target: any): target is IconDefinition {
 
 /**
  * Get an `IconDefinition` object from abbreviation type, like `account-book-fill`.
+ * @param str
  */
 export function getIconDefinitionFromAbbr(str: string): IconDefinition {
   const arr = str.split('-');

@@ -7,5 +7,13 @@
   "exclude": [
     "test.ts",
     "**/*.spec.ts"
-  ]
+  ],
+  "paths": {
+    "@ant-design/icons-angular": [
+      "../lib/public_api"
+    ],
+    "@ant-design/icons-angular/icons": [
+      "../lib/icons/public_api"
+    ]
+  }
 }

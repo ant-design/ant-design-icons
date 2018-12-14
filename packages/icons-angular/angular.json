@@ -73,23 +73,6 @@
             "browserTarget": "examples:build"
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "examples/test.ts",
-            "polyfills": "examples/polyfills.ts",
-            "tsConfig": "examples/tsconfig.spec.json",
-            "karmaConfig": "examples/karma.conf.js",
-            "styles": [
-              "examples/styles.css"
-            ],
-            "scripts": [],
-            "assets": [
-              "examples/favicon.ico",
-              "examples/assets"
-            ]
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -113,6 +96,23 @@
           "options": {
             "tsConfig": "lib/tsconfig.lib.json",
             "project": "lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "lib/test.ts",
+            "karmaConfig": "lib/karma.conf.js",
+            "polyfills": "lib/polyfills.ts",
+            "tsConfig": "lib/tsconfig.spec.json",
+            "scripts": [],
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "lib/inline-svg",
+                "output": "/assets/"
+              }
+            ]
           }
         }
       }

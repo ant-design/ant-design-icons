@@ -1,6 +1,6 @@
 export interface IconDefinition {
   name: string; // kebab-case-style
-  theme?: ThemeType;
+  theme?: ThemeType | undefined;
   icon: string;
 }
 
