@@ -97,9 +97,7 @@ const Icon = {
         fill: 'currentColor',
         'aria-hidden': 'true',
       },
-      on: {
-        ...this.$listeners,
-      },
+      on: this.$listeners,
     })
   },
 }
