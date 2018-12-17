@@ -2,6 +2,11 @@
   "rulesDirectory": [
     "node_modules/codelyzer"
   ],
+  "linterOptions": {
+    "exclude": [
+      "examples"
+    ]
+  },
   "rules": {
     "banana-in-box": true,
     "templates-no-negated-async": true,
