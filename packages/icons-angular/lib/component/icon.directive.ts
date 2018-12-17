@@ -7,7 +7,7 @@ import {
   SimpleChanges
 } from '@angular/core';
 import { IconDefinition, ThemeType } from '../types';
-import { isIconDefinition, withSuffix, alreadyHasAThemeSuffix, getNameAndNamespace, printWarn } from '../utils';
+import { alreadyHasAThemeSuffix, getNameAndNamespace, isIconDefinition, printWarn, withSuffix } from '../utils';
 import { IconService } from './icon.service';
 
 @Directive({
@@ -22,7 +22,7 @@ export class IconDirective implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.type || changes.theme || changes.twoToneColor) {
-      this._changeIcon().then();
+      this._changeIcon();
     }
   }
 

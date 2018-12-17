@@ -72,18 +72,6 @@
           "options": {
             "browserTarget": "examples:build"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "examples/tsconfig.app.json",
-              "examples/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
