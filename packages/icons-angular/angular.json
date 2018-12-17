@@ -78,7 +78,6 @@
           "options": {
             "tsConfig": [
               "examples/tsconfig.app.json",
-              "examples/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
