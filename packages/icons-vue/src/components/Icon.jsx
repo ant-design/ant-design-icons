@@ -24,7 +24,7 @@ const Icon = {
   },
   add (...icons) {
     icons.forEach((icon) => {
-      Icon.definitions.set(withSuffix(icon.name, icon.theme), icon)
+      Icon.definitions.set(withSuffix(icon.name, icon.theme || 'outline'), icon)
     })
   },
   clear () {
