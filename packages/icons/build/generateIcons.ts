@@ -58,7 +58,7 @@ export async function build(env: Environment) {
   const svgBasicNames = await normalize(env);
 
   // SVG Meta Data Flow
-  const svgMetaDataWithTheme$ = from<ThemeType>([
+  const svgMetaDataWithTheme$ = from<ThemeType[]>([
     'fill',
     'outline',
     'twotone'
@@ -77,7 +77,7 @@ export async function build(env: Environment) {
             path.resolve(env.paths.SVG_DIR, theme, `${kebabCaseName}.svg`)
           )
         ),
-        mergeMap<NameAndPath, BuildTimeIconMetaData>(
+        mergeMap<NameAndPath, Promise<BuildTimeIconMetaData>>(
           async ({ kebabCaseName, identifier }) => {
             const tryUrl = path.resolve(
               env.paths.SVG_DIR,
@@ -110,7 +110,7 @@ export async function build(env: Environment) {
 
   // Nomalized build time icon meta data
   const BuildTimeIconMetaData$ = svgMetaDataWithTheme$.pipe(
-    mergeMap<Observable<BuildTimeIconMetaData>, BuildTimeIconMetaData>(
+    mergeMap<Observable<BuildTimeIconMetaData>, Observable<BuildTimeIconMetaData>>(
       (metaData$) => metaData$
     ),
     map<BuildTimeIconMetaData, BuildTimeIconMetaData>(
@@ -202,7 +202,7 @@ export async function build(env: Environment) {
   // Index File content flow
   const indexTsTemplate = await fs.readFile(env.paths.INDEX_TEMPLATE, 'utf8');
   const indexFile$ = svgMetaDataWithTheme$.pipe(
-    mergeMap<Observable<BuildTimeIconMetaData>, BuildTimeIconMetaData>(
+    mergeMap<Observable<BuildTimeIconMetaData>, Observable<BuildTimeIconMetaData>>(
       (metaData$) => metaData$
     ),
     reduce<BuildTimeIconMetaData, string>(
@@ -227,7 +227,7 @@ export async function build(env: Environment) {
     env.paths.MANIFEST_TEMPLATE,
     'utf8'
   );
-  const manifestFile$ = from<ThemeType>(['fill', 'outline', 'twotone']).pipe(
+  const manifestFile$ = from<ThemeType[]>(['fill', 'outline', 'twotone']).pipe(
     map<ThemeType, { theme: ThemeType; names: string[] }>((theme) => ({
       theme,
       names: svgBasicNames.filter((name) =>
