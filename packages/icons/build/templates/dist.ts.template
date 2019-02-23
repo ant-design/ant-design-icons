@@ -15,7 +15,7 @@ type PathArgs = string | ([string, string]);
 function getNode(viewBox: string, ...paths: PathArgs[]): AbstractNode {
   return {
     tag: 'svg',
-    attrs: { viewBox },
+    attrs: { viewBox, focusable: false },
     children: (paths.map((path) => {
       if(Array.isArray(path)) {
         return {
