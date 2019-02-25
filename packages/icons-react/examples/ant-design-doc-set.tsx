@@ -224,6 +224,7 @@ export default class IconSet extends React.Component {
       'link',
       'mail',
       'mobile',
+      'more',
       'notification',
       'paper-clip',
       'picture',
