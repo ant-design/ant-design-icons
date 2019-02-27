@@ -1,0 +1,16 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "packages/icons-angular/lib/icons/package.json",
+        "packages/icons-angular/lib/package.json",
+        "packages/icons-angular/package.json",
+        "packages/icons-react-native/package.json",
+        "packages/icons-react/package.json",
+        "packages/icons-vue/package.json",
+        "packages/icons/package.json"
+      ]
+    }
+  }
+}
