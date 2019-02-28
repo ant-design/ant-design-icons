@@ -58,12 +58,12 @@ export async function build(env: Environment) {
   const svgBasicNames = await normalize(env);
 
   // SVG Meta Data Flow
-  const svgMetaDataWithTheme$ = from<ThemeType>([
+  const svgMetaDataWithTheme$ = from<ThemeType[]>([
     'fill',
     'outline',
     'twotone'
   ]).pipe(
-    map<ThemeType, Observable<BuildTimeIconMetaData>>((theme) =>
+    map<ThemeType, Observable<any>>((theme) =>
       from(svgBasicNames).pipe(
         map<string, NameAndPath>((kebabCaseName) => {
           const identifier = getIdentifier(
@@ -77,8 +77,8 @@ export async function build(env: Environment) {
             path.resolve(env.paths.SVG_DIR, theme, `${kebabCaseName}.svg`)
           )
         ),
-        mergeMap<NameAndPath, BuildTimeIconMetaData>(
-          async ({ kebabCaseName, identifier }) => {
+        mergeMap<NameAndPath, any>(
+          async ({ kebabCaseName, identifier }: any) => {
             const tryUrl = path.resolve(
               env.paths.SVG_DIR,
               theme,
@@ -110,10 +110,10 @@ export async function build(env: Environment) {
 
   // Nomalized build time icon meta data
   const BuildTimeIconMetaData$ = svgMetaDataWithTheme$.pipe(
-    mergeMap<Observable<BuildTimeIconMetaData>, BuildTimeIconMetaData>(
-      (metaData$) => metaData$
+    mergeMap<Observable<BuildTimeIconMetaData>, any>(
+      (metaData$: any) => metaData$
     ),
-    map<BuildTimeIconMetaData, BuildTimeIconMetaData>(
+    map<any, BuildTimeIconMetaData>(
       ({ identifier, icon }) => {
         icon = _.cloneDeep(icon);
         if (typeof icon.icon !== 'function') {
@@ -126,7 +126,7 @@ export async function build(env: Environment) {
         }
         if (icon.theme === 'twotone') {
           if (typeof icon.icon !== 'function' && icon.icon.children) {
-            icon.icon.children.forEach((pathElment) => {
+            icon.icon.children.forEach((pathElment: any) => {
               pathElment.attrs.fill = pathElment.attrs.fill || '#333';
             });
           }
@@ -202,10 +202,10 @@ export async function build(env: Environment) {
   // Index File content flow
   const indexTsTemplate = await fs.readFile(env.paths.INDEX_TEMPLATE, 'utf8');
   const indexFile$ = svgMetaDataWithTheme$.pipe(
-    mergeMap<Observable<BuildTimeIconMetaData>, BuildTimeIconMetaData>(
-      (metaData$) => metaData$
+    mergeMap<Observable<BuildTimeIconMetaData>, any>(
+      (metaData$: any) => metaData$
     ),
-    reduce<BuildTimeIconMetaData, string>(
+    reduce<any, string>(
       (acc, { identifier, icon }) =>
         acc +
         `export { default as ${identifier} } from './${
@@ -227,7 +227,7 @@ export async function build(env: Environment) {
     env.paths.MANIFEST_TEMPLATE,
     'utf8'
   );
-  const manifestFile$ = from<ThemeType>(['fill', 'outline', 'twotone']).pipe(
+  const manifestFile$ = from<ThemeType[]>(['fill', 'outline', 'twotone']).pipe(
     map<ThemeType, { theme: ThemeType; names: string[] }>((theme) => ({
       theme,
       names: svgBasicNames.filter((name) =>
