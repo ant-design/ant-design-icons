@@ -17,11 +17,7 @@ const Icon = {
   props: ['type', 'primaryColor', 'secondaryColor'],
   displayName: 'IconVue',
   definitions: new MiniMap(),
-  data () {
-    return {
-      twoToneColorPalette,
-    }
-  },
+  functional: true,
   add (...icons) {
     icons.forEach((icon) => {
       Icon.definitions.set(withSuffix(icon.name, icon.theme), icon)
@@ -55,12 +51,12 @@ const Icon = {
       ...twoToneColorPalette,
     }
   },
-  render (h) {
+  render (h, context) {
     const {
       type,
       primaryColor,
       secondaryColor,
-    } = this.$props
+    } = context.props
 
     let target
     let colors = twoToneColorPalette
@@ -97,7 +93,7 @@ const Icon = {
         fill: 'currentColor',
         'aria-hidden': 'true',
       },
-      on: this.$listeners,
+      on: context.listeners,
     })
   },
 }
