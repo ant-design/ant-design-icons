@@ -38,7 +38,7 @@
     "jest": "^23.4.2",
     "mobx": "^5.1.0",
     "mobx-react": "^5.2.5",
-    "rc-tools": "^8.1.6",
+    "rc-tools": "~8.1.6",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-test-renderer": "^16.4.2",
