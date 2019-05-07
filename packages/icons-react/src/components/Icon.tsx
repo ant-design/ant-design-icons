@@ -16,6 +16,7 @@ export interface IconProps {
   style?: React.CSSProperties;
   primaryColor?: string; // only for two-tone
   secondaryColor?: string; // only for two-tone
+  focusable?: string;
 }
 
 export interface TwoToneColorPaletteSetter {
@@ -119,6 +120,7 @@ class Icon extends React.Component<IconProps> {
       height: '1em',
       fill: 'currentColor',
       ['aria-hidden']: 'true',
+      focusable: 'false',
       ...rest
     });
   }

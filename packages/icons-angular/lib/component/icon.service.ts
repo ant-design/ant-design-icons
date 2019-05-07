@@ -127,6 +127,10 @@ export class IconService {
     }));
   }
 
+  getCachedIcons() {
+    return this._svgDefinitions;
+  }
+
   /**
    * Get raw svg and assemble a `IconDefinition` object.
    * @param type
@@ -143,11 +147,11 @@ export class IconService {
 
       // If the string has a namespace within, create a simple `IconDefinition`.
       const icon: IconDefinition = namespace
-        ? { name, icon: '' }
+        ? { name: type, icon: '' }
         : getIconDefinitionFromAbbr(name);
 
       const url = namespace
-        ? `${this._assetsUrlRoot}assets/${namespace}/${icon.name}.svg`
+        ? `${this._assetsUrlRoot}assets/${namespace}/${name}.svg`
         : `${this._assetsUrlRoot}assets/${icon.theme}/${icon.name}.svg`;
 
       const safeUrl = this.sanitizer.sanitize(SecurityContext.URL, url);
