@@ -1,4 +1,4 @@
-import { generate as generateColor } from 'ant-design-palettes';
+import { generate as generateColor } from '@ant-design/colors';
 import { IconDefinition, ThemeType } from './types';
 
 export const antIconConsolePrefix = '[@ant-design/icons-angular]: ';

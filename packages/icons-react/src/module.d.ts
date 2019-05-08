@@ -1,4 +1,4 @@
-declare module 'ant-design-palettes' {
+declare module '@ant-design/colors' {
   type ColorPalettes = [
     string,
     string,
