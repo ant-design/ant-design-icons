@@ -1,5 +1,5 @@
 import { AbstractNode, IconDefinition } from '@ant-design/icons/lib/types';
-import { generate as generateColor } from 'ant-design-palettes';
+import { generate as generateColor } from '@ant-design/colors';
 import * as React from 'react';
 
 export function log(message: string) {

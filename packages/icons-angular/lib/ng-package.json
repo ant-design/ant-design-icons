@@ -6,6 +6,6 @@
     "entryFile": "public_api.ts"
   },
   "whitelistedNonPeerDependencies": [
-    "ant-design-palettes"
+    "@ant-design/colors"
   ]
 }

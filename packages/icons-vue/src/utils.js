@@ -1,4 +1,4 @@
-import { generate as generateColor } from 'ant-design-palettes'
+import { generate as generateColor } from '@ant-design/colors'
 
 export function log (message) {
   if (!(process && process.env && process.env.NODE_ENV === 'production')) {
