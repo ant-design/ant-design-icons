@@ -12,6 +12,6 @@
     "lint": "lerna run lint"
   },
   "devDependencies": {
-    "lerna": "^3.4.0"
+    "lerna": "3.14.1"
   }
 }

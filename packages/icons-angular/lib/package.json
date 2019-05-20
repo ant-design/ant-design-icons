@@ -7,7 +7,7 @@
     "Wendell<wendzhue@gmail.com>"
   ],
   "dependencies": {
-    "@ant-design/colors": "^3.1.0"
+    "@ant-design/colors": "3.1.0"
   },
   "peerDependencies": {
     "@angular/common": "^7.0.0",
