@@ -50,7 +50,7 @@
     "@types/parse5": "^5.0.0",
     "@types/prettier": "^1.13.2",
     "@types/react": "^16.4.7",
-    "@types/react-router": "3.0.15",
+    "@types/react-router": "3.0.20",
     "@types/rimraf": "^2.0.2",
     "@types/svgo": "^1.0.1",
     "antd": "^3.8.2",
