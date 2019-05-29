@@ -1,15 +1,16 @@
-import fs = require('fs-extra');
-import globby = require('globby');
-import _ = require('lodash');
-import path = require('path');
-import { from } from 'rxjs';
+const fs = require('fs-extra');
+const globby = require('globby');
+const _ = require('lodash');
+const path = require('path');
+
+import { from, Observable } from 'rxjs';
 import { map, mergeMap } from 'rxjs/operators';
 import { renameMapper } from '../../constants';
 
-export async function normalizeNamesFromDir(dir: string, outDir?: string) {
-  const rawNames$ = from(await globby(['*.svg'], { cwd: dir, deep: false }));
+export async function normalizeNamesFromDir(dir: string, outDir?: string): Promise<void> {
+  const rawNames$ = from(await globby(['*.svg'], { cwd: dir, deep: false })) as Observable<string>;
   const beforeAndAfter$ = rawNames$.pipe(
-    map((fileNameWithExtension) => {
+    map((fileNameWithExtension: string) => {
       const normalized =
         normalizeName(
           fileNameWithExtension

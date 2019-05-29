@@ -1,13 +1,14 @@
-import globby = require('globby');
-import _ = require('lodash');
-import path = require('path');
+const globby = require('globby');
+const _ = require('lodash');
+const path = require('path');
+
 import { Environment, ThemeType } from '../../typings';
 import { log } from '../../utils';
 import { normalizeNamesFromDir } from './helpers';
 
 const folderNames: ThemeType[] = ['fill', 'outline', 'twotone'];
 
-export async function normalize(env: Environment) {
+export async function normalize(env: Environment): Promise<string[]> {
   for (const folderName of folderNames) {
     const dir = path.join(env.paths.SVG_DIR, folderName);
     await normalizeNamesFromDir(dir);
@@ -24,6 +25,6 @@ export async function normalize(env: Environment) {
         })
       )
     )
-  ).map((name) => name.replace(/\.svg$/, ''));
+  ).map((name: string) => name.replace(/\.svg$/, ''));
   return listNames;
 }

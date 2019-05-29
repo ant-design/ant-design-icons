@@ -1,4 +1,4 @@
-import path = require('path');
+const path = require('path');
 import { Environment } from './typings';
 
 export const environment: Environment = {
