@@ -117,6 +117,8 @@ export async function build(env: Environment) {
       ({ identifier, icon }) => {
         icon = _.cloneDeep(icon);
         if (typeof icon.icon !== 'function') {
+          icon.icon.attrs.focusable = false;
+
           if (!oldIcons.includes(icon.name)) {
             icon.icon.attrs.viewBox = '64 64 896 896';
           }

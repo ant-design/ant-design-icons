@@ -120,7 +120,6 @@ class Icon extends React.Component<IconProps> {
       height: '1em',
       fill: 'currentColor',
       ['aria-hidden']: 'true',
-      focusable: 'false',
       ...rest
     });
   }
