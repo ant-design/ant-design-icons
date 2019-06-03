@@ -86,6 +86,17 @@
             "project": "lib/ng-package.json"
           }
         },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "lib/tsconfig.lib.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {

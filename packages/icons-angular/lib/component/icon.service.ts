@@ -127,7 +127,7 @@ export class IconService {
     }));
   }
 
-  getCachedIcons() {
+  getCachedIcons(): Map<string, IconDefinition> {
     return this._svgDefinitions;
   }
 
