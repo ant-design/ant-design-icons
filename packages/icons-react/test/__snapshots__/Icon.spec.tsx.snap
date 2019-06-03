@@ -11,7 +11,7 @@ exports[`React AntdIcon Component should create SVG element. 1`] = `
     }
   }
   fill="currentColor"
-  focusable="false"
+  focusable={false}
   height="1em"
   style={
     Object {
