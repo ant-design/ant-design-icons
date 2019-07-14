@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { HttpBackend, HttpClient } from '@angular/common/http';
-import { Inject, Optional, Renderer2, RendererFactory2 } from '@angular/core';
+import { Inject, Optional, Renderer2, RendererFactory2, SecurityContext } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { of as observableOf, Observable } from 'rxjs';
 import { catchError, finalize, map, share, tap } from 'rxjs/operators';
 import { CachedIconDefinition, IconDefinition, ThemeType, TwoToneColorPalette, TwoToneColorPaletteSetter } from '../types';
@@ -59,7 +60,8 @@ export class IconService {
     protected _rendererFactory: RendererFactory2,
     @Optional() protected _handler: HttpBackend,
     // tslint:disable-next-line:no-any
-    @Optional() @Inject(DOCUMENT) protected _document: any
+    @Optional() @Inject(DOCUMENT) protected _document: any,
+    protected sanitizer: DomSanitizer
   ) {
     this._renderer = this._rendererFactory.createRenderer(null, null);
     if (this._handler) {
@@ -91,7 +93,7 @@ export class IconService {
    * @param literal
    */
   addIconLiteral(type: string, literal: string): void {
-    const [ _name, namespace ] = getNameAndNamespace(type);
+    const [ name, namespace ] = getNameAndNamespace(type);
     if (!namespace) {
       throw NameSpaceIsNotSpecifyError();
     }
@@ -152,8 +154,12 @@ export class IconService {
         ? `${this._assetsUrlRoot}assets/${namespace}/${name}.svg`
         : `${this._assetsUrlRoot}assets/${icon.theme}/${icon.name}.svg`;
 
+      const safeUrl = this.sanitizer.sanitize(SecurityContext.URL, url);
+
+      if (!safeUrl) { throw UrlNotSafeError(url); }
+
       // Wrap a `IconDefinition`, cache it, delete the shared work.
-      inProgress = this._http.get(url, { responseType: 'text' }).pipe(
+      inProgress = this._http.get(safeUrl, { responseType: 'text' }).pipe(
         map(literal => ({ ...icon, icon: literal })),
         tap(definition => this.addIcon(definition)),
         finalize(() => this._inProgressFetches.delete(type)),
