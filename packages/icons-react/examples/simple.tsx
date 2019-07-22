@@ -1,10 +1,7 @@
-import { AntDesignOutline, DashboardOutline, TwitterOutline } from '@ant-design/icons';
 import * as React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
-import AntdIcon from '../src';
-
-AntdIcon.add(DashboardOutline);
+import { AntDesign, Dashboard, Twitter } from '../src';
 
 const Div = styled.div`
   position: relative;
@@ -32,9 +29,9 @@ const Div = styled.div`
   }
 `;
 
-const AlignAntdIcon = styled(AntdIcon)`
-  vertical-align: -0.125em;
-`;
+const alignStyles = {
+  verticalAlign: '-0.125em',
+}
 
 class SimpleDemo extends React.Component<{}> {
   static displaySize = ['64px', '48px', '32px', '24px', '16px', '12px', '8px'];
@@ -52,11 +49,11 @@ class SimpleDemo extends React.Component<{}> {
       <Div key={fontSize} style={style}>
         {fontSize}
         Ant Design
-        <AlignAntdIcon type={AntDesignOutline} />
+        <AntDesign style={alignStyles} />
         0123
-        <AlignAntdIcon type={'dashboard-o'} />
+        <Dashboard style={alignStyles} />
         你好
-        <AlignAntdIcon type={TwitterOutline} />
+        <Twitter style={alignStyles} />
       </Div>
     );
   }

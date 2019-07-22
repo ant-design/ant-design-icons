@@ -10,13 +10,15 @@ import { observer } from 'mobx-react';
 import * as React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
-import AntdIcon from '../src';
+import * as Icons from '../src';
+
+console.log(Icons, 'Icons');
 
 const antDesignIcons = icons as {
   [key: string]: IconDefinition;
 };
 
-AntdIcon.add(...Object.keys(antDesignIcons).map((key) => antDesignIcons[key]));
+// AntdIcon.add(...Object.keys(antDesignIcons).map((key) => antDesignIcons[key]));
 
 const Container = styled.div`
   display: flex;
@@ -50,6 +52,25 @@ class AllIconDemo extends React.Component<{}> {
 
   @computed
   get Icons() {
+    return Object.keys(Icons).map((iconName) => {
+      const Component = Icons[iconName];
+      return (
+        <Card key={name}>
+          <Component
+            style={{ fontSize: '24px' }}
+            key={iconName}
+            type={iconName}
+          />
+          {/* {React.createElement(component, {
+            style: { fontSize: '24px' },
+            key: iconName,
+            type: iconName,
+          })} */}
+          <NameDescription>{iconName}</NameDescription>
+        </Card>
+      );
+    });
+
     return this.names[this.currentTheme].map((name) => {
       let computedName = name;
       switch (this.currentTheme) {
@@ -67,11 +88,11 @@ class AllIconDemo extends React.Component<{}> {
       }
       return (
         <Card key={name}>
-          <AntdIcon
+          {/* <AntdIcon
             style={{ fontSize: '24px' }}
             key={computedName}
             type={computedName}
-          />
+          /> */}
           <NameDescription>{computedName}</NameDescription>
         </Card>
       );

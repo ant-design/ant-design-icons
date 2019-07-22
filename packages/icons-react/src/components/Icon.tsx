@@ -23,8 +23,8 @@ export interface CustomIconComponentProps {
 
 export type ThemeType = 'filled' | 'outlined' | 'twoTone';
 
-export interface IconProps {
-  icon: IconDefinition;
+export interface IconComponentProps {
+  icon: IconDefinition; // todo
   tabIndex?: number;
   className?: string;
   theme?: ThemeType;
@@ -40,7 +40,9 @@ export interface IconProps {
   role?: string;
 }
 
-class Icon extends React.Component<IconProps> {
+export type IconProps = Omit<IconComponentProps, 'icon'>;
+
+class Icon extends React.Component<IconComponentProps> {
   static displayName = 'AntdIcon';
 
   render() {
@@ -58,7 +60,6 @@ class Icon extends React.Component<IconProps> {
       onClick,
 
       // other
-      theme, // default to outlined
       twoToneColor,
 
       ...restProps
