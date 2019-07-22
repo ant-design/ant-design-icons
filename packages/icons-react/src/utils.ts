@@ -36,29 +36,6 @@ export interface Attrs {
   [key: string]: string;
 }
 
-export class MiniMap<V> {
-  get size() {
-    return Object.keys(this.collection).length;
-  }
-  private collection: { [key: string]: V } = {};
-  clear(): void {
-    this.collection = {};
-  }
-  delete(key: string): boolean {
-    return delete this.collection[key];
-  }
-  get(key: string): V | undefined {
-    return this.collection[key];
-  }
-  has(key: string): boolean {
-    return Boolean(this.collection[key]);
-  }
-  set(key: string, value: V): this {
-    this.collection[key] = value;
-    return this;
-  }
-}
-
 export function generate(
   node: AbstractNode,
   key: string,
@@ -91,18 +68,12 @@ export function getSecondaryColor(primaryColor: string): string {
   return generateColor(primaryColor)[0];
 }
 
-export function withSuffix(
-  name: string,
-  theme: 'fill' | 'outline' | 'twotone'
-) {
-  switch (theme) {
-    case 'fill':
-      return `${name}-fill`;
-    case 'outline':
-      return `${name}-o`;
-    case 'twotone':
-      return `${name}-twotone`;
-    default:
-      throw new TypeError(`Unknown theme type: ${theme}, name: ${name}`);
-  }
-}
+// These props make sure that the SVG behaviours like general text.
+// Reference: https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
+export const svgBaseProps = {
+  width: '1em',
+  height: '1em',
+  fill: 'currentColor',
+  ['aria-hidden']: true,
+  focusable: 'false',
+};

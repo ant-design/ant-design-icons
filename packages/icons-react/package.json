@@ -16,7 +16,9 @@
     "build": "rc-tools run build",
     "dist": "rc-tools run dist",
     "test": "jest",
-    "prepublish": "npm run lint && npm run test && npm run compile"
+    "prepublish": "npm run lint && npm run test && npm run compile",
+    "postcompile": "node scripts/generateIconEntries.js",
+    "generate": "node scripts/generateIcons.js"
   },
   "files": [
     "es",
@@ -28,6 +30,7 @@
   },
   "devDependencies": {
     "@ant-design/icons": "^2.0.0",
+    "@types/classnames": "^2.2.9",
     "@types/jest": "^23.3.1",
     "@types/node": "^10.5.5",
     "@types/react": "^16.4.12",
@@ -49,7 +52,8 @@
   },
   "dependencies": {
     "@ant-design/colors": "^3.1.0",
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "classnames": "^2.2.6"
   },
   "config": {
     "port": 9527,

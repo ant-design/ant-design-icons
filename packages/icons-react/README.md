@@ -18,12 +18,17 @@ yarn add @ant-design/icons-react
 
 ## Basic Usage
 
-First, you should add the icons that you need into the library.
+// Directly import
+
+
+// 
+import { SmileOutline } from 'antd/icons';
+
+You can import it directly or destructure from `antd/icons` when tree-shaking enabled.
 
 ```ts
-import { AntDesignOutline, DashboardOutline, TwitterOutline } from '@ant-design/icons';
-import AntdIcon from '@ant-design/icons-react';
-AntdIcon.add(AntDesignOutline, DashboardOutline);
+import SmileOutline from 'antd/icons/SmileOutline';
+import { SmileOutline } from 'antd/icons';
 ```
 
 After that, you can use antd icons in your React components as simply as this:
