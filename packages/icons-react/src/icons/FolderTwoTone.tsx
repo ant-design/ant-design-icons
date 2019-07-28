@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FolderTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FolderTwoTone as FolderTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FolderTwoTone} theme="twoTone" />;
+const FolderTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={FolderTwoToneSvg} />;
+export default FolderTwoTone;

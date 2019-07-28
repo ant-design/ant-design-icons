@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { PoundCircleTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { PoundCircleTwoTone as PoundCircleTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={PoundCircleTwoTone} theme="twoTone" />;
+const PoundCircleTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={PoundCircleTwoToneSvg} />;
+export default PoundCircleTwoTone;

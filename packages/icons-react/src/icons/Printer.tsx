@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { PrinterOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { PrinterOutline as PrinterOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={PrinterOutline} theme="outlined" />;
+const Printer = (props: AntdIconProps) => <AntdIcon {...props} icon={PrinterOutlineSvg} />;
+export default Printer;

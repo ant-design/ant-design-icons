@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ZhihuOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ZhihuOutline as ZhihuOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ZhihuOutline} theme="outlined" />;
+const Zhihu = (props: AntdIconProps) => <AntdIcon {...props} icon={ZhihuOutlineSvg} />;
+export default Zhihu;

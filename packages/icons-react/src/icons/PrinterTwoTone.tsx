@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { PrinterTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { PrinterTwoTone as PrinterTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={PrinterTwoTone} theme="twoTone" />;
+const PrinterTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={PrinterTwoToneSvg} />;
+export default PrinterTwoTone;

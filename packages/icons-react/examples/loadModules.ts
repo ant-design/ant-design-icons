@@ -1,6 +1,3 @@
-import * as icons from '@ant-design/icons';
-import { IconDefinition } from '@ant-design/icons/lib/types';
+import * as AntdIcons from '../src/icons';
 
-const allIcons: { [key: string]: IconDefinition } = icons;
-
-console.log(allIcons);
+console.log(AntdIcons);

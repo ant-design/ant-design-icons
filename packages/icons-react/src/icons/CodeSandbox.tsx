@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CodeSandboxOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CodeSandboxOutline as CodeSandboxOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CodeSandboxOutline} theme="outlined" />;
+const CodeSandbox = (props: AntdIconProps) => <AntdIcon {...props} icon={CodeSandboxOutlineSvg} />;
+export default CodeSandbox;

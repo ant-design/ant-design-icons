@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { QqSquareFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { QqSquareFill as QqSquareFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={QqSquareFill} theme="filled" />;
+const QqSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={QqSquareFillSvg} />;
+export default QqSquareFilled;

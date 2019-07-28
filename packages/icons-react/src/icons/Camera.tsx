@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CameraOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CameraOutline as CameraOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CameraOutline} theme="outlined" />;
+const Camera = (props: AntdIconProps) => <AntdIcon {...props} icon={CameraOutlineSvg} />;
+export default Camera;

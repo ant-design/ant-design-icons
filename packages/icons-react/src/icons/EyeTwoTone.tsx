@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { EyeTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { EyeTwoTone as EyeTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={EyeTwoTone} theme="twoTone" />;
+const EyeTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={EyeTwoToneSvg} />;
+export default EyeTwoTone;

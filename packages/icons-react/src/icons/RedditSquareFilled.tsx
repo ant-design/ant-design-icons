@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { RedditSquareFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { RedditSquareFill as RedditSquareFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={RedditSquareFill} theme="filled" />;
+const RedditSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={RedditSquareFillSvg} />;
+export default RedditSquareFilled;

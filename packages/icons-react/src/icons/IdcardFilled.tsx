@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { IdcardFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { IdcardFill as IdcardFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={IdcardFill} theme="filled" />;
+const IdcardFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={IdcardFillSvg} />;
+export default IdcardFilled;

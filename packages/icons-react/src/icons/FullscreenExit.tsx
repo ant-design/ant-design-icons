@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FullscreenExitOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FullscreenExitOutline as FullscreenExitOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FullscreenExitOutline} theme="outlined" />;
+const FullscreenExit = (props: AntdIconProps) => <AntdIcon {...props} icon={FullscreenExitOutlineSvg} />;
+export default FullscreenExit;

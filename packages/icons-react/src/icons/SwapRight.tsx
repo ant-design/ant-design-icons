@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { SwapRightOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { SwapRightOutline as SwapRightOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={SwapRightOutline} theme="outlined" />;
+const SwapRight = (props: AntdIconProps) => <AntdIcon {...props} icon={SwapRightOutlineSvg} />;
+export default SwapRight;

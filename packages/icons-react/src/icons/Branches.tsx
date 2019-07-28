@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { BranchesOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { BranchesOutline as BranchesOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={BranchesOutline} theme="outlined" />;
+const Branches = (props: AntdIconProps) => <AntdIcon {...props} icon={BranchesOutlineSvg} />;
+export default Branches;

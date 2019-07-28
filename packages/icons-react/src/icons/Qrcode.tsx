@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { QrcodeOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { QrcodeOutline as QrcodeOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={QrcodeOutline} theme="outlined" />;
+const Qrcode = (props: AntdIconProps) => <AntdIcon {...props} icon={QrcodeOutlineSvg} />;
+export default Qrcode;

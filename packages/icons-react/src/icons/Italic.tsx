@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ItalicOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ItalicOutline as ItalicOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ItalicOutline} theme="outlined" />;
+const Italic = (props: AntdIconProps) => <AntdIcon {...props} icon={ItalicOutlineSvg} />;
+export default Italic;

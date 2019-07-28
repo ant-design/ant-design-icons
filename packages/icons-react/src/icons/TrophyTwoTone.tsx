@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { TrophyTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { TrophyTwoTone as TrophyTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={TrophyTwoTone} theme="twoTone" />;
+const TrophyTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={TrophyTwoToneSvg} />;
+export default TrophyTwoTone;

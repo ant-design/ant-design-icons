@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { MenuFoldOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { MenuFoldOutline as MenuFoldOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={MenuFoldOutline} theme="outlined" />;
+const MenuFold = (props: AntdIconProps) => <AntdIcon {...props} icon={MenuFoldOutlineSvg} />;
+export default MenuFold;

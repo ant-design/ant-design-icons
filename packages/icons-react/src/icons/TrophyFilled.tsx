@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { TrophyFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { TrophyFill as TrophyFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={TrophyFill} theme="filled" />;
+const TrophyFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={TrophyFillSvg} />;
+export default TrophyFilled;

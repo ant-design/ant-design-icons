@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { QuestionCircleTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { QuestionCircleTwoTone as QuestionCircleTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={QuestionCircleTwoTone} theme="twoTone" />;
+const QuestionCircleTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={QuestionCircleTwoToneSvg} />;
+export default QuestionCircleTwoTone;

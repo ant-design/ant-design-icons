@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { PlusCircleOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { PlusCircleOutline as PlusCircleOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={PlusCircleOutline} theme="outlined" />;
+const PlusCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={PlusCircleOutlineSvg} />;
+export default PlusCircle;

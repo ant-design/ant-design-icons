@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { MoneyCollectTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { MoneyCollectTwoTone as MoneyCollectTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={MoneyCollectTwoTone} theme="twoTone" />;
+const MoneyCollectTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={MoneyCollectTwoToneSvg} />;
+export default MoneyCollectTwoTone;

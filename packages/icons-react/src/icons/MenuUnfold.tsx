@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { MenuUnfoldOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { MenuUnfoldOutline as MenuUnfoldOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={MenuUnfoldOutline} theme="outlined" />;
+const MenuUnfold = (props: AntdIconProps) => <AntdIcon {...props} icon={MenuUnfoldOutlineSvg} />;
+export default MenuUnfold;

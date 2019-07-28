@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { RetweetOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { RetweetOutline as RetweetOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={RetweetOutline} theme="outlined" />;
+const Retweet = (props: AntdIconProps) => <AntdIcon {...props} icon={RetweetOutlineSvg} />;
+export default Retweet;

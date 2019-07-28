@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { DoubleRightOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { DoubleRightOutline as DoubleRightOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={DoubleRightOutline} theme="outlined" />;
+const DoubleRight = (props: AntdIconProps) => <AntdIcon {...props} icon={DoubleRightOutlineSvg} />;
+export default DoubleRight;

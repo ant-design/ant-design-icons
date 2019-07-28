@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { VideoCameraFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { VideoCameraFill as VideoCameraFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={VideoCameraFill} theme="filled" />;
+const VideoCameraFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={VideoCameraFillSvg} />;
+export default VideoCameraFilled;

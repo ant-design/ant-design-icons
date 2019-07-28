@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ColumnWidthOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ColumnWidthOutline as ColumnWidthOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ColumnWidthOutline} theme="outlined" />;
+const ColumnWidth = (props: AntdIconProps) => <AntdIcon {...props} icon={ColumnWidthOutlineSvg} />;
+export default ColumnWidth;

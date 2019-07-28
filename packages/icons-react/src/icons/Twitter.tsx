@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { TwitterOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { TwitterOutline as TwitterOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={TwitterOutline} theme="outlined" />;
+const Twitter = (props: AntdIconProps) => <AntdIcon {...props} icon={TwitterOutlineSvg} />;
+export default Twitter;

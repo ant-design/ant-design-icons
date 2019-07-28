@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { PicRightOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { PicRightOutline as PicRightOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={PicRightOutline} theme="outlined" />;
+const PicRight = (props: AntdIconProps) => <AntdIcon {...props} icon={PicRightOutlineSvg} />;
+export default PicRight;

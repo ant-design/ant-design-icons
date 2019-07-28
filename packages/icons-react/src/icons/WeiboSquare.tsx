@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { WeiboSquareOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { WeiboSquareOutline as WeiboSquareOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={WeiboSquareOutline} theme="outlined" />;
+const WeiboSquare = (props: AntdIconProps) => <AntdIcon {...props} icon={WeiboSquareOutlineSvg} />;
+export default WeiboSquare;

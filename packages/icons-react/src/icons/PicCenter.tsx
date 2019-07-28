@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { PicCenterOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { PicCenterOutline as PicCenterOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={PicCenterOutline} theme="outlined" />;
+const PicCenter = (props: AntdIconProps) => <AntdIcon {...props} icon={PicCenterOutlineSvg} />;
+export default PicCenter;

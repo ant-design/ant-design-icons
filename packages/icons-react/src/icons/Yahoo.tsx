@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { YahooOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { YahooOutline as YahooOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={YahooOutline} theme="outlined" />;
+const Yahoo = (props: AntdIconProps) => <AntdIcon {...props} icon={YahooOutlineSvg} />;
+export default Yahoo;

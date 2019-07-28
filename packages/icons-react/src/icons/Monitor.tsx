@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { MonitorOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { MonitorOutline as MonitorOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={MonitorOutline} theme="outlined" />;
+const Monitor = (props: AntdIconProps) => <AntdIcon {...props} icon={MonitorOutlineSvg} />;
+export default Monitor;

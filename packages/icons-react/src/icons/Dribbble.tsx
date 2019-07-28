@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { DribbbleOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { DribbbleOutline as DribbbleOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={DribbbleOutline} theme="outlined" />;
+const Dribbble = (props: AntdIconProps) => <AntdIcon {...props} icon={DribbbleOutlineSvg} />;
+export default Dribbble;

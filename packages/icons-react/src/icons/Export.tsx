@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ExportOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ExportOutline as ExportOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ExportOutline} theme="outlined" />;
+const Export = (props: AntdIconProps) => <AntdIcon {...props} icon={ExportOutlineSvg} />;
+export default Export;

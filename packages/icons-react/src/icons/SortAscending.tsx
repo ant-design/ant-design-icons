@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { SortAscendingOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { SortAscendingOutline as SortAscendingOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={SortAscendingOutline} theme="outlined" />;
+const SortAscending = (props: AntdIconProps) => <AntdIcon {...props} icon={SortAscendingOutlineSvg} />;
+export default SortAscending;

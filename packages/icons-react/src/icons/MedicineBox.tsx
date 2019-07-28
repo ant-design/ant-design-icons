@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { MedicineBoxOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { MedicineBoxOutline as MedicineBoxOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={MedicineBoxOutline} theme="outlined" />;
+const MedicineBox = (props: AntdIconProps) => <AntdIcon {...props} icon={MedicineBoxOutlineSvg} />;
+export default MedicineBox;

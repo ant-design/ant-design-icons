@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { TeamOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { TeamOutline as TeamOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={TeamOutline} theme="outlined" />;
+const Team = (props: AntdIconProps) => <AntdIcon {...props} icon={TeamOutlineSvg} />;
+export default Team;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FilePdfOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FilePdfOutline as FilePdfOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FilePdfOutline} theme="outlined" />;
+const FilePdf = (props: AntdIconProps) => <AntdIcon {...props} icon={FilePdfOutlineSvg} />;
+export default FilePdf;

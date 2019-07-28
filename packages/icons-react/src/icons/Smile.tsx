@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { SmileOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { SmileOutline as SmileOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={SmileOutline} theme="outlined" />;
+const Smile = (props: AntdIconProps) => <AntdIcon {...props} icon={SmileOutlineSvg} />;
+export default Smile;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { UpSquareFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { UpSquareFill as UpSquareFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={UpSquareFill} theme="filled" />;
+const UpSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={UpSquareFillSvg} />;
+export default UpSquareFilled;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { InteractionFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { InteractionFill as InteractionFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={InteractionFill} theme="filled" />;
+const InteractionFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={InteractionFillSvg} />;
+export default InteractionFilled;

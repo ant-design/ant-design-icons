@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { AmazonOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { AmazonOutline as AmazonOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={AmazonOutline} theme="outlined" />;
+const Amazon = (props: AntdIconProps) => <AntdIcon {...props} icon={AmazonOutlineSvg} />;
+export default Amazon;

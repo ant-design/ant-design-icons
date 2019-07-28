@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { AliyunOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { AliyunOutline as AliyunOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={AliyunOutline} theme="outlined" />;
+const Aliyun = (props: AntdIconProps) => <AntdIcon {...props} icon={AliyunOutlineSvg} />;
+export default Aliyun;

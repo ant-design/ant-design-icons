@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { MessageFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { MessageFill as MessageFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={MessageFill} theme="filled" />;
+const MessageFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MessageFillSvg} />;
+export default MessageFilled;

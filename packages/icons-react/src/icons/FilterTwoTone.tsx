@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FilterTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FilterTwoTone as FilterTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FilterTwoTone} theme="twoTone" />;
+const FilterTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={FilterTwoToneSvg} />;
+export default FilterTwoTone;

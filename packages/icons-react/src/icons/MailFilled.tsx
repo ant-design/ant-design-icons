@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { MailFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { MailFill as MailFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={MailFill} theme="filled" />;
+const MailFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MailFillSvg} />;
+export default MailFilled;

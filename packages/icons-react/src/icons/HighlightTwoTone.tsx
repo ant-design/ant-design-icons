@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { HighlightTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { HighlightTwoTone as HighlightTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={HighlightTwoTone} theme="twoTone" />;
+const HighlightTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={HighlightTwoToneSvg} />;
+export default HighlightTwoTone;

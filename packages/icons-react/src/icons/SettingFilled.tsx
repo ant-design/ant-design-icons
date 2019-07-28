@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { SettingFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { SettingFill as SettingFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={SettingFill} theme="filled" />;
+const SettingFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SettingFillSvg} />;
+export default SettingFilled;

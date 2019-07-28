@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { BankOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { BankOutline as BankOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={BankOutline} theme="outlined" />;
+const Bank = (props: AntdIconProps) => <AntdIcon {...props} icon={BankOutlineSvg} />;
+export default Bank;

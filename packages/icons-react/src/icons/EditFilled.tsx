@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { EditFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { EditFill as EditFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={EditFill} theme="filled" />;
+const EditFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={EditFillSvg} />;
+export default EditFilled;

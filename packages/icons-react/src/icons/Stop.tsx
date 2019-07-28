@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { StopOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { StopOutline as StopOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={StopOutline} theme="outlined" />;
+const Stop = (props: AntdIconProps) => <AntdIcon {...props} icon={StopOutlineSvg} />;
+export default Stop;

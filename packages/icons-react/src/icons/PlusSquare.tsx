@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { PlusSquareOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { PlusSquareOutline as PlusSquareOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={PlusSquareOutline} theme="outlined" />;
+const PlusSquare = (props: AntdIconProps) => <AntdIcon {...props} icon={PlusSquareOutlineSvg} />;
+export default PlusSquare;

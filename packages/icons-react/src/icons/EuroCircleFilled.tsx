@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { EuroCircleFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { EuroCircleFill as EuroCircleFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={EuroCircleFill} theme="filled" />;
+const EuroCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={EuroCircleFillSvg} />;
+export default EuroCircleFilled;

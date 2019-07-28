@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { MedicineBoxTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { MedicineBoxTwoTone as MedicineBoxTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={MedicineBoxTwoTone} theme="twoTone" />;
+const MedicineBoxTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={MedicineBoxTwoToneSvg} />;
+export default MedicineBoxTwoTone;

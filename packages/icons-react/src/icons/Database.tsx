@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { DatabaseOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { DatabaseOutline as DatabaseOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={DatabaseOutline} theme="outlined" />;
+const Database = (props: AntdIconProps) => <AntdIcon {...props} icon={DatabaseOutlineSvg} />;
+export default Database;

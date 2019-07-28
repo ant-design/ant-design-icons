@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { BorderOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { BorderOutline as BorderOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={BorderOutline} theme="outlined" />;
+const Border = (props: AntdIconProps) => <AntdIcon {...props} icon={BorderOutlineSvg} />;
+export default Border;

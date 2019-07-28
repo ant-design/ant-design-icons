@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { AmazonCircleFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { AmazonCircleFill as AmazonCircleFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={AmazonCircleFill} theme="filled" />;
+const AmazonCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={AmazonCircleFillSvg} />;
+export default AmazonCircleFilled;

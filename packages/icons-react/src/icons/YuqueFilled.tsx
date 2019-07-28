@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { YuqueFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { YuqueFill as YuqueFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={YuqueFill} theme="filled" />;
+const YuqueFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={YuqueFillSvg} />;
+export default YuqueFilled;

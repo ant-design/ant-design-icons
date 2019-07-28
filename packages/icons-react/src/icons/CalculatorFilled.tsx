@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CalculatorFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CalculatorFill as CalculatorFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CalculatorFill} theme="filled" />;
+const CalculatorFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CalculatorFillSvg} />;
+export default CalculatorFilled;

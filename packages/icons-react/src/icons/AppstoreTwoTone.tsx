@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { AppstoreTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { AppstoreTwoTone as AppstoreTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={AppstoreTwoTone} theme="twoTone" />;
+const AppstoreTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={AppstoreTwoToneSvg} />;
+export default AppstoreTwoTone;

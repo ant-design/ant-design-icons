@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CanlendarTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CanlendarTwoTone as CanlendarTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CanlendarTwoTone} theme="twoTone" />;
+const CanlendarTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CanlendarTwoToneSvg} />;
+export default CanlendarTwoTone;

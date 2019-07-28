@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { GithubFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { GithubFill as GithubFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={GithubFill} theme="filled" />;
+const GithubFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={GithubFillSvg} />;
+export default GithubFilled;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { PlayCircleOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { PlayCircleOutline as PlayCircleOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={PlayCircleOutline} theme="outlined" />;
+const PlayCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={PlayCircleOutlineSvg} />;
+export default PlayCircle;

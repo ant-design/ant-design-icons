@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ContactsOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ContactsOutline as ContactsOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ContactsOutline} theme="outlined" />;
+const Contacts = (props: AntdIconProps) => <AntdIcon {...props} icon={ContactsOutlineSvg} />;
+export default Contacts;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CopyrightOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CopyrightOutline as CopyrightOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CopyrightOutline} theme="outlined" />;
+const Copyright = (props: AntdIconProps) => <AntdIcon {...props} icon={CopyrightOutlineSvg} />;
+export default Copyright;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FormOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FormOutline as FormOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FormOutline} theme="outlined" />;
+const Form = (props: AntdIconProps) => <AntdIcon {...props} icon={FormOutlineSvg} />;
+export default Form;

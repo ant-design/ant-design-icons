@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CompassTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CompassTwoTone as CompassTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CompassTwoTone} theme="twoTone" />;
+const CompassTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CompassTwoToneSvg} />;
+export default CompassTwoTone;

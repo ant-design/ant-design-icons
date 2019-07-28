@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ExperimentTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ExperimentTwoTone as ExperimentTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ExperimentTwoTone} theme="twoTone" />;
+const ExperimentTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={ExperimentTwoToneSvg} />;
+export default ExperimentTwoTone;

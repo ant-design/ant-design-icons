@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ExperimentFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ExperimentFill as ExperimentFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ExperimentFill} theme="filled" />;
+const ExperimentFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ExperimentFillSvg} />;
+export default ExperimentFilled;

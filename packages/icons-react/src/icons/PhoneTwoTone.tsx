@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { PhoneTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { PhoneTwoTone as PhoneTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={PhoneTwoTone} theme="twoTone" />;
+const PhoneTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={PhoneTwoToneSvg} />;
+export default PhoneTwoTone;

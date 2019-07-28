@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { PlayCircleFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { PlayCircleFill as PlayCircleFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={PlayCircleFill} theme="filled" />;
+const PlayCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={PlayCircleFillSvg} />;
+export default PlayCircleFilled;

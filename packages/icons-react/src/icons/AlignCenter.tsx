@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { AlignCenterOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { AlignCenterOutline as AlignCenterOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={AlignCenterOutline} theme="outlined" />;
+const AlignCenter = (props: AntdIconProps) => <AntdIcon {...props} icon={AlignCenterOutlineSvg} />;
+export default AlignCenter;

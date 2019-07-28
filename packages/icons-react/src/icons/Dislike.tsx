@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { DislikeOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { DislikeOutline as DislikeOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={DislikeOutline} theme="outlined" />;
+const Dislike = (props: AntdIconProps) => <AntdIcon {...props} icon={DislikeOutlineSvg} />;
+export default Dislike;

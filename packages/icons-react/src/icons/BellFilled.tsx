@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { BellFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { BellFill as BellFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={BellFill} theme="filled" />;
+const BellFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BellFillSvg} />;
+export default BellFilled;

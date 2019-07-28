@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { SwitcherFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { SwitcherFill as SwitcherFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={SwitcherFill} theme="filled" />;
+const SwitcherFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SwitcherFillSvg} />;
+export default SwitcherFilled;

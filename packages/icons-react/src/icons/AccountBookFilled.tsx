@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { AccountBookFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { AccountBookFill as AccountBookFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={AccountBookFill} theme="filled" />;
+const AccountBookFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={AccountBookFillSvg} />;
+export default AccountBookFilled;

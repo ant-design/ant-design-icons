@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { MinusOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { MinusOutline as MinusOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={MinusOutline} theme="outlined" />;
+const Minus = (props: AntdIconProps) => <AntdIcon {...props} icon={MinusOutlineSvg} />;
+export default Minus;

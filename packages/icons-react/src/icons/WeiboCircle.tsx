@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { WeiboCircleOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { WeiboCircleOutline as WeiboCircleOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={WeiboCircleOutline} theme="outlined" />;
+const WeiboCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={WeiboCircleOutlineSvg} />;
+export default WeiboCircle;

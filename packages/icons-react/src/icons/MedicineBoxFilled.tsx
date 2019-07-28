@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { MedicineBoxFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { MedicineBoxFill as MedicineBoxFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={MedicineBoxFill} theme="filled" />;
+const MedicineBoxFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MedicineBoxFillSvg} />;
+export default MedicineBoxFilled;

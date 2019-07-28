@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { StopFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { StopFill as StopFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={StopFill} theme="filled" />;
+const StopFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={StopFillSvg} />;
+export default StopFilled;

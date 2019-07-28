@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CloudUploadOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CloudUploadOutline as CloudUploadOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CloudUploadOutline} theme="outlined" />;
+const CloudUpload = (props: AntdIconProps) => <AntdIcon {...props} icon={CloudUploadOutlineSvg} />;
+export default CloudUpload;

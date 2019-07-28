@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ReconciliationTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ReconciliationTwoTone as ReconciliationTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ReconciliationTwoTone} theme="twoTone" />;
+const ReconciliationTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={ReconciliationTwoToneSvg} />;
+export default ReconciliationTwoTone;

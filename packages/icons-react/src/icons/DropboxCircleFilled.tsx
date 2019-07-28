@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { DropboxCircleFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { DropboxCircleFill as DropboxCircleFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={DropboxCircleFill} theme="filled" />;
+const DropboxCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DropboxCircleFillSvg} />;
+export default DropboxCircleFilled;

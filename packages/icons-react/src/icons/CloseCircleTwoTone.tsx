@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CloseCircleTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CloseCircleTwoTone as CloseCircleTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CloseCircleTwoTone} theme="twoTone" />;
+const CloseCircleTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseCircleTwoToneSvg} />;
+export default CloseCircleTwoTone;

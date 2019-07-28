@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { PaperClipOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { PaperClipOutline as PaperClipOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={PaperClipOutline} theme="outlined" />;
+const PaperClip = (props: AntdIconProps) => <AntdIcon {...props} icon={PaperClipOutlineSvg} />;
+export default PaperClip;

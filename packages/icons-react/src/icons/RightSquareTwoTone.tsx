@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { RightSquareTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { RightSquareTwoTone as RightSquareTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={RightSquareTwoTone} theme="twoTone" />;
+const RightSquareTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={RightSquareTwoToneSvg} />;
+export default RightSquareTwoTone;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ArrowsAltOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ArrowsAltOutline as ArrowsAltOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ArrowsAltOutline} theme="outlined" />;
+const ArrowsAlt = (props: AntdIconProps) => <AntdIcon {...props} icon={ArrowsAltOutlineSvg} />;
+export default ArrowsAlt;

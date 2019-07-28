@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { GoogleCircleFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { GoogleCircleFill as GoogleCircleFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={GoogleCircleFill} theme="filled" />;
+const GoogleCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={GoogleCircleFillSvg} />;
+export default GoogleCircleFilled;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FullscreenOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FullscreenOutline as FullscreenOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FullscreenOutline} theme="outlined" />;
+const Fullscreen = (props: AntdIconProps) => <AntdIcon {...props} icon={FullscreenOutlineSvg} />;
+export default Fullscreen;

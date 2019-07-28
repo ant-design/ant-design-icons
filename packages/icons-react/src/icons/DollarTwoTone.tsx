@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { DollarTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { DollarTwoTone as DollarTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={DollarTwoTone} theme="twoTone" />;
+const DollarTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={DollarTwoToneSvg} />;
+export default DollarTwoTone;

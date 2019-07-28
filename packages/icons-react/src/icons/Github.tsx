@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { GithubOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { GithubOutline as GithubOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={GithubOutline} theme="outlined" />;
+const Github = (props: AntdIconProps) => <AntdIcon {...props} icon={GithubOutlineSvg} />;
+export default Github;

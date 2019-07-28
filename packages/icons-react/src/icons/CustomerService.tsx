@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CustomerServiceOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CustomerServiceOutline as CustomerServiceOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CustomerServiceOutline} theme="outlined" />;
+const CustomerService = (props: AntdIconProps) => <AntdIcon {...props} icon={CustomerServiceOutlineSvg} />;
+export default CustomerService;

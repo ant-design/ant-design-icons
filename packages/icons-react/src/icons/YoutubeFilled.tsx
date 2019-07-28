@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { YoutubeFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { YoutubeFill as YoutubeFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={YoutubeFill} theme="filled" />;
+const YoutubeFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={YoutubeFillSvg} />;
+export default YoutubeFilled;

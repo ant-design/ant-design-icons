@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { camelCase, capitalize, upperFirst } = require('lodash');
+const { camelCase, upperFirst } = require('lodash');
 const manifest = require('@ant-design/icons/lib/manifest').default;
 
 const themeMap = {
@@ -20,6 +20,8 @@ Object.keys(manifest).forEach(theme => {
   manifest[theme].forEach(name => {
     const baseName = upperFirst(camelCase(name));
     const componentName = baseName + upperFirst(themeMap[theme]);
+    // const fileName = componentName.replace('filled', '');
+    // todo: svg 需要统一 filled, outlined, twotone
     const iconName = baseName + upperFirst(theme === 'twotone' ? 'twoTone': theme);
     icons.push(componentName);
     console.log(`Generate: ${componentName}`);
@@ -29,11 +31,11 @@ Object.keys(manifest).forEach(theme => {
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ${iconName} } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ${iconName} as ${iconName}Svg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={${iconName}} theme="${themeMap[theme] ||
-        'outlined'}" />;
+const ${componentName} = (props: AntdIconProps) => <AntdIcon {...props} icon={${iconName}Svg} />;
+export default ${componentName};
 `,
     );
   });

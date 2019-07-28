@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { QqOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { QqOutline as QqOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={QqOutline} theme="outlined" />;
+const Qq = (props: AntdIconProps) => <AntdIcon {...props} icon={QqOutlineSvg} />;
+export default Qq;

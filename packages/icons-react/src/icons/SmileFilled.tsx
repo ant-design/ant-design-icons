@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { SmileFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { SmileFill as SmileFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={SmileFill} theme="filled" />;
+const SmileFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SmileFillSvg} />;
+export default SmileFilled;

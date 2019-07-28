@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CaretUpOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CaretUpOutline as CaretUpOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CaretUpOutline} theme="outlined" />;
+const CaretUp = (props: AntdIconProps) => <AntdIcon {...props} icon={CaretUpOutlineSvg} />;
+export default CaretUp;

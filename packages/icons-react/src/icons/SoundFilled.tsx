@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { SoundFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { SoundFill as SoundFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={SoundFill} theme="filled" />;
+const SoundFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SoundFillSvg} />;
+export default SoundFilled;

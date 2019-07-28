@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FunnelPlotTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FunnelPlotTwoTone as FunnelPlotTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FunnelPlotTwoTone} theme="twoTone" />;
+const FunnelPlotTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={FunnelPlotTwoToneSvg} />;
+export default FunnelPlotTwoTone;

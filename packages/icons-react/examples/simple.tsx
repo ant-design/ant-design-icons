@@ -49,11 +49,11 @@ class SimpleDemo extends React.Component<{}> {
       <Div key={fontSize} style={style}>
         {fontSize}
         Ant Design
-        <AntDesign style={alignStyles} />
+        <AntDesign svgStyle={alignStyles} />
         0123
-        <Dashboard style={alignStyles} />
+        <Dashboard svgStyle={alignStyles} />
         你好
-        <Twitter style={alignStyles} />
+        <Twitter svgStyle={alignStyles} />
       </Div>
     );
   }

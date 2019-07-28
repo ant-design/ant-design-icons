@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { BookTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { BookTwoTone as BookTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={BookTwoTone} theme="twoTone" />;
+const BookTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={BookTwoToneSvg} />;
+export default BookTwoTone;

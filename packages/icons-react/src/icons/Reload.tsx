@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ReloadOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ReloadOutline as ReloadOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ReloadOutline} theme="outlined" />;
+const Reload = (props: AntdIconProps) => <AntdIcon {...props} icon={ReloadOutlineSvg} />;
+export default Reload;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ContactsFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ContactsFill as ContactsFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ContactsFill} theme="filled" />;
+const ContactsFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ContactsFillSvg} />;
+export default ContactsFilled;

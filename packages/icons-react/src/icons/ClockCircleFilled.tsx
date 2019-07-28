@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ClockCircleFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ClockCircleFill as ClockCircleFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ClockCircleFill} theme="filled" />;
+const ClockCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ClockCircleFillSvg} />;
+export default ClockCircleFilled;

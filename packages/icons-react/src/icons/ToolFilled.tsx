@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ToolFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ToolFill as ToolFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ToolFill} theme="filled" />;
+const ToolFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ToolFillSvg} />;
+export default ToolFilled;

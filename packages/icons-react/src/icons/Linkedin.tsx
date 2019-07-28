@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { LinkedinOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { LinkedinOutline as LinkedinOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={LinkedinOutline} theme="outlined" />;
+const Linkedin = (props: AntdIconProps) => <AntdIcon {...props} icon={LinkedinOutlineSvg} />;
+export default Linkedin;

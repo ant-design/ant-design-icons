@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { BarChartOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { BarChartOutline as BarChartOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={BarChartOutline} theme="outlined" />;
+const BarChart = (props: AntdIconProps) => <AntdIcon {...props} icon={BarChartOutlineSvg} />;
+export default BarChart;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { GitlabFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { GitlabFill as GitlabFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={GitlabFill} theme="filled" />;
+const GitlabFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={GitlabFillSvg} />;
+export default GitlabFilled;

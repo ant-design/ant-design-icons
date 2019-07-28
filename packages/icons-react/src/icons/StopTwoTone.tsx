@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { StopTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { StopTwoTone as StopTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={StopTwoTone} theme="twoTone" />;
+const StopTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={StopTwoToneSvg} />;
+export default StopTwoTone;

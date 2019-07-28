@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FacebookFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FacebookFill as FacebookFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FacebookFill} theme="filled" />;
+const FacebookFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FacebookFillSvg} />;
+export default FacebookFilled;

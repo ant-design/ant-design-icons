@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CloseSquareFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CloseSquareFill as CloseSquareFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CloseSquareFill} theme="filled" />;
+const CloseSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseSquareFillSvg} />;
+export default CloseSquareFilled;

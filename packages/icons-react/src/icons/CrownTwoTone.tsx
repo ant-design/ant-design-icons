@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CrownTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CrownTwoTone as CrownTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CrownTwoTone} theme="twoTone" />;
+const CrownTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CrownTwoToneSvg} />;
+export default CrownTwoTone;

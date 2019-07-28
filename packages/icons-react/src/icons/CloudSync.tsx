@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CloudSyncOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CloudSyncOutline as CloudSyncOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CloudSyncOutline} theme="outlined" />;
+const CloudSync = (props: AntdIconProps) => <AntdIcon {...props} icon={CloudSyncOutlineSvg} />;
+export default CloudSync;

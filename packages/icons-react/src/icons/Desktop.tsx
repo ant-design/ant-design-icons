@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { DesktopOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { DesktopOutline as DesktopOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={DesktopOutline} theme="outlined" />;
+const Desktop = (props: AntdIconProps) => <AntdIcon {...props} icon={DesktopOutlineSvg} />;
+export default Desktop;

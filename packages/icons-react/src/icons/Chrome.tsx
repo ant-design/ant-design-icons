@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ChromeOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ChromeOutline as ChromeOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ChromeOutline} theme="outlined" />;
+const Chrome = (props: AntdIconProps) => <AntdIcon {...props} icon={ChromeOutlineSvg} />;
+export default Chrome;

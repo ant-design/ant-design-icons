@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { SafetyCertificateOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { SafetyCertificateOutline as SafetyCertificateOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={SafetyCertificateOutline} theme="outlined" />;
+const SafetyCertificate = (props: AntdIconProps) => <AntdIcon {...props} icon={SafetyCertificateOutlineSvg} />;
+export default SafetyCertificate;

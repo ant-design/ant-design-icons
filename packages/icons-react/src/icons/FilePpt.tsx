@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FilePptOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FilePptOutline as FilePptOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FilePptOutline} theme="outlined" />;
+const FilePpt = (props: AntdIconProps) => <AntdIcon {...props} icon={FilePptOutlineSvg} />;
+export default FilePpt;

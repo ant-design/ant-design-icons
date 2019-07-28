@@ -8,7 +8,6 @@ import {
 } from '../utils';
 
 export interface IconProps {
-  type?: string ;
   icon: IconDefinition;
   className?: string;
   onClick?: React.MouseEventHandler<SVGSVGElement>;
@@ -52,17 +51,15 @@ class Icon extends React.Component<IconProps> {
 
   render() {
     const {
-      type,
       icon,
       className,
       onClick,
       style,
       primaryColor,
       secondaryColor,
-      ...rest
+      ...restProps
     } = this.props;
 
-    let target = icon;
     let colors: TwoToneColorPalette = twoToneColorPalette;
     if (primaryColor) {
       colors = {
@@ -71,9 +68,10 @@ class Icon extends React.Component<IconProps> {
       };
     }
     if (!isIconDefinition(icon)) {
-      log(`type should be string or icon definiton, but got ${type}`);
+      log(`icon should be icon definiton, but got ${icon}`);
       return null;
     }
+    let target = icon;
     if (target && typeof target.icon === 'function') {
       target = {
         ...target,
@@ -89,7 +87,7 @@ class Icon extends React.Component<IconProps> {
       height: '1em',
       fill: 'currentColor',
       ['aria-hidden']: 'true',
-      ...rest
+      ...restProps
     });
   }
 }

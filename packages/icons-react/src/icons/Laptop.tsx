@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { LaptopOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { LaptopOutline as LaptopOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={LaptopOutline} theme="outlined" />;
+const Laptop = (props: AntdIconProps) => <AntdIcon {...props} icon={LaptopOutlineSvg} />;
+export default Laptop;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { RedEnvelopeOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { RedEnvelopeOutline as RedEnvelopeOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={RedEnvelopeOutline} theme="outlined" />;
+const RedEnvelope = (props: AntdIconProps) => <AntdIcon {...props} icon={RedEnvelopeOutlineSvg} />;
+export default RedEnvelope;

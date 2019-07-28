@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { BehanceSquareFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { BehanceSquareFill as BehanceSquareFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={BehanceSquareFill} theme="filled" />;
+const BehanceSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BehanceSquareFillSvg} />;
+export default BehanceSquareFilled;

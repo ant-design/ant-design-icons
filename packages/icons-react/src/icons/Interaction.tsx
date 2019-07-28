@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { InteractionOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { InteractionOutline as InteractionOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={InteractionOutline} theme="outlined" />;
+const Interaction = (props: AntdIconProps) => <AntdIcon {...props} icon={InteractionOutlineSvg} />;
+export default Interaction;

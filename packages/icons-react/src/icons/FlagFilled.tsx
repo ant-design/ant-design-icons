@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FlagFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FlagFill as FlagFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FlagFill} theme="filled" />;
+const FlagFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FlagFillSvg} />;
+export default FlagFilled;

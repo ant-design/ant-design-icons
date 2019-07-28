@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { LogoutOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { LogoutOutline as LogoutOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={LogoutOutline} theme="outlined" />;
+const Logout = (props: AntdIconProps) => <AntdIcon {...props} icon={LogoutOutlineSvg} />;
+export default Logout;

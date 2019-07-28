@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { HourglassFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { HourglassFill as HourglassFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={HourglassFill} theme="filled" />;
+const HourglassFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={HourglassFillSvg} />;
+export default HourglassFilled;

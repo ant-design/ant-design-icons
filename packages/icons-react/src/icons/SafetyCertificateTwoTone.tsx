@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { SafetyCertificateTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { SafetyCertificateTwoTone as SafetyCertificateTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={SafetyCertificateTwoTone} theme="twoTone" />;
+const SafetyCertificateTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={SafetyCertificateTwoToneSvg} />;
+export default SafetyCertificateTwoTone;

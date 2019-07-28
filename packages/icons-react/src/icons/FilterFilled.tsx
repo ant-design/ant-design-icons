@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FilterFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FilterFill as FilterFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FilterFill} theme="filled" />;
+const FilterFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FilterFillSvg} />;
+export default FilterFilled;

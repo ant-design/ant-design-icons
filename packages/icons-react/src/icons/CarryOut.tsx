@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CarryOutOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CarryOutOutline as CarryOutOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CarryOutOutline} theme="outlined" />;
+const CarryOut = (props: AntdIconProps) => <AntdIcon {...props} icon={CarryOutOutlineSvg} />;
+export default CarryOut;

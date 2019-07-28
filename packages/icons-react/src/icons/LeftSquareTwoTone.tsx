@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { LeftSquareTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { LeftSquareTwoTone as LeftSquareTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={LeftSquareTwoTone} theme="twoTone" />;
+const LeftSquareTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={LeftSquareTwoToneSvg} />;
+export default LeftSquareTwoTone;

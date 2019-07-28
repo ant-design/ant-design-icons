@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CarryOutFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CarryOutFill as CarryOutFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CarryOutFill} theme="filled" />;
+const CarryOutFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CarryOutFillSvg} />;
+export default CarryOutFilled;

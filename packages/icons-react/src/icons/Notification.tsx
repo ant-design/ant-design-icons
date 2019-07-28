@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { NotificationOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { NotificationOutline as NotificationOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={NotificationOutline} theme="outlined" />;
+const Notification = (props: AntdIconProps) => <AntdIcon {...props} icon={NotificationOutlineSvg} />;
+export default Notification;

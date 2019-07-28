@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { InterationTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { InterationTwoTone as InterationTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={InterationTwoTone} theme="twoTone" />;
+const InterationTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={InterationTwoToneSvg} />;
+export default InterationTwoTone;

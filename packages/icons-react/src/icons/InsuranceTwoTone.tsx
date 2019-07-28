@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { InsuranceTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { InsuranceTwoTone as InsuranceTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={InsuranceTwoTone} theme="twoTone" />;
+const InsuranceTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={InsuranceTwoToneSvg} />;
+export default InsuranceTwoTone;

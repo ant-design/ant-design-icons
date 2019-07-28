@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FileAddFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FileAddFill as FileAddFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FileAddFill} theme="filled" />;
+const FileAddFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FileAddFillSvg} />;
+export default FileAddFilled;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { SwitcherOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { SwitcherOutline as SwitcherOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={SwitcherOutline} theme="outlined" />;
+const Switcher = (props: AntdIconProps) => <AntdIcon {...props} icon={SwitcherOutlineSvg} />;
+export default Switcher;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CloudServerOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CloudServerOutline as CloudServerOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CloudServerOutline} theme="outlined" />;
+const CloudServer = (props: AntdIconProps) => <AntdIcon {...props} icon={CloudServerOutlineSvg} />;
+export default CloudServer;

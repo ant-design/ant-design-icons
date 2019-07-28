@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { EuroOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { EuroOutline as EuroOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={EuroOutline} theme="outlined" />;
+const Euro = (props: AntdIconProps) => <AntdIcon {...props} icon={EuroOutlineSvg} />;
+export default Euro;

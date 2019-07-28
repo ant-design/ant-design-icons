@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { LockFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { LockFill as LockFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={LockFill} theme="filled" />;
+const LockFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={LockFillSvg} />;
+export default LockFilled;

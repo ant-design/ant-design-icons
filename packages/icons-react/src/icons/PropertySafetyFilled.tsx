@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { PropertySafetyFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { PropertySafetyFill as PropertySafetyFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={PropertySafetyFill} theme="filled" />;
+const PropertySafetyFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={PropertySafetyFillSvg} />;
+export default PropertySafetyFilled;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ScissorOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ScissorOutline as ScissorOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ScissorOutline} theme="outlined" />;
+const Scissor = (props: AntdIconProps) => <AntdIcon {...props} icon={ScissorOutlineSvg} />;
+export default Scissor;

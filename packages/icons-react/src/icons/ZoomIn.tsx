@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ZoomInOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ZoomInOutline as ZoomInOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ZoomInOutline} theme="outlined" />;
+const ZoomIn = (props: AntdIconProps) => <AntdIcon {...props} icon={ZoomInOutlineSvg} />;
+export default ZoomIn;

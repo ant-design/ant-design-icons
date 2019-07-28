@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { EyeFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { EyeFill as EyeFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={EyeFill} theme="filled" />;
+const EyeFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={EyeFillSvg} />;
+export default EyeFilled;

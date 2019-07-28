@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { DingdingOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { DingdingOutline as DingdingOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={DingdingOutline} theme="outlined" />;
+const Dingding = (props: AntdIconProps) => <AntdIcon {...props} icon={DingdingOutlineSvg} />;
+export default Dingding;

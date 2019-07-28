@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { DeleteFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { DeleteFill as DeleteFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={DeleteFill} theme="filled" />;
+const DeleteFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DeleteFillSvg} />;
+export default DeleteFilled;

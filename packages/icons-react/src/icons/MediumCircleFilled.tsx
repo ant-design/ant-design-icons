@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { MediumCircleFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { MediumCircleFill as MediumCircleFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={MediumCircleFill} theme="filled" />;
+const MediumCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MediumCircleFillSvg} />;
+export default MediumCircleFilled;

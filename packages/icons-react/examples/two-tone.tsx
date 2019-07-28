@@ -1,19 +1,17 @@
-import * as icons from '@ant-design/icons/lib/dist';
-import { IconDefinition } from '@ant-design/icons/lib/types';
 import * as React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
-import AntdIcon from '../src';
+
+import { setTwoToneColor } from '../src';
+import * as AntdIcons from '../src/icons';
 
 const allIcons: {
-  [key: string]: IconDefinition;
-} = icons;
+  [key: string]: any;
+} = AntdIcons;
 
-const iconsList = Object.keys(allIcons).map((key) => allIcons[key]);
-const manifest = iconsList
-  .filter((icon) => icon.theme === 'twotone')
-  .map(({name}) => `${name}-twotone`);
-AntdIcon.add(...iconsList);
+const iconsList = Object.keys(allIcons)
+  .map(iconName => allIcons[iconName])
+  .filter((icon) => icon.name.includes('TwoTone'));
 
 const Container = styled.div`
   display: flex;
@@ -48,27 +46,14 @@ class AllIconDemo extends React.Component {
 
   onPrimaryColorChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
     console.log(e.currentTarget.value);
-    AntdIcon.setTwoToneColors({
-      primaryColor: e.currentTarget.value
-    });
+    setTwoToneColor(e.currentTarget.value);
     this.setState({
       primaryColor: e.currentTarget.value
     });
   }
 
   componentWillMount() {
-    AntdIcon.setTwoToneColors({
-      primaryColor: this.state.primaryColor
-    });
-  }
-
-  renderIcons(names: string[]) {
-    return names.map((name) => (
-      <Card key={name}>
-        <AntdIcon style={{ fontSize: '16px' }} key={name} type={name} />
-        <NameDescription>{name}</NameDescription>
-      </Card>
-    ));
+    setTwoToneColor(this.state.primaryColor);
   }
 
   render() {
@@ -84,7 +69,16 @@ class AllIconDemo extends React.Component {
           />
           <Text>{this.state.primaryColor}</Text>
         </div>
-        <Container>{this.renderIcons(manifest)}</Container>
+        <Container>
+          {
+            iconsList.map(Component => (
+              <Card key={Component.name}>
+                <Component style={{ fontSize: '16px' }} />
+                <NameDescription>{Component.name}</NameDescription>
+              </Card>
+            ))
+          }
+        </Container>
       </div>
     );
   }

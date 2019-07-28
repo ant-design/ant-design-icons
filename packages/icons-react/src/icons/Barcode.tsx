@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { BarcodeOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { BarcodeOutline as BarcodeOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={BarcodeOutline} theme="outlined" />;
+const Barcode = (props: AntdIconProps) => <AntdIcon {...props} icon={BarcodeOutlineSvg} />;
+export default Barcode;

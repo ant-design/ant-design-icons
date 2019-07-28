@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { QuestionCircleOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { QuestionCircleOutline as QuestionCircleOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={QuestionCircleOutline} theme="outlined" />;
+const QuestionCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={QuestionCircleOutlineSvg} />;
+export default QuestionCircle;

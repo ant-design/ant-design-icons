@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { RadiusUpleftOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { RadiusUpleftOutline as RadiusUpleftOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={RadiusUpleftOutline} theme="outlined" />;
+const RadiusUpleft = (props: AntdIconProps) => <AntdIcon {...props} icon={RadiusUpleftOutlineSvg} />;
+export default RadiusUpleft;

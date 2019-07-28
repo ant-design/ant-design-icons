@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FilePptTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FilePptTwoTone as FilePptTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FilePptTwoTone} theme="twoTone" />;
+const FilePptTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={FilePptTwoToneSvg} />;
+export default FilePptTwoTone;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CalculatorTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CalculatorTwoTone as CalculatorTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CalculatorTwoTone} theme="twoTone" />;
+const CalculatorTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CalculatorTwoToneSvg} />;
+export default CalculatorTwoTone;

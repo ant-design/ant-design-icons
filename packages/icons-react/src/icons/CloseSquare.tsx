@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CloseSquareOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CloseSquareOutline as CloseSquareOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CloseSquareOutline} theme="outlined" />;
+const CloseSquare = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseSquareOutlineSvg} />;
+export default CloseSquare;

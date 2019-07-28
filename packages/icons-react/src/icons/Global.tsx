@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { GlobalOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { GlobalOutline as GlobalOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={GlobalOutline} theme="outlined" />;
+const Global = (props: AntdIconProps) => <AntdIcon {...props} icon={GlobalOutlineSvg} />;
+export default Global;

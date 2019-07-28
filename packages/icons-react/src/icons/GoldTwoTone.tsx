@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { GoldTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { GoldTwoTone as GoldTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={GoldTwoTone} theme="twoTone" />;
+const GoldTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={GoldTwoToneSvg} />;
+export default GoldTwoTone;

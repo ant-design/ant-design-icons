@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CheckCircleOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CheckCircleOutline as CheckCircleOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CheckCircleOutline} theme="outlined" />;
+const CheckCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={CheckCircleOutlineSvg} />;
+export default CheckCircle;

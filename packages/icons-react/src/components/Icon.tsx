@@ -1,12 +1,18 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { IconDefinition } from '@ant-design/icons/lib/types';
 
-import ReactIcon from './IconBase';
-import { svgBaseProps } from '../utils';
+import { svgBaseProps, log } from '../utils';
 
-export interface TransferLocale {
-  icon: string;
+export interface IconBaseProps {
+  tabIndex?: number;
+  className?: string;
+  title?: string;
+  onKeyUp?: React.KeyboardEventHandler<HTMLElement>;
+  onClick?: React.MouseEventHandler<HTMLElement>;
+  style?: React.CSSProperties;
+  role?: string;
+  spin?: boolean;
+  rotate?: number;
 }
 
 export interface CustomIconComponentProps {
@@ -16,31 +22,13 @@ export interface CustomIconComponentProps {
   viewBox?: string;
   className?: string;
   style?: React.CSSProperties;
-  spin?: boolean;
-  rotate?: number;
-  ['aria-hidden']?: React.AriaAttributes['aria-hidden'];
 }
 
-export type ThemeType = 'filled' | 'outlined' | 'twoTone';
-
-export interface IconComponentProps {
-  icon: IconDefinition; // todo
-  tabIndex?: number;
-  className?: string;
-  theme?: ThemeType;
-  title?: string;
-  onKeyUp?: React.KeyboardEventHandler<HTMLElement>;
-  onClick?: React.MouseEventHandler<HTMLElement>;
-  twoToneColor?: string;
+export interface IconComponentProps extends IconBaseProps {
   viewBox?: string;
-  spin?: boolean;
-  rotate?: number;
-  style?: React.CSSProperties;
-  prefixCls?: string;
-  role?: string;
+  component?: React.ComponentType<CustomIconComponentProps>;
+  ariaLabel?: React.AriaAttributes['aria-label'];
 }
-
-export type IconProps = Omit<IconComponentProps, 'icon'>;
 
 class Icon extends React.Component<IconComponentProps> {
   static displayName = 'AntdIcon';
@@ -51,7 +39,7 @@ class Icon extends React.Component<IconComponentProps> {
       className,
 
       // affect inner <svg>...</svg>
-      icon,
+      component: Component,
       viewBox,
       spin,
       rotate,
@@ -59,30 +47,32 @@ class Icon extends React.Component<IconComponentProps> {
       tabIndex,
       onClick,
 
-      // other
-      twoToneColor,
-
+      // children
+      children,
       ...restProps
     } = this.props;
 
+    if (!(Component || children)) {
+      log('Should have `type` prop or `component` prop or `children`.');
+    }
+  
     const classString = classNames(
-      {
-        [`anticon`]: true,
-        [`anticon-${icon.name}`]: Boolean(icon.name),
-      },
+      'anticon',
       className,
     );
 
     const svgClassString = classNames({
-      [`anticon-spin`]: !!spin || icon.name === 'loading',
+      [`anticon-spin`]: !!spin,
     });
 
+    let innerNode: React.ReactNode;
     const svgStyle = rotate
       ? {
           msTransform: `rotate(${rotate}deg)`,
           transform: `rotate(${rotate}deg)`,
         }
       : undefined;
+
 
     const innerSvgProps: CustomIconComponentProps = {
       ...svgBaseProps,
@@ -95,6 +85,31 @@ class Icon extends React.Component<IconComponentProps> {
       delete innerSvgProps.viewBox;
     }
 
+    // component > children
+    if (Component) {
+      innerNode = <Component {...innerSvgProps}>{children}</Component>;
+    }
+
+    if (children) {
+      if (
+        !viewBox ||
+        !(React.Children.count(children) === 1 &&
+        React.isValidElement(children) &&
+        React.Children.only(children).type === 'use')
+      ) {
+        log(
+          'Make sure that you provide correct `viewBox`' +
+          ' prop (default `0 0 1024 1024`) to the icon.'
+        );
+      }
+
+      innerNode = (
+        <svg {...innerSvgProps} viewBox={viewBox}>
+          {children}
+        </svg>
+      );
+    }
+  
     let iconTabIndex = tabIndex;
     if (iconTabIndex === undefined && onClick) {
       iconTabIndex = -1;
@@ -103,18 +118,12 @@ class Icon extends React.Component<IconComponentProps> {
     return (
       <span
         role="img"
-        aria-label={icon.name}
         {...restProps}
         tabIndex={iconTabIndex}
         onClick={onClick}
         className={classString}
       >
-        <ReactIcon
-          className={svgClassString}
-          icon={icon}
-          primaryColor={twoToneColor}
-          style={svgStyle}
-        />
+        {innerNode}
       </span>
     );
   }

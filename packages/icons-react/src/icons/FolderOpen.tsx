@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { FolderOpenOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { FolderOpenOutline as FolderOpenOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={FolderOpenOutline} theme="outlined" />;
+const FolderOpen = (props: AntdIconProps) => <AntdIcon {...props} icon={FolderOpenOutlineSvg} />;
+export default FolderOpen;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { LeftCircleTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { LeftCircleTwoTone as LeftCircleTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={LeftCircleTwoTone} theme="twoTone" />;
+const LeftCircleTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={LeftCircleTwoToneSvg} />;
+export default LeftCircleTwoTone;

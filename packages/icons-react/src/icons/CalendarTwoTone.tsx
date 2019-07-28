@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { CalendarTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { CalendarTwoTone as CalendarTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={CalendarTwoTone} theme="twoTone" />;
+const CalendarTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CalendarTwoToneSvg} />;
+export default CalendarTwoTone;

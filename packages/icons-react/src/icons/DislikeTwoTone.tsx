@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { DislikeTwoTone } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { DislikeTwoTone as DislikeTwoToneSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={DislikeTwoTone} theme="twoTone" />;
+const DislikeTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={DislikeTwoToneSvg} />;
+export default DislikeTwoTone;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ExceptionOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ExceptionOutline as ExceptionOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ExceptionOutline} theme="outlined" />;
+const Exception = (props: AntdIconProps) => <AntdIcon {...props} icon={ExceptionOutlineSvg} />;
+export default Exception;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ToTopOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ToTopOutline as ToTopOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ToTopOutline} theme="outlined" />;
+const ToTop = (props: AntdIconProps) => <AntdIcon {...props} icon={ToTopOutlineSvg} />;
+export default ToTop;

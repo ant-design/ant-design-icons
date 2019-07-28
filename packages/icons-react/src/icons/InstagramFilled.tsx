@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { InstagramFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { InstagramFill as InstagramFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={InstagramFill} theme="filled" />;
+const InstagramFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={InstagramFillSvg} />;
+export default InstagramFilled;

@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ScheduleOutline } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ScheduleOutline as ScheduleOutlineSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ScheduleOutline} theme="outlined" />;
+const Schedule = (props: AntdIconProps) => <AntdIcon {...props} icon={ScheduleOutlineSvg} />;
+export default Schedule;

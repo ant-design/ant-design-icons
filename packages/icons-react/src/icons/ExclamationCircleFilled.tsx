@@ -2,7 +2,8 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ExclamationCircleFill } from '@ant-design/icons/lib';
-import Icon, { IconProps } from '../components/Icon';
+import { ExclamationCircleFill as ExclamationCircleFillSvg } from '@ant-design/icons/lib';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-export default (props: IconProps) => <Icon {...props} icon={ExclamationCircleFill} theme="filled" />;
+const ExclamationCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ExclamationCircleFillSvg} />;
+export default ExclamationCircleFilled;
