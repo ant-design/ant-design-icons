@@ -29,10 +29,6 @@ const Div = styled.div`
   }
 `;
 
-const alignStyles = {
-  verticalAlign: '-0.125em',
-}
-
 class SimpleDemo extends React.Component<{}> {
   static displaySize = ['64px', '48px', '32px', '24px', '16px', '12px', '8px'];
 
@@ -49,11 +45,11 @@ class SimpleDemo extends React.Component<{}> {
       <Div key={fontSize} style={style}>
         {fontSize}
         Ant Design
-        <AntDesign svgStyle={alignStyles} />
+        <AntDesign />
         0123
-        <Dashboard svgStyle={alignStyles} />
+        <Dashboard />
         你好
-        <Twitter svgStyle={alignStyles} />
+        <Twitter />
       </Div>
     );
   }
