@@ -10,13 +10,14 @@
   ],
   "license": "MIT",
   "scripts": {
+    "cleanup": "./scripts/cleanup.sh",
     "start": "cross-env NODE_ENV=development father doc dev --storybook",
     "lint": "eslint src/ --ext .tsx,.ts",
     "compile": "father build",
     "test": "father test",
     "prepublish": "npm run lint && npm run test && npm run generate && npm run compile",
     "generate": "node scripts/generateIcons.js",
-    "postcompile": "./scripts/generateIconEntries.sh"
+    "postcompile": "./scripts/prepare.sh && node scripts/generateIconEntries.js"
   },
   "files": [
     "es",
