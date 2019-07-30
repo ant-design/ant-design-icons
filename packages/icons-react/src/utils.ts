@@ -93,10 +93,27 @@ export const iconStyles = `
   -moz-osx-font-smoothing: grayscale;
 }
 
+.anticon > * {
+  line-height: 1;
+}
+
 .anticon svg {
   display: inline-block;
 }
 
+.anticon::before {
+  display: none;
+}
+
+.anticon .anticon-icon {
+  display: block;
+}
+
+.anticon[tabindex] {
+  cursor: pointer;
+}
+
+.anticon-spin::before,
 .anticon-spin {
   display: inline-block;
   -webkit-animation: loadingCircle 1s infinite linear;
@@ -106,14 +123,14 @@ export const iconStyles = `
 @-webkit-keyframes loadingCircle {
   100% {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }
 
 @keyframes loadingCircle {
   100% {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }
 `;
