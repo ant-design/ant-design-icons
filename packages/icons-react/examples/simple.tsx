@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { render } from 'react-dom';
 import styled from 'styled-components';
 import { AntDesign, Dashboard, Twitter } from '../src';
 
@@ -29,7 +28,7 @@ const Div = styled.div`
   }
 `;
 
-class SimpleDemo extends React.Component<{}> {
+export default class SimpleDemo extends React.Component<{}> {
   static displaySize = ['64px', '48px', '32px', '24px', '16px', '12px', '8px'];
 
   static relatedHref =
@@ -74,5 +73,3 @@ class SimpleDemo extends React.Component<{}> {
     );
   }
 }
-
-render(<SimpleDemo />, document.getElementById('__react-content'));

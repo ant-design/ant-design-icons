@@ -10,15 +10,13 @@
   ],
   "license": "MIT",
   "scripts": {
-    "start": "rc-tools run server",
-    "lint": "rc-tools run lint",
-    "compile": "rc-tools run compile --babel-runtime",
-    "build": "rc-tools run build",
-    "dist": "rc-tools run dist",
-    "test": "rc-tools run test",
-    "prepublish": "npm run lint && npm run test && npm run compile",
-    "postcompile": "node scripts/generateIconEntries.js",
-    "generate": "node scripts/generateIcons.js"
+    "start": "cross-env NODE_ENV=development father doc dev --storybook",
+    "lint": "eslint src/ --ext .tsx,.ts",
+    "compile": "father build",
+    "test": "father test",
+    "prepublish": "npm run lint && npm run test && npm run generate && npm run compile",
+    "generate": "node scripts/generateIcons.js",
+    "postcompile": "./scripts/generateIconEntries.sh"
   },
   "files": [
     "es",
@@ -42,6 +40,7 @@
     "cross-env": "^5.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
     "jest": "^23.4.2",
     "lodash": "^4.17.15",
     "mobx": "^5.1.0",
@@ -57,7 +56,8 @@
   "dependencies": {
     "@ant-design/colors": "^3.1.0",
     "babel-runtime": "^6.26.0",
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "father": "^2.14.0"
   },
   "config": {
     "port": 9527,
@@ -66,21 +66,6 @@
         "./src/index.ts"
       ]
     }
-  },
-  "jest": {
-    "testURL": "http://localhost",
-    "transform": {
-      "\\.tsx?$": "./node_modules/rc-tools/scripts/jestPreprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
   },
   "gitHead": "225d4d2189720ee3b7e4a4d7a6d80e076fa15cbc"
 }

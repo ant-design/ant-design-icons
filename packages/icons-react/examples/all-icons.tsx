@@ -2,7 +2,6 @@ import { ThemeType } from '@ant-design/icons/lib/types';
 import { action, computed, observable } from 'mobx';
 import { observer } from 'mobx-react';
 import * as React from 'react';
-import { render } from 'react-dom';
 import styled from 'styled-components';
 import * as AntdIcons from '../src/icons';
 
@@ -36,7 +35,7 @@ const iconsList = Object.keys(allIcons)
   .map(iconName => allIcons[iconName]);
 
 @observer
-class AllIconDemo extends React.Component<{}> {
+export default class AllIconDemo extends React.Component<{}> {
   @observable
   currentTheme = 'Outlined';
 
@@ -83,5 +82,3 @@ class AllIconDemo extends React.Component<{}> {
     );
   }
 }
-
-render(<AllIconDemo />, document.getElementById('__react-content'));

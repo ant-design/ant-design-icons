@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { render } from 'react-dom';
 import Icon from '../src';
 
 const HeartSvg = () => (
@@ -66,4 +65,4 @@ const CustomIcon = () => {
   );
 }
 
-render(<CustomIcon />, document.getElementById('__react-content'));
+export default CustomIcon;

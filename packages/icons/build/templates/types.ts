@@ -1,7 +1,7 @@
 export interface AbstractNode {
   tag: string;
   attrs: {
-    [key: string]: string | boolean;
+    [key: string]: string;
   };
   children?: AbstractNode[];
 }

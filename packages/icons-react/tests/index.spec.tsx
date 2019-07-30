@@ -69,11 +69,11 @@ describe('Icon', () => {
     const icon = wrapper.find('span').at(0);
     icon.simulate('mouseenter');
     expect(onVisibleChange).toHaveBeenCalledWith(true);
-    expect(wrapper.instance().tooltip.props.visible).toBe(true);
+    expect((wrapper.instance() as any).tooltip.props.visible).toBe(true);
 
     icon.simulate('mouseleave');
     expect(onVisibleChange).toHaveBeenCalledWith(false);
-    expect(wrapper.instance().tooltip.props.visible).toBe(false);
+    expect((wrapper.instance() as any).tooltip.props.visible).toBe(false);
   });
 
   it('should support custom usage of children', () => {

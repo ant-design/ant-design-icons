@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { render } from 'react-dom';
 import styled from 'styled-components';
 
 import { setTwoToneColor } from '../src';
@@ -39,7 +38,7 @@ const Text = styled.span`
   margin: 0 0.5rem;
 `;
 
-class AllIconDemo extends React.Component {
+export default class AllIconDemo extends React.Component {
   state = {
     primaryColor: '#1890ff'
   };
@@ -83,5 +82,3 @@ class AllIconDemo extends React.Component {
     );
   }
 }
-
-render(<AllIconDemo />, document.getElementById('__react-content'));
