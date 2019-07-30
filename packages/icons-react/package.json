@@ -28,7 +28,7 @@
     "react": "16.x"
   },
   "devDependencies": {
-    "@ant-design/icons-svg": "^4.0.0",
+    "@ant-design/icons-svg": "^4.0.0-alpha.0",
     "@types/classnames": "^2.2.9",
     "@types/enzyme": "^3.10.3",
     "@types/jest": "^23.3.1",
