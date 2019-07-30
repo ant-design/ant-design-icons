@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons",
-  "version": "4.0.0-alpha.0",
+  "version": "4.0.0-alpha.1",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
@@ -27,6 +27,7 @@
     "@ant-design/icons-svg": "^4.0.0-alpha.0",
     "@types/classnames": "^2.2.9",
     "@types/enzyme": "^3.10.3",
+    "@types/insert-css": "^2.0.0",
     "@types/jest": "^23.3.1",
     "@types/lodash": "^4.14.136",
     "@types/node": "^10.5.5",
@@ -54,7 +55,8 @@
     "@ant-design/colors": "^3.1.0",
     "babel-runtime": "^6.26.0",
     "classnames": "^2.2.6",
-    "father": "^2.14.0"
+    "father": "^2.14.0",
+    "insert-css": "^2.0.0"
   },
   "config": {
     "port": 9527,

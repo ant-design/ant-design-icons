@@ -147,7 +147,7 @@ exports[`Icon should support basic usage 1`] = `
   >
     <svg
       aria-hidden="true"
-      class=""
+      class="anticon-spin"
       data-icon="loading"
       fill="currentColor"
       focusable="false"
