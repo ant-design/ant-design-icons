@@ -1,0 +1,12 @@
+tests/
+examples/
+src/
+scripts/
+
+.eslintignore
+.eslintrc.js
+.fatherrc.js
+.gitignore
+jest.config.js
+tsconfig.json
+tslint.json

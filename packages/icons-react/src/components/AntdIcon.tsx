@@ -51,7 +51,7 @@ class Icon extends React.Component<IconComponentProps> {
     );
 
     const svgClassString = classNames({
-      'anticon-spin': !!spin || icon.name === 'Loading',
+      'anticon-spin': !!spin || icon.name === 'loading',
     });
 
     let iconTabIndex = tabIndex;
