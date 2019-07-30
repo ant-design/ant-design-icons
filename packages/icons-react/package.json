@@ -1,6 +1,6 @@
 {
-  "name": "@ant-design/icons-react",
-  "version": "2.0.1",
+  "name": "@ant-design/icons",
+  "version": "4.0.0-alpha.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
@@ -10,38 +10,45 @@
   ],
   "license": "MIT",
   "scripts": {
-    "start": "rc-tools run server",
-    "lint": "rc-tools run lint",
-    "compile": "rc-tools run compile --babel-runtime",
-    "build": "rc-tools run build",
-    "dist": "rc-tools run dist",
-    "test": "jest",
-    "prepublish": "npm run lint && npm run test && npm run compile"
+    "cleanup": "./scripts/cleanup.sh",
+    "start": "cross-env NODE_ENV=development father doc dev --storybook",
+    "lint": "eslint src/ --ext .tsx,.ts",
+    "compile": "father build",
+    "test": "father test",
+    "prepublish": "npm run lint && npm run test && npm run generate && npm run compile",
+    "generate": "node scripts/generateIcons.js",
+    "postcompile": "./scripts/prepare.sh && node scripts/generateIconEntries.js"
   },
   "files": [
     "es",
     "lib"
   ],
   "peerDependencies": {
-    "@ant-design/icons": "^2.0.0",
+    "@ant-design/icons-svg": "^4.0.0",
     "react": "16.x"
   },
   "devDependencies": {
-    "@ant-design/icons": "^2.0.0",
+    "@ant-design/icons-svg": "^4.0.0-alpha.0",
+    "@types/classnames": "^2.2.9",
+    "@types/enzyme": "^3.10.3",
     "@types/jest": "^23.3.1",
+    "@types/lodash": "^4.14.136",
     "@types/node": "^10.5.5",
     "@types/react": "^16.4.12",
     "@types/react-dom": "^16.0.6",
-    "@types/react-test-renderer": "^16.0.1",
+    "antd": "^3.20.7",
     "babel-core": "^6.26.3",
     "cross-env": "^5.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
     "jest": "^23.4.2",
+    "lodash": "^4.17.15",
     "mobx": "^5.1.0",
     "mobx-react": "^5.2.5",
-    "rc-tools": "~8.1.6",
+    "rc-tools": "^9.5.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-test-renderer": "^16.4.2",
     "styled-components": "^3.3.3",
     "tslint": "^5.11.0",
     "tslint-react": "^3.6.0",
@@ -49,30 +56,17 @@
   },
   "dependencies": {
     "@ant-design/colors": "^3.1.0",
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "classnames": "^2.2.6",
+    "father": "^2.14.0"
   },
   "config": {
     "port": 9527,
     "entry": {
-      "@ant-design/icons-react": [
+      "@ant-design/icons": [
         "./src/index.ts"
       ]
     }
-  },
-  "jest": {
-    "testURL": "http://localhost",
-    "transform": {
-      "\\.tsx?$": "./node_modules/rc-tools/scripts/jestPreprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
   },
   "gitHead": "225d4d2189720ee3b7e4a4d7a6d80e076fa15cbc"
 }
