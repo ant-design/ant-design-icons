@@ -19,10 +19,6 @@
     "generate": "node scripts/generateIcons.js",
     "postcompile": "./scripts/prepare.sh && node scripts/generateIconEntries.js"
   },
-  "files": [
-    "es",
-    "lib"
-  ],
   "peerDependencies": {
     "@ant-design/icons-svg": "^4.0.0",
     "react": "16.x"

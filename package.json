@@ -7,8 +7,8 @@
     "posticons:generate": "lerna run --scope @ant-design/icons-react-native generate",
     "icons:build": "lerna run --scope @ant-design/icons-svg build",
     "icons:test": "lerna run --scope @ant-design/icons-svg test",
-    "react:compile": "lerna run --scope @ant-design/icons-react compile",
-    "react:example": "lerna run --scope @ant-design/icons-react start",
+    "react:compile": "lerna run --scope @ant-design/icons compile",
+    "react:example": "lerna run --scope @ant-design/icons start",
     "lint": "lerna run lint"
   },
   "devDependencies": {
