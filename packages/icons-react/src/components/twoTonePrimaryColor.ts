@@ -1,4 +1,4 @@
-import ReactIcon from '../components/IconBase';
+import ReactIcon from './IconBase';
 
 export function setTwoToneColor(primaryColor: string): void {
   return ReactIcon.setTwoToneColors({

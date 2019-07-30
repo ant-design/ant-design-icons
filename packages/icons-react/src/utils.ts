@@ -4,6 +4,7 @@ import * as React from 'react';
 
 export function log(message: string) {
   if (!(process && process.env && process.env.NODE_ENV === 'production')) {
+    // eslint-disable-next-line no-console
     console.error(`[@ant-design/icons-react]: ${message}.`);
   }
 }
@@ -39,15 +40,13 @@ export interface Attrs {
 export function generate(
   node: AbstractNode,
   key: string,
-  rootProps?: { [key: string]: any } | false
+  rootProps?: { [key: string]: any } | false,
 ): any {
   if (!rootProps) {
     return React.createElement(
       node.tag,
       { key, ...normalizeAttrs(node.attrs) },
-      (node.children || []).map((child, index) =>
-        generate(child, `${key}-${node.tag}-${index}`)
-      )
+      (node.children || []).map((child, index) => generate(child, `${key}-${node.tag}-${index}`)),
     );
   }
   return React.createElement(
@@ -55,11 +54,9 @@ export function generate(
     {
       key,
       ...normalizeAttrs(node.attrs),
-      ...rootProps
+      ...rootProps,
     },
-    (node.children || []).map((child, index) =>
-      generate(child, `${key}-${node.tag}-${index}`)
-    )
+    (node.children || []).map((child, index) => generate(child, `${key}-${node.tag}-${index}`)),
   );
 }
 
@@ -74,7 +71,7 @@ export const svgBaseProps = {
   width: '1em',
   height: '1em',
   fill: 'currentColor',
-  ['aria-hidden']: 'true',
+  'aria-hidden': 'true',
   focusable: 'false',
 };
 

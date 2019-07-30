@@ -20,7 +20,9 @@ setTwoToneColor('#1890ff');
 
 class Icon extends React.Component<IconComponentProps> {
   static displayName = 'AntdIcon';
+
   static getTwoToneColor = getTwoToneColor;
+
   static setTwoToneColor = setTwoToneColor;
 
   render() {
@@ -49,7 +51,7 @@ class Icon extends React.Component<IconComponentProps> {
     );
 
     const svgClassString = classNames({
-      [`anticon-spin`]: !!spin || icon.name === 'Loading',
+      'anticon-spin': !!spin || icon.name === 'Loading',
     });
 
     let iconTabIndex = tabIndex;

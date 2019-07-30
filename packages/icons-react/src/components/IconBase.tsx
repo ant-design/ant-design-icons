@@ -28,7 +28,7 @@ export interface TwoToneColorPalette extends TwoToneColorPaletteSetter {
 
 const twoToneColorPalette: TwoToneColorPalette = {
   primaryColor: '#333',
-  secondaryColor: '#E6E6E6'
+  secondaryColor: '#E6E6E6',
 };
 
 class Icon extends React.Component<IconProps> {
@@ -36,7 +36,7 @@ class Icon extends React.Component<IconProps> {
 
   static setTwoToneColors({
     primaryColor,
-    secondaryColor
+    secondaryColor,
   }: TwoToneColorPaletteSetter) {
     twoToneColorPalette.primaryColor = primaryColor;
     twoToneColorPalette.secondaryColor =
@@ -45,7 +45,7 @@ class Icon extends React.Component<IconProps> {
 
   static getTwoToneColors(): TwoToneColorPalette {
     return {
-      ...twoToneColorPalette
+      ...twoToneColorPalette,
     };
   }
 
@@ -64,7 +64,7 @@ class Icon extends React.Component<IconProps> {
     if (primaryColor) {
       colors = {
         primaryColor,
-        secondaryColor: secondaryColor || getSecondaryColor(primaryColor)
+        secondaryColor: secondaryColor || getSecondaryColor(primaryColor),
       };
     }
     if (!isIconDefinition(icon)) {
@@ -75,19 +75,19 @@ class Icon extends React.Component<IconProps> {
     if (target && typeof target.icon === 'function') {
       target = {
         ...target,
-        icon: target.icon(colors.primaryColor, colors.secondaryColor)
+        icon: target.icon(colors.primaryColor, colors.secondaryColor),
       };
     }
     return generate(target.icon as AbstractNode, `svg-${target.name}`, {
       className,
       onClick,
       style,
-      ['data-icon']: target.name,
+      'data-icon': target.name,
       width: '1em',
       height: '1em',
       fill: 'currentColor',
-      ['aria-hidden']: 'true',
-      ...restProps
+      'aria-hidden': 'true',
+      ...restProps,
     });
   }
 }

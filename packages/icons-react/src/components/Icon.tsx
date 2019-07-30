@@ -30,103 +30,101 @@ export interface IconComponentProps extends IconBaseProps {
   ariaLabel?: React.AriaAttributes['aria-label'];
 }
 
-class Icon extends React.Component<IconComponentProps> {
-  static displayName = 'AntdIcon';
+const Icon: React.FC<IconComponentProps> = props => {
+  const {
+    // affect outter <i>...</i>
+    className,
 
-  render() {
-    const {
-      // affect outter <i>...</i>
-      className,
+    // affect inner <svg>...</svg>
+    component: Component,
+    viewBox,
+    spin,
+    rotate,
 
-      // affect inner <svg>...</svg>
-      component: Component,
-      viewBox,
-      spin,
-      rotate,
+    tabIndex,
+    onClick,
 
-      tabIndex,
-      onClick,
+    // children
+    children,
+    ...restProps
+  } = props;
 
-      // children
-      children,
-      ...restProps
-    } = this.props;
+  if (!(Component || children)) {
+    log('Should have `type` prop or `component` prop or `children`.');
+  }
 
-    if (!(Component || children)) {
-      log('Should have `type` prop or `component` prop or `children`.');
-    }
-  
-    const classString = classNames(
-      'anticon',
-      className,
-    );
+  const classString = classNames(
+    'anticon',
+    className,
+  );
 
-    const svgClassString = classNames({
-      [`anticon-spin`]: !!spin,
-    });
+  const svgClassString = classNames({
+    'anticon-spin': !!spin,
+  });
 
-    let innerNode: React.ReactNode;
-    const svgStyle = rotate
-      ? {
-          msTransform: `rotate(${rotate}deg)`,
-          transform: `rotate(${rotate}deg)`,
-        }
-      : undefined;
-
-
-    const innerSvgProps: CustomIconComponentProps = {
-      ...svgBaseProps,
-      className: svgClassString,
-      style: svgStyle,
-      viewBox,
-    };
-
-    if (!viewBox) {
-      delete innerSvgProps.viewBox;
-    }
-
-    // component > children
-    if (Component) {
-      innerNode = <Component {...innerSvgProps}>{children}</Component>;
-    }
-
-    if (children) {
-      if (
-        !viewBox ||
-        !(React.Children.count(children) === 1 &&
-        React.isValidElement(children) &&
-        React.Children.only(children).type === 'use')
-      ) {
-        log(
-          'Make sure that you provide correct `viewBox`' +
-          ' prop (default `0 0 1024 1024`) to the icon.'
-        );
+  let innerNode: React.ReactNode;
+  const svgStyle = rotate
+    ? {
+        msTransform: `rotate(${rotate}deg)`,
+        transform: `rotate(${rotate}deg)`,
       }
+    : undefined;
 
-      innerNode = (
-        <svg {...innerSvgProps} viewBox={viewBox}>
-          {children}
-        </svg>
+
+  const innerSvgProps: CustomIconComponentProps = {
+    ...svgBaseProps,
+    className: svgClassString,
+    style: svgStyle,
+    viewBox,
+  };
+
+  if (!viewBox) {
+    delete innerSvgProps.viewBox;
+  }
+
+  // component > children
+  if (Component) {
+    innerNode = <Component {...innerSvgProps}>{children}</Component>;
+  }
+
+  if (children) {
+    if (
+      !viewBox ||
+      !(React.Children.count(children) === 1 &&
+      React.isValidElement(children) &&
+      React.Children.only(children).type === 'use')
+    ) {
+      log(
+        'Make sure that you provide correct `viewBox`' +
+        ' prop (default `0 0 1024 1024`) to the icon.',
       );
     }
-  
-    let iconTabIndex = tabIndex;
-    if (iconTabIndex === undefined && onClick) {
-      iconTabIndex = -1;
-    }
 
-    return (
-      <span
-        role="img"
-        {...restProps}
-        tabIndex={iconTabIndex}
-        onClick={onClick}
-        className={classString}
-      >
-        {innerNode}
-      </span>
+    innerNode = (
+      <svg {...innerSvgProps} viewBox={viewBox}>
+        {children}
+      </svg>
     );
   }
+
+  let iconTabIndex = tabIndex;
+  if (iconTabIndex === undefined && onClick) {
+    iconTabIndex = -1;
+  }
+
+  return (
+    <span
+      role="img"
+      {...restProps}
+      tabIndex={iconTabIndex}
+      onClick={onClick}
+      className={classString}
+    >
+      {innerNode}
+    </span>
+  );
 }
+
+Icon.displayName = 'AntdIcon';
 
 export default Icon;
