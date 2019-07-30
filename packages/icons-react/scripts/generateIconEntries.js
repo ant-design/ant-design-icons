@@ -1,23 +1,14 @@
 const fs = require('fs');
-const { camelCase, capitalize, upperFirst } = require('lodash');
-const manifest = require('@ant-design/icons-svg/lib/manifest').default;
 
-const themeMap = {
-  fill: 'filled',
-  outline: '',
-  twotone: 'twoTone',
-};
+const { getComponentNameList } = require('./utils');
 
-const icons = [];
-Object.keys(manifest).forEach(theme => {
-  manifest[theme].forEach(name => {
-    const baseName = upperFirst(camelCase(name));
-    const componentName = baseName + capitalize(themeMap[theme]);
-    icons.push(componentName);
+const iconConfig = getComponentNameList();
 
-    fs.writeFileSync(
-      `./${componentName}.js`,
-`'use strict';
+iconConfig.forEach(config => {
+  const { componentName } = config;
+  fs.writeFileSync(
+    `./${componentName}.js`,
+    `'use strict';
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -30,6 +21,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 var _default = _${componentName};
 exports.default = _default;
 module.exports = _default;`,
-    );
-  });
+  );
 });
