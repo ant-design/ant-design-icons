@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { camelCase, capitalize, upperFirst } = require('lodash');
-const manifest = require('@ant-design/icons/lib/manifest').default;
+const manifest = require('@ant-design/icons-svg/lib/manifest').default;
 
 const themeMap = {
   fill: 'filled',

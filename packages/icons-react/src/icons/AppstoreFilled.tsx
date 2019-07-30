@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { AppstoreFill as AppstoreFillSvg } from '@ant-design/icons/lib';
+import { AppstoreFill as AppstoreFillSvg } from '@ant-design/icons-svg/lib';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const AppstoreFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={AppstoreFillSvg} />;

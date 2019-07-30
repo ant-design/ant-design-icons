@@ -1,6 +1,6 @@
 {
-  "name": "@ant-design/icons-react",
-  "version": "2.0.1",
+  "name": "@ant-design/icons",
+  "version": "4.0.0-alpha.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
@@ -24,11 +24,11 @@
     "lib"
   ],
   "peerDependencies": {
-    "@ant-design/icons": "^2.0.0",
+    "@ant-design/icons-svg": "^4.0.0",
     "react": "16.x"
   },
   "devDependencies": {
-    "@ant-design/icons": "^2.0.0",
+    "@ant-design/icons-svg": "^4.0.0",
     "@types/classnames": "^2.2.9",
     "@types/enzyme": "^3.10.3",
     "@types/jest": "^23.3.1",
@@ -63,7 +63,7 @@
   "config": {
     "port": 9527,
     "entry": {
-      "@ant-design/icons-react": [
+      "@ant-design/icons": [
         "./src/index.ts"
       ]
     }

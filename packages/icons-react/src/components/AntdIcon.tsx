@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { IconDefinition } from '@ant-design/icons/lib/types';
+import { IconDefinition } from '@ant-design/icons-svg/lib/types';
 
 import { IconBaseProps } from './Icon';
 import ReactIcon from './IconBase';

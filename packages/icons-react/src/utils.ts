@@ -1,11 +1,11 @@
-import { AbstractNode, IconDefinition } from '@ant-design/icons/lib/types';
+import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
 import * as React from 'react';
 
 export function log(message: string) {
   if (!(process && process.env && process.env.NODE_ENV === 'production')) {
     // eslint-disable-next-line no-console
-    console.error(`[@ant-design/icons-react]: ${message}.`);
+    console.error(`[@ant-design/icons-svg-react]: ${message}.`);
   }
 }
 

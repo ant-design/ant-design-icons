@@ -1,4 +1,4 @@
-import { ThemeType } from '@ant-design/icons/lib/types';
+import { ThemeType } from '@ant-design/icons-svg/lib/types';
 import { action, computed, observable } from 'mobx';
 import { observer } from 'mobx-react';
 import * as React from 'react';

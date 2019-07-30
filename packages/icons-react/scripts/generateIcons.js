@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { camelCase, upperFirst } = require('lodash');
-const manifest = require('@ant-design/icons/lib/manifest').default;
+const manifest = require('@ant-design/icons-svg/lib/manifest').default;
 
 const themeMap = {
   fill: 'filled',
@@ -31,7 +31,7 @@ Object.keys(manifest).forEach(theme => {
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { ${iconName} as ${iconName}Svg } from '@ant-design/icons/lib';
+import { ${iconName} as ${iconName}Svg } from '@ant-design/icons-svg/lib';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ${componentName} = (props: AntdIconProps) => <AntdIcon {...props} icon={${iconName}Svg} />;

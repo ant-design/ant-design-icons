@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import * as React from 'react';
-import { BarcodeOutline as BarcodeOutlineSvg } from '@ant-design/icons/lib';
+import { BarcodeOutline as BarcodeOutlineSvg } from '@ant-design/icons-svg/lib';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Barcode = (props: AntdIconProps) => <AntdIcon {...props} icon={BarcodeOutlineSvg} />;
