@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "esnext",
+    "module": "commonjs",
+    "sourceMap": true,
+		"moduleResolution": "node",
+		"jsx": "react"
+  },
+  "include": [
+		"../src/*.tsx",
+    "./*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "name": "@ant-design/icons-react-native",
+  "version": "1.0.2",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "sideEffects": false,
+  "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-react-native",
+  "contributors": [
+    "bang88<sqibang@gmail.com>"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "rc-tools run server",
+    "lint": "rc-tools run lint",
+    "prelint": "npm run generate",
+    "compile": "rc-tools run compile --babel-runtime",
+    "build": "rc-tools run build",
+    "dist": "rc-tools run dist",
+    "test": "jest",
+    "generate": "node scripts/index.js",
+    "pregenerate": "npm run clean",
+    "clean": "rimraf -rf fonts iconfont src/*.tsx",
+    "prepublishOnly": "npm run lint && npm run test && npm run compile"
+  },
+  "files": [
+    "es",
+    "lib",
+    "fonts"
+  ],
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.1",
+    "@types/react": "^16.4.12",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-native": "^0.57.13",
+    "@types/react-test-renderer": "^16.0.1",
+    "buildfont": "^2.0.2",
+    "cross-env": "^5.2.0",
+    "jest": "^23.4.2",
+    "prettier": "^1.15.2",
+    "rc-tools": "^8.1.6",
+    "react": "^16.6.3",
+    "react-dom": "^16.4.2",
+    "react-test-renderer": "^16.4.2",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.0.3"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/test/setup.js"
+    ],
+    "transform": {
+      "\\.tsx?$": "./node_modules/rc-tools/scripts/jestPreprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "rnpm": {
+    "assets": [
+      "./fonts"
+    ]
+  }
+}

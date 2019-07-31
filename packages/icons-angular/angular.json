@@ -20,7 +20,11 @@
             "tsConfig": "examples/tsconfig.app.json",
             "assets": [
               "examples/favicon.ico",
-              "examples/assets",
+              {
+                "glob": "**/*",
+                "input": "examples/assets",
+                "output": "/assets/"
+              },
               {
                 "glob": "**/*",
                 "input": "lib/inline-svg",
@@ -68,35 +72,6 @@
           "options": {
             "browserTarget": "examples:build"
           }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "examples/test.ts",
-            "polyfills": "examples/polyfills.ts",
-            "tsConfig": "examples/tsconfig.spec.json",
-            "karmaConfig": "examples/karma.conf.js",
-            "styles": [
-              "examples/styles.css"
-            ],
-            "scripts": [],
-            "assets": [
-              "examples/favicon.ico",
-              "examples/assets"
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "examples/tsconfig.app.json",
-              "examples/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -109,6 +84,34 @@
           "options": {
             "tsConfig": "lib/tsconfig.lib.json",
             "project": "lib/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "lib/tsconfig.lib.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "lib/test.ts",
+            "karmaConfig": "lib/karma.conf.js",
+            "polyfills": "lib/polyfills.ts",
+            "tsConfig": "lib/tsconfig.spec.json",
+            "scripts": [],
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "lib/inline-svg",
+                "output": "/assets/"
+              }
+            ]
           }
         }
       }

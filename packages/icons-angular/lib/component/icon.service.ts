@@ -1,30 +1,22 @@
 import { DOCUMENT } from '@angular/common';
-import { HttpClient, HttpBackend } from '@angular/common/http';
-import { Optional, Inject, Renderer2, RendererFactory2 } from '@angular/core';
-import { Observable, of as observableOf } from 'rxjs';
-import { catchError, map, share, tap } from 'rxjs/operators';
+import { HttpBackend, HttpClient } from '@angular/common/http';
+import { Inject, Optional, Renderer2, RendererFactory2, SecurityContext } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { of as observableOf, Observable } from 'rxjs';
+import { catchError, finalize, map, share, tap } from 'rxjs/operators';
+import { CachedIconDefinition, IconDefinition, ThemeType, TwoToneColorPalette, TwoToneColorPaletteSetter } from '../types';
 import {
-  IconDefinition,
-  CachedIconDefinition,
-  TwoToneColorPalette,
-  TwoToneColorPaletteSetter,
-  ThemeType
-} from '../types';
-import {
-  getSecondaryColor,
-  withSuffix,
-  isIconDefinition,
-  printErr,
-  printWarn,
   cloneSVG,
-  withSuffixAndColor,
   getIconDefinitionFromAbbr,
-  replaceFillColor
+  getNameAndNamespace,
+  getSecondaryColor,
+  hasNamespace,
+  isIconDefinition,
+  replaceFillColor,
+  withSuffix,
+  withSuffixAndColor
 } from '../utils';
-
-export interface ReqIconTask {
-  ob: Observable<IconDefinition | null>;
-}
+import { HttpModuleNotImport, IconNotFoundError, NameSpaceIsNotSpecifyError, SVGTagNotFoundError, UrlNotSafeError } from './icon.error';
 
 export class IconService {
   defaultTheme: ThemeType = 'outline';
@@ -33,167 +25,194 @@ export class IconService {
   protected _http: HttpClient;
 
   /**
-   * Register icons.
+   * All icon definitions would be registered here.
    */
   protected _svgDefinitions = new Map<string, IconDefinition>();
 
   /**
-   * Register rendered (with color) SVG icons.
+   * Cache all rendered icons. Icons are identified by name, theme,
+   * and for twotone icons, primary color and secondary color.
    */
-  protected _svgCachedDefinitions = new Map<string, CachedIconDefinition>();
+  protected _svgRenderedDefinitions = new Map<string, CachedIconDefinition>();
+
+  protected _inProgressFetches = new Map<string, Observable<IconDefinition | null>>();
 
   /**
-   * Default color settings.
+   * Url prefix for fetching inline SVG by dynamic importing.
    */
+  protected _assetsUrlRoot = '';
+
   protected _twoToneColorPalette: TwoToneColorPalette = {
     primaryColor  : '#333333',
     secondaryColor: '#E6E6E6'
   };
 
-  /**
-   * A url prefix so users can determine a static asset root.
-   */
-  protected _assetsSource = '';
-
-  /**
-   * To note whether a request to an icon is under processing.
-   */
-  protected _httpQueue = new Map<string, ReqIconTask>();
-
   set twoToneColor({ primaryColor, secondaryColor }: TwoToneColorPaletteSetter) {
-    if (primaryColor && typeof primaryColor === 'string' && typeof secondaryColor === 'string' || typeof secondaryColor === 'undefined') {
-      this._twoToneColorPalette.primaryColor = primaryColor;
-      this._twoToneColorPalette.secondaryColor = secondaryColor || getSecondaryColor(primaryColor);
-    }
+    this._twoToneColorPalette.primaryColor = primaryColor;
+    this._twoToneColorPalette.secondaryColor = secondaryColor || getSecondaryColor(primaryColor);
   }
 
   get twoToneColor(): TwoToneColorPaletteSetter {
-    return { ...this.twoToneColor } as TwoToneColorPalette; // Make a copy to avoid unexpected changes.
+    return { ...this._twoToneColorPalette } as TwoToneColorPalette; // Make a copy to avoid unexpected changes.
   }
 
-  changeAssetsSource(prefix: string): void {
-    this._assetsSource = prefix.endsWith('/') ? prefix : prefix + '/';
+  constructor(
+    protected _rendererFactory: RendererFactory2,
+    @Optional() protected _handler: HttpBackend,
+    // tslint:disable-next-line:no-any
+    @Optional() @Inject(DOCUMENT) protected _document: any,
+    protected sanitizer: DomSanitizer
+  ) {
+    this._renderer = this._rendererFactory.createRenderer(null, null);
+    if (this._handler) {
+      this._http = new HttpClient(this._handler);
+    }
   }
 
   /**
-   * Register IconDefinition provided by Ant Design, parsing AbstractNode to svg string.
+   * Change the prefix of the inline svg resources, so they could be deployed elsewhere, like CDN.
+   * @param prefix
+   */
+  changeAssetsSource(prefix: string): void {
+    this._assetsUrlRoot = prefix.endsWith('/') ? prefix : prefix + '/';
+  }
+
+  /**
+   * Add icons provided by ant design.
    * @param icons
    */
   addIcon(...icons: IconDefinition[]): void {
-    this._addIconLiteral(...icons);
-  }
-
-  /**
-   * Register icon.
-   * @param icons Icons that users want to use in their projects. User defined icons and predefined
-   *   icons provided by ant-design should implement IconDefinition both.
-   */
-  protected _addIconLiteral(...icons: IconDefinition[]): void {
     icons.forEach(icon => {
       this._svgDefinitions.set(withSuffix(icon.name, icon.theme), icon);
     });
   }
 
-  protected _get(key: string): IconDefinition | null {
-    return this._svgDefinitions.get(key) || null;
-  }
-
   /**
-   * Get an static file and return it as a string, create a IconDefinition and cache it or return null.
+   * Register an icon. Namespace is required.
+   * @param type
+   * @param literal
    */
-  protected _getFromRemote(url: string): Observable<IconDefinition | null> {
-    if (this._http) {
-      let task = this._httpQueue.get(url);
-      let ob: Observable<IconDefinition | null>;
-      if (task) {
-        ob = task.ob;
-      } else {
-        ob = this._createObservableRequest(url);
-        task = { ob };
-        this._httpQueue.set(url, task);
-      }
-      return ob;
-    } else {
-      printWarn('You need to import HttpClient module to use dynamic importing');
-      return observableOf(null);
+  addIconLiteral(type: string, literal: string): void {
+    const [ name, namespace ] = getNameAndNamespace(type);
+    if (!namespace) {
+      throw NameSpaceIsNotSpecifyError();
     }
-  }
-
-  private _createObservableRequest(url: string): Observable<IconDefinition | null> {
-    const icon: IconDefinition = getIconDefinitionFromAbbr(url);
-    return this._http.get(
-      `${this._assetsSource}assets/${icon.theme}/${icon.name}.svg`,
-      { responseType: 'text' }
-    ).pipe(
-      share(), // Use `share` so if multi directives request the same icon, HTTP request would only be fired once.
-      tap(() => this._httpQueue.delete(url)),
-      map(svgString => {
-        icon.icon = svgString;
-        this._addIconLiteral(icon);
-        return icon;
-      }),
-      catchError(() => {
-        printErr(`the icon ${url} does not exist in your assets folder`);
-        this._httpQueue.delete(url);
-        return observableOf(null);
-      })
-    );
+    this.addIcon({ name: type, icon: literal });
   }
 
   /**
-   * Icon component would call this method to get a SVG element.
-   * This method returns a Observable SVG element because when user wants to get an icon dynamically, that would be async,
-   * so we provided a unified interface here.
+   * Remove all cache.
    */
-  getRenderedContent(icon: IconDefinition | string, twoToneColor?: string): Observable<SVGElement | null> {
-    const definitionOrNull: IconDefinition | null = isIconDefinition(icon)
-      ? icon as IconDefinition
-      : this._get(icon as string);
-    const $icon = definitionOrNull ? observableOf(definitionOrNull) : this._getFromRemote(icon as string);
-
-    return $icon.pipe(
-      map(i => {
-        if (i) {
-          return this._loadSVGFromCacheOrCreateNew(i, twoToneColor);
-        } else {
-          printErr(`the icon ${icon} does not exist or is not registered`);
-          return null;
-        }
-      }));
+  clear(): void {
+    this._svgDefinitions.clear();
+    this._svgRenderedDefinitions.clear();
   }
 
+  /**
+   * Get a rendered `SVGElement`.
+   * @param icon
+   * @param twoToneColor
+   */
+  getRenderedContent(icon: IconDefinition | string, twoToneColor?: string): Observable<SVGElement> {
+    // If `icon` is a `IconDefinition`, go to the next step. If not, try to fetch it from cache.
+    const definition: IconDefinition | null | undefined = isIconDefinition(icon) ? icon as IconDefinition : this._svgDefinitions.get(icon as string);
+
+    // If `icon` is a `IconDefinition` of successfully fetch, wrap it in an `Observable`. Otherwise try to fetch it from remote.
+    const $iconDefinition = definition ? observableOf(definition) : this._getFromRemote(icon as string);
+
+    // If finally get an `IconDefinition`, render and return it. Otherwise throw an error.
+    return $iconDefinition.pipe(map(i => {
+      if (!i) { throw IconNotFoundError(icon as string); }
+      return this._loadSVGFromCacheOrCreateNew(i, twoToneColor);
+    }));
+  }
+
+  getCachedIcons(): Map<string, IconDefinition> {
+    return this._svgDefinitions;
+  }
+
+  /**
+   * Get raw svg and assemble a `IconDefinition` object.
+   * @param type
+   */
+  protected _getFromRemote(type: string): Observable<IconDefinition | null> {
+    if (!this._http) { return observableOf(HttpModuleNotImport()); }
+
+    // If multi directive ask for the same icon at the same time, http request should only be fired once.
+    let inProgress = this._inProgressFetches.get(type);
+
+    // If there's no other directive asking for the same icon, fire a request.
+    if (!inProgress) {
+      const [ name, namespace ] = getNameAndNamespace(type);
+
+      // If the string has a namespace within, create a simple `IconDefinition`.
+      const icon: IconDefinition = namespace
+        ? { name: type, icon: '' }
+        : getIconDefinitionFromAbbr(name);
+
+      const url = namespace
+        ? `${this._assetsUrlRoot}assets/${namespace}/${name}.svg`
+        : `${this._assetsUrlRoot}assets/${icon.theme}/${icon.name}.svg`;
+
+      const safeUrl = this.sanitizer.sanitize(SecurityContext.URL, url);
+
+      if (!safeUrl) { throw UrlNotSafeError(url); }
+
+      // Wrap a `IconDefinition`, cache it, delete the shared work.
+      inProgress = this._http.get(safeUrl, { responseType: 'text' }).pipe(
+        map(literal => ({ ...icon, icon: literal })),
+        tap(definition => this.addIcon(definition)),
+        finalize(() => this._inProgressFetches.delete(type)),
+        catchError(() => observableOf(null)),
+        share()
+      );
+
+      this._inProgressFetches.set(type, inProgress);
+    }
+
+    // Otherwise just reuse other directive's request.
+    return inProgress;
+  }
+
+  /**
+   * Render a new `SVGElement` for given `IconDefinition`, or make a copy from cache.
+   * @param icon
+   * @param twoToneColor
+   */
   protected _loadSVGFromCacheOrCreateNew(icon: IconDefinition, twoToneColor?: string): SVGElement {
     let svg: SVGElement;
+
     const pri = twoToneColor || this._twoToneColorPalette.primaryColor;
     const sec = getSecondaryColor(pri) || this._twoToneColorPalette.secondaryColor;
-    const key = withSuffixAndColor(icon.name, icon.theme, pri, sec);
-    const cached = this._svgCachedDefinitions.get(key);
+    const key = icon.theme === 'twotone'
+      ? withSuffixAndColor(icon.name, icon.theme, pri, sec)
+      : icon.theme === undefined ? icon.name : withSuffix(icon.name, icon.theme);
 
-    // If this icon is used before, there should be a copy in cachedDefinitions, just copy it.
-    // Otherwise, generate one from string or SVG element, and cache it.
-    if (!cached) {
+    // Try to make a copy from cache.
+    const cached = this._svgRenderedDefinitions.get(key);
+
+    if (cached) {
+      svg = cached.icon;
+    } else {
       svg = this._setSVGAttribute(this._colorizeSVGIcon(
-        typeof icon.icon === 'string' ? this._createSVGElementFromString(icon.icon) : icon.icon,
+        // Icons provided by ant design should be refined to remove preset colors.
+        this._createSVGElementFromString(hasNamespace(icon.name) ? icon.icon : replaceFillColor(icon.icon)),
         icon.theme === 'twotone',
         pri,
         sec
       ));
-      this._svgCachedDefinitions.set(key, { ...icon, icon: svg } as CachedIconDefinition);
-    } else {
-      svg = cached.icon;
+      // Cache it.
+      this._svgRenderedDefinitions.set(key, { ...icon, icon: svg } as CachedIconDefinition);
     }
 
     return cloneSVG(svg);
   }
 
   protected _createSVGElementFromString(str: string): SVGElement {
-    const colorParsed = replaceFillColor(str);
     const div = this._document.createElement('div');
-    div.innerHTML = colorParsed;
+    div.innerHTML = str;
     const svg: SVGElement = div.querySelector('svg');
-    if (!svg) {
-      throw Error('<svg> tag not found');
-    }
+    if (!svg) { throw SVGTagNotFoundError; }
     return svg;
   }
 
@@ -218,20 +237,5 @@ export class IconService {
     }
     this._renderer.setAttribute(svg, 'fill', 'currentColor');
     return svg;
-  }
-
-  clear(): void {
-    this._svgDefinitions.clear();
-  }
-
-  constructor(
-    protected _rendererFactory: RendererFactory2,
-    @Optional() protected _handler: HttpBackend,
-    @Optional() @Inject(DOCUMENT) protected _document: any
-  ) {
-    this._renderer = this._rendererFactory.createRenderer(null, null);
-    if (this._handler) {
-      this._http = new HttpClient(this._handler);
-    }
   }
 }

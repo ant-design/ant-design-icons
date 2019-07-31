@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "sourceMap": true,
+    "types": [
+      "jest",
+      "node"
+    ]
+  },
+  "include": [
+    "test"
+  ],
+}

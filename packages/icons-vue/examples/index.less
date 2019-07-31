@@ -1,0 +1,77 @@
+.simple-wrap {
+  position: relative;
+  margin-bottom: 1rem;
+  line-height: 1;
+  &:after {
+    width: 100%;
+    height: 1px;
+    content: '';
+    position: absolute;
+    bottom: 0.125em;
+    left: 0;
+    background-color: hotpink;
+    z-index: -100;
+  }
+  &:before {
+    width: 100%;
+    height: 1px;
+    content: '';
+    position: absolute;
+    top: 0.125em;
+    left: 0;
+    background-color: hotpink;
+    z-index: -100;
+  }
+}
+
+.two-tone-wrap,
+.all-icons-wrap {
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80vw;
+    margin: auto;
+  }
+  .card {
+    height: 90px;
+    margin: 12px 0 16px;
+    width: 16.6666%;
+    text-align: center;
+  }
+  .name-description {
+    display: block;
+    text-align: center;
+    transform: scale(0.83);
+    font-family: 'Lucida Console', Consolas;
+    white-space: nowrap;
+  }
+
+  .text {
+    margin: 0 0.5rem;
+  }
+}
+.ant-design-doc-set-wrap {
+  .container {
+    margin: 40px 0;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  .container-item {
+    float: left;
+    width: 16.66%;
+    text-align: center;
+    list-style: none;
+    height: 100px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    position: relative;
+    margin: 3px 0;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 10px 0 0;
+  }
+
+  .title {
+    text-align: center;
+  }
+}

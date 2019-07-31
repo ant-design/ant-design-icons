@@ -1,10 +1,11 @@
-import { AbstractNode, IconDefinition } from '@ant-design/icons/lib/types';
-import { generate as generateColor } from 'ant-design-palettes';
+import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
+import { generate as generateColor } from '@ant-design/colors';
 import * as React from 'react';
 
 export function log(message: string) {
   if (!(process && process.env && process.env.NODE_ENV === 'production')) {
-    console.error(`[@ant-design/icons-react]: ${message}.`);
+    // eslint-disable-next-line no-console
+    console.error(`[@ant-design/icons-svg-react]: ${message}.`);
   }
 }
 
@@ -36,41 +37,16 @@ export interface Attrs {
   [key: string]: string;
 }
 
-export class MiniMap<V> {
-  get size() {
-    return Object.keys(this.collection).length;
-  }
-  private collection: { [key: string]: V } = {};
-  clear(): void {
-    this.collection = {};
-  }
-  delete(key: string): boolean {
-    return delete this.collection[key];
-  }
-  get(key: string): V | undefined {
-    return this.collection[key];
-  }
-  has(key: string): boolean {
-    return Boolean(this.collection[key]);
-  }
-  set(key: string, value: V): this {
-    this.collection[key] = value;
-    return this;
-  }
-}
-
 export function generate(
   node: AbstractNode,
   key: string,
-  rootProps?: { [key: string]: any } | false
+  rootProps?: { [key: string]: any } | false,
 ): any {
   if (!rootProps) {
     return React.createElement(
       node.tag,
       { key, ...normalizeAttrs(node.attrs) },
-      (node.children || []).map((child, index) =>
-        generate(child, `${key}-${node.tag}-${index}`)
-      )
+      (node.children || []).map((child, index) => generate(child, `${key}-${node.tag}-${index}`)),
     );
   }
   return React.createElement(
@@ -78,11 +54,9 @@ export function generate(
     {
       key,
       ...normalizeAttrs(node.attrs),
-      ...rootProps
+      ...rootProps,
     },
-    (node.children || []).map((child, index) =>
-      generate(child, `${key}-${node.tag}-${index}`)
-    )
+    (node.children || []).map((child, index) => generate(child, `${key}-${node.tag}-${index}`)),
   );
 }
 
@@ -91,18 +65,72 @@ export function getSecondaryColor(primaryColor: string): string {
   return generateColor(primaryColor)[0];
 }
 
-export function withSuffix(
-  name: string,
-  theme: 'fill' | 'outline' | 'twotone'
-) {
-  switch (theme) {
-    case 'fill':
-      return `${name}-fill`;
-    case 'outline':
-      return `${name}-o`;
-    case 'twotone':
-      return `${name}-twotone`;
-    default:
-      throw new TypeError(`Unknown theme type: ${theme}, name: ${name}`);
+// These props make sure that the SVG behaviours like general text.
+// Reference: https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
+export const svgBaseProps = {
+  width: '1em',
+  height: '1em',
+  fill: 'currentColor',
+  'aria-hidden': 'true',
+  focusable: 'false',
+};
+
+export const svgBaseStyle = {
+  verticalAlign: '-0.125em',
+};
+
+export const iconStyles = `
+.anticon {
+  display: inline-block;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.anticon > * {
+  line-height: 1;
+}
+
+.anticon svg {
+  display: inline-block;
+}
+
+.anticon::before {
+  display: none;
+}
+
+.anticon .anticon-icon {
+  display: block;
+}
+
+.anticon[tabindex] {
+  cursor: pointer;
+}
+
+.anticon-spin::before,
+.anticon-spin {
+  display: inline-block;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+}
+
+@-webkit-keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
+
+@keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+`;
