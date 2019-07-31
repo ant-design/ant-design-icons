@@ -30,7 +30,7 @@ yarn add @ant-design/icons-svg
 
 ## Use Library Adapter
 
-- React: See [@ant-design/icons](./packages/icons) to learn about detail usage.
+- React: See [@ant-design/icons](./packages/icons-react) to learn about detail usage.
 
 ## Build Project
 
