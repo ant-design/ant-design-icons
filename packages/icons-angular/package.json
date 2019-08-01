@@ -38,7 +38,7 @@
     "cross-env": "^5.2.0",
     "fs-extra": "^7.0.0",
     "globby": "^8.0.1",
-    "jasmine-core": "~2.99.1",
+    "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.0",
