@@ -12,8 +12,8 @@ Ant Design Icons for React
 ## Install
 
 ```bash
-yarn add @ant-design/icons-svg
-yarn add @ant-design/icons
+yarn add @ant-design/icons-svg@4.0.0
+yarn add @ant-design/icons@4.0.0
 ```
 
 ## Basic Usage
@@ -23,6 +23,10 @@ You can import it directly or destructure from `@ant-design/icons` when tree-sha
 ```ts
 import Smile from '@ant-design/icons/Smile';
 import { Smile } from '@ant-design/icons';
+
+import SmileFilled from '@ant-design/icons/SmileFilled';
+import SmileTwoTone from '@ant-design/icons/SmileTwoTone';
+import { SmileFilled, SmileTwoTone } from '@ant-design/icons';
 ```
 
 ## Component Interface
