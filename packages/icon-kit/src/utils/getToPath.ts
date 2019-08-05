@@ -1,7 +1,7 @@
 import { AssetPath } from '../types';
 import { join, relative, parse } from 'path';
 
-export function getToPath({
+export default function getToPath({
   destination,
   from,
   configContext,

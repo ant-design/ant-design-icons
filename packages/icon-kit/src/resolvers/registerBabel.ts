@@ -2,7 +2,7 @@
 // https://github.com/umijs/father/blob/master/packages/father-build/src/registerBabel.ts
 
 import { join } from 'path';
-import slash from 'slash2';
+import { slash } from '../utils';
 import getBabelConfig from './getBabelConfig';
 
 interface IRegisterBabelOpts {

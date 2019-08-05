@@ -19,7 +19,7 @@ import { stream } from 'globby';
 import { createReadStream, ensureDir, createWriteStream } from 'fs-extra';
 import { parse, dirname } from 'path';
 import { cloneDeep } from 'lodash';
-import { getToPath } from './utils/getToPath';
+import { getToPath } from './utils';
 
 const debug = debugFactory('service');
 
