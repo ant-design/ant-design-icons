@@ -6,7 +6,9 @@
   "keywords": [
     "kit"
   ],
-  "author": "HeskeyBaozi <hezhiyu233@foxmail.com>",
+  "contributors": [
+    "HeskeyBaozi <hezhiyu233@foxmail.com>"
+  ],
   "homepage": "https://github.com/HeskeyBaozi/ant-design-icons#readme",
   "license": "MIT",
   "main": "lib/index.js",
