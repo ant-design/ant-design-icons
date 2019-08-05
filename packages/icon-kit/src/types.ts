@@ -1,6 +1,5 @@
 import PluginAPI from './PluginAPI';
 import KitService from './Service';
-import { Observable } from 'rxjs';
 import { ParsedPath } from 'path';
 
 export interface CwdNeeded {

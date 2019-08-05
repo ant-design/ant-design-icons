@@ -1,7 +1,9 @@
 'use strict';
 
-const kit = require('..');
+const Kit = require('..');
 
-describe('kit', () => {
-    it('needs tests');
+describe('Kit', () => {
+  it('should export Service', () => {
+    expect(typeof Kit.Service).toBe('function');
+  });
 });
