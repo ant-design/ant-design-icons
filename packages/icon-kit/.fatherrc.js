@@ -1,8 +1,8 @@
 module.exports = {
   target: 'node',
-  esm: {
-    type: 'babel'
-  },
+  // esm: {
+  //   type: 'babel'
+  // },
   cjs: {
     type: 'babel'
   },

@@ -3,7 +3,7 @@ import KitService from '../Service';
 import resolveUserConfig from '../resolvers/resolveUserConfig';
 import * as signale from 'signale';
 
-const args = yParser(process.argv.slice(2));
+const args = yParser(process.argv.slice(3));
 
 (async () => {
   const configOrConfigs = await resolveUserConfig({ cwd: process.cwd() });

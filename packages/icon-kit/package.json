@@ -2,7 +2,6 @@
   "name": "@ant-design/icon-kit",
   "version": "1.0.0-alpha.0",
   "description": "iconkit",
-  "sideEffects": false,
   "keywords": [
     "kit"
   ],
@@ -12,11 +11,13 @@
   "homepage": "https://github.com/HeskeyBaozi/ant-design-icons#readme",
   "license": "MIT",
   "main": "lib/index.js",
-  "module": "es/index.js",
+  "bin": {
+    "iconkit": "bin/iconkit.js"
+  },
   "files": [
     "lib",
-    "es",
     "src",
+    "bin",
     "tsconfig.json"
   ],
   "repository": {
