@@ -32,10 +32,11 @@ export default async function resolveUserConfig({
   );
   if (
     Array.isArray(userConfig) ||
-    (userConfig && Array.isArray(userConfig.plugins))
+    (userConfig && Array.isArray(userConfig.sources))
   ) {
     return userConfig;
   }
+  signale.error(`Cannot resolve the config`, userConfig);
   return null;
 }
 

@@ -104,7 +104,9 @@ export default class KitService {
       const preloadConfigPlugins = this.preConfig.plugins || [];
       this.plugins = [...buildInPlugins, ...preloadConfigPlugins];
       debug(
-        `Try to initialize ${this.plugins.length} plugins, ${preloadConfigPlugins.length} plugin(s) for user.`
+        `Try to initialize ${this.plugins.length} plugins, ${
+          preloadConfigPlugins.length
+        } plugin(s) for user.`
       );
       this.plugins.forEach((plugin) => {
         this.initializeOnePlugin(plugin);
@@ -236,7 +238,8 @@ export default class KitService {
             to: getToPath({
               destination: this.config!.destination,
               from,
-              configContext: this.config!.context
+              configContext: this.config!.context,
+              relativeBase: this.config!.relativeBase
             }),
             content
           } as Asset;

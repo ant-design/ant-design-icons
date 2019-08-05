@@ -12,10 +12,12 @@ export default class GenerateCommandPlugin implements KitPlugin {
   apply(api: ProxyPluginAPI, options?: object) {
     api.syncHooks.afterInitialized.tap(this.namespace, () => {
       api.syncHooks.beforeExtraAssetsTakingEffect.call();
+      let count = 0;
       const extraAssets$Subsription = api.extraAssets$.subscribe({
         next: async (asset: ExtraAsset) => {
           api.syncHooks.beforeExtraAssetEmit.call(asset);
           await api.writeAsset(asset);
+          count++;
           if (!asset.to.absolute.endsWith('.svg')) {
             api.logger.scope(api.config!.name).complete(
               `Extra file ${chalk.underline.cyan(
@@ -27,7 +29,7 @@ export default class GenerateCommandPlugin implements KitPlugin {
         complete: () => {
           api.syncHooks.onExtraAssetsComplete.call();
           api.logger.scope(api.config!.name).complete(
-            `Extra assets is generated.`
+            `Extra ${count} asset(s) are generated.`
           );
           extraAssets$Subsription.unsubscribe();
         }
@@ -45,18 +47,20 @@ export default class GenerateCommandPlugin implements KitPlugin {
           }
 
           return new Promise((resolve) => {
+            let count = 0;
             const assets$Subscription = api.assets$!.subscribe({
               next: async (asset) => {
                 api.syncHooks.beforeAssetEmit.call(asset);
                 if (api.config!.destination && asset.to) {
                   await api.writeAsset(asset as Asset);
+                  count++;
                 }
               },
               complete: () => {
                 api.syncHooks.onAssetsComplete.call();
                 if (api.config!.destination) {
                   api.logger.scope(api.config!.name).complete(
-                    `Done. The sources: ${chalk.underline.cyan(
+                    `Done. ${count} asset(s) are generated. The sources: ${chalk.underline.cyan(
                       '[ ' + api.config!.sources + ' ]'
                     )}.`
                   );

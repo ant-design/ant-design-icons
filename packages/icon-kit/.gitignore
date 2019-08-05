@@ -31,5 +31,8 @@ _site/
 .cache
 public
 
+# test
+test/blackbox/**/des/**/*
+
 # publish
 *.tgz

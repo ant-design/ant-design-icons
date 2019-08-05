@@ -48,6 +48,7 @@
     "@types/tapable": "^1.0.4",
     "@types/yargs-parser": "^13.0.0",
     "father": "^2.14.2",
+    "rxjs": "^6.5.2",
     "typescript": "^3.5.3"
   }
 }
