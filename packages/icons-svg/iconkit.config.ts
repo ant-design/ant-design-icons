@@ -1,7 +1,7 @@
 import { resolve } from 'path';
 import { KitConfig } from '@ant-design/icon-kit';
-import { twoToneSVGOConfig, singleColorSVGOConfig } from './svgo.config';
 import SVGOProcessor from './processors/SVGOProcessor';
+import { twoToneSVGOConfig, singleColorSVGOConfig } from './svgo.config';
 import XMLProcessor, { AbstractNode } from './processors/XMLProcessor';
 import TemplateProcessor from './processors/TemplateProcessor';
 import PrettierProcessor from './processors/PrettierProcessor';

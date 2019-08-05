@@ -2,18 +2,11 @@ import yParser from 'yargs-parser';
 import KitService from '../Service';
 import resolveUserConfig from '../resolvers/resolveUserConfig';
 import signale from 'signale';
+import { KitConfig } from '../types';
 
 const args = yParser(process.argv.slice(3));
 
-(async () => {
-  const configOrConfigs = await resolveUserConfig({ cwd: process.cwd() });
-
-  // Failure
-  if (!configOrConfigs) {
-    signale.fatal(`Failed to resolve config(s).`);
-    return;
-  }
-
+export async function generate(configOrConfigs: KitConfig | KitConfig[]) {
   // Success
   // Multi
   if (Array.isArray(configOrConfigs)) {
@@ -27,5 +20,15 @@ const args = yParser(process.argv.slice(3));
   }
   // Single
   signale.success(`Resolve config successfully.`);
-  await new KitService(configOrConfigs).run('generate', args);
+  return new KitService(configOrConfigs).run('generate', args);
+}
+
+(async () => {
+  const configOrConfigs = await resolveUserConfig({ cwd: process.cwd() });
+  // Failure
+  if (!configOrConfigs) {
+    signale.fatal(`Failed to resolve config(s).`);
+    return;
+  }
+  await generate(configOrConfigs);
 })();

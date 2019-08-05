@@ -1,5 +1,5 @@
 import { KitProcessor, Asset, AssetPath } from '@ant-design/icon-kit';
-import parseXml from '@rgrove/parse-xml';
+import * as parseXml from '@rgrove/parse-xml';
 import { SyncWaterfallHook } from 'tapable';
 import { getThemeAccordingToDir } from '../utils';
 

@@ -16,8 +16,10 @@
     "url": "git+https://github.com/HeskeyBaozi/ant-design-icons.git"
   },
   "scripts": {
-    "g": "iconkit generate",
-    "type-check": "tsc --noEmit"
+    "g": "npm run generate",
+    "generate": "ts-node scripts/generate.ts",
+    "type-check": "tsc --noEmit",
+    "config": "tsc iconkit.config.ts --module commonjs"
   },
   "bugs": {
     "url": "https://github.com/HeskeyBaozi/ant-design-icons/issues"
@@ -31,11 +33,14 @@
     "@types/prettier": "^1.18.1",
     "@types/svgo": "^1.2.1",
     "@types/tapable": "^1.0.4",
+    "cross-env": "^5.2.0",
+    "father": "^2.14.2",
     "fs-extra": "^8.1.0",
     "lodash": "^4.17.15",
     "prettier": "^1.18.2",
     "svgo": "^1.3.0",
     "tapable": "^1.1.3",
+    "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   }
 }
