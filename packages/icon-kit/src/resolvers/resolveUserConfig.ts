@@ -1,5 +1,5 @@
 import { pathExists } from 'fs-extra';
-import * as signale from 'signale';
+import signale from 'signale';
 import { join } from 'path';
 import loadDefaultModuleFirst from '../utils/loadDefaultModuleFirst';
 import { CwdNeeded, KitConfig } from '../types';

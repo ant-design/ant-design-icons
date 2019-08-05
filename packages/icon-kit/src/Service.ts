@@ -9,7 +9,7 @@ import {
 } from './types';
 import { AsyncSeriesWaterfallHook, SyncHook, HookMap } from 'tapable';
 import buildInPlugins from './plugins';
-import * as signale from 'signale';
+import signale from 'signale';
 import PluginAPI from './PluginAPI';
 import Command from './Command';
 import debugFactory from 'debug';

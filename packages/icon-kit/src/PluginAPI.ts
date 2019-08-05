@@ -1,5 +1,5 @@
 import debug, { Debugger } from 'debug';
-import * as signale from 'signale';
+import signale from 'signale';
 
 export default class PluginAPI {
   namespace: string;

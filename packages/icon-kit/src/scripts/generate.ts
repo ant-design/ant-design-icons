@@ -1,7 +1,7 @@
-import * as yParser from 'yargs-parser';
+import yParser from 'yargs-parser';
 import KitService from '../Service';
 import resolveUserConfig from '../resolvers/resolveUserConfig';
-import * as signale from 'signale';
+import signale from 'signale';
 
 const args = yParser(process.argv.slice(3));
 

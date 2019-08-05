@@ -60,6 +60,7 @@
     "@types/globby": "^9.1.0",
     "@types/jest": "^24.0.16",
     "@types/lodash": "^4.14.136",
+    "@types/node": "^12.6.9",
     "@types/signale": "^1.2.1",
     "@types/tapable": "^1.0.4",
     "@types/yargs-parser": "^13.0.0",

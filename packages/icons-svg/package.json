@@ -8,10 +8,6 @@
   "homepage": "https://github.com/HeskeyBaozi/ant-design-icons#readme",
   "license": "MIT",
   "main": "lib/icons-svg.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
   "files": [
     "lib"
   ],
@@ -20,7 +16,7 @@
     "url": "git+https://github.com/HeskeyBaozi/ant-design-icons.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "g": "iconkit generate"
   },
   "bugs": {
     "url": "https://github.com/HeskeyBaozi/ant-design-icons/issues"
