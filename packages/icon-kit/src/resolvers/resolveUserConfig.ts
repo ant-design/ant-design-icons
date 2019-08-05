@@ -4,7 +4,7 @@ import { join } from 'path';
 import loadDefaultModuleFirst from '../utils/loadDefaultModuleFirst';
 import { CwdNeeded, KitConfig } from '../types';
 import chalk from 'chalk';
-import registerBabel from 'father-build';
+import registerBabel from './registerBabel';
 
 export const MODULE_NAME = 'iconkit';
 export const CONFIG_FILES = [
