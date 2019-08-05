@@ -27,6 +27,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@ant-design/icon-kit": "^1.0.0-alpha.0"
+    "@ant-design/icon-kit": "../icon-kit",
+    "typescript": "^3.5.3"
   }
 }

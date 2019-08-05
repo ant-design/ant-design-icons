@@ -4,6 +4,7 @@ import { join } from 'path';
 import loadDefaultModuleFirst from '../utils/loadDefaultModuleFirst';
 import { CwdNeeded, KitConfig } from '../types';
 import chalk from 'chalk';
+import registerBabel from 'father-build';
 
 export const MODULE_NAME = 'iconkit';
 export const CONFIG_FILES = [
@@ -24,6 +25,10 @@ export default async function resolveUserConfig({
     signale.fatal(`Cannot find any config file!`);
     return null;
   }
+  registerBabel({
+    cwd,
+    only: CONFIG_FILES
+  });
   signale.pending(
     `Load config file from ${chalk.underline.cyan(configFilePath)}.`
   );
