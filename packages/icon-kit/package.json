@@ -1,0 +1,29 @@
+{
+  "name": "@ant-design/icon-kit",
+  "version": "1.0.0",
+  "description": "iconkit",
+  "keywords": [
+    "kit"
+  ],
+  "author": "HeskeyBaozi <hezhiyu233@foxmail.com>",
+  "homepage": "https://github.com/HeskeyBaozi/ant-design-icons#readme",
+  "license": "MIT",
+  "main": "lib/kit.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeskeyBaozi/ant-design-icons.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/HeskeyBaozi/ant-design-icons/issues"
+  }
+}
