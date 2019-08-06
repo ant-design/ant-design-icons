@@ -16,15 +16,14 @@
     "url": "git+https://github.com/HeskeyBaozi/ant-design-icons.git"
   },
   "scripts": {
-    "g": "npm run generate",
-    "generate": "ts-node scripts/generate.ts",
+    "g": "cross-env TS_NODE_TRANSPILE_ONLY=true npm run generate",
+    "generate": "cross-env node --require ts-node/register scripts/generate.ts",
     "type-check": "tsc --noEmit",
     "config": "tsc iconkit.config.ts --module commonjs"
   },
   "bugs": {
     "url": "https://github.com/HeskeyBaozi/ant-design-icons/issues"
   },
-  "dependencies": {},
   "devDependencies": {
     "@ant-design/icon-kit": "../icon-kit",
     "@rgrove/parse-xml": "^2.0.1",

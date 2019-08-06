@@ -1,3 +1,4 @@
+/// <reference types="../typings" />
 import { KitProcessor, Asset, AssetPath } from '@ant-design/icon-kit';
 import * as parseXml from '@rgrove/parse-xml';
 import { SyncWaterfallHook } from 'tapable';
