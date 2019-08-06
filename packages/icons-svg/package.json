@@ -1,0 +1,38 @@
+{
+  "name": "@ant-design/icons-svg",
+  "version": "4.0.0-alpha.1",
+  "description": "Abstract nodes for ant design icons.",
+  "contributors": [
+    "HeskeyBaozi <hezhiyu233@foxmail.com>"
+  ],
+  "homepage": "https://github.com/ant-design/ant-design-icons/",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "lib",
+    "es",
+    "inline-svg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ant-design/ant-design-icons.git"
+  },
+  "scripts": {
+    "gu": "gulp --require ts-node/register",
+    "g": "cross-env TS_NODE_TRANSPILE_ONLY=true KIT_FAST_GENERATE=true TS_NODE_PROJECT=build/tsconfig.json iconkit generate --require ts-node/register",
+    "generate": "cross-env DEBUG=iconkit:* TS_NODE_PROJECT=build/tsconfig.json iconkit generate --require ts-node/register",
+    "type-check": "tsc --noEmit",
+    "build": "father build"
+  },
+  "bugs": {
+    "url": "https://github.com/ant-design/ant-design-icons/issues"
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.6",
+    "gulp": "^4.0.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {}
+}
