@@ -16,21 +16,23 @@ export default class GenerateCommandPlugin implements KitPlugin {
       const extraAssets$Subsription = api.extraAssets$.subscribe({
         next: async (asset: ExtraAsset) => {
           api.syncHooks.beforeExtraAssetEmit.call(asset);
-          await api.writeAsset(asset);
           count++;
+          await api.writeAsset(asset);
           if (!asset.to.absolute.endsWith('.svg')) {
-            api.logger.scope(api.config!.name).complete(
-              `Extra file ${chalk.underline.cyan(
-                relative(api.config!.context, asset.to.absolute)
-              )} is generated.`
-            );
+            api.logger
+              .scope(api.config!.name)
+              .complete(
+                `an extra file ${chalk.underline.cyan(
+                  relative(api.config!.context, asset.to.absolute)
+                )} is generated.`
+              );
           }
         },
         complete: () => {
           api.syncHooks.onExtraAssetsComplete.call();
-          api.logger.scope(api.config!.name).complete(
-            `Extra ${count} asset(s) are generated.`
-          );
+          api.logger
+            .scope(api.config!.name)
+            .complete(`extra ${count} asset(s) are generated.`);
           extraAssets$Subsription.unsubscribe();
         }
       });
@@ -47,29 +49,33 @@ export default class GenerateCommandPlugin implements KitPlugin {
           }
 
           return new Promise((resolve) => {
-            let count = 0;
+            let c = 0;
             const assets$Subscription = api.assets$!.subscribe({
               next: async (asset) => {
                 api.syncHooks.beforeAssetEmit.call(asset);
                 if (api.config!.destination && asset.to) {
+                  c++;
                   await api.writeAsset(asset as Asset);
-                  count++;
                 }
               },
               complete: () => {
                 api.syncHooks.onAssetsComplete.call();
                 if (api.config!.destination) {
-                  api.logger.scope(api.config!.name).complete(
-                    `Done. ${count} asset(s) are generated. The sources: ${chalk.underline.cyan(
-                      '[ ' + api.config!.sources + ' ]'
-                    )}.`
-                  );
+                  api.logger
+                    .scope(api.config!.name)
+                    .complete(
+                      `Done. ${c} asset(s) are generated. The sources: ${chalk.underline.cyan(
+                        '[ ' + api.config!.sources + ' ]'
+                      )}.`
+                    );
                 } else {
-                  api.logger.scope(api.config!.name).complete(
-                    `Done. There is no file emitted. The sources: ${chalk.underline.cyan(
-                      '[ ' + api.config!.sources + ' ]'
-                    )}.`
-                  );
+                  api.logger
+                    .scope(api.config!.name)
+                    .complete(
+                      `Done. There is no file emitted. The sources: ${chalk.underline.cyan(
+                        '[ ' + api.config!.sources + ' ]'
+                      )}.`
+                    );
                 }
                 assets$Subscription.unsubscribe();
                 api.extraAssets$.complete();
