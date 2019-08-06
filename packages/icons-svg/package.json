@@ -7,7 +7,8 @@
   ],
   "homepage": "https://github.com/HeskeyBaozi/ant-design-icons#readme",
   "license": "MIT",
-  "main": "lib/icons-svg.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
   "files": [
     "lib"
   ],
@@ -16,10 +17,10 @@
     "url": "git+https://github.com/HeskeyBaozi/ant-design-icons.git"
   },
   "scripts": {
-    "g": "cross-env TS_NODE_TRANSPILE_ONLY=true KIT_FAST_GENERATE=true iconkit generate --require ts-node/register",
-    "generate": "cross-env DEBUG=iconkit:* iconkit generate --require ts-node/register",
+    "g": "cross-env TS_NODE_TRANSPILE_ONLY=true KIT_FAST_GENERATE=true TS_NODE_PROJECT=build/tsconfig.json iconkit generate --require ts-node/register",
+    "generate": "cross-env DEBUG=iconkit:* TS_NODE_PROJECT=build/tsconfig.json iconkit generate --require ts-node/register",
     "type-check": "tsc --noEmit",
-    "config": "tsc iconkit.config.ts --module commonjs"
+    "build": "father build"
   },
   "bugs": {
     "url": "https://github.com/HeskeyBaozi/ant-design-icons/issues"

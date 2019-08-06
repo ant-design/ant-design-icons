@@ -1,17 +1,17 @@
 import { resolve } from 'path';
 import { KitConfig } from '@ant-design/icon-kit';
-import SVGOProcessor from './processors/SVGOProcessor';
-import { twoToneSVGOConfig, singleColorSVGOConfig } from './svgo.config';
-import XMLProcessor, { AbstractNode } from './processors/XMLProcessor';
-import TemplateProcessor from './processors/TemplateProcessor';
-import PrettierProcessor from './processors/PrettierProcessor';
-import RenameIconByThemePlugin from './plugins/RenameIconByThemePlugin';
-import TwoToneColorExtractProcessor from './processors/TwoToneColorExtractProcessor';
-import GenerateFilesPlugin from './plugins/GenerateFilesPlugin';
-import GenerateIconListPlugin from './plugins/GenerateIconListPlugin';
-import { getIdentifierAccordingToNameAndDir } from './utils';
-import GenerateInlineSVGPlugin from './plugins/GenerateInlineSVGPlugin';
-import GenerateIndexPlugin from './plugins/GenerateIndexPlugin';
+import SVGOProcessor from './build/processors/SVGOProcessor';
+import { twoToneSVGOConfig, singleColorSVGOConfig } from './build/svgo.config';
+import XMLProcessor, { AbstractNode } from './build/processors/XMLProcessor';
+import TemplateProcessor from './build/processors/TemplateProcessor';
+import PrettierProcessor from './build/processors/PrettierProcessor';
+import RenameIconByThemePlugin from './build/plugins/RenameIconByThemePlugin';
+import TwoToneColorExtractProcessor from './build/processors/TwoToneColorExtractProcessor';
+import GenerateFilesPlugin from './build/plugins/GenerateFilesPlugin';
+import GenerateIconListPlugin from './build/plugins/GenerateIconListPlugin';
+import { getIdentifierAccordingToNameAndDir } from './build/utils';
+import GenerateInlineSVGPlugin from './build/plugins/GenerateInlineSVGPlugin';
+import GenerateIndexPlugin from './build/plugins/GenerateIndexPlugin';
 
 export default [
   {
@@ -27,7 +27,7 @@ export default [
         shape: 'icon-definition'
       }),
       new TemplateProcessor({
-        tplSrc: resolve(__dirname, './templates/icon.ts.ejs'),
+        tplSrc: resolve(__dirname, './build/templates/icon.ts.ejs'),
         mapAssetPropsToInterpolate: ({ from, content }) => ({
           identifier: getIdentifierAccordingToNameAndDir(from),
           content
@@ -73,7 +73,7 @@ export default [
         secondaryColors: ['#E6E6E6', '#D9D9D9', '#D8D8D8']
       }),
       new TemplateProcessor({
-        tplSrc: resolve(__dirname, './templates/icon.ts.ejs'),
+        tplSrc: resolve(__dirname, './build/templates/icon.ts.ejs'),
         mapAssetPropsToInterpolate: ({ from, content }) => ({
           identifier: getIdentifierAccordingToNameAndDir(from),
           content
@@ -100,17 +100,17 @@ export default [
     sources: ['./svg/**/*.svg'],
     plugins: [
       new GenerateIconListPlugin({
-        template: resolve(__dirname, './templates/icons-list.md'),
+        template: resolve(__dirname, './build/templates/icons-list.md'),
         output: resolve(__dirname, './docs/list.md')
       }),
       new GenerateFilesPlugin([
         {
-          dataSource: resolve(__dirname, './templates/types.ts'),
+          dataSource: resolve(__dirname, './build/templates/types.ts'),
           output: resolve(__dirname, './src/types.ts')
         }
       ]),
       new GenerateIndexPlugin({
-        template: resolve(__dirname, './templates/index.ts.ejs'),
+        template: resolve(__dirname, './build/templates/index.ts.ejs'),
         output: resolve(__dirname, './src/index.ts'),
         literalFromPath: './asn/[identifier]'
       })

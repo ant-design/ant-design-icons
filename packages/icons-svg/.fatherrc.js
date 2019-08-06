@@ -4,5 +4,6 @@ module.exports = {
   },
   cjs: {
     type: 'babel'
-  }
+  },
+  // disableTypeCheck: true
 };

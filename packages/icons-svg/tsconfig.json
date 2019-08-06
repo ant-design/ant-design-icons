@@ -2,10 +2,11 @@
   "compilerOptions": {
     "strict": true,
     "target": "esnext",
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node",
+    "removeComments": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "declaration": true
   }
 }
