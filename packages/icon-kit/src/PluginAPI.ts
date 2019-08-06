@@ -14,7 +14,7 @@ export default class PluginAPI {
     }
 
     // initialize utils
-    const pluginUID = `${taskName}:${this.namespace}`;
+    const pluginUID = `iconkit:${taskName}:${this.namespace}`;
     this.logger = new signale.Signale({
       scope: namespace.startsWith('build-in') ? void 0 : pluginUID
     });

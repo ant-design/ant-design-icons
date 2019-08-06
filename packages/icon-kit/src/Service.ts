@@ -21,7 +21,7 @@ import { parse, dirname } from 'path';
 import { cloneDeep } from 'lodash';
 import { getToPath } from './utils';
 
-const debug = debugFactory('service');
+const debug = debugFactory('iconkit:service');
 
 export const ProxyPropertyNames = Symbol('ProxyPropertyNamesInService');
 

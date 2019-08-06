@@ -12,5 +12,3 @@ export {
 export { getToPath } from './utils';
 
 export { default as Service } from './Service';
-
-export { generate } from './scripts/generate';

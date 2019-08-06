@@ -4,7 +4,7 @@ import resolveUserConfig from '../resolvers/resolveUserConfig';
 import signale from 'signale';
 import { KitConfig } from '../types';
 
-const args = yParser(process.argv.slice(3));
+const args = yParser(process.argv.slice(2));
 
 export async function generate(configOrConfigs: KitConfig | KitConfig[]) {
   // Success
