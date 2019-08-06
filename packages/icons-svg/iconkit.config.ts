@@ -107,6 +107,10 @@ export default [
         {
           dataSource: resolve(__dirname, './build/templates/types.ts'),
           output: resolve(__dirname, './src/types.ts')
+        },
+        {
+          dataSource: resolve(__dirname, './build/templates/helpers.ts'),
+          output: resolve(__dirname, './src/helpers.ts')
         }
       ]),
       new GenerateIndexPlugin({
