@@ -34,7 +34,7 @@ src
 src/ast/**/*
 src/types.ts
 inline-svg/**/*.svg
-svg
+
 
 # publish
 *.tgz
