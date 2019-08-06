@@ -22,7 +22,8 @@
     "g": "cross-env TS_NODE_TRANSPILE_ONLY=true KIT_FAST_GENERATE=true TS_NODE_PROJECT=build/tsconfig.json iconkit generate --require ts-node/register",
     "generate": "cross-env DEBUG=iconkit:* TS_NODE_PROJECT=build/tsconfig.json iconkit generate --require ts-node/register",
     "type-check": "tsc --noEmit",
-    "build": "father build"
+    "build": "father build",
+    "prepublish": "npm run type-check && npm run g && npm run build"
   },
   "bugs": {
     "url": "https://github.com/ant-design/ant-design-icons/issues"

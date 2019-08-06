@@ -29,7 +29,8 @@
     "build": "father build",
     "type-check": "tsc --noEmit",
     "test": "npm run test:unit",
-    "test:unit": "father test"
+    "test:unit": "father test",
+    "prepublish": "npm run test && npm run build"
   },
   "bugs": {
     "url": "https://github.com/ant-design/ant-design-icons/issues"
