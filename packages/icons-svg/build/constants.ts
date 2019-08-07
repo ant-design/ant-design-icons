@@ -24,3 +24,13 @@ export const oldIcons = [
 ];
 
 export const twotoneRE = /twotone/g;
+
+export const twoToneColors = {
+  primary: ['#333'],
+  secondary: ['#E6E6E6', '#D9D9D9', '#D8D8D8']
+};
+
+export const twoToneIdentifiers = {
+  primaryColor: 'primaryColor',
+  secondaryColor: 'secondaryColor'
+};
