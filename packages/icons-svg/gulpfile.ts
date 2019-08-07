@@ -1,7 +1,7 @@
-import { series, src, dest, TaskFunction } from 'gulp';
+import { series, src, dest, parallel, TaskFunction } from 'gulp';
 import gulpIf from 'gulp-if';
 import svgo from './plugins/svgo';
-import { isTwotoneSVG } from './build/helpers';
+import { mergeAttrs } from './build/helpers';
 import { twoToneSVGOConfig, singleColorSVGOConfig } from './build/svgo-options';
 import icond from './plugins/icond';
 import rename from 'gulp-rename';
@@ -11,18 +11,40 @@ export const clean: TaskFunction = function clean() {
   return del(['src']);
 };
 
-export const generate: TaskFunction = function generate() {
-  return src('svg/**/*.svg')
+export const outlineFlow: TaskFunction = function outlineFlow() {
+  return src('svg/outline/*.svg')
+    .pipe(svgo(singleColorSVGOConfig))
     .pipe(
-      gulpIf(isTwotoneSVG, svgo(twoToneSVGOConfig), svgo(singleColorSVGOConfig))
-    )
-    .pipe(icond())
-    .pipe(
-      rename({
-        extname: '.json'
+      icond({
+        theme: 'outline',
+        mergeAttrs
       })
     )
     .pipe(dest('src'));
 };
 
-export default series(clean, generate);
+export const fillFlow: TaskFunction = function fillFlow() {
+  return src('svg/fill/*.svg')
+    .pipe(svgo(singleColorSVGOConfig))
+    .pipe(
+      icond({
+        theme: 'fill',
+        mergeAttrs
+      })
+    )
+    .pipe(dest('src'));
+};
+
+export const twoToneFlow: TaskFunction = function twoToneFlow() {
+  return src('svg/twotone/*.svg')
+    .pipe(svgo(twoToneSVGOConfig))
+    .pipe(
+      icond({
+        theme: 'twotone',
+        mergeAttrs
+      })
+    )
+    .pipe(dest('src'));
+};
+
+export default series(clean, parallel(outlineFlow, fillFlow, twoToneFlow));

@@ -26,11 +26,38 @@ export interface IconDefinitionBase {
   icon: AbstractNode;
 }
 
-export default function icond() {
+interface IcondOptions {
+  theme: string;
+  mergeAttrs?: (
+    iconDefinition: IconDefinitionBase
+  ) => { [key: string]: string };
+}
+
+export default function icond({ theme, mergeAttrs }: IcondOptions) {
   const extraNodeTransformsHooks = new SyncWaterfallHook(['abstractNode']);
   const postRootNodeTransformsHooks = new SyncWaterfallHook([
     'iconDefinitionBaseNode'
   ]);
+
+  if (typeof mergeAttrs === 'function') {
+    postRootNodeTransformsHooks.tap(
+      'mergeAttrs',
+      (iconDefinitionBaseNode: IconDefinitionBase) => {
+        if (
+          iconDefinitionBaseNode &&
+          iconDefinitionBaseNode.icon &&
+          iconDefinitionBaseNode.icon.tag === 'svg'
+        ) {
+          const attrs = mergeAttrs(iconDefinitionBaseNode);
+          iconDefinitionBaseNode.icon.attrs = {
+            ...iconDefinitionBaseNode.icon.attrs,
+            ...attrs
+          };
+        }
+        return iconDefinitionBaseNode;
+      }
+    );
+  }
 
   function toAbstractNode({
     name,
@@ -46,7 +73,7 @@ export default function icond() {
         .map((child) =>
           child.type === 'element' ? toAbstractNode(child) : null
         )
-        .filter(($) => Boolean($)) as AbstractNode[]
+        .filter((_) => _) as AbstractNode[]
     };
     if (!(currentNode.children && currentNode.children.length)) {
       delete currentNode.children;
@@ -64,7 +91,11 @@ export default function icond() {
           : XMLTree;
 
       const abstractRootNode = toAbstractNode(XMLRootNode);
-      let iconDefinitionBaseNode = toIconDefinitionBase(abstractRootNode, file);
+      let iconDefinitionBaseNode: IconDefinitionBase = {
+        name: file.stem,
+        theme,
+        icon: abstractRootNode
+      };
       iconDefinitionBaseNode = postRootNodeTransformsHooks.call(
         iconDefinitionBaseNode
       );
@@ -76,16 +107,4 @@ export default function icond() {
       done(null, file);
     }
   });
-}
-
-function toIconDefinitionBase(
-  node: AbstractNode,
-  { basename, path }: Pick<File, 'basename' | 'path'>
-): IconDefinitionBase {
-  const theme = path;
-  return {
-    name: basename || 'un name',
-    theme: theme || 'un theme',
-    icon: node
-  };
 }
