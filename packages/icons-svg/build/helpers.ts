@@ -1,10 +1,5 @@
-import File from 'vinyl';
 import { IconDefinitionBase } from '../plugins/icond';
-import { oldIcons, twotoneRE } from './constants';
-
-export const isTwotoneSVG = (file: File) => {
-  return twotoneRE.test(file.path);
-};
+import { oldIcons } from './constants';
 
 export function mergeAttrs(icond: IconDefinitionBase) {
   const attrs: { [key: string]: string } = {

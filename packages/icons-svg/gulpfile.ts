@@ -1,5 +1,4 @@
 import { series, src, dest, parallel, TaskFunction } from 'gulp';
-import gulpIf from 'gulp-if';
 import svgo from './plugins/svgo';
 import { mergeAttrs } from './build/helpers';
 import { twoToneSVGOConfig, singleColorSVGOConfig } from './build/svgo-options';
@@ -20,6 +19,7 @@ export const outlineFlow: TaskFunction = function outlineFlow() {
         mergeAttrs
       })
     )
+    .pipe(rename({ extname: '.json' }))
     .pipe(dest('src'));
 };
 
@@ -32,6 +32,7 @@ export const fillFlow: TaskFunction = function fillFlow() {
         mergeAttrs
       })
     )
+    .pipe(rename({ extname: '.json' }))
     .pipe(dest('src'));
 };
 
@@ -44,6 +45,7 @@ export const twoToneFlow: TaskFunction = function twoToneFlow() {
         mergeAttrs
       })
     )
+    .pipe(rename({ extname: '.json' }))
     .pipe(dest('src'));
 };
 
