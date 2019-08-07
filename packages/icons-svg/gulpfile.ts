@@ -4,18 +4,26 @@ import {
   iconsAfter3Dot9ShouldBeResizeViewbox,
   iconShouldNotBeFocusable,
   twoToneIconExtractColor,
-  twoToneStringfy
+  twoToneStringfy,
+  getIdentifier
 } from './build/helpers';
 import { twoToneSVGOConfig, singleColorSVGOConfig } from './build/svgo-options';
 import iconDefinition from './plugins/icon-definition';
+import tpl from './plugins/tpl';
 import rename from 'gulp-rename';
 import del from 'del';
+import { resolve } from 'path';
+import inlineSVG from './plugins/inline-svg';
 
-export const clean: TaskFunction = function clean() {
-  return del(['src']);
-};
+export function clean() {
+  return del(['src', 'inline-svg']);
+}
 
-export const outlineFlow: TaskFunction = function outlineFlow() {
+export function copy() {
+  return src(['build/templates/*.ts']).pipe(dest('src'));
+}
+
+export function outline() {
   return src('svg/outline/*.svg')
     .pipe(svgo(singleColorSVGOConfig))
     .pipe(
@@ -27,11 +35,29 @@ export const outlineFlow: TaskFunction = function outlineFlow() {
         ]
       })
     )
-    .pipe(rename({ extname: '.ts', suffix: '-outline' }))
-    .pipe(dest('src'));
-};
+    .pipe(dest('inline-svg/outline'))
+    .pipe(
+      tpl({
+        tplSource: resolve(__dirname, './build/templates/icon.ts.ejs'),
+        mapFileToInterpolate: ({ name, content }) => ({
+          identifier: getIdentifier({ name, theme: 'twotone' }),
+          content
+        })
+      })
+    )
+    .pipe(
+      rename((file) => {
+        file.basename = getIdentifier({
+          name: file.basename!,
+          theme: 'outline'
+        });
+        file.extname = '.ts';
+      })
+    )
+    .pipe(dest('src/asn'));
+}
 
-export const fillFlow: TaskFunction = function fillFlow() {
+export function fill() {
   return src('svg/fill/*.svg')
     .pipe(svgo(singleColorSVGOConfig))
     .pipe(
@@ -43,11 +69,29 @@ export const fillFlow: TaskFunction = function fillFlow() {
         ]
       })
     )
-    .pipe(rename({ extname: '.ts', suffix: '-fill' }))
-    .pipe(dest('src'));
-};
+    .pipe(dest('inline-svg/fill'))
+    .pipe(
+      tpl({
+        tplSource: resolve(__dirname, './build/templates/icon.ts.ejs'),
+        mapFileToInterpolate: ({ name, content }) => ({
+          identifier: getIdentifier({ name, theme: 'twotone' }),
+          content
+        })
+      })
+    )
+    .pipe(
+      rename((file) => {
+        file.basename = getIdentifier({
+          name: file.basename!,
+          theme: 'fill'
+        });
+        file.extname = '.ts';
+      })
+    )
+    .pipe(dest('src/asn'));
+}
 
-export const twoToneFlow: TaskFunction = function twoToneFlow() {
+export function twoTone() {
   return src('svg/twotone/*.svg')
     .pipe(svgo(twoToneSVGOConfig))
     .pipe(
@@ -61,8 +105,48 @@ export const twoToneFlow: TaskFunction = function twoToneFlow() {
         stringify: twoToneStringfy
       })
     )
-    .pipe(rename({ extname: '.js', suffix: '-twotone' }))
-    .pipe(dest('src'));
-};
+    .pipe(dest('inline-svg/twotone'))
+    .pipe(
+      tpl({
+        tplSource: resolve(__dirname, './build/templates/icon.ts.ejs'),
+        mapFileToInterpolate: ({ name, content }) => ({
+          identifier: getIdentifier({ name, theme: 'twotone' }),
+          content
+        })
+      })
+    )
+    .pipe(
+      rename((file) => {
+        file.basename = getIdentifier({
+          name: file.basename!,
+          theme: 'twotone'
+        });
+        file.extname = '.ts';
+      })
+    )
+    .pipe(dest('src/asn'));
+}
 
-export default series(clean, parallel(outlineFlow, fillFlow, twoToneFlow));
+export function outlineInline() {
+  return src('inline-svg/outline/*.svg')
+    .pipe(inlineSVG())
+    .pipe(dest('inline-svg/outline'));
+}
+
+export function fillInline() {
+  return src('inline-svg/fill/*.svg')
+    .pipe(inlineSVG())
+    .pipe(dest('inline-svg/fill'));
+}
+
+export function twoToneInline() {
+  return src('inline-svg/twotone/*.svg')
+    .pipe(inlineSVG())
+    .pipe(dest('inline-svg/twotone'));
+}
+
+export default series(
+  clean,
+  parallel(copy, outline, fill, twoTone),
+  parallel(outlineInline, fillInline, twoToneInline)
+);

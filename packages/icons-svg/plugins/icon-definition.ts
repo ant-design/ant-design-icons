@@ -2,6 +2,7 @@ import through from 'through2';
 import File from 'vinyl';
 import parseXML from '@rgrove/parse-xml';
 import { SyncWaterfallHook } from 'tapable';
+import { AbstractNode } from '../build/templates/types';
 
 interface XMLNode {
   type: string;
@@ -10,14 +11,6 @@ interface XMLNode {
     [key: string]: string;
   };
   children: XMLNode[];
-}
-
-export interface AbstractNode {
-  tag: string;
-  attrs: {
-    [key: string]: string;
-  };
-  children?: AbstractNode[];
 }
 
 export interface IconDefinitionBase {

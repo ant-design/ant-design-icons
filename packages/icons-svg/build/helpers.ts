@@ -8,7 +8,7 @@ import {
   twoToneIdentifiers,
   vueLikeQuoteInterpolate
 } from './constants';
-import { template } from 'lodash';
+import { template, upperFirst, camelCase, memoize } from 'lodash';
 
 const { primaryColor, secondaryColor } = twoToneIdentifiers;
 
@@ -77,3 +77,18 @@ export function twoToneStringfy(
     interpolate: vueLikeQuoteInterpolate
   })({ fnCode });
 }
+
+export const getIdentifier = memoize(function getIdentifier({
+  name,
+  theme
+}: {
+  name: string;
+  theme: string;
+}): string {
+  return upperFirst(camelCase(`${name}-${theme}`));
+});
+
+export {
+  renderIconDefinitionToSVGElement,
+  HelperRenderOptions
+} from './templates/helpers';
