@@ -34,3 +34,6 @@ export const twoToneIdentifiers = {
   primaryColor: 'primaryColor',
   secondaryColor: 'secondaryColor'
 };
+
+// "{{ }}" or '{{ }}'
+export const vueLikeQuoteInterpolate = /['"]{{([\s\S]+?)}}['"]/g;

@@ -2,7 +2,12 @@ import {
   AbstractNodeAndIconName,
   IconDefinitionBase
 } from '../plugins/icon-definition';
-import { oldIcons, twoToneColors, twoToneIdentifiers } from './constants';
+import {
+  oldIcons,
+  twoToneColors,
+  twoToneIdentifiers,
+  vueLikeQuoteInterpolate
+} from './constants';
 import { template } from 'lodash';
 
 const { primaryColor, secondaryColor } = twoToneIdentifiers;
@@ -55,19 +60,20 @@ export function twoToneStringfy(
   iconDefinitionBase: IconDefinitionBase
 ): string {
   const abstractNode = iconDefinitionBase.icon;
+  const literalAbstractNode = template(JSON.stringify(abstractNode), {
+    interpolate: vueLikeQuoteInterpolate
+  })({
+    [primaryColor]: primaryColor,
+    [secondaryColor]: secondaryColor
+  });
   const fnCode = `function (${primaryColor}, ${secondaryColor}) {
-    return ${template(JSON.stringify(abstractNode), {
-      interpolate: /['"]{{([\s\S]+?)}}['"]/g
-    })({
-      [primaryColor]: primaryColor,
-      [secondaryColor]: secondaryColor
-    })};
+    return ${literalAbstractNode};
   }`;
   const iconDefinitionBaseWithRawFunction = JSON.stringify({
     ...iconDefinitionBase,
     icon: '{{ fnCode }}'
   });
   return template(iconDefinitionBaseWithRawFunction, {
-    interpolate: /['"]{{([\s\S]+?)}}['"]/g
+    interpolate: vueLikeQuoteInterpolate
   })({ fnCode });
 }
