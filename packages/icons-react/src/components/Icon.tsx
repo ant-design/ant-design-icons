@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 import { svgBaseProps, log } from '../utils';
@@ -49,9 +49,10 @@ const Icon: React.FC<IconComponentProps> = props => {
     ...restProps
   } = props;
 
-  if (!(Component || children)) {
-    log('Should have `type` prop or `component` prop or `children`.');
-  }
+  log(
+    !(Component || children),
+    'Should have `type` prop or `component` prop or `children`.',
+  );
 
   const classString = classNames(
     'anticon',
@@ -88,17 +89,14 @@ const Icon: React.FC<IconComponentProps> = props => {
   }
 
   if (children) {
-    if (
+    log(
       !viewBox ||
       !(React.Children.count(children) === 1 &&
       React.isValidElement(children) &&
-      React.Children.only(children).type === 'use')
-    ) {
-      log(
-        'Make sure that you provide correct `viewBox`' +
-        ' prop (default `0 0 1024 1024`) to the icon.',
-      );
-    }
+      React.Children.only(children).type === 'use'),
+      'Make sure that you provide correct `viewBox`' +
+      ' prop (default `0 0 1024 1024`) to the icon.',
+    );
 
     innerNode = (
       <svg {...innerSvgProps} viewBox={viewBox}>

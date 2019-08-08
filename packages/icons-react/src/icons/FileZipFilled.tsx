@@ -1,7 +1,7 @@
 
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
-import * as React from 'react';
+import React from 'react';
 import { FileZipFill as FileZipFillSvg } from '@ant-design/icons-svg/lib';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
