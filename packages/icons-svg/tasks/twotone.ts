@@ -55,7 +55,7 @@ export default function twoTone() {
         tpl({
           tplSource: resolve(__dirname, '../build/templates/icon.ts.ejs'),
           mapFileToInterpolate: ({ name, content }) => ({
-            identifier: getIdentifier({ name, theme: 'twotone' }),
+            identifier: getIdentifier({ name, theme: 'twoTone' }),
             content
           })
         })
@@ -65,7 +65,7 @@ export default function twoTone() {
         rename((file) => {
           file.basename = getIdentifier({
             name: file.basename!,
-            theme: 'twotone'
+            theme: 'twoTone'
           });
           file.extname = '.ts';
         })
