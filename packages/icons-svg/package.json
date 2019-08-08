@@ -24,8 +24,9 @@
     "generate": "gulp --require ts-node/register/transpile-only",
     "type-check": "tsc --noEmit",
     "build": "father build",
-    "test": "npm run test:unit",
-    "test:unit": "father test"
+    "test": "npm run type-check && npm run test:unit",
+    "test:unit": "father test",
+    "prepublish": "npm run test && npm run g && npm run build"
   },
   "bugs": {
     "url": "https://github.com/ant-design/ant-design-icons/issues"
