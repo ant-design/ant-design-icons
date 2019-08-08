@@ -16,7 +16,7 @@ import clone from 'gulp-clone';
 import { resolve } from 'path';
 import inlineSVG from '../plugins/inline-svg';
 
-export function twoTone() {
+export default function twoTone() {
   const iconDefinitionStream = src('svg/twotone/*.svg')
     .pipe(svgo(twoToneSVGOConfig))
     .pipe(
@@ -32,6 +32,20 @@ export function twoTone() {
     );
 
   return merge(
+    iconDefinitionStream
+      .pipe(clone())
+      .pipe(
+        inlineSVG({
+          placeholders: {
+            primaryColor: '#1890ff',
+            secondaryColor: '#e6f7ff'
+          },
+          extraSVGAttrs: {
+            xmlns: 'http://www.w3.org/2000/svg'
+          }
+        })
+      )
+      .pipe(dest('docs/inline-svg/twotone')),
     iconDefinitionStream
       .pipe(clone())
       .pipe(inlineSVG())

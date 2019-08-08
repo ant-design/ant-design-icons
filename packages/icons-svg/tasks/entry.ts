@@ -6,9 +6,9 @@ import tpl from '../plugins/tpl';
 import { resolve } from 'path';
 import header from 'gulp-header';
 
-export function entry() {
+export default function entry() {
   return merge(
-    src('svg/outline/*.svg', { read: false }).pipe(
+    src('svg/outline/*.svg').pipe(
       tpl({
         tplSource: resolve(__dirname, '../build/templates/exportIcon.ts.ejs'),
         mapFileToInterpolate: ({ name }) => {
@@ -20,7 +20,7 @@ export function entry() {
         }
       })
     ),
-    src('svg/fill/*.svg', { read: false }).pipe(
+    src('svg/fill/*.svg').pipe(
       tpl({
         tplSource: resolve(__dirname, '../build/templates/exportIcon.ts.ejs'),
         mapFileToInterpolate: ({ name }) => {
@@ -32,7 +32,7 @@ export function entry() {
         }
       })
     ),
-    src('svg/twotone/*.svg', { read: false }).pipe(
+    src('svg/twotone/*.svg').pipe(
       tpl({
         tplSource: resolve(__dirname, '../build/templates/exportIcon.ts.ejs'),
         mapFileToInterpolate: ({ name }) => {

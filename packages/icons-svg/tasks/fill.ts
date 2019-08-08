@@ -15,7 +15,7 @@ import clone from 'gulp-clone';
 import { resolve } from 'path';
 import inlineSVG from '../plugins/inline-svg';
 
-export function fill() {
+export default function fill() {
   const iconDefinitionStream = src('svg/fill/*.svg')
     .pipe(svgo(singleColorSVGOConfig))
     .pipe(
@@ -29,6 +29,16 @@ export function fill() {
     );
 
   return merge(
+    iconDefinitionStream
+      .pipe(clone())
+      .pipe(
+        inlineSVG({
+          extraSVGAttrs: {
+            xmlns: 'http://www.w3.org/2000/svg'
+          }
+        })
+      )
+      .pipe(dest('docs/inline-svg/fill')),
     iconDefinitionStream
       .pipe(clone())
       .pipe(inlineSVG())

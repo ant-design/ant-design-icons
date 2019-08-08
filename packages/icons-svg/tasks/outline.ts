@@ -15,7 +15,7 @@ import clone from 'gulp-clone';
 import { resolve } from 'path';
 import inlineSVG from '../plugins/inline-svg';
 
-export function outline() {
+export default function outline() {
   const iconDefinitionStream = src('svg/outline/*.svg')
     .pipe(svgo(singleColorSVGOConfig))
     .pipe(
@@ -29,6 +29,16 @@ export function outline() {
     );
 
   return merge(
+    iconDefinitionStream
+      .pipe(clone())
+      .pipe(
+        inlineSVG({
+          extraSVGAttrs: {
+            xmlns: 'http://www.w3.org/2000/svg'
+          }
+        })
+      )
+      .pipe(dest('docs/inline-svg/outline')),
     iconDefinitionStream
       .pipe(clone())
       .pipe(inlineSVG())
