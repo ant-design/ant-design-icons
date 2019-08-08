@@ -1,4 +1,4 @@
-import { series, src, dest, parallel, TaskFunction } from 'gulp';
+import { series, src, dest, parallel } from 'gulp';
 import svgo from './plugins/svgo';
 import {
   iconsAfter3Dot9ShouldBeResizeViewbox,
@@ -7,13 +7,17 @@ import {
   twoToneStringfy,
   getIdentifier
 } from './build/helpers';
+import merge from 'merge-stream';
+import concat from 'gulp-concat';
 import { twoToneSVGOConfig, singleColorSVGOConfig } from './build/svgo-options';
 import iconDefinition from './plugins/icon-definition';
 import tpl from './plugins/tpl';
 import rename from 'gulp-rename';
+import clone from 'gulp-clone';
 import del from 'del';
 import { resolve } from 'path';
 import inlineSVG from './plugins/inline-svg';
+import header from 'gulp-header';
 
 export function clean() {
   return del(['src', 'inline-svg']);
@@ -24,7 +28,7 @@ export function copy() {
 }
 
 export function outline() {
-  return src('svg/outline/*.svg')
+  const iconDefinitionStream = src('svg/outline/*.svg')
     .pipe(svgo(singleColorSVGOConfig))
     .pipe(
       iconDefinition({
@@ -34,31 +38,38 @@ export function outline() {
           iconsAfter3Dot9ShouldBeResizeViewbox
         ]
       })
-    )
-    .pipe(dest('inline-svg/outline'))
-    .pipe(
-      tpl({
-        tplSource: resolve(__dirname, './build/templates/icon.ts.ejs'),
-        mapFileToInterpolate: ({ name, content }) => ({
-          identifier: getIdentifier({ name, theme: 'twotone' }),
-          content
+    );
+
+  return merge(
+    iconDefinitionStream
+      .pipe(clone())
+      .pipe(inlineSVG())
+      .pipe(dest('inline-svg/outline')),
+    iconDefinitionStream
+      .pipe(
+        tpl({
+          tplSource: resolve(__dirname, './build/templates/icon.ts.ejs'),
+          mapFileToInterpolate: ({ name, content }) => ({
+            identifier: getIdentifier({ name, theme: 'outline' }),
+            content
+          })
         })
-      })
-    )
-    .pipe(
-      rename((file) => {
-        file.basename = getIdentifier({
-          name: file.basename!,
-          theme: 'outline'
-        });
-        file.extname = '.ts';
-      })
-    )
-    .pipe(dest('src/asn'));
+      )
+      .pipe(
+        rename((file) => {
+          file.basename = getIdentifier({
+            name: file.basename!,
+            theme: 'outline'
+          });
+          file.extname = '.ts';
+        })
+      )
+      .pipe(dest('src/asn'))
+  );
 }
 
 export function fill() {
-  return src('svg/fill/*.svg')
+  const iconDefinitionStream = src('svg/fill/*.svg')
     .pipe(svgo(singleColorSVGOConfig))
     .pipe(
       iconDefinition({
@@ -68,31 +79,38 @@ export function fill() {
           iconsAfter3Dot9ShouldBeResizeViewbox
         ]
       })
-    )
-    .pipe(dest('inline-svg/fill'))
-    .pipe(
-      tpl({
-        tplSource: resolve(__dirname, './build/templates/icon.ts.ejs'),
-        mapFileToInterpolate: ({ name, content }) => ({
-          identifier: getIdentifier({ name, theme: 'twotone' }),
-          content
+    );
+
+  return merge(
+    iconDefinitionStream
+      .pipe(clone())
+      .pipe(inlineSVG())
+      .pipe(dest('inline-svg/fill')),
+    iconDefinitionStream
+      .pipe(
+        tpl({
+          tplSource: resolve(__dirname, './build/templates/icon.ts.ejs'),
+          mapFileToInterpolate: ({ name, content }) => ({
+            identifier: getIdentifier({ name, theme: 'fill' }),
+            content
+          })
         })
-      })
-    )
-    .pipe(
-      rename((file) => {
-        file.basename = getIdentifier({
-          name: file.basename!,
-          theme: 'fill'
-        });
-        file.extname = '.ts';
-      })
-    )
-    .pipe(dest('src/asn'));
+      )
+      .pipe(
+        rename((file) => {
+          file.basename = getIdentifier({
+            name: file.basename!,
+            theme: 'fill'
+          });
+          file.extname = '.ts';
+        })
+      )
+      .pipe(dest('src/asn'))
+  );
 }
 
 export function twoTone() {
-  return src('svg/twotone/*.svg')
+  const iconDefinitionStream = src('svg/twotone/*.svg')
     .pipe(svgo(twoToneSVGOConfig))
     .pipe(
       iconDefinition({
@@ -104,49 +122,87 @@ export function twoTone() {
         ],
         stringify: twoToneStringfy
       })
-    )
-    .pipe(dest('inline-svg/twotone'))
-    .pipe(
-      tpl({
-        tplSource: resolve(__dirname, './build/templates/icon.ts.ejs'),
-        mapFileToInterpolate: ({ name, content }) => ({
-          identifier: getIdentifier({ name, theme: 'twotone' }),
-          content
+    );
+
+  return merge(
+    iconDefinitionStream
+      .pipe(clone())
+      .pipe(inlineSVG())
+      .pipe(dest('inline-svg/twotone')),
+    iconDefinitionStream
+      .pipe(
+        tpl({
+          tplSource: resolve(__dirname, './build/templates/icon.ts.ejs'),
+          mapFileToInterpolate: ({ name, content }) => ({
+            identifier: getIdentifier({ name, theme: 'twotone' }),
+            content
+          })
         })
+      )
+
+      .pipe(
+        rename((file) => {
+          file.basename = getIdentifier({
+            name: file.basename!,
+            theme: 'twotone'
+          });
+          file.extname = '.ts';
+        })
+      )
+      .pipe(dest('src/asn'))
+  );
+}
+
+export function index() {
+  return merge(
+    src('svg/outline/*.svg').pipe(
+      tpl({
+        tplSource: resolve(__dirname, './build/templates/exportIcon.ts.ejs'),
+        mapFileToInterpolate: ({ name }) => {
+          const identifier = getIdentifier({ name, theme: 'outline' });
+          return {
+            identifier,
+            path: `./asn/${identifier}`
+          };
+        }
+      })
+    ),
+    src('svg/fill/*.svg').pipe(
+      tpl({
+        tplSource: resolve(__dirname, './build/templates/exportIcon.ts.ejs'),
+        mapFileToInterpolate: ({ name }) => {
+          const identifier = getIdentifier({ name, theme: 'fill' });
+          return {
+            identifier,
+            path: `./asn/${identifier}`
+          };
+        }
+      })
+    ),
+    src('svg/twotone/*.svg').pipe(
+      tpl({
+        tplSource: resolve(__dirname, './build/templates/exportIcon.ts.ejs'),
+        mapFileToInterpolate: ({ name }) => {
+          const identifier = getIdentifier({ name, theme: 'twotone' });
+          return {
+            identifier,
+            path: `./asn/${identifier}`
+          };
+        }
       })
     )
+  )
+    .pipe(concat('index.ts'))
     .pipe(
-      rename((file) => {
-        file.basename = getIdentifier({
-          name: file.basename!,
-          theme: 'twotone'
-        });
-        file.extname = '.ts';
-      })
+      header(
+        `// This index.ts file is generated automatically.\n` +
+          `// tslint:disable\n`
+      )
     )
-    .pipe(dest('src/asn'));
+    .pipe(dest('src'));
 }
-
-export function outlineInline() {
-  return src('inline-svg/outline/*.svg')
-    .pipe(inlineSVG())
-    .pipe(dest('inline-svg/outline'));
-}
-
-export function fillInline() {
-  return src('inline-svg/fill/*.svg')
-    .pipe(inlineSVG())
-    .pipe(dest('inline-svg/fill'));
-}
-
-export function twoToneInline() {
-  return src('inline-svg/twotone/*.svg')
-    .pipe(inlineSVG())
-    .pipe(dest('inline-svg/twotone'));
-}
-
 export default series(
   clean,
-  parallel(copy, outline, fill, twoTone),
-  parallel(outlineInline, fillInline, twoToneInline)
+  parallel(copy, index, outline, fill, twoTone)
+  //parallel(outlineInline, fillInline, twoToneInline)
 );
