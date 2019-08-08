@@ -23,7 +23,9 @@
     "g": "npm run generate",
     "generate": "gulp --require ts-node/register/transpile-only",
     "type-check": "tsc --noEmit",
-    "build": "father build"
+    "build": "father build",
+    "test": "npm run test:unit",
+    "test:unit": "father test"
   },
   "bugs": {
     "url": "https://github.com/ant-design/ant-design-icons/issues"
@@ -36,6 +38,7 @@
     "@types/gulp-concat": "^0.0.32",
     "@types/gulp-rename": "^0.0.33",
     "@types/gulp-template": "^5.0.1",
+    "@types/jest": "^24.0.17",
     "@types/lodash": "^4.14.136",
     "@types/merge-stream": "^1.1.2",
     "@types/node": "^12.7.0",
