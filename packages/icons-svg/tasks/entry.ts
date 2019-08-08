@@ -36,7 +36,7 @@ export default function entry() {
       tpl({
         tplSource: resolve(__dirname, '../build/templates/exportIcon.ts.ejs'),
         mapFileToInterpolate: ({ name }) => {
-          const identifier = getIdentifier({ name, theme: 'twotone' });
+          const identifier = getIdentifier({ name, theme: 'twoTone' });
           return {
             identifier,
             path: `./asn/${identifier}`
