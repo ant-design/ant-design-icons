@@ -13,6 +13,8 @@ Ant Design Icons
 
 </div>
 
+Check [all icons list](./docs/list.md).
+
 ## Install
 
 ```bash
