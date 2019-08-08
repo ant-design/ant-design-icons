@@ -26,6 +26,9 @@ _site/
 public
 src
 inline-svg
+# !docs/inline-svg
+es
+lib
 
 # publish
 *.tgz

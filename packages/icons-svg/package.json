@@ -1,6 +1,7 @@
 {
   "name": "@ant-design/icons-svg",
   "version": "4.0.0-alpha.1",
+  "sideEffects": false,
   "description": "Abstract nodes for ant design icons.",
   "contributors": [
     "HeskeyBaozi <hezhiyu233@foxmail.com>"
@@ -19,9 +20,8 @@
     "url": "git+https://github.com/ant-design/ant-design-icons.git"
   },
   "scripts": {
-    "gu": "gulp --require ts-node/register/transpile-only",
-    "g": "cross-env TS_NODE_TRANSPILE_ONLY=true KIT_FAST_GENERATE=true TS_NODE_PROJECT=build/tsconfig.json iconkit generate --require ts-node/register",
-    "generate": "cross-env DEBUG=iconkit:* TS_NODE_PROJECT=build/tsconfig.json iconkit generate --require ts-node/register",
+    "g": "npm run generate",
+    "generate": "gulp --require ts-node/register/transpile-only",
     "type-check": "tsc --noEmit",
     "build": "father build"
   },
@@ -34,7 +34,6 @@
     "@types/globby": "^9.1.0",
     "@types/gulp": "^4.0.6",
     "@types/gulp-concat": "^0.0.32",
-    "@types/gulp-if": "^0.0.33",
     "@types/gulp-rename": "^0.0.33",
     "@types/gulp-template": "^5.0.1",
     "@types/lodash": "^4.14.136",
@@ -44,12 +43,12 @@
     "@types/tapable": "^1.0.4",
     "@types/through2": "^2.0.34",
     "del": "^5.0.0",
+    "father": "^2.14.2",
     "globby": "^10.0.1",
     "gulp": "^4.0.2",
     "gulp-clone": "^2.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-header": "^2.0.9",
-    "gulp-if": "^3.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-template": "^5.0.0",
     "lodash": "^4.17.15",

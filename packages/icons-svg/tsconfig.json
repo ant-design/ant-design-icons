@@ -4,6 +4,7 @@
     "target": "esnext",
     "module": "commonjs",
     "moduleResolution": "node",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "declaration": true
   }
 }

@@ -11,5 +11,4 @@ export default series(
   clean,
   parallel(copy, entry, outline, fill, twoTone),
   list
-  //parallel(outlineInline, fillInline, twoToneInline)
 );
