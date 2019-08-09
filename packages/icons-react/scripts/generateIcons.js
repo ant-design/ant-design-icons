@@ -17,7 +17,7 @@ iconConfig.forEach(config => {
     `
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
-import * as React from 'react';
+import React from 'react';
 import { ${svgName} as ${svgName}Svg } from '@ant-design/icons-svg/lib';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 

@@ -1,12 +1,13 @@
 {
   "name": "@ant-design/icons",
-  "version": "4.0.0-alpha.2",
+  "version": "4.0.0-alpha.3",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
   "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-react",
   "contributors": [
-    "HeskeyBaozi<hezhiyu233@foxmail.com>"
+    "HeskeyBaozi<hezhiyu233@foxmail.com>",
+    "vagusX<vagusxl@gmail.com>"
   ],
   "license": "MIT",
   "scripts": {
@@ -15,7 +16,7 @@
     "lint": "eslint src/ --ext .tsx,.ts",
     "compile": "father build",
     "test": "father test",
-    "prepublish": "npm run lint && npm run test && npm run generate && npm run compile",
+    "prepublishOnly": "npm run lint && npm run test && npm run generate && npm run compile && np --no-cleanup --yolo --no-publish",
     "generate": "node scripts/generateIcons.js",
     "postcompile": "./scripts/prepare.sh && node scripts/generateIconEntries.js"
   },
@@ -39,24 +40,22 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",
-    "jest": "^23.4.2",
+    "father": "^2.14.0",
     "lodash": "^4.17.15",
     "mobx": "^5.1.0",
     "mobx-react": "^5.2.5",
-    "rc-tools": "^9.5.3",
+    "np": "^5.0.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "styled-components": "^3.3.3",
-    "tslint": "^5.11.0",
-    "tslint-react": "^3.6.0",
     "typescript": "^3.0.3"
   },
   "dependencies": {
     "@ant-design/colors": "^3.1.0",
     "babel-runtime": "^6.26.0",
     "classnames": "^2.2.6",
-    "father": "^2.14.0",
-    "insert-css": "^2.0.0"
+    "insert-css": "^2.0.0",
+    "rc-util": "^4.9.0"
   },
   "config": {
     "port": 9527,
