@@ -34,7 +34,6 @@
     "@types/node": "^10.5.5",
     "@types/react": "^16.4.12",
     "@types/react-dom": "^16.0.6",
-    "@types/warning": "^3.0.0",
     "antd": "^3.20.7",
     "babel-core": "^6.26.3",
     "cross-env": "^5.2.0",
@@ -55,7 +54,7 @@
     "babel-runtime": "^6.26.0",
     "classnames": "^2.2.6",
     "insert-css": "^2.0.0",
-    "warning": "^4.0.3"
+    "rc-util": "^4.9.0"
   },
   "config": {
     "port": 9527,

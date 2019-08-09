@@ -1,14 +1,10 @@
 import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
 import React from 'react';
-import warning from 'warning';
+import warning from 'rc-util/lib/warning';
 
-const warned: Record<string, boolean> = {};
 export function log(valid: boolean, message: string) {
-  if (!valid && !warned[message]) {
-    warning(false, `[@ant-design/icons] ${message}`);
-    warned[message] = true;
-  }
+  warning(valid, `[@ant-design/icons] ${message}`);
 }
 
 export function isIconDefinition(target: any): target is IconDefinition {
