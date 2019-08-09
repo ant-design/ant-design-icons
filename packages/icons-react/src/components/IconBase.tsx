@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import {
   generate,
@@ -67,10 +67,16 @@ class Icon extends React.Component<IconProps> {
         secondaryColor: secondaryColor || getSecondaryColor(primaryColor),
       };
     }
+
+    log(
+      !isIconDefinition(icon),
+      `icon should be icon definiton, but got ${icon}`,
+    );
+
     if (!isIconDefinition(icon)) {
-      log(`icon should be icon definiton, but got ${icon}`);
       return null;
     }
+
     let target = icon;
     if (target && typeof target.icon === 'function') {
       target = {

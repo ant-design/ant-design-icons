@@ -1,12 +1,10 @@
 import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
-import * as React from 'react';
+import React from 'react';
+import warning from 'rc-util/lib/warning';
 
-export function log(message: string) {
-  if (!(process && process.env && process.env.NODE_ENV === 'production')) {
-    // eslint-disable-next-line no-console
-    console.error(`[@ant-design/icons-svg-react]: ${message}.`);
-  }
+export function log(valid: boolean, message: string) {
+  warning(valid, `[@ant-design/icons] ${message}`);
 }
 
 export function isIconDefinition(target: any): target is IconDefinition {
@@ -73,10 +71,6 @@ export const svgBaseProps = {
   fill: 'currentColor',
   'aria-hidden': 'true',
   focusable: 'false',
-};
-
-export const svgBaseStyle = {
-  verticalAlign: '-0.125em',
 };
 
 export const iconStyles = `

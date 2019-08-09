@@ -1,11 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { IconDefinition } from '@ant-design/icons-svg/lib/types';
 
 import { IconBaseProps } from './Icon';
 import ReactIcon from './IconBase';
 import { setTwoToneColor, getTwoToneColor } from './twoTonePrimaryColor';
-import { svgBaseStyle } from '../utils';
 
 export interface AntdIconProps extends IconBaseProps {
   twoToneColor?: string;
@@ -79,10 +78,7 @@ class Icon extends React.Component<IconComponentProps> {
           className={svgClassString}
           icon={icon}
           primaryColor={twoToneColor}
-          style={{
-            ...svgBaseStyle,
-            ...svgStyle,
-          }}
+          style={svgStyle}
         />
       </span>
     );

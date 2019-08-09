@@ -43,7 +43,6 @@ exports[`Icon should render to a <span class="xxx"><svg>...</svg></span> 1`] = `
     fill="currentColor"
     focusable="false"
     height="1em"
-    style="vertical-align:-0.125em"
     viewBox="64 64 896 896"
     width="1em"
   >
@@ -68,7 +67,6 @@ exports[`Icon should support basic usage 1`] = `
       fill="currentColor"
       focusable="false"
       height="1em"
-      style="vertical-align:-0.125em"
       viewBox="64 64 896 896"
       width="1em"
     >
@@ -89,7 +87,6 @@ exports[`Icon should support basic usage 1`] = `
       fill="currentColor"
       focusable="false"
       height="1em"
-      style="vertical-align:-0.125em"
       viewBox="64 64 896 896"
       width="1em"
     >
@@ -110,7 +107,6 @@ exports[`Icon should support basic usage 1`] = `
       fill="currentColor"
       focusable="false"
       height="1em"
-      style="vertical-align:-0.125em"
       viewBox="64 64 896 896"
       width="1em"
     >
@@ -131,7 +127,6 @@ exports[`Icon should support basic usage 1`] = `
       fill="currentColor"
       focusable="false"
       height="1em"
-      style="vertical-align:-0.125em"
       viewBox="64 64 896 896"
       width="1em"
     >
@@ -152,7 +147,6 @@ exports[`Icon should support basic usage 1`] = `
       fill="currentColor"
       focusable="false"
       height="1em"
-      style="vertical-align:-0.125em"
       viewBox="0 0 1024 1024"
       width="1em"
     >
@@ -177,7 +171,6 @@ exports[`Icon should support config global two-tone primary color 1`] = `
     fill="currentColor"
     focusable="false"
     height="1em"
-    style="vertical-align:-0.125em"
     viewBox="64 64 896 896"
     width="1em"
   >
@@ -257,7 +250,6 @@ exports[`Icon should support two-tone icon 1`] = `
     fill="currentColor"
     focusable="false"
     height="1em"
-    style="vertical-align:-0.125em"
     viewBox="64 64 896 896"
     width="1em"
   >
