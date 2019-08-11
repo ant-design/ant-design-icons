@@ -1,7 +1,8 @@
 import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
-import React from 'react';
+import React, { useEffect } from 'react';
 import warning from 'rc-util/lib/warning';
+import { insertCss } from 'insert-css';
 
 export function log(valid: boolean, message: string) {
   warning(valid, `[@ant-design/icons] ${message}`);
@@ -128,3 +129,14 @@ export const iconStyles = `
   }
 }
 `;
+
+let cssInjectedFlag = false;
+
+export const useInsertStyles = (styleStr: string = iconStyles) => {
+  useEffect(() => {
+    if (!cssInjectedFlag) {
+      insertCss(styleStr);
+      cssInjectedFlag = true;
+    }
+  }, []);
+}
