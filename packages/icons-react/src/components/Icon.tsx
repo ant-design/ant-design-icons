@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { svgBaseProps, log } from '../utils';
+import { svgBaseProps, log, useInsertStyles } from '../utils';
 
 export interface IconBaseProps {
   tabIndex?: number;
@@ -53,6 +53,8 @@ const Icon: React.FC<IconComponentProps> = props => {
     !(Component || children),
     'Should have `type` prop or `component` prop or `children`.',
   );
+
+  useInsertStyles();
 
   const classString = classNames(
     'anticon',
