@@ -2,6 +2,7 @@ tests/
 examples/
 src/
 scripts/
+.storybook/
 
 .eslintignore
 .eslintrc.js
