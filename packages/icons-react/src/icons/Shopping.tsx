@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { ShoppingOutline as ShoppingOutlineSvg } from '@ant-design/icons-svg/lib';
+import ShoppingOutlineSvg from '@ant-design/icons-svg/lib/outline/ShoppingOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Shopping = (props: AntdIconProps) => <AntdIcon {...props} icon={ShoppingOutlineSvg} />;

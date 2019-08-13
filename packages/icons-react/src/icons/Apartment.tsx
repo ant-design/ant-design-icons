@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { ApartmentOutline as ApartmentOutlineSvg } from '@ant-design/icons-svg/lib';
+import ApartmentOutlineSvg from '@ant-design/icons-svg/lib/outline/ApartmentOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Apartment = (props: AntdIconProps) => <AntdIcon {...props} icon={ApartmentOutlineSvg} />;

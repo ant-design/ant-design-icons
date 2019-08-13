@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { MessageOutline as MessageOutlineSvg } from '@ant-design/icons-svg/lib';
+import MessageOutlineSvg from '@ant-design/icons-svg/lib/outline/MessageOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Message = (props: AntdIconProps) => <AntdIcon {...props} icon={MessageOutlineSvg} />;

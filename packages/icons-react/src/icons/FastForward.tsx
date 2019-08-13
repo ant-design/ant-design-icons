@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { FastForwardOutline as FastForwardOutlineSvg } from '@ant-design/icons-svg/lib';
+import FastForwardOutlineSvg from '@ant-design/icons-svg/lib/outline/FastForwardOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FastForward = (props: AntdIconProps) => <AntdIcon {...props} icon={FastForwardOutlineSvg} />;

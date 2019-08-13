@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { UsbTwoTone as UsbTwoToneSvg } from '@ant-design/icons-svg/lib';
+import UsbTwoToneSvg from '@ant-design/icons-svg/lib/twotone/UsbTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const UsbTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={UsbTwoToneSvg} />;

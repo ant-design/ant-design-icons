@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { PoundOutline as PoundOutlineSvg } from '@ant-design/icons-svg/lib';
+import PoundOutlineSvg from '@ant-design/icons-svg/lib/outline/PoundOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Pound = (props: AntdIconProps) => <AntdIcon {...props} icon={PoundOutlineSvg} />;

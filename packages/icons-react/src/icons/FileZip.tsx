@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { FileZipOutline as FileZipOutlineSvg } from '@ant-design/icons-svg/lib';
+import FileZipOutlineSvg from '@ant-design/icons-svg/lib/outline/FileZipOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FileZip = (props: AntdIconProps) => <AntdIcon {...props} icon={FileZipOutlineSvg} />;
