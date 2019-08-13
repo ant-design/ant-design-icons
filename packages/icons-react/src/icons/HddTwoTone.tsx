@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { HddTwoTone as HddTwoToneSvg } from '@ant-design/icons-svg/lib';
+import HddTwoToneSvg from '@ant-design/icons-svg/lib/twotone/HddTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const HddTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={HddTwoToneSvg} />;

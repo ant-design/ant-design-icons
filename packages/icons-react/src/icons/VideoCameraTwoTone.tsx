@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { VideoCameraTwoTone as VideoCameraTwoToneSvg } from '@ant-design/icons-svg/lib';
+import VideoCameraTwoToneSvg from '@ant-design/icons-svg/lib/twotone/VideoCameraTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const VideoCameraTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={VideoCameraTwoToneSvg} />;

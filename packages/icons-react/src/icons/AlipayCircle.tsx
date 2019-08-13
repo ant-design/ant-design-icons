@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { AlipayCircleOutline as AlipayCircleOutlineSvg } from '@ant-design/icons-svg/lib';
+import AlipayCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/AlipayCircleOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const AlipayCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={AlipayCircleOutlineSvg} />;

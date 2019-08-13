@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { DownCircleTwoTone as DownCircleTwoToneSvg } from '@ant-design/icons-svg/lib';
+import DownCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/DownCircleTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const DownCircleTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={DownCircleTwoToneSvg} />;

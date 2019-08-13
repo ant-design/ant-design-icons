@@ -51,7 +51,7 @@ const Icon: React.FC<IconComponentProps> = props => {
 
   log(
     !(Component || children),
-    'Should have `type` prop or `component` prop or `children`.',
+    'Should have `component` prop or `children`.',
   );
 
   useInsertStyles();

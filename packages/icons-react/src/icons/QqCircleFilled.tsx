@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { QqCircleFill as QqCircleFillSvg } from '@ant-design/icons-svg/lib';
+import QqCircleFillSvg from '@ant-design/icons-svg/lib/fill/QqCircleFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const QqCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={QqCircleFillSvg} />;

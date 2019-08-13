@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { FolderOpenFill as FolderOpenFillSvg } from '@ant-design/icons-svg/lib';
+import FolderOpenFillSvg from '@ant-design/icons-svg/lib/fill/FolderOpenFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FolderOpenFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FolderOpenFillSvg} />;

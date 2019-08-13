@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { AppstoreOutline as AppstoreOutlineSvg } from '@ant-design/icons-svg/lib';
+import AppstoreOutlineSvg from '@ant-design/icons-svg/lib/outline/AppstoreOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Appstore = (props: AntdIconProps) => <AntdIcon {...props} icon={AppstoreOutlineSvg} />;

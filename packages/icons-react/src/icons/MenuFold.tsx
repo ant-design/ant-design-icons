@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { MenuFoldOutline as MenuFoldOutlineSvg } from '@ant-design/icons-svg/lib';
+import MenuFoldOutlineSvg from '@ant-design/icons-svg/lib/outline/MenuFoldOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const MenuFold = (props: AntdIconProps) => <AntdIcon {...props} icon={MenuFoldOutlineSvg} />;

@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { CiOutline as CiOutlineSvg } from '@ant-design/icons-svg/lib';
+import CiOutlineSvg from '@ant-design/icons-svg/lib/outline/CiOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Ci = (props: AntdIconProps) => <AntdIcon {...props} icon={CiOutlineSvg} />;

@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { UpSquareOutline as UpSquareOutlineSvg } from '@ant-design/icons-svg/lib';
+import UpSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/UpSquareOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const UpSquare = (props: AntdIconProps) => <AntdIcon {...props} icon={UpSquareOutlineSvg} />;

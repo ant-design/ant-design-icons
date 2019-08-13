@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { FileMarkdownOutline as FileMarkdownOutlineSvg } from '@ant-design/icons-svg/lib';
+import FileMarkdownOutlineSvg from '@ant-design/icons-svg/lib/outline/FileMarkdownOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FileMarkdown = (props: AntdIconProps) => <AntdIcon {...props} icon={FileMarkdownOutlineSvg} />;

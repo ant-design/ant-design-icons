@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { PictureOutline as PictureOutlineSvg } from '@ant-design/icons-svg/lib';
+import PictureOutlineSvg from '@ant-design/icons-svg/lib/outline/PictureOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Picture = (props: AntdIconProps) => <AntdIcon {...props} icon={PictureOutlineSvg} />;

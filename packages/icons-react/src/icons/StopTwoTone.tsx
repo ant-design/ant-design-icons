@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { StopTwoTone as StopTwoToneSvg } from '@ant-design/icons-svg/lib';
+import StopTwoToneSvg from '@ant-design/icons-svg/lib/twotone/StopTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const StopTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={StopTwoToneSvg} />;

@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { CloseCircleOutline as CloseCircleOutlineSvg } from '@ant-design/icons-svg/lib';
+import CloseCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/CloseCircleOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const CloseCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseCircleOutlineSvg} />;

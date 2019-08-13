@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { SaveTwoTone as SaveTwoToneSvg } from '@ant-design/icons-svg/lib';
+import SaveTwoToneSvg from '@ant-design/icons-svg/lib/twotone/SaveTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const SaveTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={SaveTwoToneSvg} />;

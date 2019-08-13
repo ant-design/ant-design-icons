@@ -13,6 +13,7 @@ exports.getComponentNameList = () => {
     manifest[theme].forEach(name => {
       const baseName = upperFirst(camelCase(name));
       icons.push({
+        theme,
         componentName: baseName + upperFirst(themeMap[theme]),
         svgName: baseName + upperFirst(theme === 'twotone' ? 'twoTone' : theme),
       });

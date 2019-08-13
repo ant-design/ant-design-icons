@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { MoreOutline as MoreOutlineSvg } from '@ant-design/icons-svg/lib';
+import MoreOutlineSvg from '@ant-design/icons-svg/lib/outline/MoreOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const More = (props: AntdIconProps) => <AntdIcon {...props} icon={MoreOutlineSvg} />;

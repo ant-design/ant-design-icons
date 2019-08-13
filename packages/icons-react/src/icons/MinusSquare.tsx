@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { MinusSquareOutline as MinusSquareOutlineSvg } from '@ant-design/icons-svg/lib';
+import MinusSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/MinusSquareOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const MinusSquare = (props: AntdIconProps) => <AntdIcon {...props} icon={MinusSquareOutlineSvg} />;

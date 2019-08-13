@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { ZhihuSquareFill as ZhihuSquareFillSvg } from '@ant-design/icons-svg/lib';
+import ZhihuSquareFillSvg from '@ant-design/icons-svg/lib/fill/ZhihuSquareFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ZhihuSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ZhihuSquareFillSvg} />;

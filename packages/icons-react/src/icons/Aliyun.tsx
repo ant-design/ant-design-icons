@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { AliyunOutline as AliyunOutlineSvg } from '@ant-design/icons-svg/lib';
+import AliyunOutlineSvg from '@ant-design/icons-svg/lib/outline/AliyunOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Aliyun = (props: AntdIconProps) => <AntdIcon {...props} icon={AliyunOutlineSvg} />;

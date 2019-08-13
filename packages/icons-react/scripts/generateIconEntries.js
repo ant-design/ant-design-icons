@@ -22,4 +22,9 @@ var _default = _${componentName};
 exports.default = _default;
 module.exports = _default;`,
   );
+
+  fs.writeFileSync(
+    `./${componentName}.d.ts`,
+    `export { default } from './lib/icons/${componentName}';`,
+  );
 });

@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { UsergroupDeleteOutline as UsergroupDeleteOutlineSvg } from '@ant-design/icons-svg/lib';
+import UsergroupDeleteOutlineSvg from '@ant-design/icons-svg/lib/outline/UsergroupDeleteOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const UsergroupDelete = (props: AntdIconProps) => <AntdIcon {...props} icon={UsergroupDeleteOutlineSvg} />;

@@ -11,14 +11,14 @@ if (!fs.existsSync(iconsDir)) {
 const iconConfig = getComponentNameList();
 
 iconConfig.forEach(config => {
-  const { componentName, svgName } = config;
+  const { theme, componentName, svgName } = config;
   fs.writeFileSync(
     `./src/icons/${componentName}.tsx`,
     `
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { ${svgName} as ${svgName}Svg } from '@ant-design/icons-svg/lib';
+import ${svgName}Svg from '@ant-design/icons-svg/lib/${theme}/${svgName}';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ${componentName} = (props: AntdIconProps) => <AntdIcon {...props} icon={${svgName}Svg} />;

@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { DiffOutline as DiffOutlineSvg } from '@ant-design/icons-svg/lib';
+import DiffOutlineSvg from '@ant-design/icons-svg/lib/outline/DiffOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Diff = (props: AntdIconProps) => <AntdIcon {...props} icon={DiffOutlineSvg} />;

@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { UsbOutline as UsbOutlineSvg } from '@ant-design/icons-svg/lib';
+import UsbOutlineSvg from '@ant-design/icons-svg/lib/outline/UsbOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Usb = (props: AntdIconProps) => <AntdIcon {...props} icon={UsbOutlineSvg} />;

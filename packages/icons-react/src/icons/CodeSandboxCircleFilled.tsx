@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { CodeSandboxCircleFill as CodeSandboxCircleFillSvg } from '@ant-design/icons-svg/lib';
+import CodeSandboxCircleFillSvg from '@ant-design/icons-svg/lib/fill/CodeSandboxCircleFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const CodeSandboxCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CodeSandboxCircleFillSvg} />;
