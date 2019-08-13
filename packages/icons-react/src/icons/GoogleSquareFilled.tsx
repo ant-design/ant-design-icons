@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { GoogleSquareFill as GoogleSquareFillSvg } from '@ant-design/icons-svg/lib';
+import GoogleSquareFillSvg from '@ant-design/icons-svg/lib/fill/GoogleSquareFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const GoogleSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={GoogleSquareFillSvg} />;

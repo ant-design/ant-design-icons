@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { BuildFill as BuildFillSvg } from '@ant-design/icons-svg/lib';
+import BuildFillSvg from '@ant-design/icons-svg/lib/fill/BuildFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const BuildFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BuildFillSvg} />;

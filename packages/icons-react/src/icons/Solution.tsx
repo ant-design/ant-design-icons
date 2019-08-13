@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { SolutionOutline as SolutionOutlineSvg } from '@ant-design/icons-svg/lib';
+import SolutionOutlineSvg from '@ant-design/icons-svg/lib/outline/SolutionOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Solution = (props: AntdIconProps) => <AntdIcon {...props} icon={SolutionOutlineSvg} />;

@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { CoffeeOutline as CoffeeOutlineSvg } from '@ant-design/icons-svg/lib';
+import CoffeeOutlineSvg from '@ant-design/icons-svg/lib/outline/CoffeeOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Coffee = (props: AntdIconProps) => <AntdIcon {...props} icon={CoffeeOutlineSvg} />;

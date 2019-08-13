@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { WindowsFill as WindowsFillSvg } from '@ant-design/icons-svg/lib';
+import WindowsFillSvg from '@ant-design/icons-svg/lib/fill/WindowsFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const WindowsFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={WindowsFillSvg} />;

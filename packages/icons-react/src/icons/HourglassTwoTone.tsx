@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { HourglassTwoTone as HourglassTwoToneSvg } from '@ant-design/icons-svg/lib';
+import HourglassTwoToneSvg from '@ant-design/icons-svg/lib/twotone/HourglassTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const HourglassTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={HourglassTwoToneSvg} />;

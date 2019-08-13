@@ -2,7 +2,7 @@
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 import React from 'react';
-import { AreaChartOutline as AreaChartOutlineSvg } from '@ant-design/icons-svg/lib';
+import AreaChartOutlineSvg from '@ant-design/icons-svg/lib/outline/AreaChartOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const AreaChart = (props: AntdIconProps) => <AntdIcon {...props} icon={AreaChartOutlineSvg} />;
