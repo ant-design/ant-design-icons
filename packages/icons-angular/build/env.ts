@@ -3,7 +3,7 @@ import { Environment } from './typings';
 
 export const environment: Environment = {
   paths: {
-    SVG_DIR: path.resolve(__dirname, '../../icons/svg'),
+    SVG_DIR: path.resolve(__dirname, '../../icons-svg-legacy/svg'),
     ICON_TEMPLATE: path.resolve(__dirname, './templates/icon.ts.template'),
     INDEX_TEMPLATE: path.resolve(__dirname, './templates/index.ts.template'),
     MANIFEST_TEMPLATE: path.resolve(
