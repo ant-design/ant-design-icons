@@ -4,7 +4,7 @@ import {
   generate,
   getSecondaryColor,
   isIconDefinition,
-  log,
+  warning,
   useInsertStyles,
 } from '../utils';
 
@@ -73,8 +73,8 @@ const IconBase: IconBaseComponent<IconProps> = props => {
 
   useInsertStyles();
 
-  log(
-    !isIconDefinition(icon),
+  warning(
+    isIconDefinition(icon),
     `icon should be icon definiton, but got ${icon}`,
   );
 
