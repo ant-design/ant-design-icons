@@ -21,11 +21,9 @@
     "postcompile": "./scripts/prepare.sh && node scripts/generateIconEntries.js"
   },
   "peerDependencies": {
-    "@ant-design/icons-svg": "^4.0.0",
     "react": "16.x"
   },
   "devDependencies": {
-    "@ant-design/icons-svg": "^4.0.0-alpha.0",
     "@types/classnames": "^2.2.9",
     "@types/enzyme": "^3.10.3",
     "@types/insert-css": "^2.0.0",
@@ -52,6 +50,7 @@
   },
   "dependencies": {
     "@ant-design/colors": "^3.1.0",
+    "@ant-design/icons-svg": "^4.0.0-alpha.0",
     "babel-runtime": "^6.26.0",
     "classnames": "^2.2.6",
     "insert-css": "^2.0.0",

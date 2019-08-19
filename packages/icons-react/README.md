@@ -12,7 +12,6 @@ Ant Design Icons for React
 ## Install
 
 ```bash
-yarn add @ant-design/icons-svg@4.0.0
 yarn add @ant-design/icons@4.0.0
 ```
 

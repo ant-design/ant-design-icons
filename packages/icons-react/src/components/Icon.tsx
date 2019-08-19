@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { svgBaseProps, log, useInsertStyles } from '../utils';
+import { svgBaseProps, warning, useInsertStyles } from '../utils';
 
 export interface IconBaseProps {
   tabIndex?: number;
@@ -49,8 +49,8 @@ const Icon: React.FC<IconComponentProps> = props => {
     ...restProps
   } = props;
 
-  log(
-    !(Component || children),
+  warning(
+    Boolean(Component || children),
     'Should have `component` prop or `children`.',
   );
 
@@ -91,11 +91,11 @@ const Icon: React.FC<IconComponentProps> = props => {
   }
 
   if (children) {
-    log(
-      !viewBox ||
-      !(React.Children.count(children) === 1 &&
-      React.isValidElement(children) &&
-      React.Children.only(children).type === 'use'),
+    warning(
+      Boolean(viewBox) ||
+        (React.Children.count(children) === 1 &&
+          React.isValidElement(children) &&
+          React.Children.only(children).type === 'use'),
       'Make sure that you provide correct `viewBox`' +
       ' prop (default `0 0 1024 1024`) to the icon.',
     );
