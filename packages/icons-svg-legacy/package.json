@@ -1,5 +1,5 @@
 {
-  "name": "@ant-design/icons-svg",
+  "name": "@ant-design/icons-svg-legacy",
   "version": "4.0.0-alpha.0",
   "description": "Ant Design Icons",
   "module": "lib/index.es.js",
