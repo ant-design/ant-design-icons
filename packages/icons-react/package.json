@@ -18,7 +18,7 @@
     "test": "father test",
     "prepublishOnly": "npm run lint && npm run test && npm run generate && npm run compile && np --no-cleanup --yolo --no-publish",
     "generate": "node scripts/generateIcons.js",
-    "postcompile": "./scripts/prepare.sh && node scripts/generateIconEntries.js"
+    "postcompile": "./scripts/cleanup.sh && node scripts/generateIconEntries.js"
   },
   "peerDependencies": {
     "react": "16.x"
@@ -55,14 +55,6 @@
     "classnames": "^2.2.6",
     "insert-css": "^2.0.0",
     "rc-util": "^4.9.0"
-  },
-  "config": {
-    "port": 9527,
-    "entry": {
-      "@ant-design/icons": [
-        "./src/index.ts"
-      ]
-    }
   },
   "gitHead": "225d4d2189720ee3b7e4a4d7a6d80e076fa15cbc"
 }
