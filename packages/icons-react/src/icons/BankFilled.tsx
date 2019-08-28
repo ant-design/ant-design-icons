@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import BankFillSvg from '@ant-design/icons-svg/lib/fill/BankFill';
+
+import React from 'react'
+import BankFilledSvg from '@ant-design/icons-svg/es/asn/BankFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BankFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BankFillSvg} />;
+const BankFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BankFilledSvg} />;
 export default BankFilled;

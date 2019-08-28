@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import PlusOutlineSvg from '@ant-design/icons-svg/lib/outline/PlusOutline';
+
+import React from 'react'
+import PlusSvg from '@ant-design/icons-svg/es/asn/PlusOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Plus = (props: AntdIconProps) => <AntdIcon {...props} icon={PlusOutlineSvg} />;
+const Plus = (props: AntdIconProps) => <AntdIcon {...props} icon={PlusSvg} />;
 export default Plus;

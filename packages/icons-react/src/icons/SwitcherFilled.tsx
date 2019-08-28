@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import SwitcherFillSvg from '@ant-design/icons-svg/lib/fill/SwitcherFill';
+
+import React from 'react'
+import SwitcherFilledSvg from '@ant-design/icons-svg/es/asn/SwitcherFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SwitcherFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SwitcherFillSvg} />;
+const SwitcherFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SwitcherFilledSvg} />;
 export default SwitcherFilled;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import LockFillSvg from '@ant-design/icons-svg/lib/fill/LockFill';
+
+import React from 'react'
+import LockFilledSvg from '@ant-design/icons-svg/es/asn/LockFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const LockFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={LockFillSvg} />;
+const LockFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={LockFilledSvg} />;
 export default LockFilled;

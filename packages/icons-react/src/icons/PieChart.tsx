@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import PieChartOutlineSvg from '@ant-design/icons-svg/lib/outline/PieChartOutline';
+
+import React from 'react'
+import PieChartSvg from '@ant-design/icons-svg/es/asn/PieChartOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PieChart = (props: AntdIconProps) => <AntdIcon {...props} icon={PieChartOutlineSvg} />;
+const PieChart = (props: AntdIconProps) => <AntdIcon {...props} icon={PieChartSvg} />;
 export default PieChart;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import LockOutlineSvg from '@ant-design/icons-svg/lib/outline/LockOutline';
+
+import React from 'react'
+import LockSvg from '@ant-design/icons-svg/es/asn/LockOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Lock = (props: AntdIconProps) => <AntdIcon {...props} icon={LockOutlineSvg} />;
+const Lock = (props: AntdIconProps) => <AntdIcon {...props} icon={LockSvg} />;
 export default Lock;

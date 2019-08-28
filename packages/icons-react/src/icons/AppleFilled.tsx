@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import AppleFillSvg from '@ant-design/icons-svg/lib/fill/AppleFill';
+
+import React from 'react'
+import AppleFilledSvg from '@ant-design/icons-svg/es/asn/AppleFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AppleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={AppleFillSvg} />;
+const AppleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={AppleFilledSvg} />;
 export default AppleFilled;

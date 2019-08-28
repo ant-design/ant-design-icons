@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import PoweroffOutlineSvg from '@ant-design/icons-svg/lib/outline/PoweroffOutline';
+
+import React from 'react'
+import PoweroffSvg from '@ant-design/icons-svg/es/asn/PoweroffOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Poweroff = (props: AntdIconProps) => <AntdIcon {...props} icon={PoweroffOutlineSvg} />;
+const Poweroff = (props: AntdIconProps) => <AntdIcon {...props} icon={PoweroffSvg} />;
 export default Poweroff;

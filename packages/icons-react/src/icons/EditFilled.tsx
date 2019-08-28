@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import EditFillSvg from '@ant-design/icons-svg/lib/fill/EditFill';
+
+import React from 'react'
+import EditFilledSvg from '@ant-design/icons-svg/es/asn/EditFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const EditFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={EditFillSvg} />;
+const EditFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={EditFilledSvg} />;
 export default EditFilled;

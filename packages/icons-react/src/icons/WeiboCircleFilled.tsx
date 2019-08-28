@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import WeiboCircleFillSvg from '@ant-design/icons-svg/lib/fill/WeiboCircleFill';
+
+import React from 'react'
+import WeiboCircleFilledSvg from '@ant-design/icons-svg/es/asn/WeiboCircleFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const WeiboCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={WeiboCircleFillSvg} />;
+const WeiboCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={WeiboCircleFilledSvg} />;
 export default WeiboCircleFilled;

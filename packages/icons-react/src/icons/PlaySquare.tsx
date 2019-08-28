@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import PlaySquareOutlineSvg from '@ant-design/icons-svg/lib/outline/PlaySquareOutline';
+
+import React from 'react'
+import PlaySquareSvg from '@ant-design/icons-svg/es/asn/PlaySquareOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PlaySquare = (props: AntdIconProps) => <AntdIcon {...props} icon={PlaySquareOutlineSvg} />;
+const PlaySquare = (props: AntdIconProps) => <AntdIcon {...props} icon={PlaySquareSvg} />;
 export default PlaySquare;

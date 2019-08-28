@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import TagsFillSvg from '@ant-design/icons-svg/lib/fill/TagsFill';
+
+import React from 'react'
+import TagsFilledSvg from '@ant-design/icons-svg/es/asn/TagsFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TagsFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={TagsFillSvg} />;
+const TagsFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={TagsFilledSvg} />;
 export default TagsFilled;

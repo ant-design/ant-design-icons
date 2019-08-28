@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ManOutlineSvg from '@ant-design/icons-svg/lib/outline/ManOutline';
+
+import React from 'react'
+import ManSvg from '@ant-design/icons-svg/es/asn/ManOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Man = (props: AntdIconProps) => <AntdIcon {...props} icon={ManOutlineSvg} />;
+const Man = (props: AntdIconProps) => <AntdIcon {...props} icon={ManSvg} />;
 export default Man;

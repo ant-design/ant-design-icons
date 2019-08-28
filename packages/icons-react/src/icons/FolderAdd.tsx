@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import FolderAddOutlineSvg from '@ant-design/icons-svg/lib/outline/FolderAddOutline';
+
+import React from 'react'
+import FolderAddSvg from '@ant-design/icons-svg/es/asn/FolderAddOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FolderAdd = (props: AntdIconProps) => <AntdIcon {...props} icon={FolderAddOutlineSvg} />;
+const FolderAdd = (props: AntdIconProps) => <AntdIcon {...props} icon={FolderAddSvg} />;
 export default FolderAdd;

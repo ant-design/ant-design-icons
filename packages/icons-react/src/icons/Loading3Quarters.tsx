@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import Loading3QuartersOutlineSvg from '@ant-design/icons-svg/lib/outline/Loading3QuartersOutline';
+
+import React from 'react'
+import Loading3QuartersSvg from '@ant-design/icons-svg/es/asn/Loading3QuartersOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Loading3Quarters = (props: AntdIconProps) => <AntdIcon {...props} icon={Loading3QuartersOutlineSvg} />;
+const Loading3Quarters = (props: AntdIconProps) => <AntdIcon {...props} icon={Loading3QuartersSvg} />;
 export default Loading3Quarters;

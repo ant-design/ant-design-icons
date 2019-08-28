@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ForwardOutlineSvg from '@ant-design/icons-svg/lib/outline/ForwardOutline';
+
+import React from 'react'
+import ForwardSvg from '@ant-design/icons-svg/es/asn/ForwardOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Forward = (props: AntdIconProps) => <AntdIcon {...props} icon={ForwardOutlineSvg} />;
+const Forward = (props: AntdIconProps) => <AntdIcon {...props} icon={ForwardSvg} />;
 export default Forward;

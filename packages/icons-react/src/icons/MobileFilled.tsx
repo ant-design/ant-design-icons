@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import MobileFillSvg from '@ant-design/icons-svg/lib/fill/MobileFill';
+
+import React from 'react'
+import MobileFilledSvg from '@ant-design/icons-svg/es/asn/MobileFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MobileFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MobileFillSvg} />;
+const MobileFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MobileFilledSvg} />;
 export default MobileFilled;

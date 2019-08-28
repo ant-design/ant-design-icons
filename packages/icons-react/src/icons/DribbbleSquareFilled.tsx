@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DribbbleSquareFillSvg from '@ant-design/icons-svg/lib/fill/DribbbleSquareFill';
+
+import React from 'react'
+import DribbbleSquareFilledSvg from '@ant-design/icons-svg/es/asn/DribbbleSquareFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DribbbleSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DribbbleSquareFillSvg} />;
+const DribbbleSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DribbbleSquareFilledSvg} />;
 export default DribbbleSquareFilled;

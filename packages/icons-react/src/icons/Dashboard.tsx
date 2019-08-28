@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DashboardOutlineSvg from '@ant-design/icons-svg/lib/outline/DashboardOutline';
+
+import React from 'react'
+import DashboardSvg from '@ant-design/icons-svg/es/asn/DashboardOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Dashboard = (props: AntdIconProps) => <AntdIcon {...props} icon={DashboardOutlineSvg} />;
+const Dashboard = (props: AntdIconProps) => <AntdIcon {...props} icon={DashboardSvg} />;
 export default Dashboard;

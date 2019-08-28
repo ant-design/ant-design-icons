@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DropboxSquareFillSvg from '@ant-design/icons-svg/lib/fill/DropboxSquareFill';
+
+import React from 'react'
+import DropboxSquareFilledSvg from '@ant-design/icons-svg/es/asn/DropboxSquareFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DropboxSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DropboxSquareFillSvg} />;
+const DropboxSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DropboxSquareFilledSvg} />;
 export default DropboxSquareFilled;

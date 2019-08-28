@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CloseOutlineSvg from '@ant-design/icons-svg/lib/outline/CloseOutline';
+
+import React from 'react'
+import CloseSvg from '@ant-design/icons-svg/es/asn/CloseOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Close = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseOutlineSvg} />;
+const Close = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseSvg} />;
 export default Close;

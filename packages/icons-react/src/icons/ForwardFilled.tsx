@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ForwardFillSvg from '@ant-design/icons-svg/lib/fill/ForwardFill';
+
+import React from 'react'
+import ForwardFilledSvg from '@ant-design/icons-svg/es/asn/ForwardFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ForwardFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ForwardFillSvg} />;
+const ForwardFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ForwardFilledSvg} />;
 export default ForwardFilled;

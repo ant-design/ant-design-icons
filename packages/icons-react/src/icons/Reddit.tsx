@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import RedditOutlineSvg from '@ant-design/icons-svg/lib/outline/RedditOutline';
+
+import React from 'react'
+import RedditSvg from '@ant-design/icons-svg/es/asn/RedditOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Reddit = (props: AntdIconProps) => <AntdIcon {...props} icon={RedditOutlineSvg} />;
+const Reddit = (props: AntdIconProps) => <AntdIcon {...props} icon={RedditSvg} />;
 export default Reddit;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import PicLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/PicLeftOutline';
+
+import React from 'react'
+import PicLeftSvg from '@ant-design/icons-svg/es/asn/PicLeftOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PicLeft = (props: AntdIconProps) => <AntdIcon {...props} icon={PicLeftOutlineSvg} />;
+const PicLeft = (props: AntdIconProps) => <AntdIcon {...props} icon={PicLeftSvg} />;
 export default PicLeft;

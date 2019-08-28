@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import FontColorsOutlineSvg from '@ant-design/icons-svg/lib/outline/FontColorsOutline';
+
+import React from 'react'
+import FontColorsSvg from '@ant-design/icons-svg/es/asn/FontColorsOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FontColors = (props: AntdIconProps) => <AntdIcon {...props} icon={FontColorsOutlineSvg} />;
+const FontColors = (props: AntdIconProps) => <AntdIcon {...props} icon={FontColorsSvg} />;
 export default FontColors;

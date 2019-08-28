@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import RightSquareFillSvg from '@ant-design/icons-svg/lib/fill/RightSquareFill';
+
+import React from 'react'
+import RightSquareFilledSvg from '@ant-design/icons-svg/es/asn/RightSquareFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RightSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={RightSquareFillSvg} />;
+const RightSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={RightSquareFilledSvg} />;
 export default RightSquareFilled;

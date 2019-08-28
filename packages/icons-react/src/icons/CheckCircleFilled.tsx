@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CheckCircleFillSvg from '@ant-design/icons-svg/lib/fill/CheckCircleFill';
+
+import React from 'react'
+import CheckCircleFilledSvg from '@ant-design/icons-svg/es/asn/CheckCircleFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CheckCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CheckCircleFillSvg} />;
+const CheckCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CheckCircleFilledSvg} />;
 export default CheckCircleFilled;

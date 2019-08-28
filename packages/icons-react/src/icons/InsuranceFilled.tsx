@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import InsuranceFillSvg from '@ant-design/icons-svg/lib/fill/InsuranceFill';
+
+import React from 'react'
+import InsuranceFilledSvg from '@ant-design/icons-svg/es/asn/InsuranceFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const InsuranceFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={InsuranceFillSvg} />;
+const InsuranceFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={InsuranceFilledSvg} />;
 export default InsuranceFilled;

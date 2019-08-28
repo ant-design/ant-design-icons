@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ExceptionOutlineSvg from '@ant-design/icons-svg/lib/outline/ExceptionOutline';
+
+import React from 'react'
+import ExceptionSvg from '@ant-design/icons-svg/es/asn/ExceptionOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Exception = (props: AntdIconProps) => <AntdIcon {...props} icon={ExceptionOutlineSvg} />;
+const Exception = (props: AntdIconProps) => <AntdIcon {...props} icon={ExceptionSvg} />;
 export default Exception;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import EnterOutlineSvg from '@ant-design/icons-svg/lib/outline/EnterOutline';
+
+import React from 'react'
+import EnterSvg from '@ant-design/icons-svg/es/asn/EnterOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Enter = (props: AntdIconProps) => <AntdIcon {...props} icon={EnterOutlineSvg} />;
+const Enter = (props: AntdIconProps) => <AntdIcon {...props} icon={EnterSvg} />;
 export default Enter;

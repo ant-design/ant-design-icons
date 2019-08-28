@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import FastBackwardFillSvg from '@ant-design/icons-svg/lib/fill/FastBackwardFill';
+
+import React from 'react'
+import FastBackwardFilledSvg from '@ant-design/icons-svg/es/asn/FastBackwardFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FastBackwardFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FastBackwardFillSvg} />;
+const FastBackwardFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FastBackwardFilledSvg} />;
 export default FastBackwardFilled;

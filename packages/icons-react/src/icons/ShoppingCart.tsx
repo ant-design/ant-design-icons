@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ShoppingCartOutlineSvg from '@ant-design/icons-svg/lib/outline/ShoppingCartOutline';
+
+import React from 'react'
+import ShoppingCartSvg from '@ant-design/icons-svg/es/asn/ShoppingCartOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ShoppingCart = (props: AntdIconProps) => <AntdIcon {...props} icon={ShoppingCartOutlineSvg} />;
+const ShoppingCart = (props: AntdIconProps) => <AntdIcon {...props} icon={ShoppingCartSvg} />;
 export default ShoppingCart;

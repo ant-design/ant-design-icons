@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import MediumWorkmarkOutlineSvg from '@ant-design/icons-svg/lib/outline/MediumWorkmarkOutline';
+
+import React from 'react'
+import MediumWorkmarkSvg from '@ant-design/icons-svg/es/asn/MediumWorkmarkOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MediumWorkmark = (props: AntdIconProps) => <AntdIcon {...props} icon={MediumWorkmarkOutlineSvg} />;
+const MediumWorkmark = (props: AntdIconProps) => <AntdIcon {...props} icon={MediumWorkmarkSvg} />;
 export default MediumWorkmark;

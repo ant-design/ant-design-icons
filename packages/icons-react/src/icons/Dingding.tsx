@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DingdingOutlineSvg from '@ant-design/icons-svg/lib/outline/DingdingOutline';
+
+import React from 'react'
+import DingdingSvg from '@ant-design/icons-svg/es/asn/DingdingOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Dingding = (props: AntdIconProps) => <AntdIcon {...props} icon={DingdingOutlineSvg} />;
+const Dingding = (props: AntdIconProps) => <AntdIcon {...props} icon={DingdingSvg} />;
 export default Dingding;

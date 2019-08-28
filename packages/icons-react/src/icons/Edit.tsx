@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import EditOutlineSvg from '@ant-design/icons-svg/lib/outline/EditOutline';
+
+import React from 'react'
+import EditSvg from '@ant-design/icons-svg/es/asn/EditOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Edit = (props: AntdIconProps) => <AntdIcon {...props} icon={EditOutlineSvg} />;
+const Edit = (props: AntdIconProps) => <AntdIcon {...props} icon={EditSvg} />;
 export default Edit;

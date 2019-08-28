@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import TaobaoOutlineSvg from '@ant-design/icons-svg/lib/outline/TaobaoOutline';
+
+import React from 'react'
+import TaobaoSvg from '@ant-design/icons-svg/es/asn/TaobaoOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Taobao = (props: AntdIconProps) => <AntdIcon {...props} icon={TaobaoOutlineSvg} />;
+const Taobao = (props: AntdIconProps) => <AntdIcon {...props} icon={TaobaoSvg} />;
 export default Taobao;

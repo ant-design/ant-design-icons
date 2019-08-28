@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import EllipsisOutlineSvg from '@ant-design/icons-svg/lib/outline/EllipsisOutline';
+
+import React from 'react'
+import EllipsisSvg from '@ant-design/icons-svg/es/asn/EllipsisOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Ellipsis = (props: AntdIconProps) => <AntdIcon {...props} icon={EllipsisOutlineSvg} />;
+const Ellipsis = (props: AntdIconProps) => <AntdIcon {...props} icon={EllipsisSvg} />;
 export default Ellipsis;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ShakeOutlineSvg from '@ant-design/icons-svg/lib/outline/ShakeOutline';
+
+import React from 'react'
+import ShakeSvg from '@ant-design/icons-svg/es/asn/ShakeOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Shake = (props: AntdIconProps) => <AntdIcon {...props} icon={ShakeOutlineSvg} />;
+const Shake = (props: AntdIconProps) => <AntdIcon {...props} icon={ShakeSvg} />;
 export default Shake;

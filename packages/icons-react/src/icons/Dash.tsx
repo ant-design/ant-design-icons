@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DashOutlineSvg from '@ant-design/icons-svg/lib/outline/DashOutline';
+
+import React from 'react'
+import DashSvg from '@ant-design/icons-svg/es/asn/DashOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Dash = (props: AntdIconProps) => <AntdIcon {...props} icon={DashOutlineSvg} />;
+const Dash = (props: AntdIconProps) => <AntdIcon {...props} icon={DashSvg} />;
 export default Dash;

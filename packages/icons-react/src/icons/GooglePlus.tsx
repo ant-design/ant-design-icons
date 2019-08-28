@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import GooglePlusOutlineSvg from '@ant-design/icons-svg/lib/outline/GooglePlusOutline';
+
+import React from 'react'
+import GooglePlusSvg from '@ant-design/icons-svg/es/asn/GooglePlusOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const GooglePlus = (props: AntdIconProps) => <AntdIcon {...props} icon={GooglePlusOutlineSvg} />;
+const GooglePlus = (props: AntdIconProps) => <AntdIcon {...props} icon={GooglePlusSvg} />;
 export default GooglePlus;

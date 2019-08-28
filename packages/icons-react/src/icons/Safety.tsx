@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import SafetyOutlineSvg from '@ant-design/icons-svg/lib/outline/SafetyOutline';
+
+import React from 'react'
+import SafetySvg from '@ant-design/icons-svg/es/asn/SafetyOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Safety = (props: AntdIconProps) => <AntdIcon {...props} icon={SafetyOutlineSvg} />;
+const Safety = (props: AntdIconProps) => <AntdIcon {...props} icon={SafetySvg} />;
 export default Safety;

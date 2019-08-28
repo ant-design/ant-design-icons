@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import IssuesCloseOutlineSvg from '@ant-design/icons-svg/lib/outline/IssuesCloseOutline';
+
+import React from 'react'
+import IssuesCloseSvg from '@ant-design/icons-svg/es/asn/IssuesCloseOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const IssuesClose = (props: AntdIconProps) => <AntdIcon {...props} icon={IssuesCloseOutlineSvg} />;
+const IssuesClose = (props: AntdIconProps) => <AntdIcon {...props} icon={IssuesCloseSvg} />;
 export default IssuesClose;

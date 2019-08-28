@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CrownFillSvg from '@ant-design/icons-svg/lib/fill/CrownFill';
+
+import React from 'react'
+import CrownFilledSvg from '@ant-design/icons-svg/es/asn/CrownFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CrownFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CrownFillSvg} />;
+const CrownFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CrownFilledSvg} />;
 export default CrownFilled;

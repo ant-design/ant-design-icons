@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DingtalkCircleFillSvg from '@ant-design/icons-svg/lib/fill/DingtalkCircleFill';
+
+import React from 'react'
+import DingtalkCircleFilledSvg from '@ant-design/icons-svg/es/asn/DingtalkCircleFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DingtalkCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DingtalkCircleFillSvg} />;
+const DingtalkCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DingtalkCircleFilledSvg} />;
 export default DingtalkCircleFilled;

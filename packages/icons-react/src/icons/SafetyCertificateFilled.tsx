@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import SafetyCertificateFillSvg from '@ant-design/icons-svg/lib/fill/SafetyCertificateFill';
+
+import React from 'react'
+import SafetyCertificateFilledSvg from '@ant-design/icons-svg/es/asn/SafetyCertificateFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SafetyCertificateFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SafetyCertificateFillSvg} />;
+const SafetyCertificateFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SafetyCertificateFilledSvg} />;
 export default SafetyCertificateFilled;

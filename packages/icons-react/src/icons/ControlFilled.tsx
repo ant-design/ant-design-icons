@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ControlFillSvg from '@ant-design/icons-svg/lib/fill/ControlFill';
+
+import React from 'react'
+import ControlFilledSvg from '@ant-design/icons-svg/es/asn/ControlFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ControlFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ControlFillSvg} />;
+const ControlFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ControlFilledSvg} />;
 export default ControlFilled;

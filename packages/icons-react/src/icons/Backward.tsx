@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import BackwardOutlineSvg from '@ant-design/icons-svg/lib/outline/BackwardOutline';
+
+import React from 'react'
+import BackwardSvg from '@ant-design/icons-svg/es/asn/BackwardOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Backward = (props: AntdIconProps) => <AntdIcon {...props} icon={BackwardOutlineSvg} />;
+const Backward = (props: AntdIconProps) => <AntdIcon {...props} icon={BackwardSvg} />;
 export default Backward;

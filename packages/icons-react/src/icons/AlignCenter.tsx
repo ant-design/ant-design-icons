@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import AlignCenterOutlineSvg from '@ant-design/icons-svg/lib/outline/AlignCenterOutline';
+
+import React from 'react'
+import AlignCenterSvg from '@ant-design/icons-svg/es/asn/AlignCenterOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AlignCenter = (props: AntdIconProps) => <AntdIcon {...props} icon={AlignCenterOutlineSvg} />;
+const AlignCenter = (props: AntdIconProps) => <AntdIcon {...props} icon={AlignCenterSvg} />;
 export default AlignCenter;

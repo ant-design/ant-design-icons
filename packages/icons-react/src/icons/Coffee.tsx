@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CoffeeOutlineSvg from '@ant-design/icons-svg/lib/outline/CoffeeOutline';
+
+import React from 'react'
+import CoffeeSvg from '@ant-design/icons-svg/es/asn/CoffeeOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Coffee = (props: AntdIconProps) => <AntdIcon {...props} icon={CoffeeOutlineSvg} />;
+const Coffee = (props: AntdIconProps) => <AntdIcon {...props} icon={CoffeeSvg} />;
 export default Coffee;

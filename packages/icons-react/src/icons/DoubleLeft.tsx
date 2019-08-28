@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DoubleLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/DoubleLeftOutline';
+
+import React from 'react'
+import DoubleLeftSvg from '@ant-design/icons-svg/es/asn/DoubleLeftOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DoubleLeft = (props: AntdIconProps) => <AntdIcon {...props} icon={DoubleLeftOutlineSvg} />;
+const DoubleLeft = (props: AntdIconProps) => <AntdIcon {...props} icon={DoubleLeftSvg} />;
 export default DoubleLeft;

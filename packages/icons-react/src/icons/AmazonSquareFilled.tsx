@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import AmazonSquareFillSvg from '@ant-design/icons-svg/lib/fill/AmazonSquareFill';
+
+import React from 'react'
+import AmazonSquareFilledSvg from '@ant-design/icons-svg/es/asn/AmazonSquareFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AmazonSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={AmazonSquareFillSvg} />;
+const AmazonSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={AmazonSquareFilledSvg} />;
 export default AmazonSquareFilled;

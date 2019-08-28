@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ContainerOutlineSvg from '@ant-design/icons-svg/lib/outline/ContainerOutline';
+
+import React from 'react'
+import ContainerSvg from '@ant-design/icons-svg/es/asn/ContainerOutline';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Container = (props: AntdIconProps) => <AntdIcon {...props} icon={ContainerOutlineSvg} />;
+const Container = (props: AntdIconProps) => <AntdIcon {...props} icon={ContainerSvg} />;
 export default Container;

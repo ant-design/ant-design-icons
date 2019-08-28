@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import HeartFillSvg from '@ant-design/icons-svg/lib/fill/HeartFill';
+
+import React from 'react'
+import HeartFilledSvg from '@ant-design/icons-svg/es/asn/HeartFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const HeartFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={HeartFillSvg} />;
+const HeartFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={HeartFilledSvg} />;
 export default HeartFilled;

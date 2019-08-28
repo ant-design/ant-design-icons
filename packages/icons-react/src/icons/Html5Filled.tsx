@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import Html5FillSvg from '@ant-design/icons-svg/lib/fill/Html5Fill';
+
+import React from 'react'
+import Html5FilledSvg from '@ant-design/icons-svg/es/asn/Html5Fill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Html5Filled = (props: AntdIconProps) => <AntdIcon {...props} icon={Html5FillSvg} />;
+const Html5Filled = (props: AntdIconProps) => <AntdIcon {...props} icon={Html5FilledSvg} />;
 export default Html5Filled;

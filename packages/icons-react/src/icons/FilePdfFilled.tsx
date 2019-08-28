@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import FilePdfFillSvg from '@ant-design/icons-svg/lib/fill/FilePdfFill';
+
+import React from 'react'
+import FilePdfFilledSvg from '@ant-design/icons-svg/es/asn/FilePdfFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FilePdfFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FilePdfFillSvg} />;
+const FilePdfFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FilePdfFilledSvg} />;
 export default FilePdfFilled;

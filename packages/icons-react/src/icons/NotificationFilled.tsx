@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import NotificationFillSvg from '@ant-design/icons-svg/lib/fill/NotificationFill';
+
+import React from 'react'
+import NotificationFilledSvg from '@ant-design/icons-svg/es/asn/NotificationFill';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const NotificationFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={NotificationFillSvg} />;
+const NotificationFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={NotificationFilledSvg} />;
 export default NotificationFilled;
