@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Manifest, ThemeType, IconService, manifest } from '@ant-design/icons-angular';
+import { manifest, IconService, Manifest, ThemeType } from '@ant-design/icons-angular';
 
 // const pandaLiteral = `<svg viewBox="0 0 1024 1024">
 // <path d="M99.096 315.634s-82.58-64.032-82.58-132.13c0-66.064 33.032-165.162 148.646-148.646 83.37 11.91 99.096 165.162 99.096 165.162l-165.162 115.614zM924.906 315.634s82.58-64.032 82.58-132.13c0-66.064-33.032-165.162-148.646-148.646-83.37 11.91-99.096 165.162-99.096 165.162l165.162 115.614z" fill="#6B676E" p-id="1143" />
@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
 
   constructor(private _iconService: IconService) {
     this._iconService.twoToneColor = { primaryColor: '#1890ff' };
+    this._iconService.useJsonpLoading();
     // this._iconService.addIconLiteral('animal:panda', pandaLiteral);
   }
 

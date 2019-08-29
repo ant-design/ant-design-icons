@@ -131,7 +131,29 @@ export async function build(env: Environment): Promise<Subscription> {
           icon.theme,
           `./${icon.name}.svg`
         ),
+        // TODO: use jsonp loading instead of XMLRequest
         content: icon.icon
+      };
+    })
+  );
+
+  const jsonpFiles$ = BuildTimeIconMetaData$.pipe(
+    map<BuildTimeIconMetaData, WriteFileMetaData>(({ icon }) => {
+      return {
+        path: path.resolve(
+          env.paths.INLINE_SVG_OUTPUT_DIR,
+          icon.theme,
+          `./${icon.name}.js`
+        ),
+        content: `
+          (function() {
+            __ant_icon_load({
+              name: '${icon.name}',
+              theme: '${icon.theme}',
+              icon: '${icon.icon}'
+            });
+          })()
+        `
       };
     })
   );
@@ -236,7 +258,8 @@ export async function build(env: Environment): Promise<Subscription> {
     concat(inlineSVGFiles$),
     concat(manifestFile$),
     concat(indexFile$),
-    concat(types$)
+    concat(types$),
+    concat(jsonpFiles$)
   );
 
   return new Promise<Subscription>((resolve, reject) => {
