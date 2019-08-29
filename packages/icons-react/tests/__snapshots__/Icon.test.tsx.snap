@@ -13,6 +13,5 @@ exports[`React AntdIcon Component should create SVG element. 1`] = `
       "fontSize": "3rem",
     }
   }
-  type="ant-design-o"
 />
 `;

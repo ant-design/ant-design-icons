@@ -6,7 +6,6 @@ import Icon from '../src/components/IconBase';
 describe('React AntdIcon Component', () => {
   it('should create SVG element.', () => {
     const props = {
-      type: 'ant-design-o',
       style: {
         fontSize: '3rem'
       },

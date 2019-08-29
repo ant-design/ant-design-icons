@@ -18,7 +18,7 @@
     "test": "father test",
     "prepublishOnly": "npm run lint && npm run test && npm run generate && npm run compile && np --no-cleanup --yolo --no-publish",
     "generate": "node scripts/generateIcons.js",
-    "postcompile": "./scripts/prepare.sh && node scripts/generateIconEntries.js"
+    "postcompile": "./scripts/cleanup.sh && node scripts/generateIconEntries.js"
   },
   "peerDependencies": {
     "react": "16.x"
@@ -33,12 +33,10 @@
     "@types/react": "^16.4.12",
     "@types/react-dom": "^16.0.6",
     "antd": "^3.20.7",
-    "babel-core": "^6.26.3",
     "cross-env": "^5.2.0",
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",
-    "father": "^2.14.0",
+    "father": "^2.16.0",
     "lodash": "^4.17.15",
     "mobx": "^5.1.0",
     "mobx-react": "^6.1.3",
@@ -51,18 +49,9 @@
   "dependencies": {
     "@ant-design/colors": "^3.1.0",
     "@ant-design/icons-svg": "^4.0.0-alpha.0",
-    "babel-runtime": "^6.26.0",
     "classnames": "^2.2.6",
     "insert-css": "^2.0.0",
     "rc-util": "^4.9.0"
-  },
-  "config": {
-    "port": 9527,
-    "entry": {
-      "@ant-design/icons": [
-        "./src/index.ts"
-      ]
-    }
   },
   "gitHead": "225d4d2189720ee3b7e4a4d7a6d80e076fa15cbc"
 }
