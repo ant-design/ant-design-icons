@@ -1,10 +1,6 @@
 import { src, dest } from 'gulp';
 import svgo from '../../plugins/svgo';
 import {
-  iconsAfter3Dot9ShouldBeResizeViewbox,
-  iconShouldNotBeFocusable,
-  twoToneIconExtractColor,
-  twoToneStringfy,
   getIdentifier,
   getSrcByTheme,
   getDocsInlinePathByTheme,
@@ -19,6 +15,12 @@ import clone from 'gulp-clone';
 import { resolve } from 'path';
 import inlineSVG from '../../plugins/inline-svg';
 import { ThemeLowerCaseEnum, ThemeUpperCaseEnum } from '../../build/constants';
+import {
+  iconShouldNotBeFocusable,
+  iconsAfter3Dot9ShouldBeResizeViewbox,
+  twoToneIconExtractColor,
+  twoToneStringfy
+} from '../../build/strategies';
 
 const { twotone } = ThemeLowerCaseEnum;
 const { TwoTone } = ThemeUpperCaseEnum;

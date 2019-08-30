@@ -22,6 +22,7 @@
   "scripts": {
     "g": "npm run generate",
     "generate": "gulp --require ts-node/register/transpile-only",
+    "generate-debug": "gulp --require ts-node/register/transpile-only -LLLL",
     "type-check": "tsc --noEmit",
     "build": "father build",
     "test": "npm run type-check && npm run test:unit",
