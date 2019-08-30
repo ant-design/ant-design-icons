@@ -14,4 +14,5 @@ export interface IconDefinition {
     | AbstractNode;
 }
 
-export type ThemeType = 'fill' | 'outline' | 'twotone';
+export type ThemeType = 'filled' | 'outlined' | 'twotone';
+export type ThemeTypeUpperCase = 'Filled' | 'Outlined' | 'TwoTone';

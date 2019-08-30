@@ -5,7 +5,7 @@ describe('renderIconDefinitionToSVGElement', () => {
   it('should render fill correctly.', () => {
     const icon: IconDefinition = {
       name: 'account-book',
-      theme: 'fill',
+      theme: 'filled',
       icon: {
         tag: 'svg',
         attrs: { viewBox: '64 64 896 896' },
