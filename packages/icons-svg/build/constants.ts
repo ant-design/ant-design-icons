@@ -1,4 +1,4 @@
-export const oldIcons = [
+export const oldIconNames = [
   'step-backward',
   'step-forward',
   'fast-backward',
@@ -37,3 +37,17 @@ export const twoToneIdentifiers = {
 
 // "{{ }}" or '{{ }}'
 export const vueLikeQuoteInterpolate = /['"]{{([\s\S]+?)}}['"]/g;
+
+export enum ThemeLowerCaseEnum {
+  filled = 'filled',
+  outlined = 'outlined',
+  twotone = 'twotone'
+}
+
+export enum ThemeUpperCaseEnum {
+  Filled = 'Filled',
+  Outlined = 'Outlined',
+  TwoTone = 'TwoTone'
+}
+
+export { ThemeType, ThemeTypeUpperCase } from './templates/types';

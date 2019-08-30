@@ -1,6 +1,6 @@
 import del from 'del';
 
-export default function clean() {
+export default function cleanDirectories() {
   return del([
     'src',
     'inline-svg',

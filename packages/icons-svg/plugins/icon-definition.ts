@@ -2,7 +2,7 @@ import through from 'through2';
 import File from 'vinyl';
 import parseXML from '@rgrove/parse-xml';
 import { SyncWaterfallHook } from 'tapable';
-import { AbstractNode } from '../build/templates/types';
+import { AbstractNode, ThemeType } from '../build/templates/types';
 
 interface XMLNode {
   type: string;
@@ -25,7 +25,7 @@ export interface AbstractNodeAndIconName {
 }
 
 interface IcondOptions {
-  theme: string;
+  theme: ThemeType;
   extraNodeTransforms?: Array<
     (arg: AbstractNodeAndIconName) => AbstractNodeAndIconName
   >;

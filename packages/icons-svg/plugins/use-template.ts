@@ -3,15 +3,20 @@ import File from 'vinyl';
 import { template } from 'lodash';
 import { readFileSync } from 'fs';
 
-interface TplOptions {
+type MapFileToInterpolateType = (afterFile: {
+  name: string;
+  content: string;
+}) => object;
+
+export interface UseTemplateOptions {
   tplSource: string;
-  mapFileToInterpolate: (afterFile: {
-    name: string;
-    content: string;
-  }) => object;
+  mapFileToInterpolate: MapFileToInterpolateType;
 }
 
-export default function tpl({ tplSource, mapFileToInterpolate }: TplOptions) {
+export default function useTemplate({
+  tplSource,
+  mapFileToInterpolate
+}: UseTemplateOptions) {
   const executor = template(readFileSync(tplSource, 'utf8'));
   return through.obj(function(file: File, encoding, done) {
     if (file.isBuffer()) {

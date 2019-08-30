@@ -3,12 +3,13 @@ import {
   IconDefinitionBase
 } from '../plugins/icon-definition';
 import {
-  oldIcons,
+  oldIconNames,
   twoToneColors,
   twoToneIdentifiers,
   vueLikeQuoteInterpolate
 } from './constants';
 import { template, upperFirst, camelCase, memoize } from 'lodash';
+import { ThemeTypeUpperCase, ThemeType } from './templates/types';
 
 const { primaryColor, secondaryColor } = twoToneIdentifiers;
 
@@ -29,7 +30,7 @@ export function iconsAfter3Dot9ShouldBeResizeViewbox({
   abstractNode,
   iconName
 }: AbstractNodeAndIconName): AbstractNodeAndIconName {
-  if (abstractNode.tag === 'svg' && !oldIcons.includes(iconName)) {
+  if (abstractNode.tag === 'svg' && !oldIconNames.includes(iconName)) {
     abstractNode.attrs.viewBox = '64 64 896 896';
   }
   return {
@@ -80,13 +81,25 @@ export function twoToneStringfy(
 
 export const getIdentifier = memoize(function getIdentifier({
   name,
-  theme
+  themeSuffix
 }: {
   name: string;
-  theme: string;
+  themeSuffix: ThemeTypeUpperCase;
 }): string {
-  return upperFirst(camelCase(`${name}-${theme}`));
+  return upperFirst(camelCase(`${name}-${themeSuffix}`));
 });
+
+export function getSrcByTheme(theme: ThemeType): string {
+  return `src/${theme}/*.svg`;
+}
+
+export function getDocsInlinePathByTheme(theme: ThemeType): string {
+  return `docs/inline-svg/${theme}`;
+}
+
+export function getInlinePathByTheme(theme: ThemeType): string {
+  return `inline-svg/${theme}`;
+}
 
 export {
   renderIconDefinitionToSVGElement,
