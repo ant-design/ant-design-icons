@@ -131,7 +131,6 @@ export async function build(env: Environment): Promise<Subscription> {
           icon.theme,
           `./${icon.name}.svg`
         ),
-        // TODO: use jsonp loading instead of XMLRequest
         content: icon.icon
       };
     })
