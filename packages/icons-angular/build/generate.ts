@@ -145,7 +145,7 @@ export async function build(env: Environment): Promise<Subscription> {
           icon.theme,
           `./${icon.name}.js`
         ),
-        content: `
+        content: Prettier.format(`
           (function() {
             __ant_icon_load({
               name: '${icon.name}',
@@ -153,7 +153,7 @@ export async function build(env: Environment): Promise<Subscription> {
               icon: '${icon.icon}'
             });
           })()
-        `
+        `, { ...env.options.prettier, parser: 'typescript' })
       };
     })
   );

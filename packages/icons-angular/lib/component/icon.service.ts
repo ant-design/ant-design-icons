@@ -37,18 +37,32 @@ import {
   withSuffixAndColor
 } from '../utils';
 import {
+  DynamicLoadingTimeoutError,
   HttpModuleNotImport,
   IconNotFoundError,
   NameSpaceIsNotSpecifyError,
   SVGTagNotFoundError,
   UrlNotSafeError
 } from './icon.error';
-import pjsonp from './pjsonp';
 
 const JSONP_HANDLER_NAME = '__ant_icon_load';
 
 export class IconService {
   defaultTheme: ThemeType = 'outline';
+
+  set twoToneColor({
+    primaryColor,
+    secondaryColor
+  }: TwoToneColorPaletteSetter) {
+    this._twoToneColorPalette.primaryColor = primaryColor;
+    this._twoToneColorPalette.secondaryColor =
+      secondaryColor || getSecondaryColor(primaryColor);
+  }
+
+  get twoToneColor(): TwoToneColorPaletteSetter {
+    // Make a copy to avoid unexpected changes.
+    return { ...this._twoToneColorPalette } as TwoToneColorPalette;
+  }
 
   protected _renderer: Renderer2;
   protected _http: HttpClient;
@@ -80,23 +94,9 @@ export class IconService {
   };
 
   /** Record if a handler is registered. */
-  private enableJsonpLoading = false;
+  private _enableJsonpLoading = false;
 
-  private jsonpIconLoad$ = new Subject<IconDefinition>();
-
-  set twoToneColor({
-    primaryColor,
-    secondaryColor
-  }: TwoToneColorPaletteSetter) {
-    this._twoToneColorPalette.primaryColor = primaryColor;
-    this._twoToneColorPalette.secondaryColor =
-      secondaryColor || getSecondaryColor(primaryColor);
-  }
-
-  get twoToneColor(): TwoToneColorPaletteSetter {
-    // Make a copy to avoid unexpected changes.
-    return { ...this._twoToneColorPalette } as TwoToneColorPalette;
-  }
+  private _jsonpIconLoad$ = new Subject<IconDefinition>();
 
   constructor(
     protected _rendererFactory: RendererFactory2,
@@ -115,11 +115,11 @@ export class IconService {
    * Call this method to switch to jsonp like loading.
    */
   useJsonpLoading(): void {
-    if (!this.enableJsonpLoading) {
-      this.enableJsonpLoading = true;
+    if (!this._enableJsonpLoading) {
+      this._enableJsonpLoading = true;
 
       window[JSONP_HANDLER_NAME] = (icon: IconDefinition) => {
-        this.jsonpIconLoad$.next(icon);
+        this._jsonpIconLoad$.next(icon);
       };
     }
   }
@@ -205,7 +205,7 @@ export class IconService {
     type: string
   ): Observable<IconDefinition | null> {
     // If developer doesn't provide HTTP module nor enable jsonp loading, just throw an error.
-    if (!this._http && !this.enableJsonpLoading) {
+    if (!this._http && !this._enableJsonpLoading) {
       return observableOf(HttpModuleNotImport());
     }
 
@@ -233,18 +233,34 @@ export class IconService {
         throw UrlNotSafeError(url);
       }
 
-      const source = !this.enableJsonpLoading
+      const source = !this._enableJsonpLoading
         ? this._http
             .get(safeUrl, { responseType: 'text' })
             .pipe(map(literal => ({ ...icon, icon: literal })))
         : new Observable<IconDefinition>(subscriber => {
-            pjsonp(safeUrl as string, { param: null });
-            this.jsonpIconLoad$
+            const loader = this._document.createElement('script');
+            const timer = setTimeout(() => {
+              clean();
+              subscriber.error(DynamicLoadingTimeoutError());
+            }, 6000);
+
+            loader.src = safeUrl as string;
+
+            function clean(): void {
+              loader.parentNode.removeChild(loader);
+              clearTimeout(timer);
+            }
+
+            this._document.body.appendChild(loader);
+            this._jsonpIconLoad$
               .pipe(
                 filter(i => i.name === icon.name && i.theme === icon.theme),
                 take(1)
               )
-              .subscribe(i => subscriber.next(i));
+              .subscribe(i => {
+                subscriber.next(i);
+                clean();
+              });
           });
 
       inProgress = source.pipe(

@@ -1,14 +1,14 @@
 import { generate as generateColor } from '@ant-design/colors';
 import { IconDefinition, ThemeType } from './types';
 
-export const antIconConsolePrefix = '[@ant-design/icons-angular]: ';
+export const ANT_ICON_ANGULAR_CONSOLE_PREFIX = '[@ant-design/icons-angular]: ';
 
 export function printErr(message: string): void {
-  console.error(`${antIconConsolePrefix}${message}.`);
+  console.error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}${message}.`);
 }
 
 export function printWarn(message: string): void {
-  console.warn(`${antIconConsolePrefix}${message}.`);
+  console.warn(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}${message}.`);
 }
 
 export function getSecondaryColor(primaryColor: string): string {
@@ -21,7 +21,7 @@ export function withSuffix(name: string, theme: ThemeType | undefined): string {
     case 'outline': return `${name}-o`;
     case 'twotone': return `${name}-twotone`;
     case undefined: return name;
-    default: throw new Error(`${antIconConsolePrefix}Theme "${theme}" is not a recognized theme!`);
+    default: throw new Error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}Theme "${theme}" is not a recognized theme!`);
   }
 }
 
@@ -85,7 +85,7 @@ export function getNameAndNamespace(type: string): [string, string] {
   switch (split.length) {
     case 1: return [type, ''];
     case 2: return [split[1], split[0]];
-    default: throw new Error(`${antIconConsolePrefix}The icon type ${type} is not valid!`);
+    default: throw new Error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}The icon type ${type} is not valid!`);
   }
 }
 
