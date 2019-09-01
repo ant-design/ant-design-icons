@@ -21,18 +21,22 @@
   },
   "scripts": {
     "g": "npm run generate",
-    "generate": "gulp --require ts-node/register/transpile-only",
+    "generate": "cross-env NODE_ENV=production gulp --require ts-node/register/transpile-only",
     "type-check": "tsc --noEmit",
-    "build": "father build",
-    "test": "npm run type-check && npm run test:unit",
-    "test:unit": "father test",
-    "prepublish": "npm run test && npm run g && npm run build"
+    "build:es": "tsc --project tsconfig.build.json --module esnext --outDir es",
+    "build:lib": "tsc --project tsconfig.build.json --module commonjs --outDir lib",
+    "build": "cross-env NODE_ENV=production && npm run build:es && npm run build:lib",
+    "test": "cross-env NODE_ENV=test && npm run test:unit",
+    "test:unit": "jest",
+    "prepublish": "npm run type-check && npm run test && npm run g && npm run build"
   },
   "bugs": {
     "url": "https://github.com/ant-design/ant-design-icons/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
     "@rgrove/parse-xml": "^2.0.1",
     "@types/gulp": "^4.0.6",
     "@types/gulp-concat": "^0.0.32",
@@ -45,8 +49,9 @@
     "@types/svgo": "^1.2.1",
     "@types/tapable": "^1.0.4",
     "@types/through2": "^2.0.34",
+    "babel-jest": "^24.9.0",
+    "cross-env": "^5.2.1",
     "del": "^5.0.0",
-    "father": "^2.14.2",
     "globby": "^10.0.1",
     "gulp": "^4.0.2",
     "gulp-clone": "^2.0.1",
@@ -54,6 +59,7 @@
     "gulp-header": "^2.0.9",
     "gulp-rename": "^1.4.0",
     "gulp-template": "^5.0.0",
+    "jest": "^24.9.0",
     "lodash": "^4.17.15",
     "merge-stream": "^2.0.0",
     "react": "^16.9.0",
