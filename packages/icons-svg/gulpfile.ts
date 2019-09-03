@@ -1,14 +1,20 @@
 import { series, parallel } from 'gulp';
-import clean from './tasks/clean';
-import copy from './tasks/copy';
-import entry from './tasks/entry';
-import outline from './tasks/outline';
-import fill from './tasks/fill';
-import twoTone from './tasks/twotone';
-import list from './tasks/list';
+import cleanDirectories from './tasks/preProcess/cleanDirectories';
+import copyTemplates from './tasks/generate/copyTemplates';
+import generateLibraryEntry from './tasks/generate/generateLibraryEntry';
+import generateFilledIcons from './tasks/generate/generateFilledIcons';
+import generateOutlinedIcons from './tasks/generate/generateOutlinedIcons';
+import generateTwoToneIcons from './tasks/generate/generateTwoToneIcons';
+import generateIconsListInDocs from './tasks/sideEffects/generateIconsListInDocs';
 
 export default series(
-  clean,
-  parallel(copy, entry, outline, fill, twoTone),
-  list
+  cleanDirectories,
+  parallel(
+    copyTemplates,
+    generateFilledIcons,
+    generateOutlinedIcons,
+    generateTwoToneIcons,
+    generateLibraryEntry
+  ),
+  generateIconsListInDocs
 );
