@@ -138,6 +138,7 @@ describe('Icon', () => {
   });
 
   it('should support svg react component', () => {
+    // children props would make no sense
     const SvgComponent = props => (
       <svg viewBox="0 0 24 24" {...props}>
         <title>Cool Home</title>
