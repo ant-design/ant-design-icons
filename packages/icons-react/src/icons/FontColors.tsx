@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import FontColorsSvg from '@ant-design/icons-svg/es/asn/FontColorsOutline';
+import FontColorsSvg from '@ant-design/icons-svg/es/asn/FontColorsOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FontColors = (props: AntdIconProps) => <AntdIcon {...props} icon={FontColorsSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import PushpinSvg from '@ant-design/icons-svg/es/asn/PushpinOutline';
+import PushpinSvg from '@ant-design/icons-svg/es/asn/PushpinOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Pushpin = (props: AntdIconProps) => <AntdIcon {...props} icon={PushpinSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ExperimentSvg from '@ant-design/icons-svg/es/asn/ExperimentOutline';
+import ExperimentSvg from '@ant-design/icons-svg/es/asn/ExperimentOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Experiment = (props: AntdIconProps) => <AntdIcon {...props} icon={ExperimentSvg} />;

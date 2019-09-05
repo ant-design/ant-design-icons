@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import PropertySafetySvg from '@ant-design/icons-svg/es/asn/PropertySafetyOutline';
+import PropertySafetySvg from '@ant-design/icons-svg/es/asn/PropertySafetyOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const PropertySafety = (props: AntdIconProps) => <AntdIcon {...props} icon={PropertySafetySvg} />;

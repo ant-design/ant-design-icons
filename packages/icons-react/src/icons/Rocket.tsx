@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import RocketSvg from '@ant-design/icons-svg/es/asn/RocketOutline';
+import RocketSvg from '@ant-design/icons-svg/es/asn/RocketOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Rocket = (props: AntdIconProps) => <AntdIcon {...props} icon={RocketSvg} />;

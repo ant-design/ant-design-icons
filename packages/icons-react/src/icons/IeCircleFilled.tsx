@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import IeCircleFilledSvg from '@ant-design/icons-svg/es/asn/IeCircleFill';
+import IeCircleFilledSvg from '@ant-design/icons-svg/es/asn/IeCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const IeCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={IeCircleFilledSvg} />;

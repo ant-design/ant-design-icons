@@ -21,9 +21,7 @@ function walk<T>(
       // It will be better if an react antd icon component has theme suffix.
       // or use outline as default theme like this:
       const componentIdentifier = svgIdentifier
-        .replace(/Outline$/, '')
-        .replace(/Fill$/, 'Filled')
-        .replace(/TwoTone$/, 'TwoTone');
+        .replace(/Outlined$/, '');
 
       return fn({ svgIdentifier, componentIdentifier, ...iconDef });
     })

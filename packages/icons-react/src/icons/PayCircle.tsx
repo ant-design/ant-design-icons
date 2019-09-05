@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import PayCircleSvg from '@ant-design/icons-svg/es/asn/PayCircleOutline';
+import PayCircleSvg from '@ant-design/icons-svg/es/asn/PayCircleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const PayCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={PayCircleSvg} />;

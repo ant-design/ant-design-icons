@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import FilterFilledSvg from '@ant-design/icons-svg/es/asn/FilterFill';
+import FilterFilledSvg from '@ant-design/icons-svg/es/asn/FilterFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FilterFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FilterFilledSvg} />;

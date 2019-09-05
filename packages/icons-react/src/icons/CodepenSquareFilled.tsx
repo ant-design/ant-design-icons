@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import CodepenSquareFilledSvg from '@ant-design/icons-svg/es/asn/CodepenSquareFill';
+import CodepenSquareFilledSvg from '@ant-design/icons-svg/es/asn/CodepenSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const CodepenSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CodepenSquareFilledSvg} />;

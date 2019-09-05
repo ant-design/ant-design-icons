@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import FileJpgSvg from '@ant-design/icons-svg/es/asn/FileJpgOutline';
+import FileJpgSvg from '@ant-design/icons-svg/es/asn/FileJpgOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FileJpg = (props: AntdIconProps) => <AntdIcon {...props} icon={FileJpgSvg} />;

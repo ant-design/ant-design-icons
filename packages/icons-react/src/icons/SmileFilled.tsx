@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import SmileFilledSvg from '@ant-design/icons-svg/es/asn/SmileFill';
+import SmileFilledSvg from '@ant-design/icons-svg/es/asn/SmileFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const SmileFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SmileFilledSvg} />;

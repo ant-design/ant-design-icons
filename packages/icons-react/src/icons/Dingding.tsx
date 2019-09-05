@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import DingdingSvg from '@ant-design/icons-svg/es/asn/DingdingOutline';
+import DingdingSvg from '@ant-design/icons-svg/es/asn/DingdingOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Dingding = (props: AntdIconProps) => <AntdIcon {...props} icon={DingdingSvg} />;

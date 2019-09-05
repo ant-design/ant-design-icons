@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import UserAddSvg from '@ant-design/icons-svg/es/asn/UserAddOutline';
+import UserAddSvg from '@ant-design/icons-svg/es/asn/UserAddOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const UserAdd = (props: AntdIconProps) => <AntdIcon {...props} icon={UserAddSvg} />;

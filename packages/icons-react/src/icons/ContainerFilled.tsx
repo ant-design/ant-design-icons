@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ContainerFilledSvg from '@ant-design/icons-svg/es/asn/ContainerFill';
+import ContainerFilledSvg from '@ant-design/icons-svg/es/asn/ContainerFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ContainerFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ContainerFilledSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import DiffFilledSvg from '@ant-design/icons-svg/es/asn/DiffFill';
+import DiffFilledSvg from '@ant-design/icons-svg/es/asn/DiffFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const DiffFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DiffFilledSvg} />;

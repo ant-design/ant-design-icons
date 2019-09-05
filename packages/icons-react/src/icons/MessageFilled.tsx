@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import MessageFilledSvg from '@ant-design/icons-svg/es/asn/MessageFill';
+import MessageFilledSvg from '@ant-design/icons-svg/es/asn/MessageFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const MessageFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MessageFilledSvg} />;

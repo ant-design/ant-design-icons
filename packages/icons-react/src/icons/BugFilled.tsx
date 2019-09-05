@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import BugFilledSvg from '@ant-design/icons-svg/es/asn/BugFill';
+import BugFilledSvg from '@ant-design/icons-svg/es/asn/BugFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const BugFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BugFilledSvg} />;

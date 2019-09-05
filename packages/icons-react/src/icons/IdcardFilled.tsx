@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import IdcardFilledSvg from '@ant-design/icons-svg/es/asn/IdcardFill';
+import IdcardFilledSvg from '@ant-design/icons-svg/es/asn/IdcardFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const IdcardFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={IdcardFilledSvg} />;

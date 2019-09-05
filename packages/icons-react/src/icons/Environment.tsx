@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import EnvironmentSvg from '@ant-design/icons-svg/es/asn/EnvironmentOutline';
+import EnvironmentSvg from '@ant-design/icons-svg/es/asn/EnvironmentOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Environment = (props: AntdIconProps) => <AntdIcon {...props} icon={EnvironmentSvg} />;

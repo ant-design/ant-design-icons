@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import BookSvg from '@ant-design/icons-svg/es/asn/BookOutline';
+import BookSvg from '@ant-design/icons-svg/es/asn/BookOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Book = (props: AntdIconProps) => <AntdIcon {...props} icon={BookSvg} />;

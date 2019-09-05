@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import BehanceSvg from '@ant-design/icons-svg/es/asn/BehanceOutline';
+import BehanceSvg from '@ant-design/icons-svg/es/asn/BehanceOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Behance = (props: AntdIconProps) => <AntdIcon {...props} icon={BehanceSvg} />;

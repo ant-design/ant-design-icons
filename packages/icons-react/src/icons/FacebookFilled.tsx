@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import FacebookFilledSvg from '@ant-design/icons-svg/es/asn/FacebookFill';
+import FacebookFilledSvg from '@ant-design/icons-svg/es/asn/FacebookFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FacebookFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FacebookFilledSvg} />;

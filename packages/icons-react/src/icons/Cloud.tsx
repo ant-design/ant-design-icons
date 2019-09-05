@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import CloudSvg from '@ant-design/icons-svg/es/asn/CloudOutline';
+import CloudSvg from '@ant-design/icons-svg/es/asn/CloudOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Cloud = (props: AntdIconProps) => <AntdIcon {...props} icon={CloudSvg} />;

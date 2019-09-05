@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import BulbFilledSvg from '@ant-design/icons-svg/es/asn/BulbFill';
+import BulbFilledSvg from '@ant-design/icons-svg/es/asn/BulbFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const BulbFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BulbFilledSvg} />;

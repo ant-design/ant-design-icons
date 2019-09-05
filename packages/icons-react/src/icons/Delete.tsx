@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import DeleteSvg from '@ant-design/icons-svg/es/asn/DeleteOutline';
+import DeleteSvg from '@ant-design/icons-svg/es/asn/DeleteOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Delete = (props: AntdIconProps) => <AntdIcon {...props} icon={DeleteSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ShakeSvg from '@ant-design/icons-svg/es/asn/ShakeOutline';
+import ShakeSvg from '@ant-design/icons-svg/es/asn/ShakeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Shake = (props: AntdIconProps) => <AntdIcon {...props} icon={ShakeSvg} />;

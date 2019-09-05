@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ManSvg from '@ant-design/icons-svg/es/asn/ManOutline';
+import ManSvg from '@ant-design/icons-svg/es/asn/ManOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Man = (props: AntdIconProps) => <AntdIcon {...props} icon={ManSvg} />;

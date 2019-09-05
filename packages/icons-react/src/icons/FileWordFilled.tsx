@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import FileWordFilledSvg from '@ant-design/icons-svg/es/asn/FileWordFill';
+import FileWordFilledSvg from '@ant-design/icons-svg/es/asn/FileWordFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FileWordFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FileWordFilledSvg} />;

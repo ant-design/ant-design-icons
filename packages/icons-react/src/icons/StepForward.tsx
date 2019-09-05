@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import StepForwardSvg from '@ant-design/icons-svg/es/asn/StepForwardOutline';
+import StepForwardSvg from '@ant-design/icons-svg/es/asn/StepForwardOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const StepForward = (props: AntdIconProps) => <AntdIcon {...props} icon={StepForwardSvg} />;

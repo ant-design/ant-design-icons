@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import AndroidFilledSvg from '@ant-design/icons-svg/es/asn/AndroidFill';
+import AndroidFilledSvg from '@ant-design/icons-svg/es/asn/AndroidFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const AndroidFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={AndroidFilledSvg} />;

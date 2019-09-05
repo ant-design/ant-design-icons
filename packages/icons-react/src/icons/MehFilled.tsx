@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import MehFilledSvg from '@ant-design/icons-svg/es/asn/MehFill';
+import MehFilledSvg from '@ant-design/icons-svg/es/asn/MehFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const MehFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MehFilledSvg} />;

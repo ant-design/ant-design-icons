@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import EditSvg from '@ant-design/icons-svg/es/asn/EditOutline';
+import EditSvg from '@ant-design/icons-svg/es/asn/EditOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Edit = (props: AntdIconProps) => <AntdIcon {...props} icon={EditSvg} />;

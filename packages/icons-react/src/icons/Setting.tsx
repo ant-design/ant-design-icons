@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import SettingSvg from '@ant-design/icons-svg/es/asn/SettingOutline';
+import SettingSvg from '@ant-design/icons-svg/es/asn/SettingOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Setting = (props: AntdIconProps) => <AntdIcon {...props} icon={SettingSvg} />;

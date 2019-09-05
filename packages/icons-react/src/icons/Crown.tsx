@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import CrownSvg from '@ant-design/icons-svg/es/asn/CrownOutline';
+import CrownSvg from '@ant-design/icons-svg/es/asn/CrownOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Crown = (props: AntdIconProps) => <AntdIcon {...props} icon={CrownSvg} />;

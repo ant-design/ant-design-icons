@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import RestFilledSvg from '@ant-design/icons-svg/es/asn/RestFill';
+import RestFilledSvg from '@ant-design/icons-svg/es/asn/RestFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const RestFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={RestFilledSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import BankSvg from '@ant-design/icons-svg/es/asn/BankOutline';
+import BankSvg from '@ant-design/icons-svg/es/asn/BankOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Bank = (props: AntdIconProps) => <AntdIcon {...props} icon={BankSvg} />;

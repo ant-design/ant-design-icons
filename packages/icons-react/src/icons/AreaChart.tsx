@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import AreaChartSvg from '@ant-design/icons-svg/es/asn/AreaChartOutline';
+import AreaChartSvg from '@ant-design/icons-svg/es/asn/AreaChartOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const AreaChart = (props: AntdIconProps) => <AntdIcon {...props} icon={AreaChartSvg} />;

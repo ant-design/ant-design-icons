@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import SaveSvg from '@ant-design/icons-svg/es/asn/SaveOutline';
+import SaveSvg from '@ant-design/icons-svg/es/asn/SaveOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Save = (props: AntdIconProps) => <AntdIcon {...props} icon={SaveSvg} />;

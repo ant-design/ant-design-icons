@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import KeySvg from '@ant-design/icons-svg/es/asn/KeyOutline';
+import KeySvg from '@ant-design/icons-svg/es/asn/KeyOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Key = (props: AntdIconProps) => <AntdIcon {...props} icon={KeySvg} />;

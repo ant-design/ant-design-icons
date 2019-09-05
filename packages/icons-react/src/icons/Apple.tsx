@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import AppleSvg from '@ant-design/icons-svg/es/asn/AppleOutline';
+import AppleSvg from '@ant-design/icons-svg/es/asn/AppleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Apple = (props: AntdIconProps) => <AntdIcon {...props} icon={AppleSvg} />;

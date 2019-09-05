@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import SafetyCertificateFilledSvg from '@ant-design/icons-svg/es/asn/SafetyCertificateFill';
+import SafetyCertificateFilledSvg from '@ant-design/icons-svg/es/asn/SafetyCertificateFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const SafetyCertificateFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SafetyCertificateFilledSvg} />;

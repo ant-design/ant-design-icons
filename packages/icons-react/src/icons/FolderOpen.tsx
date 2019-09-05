@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import FolderOpenSvg from '@ant-design/icons-svg/es/asn/FolderOpenOutline';
+import FolderOpenSvg from '@ant-design/icons-svg/es/asn/FolderOpenOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FolderOpen = (props: AntdIconProps) => <AntdIcon {...props} icon={FolderOpenSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import GoogleSvg from '@ant-design/icons-svg/es/asn/GoogleOutline';
+import GoogleSvg from '@ant-design/icons-svg/es/asn/GoogleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Google = (props: AntdIconProps) => <AntdIcon {...props} icon={GoogleSvg} />;

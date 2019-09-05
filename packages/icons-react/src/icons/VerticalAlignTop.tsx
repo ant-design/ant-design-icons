@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import VerticalAlignTopSvg from '@ant-design/icons-svg/es/asn/VerticalAlignTopOutline';
+import VerticalAlignTopSvg from '@ant-design/icons-svg/es/asn/VerticalAlignTopOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const VerticalAlignTop = (props: AntdIconProps) => <AntdIcon {...props} icon={VerticalAlignTopSvg} />;

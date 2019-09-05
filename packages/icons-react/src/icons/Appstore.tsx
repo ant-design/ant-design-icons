@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import AppstoreSvg from '@ant-design/icons-svg/es/asn/AppstoreOutline';
+import AppstoreSvg from '@ant-design/icons-svg/es/asn/AppstoreOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Appstore = (props: AntdIconProps) => <AntdIcon {...props} icon={AppstoreSvg} />;

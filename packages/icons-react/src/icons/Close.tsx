@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import CloseSvg from '@ant-design/icons-svg/es/asn/CloseOutline';
+import CloseSvg from '@ant-design/icons-svg/es/asn/CloseOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Close = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseSvg} />;

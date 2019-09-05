@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ScissorSvg from '@ant-design/icons-svg/es/asn/ScissorOutline';
+import ScissorSvg from '@ant-design/icons-svg/es/asn/ScissorOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Scissor = (props: AntdIconProps) => <AntdIcon {...props} icon={ScissorSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import RobotSvg from '@ant-design/icons-svg/es/asn/RobotOutline';
+import RobotSvg from '@ant-design/icons-svg/es/asn/RobotOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Robot = (props: AntdIconProps) => <AntdIcon {...props} icon={RobotSvg} />;

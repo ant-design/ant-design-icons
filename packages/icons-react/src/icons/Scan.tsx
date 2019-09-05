@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ScanSvg from '@ant-design/icons-svg/es/asn/ScanOutline';
+import ScanSvg from '@ant-design/icons-svg/es/asn/ScanOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Scan = (props: AntdIconProps) => <AntdIcon {...props} icon={ScanSvg} />;

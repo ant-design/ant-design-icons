@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import LayoutSvg from '@ant-design/icons-svg/es/asn/LayoutOutline';
+import LayoutSvg from '@ant-design/icons-svg/es/asn/LayoutOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Layout = (props: AntdIconProps) => <AntdIcon {...props} icon={LayoutSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import RadiusSettingSvg from '@ant-design/icons-svg/es/asn/RadiusSettingOutline';
+import RadiusSettingSvg from '@ant-design/icons-svg/es/asn/RadiusSettingOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const RadiusSetting = (props: AntdIconProps) => <AntdIcon {...props} icon={RadiusSettingSvg} />;

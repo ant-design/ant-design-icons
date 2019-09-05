@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import UnderlineSvg from '@ant-design/icons-svg/es/asn/UnderlineOutline';
+import UnderlineSvg from '@ant-design/icons-svg/es/asn/UnderlineOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Underline = (props: AntdIconProps) => <AntdIcon {...props} icon={UnderlineSvg} />;

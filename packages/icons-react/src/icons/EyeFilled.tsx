@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import EyeFilledSvg from '@ant-design/icons-svg/es/asn/EyeFill';
+import EyeFilledSvg from '@ant-design/icons-svg/es/asn/EyeFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const EyeFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={EyeFilledSvg} />;

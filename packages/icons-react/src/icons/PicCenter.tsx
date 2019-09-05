@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import PicCenterSvg from '@ant-design/icons-svg/es/asn/PicCenterOutline';
+import PicCenterSvg from '@ant-design/icons-svg/es/asn/PicCenterOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const PicCenter = (props: AntdIconProps) => <AntdIcon {...props} icon={PicCenterSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import SoundFilledSvg from '@ant-design/icons-svg/es/asn/SoundFill';
+import SoundFilledSvg from '@ant-design/icons-svg/es/asn/SoundFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const SoundFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SoundFilledSvg} />;

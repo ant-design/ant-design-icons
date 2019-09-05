@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import AlertSvg from '@ant-design/icons-svg/es/asn/AlertOutline';
+import AlertSvg from '@ant-design/icons-svg/es/asn/AlertOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Alert = (props: AntdIconProps) => <AntdIcon {...props} icon={AlertSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import SelectSvg from '@ant-design/icons-svg/es/asn/SelectOutline';
+import SelectSvg from '@ant-design/icons-svg/es/asn/SelectOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const Select = (props: AntdIconProps) => <AntdIcon {...props} icon={SelectSvg} />;
