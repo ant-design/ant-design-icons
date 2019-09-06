@@ -86,25 +86,29 @@ const Icon: React.FC<IconComponentProps> = props => {
   }
 
   // component > children
-  if (Component) {
-    innerNode = <Component {...innerSvgProps}>{children}</Component>;
-  }
+  const renderInnerNode = () => {
+    if (Component) {
+      return <Component {...innerSvgProps}>{children}</Component>;
+    }
 
-  if (children) {
-    warning(
-      Boolean(viewBox) ||
-        (React.Children.count(children) === 1 &&
-          React.isValidElement(children) &&
-          React.Children.only(children).type === 'use'),
-      'Make sure that you provide correct `viewBox`' +
-      ' prop (default `0 0 1024 1024`) to the icon.',
-    );
+    if (children) {
+      warning(
+        Boolean(viewBox) ||
+          (React.Children.count(children) === 1 &&
+            React.isValidElement(children) &&
+            React.Children.only(children).type === 'use'),
+        'Make sure that you provide correct `viewBox`' +
+        ' prop (default `0 0 1024 1024`) to the icon.',
+      );
 
-    innerNode = (
-      <svg {...innerSvgProps} viewBox={viewBox}>
-        {children}
-      </svg>
-    );
+      return (
+        <svg {...innerSvgProps} viewBox={viewBox}>
+          {children}
+        </svg>
+      );
+    }
+
+    return null;
   }
 
   let iconTabIndex = tabIndex;
@@ -120,7 +124,7 @@ const Icon: React.FC<IconComponentProps> = props => {
       onClick={onClick}
       className={classString}
     >
-      {innerNode}
+      {renderInnerNode()}
     </span>
   );
 }
