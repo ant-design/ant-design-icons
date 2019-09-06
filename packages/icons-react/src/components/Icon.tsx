@@ -88,9 +88,9 @@ const Icon: React.FC<IconComponentProps> = props => {
   // component > children
   const renderInnerNode = () => {
     if (Component) {
-      return innerNode = <Component {...innerSvgProps}>{children}</Component>;
+      return <Component {...innerSvgProps}>{children}</Component>;
     }
-    
+
     if (children) {
       warning(
         Boolean(viewBox) ||
@@ -100,13 +100,15 @@ const Icon: React.FC<IconComponentProps> = props => {
         'Make sure that you provide correct `viewBox`' +
         ' prop (default `0 0 1024 1024`) to the icon.',
       );
-  
+
       return (
         <svg {...innerSvgProps} viewBox={viewBox}>
           {children}
         </svg>
       );
     }
+
+    return null;
   }
 
   let iconTabIndex = tabIndex;
