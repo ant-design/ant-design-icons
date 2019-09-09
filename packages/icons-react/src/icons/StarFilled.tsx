@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import StarFillSvg from '@ant-design/icons-svg/lib/fill/StarFill';
+
+import React from 'react'
+import StarFilledSvg from '@ant-design/icons-svg/es/asn/StarFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const StarFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={StarFillSvg} />;
+const StarFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={StarFilledSvg} />;
 export default StarFilled;

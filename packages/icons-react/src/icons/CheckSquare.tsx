@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CheckSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/CheckSquareOutline';
+
+import React from 'react'
+import CheckSquareSvg from '@ant-design/icons-svg/es/asn/CheckSquareOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CheckSquare = (props: AntdIconProps) => <AntdIcon {...props} icon={CheckSquareOutlineSvg} />;
+const CheckSquare = (props: AntdIconProps) => <AntdIcon {...props} icon={CheckSquareSvg} />;
 export default CheckSquare;

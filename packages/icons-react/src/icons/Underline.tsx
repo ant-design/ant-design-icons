@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import UnderlineOutlineSvg from '@ant-design/icons-svg/lib/outline/UnderlineOutline';
+
+import React from 'react'
+import UnderlineSvg from '@ant-design/icons-svg/es/asn/UnderlineOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Underline = (props: AntdIconProps) => <AntdIcon {...props} icon={UnderlineOutlineSvg} />;
+const Underline = (props: AntdIconProps) => <AntdIcon {...props} icon={UnderlineSvg} />;
 export default Underline;

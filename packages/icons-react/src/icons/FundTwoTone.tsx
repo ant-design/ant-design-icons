@@ -1,8 +1,8 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import FundTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FundTwoTone';
+
+import React from 'react'
+import FundTwoToneSvg from '@ant-design/icons-svg/es/asn/FundTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FundTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={FundTwoToneSvg} />;

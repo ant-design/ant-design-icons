@@ -1,8 +1,8 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import RestTwoToneSvg from '@ant-design/icons-svg/lib/twotone/RestTwoTone';
+
+import React from 'react'
+import RestTwoToneSvg from '@ant-design/icons-svg/es/asn/RestTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const RestTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={RestTwoToneSvg} />;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import AntCloudOutlineSvg from '@ant-design/icons-svg/lib/outline/AntCloudOutline';
+
+import React from 'react'
+import AntCloudSvg from '@ant-design/icons-svg/es/asn/AntCloudOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AntCloud = (props: AntdIconProps) => <AntdIcon {...props} icon={AntCloudOutlineSvg} />;
+const AntCloud = (props: AntdIconProps) => <AntdIcon {...props} icon={AntCloudSvg} />;
 export default AntCloud;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import BulbFillSvg from '@ant-design/icons-svg/lib/fill/BulbFill';
+
+import React from 'react'
+import BulbFilledSvg from '@ant-design/icons-svg/es/asn/BulbFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BulbFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BulbFillSvg} />;
+const BulbFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BulbFilledSvg} />;
 export default BulbFilled;

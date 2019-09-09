@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ExclamationOutlineSvg from '@ant-design/icons-svg/lib/outline/ExclamationOutline';
+
+import React from 'react'
+import ExclamationSvg from '@ant-design/icons-svg/es/asn/ExclamationOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Exclamation = (props: AntdIconProps) => <AntdIcon {...props} icon={ExclamationOutlineSvg} />;
+const Exclamation = (props: AntdIconProps) => <AntdIcon {...props} icon={ExclamationSvg} />;
 export default Exclamation;

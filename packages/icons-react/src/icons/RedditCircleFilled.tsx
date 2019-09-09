@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import RedditCircleFillSvg from '@ant-design/icons-svg/lib/fill/RedditCircleFill';
+
+import React from 'react'
+import RedditCircleFilledSvg from '@ant-design/icons-svg/es/asn/RedditCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RedditCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={RedditCircleFillSvg} />;
+const RedditCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={RedditCircleFilledSvg} />;
 export default RedditCircleFilled;

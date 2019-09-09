@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ZhihuSquareFillSvg from '@ant-design/icons-svg/lib/fill/ZhihuSquareFill';
+
+import React from 'react'
+import ZhihuSquareFilledSvg from '@ant-design/icons-svg/es/asn/ZhihuSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ZhihuSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ZhihuSquareFillSvg} />;
+const ZhihuSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ZhihuSquareFilledSvg} />;
 export default ZhihuSquareFilled;

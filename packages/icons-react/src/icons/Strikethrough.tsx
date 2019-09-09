@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import StrikethroughOutlineSvg from '@ant-design/icons-svg/lib/outline/StrikethroughOutline';
+
+import React from 'react'
+import StrikethroughSvg from '@ant-design/icons-svg/es/asn/StrikethroughOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Strikethrough = (props: AntdIconProps) => <AntdIcon {...props} icon={StrikethroughOutlineSvg} />;
+const Strikethrough = (props: AntdIconProps) => <AntdIcon {...props} icon={StrikethroughSvg} />;
 export default Strikethrough;

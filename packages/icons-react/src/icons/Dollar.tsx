@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DollarOutlineSvg from '@ant-design/icons-svg/lib/outline/DollarOutline';
+
+import React from 'react'
+import DollarSvg from '@ant-design/icons-svg/es/asn/DollarOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Dollar = (props: AntdIconProps) => <AntdIcon {...props} icon={DollarOutlineSvg} />;
+const Dollar = (props: AntdIconProps) => <AntdIcon {...props} icon={DollarSvg} />;
 export default Dollar;

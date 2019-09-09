@@ -1,8 +1,8 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import MinusSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/MinusSquareTwoTone';
+
+import React from 'react'
+import MinusSquareTwoToneSvg from '@ant-design/icons-svg/es/asn/MinusSquareTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const MinusSquareTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={MinusSquareTwoToneSvg} />;

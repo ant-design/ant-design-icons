@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import YuqueOutlineSvg from '@ant-design/icons-svg/lib/outline/YuqueOutline';
+
+import React from 'react'
+import YuqueSvg from '@ant-design/icons-svg/es/asn/YuqueOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Yuque = (props: AntdIconProps) => <AntdIcon {...props} icon={YuqueOutlineSvg} />;
+const Yuque = (props: AntdIconProps) => <AntdIcon {...props} icon={YuqueSvg} />;
 export default Yuque;

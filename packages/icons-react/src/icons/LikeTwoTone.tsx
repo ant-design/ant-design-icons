@@ -1,8 +1,8 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import LikeTwoToneSvg from '@ant-design/icons-svg/lib/twotone/LikeTwoTone';
+
+import React from 'react'
+import LikeTwoToneSvg from '@ant-design/icons-svg/es/asn/LikeTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const LikeTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={LikeTwoToneSvg} />;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CrownOutlineSvg from '@ant-design/icons-svg/lib/outline/CrownOutline';
+
+import React from 'react'
+import CrownSvg from '@ant-design/icons-svg/es/asn/CrownOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Crown = (props: AntdIconProps) => <AntdIcon {...props} icon={CrownOutlineSvg} />;
+const Crown = (props: AntdIconProps) => <AntdIcon {...props} icon={CrownSvg} />;
 export default Crown;

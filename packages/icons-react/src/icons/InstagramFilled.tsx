@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import InstagramFillSvg from '@ant-design/icons-svg/lib/fill/InstagramFill';
+
+import React from 'react'
+import InstagramFilledSvg from '@ant-design/icons-svg/es/asn/InstagramFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const InstagramFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={InstagramFillSvg} />;
+const InstagramFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={InstagramFilledSvg} />;
 export default InstagramFilled;

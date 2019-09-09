@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import HistoryOutlineSvg from '@ant-design/icons-svg/lib/outline/HistoryOutline';
+
+import React from 'react'
+import HistorySvg from '@ant-design/icons-svg/es/asn/HistoryOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const History = (props: AntdIconProps) => <AntdIcon {...props} icon={HistoryOutlineSvg} />;
+const History = (props: AntdIconProps) => <AntdIcon {...props} icon={HistorySvg} />;
 export default History;

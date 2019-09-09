@@ -1,8 +1,8 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import TrademarkCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/TrademarkCircleTwoTone';
+
+import React from 'react'
+import TrademarkCircleTwoToneSvg from '@ant-design/icons-svg/es/asn/TrademarkCircleTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const TrademarkCircleTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={TrademarkCircleTwoToneSvg} />;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import EyeOutlineSvg from '@ant-design/icons-svg/lib/outline/EyeOutline';
+
+import React from 'react'
+import EyeSvg from '@ant-design/icons-svg/es/asn/EyeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Eye = (props: AntdIconProps) => <AntdIcon {...props} icon={EyeOutlineSvg} />;
+const Eye = (props: AntdIconProps) => <AntdIcon {...props} icon={EyeSvg} />;
 export default Eye;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import WarningOutlineSvg from '@ant-design/icons-svg/lib/outline/WarningOutline';
+
+import React from 'react'
+import WarningSvg from '@ant-design/icons-svg/es/asn/WarningOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Warning = (props: AntdIconProps) => <AntdIcon {...props} icon={WarningOutlineSvg} />;
+const Warning = (props: AntdIconProps) => <AntdIcon {...props} icon={WarningSvg} />;
 export default Warning;

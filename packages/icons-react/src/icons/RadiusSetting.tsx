@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import RadiusSettingOutlineSvg from '@ant-design/icons-svg/lib/outline/RadiusSettingOutline';
+
+import React from 'react'
+import RadiusSettingSvg from '@ant-design/icons-svg/es/asn/RadiusSettingOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RadiusSetting = (props: AntdIconProps) => <AntdIcon {...props} icon={RadiusSettingOutlineSvg} />;
+const RadiusSetting = (props: AntdIconProps) => <AntdIcon {...props} icon={RadiusSettingSvg} />;
 export default RadiusSetting;

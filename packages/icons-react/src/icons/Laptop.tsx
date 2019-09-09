@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import LaptopOutlineSvg from '@ant-design/icons-svg/lib/outline/LaptopOutline';
+
+import React from 'react'
+import LaptopSvg from '@ant-design/icons-svg/es/asn/LaptopOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Laptop = (props: AntdIconProps) => <AntdIcon {...props} icon={LaptopOutlineSvg} />;
+const Laptop = (props: AntdIconProps) => <AntdIcon {...props} icon={LaptopSvg} />;
 export default Laptop;

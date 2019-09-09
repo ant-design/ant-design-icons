@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import SlidersOutlineSvg from '@ant-design/icons-svg/lib/outline/SlidersOutline';
+
+import React from 'react'
+import SlidersSvg from '@ant-design/icons-svg/es/asn/SlidersOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Sliders = (props: AntdIconProps) => <AntdIcon {...props} icon={SlidersOutlineSvg} />;
+const Sliders = (props: AntdIconProps) => <AntdIcon {...props} icon={SlidersSvg} />;
 export default Sliders;

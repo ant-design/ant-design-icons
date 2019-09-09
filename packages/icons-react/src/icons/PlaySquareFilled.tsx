@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import PlaySquareFillSvg from '@ant-design/icons-svg/lib/fill/PlaySquareFill';
+
+import React from 'react'
+import PlaySquareFilledSvg from '@ant-design/icons-svg/es/asn/PlaySquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PlaySquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={PlaySquareFillSvg} />;
+const PlaySquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={PlaySquareFilledSvg} />;
 export default PlaySquareFilled;

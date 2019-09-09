@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import SoundOutlineSvg from '@ant-design/icons-svg/lib/outline/SoundOutline';
+
+import React from 'react'
+import SoundSvg from '@ant-design/icons-svg/es/asn/SoundOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Sound = (props: AntdIconProps) => <AntdIcon {...props} icon={SoundOutlineSvg} />;
+const Sound = (props: AntdIconProps) => <AntdIcon {...props} icon={SoundSvg} />;
 export default Sound;
