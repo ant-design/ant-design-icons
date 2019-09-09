@@ -35,6 +35,9 @@ lib/icons/public_api.ts
 lib/inline-svg/fill/*.svg
 lib/inline-svg/outline/*.svg
 lib/inline-svg/twotone/*.svg
+lib/inline-svg/fill/*.js
+lib/inline-svg/outline/*.js
+lib/inline-svg/twotone/*.js
 
 # publish
 *.tgz

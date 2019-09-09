@@ -1,10 +1,30 @@
 import { DOCUMENT } from '@angular/common';
 import { HttpBackend, HttpClient } from '@angular/common/http';
-import { Inject, Optional, Renderer2, RendererFactory2, SecurityContext } from '@angular/core';
+import {
+  Inject,
+  Optional,
+  Renderer2,
+  RendererFactory2,
+  SecurityContext
+} from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { of as observableOf, Observable } from 'rxjs';
-import { catchError, finalize, map, share, tap } from 'rxjs/operators';
-import { CachedIconDefinition, IconDefinition, ThemeType, TwoToneColorPalette, TwoToneColorPaletteSetter } from '../types';
+import { of as observableOf, Observable, Subject } from 'rxjs';
+import {
+  catchError,
+  filter,
+  finalize,
+  map,
+  share,
+  take,
+  tap
+} from 'rxjs/operators';
+import {
+  CachedIconDefinition,
+  IconDefinition,
+  ThemeType,
+  TwoToneColorPalette,
+  TwoToneColorPaletteSetter
+} from '../types';
 import {
   cloneSVG,
   getIconDefinitionFromAbbr,
@@ -16,10 +36,33 @@ import {
   withSuffix,
   withSuffixAndColor
 } from '../utils';
-import { HttpModuleNotImport, IconNotFoundError, NameSpaceIsNotSpecifyError, SVGTagNotFoundError, UrlNotSafeError } from './icon.error';
+import {
+  DynamicLoadingTimeoutError,
+  HttpModuleNotImport,
+  IconNotFoundError,
+  NameSpaceIsNotSpecifyError,
+  SVGTagNotFoundError,
+  UrlNotSafeError
+} from './icon.error';
+
+const JSONP_HANDLER_NAME = '__ant_icon_load';
 
 export class IconService {
   defaultTheme: ThemeType = 'outline';
+
+  set twoToneColor({
+    primaryColor,
+    secondaryColor
+  }: TwoToneColorPaletteSetter) {
+    this._twoToneColorPalette.primaryColor = primaryColor;
+    this._twoToneColorPalette.secondaryColor =
+      secondaryColor || getSecondaryColor(primaryColor);
+  }
+
+  get twoToneColor(): TwoToneColorPaletteSetter {
+    // Make a copy to avoid unexpected changes.
+    return { ...this._twoToneColorPalette } as TwoToneColorPalette;
+  }
 
   protected _renderer: Renderer2;
   protected _http: HttpClient;
@@ -35,7 +78,10 @@ export class IconService {
    */
   protected _svgRenderedDefinitions = new Map<string, CachedIconDefinition>();
 
-  protected _inProgressFetches = new Map<string, Observable<IconDefinition | null>>();
+  protected _inProgressFetches = new Map<
+    string,
+    Observable<IconDefinition | null>
+  >();
 
   /**
    * Url prefix for fetching inline SVG by dynamic importing.
@@ -43,18 +89,14 @@ export class IconService {
   protected _assetsUrlRoot = '';
 
   protected _twoToneColorPalette: TwoToneColorPalette = {
-    primaryColor  : '#333333',
+    primaryColor: '#333333',
     secondaryColor: '#E6E6E6'
   };
 
-  set twoToneColor({ primaryColor, secondaryColor }: TwoToneColorPaletteSetter) {
-    this._twoToneColorPalette.primaryColor = primaryColor;
-    this._twoToneColorPalette.secondaryColor = secondaryColor || getSecondaryColor(primaryColor);
-  }
+  /** Record if a handler is registered. */
+  private _enableJsonpLoading = false;
 
-  get twoToneColor(): TwoToneColorPaletteSetter {
-    return { ...this._twoToneColorPalette } as TwoToneColorPalette; // Make a copy to avoid unexpected changes.
-  }
+  private _jsonpIconLoad$ = new Subject<IconDefinition>();
 
   constructor(
     protected _rendererFactory: RendererFactory2,
@@ -66,6 +108,19 @@ export class IconService {
     this._renderer = this._rendererFactory.createRenderer(null, null);
     if (this._handler) {
       this._http = new HttpClient(this._handler);
+    }
+  }
+
+  /**
+   * Call this method to switch to jsonp like loading.
+   */
+  useJsonpLoading(): void {
+    if (!this._enableJsonpLoading) {
+      this._enableJsonpLoading = true;
+
+      window[JSONP_HANDLER_NAME] = (icon: IconDefinition) => {
+        this._jsonpIconLoad$.next(icon);
+      };
     }
   }
 
@@ -93,7 +148,7 @@ export class IconService {
    * @param literal
    */
   addIconLiteral(type: string, literal: string): void {
-    const [ name, namespace ] = getNameAndNamespace(type);
+    const [name, namespace] = getNameAndNamespace(type);
     if (!namespace) {
       throw NameSpaceIsNotSpecifyError();
     }
@@ -113,18 +168,29 @@ export class IconService {
    * @param icon
    * @param twoToneColor
    */
-  getRenderedContent(icon: IconDefinition | string, twoToneColor?: string): Observable<SVGElement> {
+  getRenderedContent(
+    icon: IconDefinition | string,
+    twoToneColor?: string
+  ): Observable<SVGElement> {
     // If `icon` is a `IconDefinition`, go to the next step. If not, try to fetch it from cache.
-    const definition: IconDefinition | null | undefined = isIconDefinition(icon) ? icon as IconDefinition : this._svgDefinitions.get(icon as string);
+    const definition: IconDefinition | null | undefined = isIconDefinition(icon)
+      ? (icon as IconDefinition)
+      : this._svgDefinitions.get(icon as string);
 
     // If `icon` is a `IconDefinition` of successfully fetch, wrap it in an `Observable`. Otherwise try to fetch it from remote.
-    const $iconDefinition = definition ? observableOf(definition) : this._getFromRemote(icon as string);
+    const $iconDefinition = definition
+      ? observableOf(definition)
+      : this._loadIconDynamically(icon as string);
 
     // If finally get an `IconDefinition`, render and return it. Otherwise throw an error.
-    return $iconDefinition.pipe(map(i => {
-      if (!i) { throw IconNotFoundError(icon as string); }
-      return this._loadSVGFromCacheOrCreateNew(i, twoToneColor);
-    }));
+    return $iconDefinition.pipe(
+      map(i => {
+        if (!i) {
+          throw IconNotFoundError(icon as string);
+        }
+        return this._loadSVGFromCacheOrCreateNew(i, twoToneColor);
+      })
+    );
   }
 
   getCachedIcons(): Map<string, IconDefinition> {
@@ -135,32 +201,69 @@ export class IconService {
    * Get raw svg and assemble a `IconDefinition` object.
    * @param type
    */
-  protected _getFromRemote(type: string): Observable<IconDefinition | null> {
-    if (!this._http) { return observableOf(HttpModuleNotImport()); }
+  protected _loadIconDynamically(
+    type: string
+  ): Observable<IconDefinition | null> {
+    // If developer doesn't provide HTTP module nor enable jsonp loading, just throw an error.
+    if (!this._http && !this._enableJsonpLoading) {
+      return observableOf(HttpModuleNotImport());
+    }
 
-    // If multi directive ask for the same icon at the same time, http request should only be fired once.
+    // If multi directive ask for the same icon at the same time,
+    // request should only be fired once.
     let inProgress = this._inProgressFetches.get(type);
 
-    // If there's no other directive asking for the same icon, fire a request.
     if (!inProgress) {
-      const [ name, namespace ] = getNameAndNamespace(type);
+      const [name, namespace] = getNameAndNamespace(type);
 
       // If the string has a namespace within, create a simple `IconDefinition`.
       const icon: IconDefinition = namespace
         ? { name: type, icon: '' }
         : getIconDefinitionFromAbbr(name);
 
-      const url = namespace
-        ? `${this._assetsUrlRoot}assets/${namespace}/${name}.svg`
-        : `${this._assetsUrlRoot}assets/${icon.theme}/${icon.name}.svg`;
+      const suffix = this.useJsonpLoading ? '.js' : '.svg';
+      const url =
+        (namespace
+          ? `${this._assetsUrlRoot}assets/${namespace}/${name}`
+          : `${this._assetsUrlRoot}assets/${icon.theme}/${icon.name}`) + suffix;
 
       const safeUrl = this.sanitizer.sanitize(SecurityContext.URL, url);
 
-      if (!safeUrl) { throw UrlNotSafeError(url); }
+      if (!safeUrl) {
+        throw UrlNotSafeError(url);
+      }
 
-      // Wrap a `IconDefinition`, cache it, delete the shared work.
-      inProgress = this._http.get(safeUrl, { responseType: 'text' }).pipe(
-        map(literal => ({ ...icon, icon: literal })),
+      const source = !this._enableJsonpLoading
+        ? this._http
+            .get(safeUrl, { responseType: 'text' })
+            .pipe(map(literal => ({ ...icon, icon: literal })))
+        : new Observable<IconDefinition>(subscriber => {
+            const loader = this._document.createElement('script');
+            const timer = setTimeout(() => {
+              clean();
+              subscriber.error(DynamicLoadingTimeoutError());
+            }, 6000);
+
+            loader.src = safeUrl as string;
+
+            function clean(): void {
+              loader.parentNode.removeChild(loader);
+              clearTimeout(timer);
+            }
+
+            this._document.body.appendChild(loader);
+            this._jsonpIconLoad$
+              .pipe(
+                filter(i => i.name === icon.name && i.theme === icon.theme),
+                take(1)
+              )
+              .subscribe(i => {
+                subscriber.next(i);
+                clean();
+              });
+          });
+
+      inProgress = source.pipe(
         tap(definition => this.addIcon(definition)),
         finalize(() => this._inProgressFetches.delete(type)),
         catchError(() => observableOf(null)),
@@ -170,7 +273,6 @@ export class IconService {
       this._inProgressFetches.set(type, inProgress);
     }
 
-    // Otherwise just reuse other directive's request.
     return inProgress;
   }
 
@@ -179,14 +281,21 @@ export class IconService {
    * @param icon
    * @param twoToneColor
    */
-  protected _loadSVGFromCacheOrCreateNew(icon: IconDefinition, twoToneColor?: string): SVGElement {
+  protected _loadSVGFromCacheOrCreateNew(
+    icon: IconDefinition,
+    twoToneColor?: string
+  ): SVGElement {
     let svg: SVGElement;
 
     const pri = twoToneColor || this._twoToneColorPalette.primaryColor;
-    const sec = getSecondaryColor(pri) || this._twoToneColorPalette.secondaryColor;
-    const key = icon.theme === 'twotone'
-      ? withSuffixAndColor(icon.name, icon.theme, pri, sec)
-      : icon.theme === undefined ? icon.name : withSuffix(icon.name, icon.theme);
+    const sec =
+      getSecondaryColor(pri) || this._twoToneColorPalette.secondaryColor;
+    const key =
+      icon.theme === 'twotone'
+        ? withSuffixAndColor(icon.name, icon.theme, pri, sec)
+        : icon.theme === undefined
+        ? icon.name
+        : withSuffix(icon.name, icon.theme);
 
     // Try to make a copy from cache.
     const cached = this._svgRenderedDefinitions.get(key);
@@ -194,15 +303,22 @@ export class IconService {
     if (cached) {
       svg = cached.icon;
     } else {
-      svg = this._setSVGAttribute(this._colorizeSVGIcon(
-        // Icons provided by ant design should be refined to remove preset colors.
-        this._createSVGElementFromString(hasNamespace(icon.name) ? icon.icon : replaceFillColor(icon.icon)),
-        icon.theme === 'twotone',
-        pri,
-        sec
-      ));
+      svg = this._setSVGAttribute(
+        this._colorizeSVGIcon(
+          // Icons provided by ant design should be refined to remove preset colors.
+          this._createSVGElementFromString(
+            hasNamespace(icon.name) ? icon.icon : replaceFillColor(icon.icon)
+          ),
+          icon.theme === 'twotone',
+          pri,
+          sec
+        )
+      );
       // Cache it.
-      this._svgRenderedDefinitions.set(key, { ...icon, icon: svg } as CachedIconDefinition);
+      this._svgRenderedDefinitions.set(key, {
+        ...icon,
+        icon: svg
+      } as CachedIconDefinition);
     }
 
     return cloneSVG(svg);
@@ -212,7 +328,9 @@ export class IconService {
     const div = this._document.createElement('div');
     div.innerHTML = str;
     const svg: SVGElement = div.querySelector('svg');
-    if (!svg) { throw SVGTagNotFoundError; }
+    if (!svg) {
+      throw SVGTagNotFoundError;
+    }
     return svg;
   }
 
@@ -222,12 +340,17 @@ export class IconService {
     return svg;
   }
 
-  protected _colorizeSVGIcon(svg: SVGElement, twotone: boolean, pri: string, sec: string): SVGElement {
+  protected _colorizeSVGIcon(
+    svg: SVGElement,
+    twotone: boolean,
+    pri: string,
+    sec: string
+  ): SVGElement {
     if (twotone) {
       const children = svg.childNodes;
       const length = children.length;
       for (let i = 0; i < length; i++) {
-        const child: HTMLElement = children[ i ] as HTMLElement;
+        const child: HTMLElement = children[i] as HTMLElement;
         if (child.getAttribute('fill') === 'secondaryColor') {
           this._renderer.setAttribute(child, 'fill', sec);
         } else {
