@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import BorderBottomOutlineSvg from '@ant-design/icons-svg/lib/outline/BorderBottomOutline';
+
+import React from 'react'
+import BorderBottomSvg from '@ant-design/icons-svg/es/asn/BorderBottomOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BorderBottom = (props: AntdIconProps) => <AntdIcon {...props} icon={BorderBottomOutlineSvg} />;
+const BorderBottom = (props: AntdIconProps) => <AntdIcon {...props} icon={BorderBottomSvg} />;
 export default BorderBottom;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import LeftCircleFillSvg from '@ant-design/icons-svg/lib/fill/LeftCircleFill';
+
+import React from 'react'
+import LeftCircleFilledSvg from '@ant-design/icons-svg/es/asn/LeftCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const LeftCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={LeftCircleFillSvg} />;
+const LeftCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={LeftCircleFilledSvg} />;
 export default LeftCircleFilled;

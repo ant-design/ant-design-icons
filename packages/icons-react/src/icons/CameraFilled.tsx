@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CameraFillSvg from '@ant-design/icons-svg/lib/fill/CameraFill';
+
+import React from 'react'
+import CameraFilledSvg from '@ant-design/icons-svg/es/asn/CameraFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CameraFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CameraFillSvg} />;
+const CameraFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CameraFilledSvg} />;
 export default CameraFilled;

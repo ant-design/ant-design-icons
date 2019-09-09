@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import AndroidFillSvg from '@ant-design/icons-svg/lib/fill/AndroidFill';
+
+import React from 'react'
+import AndroidFilledSvg from '@ant-design/icons-svg/es/asn/AndroidFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AndroidFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={AndroidFillSvg} />;
+const AndroidFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={AndroidFilledSvg} />;
 export default AndroidFilled;

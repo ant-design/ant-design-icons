@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import PauseCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/PauseCircleOutline';
+
+import React from 'react'
+import PauseCircleSvg from '@ant-design/icons-svg/es/asn/PauseCircleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PauseCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={PauseCircleOutlineSvg} />;
+const PauseCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={PauseCircleSvg} />;
 export default PauseCircle;

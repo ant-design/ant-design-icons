@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import FunnelPlotOutlineSvg from '@ant-design/icons-svg/lib/outline/FunnelPlotOutline';
+
+import React from 'react'
+import FunnelPlotSvg from '@ant-design/icons-svg/es/asn/FunnelPlotOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FunnelPlot = (props: AntdIconProps) => <AntdIcon {...props} icon={FunnelPlotOutlineSvg} />;
+const FunnelPlot = (props: AntdIconProps) => <AntdIcon {...props} icon={FunnelPlotSvg} />;
 export default FunnelPlot;

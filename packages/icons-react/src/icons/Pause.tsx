@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import PauseOutlineSvg from '@ant-design/icons-svg/lib/outline/PauseOutline';
+
+import React from 'react'
+import PauseSvg from '@ant-design/icons-svg/es/asn/PauseOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Pause = (props: AntdIconProps) => <AntdIcon {...props} icon={PauseOutlineSvg} />;
+const Pause = (props: AntdIconProps) => <AntdIcon {...props} icon={PauseSvg} />;
 export default Pause;

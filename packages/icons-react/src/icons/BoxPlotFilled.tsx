@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import BoxPlotFillSvg from '@ant-design/icons-svg/lib/fill/BoxPlotFill';
+
+import React from 'react'
+import BoxPlotFilledSvg from '@ant-design/icons-svg/es/asn/BoxPlotFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BoxPlotFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BoxPlotFillSvg} />;
+const BoxPlotFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BoxPlotFilledSvg} />;
 export default BoxPlotFilled;

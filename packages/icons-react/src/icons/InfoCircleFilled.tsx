@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import InfoCircleFillSvg from '@ant-design/icons-svg/lib/fill/InfoCircleFill';
+
+import React from 'react'
+import InfoCircleFilledSvg from '@ant-design/icons-svg/es/asn/InfoCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const InfoCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={InfoCircleFillSvg} />;
+const InfoCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={InfoCircleFilledSvg} />;
 export default InfoCircleFilled;

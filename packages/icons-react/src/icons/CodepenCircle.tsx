@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CodepenCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/CodepenCircleOutline';
+
+import React from 'react'
+import CodepenCircleSvg from '@ant-design/icons-svg/es/asn/CodepenCircleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CodepenCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={CodepenCircleOutlineSvg} />;
+const CodepenCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={CodepenCircleSvg} />;
 export default CodepenCircle;

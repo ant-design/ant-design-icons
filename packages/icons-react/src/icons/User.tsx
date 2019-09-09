@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import UserOutlineSvg from '@ant-design/icons-svg/lib/outline/UserOutline';
+
+import React from 'react'
+import UserSvg from '@ant-design/icons-svg/es/asn/UserOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const User = (props: AntdIconProps) => <AntdIcon {...props} icon={UserOutlineSvg} />;
+const User = (props: AntdIconProps) => <AntdIcon {...props} icon={UserSvg} />;
 export default User;

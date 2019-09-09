@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import RocketOutlineSvg from '@ant-design/icons-svg/lib/outline/RocketOutline';
+
+import React from 'react'
+import RocketSvg from '@ant-design/icons-svg/es/asn/RocketOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Rocket = (props: AntdIconProps) => <AntdIcon {...props} icon={RocketOutlineSvg} />;
+const Rocket = (props: AntdIconProps) => <AntdIcon {...props} icon={RocketSvg} />;
 export default Rocket;

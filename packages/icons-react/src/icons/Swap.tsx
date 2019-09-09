@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import SwapOutlineSvg from '@ant-design/icons-svg/lib/outline/SwapOutline';
+
+import React from 'react'
+import SwapSvg from '@ant-design/icons-svg/es/asn/SwapOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Swap = (props: AntdIconProps) => <AntdIcon {...props} icon={SwapOutlineSvg} />;
+const Swap = (props: AntdIconProps) => <AntdIcon {...props} icon={SwapSvg} />;
 export default Swap;

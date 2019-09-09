@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ItalicOutlineSvg from '@ant-design/icons-svg/lib/outline/ItalicOutline';
+
+import React from 'react'
+import ItalicSvg from '@ant-design/icons-svg/es/asn/ItalicOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Italic = (props: AntdIconProps) => <AntdIcon {...props} icon={ItalicOutlineSvg} />;
+const Italic = (props: AntdIconProps) => <AntdIcon {...props} icon={ItalicSvg} />;
 export default Italic;

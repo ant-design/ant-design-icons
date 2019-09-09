@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import UsbFillSvg from '@ant-design/icons-svg/lib/fill/UsbFill';
+
+import React from 'react'
+import UsbFilledSvg from '@ant-design/icons-svg/es/asn/UsbFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const UsbFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={UsbFillSvg} />;
+const UsbFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={UsbFilledSvg} />;
 export default UsbFilled;

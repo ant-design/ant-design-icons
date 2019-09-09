@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import UnlockFillSvg from '@ant-design/icons-svg/lib/fill/UnlockFill';
+
+import React from 'react'
+import UnlockFilledSvg from '@ant-design/icons-svg/es/asn/UnlockFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const UnlockFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={UnlockFillSvg} />;
+const UnlockFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={UnlockFilledSvg} />;
 export default UnlockFilled;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DollarCircleFillSvg from '@ant-design/icons-svg/lib/fill/DollarCircleFill';
+
+import React from 'react'
+import DollarCircleFilledSvg from '@ant-design/icons-svg/es/asn/DollarCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DollarCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DollarCircleFillSvg} />;
+const DollarCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DollarCircleFilledSvg} />;
 export default DollarCircleFilled;

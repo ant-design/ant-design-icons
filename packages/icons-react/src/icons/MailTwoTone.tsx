@@ -1,8 +1,8 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import MailTwoToneSvg from '@ant-design/icons-svg/lib/twotone/MailTwoTone';
+
+import React from 'react'
+import MailTwoToneSvg from '@ant-design/icons-svg/es/asn/MailTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const MailTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={MailTwoToneSvg} />;

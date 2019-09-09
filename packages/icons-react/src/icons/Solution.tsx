@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import SolutionOutlineSvg from '@ant-design/icons-svg/lib/outline/SolutionOutline';
+
+import React from 'react'
+import SolutionSvg from '@ant-design/icons-svg/es/asn/SolutionOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Solution = (props: AntdIconProps) => <AntdIcon {...props} icon={SolutionOutlineSvg} />;
+const Solution = (props: AntdIconProps) => <AntdIcon {...props} icon={SolutionSvg} />;
 export default Solution;

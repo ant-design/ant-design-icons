@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CreditCardFillSvg from '@ant-design/icons-svg/lib/fill/CreditCardFill';
+
+import React from 'react'
+import CreditCardFilledSvg from '@ant-design/icons-svg/es/asn/CreditCardFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CreditCardFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CreditCardFillSvg} />;
+const CreditCardFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CreditCardFilledSvg} />;
 export default CreditCardFilled;

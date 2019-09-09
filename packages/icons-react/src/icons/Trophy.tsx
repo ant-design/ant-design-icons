@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import TrophyOutlineSvg from '@ant-design/icons-svg/lib/outline/TrophyOutline';
+
+import React from 'react'
+import TrophySvg from '@ant-design/icons-svg/es/asn/TrophyOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Trophy = (props: AntdIconProps) => <AntdIcon {...props} icon={TrophyOutlineSvg} />;
+const Trophy = (props: AntdIconProps) => <AntdIcon {...props} icon={TrophySvg} />;
 export default Trophy;

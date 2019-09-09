@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import TaobaoCircleFillSvg from '@ant-design/icons-svg/lib/fill/TaobaoCircleFill';
+
+import React from 'react'
+import TaobaoCircleFilledSvg from '@ant-design/icons-svg/es/asn/TaobaoCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TaobaoCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={TaobaoCircleFillSvg} />;
+const TaobaoCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={TaobaoCircleFilledSvg} />;
 export default TaobaoCircleFilled;

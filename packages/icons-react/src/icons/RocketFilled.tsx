@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import RocketFillSvg from '@ant-design/icons-svg/lib/fill/RocketFill';
+
+import React from 'react'
+import RocketFilledSvg from '@ant-design/icons-svg/es/asn/RocketFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RocketFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={RocketFillSvg} />;
+const RocketFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={RocketFilledSvg} />;
 export default RocketFilled;

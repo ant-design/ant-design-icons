@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import RightCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/RightCircleOutline';
+
+import React from 'react'
+import RightCircleSvg from '@ant-design/icons-svg/es/asn/RightCircleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RightCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={RightCircleOutlineSvg} />;
+const RightCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={RightCircleSvg} />;
 export default RightCircle;

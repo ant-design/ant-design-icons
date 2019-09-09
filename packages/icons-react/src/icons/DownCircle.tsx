@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DownCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/DownCircleOutline';
+
+import React from 'react'
+import DownCircleSvg from '@ant-design/icons-svg/es/asn/DownCircleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DownCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={DownCircleOutlineSvg} />;
+const DownCircle = (props: AntdIconProps) => <AntdIcon {...props} icon={DownCircleSvg} />;
 export default DownCircle;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CloseCircleFillSvg from '@ant-design/icons-svg/lib/fill/CloseCircleFill';
+
+import React from 'react'
+import CloseCircleFilledSvg from '@ant-design/icons-svg/es/asn/CloseCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CloseCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseCircleFillSvg} />;
+const CloseCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseCircleFilledSvg} />;
 export default CloseCircleFilled;

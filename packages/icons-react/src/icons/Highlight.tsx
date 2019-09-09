@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import HighlightOutlineSvg from '@ant-design/icons-svg/lib/outline/HighlightOutline';
+
+import React from 'react'
+import HighlightSvg from '@ant-design/icons-svg/es/asn/HighlightOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Highlight = (props: AntdIconProps) => <AntdIcon {...props} icon={HighlightOutlineSvg} />;
+const Highlight = (props: AntdIconProps) => <AntdIcon {...props} icon={HighlightSvg} />;
 export default Highlight;

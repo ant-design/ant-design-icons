@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import TransactionOutlineSvg from '@ant-design/icons-svg/lib/outline/TransactionOutline';
+
+import React from 'react'
+import TransactionSvg from '@ant-design/icons-svg/es/asn/TransactionOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const Transaction = (props: AntdIconProps) => <AntdIcon {...props} icon={TransactionOutlineSvg} />;
+const Transaction = (props: AntdIconProps) => <AntdIcon {...props} icon={TransactionSvg} />;
 export default Transaction;

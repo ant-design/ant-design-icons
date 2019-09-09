@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import PaperClipOutlineSvg from '@ant-design/icons-svg/lib/outline/PaperClipOutline';
+
+import React from 'react'
+import PaperClipSvg from '@ant-design/icons-svg/es/asn/PaperClipOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PaperClip = (props: AntdIconProps) => <AntdIcon {...props} icon={PaperClipOutlineSvg} />;
+const PaperClip = (props: AntdIconProps) => <AntdIcon {...props} icon={PaperClipSvg} />;
 export default PaperClip;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import FacebookFillSvg from '@ant-design/icons-svg/lib/fill/FacebookFill';
+
+import React from 'react'
+import FacebookFilledSvg from '@ant-design/icons-svg/es/asn/FacebookFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FacebookFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FacebookFillSvg} />;
+const FacebookFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FacebookFilledSvg} />;
 export default FacebookFilled;
