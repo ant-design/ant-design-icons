@@ -40,7 +40,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.0.0",
     "@babel/runtime": "^7.0.0",
-    "@svgr/core": "^2.1.1",
+    "@svgr/core": "^4.3.3",
     "@types/fs-extra": "^5.0.4",
     "@types/globby": "^8.0.0",
     "@types/history": "^4.7.0",
