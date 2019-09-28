@@ -61,9 +61,9 @@ dashboard | <img width="70" height="70" src="./inline-svg/filled/dashboard.svg" 
 database | <img width="70" height="70" src="./inline-svg/filled/database.svg" alt="database" /> | <img width="70" height="70" src="./inline-svg/outlined/database.svg" alt="database" /> | <img width="70" height="70" src="./inline-svg/twotone/database.svg" alt="database" />
 delete | <img width="70" height="70" src="./inline-svg/filled/delete.svg" alt="delete" /> | <img width="70" height="70" src="./inline-svg/outlined/delete.svg" alt="delete" /> | <img width="70" height="70" src="./inline-svg/twotone/delete.svg" alt="delete" />
 diff | <img width="70" height="70" src="./inline-svg/filled/diff.svg" alt="diff" /> | <img width="70" height="70" src="./inline-svg/outlined/diff.svg" alt="diff" /> | <img width="70" height="70" src="./inline-svg/twotone/diff.svg" alt="diff" />
-dingding | <img width="70" height="70" src="./inline-svg/filled/dingding.svg" alt="dingding" /> |  -  |  - 
 dingtalk-circle | <img width="70" height="70" src="./inline-svg/filled/dingtalk-circle.svg" alt="dingtalk-circle" /> |  -  |  - 
 dingtalk-square | <img width="70" height="70" src="./inline-svg/filled/dingtalk-square.svg" alt="dingtalk-square" /> |  -  |  - 
+dingtalk | <img width="70" height="70" src="./inline-svg/filled/dingtalk.svg" alt="dingtalk" /> |  -  |  - 
 dislike | <img width="70" height="70" src="./inline-svg/filled/dislike.svg" alt="dislike" /> | <img width="70" height="70" src="./inline-svg/outlined/dislike.svg" alt="dislike" /> | <img width="70" height="70" src="./inline-svg/twotone/dislike.svg" alt="dislike" />
 dollar-circle | <img width="70" height="70" src="./inline-svg/filled/dollar-circle.svg" alt="dollar-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/dollar-circle.svg" alt="dollar-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/dollar-circle.svg" alt="dollar-circle" />
 down-circle | <img width="70" height="70" src="./inline-svg/filled/down-circle.svg" alt="down-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/down-circle.svg" alt="down-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/down-circle.svg" alt="down-circle" />
@@ -201,7 +201,7 @@ taobao-circle | <img width="70" height="70" src="./inline-svg/filled/taobao-circ
 taobao-square | <img width="70" height="70" src="./inline-svg/filled/taobao-square.svg" alt="taobao-square" /> |  -  |  - 
 thunderbolt | <img width="70" height="70" src="./inline-svg/filled/thunderbolt.svg" alt="thunderbolt" /> | <img width="70" height="70" src="./inline-svg/outlined/thunderbolt.svg" alt="thunderbolt" /> | <img width="70" height="70" src="./inline-svg/twotone/thunderbolt.svg" alt="thunderbolt" />
 tool | <img width="70" height="70" src="./inline-svg/filled/tool.svg" alt="tool" /> | <img width="70" height="70" src="./inline-svg/outlined/tool.svg" alt="tool" /> | <img width="70" height="70" src="./inline-svg/twotone/tool.svg" alt="tool" />
-trademark-circle | <img width="70" height="70" src="./inline-svg/filled/trademark-circle.svg" alt="trademark-circle" /> |  -  | <img width="70" height="70" src="./inline-svg/twotone/trademark-circle.svg" alt="trademark-circle" />
+trademark-circle | <img width="70" height="70" src="./inline-svg/filled/trademark-circle.svg" alt="trademark-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/trademark-circle.svg" alt="trademark-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/trademark-circle.svg" alt="trademark-circle" />
 trophy | <img width="70" height="70" src="./inline-svg/filled/trophy.svg" alt="trophy" /> | <img width="70" height="70" src="./inline-svg/outlined/trophy.svg" alt="trophy" /> | <img width="70" height="70" src="./inline-svg/twotone/trophy.svg" alt="trophy" />
 twitter-circle | <img width="70" height="70" src="./inline-svg/filled/twitter-circle.svg" alt="twitter-circle" /> |  -  |  - 
 twitter-square | <img width="70" height="70" src="./inline-svg/filled/twitter-square.svg" alt="twitter-square" /> |  -  |  - 
@@ -380,7 +380,6 @@ table |  -  | <img width="70" height="70" src="./inline-svg/outlined/table.svg" 
 taobao |  -  | <img width="70" height="70" src="./inline-svg/outlined/taobao.svg" alt="taobao" /> |  - 
 team |  -  | <img width="70" height="70" src="./inline-svg/outlined/team.svg" alt="team" /> |  - 
 to-top |  -  | <img width="70" height="70" src="./inline-svg/outlined/to-top.svg" alt="to-top" /> |  - 
-trademark |  -  | <img width="70" height="70" src="./inline-svg/outlined/trademark.svg" alt="trademark" /> |  - 
 transaction |  -  | <img width="70" height="70" src="./inline-svg/outlined/transaction.svg" alt="transaction" /> |  - 
 underline |  -  | <img width="70" height="70" src="./inline-svg/outlined/underline.svg" alt="underline" /> |  - 
 undo |  -  | <img width="70" height="70" src="./inline-svg/outlined/undo.svg" alt="undo" /> |  - 
