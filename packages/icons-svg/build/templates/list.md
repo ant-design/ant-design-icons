@@ -1,5 +1,5 @@
 # Icons List
 
- icon | outline | fill | two-tone
+ Icon | Filled | Outlined | TwoTone
 :----:|:-------:|:----:|:--------:
 <%= content %>
