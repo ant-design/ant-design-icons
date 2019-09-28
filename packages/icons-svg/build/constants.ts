@@ -23,8 +23,6 @@ export const oldIconNames = [
   'medium-workmark'
 ];
 
-export const twotoneRE = /twotone/g;
-
 export const twoToneColors = {
   primary: ['#333'],
   secondary: ['#E6E6E6', '#D9D9D9', '#D8D8D8']
@@ -38,16 +36,24 @@ export const twoToneIdentifiers = {
 // "{{ }}" or '{{ }}'
 export const vueLikeQuoteInterpolate = /['"]{{([\s\S]+?)}}['"]/g;
 
-export enum ThemeLowerCaseEnum {
-  filled = 'filled',
-  outlined = 'outlined',
-  twotone = 'twotone'
-}
+export const ThemeLowerCaseEnum: {
+  filled: 'filled';
+  outlined: 'outlined';
+  twotone: 'twotone';
+} = {
+  filled: 'filled',
+  outlined: 'outlined',
+  twotone: 'twotone'
+};
 
-export enum ThemeUpperCaseEnum {
-  Filled = 'Filled',
-  Outlined = 'Outlined',
-  TwoTone = 'TwoTone'
-}
+export const ThemeUpperCaseEnum: {
+  Filled: 'Filled';
+  Outlined: 'Outlined';
+  TwoTone: 'TwoTone';
+} = {
+  Filled: 'Filled',
+  Outlined: 'Outlined',
+  TwoTone: 'TwoTone'
+};
 
 export { ThemeType, ThemeTypeUpperCase } from './templates/types';

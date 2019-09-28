@@ -4,7 +4,7 @@ import SVGO from 'svgo';
 
 export default function svgo(options: SVGO.Options) {
   const optimizer = new SVGO(options);
-  return through.obj(function(file: File, encoding, done) {
+  return through.obj((file: File, encoding, done) => {
     if (file.isBuffer()) {
       const before = file.contents.toString(encoding);
       optimizer.optimize(before).then(({ data: after }) => {

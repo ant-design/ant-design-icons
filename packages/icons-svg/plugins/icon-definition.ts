@@ -70,7 +70,7 @@ export default function iconDefinition({
     return abstractNode;
   }
 
-  return through.obj(function(file: File, encoding, done) {
+  return through.obj((file: File, encoding, done) => {
     if (file.isBuffer()) {
       const before = file.contents.toString(encoding);
       const XMLTree: XMLNode = parseXML(before);

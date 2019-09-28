@@ -1,6 +1,10 @@
 import { src, dest } from 'gulp';
 import { getIdentifier, getSrcByTheme } from '../../build/helpers';
-import { ThemeUpperCaseEnum, ThemeLowerCaseEnum } from '../../build/constants';
+import {
+  ThemeUpperCaseEnum,
+  ThemeLowerCaseEnum,
+  ThemeTypeUpperCase
+} from '../../build/constants';
 import merge from 'merge-stream';
 import concat from 'gulp-concat';
 import useTemplate, { UseTemplateOptions } from '../../plugins/use-template';
@@ -36,7 +40,7 @@ export default function generateLibraryEntry() {
 function getOptions({
   themeSuffix
 }: {
-  themeSuffix: ThemeUpperCaseEnum;
+  themeSuffix: ThemeTypeUpperCase;
 }): UseTemplateOptions {
   return {
     tplSource: resolve(__dirname, '../../build/templates/exportIcon.ts.ejs'),
