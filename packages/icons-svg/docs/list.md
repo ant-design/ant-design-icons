@@ -1,6 +1,6 @@
 # Icons List
 
- icon | outline | fill | two-tone
+ Icon | Filled | Outlined | TwoTone
 :----:|:-------:|:----:|:--------:
 account-book | <img width="70" height="70" src="./inline-svg/filled/account-book.svg" alt="account-book" /> | <img width="70" height="70" src="./inline-svg/outlined/account-book.svg" alt="account-book" /> | <img width="70" height="70" src="./inline-svg/twotone/account-book.svg" alt="account-book" />
 alert | <img width="70" height="70" src="./inline-svg/filled/alert.svg" alt="alert" /> | <img width="70" height="70" src="./inline-svg/outlined/alert.svg" alt="alert" /> | <img width="70" height="70" src="./inline-svg/twotone/alert.svg" alt="alert" />
