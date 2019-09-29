@@ -99,7 +99,7 @@ frown | <img width="70" height="70" src="./inline-svg/filled/frown.svg" alt="fro
 fund | <img width="70" height="70" src="./inline-svg/filled/fund.svg" alt="fund" /> | <img width="70" height="70" src="./inline-svg/outlined/fund.svg" alt="fund" /> | <img width="70" height="70" src="./inline-svg/twotone/fund.svg" alt="fund" />
 funnel-plot | <img width="70" height="70" src="./inline-svg/filled/funnel-plot.svg" alt="funnel-plot" /> | <img width="70" height="70" src="./inline-svg/outlined/funnel-plot.svg" alt="funnel-plot" /> | <img width="70" height="70" src="./inline-svg/twotone/funnel-plot.svg" alt="funnel-plot" />
 gift | <img width="70" height="70" src="./inline-svg/filled/gift.svg" alt="gift" /> | <img width="70" height="70" src="./inline-svg/outlined/gift.svg" alt="gift" /> | <img width="70" height="70" src="./inline-svg/twotone/gift.svg" alt="gift" />
-github | <img width="70" height="70" src="./inline-svg/filled/github.svg" alt="github" /> |  -  |  - 
+github-circle | <img width="70" height="70" src="./inline-svg/filled/github-circle.svg" alt="github-circle" /> |  -  |  - 
 gitlab | <img width="70" height="70" src="./inline-svg/filled/gitlab.svg" alt="gitlab" /> | <img width="70" height="70" src="./inline-svg/outlined/gitlab.svg" alt="gitlab" /> |  - 
 gold | <img width="70" height="70" src="./inline-svg/filled/gold.svg" alt="gold" /> | <img width="70" height="70" src="./inline-svg/outlined/gold.svg" alt="gold" /> | <img width="70" height="70" src="./inline-svg/twotone/gold.svg" alt="gold" />
 google-circle | <img width="70" height="70" src="./inline-svg/filled/google-circle.svg" alt="google-circle" /> |  -  |  - 

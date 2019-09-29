@@ -1,3 +1,4 @@
+// version < antd@3.9
 export const oldIconNames = [
   'loading',
   'loading-3-quarters',
