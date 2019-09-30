@@ -3,15 +3,15 @@ import { ThemeTypeUpperCase, ThemeType } from './templates/types';
 
 export interface IdentifierMeta {
   name: string;
-  themeSuffix: ThemeTypeUpperCase;
+  themeSuffix?: ThemeTypeUpperCase;
 }
 
 export const getIdentifier = memoize(function getIdentifier({
   name,
   themeSuffix
 }: IdentifierMeta): string {
-  // if()
-  return upperFirst(camelCase(`${name}-${themeSuffix}`));
+  const suffix = themeSuffix ? `-${themeSuffix}` : '';
+  return upperFirst(camelCase(name + suffix));
 });
 
 export function getSrcByTheme(theme: ThemeType): string {

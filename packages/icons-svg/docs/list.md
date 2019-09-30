@@ -2,7 +2,7 @@
 
 name | filled | outlined | twotone
 :----:|:-------:|:----:|:--------:
-758 in total | 213 | 398 | 147
+755 in total | 212 | 397 | 146
 account-book | <img width="70" height="70" src="./inline-svg/filled/account-book.svg" alt="account-book" /> | <img width="70" height="70" src="./inline-svg/outlined/account-book.svg" alt="account-book" /> | <img width="70" height="70" src="./inline-svg/twotone/account-book.svg" alt="account-book" />
 alert | <img width="70" height="70" src="./inline-svg/filled/alert.svg" alt="alert" /> | <img width="70" height="70" src="./inline-svg/outlined/alert.svg" alt="alert" /> | <img width="70" height="70" src="./inline-svg/twotone/alert.svg" alt="alert" />
 alipay-circle | <img width="70" height="70" src="./inline-svg/filled/alipay-circle.svg" alt="alipay-circle" /> |  -  |  - 
@@ -119,7 +119,6 @@ info-circle | <img width="70" height="70" src="./inline-svg/filled/info-circle.s
 instagram | <img width="70" height="70" src="./inline-svg/filled/instagram.svg" alt="instagram" /> | <img width="70" height="70" src="./inline-svg/outlined/instagram.svg" alt="instagram" /> |  - 
 insurance | <img width="70" height="70" src="./inline-svg/filled/insurance.svg" alt="insurance" /> | <img width="70" height="70" src="./inline-svg/outlined/insurance.svg" alt="insurance" /> | <img width="70" height="70" src="./inline-svg/twotone/insurance.svg" alt="insurance" />
 interaction | <img width="70" height="70" src="./inline-svg/filled/interaction.svg" alt="interaction" /> | <img width="70" height="70" src="./inline-svg/outlined/interaction.svg" alt="interaction" /> | <img width="70" height="70" src="./inline-svg/twotone/interaction.svg" alt="interaction" />
-interation | <img width="70" height="70" src="./inline-svg/filled/interation.svg" alt="interation" /> | <img width="70" height="70" src="./inline-svg/outlined/interation.svg" alt="interation" /> | <img width="70" height="70" src="./inline-svg/twotone/interation.svg" alt="interation" />
 layout | <img width="70" height="70" src="./inline-svg/filled/layout.svg" alt="layout" /> | <img width="70" height="70" src="./inline-svg/outlined/layout.svg" alt="layout" /> | <img width="70" height="70" src="./inline-svg/twotone/layout.svg" alt="layout" />
 left-circle | <img width="70" height="70" src="./inline-svg/filled/left-circle.svg" alt="left-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/left-circle.svg" alt="left-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/left-circle.svg" alt="left-circle" />
 left-square | <img width="70" height="70" src="./inline-svg/filled/left-square.svg" alt="left-square" /> | <img width="70" height="70" src="./inline-svg/outlined/left-square.svg" alt="left-square" /> | <img width="70" height="70" src="./inline-svg/twotone/left-square.svg" alt="left-square" />

@@ -7,6 +7,8 @@ describe('getIdentifier', () => {
     { name: 'summer-holiday', themeSuffix: 'TwoTone' },
     { name: 'heskeybaozi', themeSuffix: 'TwoTone' },
     { name: 'HeskeyBaozi', themeSuffix: 'TwoTone' },
+    { name: 'HeskeyBaozi', themeSuffix: void 0 },
+    { name: 'HeskeyBaozi', themeSuffix: '' as any },
     { name: `__test_what's that??`, themeSuffix: 'Filled' }
   ];
   it('should computed identifiers correctly.', () => {
@@ -16,6 +18,8 @@ describe('getIdentifier', () => {
       'SummerHolidayTwoTone',
       'HeskeybaoziTwoTone',
       'HeskeyBaoziTwoTone',
+      'HeskeyBaozi',
+      'HeskeyBaozi',
       'TestWhatsThatFilled'
     ]);
   });
