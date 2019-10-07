@@ -8,7 +8,8 @@
     "moduleResolution": "node",
     "declaration": true,
     "importHelpers": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "resolveJsonModule": true
   },
   "include": ["src", "examples"],
   "exclude": ["node_modules"]
