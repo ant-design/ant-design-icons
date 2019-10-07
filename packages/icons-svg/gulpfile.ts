@@ -9,8 +9,8 @@ import generateIconsListInDocs from './tasks/sideEffects/generateIconsListInDocs
 
 export default series(
   cleanDirectories,
+  copyTemplates,
   parallel(
-    copyTemplates,
     generateFilledIcons,
     generateOutlinedIcons,
     generateTwoToneIcons,

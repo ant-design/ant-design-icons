@@ -16,6 +16,11 @@ export default function generateIconsListInDocs() {
   } = {};
 
   const themes: ThemeType[] = ['filled', 'outlined', 'twotone'];
+  const counters = {
+    filled: 0,
+    outlined: 0,
+    twotone: 0
+  };
 
   for (const theme of themes) {
     sync(`docs/inline-svg/${theme}/*.svg`, { cwd: process.cwd() }).forEach(
@@ -30,15 +35,25 @@ export default function generateIconsListInDocs() {
           [name, theme],
           `<img width="70" height="70" src="./inline-svg/${theme}/${parsed.base}" alt="${name}" />`
         );
+        counters[theme]++;
       }
     );
   }
 
-  let content = '';
+  const total = (Object.keys(counters) as Array<ThemeType>).reduce(
+    (count, nextTheme) => count + counters[nextTheme],
+    0
+  );
+
+  let content =
+    `name | ${themes.join(' | ')}\n` + `:----:|:-------:|:----:|:--------:\n`;
+  content += `${total} in total | ${themes
+    .map((theme) => counters[theme])
+    .join(' | ')}\n`;
   Object.keys(acc).forEach((name) => {
     const target = acc[name]!;
     const row = themes.map((theme) => get(target, theme, ' - '));
-    content += name + ' | ' + row.join(' | ') + '\n';
+    content += `${name} | ${row.join(' | ')}\n`;
   });
 
   return src('build/templates/list.md')

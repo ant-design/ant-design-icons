@@ -1,7 +1,8 @@
 # Icons List
 
- icon | outline | fill | two-tone
+name | filled | outlined | twotone
 :----:|:-------:|:----:|:--------:
+791 in total | 225 | 420 | 146
 account-book | <img width="70" height="70" src="./inline-svg/filled/account-book.svg" alt="account-book" /> | <img width="70" height="70" src="./inline-svg/outlined/account-book.svg" alt="account-book" /> | <img width="70" height="70" src="./inline-svg/twotone/account-book.svg" alt="account-book" />
 alert | <img width="70" height="70" src="./inline-svg/filled/alert.svg" alt="alert" /> | <img width="70" height="70" src="./inline-svg/outlined/alert.svg" alt="alert" /> | <img width="70" height="70" src="./inline-svg/twotone/alert.svg" alt="alert" />
 alipay-circle | <img width="70" height="70" src="./inline-svg/filled/alipay-circle.svg" alt="alipay-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/alipay-circle.svg" alt="alipay-circle" /> |  - 
@@ -10,11 +11,12 @@ aliwangwang | <img width="70" height="70" src="./inline-svg/filled/aliwangwang.s
 amazon-circle | <img width="70" height="70" src="./inline-svg/filled/amazon-circle.svg" alt="amazon-circle" /> |  -  |  - 
 amazon-square | <img width="70" height="70" src="./inline-svg/filled/amazon-square.svg" alt="amazon-square" /> |  -  |  - 
 android | <img width="70" height="70" src="./inline-svg/filled/android.svg" alt="android" /> | <img width="70" height="70" src="./inline-svg/outlined/android.svg" alt="android" /> |  - 
+ant-cloud | <img width="70" height="70" src="./inline-svg/filled/ant-cloud.svg" alt="ant-cloud" /> | <img width="70" height="70" src="./inline-svg/outlined/ant-cloud.svg" alt="ant-cloud" /> |  - 
 api | <img width="70" height="70" src="./inline-svg/filled/api.svg" alt="api" /> | <img width="70" height="70" src="./inline-svg/outlined/api.svg" alt="api" /> | <img width="70" height="70" src="./inline-svg/twotone/api.svg" alt="api" />
 apple | <img width="70" height="70" src="./inline-svg/filled/apple.svg" alt="apple" /> | <img width="70" height="70" src="./inline-svg/outlined/apple.svg" alt="apple" /> |  - 
 appstore | <img width="70" height="70" src="./inline-svg/filled/appstore.svg" alt="appstore" /> | <img width="70" height="70" src="./inline-svg/outlined/appstore.svg" alt="appstore" /> | <img width="70" height="70" src="./inline-svg/twotone/appstore.svg" alt="appstore" />
 audio | <img width="70" height="70" src="./inline-svg/filled/audio.svg" alt="audio" /> | <img width="70" height="70" src="./inline-svg/outlined/audio.svg" alt="audio" /> | <img width="70" height="70" src="./inline-svg/twotone/audio.svg" alt="audio" />
-backward (< 3.9) | <img width="70" height="70" src="./inline-svg/filled/backward.svg" alt="backward (< 3.9)" /> | <img width="70" height="70" src="./inline-svg/outlined/backward.svg" alt="backward (< 3.9)" /> |  - 
+backward | <img width="70" height="70" src="./inline-svg/filled/backward.svg" alt="backward" /> | <img width="70" height="70" src="./inline-svg/outlined/backward.svg" alt="backward" /> |  - 
 bank | <img width="70" height="70" src="./inline-svg/filled/bank.svg" alt="bank" /> | <img width="70" height="70" src="./inline-svg/outlined/bank.svg" alt="bank" /> | <img width="70" height="70" src="./inline-svg/twotone/bank.svg" alt="bank" />
 behance-circle | <img width="70" height="70" src="./inline-svg/filled/behance-circle.svg" alt="behance-circle" /> |  -  |  - 
 behance-square | <img width="70" height="70" src="./inline-svg/filled/behance-square.svg" alt="behance-square" /> | <img width="70" height="70" src="./inline-svg/outlined/behance-square.svg" alt="behance-square" /> |  - 
@@ -28,15 +30,15 @@ calculator | <img width="70" height="70" src="./inline-svg/filled/calculator.svg
 calendar | <img width="70" height="70" src="./inline-svg/filled/calendar.svg" alt="calendar" /> | <img width="70" height="70" src="./inline-svg/outlined/calendar.svg" alt="calendar" /> | <img width="70" height="70" src="./inline-svg/twotone/calendar.svg" alt="calendar" />
 camera | <img width="70" height="70" src="./inline-svg/filled/camera.svg" alt="camera" /> | <img width="70" height="70" src="./inline-svg/outlined/camera.svg" alt="camera" /> | <img width="70" height="70" src="./inline-svg/twotone/camera.svg" alt="camera" />
 car | <img width="70" height="70" src="./inline-svg/filled/car.svg" alt="car" /> | <img width="70" height="70" src="./inline-svg/outlined/car.svg" alt="car" /> | <img width="70" height="70" src="./inline-svg/twotone/car.svg" alt="car" />
-caret-down (< 3.9) | <img width="70" height="70" src="./inline-svg/filled/caret-down.svg" alt="caret-down (< 3.9)" /> | <img width="70" height="70" src="./inline-svg/outlined/caret-down.svg" alt="caret-down (< 3.9)" /> |  - 
-caret-left (< 3.9) | <img width="70" height="70" src="./inline-svg/filled/caret-left.svg" alt="caret-left (< 3.9)" /> | <img width="70" height="70" src="./inline-svg/outlined/caret-left.svg" alt="caret-left (< 3.9)" /> |  - 
-caret-right (< 3.9) | <img width="70" height="70" src="./inline-svg/filled/caret-right.svg" alt="caret-right (< 3.9)" /> | <img width="70" height="70" src="./inline-svg/outlined/caret-right.svg" alt="caret-right (< 3.9)" /> |  - 
-caret-up (< 3.9) | <img width="70" height="70" src="./inline-svg/filled/caret-up.svg" alt="caret-up (< 3.9)" /> | <img width="70" height="70" src="./inline-svg/outlined/caret-up.svg" alt="caret-up (< 3.9)" /> |  - 
+caret-down | <img width="70" height="70" src="./inline-svg/filled/caret-down.svg" alt="caret-down" /> | <img width="70" height="70" src="./inline-svg/outlined/caret-down.svg" alt="caret-down" /> |  - 
+caret-left | <img width="70" height="70" src="./inline-svg/filled/caret-left.svg" alt="caret-left" /> | <img width="70" height="70" src="./inline-svg/outlined/caret-left.svg" alt="caret-left" /> |  - 
+caret-right | <img width="70" height="70" src="./inline-svg/filled/caret-right.svg" alt="caret-right" /> | <img width="70" height="70" src="./inline-svg/outlined/caret-right.svg" alt="caret-right" /> |  - 
+caret-up | <img width="70" height="70" src="./inline-svg/filled/caret-up.svg" alt="caret-up" /> | <img width="70" height="70" src="./inline-svg/outlined/caret-up.svg" alt="caret-up" /> |  - 
 carry-out | <img width="70" height="70" src="./inline-svg/filled/carry-out.svg" alt="carry-out" /> | <img width="70" height="70" src="./inline-svg/outlined/carry-out.svg" alt="carry-out" /> | <img width="70" height="70" src="./inline-svg/twotone/carry-out.svg" alt="carry-out" />
 check-circle | <img width="70" height="70" src="./inline-svg/filled/check-circle.svg" alt="check-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/check-circle.svg" alt="check-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/check-circle.svg" alt="check-circle" />
 check-square | <img width="70" height="70" src="./inline-svg/filled/check-square.svg" alt="check-square" /> | <img width="70" height="70" src="./inline-svg/outlined/check-square.svg" alt="check-square" /> | <img width="70" height="70" src="./inline-svg/twotone/check-square.svg" alt="check-square" />
 chrome | <img width="70" height="70" src="./inline-svg/filled/chrome.svg" alt="chrome" /> | <img width="70" height="70" src="./inline-svg/outlined/chrome.svg" alt="chrome" /> |  - 
-ci-circle | <img width="70" height="70" src="./inline-svg/filled/ci-circle.svg" alt="ci-circle" /> |  -  |  - 
+ci-circle | <img width="70" height="70" src="./inline-svg/filled/ci-circle.svg" alt="ci-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/ci-circle.svg" alt="ci-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/ci-circle.svg" alt="ci-circle" />
 clock-circle | <img width="70" height="70" src="./inline-svg/filled/clock-circle.svg" alt="clock-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/clock-circle.svg" alt="clock-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/clock-circle.svg" alt="clock-circle" />
 close-circle | <img width="70" height="70" src="./inline-svg/filled/close-circle.svg" alt="close-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/close-circle.svg" alt="close-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/close-circle.svg" alt="close-circle" />
 close-square | <img width="70" height="70" src="./inline-svg/filled/close-square.svg" alt="close-square" /> | <img width="70" height="70" src="./inline-svg/outlined/close-square.svg" alt="close-square" /> | <img width="70" height="70" src="./inline-svg/twotone/close-square.svg" alt="close-square" />
@@ -51,7 +53,7 @@ contacts | <img width="70" height="70" src="./inline-svg/filled/contacts.svg" al
 container | <img width="70" height="70" src="./inline-svg/filled/container.svg" alt="container" /> | <img width="70" height="70" src="./inline-svg/outlined/container.svg" alt="container" /> | <img width="70" height="70" src="./inline-svg/twotone/container.svg" alt="container" />
 control | <img width="70" height="70" src="./inline-svg/filled/control.svg" alt="control" /> | <img width="70" height="70" src="./inline-svg/outlined/control.svg" alt="control" /> | <img width="70" height="70" src="./inline-svg/twotone/control.svg" alt="control" />
 copy | <img width="70" height="70" src="./inline-svg/filled/copy.svg" alt="copy" /> | <img width="70" height="70" src="./inline-svg/outlined/copy.svg" alt="copy" /> | <img width="70" height="70" src="./inline-svg/twotone/copy.svg" alt="copy" />
-copyright-circle | <img width="70" height="70" src="./inline-svg/filled/copyright-circle.svg" alt="copyright-circle" /> |  -  |  - 
+copyright-circle | <img width="70" height="70" src="./inline-svg/filled/copyright-circle.svg" alt="copyright-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/copyright-circle.svg" alt="copyright-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/copyright-circle.svg" alt="copyright-circle" />
 credit-card | <img width="70" height="70" src="./inline-svg/filled/credit-card.svg" alt="credit-card" /> | <img width="70" height="70" src="./inline-svg/outlined/credit-card.svg" alt="credit-card" /> | <img width="70" height="70" src="./inline-svg/twotone/credit-card.svg" alt="credit-card" />
 crown | <img width="70" height="70" src="./inline-svg/filled/crown.svg" alt="crown" /> | <img width="70" height="70" src="./inline-svg/outlined/crown.svg" alt="crown" /> | <img width="70" height="70" src="./inline-svg/twotone/crown.svg" alt="crown" />
 customer-service | <img width="70" height="70" src="./inline-svg/filled/customer-service.svg" alt="customer-service" /> | <img width="70" height="70" src="./inline-svg/outlined/customer-service.svg" alt="customer-service" /> | <img width="70" height="70" src="./inline-svg/twotone/customer-service.svg" alt="customer-service" />
@@ -61,24 +63,26 @@ delete | <img width="70" height="70" src="./inline-svg/filled/delete.svg" alt="d
 diff | <img width="70" height="70" src="./inline-svg/filled/diff.svg" alt="diff" /> | <img width="70" height="70" src="./inline-svg/outlined/diff.svg" alt="diff" /> | <img width="70" height="70" src="./inline-svg/twotone/diff.svg" alt="diff" />
 dingtalk-circle | <img width="70" height="70" src="./inline-svg/filled/dingtalk-circle.svg" alt="dingtalk-circle" /> |  -  |  - 
 dingtalk-square | <img width="70" height="70" src="./inline-svg/filled/dingtalk-square.svg" alt="dingtalk-square" /> |  -  |  - 
+dingtalk | <img width="70" height="70" src="./inline-svg/filled/dingtalk.svg" alt="dingtalk" /> |  -  |  - 
 dislike | <img width="70" height="70" src="./inline-svg/filled/dislike.svg" alt="dislike" /> | <img width="70" height="70" src="./inline-svg/outlined/dislike.svg" alt="dislike" /> | <img width="70" height="70" src="./inline-svg/twotone/dislike.svg" alt="dislike" />
-dollar-circle | <img width="70" height="70" src="./inline-svg/filled/dollar-circle.svg" alt="dollar-circle" /> |  -  |  - 
+dollar-circle | <img width="70" height="70" src="./inline-svg/filled/dollar-circle.svg" alt="dollar-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/dollar-circle.svg" alt="dollar-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/dollar-circle.svg" alt="dollar-circle" />
 down-circle | <img width="70" height="70" src="./inline-svg/filled/down-circle.svg" alt="down-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/down-circle.svg" alt="down-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/down-circle.svg" alt="down-circle" />
 down-square | <img width="70" height="70" src="./inline-svg/filled/down-square.svg" alt="down-square" /> | <img width="70" height="70" src="./inline-svg/outlined/down-square.svg" alt="down-square" /> | <img width="70" height="70" src="./inline-svg/twotone/down-square.svg" alt="down-square" />
 dribbble-circle | <img width="70" height="70" src="./inline-svg/filled/dribbble-circle.svg" alt="dribbble-circle" /> |  -  |  - 
 dribbble-square | <img width="70" height="70" src="./inline-svg/filled/dribbble-square.svg" alt="dribbble-square" /> | <img width="70" height="70" src="./inline-svg/outlined/dribbble-square.svg" alt="dribbble-square" /> |  - 
 dropbox-circle | <img width="70" height="70" src="./inline-svg/filled/dropbox-circle.svg" alt="dropbox-circle" /> |  -  |  - 
 dropbox-square | <img width="70" height="70" src="./inline-svg/filled/dropbox-square.svg" alt="dropbox-square" /> |  -  |  - 
+dropbox | <img width="70" height="70" src="./inline-svg/filled/dropbox.svg" alt="dropbox" /> | <img width="70" height="70" src="./inline-svg/outlined/dropbox.svg" alt="dropbox" /> |  - 
 edit | <img width="70" height="70" src="./inline-svg/filled/edit.svg" alt="edit" /> | <img width="70" height="70" src="./inline-svg/outlined/edit.svg" alt="edit" /> | <img width="70" height="70" src="./inline-svg/twotone/edit.svg" alt="edit" />
 environment | <img width="70" height="70" src="./inline-svg/filled/environment.svg" alt="environment" /> | <img width="70" height="70" src="./inline-svg/outlined/environment.svg" alt="environment" /> | <img width="70" height="70" src="./inline-svg/twotone/environment.svg" alt="environment" />
-euro-circle | <img width="70" height="70" src="./inline-svg/filled/euro-circle.svg" alt="euro-circle" /> |  -  |  - 
+euro-circle | <img width="70" height="70" src="./inline-svg/filled/euro-circle.svg" alt="euro-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/euro-circle.svg" alt="euro-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/euro-circle.svg" alt="euro-circle" />
 exclamation-circle | <img width="70" height="70" src="./inline-svg/filled/exclamation-circle.svg" alt="exclamation-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/exclamation-circle.svg" alt="exclamation-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/exclamation-circle.svg" alt="exclamation-circle" />
 experiment | <img width="70" height="70" src="./inline-svg/filled/experiment.svg" alt="experiment" /> | <img width="70" height="70" src="./inline-svg/outlined/experiment.svg" alt="experiment" /> | <img width="70" height="70" src="./inline-svg/twotone/experiment.svg" alt="experiment" />
 eye-invisible | <img width="70" height="70" src="./inline-svg/filled/eye-invisible.svg" alt="eye-invisible" /> | <img width="70" height="70" src="./inline-svg/outlined/eye-invisible.svg" alt="eye-invisible" /> | <img width="70" height="70" src="./inline-svg/twotone/eye-invisible.svg" alt="eye-invisible" />
 eye | <img width="70" height="70" src="./inline-svg/filled/eye.svg" alt="eye" /> | <img width="70" height="70" src="./inline-svg/outlined/eye.svg" alt="eye" /> | <img width="70" height="70" src="./inline-svg/twotone/eye.svg" alt="eye" />
 facebook | <img width="70" height="70" src="./inline-svg/filled/facebook.svg" alt="facebook" /> | <img width="70" height="70" src="./inline-svg/outlined/facebook.svg" alt="facebook" /> |  - 
-fast-backward (< 3.9) | <img width="70" height="70" src="./inline-svg/filled/fast-backward.svg" alt="fast-backward (< 3.9)" /> | <img width="70" height="70" src="./inline-svg/outlined/fast-backward.svg" alt="fast-backward (< 3.9)" /> |  - 
-fast-forward (< 3.9) | <img width="70" height="70" src="./inline-svg/filled/fast-forward.svg" alt="fast-forward (< 3.9)" /> | <img width="70" height="70" src="./inline-svg/outlined/fast-forward.svg" alt="fast-forward (< 3.9)" /> |  - 
+fast-backward | <img width="70" height="70" src="./inline-svg/filled/fast-backward.svg" alt="fast-backward" /> | <img width="70" height="70" src="./inline-svg/outlined/fast-backward.svg" alt="fast-backward" /> |  - 
+fast-forward | <img width="70" height="70" src="./inline-svg/filled/fast-forward.svg" alt="fast-forward" /> | <img width="70" height="70" src="./inline-svg/outlined/fast-forward.svg" alt="fast-forward" /> |  - 
 file-add | <img width="70" height="70" src="./inline-svg/filled/file-add.svg" alt="file-add" /> | <img width="70" height="70" src="./inline-svg/outlined/file-add.svg" alt="file-add" /> | <img width="70" height="70" src="./inline-svg/twotone/file-add.svg" alt="file-add" />
 file-excel | <img width="70" height="70" src="./inline-svg/filled/file-excel.svg" alt="file-excel" /> | <img width="70" height="70" src="./inline-svg/outlined/file-excel.svg" alt="file-excel" /> | <img width="70" height="70" src="./inline-svg/twotone/file-excel.svg" alt="file-excel" />
 file-exclamation | <img width="70" height="70" src="./inline-svg/filled/file-exclamation.svg" alt="file-exclamation" /> | <img width="70" height="70" src="./inline-svg/outlined/file-exclamation.svg" alt="file-exclamation" /> | <img width="70" height="70" src="./inline-svg/twotone/file-exclamation.svg" alt="file-exclamation" />
@@ -97,13 +101,16 @@ flag | <img width="70" height="70" src="./inline-svg/filled/flag.svg" alt="flag"
 folder-add | <img width="70" height="70" src="./inline-svg/filled/folder-add.svg" alt="folder-add" /> | <img width="70" height="70" src="./inline-svg/outlined/folder-add.svg" alt="folder-add" /> | <img width="70" height="70" src="./inline-svg/twotone/folder-add.svg" alt="folder-add" />
 folder-open | <img width="70" height="70" src="./inline-svg/filled/folder-open.svg" alt="folder-open" /> | <img width="70" height="70" src="./inline-svg/outlined/folder-open.svg" alt="folder-open" /> | <img width="70" height="70" src="./inline-svg/twotone/folder-open.svg" alt="folder-open" />
 folder | <img width="70" height="70" src="./inline-svg/filled/folder.svg" alt="folder" /> | <img width="70" height="70" src="./inline-svg/outlined/folder.svg" alt="folder" /> | <img width="70" height="70" src="./inline-svg/twotone/folder.svg" alt="folder" />
-forward (< 3.9) | <img width="70" height="70" src="./inline-svg/filled/forward.svg" alt="forward (< 3.9)" /> | <img width="70" height="70" src="./inline-svg/outlined/forward.svg" alt="forward (< 3.9)" /> |  - 
+format-painter | <img width="70" height="70" src="./inline-svg/filled/format-painter.svg" alt="format-painter" /> | <img width="70" height="70" src="./inline-svg/outlined/format-painter.svg" alt="format-painter" /> |  - 
+forward | <img width="70" height="70" src="./inline-svg/filled/forward.svg" alt="forward" /> | <img width="70" height="70" src="./inline-svg/outlined/forward.svg" alt="forward" /> |  - 
 frown | <img width="70" height="70" src="./inline-svg/filled/frown.svg" alt="frown" /> | <img width="70" height="70" src="./inline-svg/outlined/frown.svg" alt="frown" /> | <img width="70" height="70" src="./inline-svg/twotone/frown.svg" alt="frown" />
 fund | <img width="70" height="70" src="./inline-svg/filled/fund.svg" alt="fund" /> | <img width="70" height="70" src="./inline-svg/outlined/fund.svg" alt="fund" /> | <img width="70" height="70" src="./inline-svg/twotone/fund.svg" alt="fund" />
 funnel-plot | <img width="70" height="70" src="./inline-svg/filled/funnel-plot.svg" alt="funnel-plot" /> | <img width="70" height="70" src="./inline-svg/outlined/funnel-plot.svg" alt="funnel-plot" /> | <img width="70" height="70" src="./inline-svg/twotone/funnel-plot.svg" alt="funnel-plot" />
 gift | <img width="70" height="70" src="./inline-svg/filled/gift.svg" alt="gift" /> | <img width="70" height="70" src="./inline-svg/outlined/gift.svg" alt="gift" /> | <img width="70" height="70" src="./inline-svg/twotone/gift.svg" alt="gift" />
+github-circle | <img width="70" height="70" src="./inline-svg/filled/github-circle.svg" alt="github-circle" /> |  -  |  - 
 github | <img width="70" height="70" src="./inline-svg/filled/github.svg" alt="github" /> | <img width="70" height="70" src="./inline-svg/outlined/github.svg" alt="github" /> |  - 
 gitlab | <img width="70" height="70" src="./inline-svg/filled/gitlab.svg" alt="gitlab" /> | <img width="70" height="70" src="./inline-svg/outlined/gitlab.svg" alt="gitlab" /> |  - 
+gold | <img width="70" height="70" src="./inline-svg/filled/gold.svg" alt="gold" /> | <img width="70" height="70" src="./inline-svg/outlined/gold.svg" alt="gold" /> | <img width="70" height="70" src="./inline-svg/twotone/gold.svg" alt="gold" />
 golden | <img width="70" height="70" src="./inline-svg/filled/golden.svg" alt="golden" /> |  -  |  - 
 google-circle | <img width="70" height="70" src="./inline-svg/filled/google-circle.svg" alt="google-circle" /> |  -  |  - 
 google-plus-circle | <img width="70" height="70" src="./inline-svg/filled/google-plus-circle.svg" alt="google-plus-circle" /> |  -  |  - 
@@ -122,13 +129,14 @@ info-circle | <img width="70" height="70" src="./inline-svg/filled/info-circle.s
 instagram | <img width="70" height="70" src="./inline-svg/filled/instagram.svg" alt="instagram" /> | <img width="70" height="70" src="./inline-svg/outlined/instagram.svg" alt="instagram" /> |  - 
 insurance | <img width="70" height="70" src="./inline-svg/filled/insurance.svg" alt="insurance" /> | <img width="70" height="70" src="./inline-svg/outlined/insurance.svg" alt="insurance" /> | <img width="70" height="70" src="./inline-svg/twotone/insurance.svg" alt="insurance" />
 interaction | <img width="70" height="70" src="./inline-svg/filled/interaction.svg" alt="interaction" /> | <img width="70" height="70" src="./inline-svg/outlined/interaction.svg" alt="interaction" /> | <img width="70" height="70" src="./inline-svg/twotone/interaction.svg" alt="interaction" />
-interation | <img width="70" height="70" src="./inline-svg/filled/interation.svg" alt="interation" /> | <img width="70" height="70" src="./inline-svg/outlined/interation.svg" alt="interation" /> | <img width="70" height="70" src="./inline-svg/twotone/interation.svg" alt="interation" />
+interation | <img width="70" height="70" src="./inline-svg/filled/interation.svg" alt="interation" /> | <img width="70" height="70" src="./inline-svg/outlined/interation.svg" alt="interation" /> |  - 
 layout | <img width="70" height="70" src="./inline-svg/filled/layout.svg" alt="layout" /> | <img width="70" height="70" src="./inline-svg/outlined/layout.svg" alt="layout" /> | <img width="70" height="70" src="./inline-svg/twotone/layout.svg" alt="layout" />
 left-circle | <img width="70" height="70" src="./inline-svg/filled/left-circle.svg" alt="left-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/left-circle.svg" alt="left-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/left-circle.svg" alt="left-circle" />
 left-square | <img width="70" height="70" src="./inline-svg/filled/left-square.svg" alt="left-square" /> | <img width="70" height="70" src="./inline-svg/outlined/left-square.svg" alt="left-square" /> | <img width="70" height="70" src="./inline-svg/twotone/left-square.svg" alt="left-square" />
 like | <img width="70" height="70" src="./inline-svg/filled/like.svg" alt="like" /> | <img width="70" height="70" src="./inline-svg/outlined/like.svg" alt="like" /> | <img width="70" height="70" src="./inline-svg/twotone/like.svg" alt="like" />
 linkedin | <img width="70" height="70" src="./inline-svg/filled/linkedin.svg" alt="linkedin" /> | <img width="70" height="70" src="./inline-svg/outlined/linkedin.svg" alt="linkedin" /> |  - 
 lock | <img width="70" height="70" src="./inline-svg/filled/lock.svg" alt="lock" /> | <img width="70" height="70" src="./inline-svg/outlined/lock.svg" alt="lock" /> | <img width="70" height="70" src="./inline-svg/twotone/lock.svg" alt="lock" />
+mac-command | <img width="70" height="70" src="./inline-svg/filled/mac-command.svg" alt="mac-command" /> | <img width="70" height="70" src="./inline-svg/outlined/mac-command.svg" alt="mac-command" /> |  - 
 mail | <img width="70" height="70" src="./inline-svg/filled/mail.svg" alt="mail" /> | <img width="70" height="70" src="./inline-svg/outlined/mail.svg" alt="mail" /> | <img width="70" height="70" src="./inline-svg/twotone/mail.svg" alt="mail" />
 medicine-box | <img width="70" height="70" src="./inline-svg/filled/medicine-box.svg" alt="medicine-box" /> | <img width="70" height="70" src="./inline-svg/outlined/medicine-box.svg" alt="medicine-box" /> | <img width="70" height="70" src="./inline-svg/twotone/medicine-box.svg" alt="medicine-box" />
 medium-circle | <img width="70" height="70" src="./inline-svg/filled/medium-circle.svg" alt="medium-circle" /> |  -  |  - 
@@ -149,7 +157,7 @@ play-circle | <img width="70" height="70" src="./inline-svg/filled/play-circle.s
 play-square | <img width="70" height="70" src="./inline-svg/filled/play-square.svg" alt="play-square" /> | <img width="70" height="70" src="./inline-svg/outlined/play-square.svg" alt="play-square" /> | <img width="70" height="70" src="./inline-svg/twotone/play-square.svg" alt="play-square" />
 plus-circle | <img width="70" height="70" src="./inline-svg/filled/plus-circle.svg" alt="plus-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/plus-circle.svg" alt="plus-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/plus-circle.svg" alt="plus-circle" />
 plus-square | <img width="70" height="70" src="./inline-svg/filled/plus-square.svg" alt="plus-square" /> | <img width="70" height="70" src="./inline-svg/outlined/plus-square.svg" alt="plus-square" /> | <img width="70" height="70" src="./inline-svg/twotone/plus-square.svg" alt="plus-square" />
-pound-circle | <img width="70" height="70" src="./inline-svg/filled/pound-circle.svg" alt="pound-circle" /> |  -  | <img width="70" height="70" src="./inline-svg/twotone/pound-circle.svg" alt="pound-circle" />
+pound-circle | <img width="70" height="70" src="./inline-svg/filled/pound-circle.svg" alt="pound-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/pound-circle.svg" alt="pound-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/pound-circle.svg" alt="pound-circle" />
 printer | <img width="70" height="70" src="./inline-svg/filled/printer.svg" alt="printer" /> | <img width="70" height="70" src="./inline-svg/outlined/printer.svg" alt="printer" /> | <img width="70" height="70" src="./inline-svg/twotone/printer.svg" alt="printer" />
 profile | <img width="70" height="70" src="./inline-svg/filled/profile.svg" alt="profile" /> | <img width="70" height="70" src="./inline-svg/outlined/profile.svg" alt="profile" /> | <img width="70" height="70" src="./inline-svg/twotone/profile.svg" alt="profile" />
 project | <img width="70" height="70" src="./inline-svg/filled/project.svg" alt="project" /> | <img width="70" height="70" src="./inline-svg/outlined/project.svg" alt="project" /> | <img width="70" height="70" src="./inline-svg/twotone/project.svg" alt="project" />
@@ -157,6 +165,7 @@ property-safety | <img width="70" height="70" src="./inline-svg/filled/property-
 pushpin | <img width="70" height="70" src="./inline-svg/filled/pushpin.svg" alt="pushpin" /> | <img width="70" height="70" src="./inline-svg/outlined/pushpin.svg" alt="pushpin" /> | <img width="70" height="70" src="./inline-svg/twotone/pushpin.svg" alt="pushpin" />
 qq-circle | <img width="70" height="70" src="./inline-svg/filled/qq-circle.svg" alt="qq-circle" /> |  -  |  - 
 qq-square | <img width="70" height="70" src="./inline-svg/filled/qq-square.svg" alt="qq-square" /> |  -  |  - 
+qq | <img width="70" height="70" src="./inline-svg/filled/qq.svg" alt="qq" /> | <img width="70" height="70" src="./inline-svg/outlined/qq.svg" alt="qq" /> |  - 
 question-circle | <img width="70" height="70" src="./inline-svg/filled/question-circle.svg" alt="question-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/question-circle.svg" alt="question-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/question-circle.svg" alt="question-circle" />
 read | <img width="70" height="70" src="./inline-svg/filled/read.svg" alt="read" /> | <img width="70" height="70" src="./inline-svg/outlined/read.svg" alt="read" /> |  - 
 reconciliation | <img width="70" height="70" src="./inline-svg/filled/reconciliation.svg" alt="reconciliation" /> | <img width="70" height="70" src="./inline-svg/outlined/reconciliation.svg" alt="reconciliation" /> | <img width="70" height="70" src="./inline-svg/twotone/reconciliation.svg" alt="reconciliation" />
@@ -166,6 +175,7 @@ reddit-square | <img width="70" height="70" src="./inline-svg/filled/reddit-squa
 rest | <img width="70" height="70" src="./inline-svg/filled/rest.svg" alt="rest" /> | <img width="70" height="70" src="./inline-svg/outlined/rest.svg" alt="rest" /> | <img width="70" height="70" src="./inline-svg/twotone/rest.svg" alt="rest" />
 right-circle | <img width="70" height="70" src="./inline-svg/filled/right-circle.svg" alt="right-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/right-circle.svg" alt="right-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/right-circle.svg" alt="right-circle" />
 right-square | <img width="70" height="70" src="./inline-svg/filled/right-square.svg" alt="right-square" /> | <img width="70" height="70" src="./inline-svg/outlined/right-square.svg" alt="right-square" /> | <img width="70" height="70" src="./inline-svg/twotone/right-square.svg" alt="right-square" />
+robot | <img width="70" height="70" src="./inline-svg/filled/robot.svg" alt="robot" /> | <img width="70" height="70" src="./inline-svg/outlined/robot.svg" alt="robot" /> |  - 
 rocket | <img width="70" height="70" src="./inline-svg/filled/rocket.svg" alt="rocket" /> | <img width="70" height="70" src="./inline-svg/outlined/rocket.svg" alt="rocket" /> | <img width="70" height="70" src="./inline-svg/twotone/rocket.svg" alt="rocket" />
 safety-certificate | <img width="70" height="70" src="./inline-svg/filled/safety-certificate.svg" alt="safety-certificate" /> | <img width="70" height="70" src="./inline-svg/outlined/safety-certificate.svg" alt="safety-certificate" /> | <img width="70" height="70" src="./inline-svg/twotone/safety-certificate.svg" alt="safety-certificate" />
 save | <img width="70" height="70" src="./inline-svg/filled/save.svg" alt="save" /> | <img width="70" height="70" src="./inline-svg/outlined/save.svg" alt="save" /> | <img width="70" height="70" src="./inline-svg/twotone/save.svg" alt="save" />
@@ -174,6 +184,7 @@ security-scan | <img width="70" height="70" src="./inline-svg/filled/security-sc
 setting | <img width="70" height="70" src="./inline-svg/filled/setting.svg" alt="setting" /> | <img width="70" height="70" src="./inline-svg/outlined/setting.svg" alt="setting" /> | <img width="70" height="70" src="./inline-svg/twotone/setting.svg" alt="setting" />
 shop | <img width="70" height="70" src="./inline-svg/filled/shop.svg" alt="shop" /> | <img width="70" height="70" src="./inline-svg/outlined/shop.svg" alt="shop" /> | <img width="70" height="70" src="./inline-svg/twotone/shop.svg" alt="shop" />
 shopping | <img width="70" height="70" src="./inline-svg/filled/shopping.svg" alt="shopping" /> | <img width="70" height="70" src="./inline-svg/outlined/shopping.svg" alt="shopping" /> | <img width="70" height="70" src="./inline-svg/twotone/shopping.svg" alt="shopping" />
+signal | <img width="70" height="70" src="./inline-svg/filled/signal.svg" alt="signal" /> |  -  |  - 
 sketch-circle | <img width="70" height="70" src="./inline-svg/filled/sketch-circle.svg" alt="sketch-circle" /> |  -  |  - 
 sketch-square | <img width="70" height="70" src="./inline-svg/filled/sketch-square.svg" alt="sketch-square" /> |  -  |  - 
 skin | <img width="70" height="70" src="./inline-svg/filled/skin.svg" alt="skin" /> | <img width="70" height="70" src="./inline-svg/outlined/skin.svg" alt="skin" /> | <img width="70" height="70" src="./inline-svg/twotone/skin.svg" alt="skin" />
@@ -185,8 +196,8 @@ smile | <img width="70" height="70" src="./inline-svg/filled/smile.svg" alt="smi
 snippets | <img width="70" height="70" src="./inline-svg/filled/snippets.svg" alt="snippets" /> | <img width="70" height="70" src="./inline-svg/outlined/snippets.svg" alt="snippets" /> | <img width="70" height="70" src="./inline-svg/twotone/snippets.svg" alt="snippets" />
 sound | <img width="70" height="70" src="./inline-svg/filled/sound.svg" alt="sound" /> | <img width="70" height="70" src="./inline-svg/outlined/sound.svg" alt="sound" /> | <img width="70" height="70" src="./inline-svg/twotone/sound.svg" alt="sound" />
 star | <img width="70" height="70" src="./inline-svg/filled/star.svg" alt="star" /> | <img width="70" height="70" src="./inline-svg/outlined/star.svg" alt="star" /> | <img width="70" height="70" src="./inline-svg/twotone/star.svg" alt="star" />
-step-backward (< 3.9) | <img width="70" height="70" src="./inline-svg/filled/step-backward.svg" alt="step-backward (< 3.9)" /> | <img width="70" height="70" src="./inline-svg/outlined/step-backward.svg" alt="step-backward (< 3.9)" /> |  - 
-step-forward (< 3.9) | <img width="70" height="70" src="./inline-svg/filled/step-forward.svg" alt="step-forward (< 3.9)" /> | <img width="70" height="70" src="./inline-svg/outlined/step-forward.svg" alt="step-forward (< 3.9)" /> |  - 
+step-backward | <img width="70" height="70" src="./inline-svg/filled/step-backward.svg" alt="step-backward" /> | <img width="70" height="70" src="./inline-svg/outlined/step-backward.svg" alt="step-backward" /> |  - 
+step-forward | <img width="70" height="70" src="./inline-svg/filled/step-forward.svg" alt="step-forward" /> | <img width="70" height="70" src="./inline-svg/outlined/step-forward.svg" alt="step-forward" /> |  - 
 stop | <img width="70" height="70" src="./inline-svg/filled/stop.svg" alt="stop" /> | <img width="70" height="70" src="./inline-svg/outlined/stop.svg" alt="stop" /> | <img width="70" height="70" src="./inline-svg/twotone/stop.svg" alt="stop" />
 switcher | <img width="70" height="70" src="./inline-svg/filled/switcher.svg" alt="switcher" /> | <img width="70" height="70" src="./inline-svg/outlined/switcher.svg" alt="switcher" /> | <img width="70" height="70" src="./inline-svg/twotone/switcher.svg" alt="switcher" />
 tablet | <img width="70" height="70" src="./inline-svg/filled/tablet.svg" alt="tablet" /> | <img width="70" height="70" src="./inline-svg/outlined/tablet.svg" alt="tablet" /> | <img width="70" height="70" src="./inline-svg/twotone/tablet.svg" alt="tablet" />
@@ -196,10 +207,11 @@ taobao-circle | <img width="70" height="70" src="./inline-svg/filled/taobao-circ
 taobao-square | <img width="70" height="70" src="./inline-svg/filled/taobao-square.svg" alt="taobao-square" /> |  -  |  - 
 thunderbolt | <img width="70" height="70" src="./inline-svg/filled/thunderbolt.svg" alt="thunderbolt" /> | <img width="70" height="70" src="./inline-svg/outlined/thunderbolt.svg" alt="thunderbolt" /> | <img width="70" height="70" src="./inline-svg/twotone/thunderbolt.svg" alt="thunderbolt" />
 tool | <img width="70" height="70" src="./inline-svg/filled/tool.svg" alt="tool" /> | <img width="70" height="70" src="./inline-svg/outlined/tool.svg" alt="tool" /> | <img width="70" height="70" src="./inline-svg/twotone/tool.svg" alt="tool" />
-trademark-circle | <img width="70" height="70" src="./inline-svg/filled/trademark-circle.svg" alt="trademark-circle" /> |  -  | <img width="70" height="70" src="./inline-svg/twotone/trademark-circle.svg" alt="trademark-circle" />
+trademark-circle | <img width="70" height="70" src="./inline-svg/filled/trademark-circle.svg" alt="trademark-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/trademark-circle.svg" alt="trademark-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/trademark-circle.svg" alt="trademark-circle" />
 trophy | <img width="70" height="70" src="./inline-svg/filled/trophy.svg" alt="trophy" /> | <img width="70" height="70" src="./inline-svg/outlined/trophy.svg" alt="trophy" /> | <img width="70" height="70" src="./inline-svg/twotone/trophy.svg" alt="trophy" />
 twitter-circle | <img width="70" height="70" src="./inline-svg/filled/twitter-circle.svg" alt="twitter-circle" /> |  -  |  - 
 twitter-square | <img width="70" height="70" src="./inline-svg/filled/twitter-square.svg" alt="twitter-square" /> |  -  |  - 
+twitter | <img width="70" height="70" src="./inline-svg/filled/twitter.svg" alt="twitter" /> | <img width="70" height="70" src="./inline-svg/outlined/twitter.svg" alt="twitter" /> |  - 
 unlock | <img width="70" height="70" src="./inline-svg/filled/unlock.svg" alt="unlock" /> | <img width="70" height="70" src="./inline-svg/outlined/unlock.svg" alt="unlock" /> | <img width="70" height="70" src="./inline-svg/twotone/unlock.svg" alt="unlock" />
 up-circle | <img width="70" height="70" src="./inline-svg/filled/up-circle.svg" alt="up-circle" /> | <img width="70" height="70" src="./inline-svg/outlined/up-circle.svg" alt="up-circle" /> | <img width="70" height="70" src="./inline-svg/twotone/up-circle.svg" alt="up-circle" />
 up-square | <img width="70" height="70" src="./inline-svg/filled/up-square.svg" alt="up-square" /> | <img width="70" height="70" src="./inline-svg/outlined/up-square.svg" alt="up-square" /> | <img width="70" height="70" src="./inline-svg/twotone/up-square.svg" alt="up-square" />
@@ -216,6 +228,7 @@ youtube | <img width="70" height="70" src="./inline-svg/filled/youtube.svg" alt=
 yuque | <img width="70" height="70" src="./inline-svg/filled/yuque.svg" alt="yuque" /> | <img width="70" height="70" src="./inline-svg/outlined/yuque.svg" alt="yuque" /> |  - 
 zhihu-circle | <img width="70" height="70" src="./inline-svg/filled/zhihu-circle.svg" alt="zhihu-circle" /> |  -  |  - 
 zhihu-square | <img width="70" height="70" src="./inline-svg/filled/zhihu-square.svg" alt="zhihu-square" /> |  -  |  - 
+aim |  -  | <img width="70" height="70" src="./inline-svg/outlined/aim.svg" alt="aim" /> |  - 
 alibaba |  -  | <img width="70" height="70" src="./inline-svg/outlined/alibaba.svg" alt="alibaba" /> |  - 
 align-center |  -  | <img width="70" height="70" src="./inline-svg/outlined/align-center.svg" alt="align-center" /> |  - 
 align-left |  -  | <img width="70" height="70" src="./inline-svg/outlined/align-left.svg" alt="align-left" /> |  - 
@@ -223,19 +236,20 @@ align-right |  -  | <img width="70" height="70" src="./inline-svg/outlined/align
 alipay |  -  | <img width="70" height="70" src="./inline-svg/outlined/alipay.svg" alt="alipay" /> |  - 
 aliyun |  -  | <img width="70" height="70" src="./inline-svg/outlined/aliyun.svg" alt="aliyun" /> |  - 
 amazon |  -  | <img width="70" height="70" src="./inline-svg/outlined/amazon.svg" alt="amazon" /> |  - 
-ant-cloud |  -  | <img width="70" height="70" src="./inline-svg/outlined/ant-cloud.svg" alt="ant-cloud" /> |  - 
 ant-design |  -  | <img width="70" height="70" src="./inline-svg/outlined/ant-design.svg" alt="ant-design" /> |  - 
 apartment |  -  | <img width="70" height="70" src="./inline-svg/outlined/apartment.svg" alt="apartment" /> |  - 
+appstore-add |  -  | <img width="70" height="70" src="./inline-svg/outlined/appstore-add.svg" alt="appstore-add" /> |  - 
 area-chart |  -  | <img width="70" height="70" src="./inline-svg/outlined/area-chart.svg" alt="area-chart" /> |  - 
 arrow-down |  -  | <img width="70" height="70" src="./inline-svg/outlined/arrow-down.svg" alt="arrow-down" /> |  - 
 arrow-left |  -  | <img width="70" height="70" src="./inline-svg/outlined/arrow-left.svg" alt="arrow-left" /> |  - 
 arrow-right |  -  | <img width="70" height="70" src="./inline-svg/outlined/arrow-right.svg" alt="arrow-right" /> |  - 
 arrow-up |  -  | <img width="70" height="70" src="./inline-svg/outlined/arrow-up.svg" alt="arrow-up" /> |  - 
 arrows-alt |  -  | <img width="70" height="70" src="./inline-svg/outlined/arrows-alt.svg" alt="arrows-alt" /> |  - 
+audio-muted |  -  | <img width="70" height="70" src="./inline-svg/outlined/audio-muted.svg" alt="audio-muted" /> |  - 
 audit |  -  | <img width="70" height="70" src="./inline-svg/outlined/audit.svg" alt="audit" /> |  - 
 bar-chart |  -  | <img width="70" height="70" src="./inline-svg/outlined/bar-chart.svg" alt="bar-chart" /> |  - 
 barcode |  -  | <img width="70" height="70" src="./inline-svg/outlined/barcode.svg" alt="barcode" /> |  - 
-bars (< 3.9) |  -  | <img width="70" height="70" src="./inline-svg/outlined/bars.svg" alt="bars (< 3.9)" /> |  - 
+bars |  -  | <img width="70" height="70" src="./inline-svg/outlined/bars.svg" alt="bars" /> |  - 
 behance |  -  | <img width="70" height="70" src="./inline-svg/outlined/behance.svg" alt="behance" /> |  - 
 bg-colors |  -  | <img width="70" height="70" src="./inline-svg/outlined/bg-colors.svg" alt="bg-colors" /> |  - 
 block |  -  | <img width="70" height="70" src="./inline-svg/outlined/block.svg" alt="block" /> |  - 
@@ -249,9 +263,11 @@ border-right |  -  | <img width="70" height="70" src="./inline-svg/outlined/bord
 border-top |  -  | <img width="70" height="70" src="./inline-svg/outlined/border-top.svg" alt="border-top" /> |  - 
 border-verticle |  -  | <img width="70" height="70" src="./inline-svg/outlined/border-verticle.svg" alt="border-verticle" /> |  - 
 border |  -  | <img width="70" height="70" src="./inline-svg/outlined/border.svg" alt="border" /> |  - 
+borderless-table |  -  | <img width="70" height="70" src="./inline-svg/outlined/borderless-table.svg" alt="borderless-table" /> |  - 
 branches |  -  | <img width="70" height="70" src="./inline-svg/outlined/branches.svg" alt="branches" /> |  - 
 check |  -  | <img width="70" height="70" src="./inline-svg/outlined/check.svg" alt="check" /> |  - 
-ci |  -  | <img width="70" height="70" src="./inline-svg/outlined/ci.svg" alt="ci" /> | <img width="70" height="70" src="./inline-svg/twotone/ci.svg" alt="ci" />
+ci |  -  | <img width="70" height="70" src="./inline-svg/outlined/ci.svg" alt="ci" /> |  - 
+clear |  -  | <img width="70" height="70" src="./inline-svg/outlined/clear.svg" alt="clear" /> |  - 
 close |  -  | <img width="70" height="70" src="./inline-svg/outlined/close.svg" alt="close" /> |  - 
 cloud-download |  -  | <img width="70" height="70" src="./inline-svg/outlined/cloud-download.svg" alt="cloud-download" /> |  - 
 cloud-server |  -  | <img width="70" height="70" src="./inline-svg/outlined/cloud-server.svg" alt="cloud-server" /> |  - 
@@ -264,13 +280,18 @@ coffee (< 3.9) |  -  | <img width="70" height="70" src="./inline-svg/outlined/co
 colum-height |  -  | <img width="70" height="70" src="./inline-svg/outlined/colum-height.svg" alt="colum-height" /> |  - 
 column-height |  -  | <img width="70" height="70" src="./inline-svg/outlined/column-height.svg" alt="column-height" /> |  - 
 column-width |  -  | <img width="70" height="70" src="./inline-svg/outlined/column-width.svg" alt="column-width" /> |  - 
-copyright |  -  | <img width="70" height="70" src="./inline-svg/outlined/copyright.svg" alt="copyright" /> | <img width="70" height="70" src="./inline-svg/twotone/copyright.svg" alt="copyright" />
+comment |  -  | <img width="70" height="70" src="./inline-svg/outlined/comment.svg" alt="comment" /> |  - 
+console-sql |  -  | <img width="70" height="70" src="./inline-svg/outlined/console-sql.svg" alt="console-sql" /> |  - 
+copyright |  -  | <img width="70" height="70" src="./inline-svg/outlined/copyright.svg" alt="copyright" /> |  - 
 dash |  -  | <img width="70" height="70" src="./inline-svg/outlined/dash.svg" alt="dash" /> |  - 
+delete-column |  -  | <img width="70" height="70" src="./inline-svg/outlined/delete-column.svg" alt="delete-column" /> |  - 
+delete-row |  -  | <img width="70" height="70" src="./inline-svg/outlined/delete-row.svg" alt="delete-row" /> |  - 
+delivered-procedure |  -  | <img width="70" height="70" src="./inline-svg/outlined/delivered-procedure.svg" alt="delivered-procedure" /> |  - 
 deployment-unit |  -  | <img width="70" height="70" src="./inline-svg/outlined/deployment-unit.svg" alt="deployment-unit" /> |  - 
 desktop |  -  | <img width="70" height="70" src="./inline-svg/outlined/desktop.svg" alt="desktop" /> |  - 
 dingding |  -  | <img width="70" height="70" src="./inline-svg/outlined/dingding.svg" alt="dingding" /> |  - 
 disconnect |  -  | <img width="70" height="70" src="./inline-svg/outlined/disconnect.svg" alt="disconnect" /> |  - 
-dollar |  -  | <img width="70" height="70" src="./inline-svg/outlined/dollar.svg" alt="dollar" /> | <img width="70" height="70" src="./inline-svg/twotone/dollar.svg" alt="dollar" />
+dollar |  -  | <img width="70" height="70" src="./inline-svg/outlined/dollar.svg" alt="dollar" /> |  - 
 dot-chart |  -  | <img width="70" height="70" src="./inline-svg/outlined/dot-chart.svg" alt="dot-chart" /> |  - 
 double-left |  -  | <img width="70" height="70" src="./inline-svg/outlined/double-left.svg" alt="double-left" /> |  - 
 double-right |  -  | <img width="70" height="70" src="./inline-svg/outlined/double-right.svg" alt="double-right" /> |  - 
@@ -278,36 +299,50 @@ down |  -  | <img width="70" height="70" src="./inline-svg/outlined/down.svg" al
 download |  -  | <img width="70" height="70" src="./inline-svg/outlined/download.svg" alt="download" /> |  - 
 drag |  -  | <img width="70" height="70" src="./inline-svg/outlined/drag.svg" alt="drag" /> |  - 
 dribbble |  -  | <img width="70" height="70" src="./inline-svg/outlined/dribbble.svg" alt="dribbble" /> |  - 
-dropbox |  -  | <img width="70" height="70" src="./inline-svg/outlined/dropbox.svg" alt="dropbox" /> |  - 
 ellipsis |  -  | <img width="70" height="70" src="./inline-svg/outlined/ellipsis.svg" alt="ellipsis" /> |  - 
 enter |  -  | <img width="70" height="70" src="./inline-svg/outlined/enter.svg" alt="enter" /> |  - 
-euro |  -  | <img width="70" height="70" src="./inline-svg/outlined/euro.svg" alt="euro" /> | <img width="70" height="70" src="./inline-svg/twotone/euro.svg" alt="euro" />
+euro |  -  | <img width="70" height="70" src="./inline-svg/outlined/euro.svg" alt="euro" /> |  - 
 exception |  -  | <img width="70" height="70" src="./inline-svg/outlined/exception.svg" alt="exception" /> |  - 
 exclamation |  -  | <img width="70" height="70" src="./inline-svg/outlined/exclamation.svg" alt="exclamation" /> |  - 
+expand |  -  | <img width="70" height="70" src="./inline-svg/outlined/expand.svg" alt="expand" /> |  - 
 export |  -  | <img width="70" height="70" src="./inline-svg/outlined/export.svg" alt="export" /> |  - 
 fall |  -  | <img width="70" height="70" src="./inline-svg/outlined/fall.svg" alt="fall" /> |  - 
+field-binary |  -  | <img width="70" height="70" src="./inline-svg/outlined/field-binary.svg" alt="field-binary" /> |  - 
+field-number |  -  | <img width="70" height="70" src="./inline-svg/outlined/field-number.svg" alt="field-number" /> |  - 
+field-string |  -  | <img width="70" height="70" src="./inline-svg/outlined/field-string.svg" alt="field-string" /> |  - 
+field-time |  -  | <img width="70" height="70" src="./inline-svg/outlined/field-time.svg" alt="field-time" /> |  - 
 file-done |  -  | <img width="70" height="70" src="./inline-svg/outlined/file-done.svg" alt="file-done" /> |  - 
+file-gif |  -  | <img width="70" height="70" src="./inline-svg/outlined/file-gif.svg" alt="file-gif" /> |  - 
 file-jpg (< 3.9) |  -  | <img width="70" height="70" src="./inline-svg/outlined/file-jpg.svg" alt="file-jpg (< 3.9)" /> |  - 
 file-protect |  -  | <img width="70" height="70" src="./inline-svg/outlined/file-protect.svg" alt="file-protect" /> |  - 
 file-search |  -  | <img width="70" height="70" src="./inline-svg/outlined/file-search.svg" alt="file-search" /> |  - 
 file-sync |  -  | <img width="70" height="70" src="./inline-svg/outlined/file-sync.svg" alt="file-sync" /> |  - 
+folder-view |  -  | <img width="70" height="70" src="./inline-svg/outlined/folder-view.svg" alt="folder-view" /> |  - 
 font-colors |  -  | <img width="70" height="70" src="./inline-svg/outlined/font-colors.svg" alt="font-colors" /> |  - 
 font-size |  -  | <img width="70" height="70" src="./inline-svg/outlined/font-size.svg" alt="font-size" /> |  - 
 fork |  -  | <img width="70" height="70" src="./inline-svg/outlined/fork.svg" alt="fork" /> |  - 
 form |  -  | <img width="70" height="70" src="./inline-svg/outlined/form.svg" alt="form" /> |  - 
 fullscreen-exit |  -  | <img width="70" height="70" src="./inline-svg/outlined/fullscreen-exit.svg" alt="fullscreen-exit" /> |  - 
 fullscreen |  -  | <img width="70" height="70" src="./inline-svg/outlined/fullscreen.svg" alt="fullscreen" /> |  - 
+function |  -  | <img width="70" height="70" src="./inline-svg/outlined/function.svg" alt="function" /> |  - 
+fund-projection-screen |  -  | <img width="70" height="70" src="./inline-svg/outlined/fund-projection-screen.svg" alt="fund-projection-screen" /> |  - 
+fund-view |  -  | <img width="70" height="70" src="./inline-svg/outlined/fund-view.svg" alt="fund-view" /> |  - 
 gateway |  -  | <img width="70" height="70" src="./inline-svg/outlined/gateway.svg" alt="gateway" /> |  - 
+gif |  -  | <img width="70" height="70" src="./inline-svg/outlined/gif.svg" alt="gif" /> |  - 
 global |  -  | <img width="70" height="70" src="./inline-svg/outlined/global.svg" alt="global" /> |  - 
-gold |  -  | <img width="70" height="70" src="./inline-svg/outlined/gold.svg" alt="gold" /> | <img width="70" height="70" src="./inline-svg/twotone/gold.svg" alt="gold" />
 google-plus |  -  | <img width="70" height="70" src="./inline-svg/outlined/google-plus.svg" alt="google-plus" /> |  - 
 google |  -  | <img width="70" height="70" src="./inline-svg/outlined/google.svg" alt="google" /> |  - 
+group |  -  | <img width="70" height="70" src="./inline-svg/outlined/group.svg" alt="group" /> |  - 
 heat-map |  -  | <img width="70" height="70" src="./inline-svg/outlined/heat-map.svg" alt="heat-map" /> |  - 
 history |  -  | <img width="70" height="70" src="./inline-svg/outlined/history.svg" alt="history" /> |  - 
 ie |  -  | <img width="70" height="70" src="./inline-svg/outlined/ie.svg" alt="ie" /> |  - 
 import |  -  | <img width="70" height="70" src="./inline-svg/outlined/import.svg" alt="import" /> |  - 
 inbox (< 3.9) |  -  | <img width="70" height="70" src="./inline-svg/outlined/inbox.svg" alt="inbox (< 3.9)" /> |  - 
 info |  -  | <img width="70" height="70" src="./inline-svg/outlined/info.svg" alt="info" /> |  - 
+insert-row-above |  -  | <img width="70" height="70" src="./inline-svg/outlined/insert-row-above.svg" alt="insert-row-above" /> |  - 
+insert-row-below |  -  | <img width="70" height="70" src="./inline-svg/outlined/insert-row-below.svg" alt="insert-row-below" /> |  - 
+insert-row-left |  -  | <img width="70" height="70" src="./inline-svg/outlined/insert-row-left.svg" alt="insert-row-left" /> |  - 
+insert-row-right |  -  | <img width="70" height="70" src="./inline-svg/outlined/insert-row-right.svg" alt="insert-row-right" /> |  - 
 issues-close |  -  | <img width="70" height="70" src="./inline-svg/outlined/issues-close.svg" alt="issues-close" /> |  - 
 italic |  -  | <img width="70" height="70" src="./inline-svg/outlined/italic.svg" alt="italic" /> |  - 
 key |  -  | <img width="70" height="70" src="./inline-svg/outlined/key.svg" alt="key" /> |  - 
@@ -327,12 +362,19 @@ medium |  -  | <img width="70" height="70" src="./inline-svg/outlined/medium.svg
 menu-fold |  -  | <img width="70" height="70" src="./inline-svg/outlined/menu-fold.svg" alt="menu-fold" /> |  - 
 menu-unfold |  -  | <img width="70" height="70" src="./inline-svg/outlined/menu-unfold.svg" alt="menu-unfold" /> |  - 
 menu |  -  | <img width="70" height="70" src="./inline-svg/outlined/menu.svg" alt="menu" /> |  - 
+merge-cells |  -  | <img width="70" height="70" src="./inline-svg/outlined/merge-cells.svg" alt="merge-cells" /> |  - 
 minus |  -  | <img width="70" height="70" src="./inline-svg/outlined/minus.svg" alt="minus" /> |  - 
 monitor |  -  | <img width="70" height="70" src="./inline-svg/outlined/monitor.svg" alt="monitor" /> |  - 
 more |  -  | <img width="70" height="70" src="./inline-svg/outlined/more.svg" alt="more" /> |  - 
+narrow |  -  | <img width="70" height="70" src="./inline-svg/outlined/narrow.svg" alt="narrow" /> |  - 
+node-collapse |  -  | <img width="70" height="70" src="./inline-svg/outlined/node-collapse.svg" alt="node-collapse" /> |  - 
+node-expand |  -  | <img width="70" height="70" src="./inline-svg/outlined/node-expand.svg" alt="node-expand" /> |  - 
+node-index |  -  | <img width="70" height="70" src="./inline-svg/outlined/node-index.svg" alt="node-index" /> |  - 
 number |  -  | <img width="70" height="70" src="./inline-svg/outlined/number.svg" alt="number" /> |  - 
+one-to-one |  -  | <img width="70" height="70" src="./inline-svg/outlined/one-to-one.svg" alt="one-to-one" /> |  - 
 ordered-list |  -  | <img width="70" height="70" src="./inline-svg/outlined/ordered-list.svg" alt="ordered-list" /> |  - 
 paper-clip |  -  | <img width="70" height="70" src="./inline-svg/outlined/paper-clip.svg" alt="paper-clip" /> |  - 
+partition |  -  | <img width="70" height="70" src="./inline-svg/outlined/partition.svg" alt="partition" /> |  - 
 pause |  -  | <img width="70" height="70" src="./inline-svg/outlined/pause.svg" alt="pause" /> |  - 
 percentage |  -  | <img width="70" height="70" src="./inline-svg/outlined/percentage.svg" alt="percentage" /> |  - 
 pic-center |  -  | <img width="70" height="70" src="./inline-svg/outlined/pic-center.svg" alt="pic-center" /> |  - 
@@ -342,7 +384,6 @@ plus |  -  | <img width="70" height="70" src="./inline-svg/outlined/plus.svg" al
 pound |  -  | <img width="70" height="70" src="./inline-svg/outlined/pound.svg" alt="pound" /> |  - 
 poweroff |  -  | <img width="70" height="70" src="./inline-svg/outlined/poweroff.svg" alt="poweroff" /> |  - 
 pull-request |  -  | <img width="70" height="70" src="./inline-svg/outlined/pull-request.svg" alt="pull-request" /> |  - 
-qq |  -  | <img width="70" height="70" src="./inline-svg/outlined/qq.svg" alt="qq" /> |  - 
 qrcode |  -  | <img width="70" height="70" src="./inline-svg/outlined/qrcode.svg" alt="qrcode" /> |  - 
 question |  -  | <img width="70" height="70" src="./inline-svg/outlined/question.svg" alt="question" /> |  - 
 radar-chart |  -  | <img width="70" height="70" src="./inline-svg/outlined/radar-chart.svg" alt="radar-chart" /> |  - 
@@ -354,30 +395,35 @@ radius-upright |  -  | <img width="70" height="70" src="./inline-svg/outlined/ra
 reddit |  -  | <img width="70" height="70" src="./inline-svg/outlined/reddit.svg" alt="reddit" /> |  - 
 redo |  -  | <img width="70" height="70" src="./inline-svg/outlined/redo.svg" alt="redo" /> |  - 
 reload |  -  | <img width="70" height="70" src="./inline-svg/outlined/reload.svg" alt="reload" /> |  - 
-retweet (< 3.9) |  -  | <img width="70" height="70" src="./inline-svg/outlined/retweet.svg" alt="retweet (< 3.9)" /> |  - 
+retweet |  -  | <img width="70" height="70" src="./inline-svg/outlined/retweet.svg" alt="retweet" /> |  - 
 right |  -  | <img width="70" height="70" src="./inline-svg/outlined/right.svg" alt="right" /> |  - 
 rise |  -  | <img width="70" height="70" src="./inline-svg/outlined/rise.svg" alt="rise" /> |  - 
-robot |  -  | <img width="70" height="70" src="./inline-svg/outlined/robot.svg" alt="robot" /> |  - 
 rollback |  -  | <img width="70" height="70" src="./inline-svg/outlined/rollback.svg" alt="rollback" /> |  - 
-safety (< 3.9) |  -  | <img width="70" height="70" src="./inline-svg/outlined/safety.svg" alt="safety (< 3.9)" /> |  - 
+rotate-left |  -  | <img width="70" height="70" src="./inline-svg/outlined/rotate-left.svg" alt="rotate-left" /> |  - 
+rotate-right |  -  | <img width="70" height="70" src="./inline-svg/outlined/rotate-right.svg" alt="rotate-right" /> |  - 
+safety |  -  | <img width="70" height="70" src="./inline-svg/outlined/safety.svg" alt="safety" /> |  - 
 scan |  -  | <img width="70" height="70" src="./inline-svg/outlined/scan.svg" alt="scan" /> |  - 
 scissor |  -  | <img width="70" height="70" src="./inline-svg/outlined/scissor.svg" alt="scissor" /> |  - 
 search |  -  | <img width="70" height="70" src="./inline-svg/outlined/search.svg" alt="search" /> |  - 
 select |  -  | <img width="70" height="70" src="./inline-svg/outlined/select.svg" alt="select" /> |  - 
+send |  -  | <img width="70" height="70" src="./inline-svg/outlined/send.svg" alt="send" /> |  - 
 shake |  -  | <img width="70" height="70" src="./inline-svg/outlined/shake.svg" alt="shake" /> |  - 
 share-alt |  -  | <img width="70" height="70" src="./inline-svg/outlined/share-alt.svg" alt="share-alt" /> |  - 
 shopping-cart (< 3.9) |  -  | <img width="70" height="70" src="./inline-svg/outlined/shopping-cart.svg" alt="shopping-cart (< 3.9)" /> |  - 
 shrink |  -  | <img width="70" height="70" src="./inline-svg/outlined/shrink.svg" alt="shrink" /> |  - 
+sisternode |  -  | <img width="70" height="70" src="./inline-svg/outlined/sisternode.svg" alt="sisternode" /> |  - 
 sketch |  -  | <img width="70" height="70" src="./inline-svg/outlined/sketch.svg" alt="sketch" /> |  - 
 slack |  -  | <img width="70" height="70" src="./inline-svg/outlined/slack.svg" alt="slack" /> |  - 
 small-dash |  -  | <img width="70" height="70" src="./inline-svg/outlined/small-dash.svg" alt="small-dash" /> |  - 
 solution |  -  | <img width="70" height="70" src="./inline-svg/outlined/solution.svg" alt="solution" /> |  - 
 sort-ascending |  -  | <img width="70" height="70" src="./inline-svg/outlined/sort-ascending.svg" alt="sort-ascending" /> |  - 
 sort-descending |  -  | <img width="70" height="70" src="./inline-svg/outlined/sort-descending.svg" alt="sort-descending" /> |  - 
+split-cells |  -  | <img width="70" height="70" src="./inline-svg/outlined/split-cells.svg" alt="split-cells" /> |  - 
 stock |  -  | <img width="70" height="70" src="./inline-svg/outlined/stock.svg" alt="stock" /> |  - 
 strikethrough |  -  | <img width="70" height="70" src="./inline-svg/outlined/strikethrough.svg" alt="strikethrough" /> |  - 
-swap-left (< 3.9) |  -  | <img width="70" height="70" src="./inline-svg/outlined/swap-left.svg" alt="swap-left (< 3.9)" /> |  - 
-swap-right (< 3.9) |  -  | <img width="70" height="70" src="./inline-svg/outlined/swap-right.svg" alt="swap-right (< 3.9)" /> |  - 
+subnode |  -  | <img width="70" height="70" src="./inline-svg/outlined/subnode.svg" alt="subnode" /> |  - 
+swap-left |  -  | <img width="70" height="70" src="./inline-svg/outlined/swap-left.svg" alt="swap-left" /> |  - 
+swap-right |  -  | <img width="70" height="70" src="./inline-svg/outlined/swap-right.svg" alt="swap-right" /> |  - 
 swap |  -  | <img width="70" height="70" src="./inline-svg/outlined/swap.svg" alt="swap" /> |  - 
 sync |  -  | <img width="70" height="70" src="./inline-svg/outlined/sync.svg" alt="sync" /> |  - 
 table |  -  | <img width="70" height="70" src="./inline-svg/outlined/table.svg" alt="table" /> |  - 
@@ -386,27 +432,31 @@ team |  -  | <img width="70" height="70" src="./inline-svg/outlined/team.svg" al
 to-top |  -  | <img width="70" height="70" src="./inline-svg/outlined/to-top.svg" alt="to-top" /> |  - 
 trademark |  -  | <img width="70" height="70" src="./inline-svg/outlined/trademark.svg" alt="trademark" /> |  - 
 transaction |  -  | <img width="70" height="70" src="./inline-svg/outlined/transaction.svg" alt="transaction" /> |  - 
-twitter |  -  | <img width="70" height="70" src="./inline-svg/outlined/twitter.svg" alt="twitter" /> |  - 
+translation |  -  | <img width="70" height="70" src="./inline-svg/outlined/translation.svg" alt="translation" /> |  - 
 underline |  -  | <img width="70" height="70" src="./inline-svg/outlined/underline.svg" alt="underline" /> |  - 
 undo |  -  | <img width="70" height="70" src="./inline-svg/outlined/undo.svg" alt="undo" /> |  - 
+ungroup |  -  | <img width="70" height="70" src="./inline-svg/outlined/ungroup.svg" alt="ungroup" /> |  - 
 unordered-list |  -  | <img width="70" height="70" src="./inline-svg/outlined/unordered-list.svg" alt="unordered-list" /> |  - 
 up |  -  | <img width="70" height="70" src="./inline-svg/outlined/up.svg" alt="up" /> |  - 
 upload |  -  | <img width="70" height="70" src="./inline-svg/outlined/upload.svg" alt="upload" /> |  - 
 user-add |  -  | <img width="70" height="70" src="./inline-svg/outlined/user-add.svg" alt="user-add" /> |  - 
 user-delete |  -  | <img width="70" height="70" src="./inline-svg/outlined/user-delete.svg" alt="user-delete" /> |  - 
+user-switch |  -  | <img width="70" height="70" src="./inline-svg/outlined/user-switch.svg" alt="user-switch" /> |  - 
 user |  -  | <img width="70" height="70" src="./inline-svg/outlined/user.svg" alt="user" /> |  - 
 usergroup-add |  -  | <img width="70" height="70" src="./inline-svg/outlined/usergroup-add.svg" alt="usergroup-add" /> |  - 
 usergroup-delete |  -  | <img width="70" height="70" src="./inline-svg/outlined/usergroup-delete.svg" alt="usergroup-delete" /> |  - 
+verified |  -  | <img width="70" height="70" src="./inline-svg/outlined/verified.svg" alt="verified" /> |  - 
 vertical-align-bottom |  -  | <img width="70" height="70" src="./inline-svg/outlined/vertical-align-bottom.svg" alt="vertical-align-bottom" /> |  - 
 vertical-align-middle |  -  | <img width="70" height="70" src="./inline-svg/outlined/vertical-align-middle.svg" alt="vertical-align-middle" /> |  - 
 vertical-align-top |  -  | <img width="70" height="70" src="./inline-svg/outlined/vertical-align-top.svg" alt="vertical-align-top" /> |  - 
 vertical-left |  -  | <img width="70" height="70" src="./inline-svg/outlined/vertical-left.svg" alt="vertical-left" /> |  - 
 vertical-right |  -  | <img width="70" height="70" src="./inline-svg/outlined/vertical-right.svg" alt="vertical-right" /> |  - 
+video-camera-add |  -  | <img width="70" height="70" src="./inline-svg/outlined/video-camera-add.svg" alt="video-camera-add" /> |  - 
 weibo |  -  | <img width="70" height="70" src="./inline-svg/outlined/weibo.svg" alt="weibo" /> |  - 
+whats-app |  -  | <img width="70" height="70" src="./inline-svg/outlined/whats-app.svg" alt="whats-app" /> |  - 
 wifi |  -  | <img width="70" height="70" src="./inline-svg/outlined/wifi.svg" alt="wifi" /> |  - 
 woman |  -  | <img width="70" height="70" src="./inline-svg/outlined/woman.svg" alt="woman" /> |  - 
 zhihu |  -  | <img width="70" height="70" src="./inline-svg/outlined/zhihu.svg" alt="zhihu" /> |  - 
 zoom-in |  -  | <img width="70" height="70" src="./inline-svg/outlined/zoom-in.svg" alt="zoom-in" /> |  - 
 zoom-out |  -  | <img width="70" height="70" src="./inline-svg/outlined/zoom-out.svg" alt="zoom-out" /> |  - 
-canlendar |  -  |  -  | <img width="70" height="70" src="./inline-svg/twotone/canlendar.svg" alt="canlendar" />
 

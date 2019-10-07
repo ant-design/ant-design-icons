@@ -7,7 +7,7 @@ import {
 } from '../build/helpers';
 
 export default function inlineSVG(options: HelperRenderOptions = {}) {
-  return through.obj(function(file: File, encoding, done) {
+  return through.obj((file: File, encoding, done) => {
     if (file.isBuffer()) {
       const before = file.contents.toString(encoding);
       const icond = new Function(`return ${before}`)() as IconDefinition;

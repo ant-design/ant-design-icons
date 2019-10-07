@@ -1,14 +1,17 @@
 import { upperFirst, camelCase, memoize } from 'lodash';
 import { ThemeTypeUpperCase, ThemeType } from './templates/types';
 
+export interface IdentifierMeta {
+  name: string;
+  themeSuffix?: ThemeTypeUpperCase;
+}
+
 export const getIdentifier = memoize(function getIdentifier({
   name,
   themeSuffix
-}: {
-  name: string;
-  themeSuffix: ThemeTypeUpperCase;
-}): string {
-  return upperFirst(camelCase(`${name}-${themeSuffix}`));
+}: IdentifierMeta): string {
+  const suffix = themeSuffix ? `-${themeSuffix}` : '';
+  return upperFirst(camelCase(name + suffix));
 });
 
 export function getSrcByTheme(theme: ThemeType): string {

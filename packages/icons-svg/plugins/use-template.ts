@@ -18,7 +18,7 @@ export default function useTemplate({
   mapFileToInterpolate
 }: UseTemplateOptions) {
   const executor = template(readFileSync(tplSource, 'utf8'));
-  return through.obj(function(file: File, encoding, done) {
+  return through.obj((file: File, encoding, done) => {
     if (file.isBuffer()) {
       const before = file.contents.toString(encoding);
       const after = executor(
