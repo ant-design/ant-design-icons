@@ -20,7 +20,7 @@
     "compile": "father build",
     "test": "father test",
     "prepublishOnly": "npm run lint && npm run test && npm run generate && npm run compile && np --no-cleanup --yolo --no-publish",
-    "generate": "rm -rf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
+    "generate": "cross-env rm -rf src/icons && cross-env TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
     "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry"
   },
   "peerDependencies": {
