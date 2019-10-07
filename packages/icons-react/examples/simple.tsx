@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { AntDesign, Dashboard, Twitter } from '../src';
+import { AntDesign, Dashboard, TwitterFilled } from '../src';
 
 const Div = styled.div`
   position: relative;
@@ -48,7 +48,7 @@ export default class SimpleDemo extends React.Component<{}> {
         0123
         <Dashboard />
         你好
-        <Twitter />
+        <TwitterFilled />
       </Div>
     );
   }

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
     "module": "commonJS",
+    "resolveJsonModule": true
   }
 }

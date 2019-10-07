@@ -31,8 +31,7 @@ const allIcons: {
   [key: string]: any;
 } = AntdIcons;
 
-const iconsList = Object.keys(allIcons)
-  .map(iconName => allIcons[iconName]);
+const iconsList = Object.keys(allIcons).map(iconName => allIcons[iconName]);
 
 @observer
 export default class AllIconDemo extends React.Component<{}> {
@@ -40,27 +39,20 @@ export default class AllIconDemo extends React.Component<{}> {
   currentTheme = 'Outlined';
 
   @computed
-  get Icons() {
-    return iconsList
-      .filter((icon) => {
-        if (this.currentTheme !== 'Outlined') {
-          return icon.name.includes(this.currentTheme);
-        }
-        return ['Filled', 'TwoTone'].every(theme => !icon.name.includes(theme));
-      })
-      .map((Component) => (
-        <Card key={Component.name}>
-          <Component style={{ fontSize: '24px' }} />
-          <NameDescription>{Component.name}</NameDescription>
-        </Card>
-      ));
+  get icons() {
+    return iconsList.filter(icon => {
+      if (this.currentTheme !== 'Outlined') {
+        return icon.name.includes(this.currentTheme);
+      }
+      return ['Filled', 'TwoTone'].every(theme => !icon.name.includes(theme));
+    });
   }
 
   @action
-  handleSelectChange: React.ChangeEventHandler<HTMLSelectElement> = (e) => {
+  handleSelectChange: React.ChangeEventHandler<HTMLSelectElement> = e => {
     const value = e.currentTarget.value as ThemeType;
     this.currentTheme = value;
-  }
+  };
 
   render() {
     return (
@@ -68,7 +60,7 @@ export default class AllIconDemo extends React.Component<{}> {
         <h1 style={{ textAlign: 'center' }}>All Icons</h1>
         <div style={{ textAlign: 'center' }}>
           <select
-            name={'theme-select'}
+            name="theme-select"
             value={this.currentTheme}
             onChange={this.handleSelectChange}
           >
@@ -77,7 +69,14 @@ export default class AllIconDemo extends React.Component<{}> {
             <option value="TwoTone">Two-Tone</option>
           </select>
         </div>
-        <Container>{this.Icons}</Container>
+        <Container>
+          {this.icons.map(Component => (
+            <Card key={Component.name}>
+              <Component style={{ fontSize: '32px' }} />
+              <NameDescription>{Component.name}</NameDescription>
+            </Card>
+          ))}
+        </Container>
       </div>
     );
   }
