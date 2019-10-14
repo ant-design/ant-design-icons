@@ -77,7 +77,7 @@ For icons provided by Ant Design, we provide **dynamic loading** strategy to red
 
 ### Jsonp-like Dynamic Loading
 
-If your static file server don't support cross origin XMR requests, you can use jsonp-like dynamic loading by calling the `useJsonpLoading` method of `IconService`.
+If your static file server don't support cross origin XMLg requests, you can use jsonp-like dynamic loading by calling the `useJsonpLoading` method of `IconService`.
 
 ### Namespace
 

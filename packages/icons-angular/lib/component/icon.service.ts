@@ -31,7 +31,8 @@ import {
   getNameAndNamespace,
   getSecondaryColor,
   hasNamespace,
-  isIconDefinition, warn,
+  isIconDefinition,
+  warn,
   replaceFillColor,
   withSuffix,
   withSuffixAndColor
