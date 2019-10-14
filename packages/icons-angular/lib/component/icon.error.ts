@@ -1,4 +1,4 @@
-import { printErr, ANT_ICON_ANGULAR_CONSOLE_PREFIX } from '../utils';
+import { error, ANT_ICON_ANGULAR_CONSOLE_PREFIX } from '../utils';
 
 export function NameSpaceIsNotSpecifyError(): Error {
   return new Error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}Type should have a namespace. Try "namespace:${name}".`);
@@ -9,7 +9,7 @@ export function IconNotFoundError(icon: string): Error {
 }
 
 export function HttpModuleNotImport(): null {
-  printErr(`you need to import "HttpClientModule" to use dynamic importing.`);
+  error(`you need to import "HttpClientModule" to use dynamic importing.`);
   return null;
 }
 

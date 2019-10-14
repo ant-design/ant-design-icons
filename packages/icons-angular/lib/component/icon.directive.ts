@@ -7,7 +7,7 @@ import {
   SimpleChanges
 } from '@angular/core';
 import { IconDefinition, ThemeType } from '../types';
-import { alreadyHasAThemeSuffix, getNameAndNamespace, isIconDefinition, printWarn, withSuffix } from '../utils';
+import { alreadyHasAThemeSuffix, getNameAndNamespace, isIconDefinition, warn, withSuffix } from '../utils';
 import { IconService } from './icon.service';
 
 @Directive({
@@ -62,7 +62,7 @@ export class IconDirective implements OnChanges {
       }
       if (alreadyHasAThemeSuffix(name)) {
         if (!!theme) {
-          printWarn(`'type' ${name} already gets a theme inside so 'theme' ${theme} would be ignored`);
+          warn(`'type' ${name} already gets a theme inside so 'theme' ${theme} would be ignored`);
         }
         return name;
       } else {

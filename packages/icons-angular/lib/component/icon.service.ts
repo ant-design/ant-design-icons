@@ -8,7 +8,7 @@ import {
   SecurityContext
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { of as observableOf, Observable, Subject } from 'rxjs';
+import { of as rxof, Observable, Subject } from 'rxjs';
 import {
   catchError,
   filter,
@@ -31,7 +31,7 @@ import {
   getNameAndNamespace,
   getSecondaryColor,
   hasNamespace,
-  isIconDefinition,
+  isIconDefinition, warn,
   replaceFillColor,
   withSuffix,
   withSuffixAndColor
@@ -121,6 +121,8 @@ export class IconService {
       window[JSONP_HANDLER_NAME] = (icon: IconDefinition) => {
         this._jsonpIconLoad$.next(icon);
       };
+    } else {
+      warn('You are already using jsonp loading.');
     }
   }
 
@@ -173,13 +175,14 @@ export class IconService {
     twoToneColor?: string
   ): Observable<SVGElement> {
     // If `icon` is a `IconDefinition`, go to the next step. If not, try to fetch it from cache.
-    const definition: IconDefinition | null | undefined = isIconDefinition(icon)
+    const definitionOrNull: IconDefinition | null = isIconDefinition(icon)
       ? (icon as IconDefinition)
-      : this._svgDefinitions.get(icon as string);
+      : this._svgDefinitions.get(icon) || null;
 
-    // If `icon` is a `IconDefinition` of successfully fetch, wrap it in an `Observable`. Otherwise try to fetch it from remote.
-    const $iconDefinition = definition
-      ? observableOf(definition)
+    // If `icon` is a `IconDefinition` of successfully fetch, wrap it in an `Observable`.
+    // Otherwise try to fetch it from remote.
+    const $iconDefinition = definitionOrNull
+      ? rxof(definitionOrNull)
       : this._loadIconDynamically(icon as string);
 
     // If finally get an `IconDefinition`, render and return it. Otherwise throw an error.
@@ -206,7 +209,7 @@ export class IconService {
   ): Observable<IconDefinition | null> {
     // If developer doesn't provide HTTP module nor enable jsonp loading, just throw an error.
     if (!this._http && !this._enableJsonpLoading) {
-      return observableOf(HttpModuleNotImport());
+      return rxof(HttpModuleNotImport());
     }
 
     // If multi directive ask for the same icon at the same time,
@@ -237,36 +240,12 @@ export class IconService {
         ? this._http
             .get(safeUrl, { responseType: 'text' })
             .pipe(map(literal => ({ ...icon, icon: literal })))
-        : new Observable<IconDefinition>(subscriber => {
-            const loader = this._document.createElement('script');
-            const timer = setTimeout(() => {
-              clean();
-              subscriber.error(DynamicLoadingTimeoutError());
-            }, 6000);
-
-            loader.src = safeUrl as string;
-
-            function clean(): void {
-              loader.parentNode.removeChild(loader);
-              clearTimeout(timer);
-            }
-
-            this._document.body.appendChild(loader);
-            this._jsonpIconLoad$
-              .pipe(
-                filter(i => i.name === icon.name && i.theme === icon.theme),
-                take(1)
-              )
-              .subscribe(i => {
-                subscriber.next(i);
-                clean();
-              });
-          });
+        : this._loadIconDynamicallyWithJsonp(icon, safeUrl);
 
       inProgress = source.pipe(
         tap(definition => this.addIcon(definition)),
         finalize(() => this._inProgressFetches.delete(type)),
-        catchError(() => observableOf(null)),
+        catchError(() => rxof(null)),
         share()
       );
 
@@ -276,8 +255,36 @@ export class IconService {
     return inProgress;
   }
 
+  protected _loadIconDynamicallyWithJsonp(icon: IconDefinition, url: string): Observable<IconDefinition> {
+    return new Observable<IconDefinition>(subscriber => {
+      const loader = this._document.createElement('script');
+      const timer = setTimeout(() => {
+        clean();
+        subscriber.error(DynamicLoadingTimeoutError());
+      }, 6000);
+
+      loader.src = url;
+
+      function clean(): void {
+        loader.parentNode.removeChild(loader);
+        clearTimeout(timer);
+      }
+
+      this._document.body.appendChild(loader);
+      this._jsonpIconLoad$
+          .pipe(
+              filter(i => i.name === icon.name && i.theme === icon.theme),
+              take(1)
+          )
+          .subscribe(i => {
+            subscriber.next(i);
+            clean();
+          });
+    });
+  }
+
   /**
-   * Render a new `SVGElement` for given `IconDefinition`, or make a copy from cache.
+   * Render a new `SVGElement` for a given `IconDefinition`, or make a copy from cache.
    * @param icon
    * @param twoToneColor
    */

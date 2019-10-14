@@ -36,7 +36,7 @@ import { IconModule } from '@ant-design/icons-angular';
 export class AppModule { }
 ```
 
-And register the icons that you need to `IconService` (all or explicitly, we call it **static loading**):
+And register the icons that you need to `IconService` (All or explicitly. We call it **static loading**):
 
 > ATTENTION! We strongly suggest you not to register all icons. That would increase your bundle's size dramatically.
 
@@ -74,6 +74,10 @@ When you want to render an icon:
 Checkout the demo for more details.
 
 For icons provided by Ant Design, we provide **dynamic loading** strategy to reduce bundle's size. Just config your `angular.json` and you even don't need to register the icons! Checkout our `examples` dir and `angular.json` file for more details.
+
+### Jsonp-like Dynamic Loading
+
+If your static file server don't support cross origin XMR requests, you can use jsonp-like dynamic loading by calling the `useJsonpLoading` method of `IconService`.
 
 ### Namespace
 
