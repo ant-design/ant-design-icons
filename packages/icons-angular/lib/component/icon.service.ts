@@ -71,13 +71,13 @@ export class IconService {
   /**
    * All icon definitions would be registered here.
    */
-  protected _svgDefinitions = new Map<string, IconDefinition>();
+  protected readonly _svgDefinitions = new Map<string, IconDefinition>();
 
   /**
    * Cache all rendered icons. Icons are identified by name, theme,
    * and for twotone icons, primary color and secondary color.
    */
-  protected _svgRenderedDefinitions = new Map<string, CachedIconDefinition>();
+  protected readonly _svgRenderedDefinitions = new Map<string, CachedIconDefinition>();
 
   protected _inProgressFetches = new Map<
     string,
@@ -94,10 +94,9 @@ export class IconService {
     secondaryColor: '#E6E6E6'
   };
 
-  /** Record if a handler is registered. */
+  /** A flag indicates whether jsonp loading is enabled. */
   private _enableJsonpLoading = false;
-
-  private _jsonpIconLoad$ = new Subject<IconDefinition>();
+  private readonly _jsonpIconLoad$ = new Subject<IconDefinition>();
 
   constructor(
     protected _rendererFactory: RendererFactory2,
@@ -151,7 +150,7 @@ export class IconService {
    * @param literal
    */
   addIconLiteral(type: string, literal: string): void {
-    const [name, namespace] = getNameAndNamespace(type);
+    const [_, namespace] = getNameAndNamespace(type);
     if (!namespace) {
       throw NameSpaceIsNotSpecifyError();
     }
@@ -225,7 +224,7 @@ export class IconService {
         ? { name: type, icon: '' }
         : getIconDefinitionFromAbbr(name);
 
-      const suffix = this.useJsonpLoading ? '.js' : '.svg';
+      const suffix = this._enableJsonpLoading ? '.js' : '.svg';
       const url =
         (namespace
           ? `${this._assetsUrlRoot}assets/${namespace}/${name}`
