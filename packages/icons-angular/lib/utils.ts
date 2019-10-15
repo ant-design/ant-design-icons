@@ -1,14 +1,18 @@
+import { isDevMode } from '@angular/core';
 import { generate as generateColor } from '@ant-design/colors';
+
 import { IconDefinition, ThemeType } from './types';
 
-export const ANT_ICON_ANGULAR_CONSOLE_PREFIX = '[@ant-design/icons-angular]: ';
+export const ANT_ICON_ANGULAR_CONSOLE_PREFIX = '[@ant-design/icons-angular]:';
 
-export function printErr(message: string): void {
-  console.error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}${message}.`);
+export function error(message: string): void {
+  console.error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX} ${message}.`);
 }
 
-export function printWarn(message: string): void {
-  console.warn(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}${message}.`);
+export function warn(message: string): void {
+  if (isDevMode()) {
+    console.warn(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX} ${message}.`);
+  }
 }
 
 export function getSecondaryColor(primaryColor: string): string {
