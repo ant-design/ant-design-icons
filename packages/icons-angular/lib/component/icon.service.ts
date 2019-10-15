@@ -32,8 +32,8 @@ import {
   getSecondaryColor,
   hasNamespace,
   isIconDefinition,
-  warn,
   replaceFillColor,
+  warn,
   withSuffix,
   withSuffixAndColor
 } from '../utils';

@@ -1,7 +1,7 @@
+import { isDevMode } from '@angular/core';
 import { generate as generateColor } from '@ant-design/colors';
 
 import { IconDefinition, ThemeType } from './types';
-import {isDevMode} from "@angular/core";
 
 export const ANT_ICON_ANGULAR_CONSOLE_PREFIX = '[@ant-design/icons-angular]:';
 
