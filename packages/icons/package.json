@@ -41,7 +41,7 @@
     "@babel/preset-typescript": "^7.0.0",
     "@babel/runtime": "^7.0.0",
     "@svgr/core": "^4.3.3",
-    "@types/fs-extra": "^5.0.4",
+    "@types/fs-extra": "^8.0.1",
     "@types/globby": "^8.0.0",
     "@types/history": "^4.7.0",
     "@types/jest": "^24.0.17",
