@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "strict": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "declaration": true,
+    "importHelpers": true,
+    "experimentalDecorators": true
+  },
+  "include": ["src", "examples"],
+  "exclude": ["node_modules"]
+}
