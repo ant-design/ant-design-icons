@@ -18,7 +18,7 @@ iconConfig.forEach(config => {
 // GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
+import Icon from '../components/AntdIcon';
 import ${svgName}Svg from '@ant-design/icons-svg/lib/${theme}/${svgName}';
 
 export default {
@@ -29,7 +29,7 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: ${svgName}Svg } },
       children
-    )
+    ),
 };
 `,
   );
