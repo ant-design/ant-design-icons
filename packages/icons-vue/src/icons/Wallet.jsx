@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import WalletSvg from '@ant-design/icons-svg/lib/asn/WalletOutlined'
+import Icon from '../components/AntdIcon';
+import WalletOutlineSvg from '@ant-design/icons-svg/lib/outline/WalletOutline';
 
 export default {
   name: 'Wallet',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: WalletSvg } },
+      { ...data, props: { ...data.props, icon: WalletOutlineSvg } },
       children
-    )
+    ),
 };

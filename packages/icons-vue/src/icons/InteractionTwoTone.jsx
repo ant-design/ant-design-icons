@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import InteractionTwoToneSvg from '@ant-design/icons-svg/lib/asn/InteractionTwoTone'
+import Icon from '../components/AntdIcon';
+import InteractionTwoToneSvg from '@ant-design/icons-svg/lib/twotone/InteractionTwoTone';
 
 export default {
   name: 'InteractionTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: InteractionTwoToneSvg } },
       children
-    )
+    ),
 };

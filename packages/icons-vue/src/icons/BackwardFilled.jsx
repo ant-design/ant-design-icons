@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import BackwardFilledSvg from '@ant-design/icons-svg/lib/asn/BackwardFilled'
+import Icon from '../components/AntdIcon';
+import BackwardFillSvg from '@ant-design/icons-svg/lib/fill/BackwardFill';
 
 export default {
   name: 'BackwardFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BackwardFilledSvg } },
+      { ...data, props: { ...data.props, icon: BackwardFillSvg } },
       children
-    )
+    ),
 };

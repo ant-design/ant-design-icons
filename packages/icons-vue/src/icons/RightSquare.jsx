@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RightSquareSvg from '@ant-design/icons-svg/lib/asn/RightSquareOutlined'
+import Icon from '../components/AntdIcon';
+import RightSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/RightSquareOutline';
 
 export default {
   name: 'RightSquare',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RightSquareSvg } },
+      { ...data, props: { ...data.props, icon: RightSquareOutlineSvg } },
       children
-    )
+    ),
 };

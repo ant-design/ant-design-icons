@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AliyunSvg from '@ant-design/icons-svg/lib/asn/AliyunOutlined'
+import Icon from '../components/AntdIcon';
+import AliyunOutlineSvg from '@ant-design/icons-svg/lib/outline/AliyunOutline';
 
 export default {
   name: 'Aliyun',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AliyunSvg } },
+      { ...data, props: { ...data.props, icon: AliyunOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ShakeSvg from '@ant-design/icons-svg/lib/asn/ShakeOutlined'
+import Icon from '../components/AntdIcon';
+import ShakeOutlineSvg from '@ant-design/icons-svg/lib/outline/ShakeOutline';
 
 export default {
   name: 'Shake',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ShakeSvg } },
+      { ...data, props: { ...data.props, icon: ShakeOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FileWordSvg from '@ant-design/icons-svg/lib/asn/FileWordOutlined'
+import Icon from '../components/AntdIcon';
+import FileWordOutlineSvg from '@ant-design/icons-svg/lib/outline/FileWordOutline';
 
 export default {
   name: 'FileWord',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FileWordSvg } },
+      { ...data, props: { ...data.props, icon: FileWordOutlineSvg } },
       children
-    )
+    ),
 };

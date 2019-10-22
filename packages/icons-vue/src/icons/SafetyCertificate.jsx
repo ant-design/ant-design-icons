@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SafetyCertificateSvg from '@ant-design/icons-svg/lib/asn/SafetyCertificateOutlined'
+import Icon from '../components/AntdIcon';
+import SafetyCertificateOutlineSvg from '@ant-design/icons-svg/lib/outline/SafetyCertificateOutline';
 
 export default {
   name: 'SafetyCertificate',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SafetyCertificateSvg } },
+      { ...data, props: { ...data.props, icon: SafetyCertificateOutlineSvg } },
       children
-    )
+    ),
 };

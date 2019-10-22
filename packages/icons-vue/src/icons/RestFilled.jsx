@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RestFilledSvg from '@ant-design/icons-svg/lib/asn/RestFilled'
+import Icon from '../components/AntdIcon';
+import RestFillSvg from '@ant-design/icons-svg/lib/fill/RestFill';
 
 export default {
   name: 'RestFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RestFilledSvg } },
+      { ...data, props: { ...data.props, icon: RestFillSvg } },
       children
-    )
+    ),
 };

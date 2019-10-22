@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import InboxSvg from '@ant-design/icons-svg/lib/asn/InboxOutlined'
+import Icon from '../components/AntdIcon';
+import InboxOutlineSvg from '@ant-design/icons-svg/lib/outline/InboxOutline';
 
 export default {
   name: 'Inbox',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: InboxSvg } },
+      { ...data, props: { ...data.props, icon: InboxOutlineSvg } },
       children
-    )
+    ),
 };

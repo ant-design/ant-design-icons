@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FastBackwardSvg from '@ant-design/icons-svg/lib/asn/FastBackwardOutlined'
+import Icon from '../components/AntdIcon';
+import FastBackwardOutlineSvg from '@ant-design/icons-svg/lib/outline/FastBackwardOutline';
 
 export default {
   name: 'FastBackward',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FastBackwardSvg } },
+      { ...data, props: { ...data.props, icon: FastBackwardOutlineSvg } },
       children
-    )
+    ),
 };

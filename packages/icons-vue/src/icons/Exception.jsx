@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ExceptionSvg from '@ant-design/icons-svg/lib/asn/ExceptionOutlined'
+import Icon from '../components/AntdIcon';
+import ExceptionOutlineSvg from '@ant-design/icons-svg/lib/outline/ExceptionOutline';
 
 export default {
   name: 'Exception',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ExceptionSvg } },
+      { ...data, props: { ...data.props, icon: ExceptionOutlineSvg } },
       children
-    )
+    ),
 };

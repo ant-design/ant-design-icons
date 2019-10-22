@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import HighlightSvg from '@ant-design/icons-svg/lib/asn/HighlightOutlined'
+import Icon from '../components/AntdIcon';
+import HighlightOutlineSvg from '@ant-design/icons-svg/lib/outline/HighlightOutline';
 
 export default {
   name: 'Highlight',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: HighlightSvg } },
+      { ...data, props: { ...data.props, icon: HighlightOutlineSvg } },
       children
-    )
+    ),
 };

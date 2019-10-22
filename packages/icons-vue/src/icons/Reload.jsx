@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ReloadSvg from '@ant-design/icons-svg/lib/asn/ReloadOutlined'
+import Icon from '../components/AntdIcon';
+import ReloadOutlineSvg from '@ant-design/icons-svg/lib/outline/ReloadOutline';
 
 export default {
   name: 'Reload',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ReloadSvg } },
+      { ...data, props: { ...data.props, icon: ReloadOutlineSvg } },
       children
-    )
+    ),
 };

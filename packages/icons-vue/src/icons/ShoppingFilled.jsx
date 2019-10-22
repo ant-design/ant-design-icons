@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ShoppingFilledSvg from '@ant-design/icons-svg/lib/asn/ShoppingFilled'
+import Icon from '../components/AntdIcon';
+import ShoppingFillSvg from '@ant-design/icons-svg/lib/fill/ShoppingFill';
 
 export default {
   name: 'ShoppingFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ShoppingFilledSvg } },
+      { ...data, props: { ...data.props, icon: ShoppingFillSvg } },
       children
-    )
+    ),
 };

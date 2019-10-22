@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AppstoreSvg from '@ant-design/icons-svg/lib/asn/AppstoreOutlined'
+import Icon from '../components/AntdIcon';
+import AppstoreOutlineSvg from '@ant-design/icons-svg/lib/outline/AppstoreOutline';
 
 export default {
   name: 'Appstore',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AppstoreSvg } },
+      { ...data, props: { ...data.props, icon: AppstoreOutlineSvg } },
       children
-    )
+    ),
 };

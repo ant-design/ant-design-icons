@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FilterTwoToneSvg from '@ant-design/icons-svg/lib/asn/FilterTwoTone'
+import Icon from '../components/AntdIcon';
+import FilterTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FilterTwoTone';
 
 export default {
   name: 'FilterTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: FilterTwoToneSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ContactsFilledSvg from '@ant-design/icons-svg/lib/asn/ContactsFilled'
+import Icon from '../components/AntdIcon';
+import ContactsFillSvg from '@ant-design/icons-svg/lib/fill/ContactsFill';
 
 export default {
   name: 'ContactsFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ContactsFilledSvg } },
+      { ...data, props: { ...data.props, icon: ContactsFillSvg } },
       children
-    )
+    ),
 };

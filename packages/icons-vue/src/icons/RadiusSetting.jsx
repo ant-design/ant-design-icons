@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RadiusSettingSvg from '@ant-design/icons-svg/lib/asn/RadiusSettingOutlined'
+import Icon from '../components/AntdIcon';
+import RadiusSettingOutlineSvg from '@ant-design/icons-svg/lib/outline/RadiusSettingOutline';
 
 export default {
   name: 'RadiusSetting',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RadiusSettingSvg } },
+      { ...data, props: { ...data.props, icon: RadiusSettingOutlineSvg } },
       children
-    )
+    ),
 };

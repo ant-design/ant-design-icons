@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PushpinFilledSvg from '@ant-design/icons-svg/lib/asn/PushpinFilled'
+import Icon from '../components/AntdIcon';
+import PushpinFillSvg from '@ant-design/icons-svg/lib/fill/PushpinFill';
 
 export default {
   name: 'PushpinFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PushpinFilledSvg } },
+      { ...data, props: { ...data.props, icon: PushpinFillSvg } },
       children
-    )
+    ),
 };

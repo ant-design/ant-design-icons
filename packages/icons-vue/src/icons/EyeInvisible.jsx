@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import EyeInvisibleSvg from '@ant-design/icons-svg/lib/asn/EyeInvisibleOutlined'
+import Icon from '../components/AntdIcon';
+import EyeInvisibleOutlineSvg from '@ant-design/icons-svg/lib/outline/EyeInvisibleOutline';
 
 export default {
   name: 'EyeInvisible',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: EyeInvisibleSvg } },
+      { ...data, props: { ...data.props, icon: EyeInvisibleOutlineSvg } },
       children
-    )
+    ),
 };

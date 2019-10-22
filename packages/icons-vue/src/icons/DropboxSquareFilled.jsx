@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DropboxSquareFilledSvg from '@ant-design/icons-svg/lib/asn/DropboxSquareFilled'
+import Icon from '../components/AntdIcon';
+import DropboxSquareFillSvg from '@ant-design/icons-svg/lib/fill/DropboxSquareFill';
 
 export default {
   name: 'DropboxSquareFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DropboxSquareFilledSvg } },
+      { ...data, props: { ...data.props, icon: DropboxSquareFillSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ThunderboltSvg from '@ant-design/icons-svg/lib/asn/ThunderboltOutlined'
+import Icon from '../components/AntdIcon';
+import ThunderboltOutlineSvg from '@ant-design/icons-svg/lib/outline/ThunderboltOutline';
 
 export default {
   name: 'Thunderbolt',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ThunderboltSvg } },
+      { ...data, props: { ...data.props, icon: ThunderboltOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import InsuranceFilledSvg from '@ant-design/icons-svg/lib/asn/InsuranceFilled'
+import Icon from '../components/AntdIcon';
+import InsuranceFillSvg from '@ant-design/icons-svg/lib/fill/InsuranceFill';
 
 export default {
   name: 'InsuranceFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: InsuranceFilledSvg } },
+      { ...data, props: { ...data.props, icon: InsuranceFillSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import MenuSvg from '@ant-design/icons-svg/lib/asn/MenuOutlined'
+import Icon from '../components/AntdIcon';
+import MenuOutlineSvg from '@ant-design/icons-svg/lib/outline/MenuOutline';
 
 export default {
   name: 'Menu',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: MenuSvg } },
+      { ...data, props: { ...data.props, icon: MenuOutlineSvg } },
       children
-    )
+    ),
 };

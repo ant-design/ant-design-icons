@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import TrademarkSvg from '@ant-design/icons-svg/lib/asn/TrademarkOutlined'
+import Icon from '../components/AntdIcon';
+import TrademarkOutlineSvg from '@ant-design/icons-svg/lib/outline/TrademarkOutline';
 
 export default {
   name: 'Trademark',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: TrademarkSvg } },
+      { ...data, props: { ...data.props, icon: TrademarkOutlineSvg } },
       children
-    )
+    ),
 };

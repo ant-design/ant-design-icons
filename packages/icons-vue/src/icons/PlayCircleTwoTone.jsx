@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PlayCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/PlayCircleTwoTone'
+import Icon from '../components/AntdIcon';
+import PlayCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/PlayCircleTwoTone';
 
 export default {
   name: 'PlayCircleTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: PlayCircleTwoToneSvg } },
       children
-    )
+    ),
 };

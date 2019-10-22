@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import GiftSvg from '@ant-design/icons-svg/lib/asn/GiftOutlined'
+import Icon from '../components/AntdIcon';
+import GiftOutlineSvg from '@ant-design/icons-svg/lib/outline/GiftOutline';
 
 export default {
   name: 'Gift',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: GiftSvg } },
+      { ...data, props: { ...data.props, icon: GiftOutlineSvg } },
       children
-    )
+    ),
 };

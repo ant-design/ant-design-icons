@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CodeSandboxSvg from '@ant-design/icons-svg/lib/asn/CodeSandboxOutlined'
+import Icon from '../components/AntdIcon';
+import CodeSandboxOutlineSvg from '@ant-design/icons-svg/lib/outline/CodeSandboxOutline';
 
 export default {
   name: 'CodeSandbox',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CodeSandboxSvg } },
+      { ...data, props: { ...data.props, icon: CodeSandboxOutlineSvg } },
       children
-    )
+    ),
 };

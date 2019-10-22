@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AudioSvg from '@ant-design/icons-svg/lib/asn/AudioOutlined'
+import Icon from '../components/AntdIcon';
+import AudioOutlineSvg from '@ant-design/icons-svg/lib/outline/AudioOutline';
 
 export default {
   name: 'Audio',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AudioSvg } },
+      { ...data, props: { ...data.props, icon: AudioOutlineSvg } },
       children
-    )
+    ),
 };

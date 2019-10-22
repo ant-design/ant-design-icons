@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PieChartFilledSvg from '@ant-design/icons-svg/lib/asn/PieChartFilled'
+import Icon from '../components/AntdIcon';
+import PieChartFillSvg from '@ant-design/icons-svg/lib/fill/PieChartFill';
 
 export default {
   name: 'PieChartFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PieChartFilledSvg } },
+      { ...data, props: { ...data.props, icon: PieChartFillSvg } },
       children
-    )
+    ),
 };

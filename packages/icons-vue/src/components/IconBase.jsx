@@ -3,12 +3,12 @@ import {
   getSecondaryColor,
   isIconDefinition,
   warning,
-  useInsertStyles
+  useInsertStyles,
 } from "../utils";
 
 const twoToneColorPalette = {
   primaryColor: "#333",
-  secondaryColor: "#E6E6E6"
+  secondaryColor: "#E6E6E6",
 };
 
 function setTwoToneColors({ primaryColor, secondaryColor }) {
@@ -19,7 +19,7 @@ function setTwoToneColors({ primaryColor, secondaryColor }) {
 
 function getTwoToneColors() {
   return {
-    ...twoToneColorPalette
+    ...twoToneColorPalette,
   };
 }
 
@@ -27,17 +27,17 @@ const IconBase = {
   functional: true,
   props: ["icon", "primaryColor", "secondaryColor"],
   render(h, ctx) {
-    const { data: { attrs } = {}, props = {}, listeners } = ctx;
+    const { data: { attrs, ...restData } = {}, props = {}, listeners } = ctx;
     const { icon, primaryColor, secondaryColor, ...restProps } = {
       ...attrs,
-      ...props
+      ...props,
     };
 
     let colors = twoToneColorPalette;
     if (primaryColor) {
       colors = {
         primaryColor,
-        secondaryColor: secondaryColor || getSecondaryColor(primaryColor)
+        secondaryColor: secondaryColor || getSecondaryColor(primaryColor),
       };
     }
 
@@ -56,23 +56,23 @@ const IconBase = {
     if (target && typeof target.icon === "function") {
       target = {
         ...target,
-        icon: target.icon(colors.primaryColor, colors.secondaryColor)
+        icon: target.icon(colors.primaryColor, colors.secondaryColor),
       };
     }
 
     return generate(h, target.icon, `svg-${target.name}`, {
-      ...ctx.data,
+      ...restData,
       attrs: {
         "data-icon": target.name,
         width: "1em",
         height: "1em",
         fill: "currentColor",
         "aria-hidden": "true",
-        ...restProps
+        ...restProps,
       },
-      on: listeners
+      on: listeners,
     });
-  }
+  },
 };
 
 IconBase.name = "IconVue";

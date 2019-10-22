@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import VerticalAlignBottomSvg from '@ant-design/icons-svg/lib/asn/VerticalAlignBottomOutlined'
+import Icon from '../components/AntdIcon';
+import VerticalAlignBottomOutlineSvg from '@ant-design/icons-svg/lib/outline/VerticalAlignBottomOutline';
 
 export default {
   name: 'VerticalAlignBottom',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: VerticalAlignBottomSvg } },
+      { ...data, props: { ...data.props, icon: VerticalAlignBottomOutlineSvg } },
       children
-    )
+    ),
 };

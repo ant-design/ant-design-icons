@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PlaySquareSvg from '@ant-design/icons-svg/lib/asn/PlaySquareOutlined'
+import Icon from '../components/AntdIcon';
+import PlaySquareOutlineSvg from '@ant-design/icons-svg/lib/outline/PlaySquareOutline';
 
 export default {
   name: 'PlaySquare',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PlaySquareSvg } },
+      { ...data, props: { ...data.props, icon: PlaySquareOutlineSvg } },
       children
-    )
+    ),
 };

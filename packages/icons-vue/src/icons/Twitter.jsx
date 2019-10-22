@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import TwitterSvg from '@ant-design/icons-svg/lib/asn/TwitterOutlined'
+import Icon from '../components/AntdIcon';
+import TwitterOutlineSvg from '@ant-design/icons-svg/lib/outline/TwitterOutline';
 
 export default {
   name: 'Twitter',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: TwitterSvg } },
+      { ...data, props: { ...data.props, icon: TwitterOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import LayoutSvg from '@ant-design/icons-svg/lib/asn/LayoutOutlined'
+import Icon from '../components/AntdIcon';
+import LayoutOutlineSvg from '@ant-design/icons-svg/lib/outline/LayoutOutline';
 
 export default {
   name: 'Layout',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: LayoutSvg } },
+      { ...data, props: { ...data.props, icon: LayoutOutlineSvg } },
       children
-    )
+    ),
 };

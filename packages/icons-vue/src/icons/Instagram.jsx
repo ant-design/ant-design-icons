@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import InstagramSvg from '@ant-design/icons-svg/lib/asn/InstagramOutlined'
+import Icon from '../components/AntdIcon';
+import InstagramOutlineSvg from '@ant-design/icons-svg/lib/outline/InstagramOutline';
 
 export default {
   name: 'Instagram',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: InstagramSvg } },
+      { ...data, props: { ...data.props, icon: InstagramOutlineSvg } },
       children
-    )
+    ),
 };

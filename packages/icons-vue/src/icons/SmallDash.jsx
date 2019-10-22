@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SmallDashSvg from '@ant-design/icons-svg/lib/asn/SmallDashOutlined'
+import Icon from '../components/AntdIcon';
+import SmallDashOutlineSvg from '@ant-design/icons-svg/lib/outline/SmallDashOutline';
 
 export default {
   name: 'SmallDash',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SmallDashSvg } },
+      { ...data, props: { ...data.props, icon: SmallDashOutlineSvg } },
       children
-    )
+    ),
 };

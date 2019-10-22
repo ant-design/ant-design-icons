@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ShrinkSvg from '@ant-design/icons-svg/lib/asn/ShrinkOutlined'
+import Icon from '../components/AntdIcon';
+import ShrinkOutlineSvg from '@ant-design/icons-svg/lib/outline/ShrinkOutline';
 
 export default {
   name: 'Shrink',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ShrinkSvg } },
+      { ...data, props: { ...data.props, icon: ShrinkOutlineSvg } },
       children
-    )
+    ),
 };

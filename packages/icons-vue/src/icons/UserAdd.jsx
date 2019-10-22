@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import UserAddSvg from '@ant-design/icons-svg/lib/asn/UserAddOutlined'
+import Icon from '../components/AntdIcon';
+import UserAddOutlineSvg from '@ant-design/icons-svg/lib/outline/UserAddOutline';
 
 export default {
   name: 'UserAdd',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: UserAddSvg } },
+      { ...data, props: { ...data.props, icon: UserAddOutlineSvg } },
       children
-    )
+    ),
 };

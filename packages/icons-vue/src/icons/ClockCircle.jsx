@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ClockCircleSvg from '@ant-design/icons-svg/lib/asn/ClockCircleOutlined'
+import Icon from '../components/AntdIcon';
+import ClockCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/ClockCircleOutline';
 
 export default {
   name: 'ClockCircle',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ClockCircleSvg } },
+      { ...data, props: { ...data.props, icon: ClockCircleOutlineSvg } },
       children
-    )
+    ),
 };

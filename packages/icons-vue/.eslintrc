@@ -1,4 +1,5 @@
 {
+  "root": true,
   "env": {
     "browser": true,
     "node": true,
@@ -9,14 +10,26 @@
   "parserOptions": {
     "parser": "babel-eslint"
   },
-  "extends": ["plugin:vue/recommended"],
+  "extends": ["plugin:vue/recommended", "prettier"],
   "rules": {
     "comma-dangle": [2, "always-multiline"],
     "no-var": "error",
-    "no-unused-vars": "warn",
     "camelcase": "off",
-    "eol-last": "off",
+    "no-extra-boolean-cast": "off",
     "semi": ["error", "always"],
-    "space-before-function-paren": "off"
+    "vue/require-prop-types": "off",
+    "vue/require-default-prop": "off",
+    "vue/no-reserved-keys": "off",
+    "vue/prop-name-casing": "off",
+    "vue/max-attributes-per-line": [
+      2,
+      {
+        "singleline": 20,
+        "multiline": {
+          "max": 1,
+          "allowFirstLine": false
+        }
+      }
+    ]
   }
 }

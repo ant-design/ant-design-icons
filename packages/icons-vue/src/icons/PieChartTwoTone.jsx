@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PieChartTwoToneSvg from '@ant-design/icons-svg/lib/asn/PieChartTwoTone'
+import Icon from '../components/AntdIcon';
+import PieChartTwoToneSvg from '@ant-design/icons-svg/lib/twotone/PieChartTwoTone';
 
 export default {
   name: 'PieChartTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: PieChartTwoToneSvg } },
       children
-    )
+    ),
 };

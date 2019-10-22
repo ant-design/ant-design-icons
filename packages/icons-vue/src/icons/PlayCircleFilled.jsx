@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PlayCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PlayCircleFilled'
+import Icon from '../components/AntdIcon';
+import PlayCircleFillSvg from '@ant-design/icons-svg/lib/fill/PlayCircleFill';
 
 export default {
   name: 'PlayCircleFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PlayCircleFilledSvg } },
+      { ...data, props: { ...data.props, icon: PlayCircleFillSvg } },
       children
-    )
+    ),
 };

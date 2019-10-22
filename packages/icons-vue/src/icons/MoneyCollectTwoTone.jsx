@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import MoneyCollectTwoToneSvg from '@ant-design/icons-svg/lib/asn/MoneyCollectTwoTone'
+import Icon from '../components/AntdIcon';
+import MoneyCollectTwoToneSvg from '@ant-design/icons-svg/lib/twotone/MoneyCollectTwoTone';
 
 export default {
   name: 'MoneyCollectTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: MoneyCollectTwoToneSvg } },
       children
-    )
+    ),
 };

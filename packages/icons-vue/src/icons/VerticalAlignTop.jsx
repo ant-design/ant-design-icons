@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import VerticalAlignTopSvg from '@ant-design/icons-svg/lib/asn/VerticalAlignTopOutlined'
+import Icon from '../components/AntdIcon';
+import VerticalAlignTopOutlineSvg from '@ant-design/icons-svg/lib/outline/VerticalAlignTopOutline';
 
 export default {
   name: 'VerticalAlignTop',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: VerticalAlignTopSvg } },
+      { ...data, props: { ...data.props, icon: VerticalAlignTopOutlineSvg } },
       children
-    )
+    ),
 };

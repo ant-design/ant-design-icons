@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import YuqueSvg from '@ant-design/icons-svg/lib/asn/YuqueOutlined'
+import Icon from '../components/AntdIcon';
+import YuqueOutlineSvg from '@ant-design/icons-svg/lib/outline/YuqueOutline';
 
 export default {
   name: 'Yuque',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: YuqueSvg } },
+      { ...data, props: { ...data.props, icon: YuqueOutlineSvg } },
       children
-    )
+    ),
 };

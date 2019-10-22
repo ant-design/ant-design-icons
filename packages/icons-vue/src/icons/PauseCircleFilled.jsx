@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PauseCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PauseCircleFilled'
+import Icon from '../components/AntdIcon';
+import PauseCircleFillSvg from '@ant-design/icons-svg/lib/fill/PauseCircleFill';
 
 export default {
   name: 'PauseCircleFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PauseCircleFilledSvg } },
+      { ...data, props: { ...data.props, icon: PauseCircleFillSvg } },
       children
-    )
+    ),
 };

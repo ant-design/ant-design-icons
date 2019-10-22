@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import HourglassTwoToneSvg from '@ant-design/icons-svg/lib/asn/HourglassTwoTone'
+import Icon from '../components/AntdIcon';
+import HourglassTwoToneSvg from '@ant-design/icons-svg/lib/twotone/HourglassTwoTone';
 
 export default {
   name: 'HourglassTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: HourglassTwoToneSvg } },
       children
-    )
+    ),
 };

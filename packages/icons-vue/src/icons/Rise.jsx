@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RiseSvg from '@ant-design/icons-svg/lib/asn/RiseOutlined'
+import Icon from '../components/AntdIcon';
+import RiseOutlineSvg from '@ant-design/icons-svg/lib/outline/RiseOutline';
 
 export default {
   name: 'Rise',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RiseSvg } },
+      { ...data, props: { ...data.props, icon: RiseOutlineSvg } },
       children
-    )
+    ),
 };

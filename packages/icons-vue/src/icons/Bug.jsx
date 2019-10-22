@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import BugSvg from '@ant-design/icons-svg/lib/asn/BugOutlined'
+import Icon from '../components/AntdIcon';
+import BugOutlineSvg from '@ant-design/icons-svg/lib/outline/BugOutline';
 
 export default {
   name: 'Bug',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BugSvg } },
+      { ...data, props: { ...data.props, icon: BugOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import HistorySvg from '@ant-design/icons-svg/lib/asn/HistoryOutlined'
+import Icon from '../components/AntdIcon';
+import HistoryOutlineSvg from '@ant-design/icons-svg/lib/outline/HistoryOutline';
 
 export default {
   name: 'History',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: HistorySvg } },
+      { ...data, props: { ...data.props, icon: HistoryOutlineSvg } },
       children
-    )
+    ),
 };

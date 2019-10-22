@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FontSizeSvg from '@ant-design/icons-svg/lib/asn/FontSizeOutlined'
+import Icon from '../components/AntdIcon';
+import FontSizeOutlineSvg from '@ant-design/icons-svg/lib/outline/FontSizeOutline';
 
 export default {
   name: 'FontSize',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FontSizeSvg } },
+      { ...data, props: { ...data.props, icon: FontSizeOutlineSvg } },
       children
-    )
+    ),
 };

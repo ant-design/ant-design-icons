@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AlibabaSvg from '@ant-design/icons-svg/lib/asn/AlibabaOutlined'
+import Icon from '../components/AntdIcon';
+import AlibabaOutlineSvg from '@ant-design/icons-svg/lib/outline/AlibabaOutline';
 
 export default {
   name: 'Alibaba',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AlibabaSvg } },
+      { ...data, props: { ...data.props, icon: AlibabaOutlineSvg } },
       children
-    )
+    ),
 };

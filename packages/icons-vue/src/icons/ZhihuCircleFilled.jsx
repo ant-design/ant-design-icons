@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ZhihuCircleFilledSvg from '@ant-design/icons-svg/lib/asn/ZhihuCircleFilled'
+import Icon from '../components/AntdIcon';
+import ZhihuCircleFillSvg from '@ant-design/icons-svg/lib/fill/ZhihuCircleFill';
 
 export default {
   name: 'ZhihuCircleFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ZhihuCircleFilledSvg } },
+      { ...data, props: { ...data.props, icon: ZhihuCircleFillSvg } },
       children
-    )
+    ),
 };

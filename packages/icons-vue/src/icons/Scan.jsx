@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ScanSvg from '@ant-design/icons-svg/lib/asn/ScanOutlined'
+import Icon from '../components/AntdIcon';
+import ScanOutlineSvg from '@ant-design/icons-svg/lib/outline/ScanOutline';
 
 export default {
   name: 'Scan',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ScanSvg } },
+      { ...data, props: { ...data.props, icon: ScanOutlineSvg } },
       children
-    )
+    ),
 };

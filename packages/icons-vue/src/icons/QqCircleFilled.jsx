@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import QqCircleFilledSvg from '@ant-design/icons-svg/lib/asn/QqCircleFilled'
+import Icon from '../components/AntdIcon';
+import QqCircleFillSvg from '@ant-design/icons-svg/lib/fill/QqCircleFill';
 
 export default {
   name: 'QqCircleFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: QqCircleFilledSvg } },
+      { ...data, props: { ...data.props, icon: QqCircleFillSvg } },
       children
-    )
+    ),
 };

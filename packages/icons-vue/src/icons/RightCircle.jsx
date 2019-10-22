@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RightCircleSvg from '@ant-design/icons-svg/lib/asn/RightCircleOutlined'
+import Icon from '../components/AntdIcon';
+import RightCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/RightCircleOutline';
 
 export default {
   name: 'RightCircle',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RightCircleSvg } },
+      { ...data, props: { ...data.props, icon: RightCircleOutlineSvg } },
       children
-    )
+    ),
 };

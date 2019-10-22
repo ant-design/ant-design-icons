@@ -57,7 +57,7 @@ export function generate(h, node, key, rootProps) {
     {
       key,
       ...rootProps,
-      attrs: { ...normalizeAttrs(node.attrs), ...rootProps.attrs }
+      attrs: { ...normalizeAttrs(node.attrs), ...rootProps.attrs },
     },
     (node.children || []).map((child, index) =>
       generate(h, child, `${key}-${node.tag}-${index}`)
@@ -77,7 +77,7 @@ export const svgBaseProps = {
   height: "1em",
   fill: "currentColor",
   "aria-hidden": "true",
-  focusable: "false"
+  focusable: "false",
 };
 
 export const iconStyles = `

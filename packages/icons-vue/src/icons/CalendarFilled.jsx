@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CalendarFilledSvg from '@ant-design/icons-svg/lib/asn/CalendarFilled'
+import Icon from '../components/AntdIcon';
+import CalendarFillSvg from '@ant-design/icons-svg/lib/fill/CalendarFill';
 
 export default {
   name: 'CalendarFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CalendarFilledSvg } },
+      { ...data, props: { ...data.props, icon: CalendarFillSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import GoogleCircleFilledSvg from '@ant-design/icons-svg/lib/asn/GoogleCircleFilled'
+import Icon from '../components/AntdIcon';
+import GoogleCircleFillSvg from '@ant-design/icons-svg/lib/fill/GoogleCircleFill';
 
 export default {
   name: 'GoogleCircleFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: GoogleCircleFilledSvg } },
+      { ...data, props: { ...data.props, icon: GoogleCircleFillSvg } },
       children
-    )
+    ),
 };

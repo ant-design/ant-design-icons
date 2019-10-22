@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ColumHeightSvg from '@ant-design/icons-svg/lib/asn/ColumHeightOutlined'
+import Icon from '../components/AntdIcon';
+import ColumHeightOutlineSvg from '@ant-design/icons-svg/lib/outline/ColumHeightOutline';
 
 export default {
   name: 'ColumHeight',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ColumHeightSvg } },
+      { ...data, props: { ...data.props, icon: ColumHeightOutlineSvg } },
       children
-    )
+    ),
 };

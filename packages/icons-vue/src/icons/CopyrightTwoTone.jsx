@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CopyrightTwoToneSvg from '@ant-design/icons-svg/lib/asn/CopyrightTwoTone'
+import Icon from '../components/AntdIcon';
+import CopyrightTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CopyrightTwoTone';
 
 export default {
   name: 'CopyrightTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: CopyrightTwoToneSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import OrderedListSvg from '@ant-design/icons-svg/lib/asn/OrderedListOutlined'
+import Icon from '../components/AntdIcon';
+import OrderedListOutlineSvg from '@ant-design/icons-svg/lib/outline/OrderedListOutline';
 
 export default {
   name: 'OrderedList',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: OrderedListSvg } },
+      { ...data, props: { ...data.props, icon: OrderedListOutlineSvg } },
       children
-    )
+    ),
 };

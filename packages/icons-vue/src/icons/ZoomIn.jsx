@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ZoomInSvg from '@ant-design/icons-svg/lib/asn/ZoomInOutlined'
+import Icon from '../components/AntdIcon';
+import ZoomInOutlineSvg from '@ant-design/icons-svg/lib/outline/ZoomInOutline';
 
 export default {
   name: 'ZoomIn',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ZoomInSvg } },
+      { ...data, props: { ...data.props, icon: ZoomInOutlineSvg } },
       children
-    )
+    ),
 };

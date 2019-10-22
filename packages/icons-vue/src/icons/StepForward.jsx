@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import StepForwardSvg from '@ant-design/icons-svg/lib/asn/StepForwardOutlined'
+import Icon from '../components/AntdIcon';
+import StepForwardOutlineSvg from '@ant-design/icons-svg/lib/outline/StepForwardOutline';
 
 export default {
   name: 'StepForward',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: StepForwardSvg } },
+      { ...data, props: { ...data.props, icon: StepForwardOutlineSvg } },
       children
-    )
+    ),
 };

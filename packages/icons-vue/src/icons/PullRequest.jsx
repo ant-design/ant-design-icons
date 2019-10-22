@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PullRequestSvg from '@ant-design/icons-svg/lib/asn/PullRequestOutlined'
+import Icon from '../components/AntdIcon';
+import PullRequestOutlineSvg from '@ant-design/icons-svg/lib/outline/PullRequestOutline';
 
 export default {
   name: 'PullRequest',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PullRequestSvg } },
+      { ...data, props: { ...data.props, icon: PullRequestOutlineSvg } },
       children
-    )
+    ),
 };

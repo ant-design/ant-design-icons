@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PicRightSvg from '@ant-design/icons-svg/lib/asn/PicRightOutlined'
+import Icon from '../components/AntdIcon';
+import PicRightOutlineSvg from '@ant-design/icons-svg/lib/outline/PicRightOutline';
 
 export default {
   name: 'PicRight',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PicRightSvg } },
+      { ...data, props: { ...data.props, icon: PicRightOutlineSvg } },
       children
-    )
+    ),
 };

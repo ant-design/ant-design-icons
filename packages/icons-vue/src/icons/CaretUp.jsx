@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CaretUpSvg from '@ant-design/icons-svg/lib/asn/CaretUpOutlined'
+import Icon from '../components/AntdIcon';
+import CaretUpOutlineSvg from '@ant-design/icons-svg/lib/outline/CaretUpOutline';
 
 export default {
   name: 'CaretUp',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CaretUpSvg } },
+      { ...data, props: { ...data.props, icon: CaretUpOutlineSvg } },
       children
-    )
+    ),
 };

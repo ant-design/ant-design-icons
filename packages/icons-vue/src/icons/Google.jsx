@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import GoogleSvg from '@ant-design/icons-svg/lib/asn/GoogleOutlined'
+import Icon from '../components/AntdIcon';
+import GoogleOutlineSvg from '@ant-design/icons-svg/lib/outline/GoogleOutline';
 
 export default {
   name: 'Google',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: GoogleSvg } },
+      { ...data, props: { ...data.props, icon: GoogleOutlineSvg } },
       children
-    )
+    ),
 };

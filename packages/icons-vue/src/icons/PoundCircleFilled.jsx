@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PoundCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PoundCircleFilled'
+import Icon from '../components/AntdIcon';
+import PoundCircleFillSvg from '@ant-design/icons-svg/lib/fill/PoundCircleFill';
 
 export default {
   name: 'PoundCircleFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PoundCircleFilledSvg } },
+      { ...data, props: { ...data.props, icon: PoundCircleFillSvg } },
       children
-    )
+    ),
 };

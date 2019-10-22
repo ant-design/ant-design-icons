@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import QuestionCircleSvg from '@ant-design/icons-svg/lib/asn/QuestionCircleOutlined'
+import Icon from '../components/AntdIcon';
+import QuestionCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/QuestionCircleOutline';
 
 export default {
   name: 'QuestionCircle',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: QuestionCircleSvg } },
+      { ...data, props: { ...data.props, icon: QuestionCircleOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SkypeSvg from '@ant-design/icons-svg/lib/asn/SkypeOutlined'
+import Icon from '../components/AntdIcon';
+import SkypeOutlineSvg from '@ant-design/icons-svg/lib/outline/SkypeOutline';
 
 export default {
   name: 'Skype',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SkypeSvg } },
+      { ...data, props: { ...data.props, icon: SkypeOutlineSvg } },
       children
-    )
+    ),
 };

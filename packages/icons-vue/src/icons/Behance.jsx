@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import BehanceSvg from '@ant-design/icons-svg/lib/asn/BehanceOutlined'
+import Icon from '../components/AntdIcon';
+import BehanceOutlineSvg from '@ant-design/icons-svg/lib/outline/BehanceOutline';
 
 export default {
   name: 'Behance',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BehanceSvg } },
+      { ...data, props: { ...data.props, icon: BehanceOutlineSvg } },
       children
-    )
+    ),
 };

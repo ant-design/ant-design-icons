@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import IeSvg from '@ant-design/icons-svg/lib/asn/IeOutlined'
+import Icon from '../components/AntdIcon';
+import IeOutlineSvg from '@ant-design/icons-svg/lib/outline/IeOutline';
 
 export default {
   name: 'Ie',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: IeSvg } },
+      { ...data, props: { ...data.props, icon: IeOutlineSvg } },
       children
-    )
+    ),
 };

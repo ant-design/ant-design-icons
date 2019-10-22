@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DeploymentUnitSvg from '@ant-design/icons-svg/lib/asn/DeploymentUnitOutlined'
+import Icon from '../components/AntdIcon';
+import DeploymentUnitOutlineSvg from '@ant-design/icons-svg/lib/outline/DeploymentUnitOutline';
 
 export default {
   name: 'DeploymentUnit',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DeploymentUnitSvg } },
+      { ...data, props: { ...data.props, icon: DeploymentUnitOutlineSvg } },
       children
-    )
+    ),
 };

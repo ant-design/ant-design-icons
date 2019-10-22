@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DribbbleSquareSvg from '@ant-design/icons-svg/lib/asn/DribbbleSquareOutlined'
+import Icon from '../components/AntdIcon';
+import DribbbleSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/DribbbleSquareOutline';
 
 export default {
   name: 'DribbbleSquare',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DribbbleSquareSvg } },
+      { ...data, props: { ...data.props, icon: DribbbleSquareOutlineSvg } },
       children
-    )
+    ),
 };

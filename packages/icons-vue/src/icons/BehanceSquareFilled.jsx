@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import BehanceSquareFilledSvg from '@ant-design/icons-svg/lib/asn/BehanceSquareFilled'
+import Icon from '../components/AntdIcon';
+import BehanceSquareFillSvg from '@ant-design/icons-svg/lib/fill/BehanceSquareFill';
 
 export default {
   name: 'BehanceSquareFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BehanceSquareFilledSvg } },
+      { ...data, props: { ...data.props, icon: BehanceSquareFillSvg } },
       children
-    )
+    ),
 };

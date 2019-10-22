@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import BlockSvg from '@ant-design/icons-svg/lib/asn/BlockOutlined'
+import Icon from '../components/AntdIcon';
+import BlockOutlineSvg from '@ant-design/icons-svg/lib/outline/BlockOutline';
 
 export default {
   name: 'Block',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BlockSvg } },
+      { ...data, props: { ...data.props, icon: BlockOutlineSvg } },
       children
-    )
+    ),
 };

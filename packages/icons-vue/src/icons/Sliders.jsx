@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SlidersSvg from '@ant-design/icons-svg/lib/asn/SlidersOutlined'
+import Icon from '../components/AntdIcon';
+import SlidersOutlineSvg from '@ant-design/icons-svg/lib/outline/SlidersOutline';
 
 export default {
   name: 'Sliders',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SlidersSvg } },
+      { ...data, props: { ...data.props, icon: SlidersOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import WindowsSvg from '@ant-design/icons-svg/lib/asn/WindowsOutlined'
+import Icon from '../components/AntdIcon';
+import WindowsOutlineSvg from '@ant-design/icons-svg/lib/outline/WindowsOutline';
 
 export default {
   name: 'Windows',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: WindowsSvg } },
+      { ...data, props: { ...data.props, icon: WindowsOutlineSvg } },
       children
-    )
+    ),
 };

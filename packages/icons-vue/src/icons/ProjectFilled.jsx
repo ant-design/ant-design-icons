@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ProjectFilledSvg from '@ant-design/icons-svg/lib/asn/ProjectFilled'
+import Icon from '../components/AntdIcon';
+import ProjectFillSvg from '@ant-design/icons-svg/lib/fill/ProjectFill';
 
 export default {
   name: 'ProjectFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ProjectFilledSvg } },
+      { ...data, props: { ...data.props, icon: ProjectFillSvg } },
       children
-    )
+    ),
 };

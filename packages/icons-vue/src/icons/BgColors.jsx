@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import BgColorsSvg from '@ant-design/icons-svg/lib/asn/BgColorsOutlined'
+import Icon from '../components/AntdIcon';
+import BgColorsOutlineSvg from '@ant-design/icons-svg/lib/outline/BgColorsOutline';
 
 export default {
   name: 'BgColors',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BgColorsSvg } },
+      { ...data, props: { ...data.props, icon: BgColorsOutlineSvg } },
       children
-    )
+    ),
 };

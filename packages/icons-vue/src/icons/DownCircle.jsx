@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DownCircleSvg from '@ant-design/icons-svg/lib/asn/DownCircleOutlined'
+import Icon from '../components/AntdIcon';
+import DownCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/DownCircleOutline';
 
 export default {
   name: 'DownCircle',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DownCircleSvg } },
+      { ...data, props: { ...data.props, icon: DownCircleOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import VerticalLeftSvg from '@ant-design/icons-svg/lib/asn/VerticalLeftOutlined'
+import Icon from '../components/AntdIcon';
+import VerticalLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/VerticalLeftOutline';
 
 export default {
   name: 'VerticalLeft',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: VerticalLeftSvg } },
+      { ...data, props: { ...data.props, icon: VerticalLeftOutlineSvg } },
       children
-    )
+    ),
 };

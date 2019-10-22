@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CopyrightCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CopyrightCircleFilled'
+import Icon from '../components/AntdIcon';
+import CopyrightCircleFillSvg from '@ant-design/icons-svg/lib/fill/CopyrightCircleFill';
 
 export default {
   name: 'CopyrightCircleFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CopyrightCircleFilledSvg } },
+      { ...data, props: { ...data.props, icon: CopyrightCircleFillSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import MedicineBoxFilledSvg from '@ant-design/icons-svg/lib/asn/MedicineBoxFilled'
+import Icon from '../components/AntdIcon';
+import MedicineBoxFillSvg from '@ant-design/icons-svg/lib/fill/MedicineBoxFill';
 
 export default {
   name: 'MedicineBoxFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: MedicineBoxFilledSvg } },
+      { ...data, props: { ...data.props, icon: MedicineBoxFillSvg } },
       children
-    )
+    ),
 };

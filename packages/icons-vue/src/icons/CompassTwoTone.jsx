@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CompassTwoToneSvg from '@ant-design/icons-svg/lib/asn/CompassTwoTone'
+import Icon from '../components/AntdIcon';
+import CompassTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CompassTwoTone';
 
 export default {
   name: 'CompassTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: CompassTwoToneSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RedoSvg from '@ant-design/icons-svg/lib/asn/RedoOutlined'
+import Icon from '../components/AntdIcon';
+import RedoOutlineSvg from '@ant-design/icons-svg/lib/outline/RedoOutline';
 
 export default {
   name: 'Redo',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RedoSvg } },
+      { ...data, props: { ...data.props, icon: RedoOutlineSvg } },
       children
-    )
+    ),
 };

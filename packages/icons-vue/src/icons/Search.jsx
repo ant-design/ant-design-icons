@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SearchSvg from '@ant-design/icons-svg/lib/asn/SearchOutlined'
+import Icon from '../components/AntdIcon';
+import SearchOutlineSvg from '@ant-design/icons-svg/lib/outline/SearchOutline';
 
 export default {
   name: 'Search',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SearchSvg } },
+      { ...data, props: { ...data.props, icon: SearchOutlineSvg } },
       children
-    )
+    ),
 };

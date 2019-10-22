@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AlipayCircleSvg from '@ant-design/icons-svg/lib/asn/AlipayCircleOutlined'
+import Icon from '../components/AntdIcon';
+import AlipayCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/AlipayCircleOutline';
 
 export default {
   name: 'AlipayCircle',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AlipayCircleSvg } },
+      { ...data, props: { ...data.props, icon: AlipayCircleOutlineSvg } },
       children
-    )
+    ),
 };

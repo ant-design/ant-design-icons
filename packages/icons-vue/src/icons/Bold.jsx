@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import BoldSvg from '@ant-design/icons-svg/lib/asn/BoldOutlined'
+import Icon from '../components/AntdIcon';
+import BoldOutlineSvg from '@ant-design/icons-svg/lib/outline/BoldOutline';
 
 export default {
   name: 'Bold',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BoldSvg } },
+      { ...data, props: { ...data.props, icon: BoldOutlineSvg } },
       children
-    )
+    ),
 };

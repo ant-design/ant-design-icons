@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FrownTwoToneSvg from '@ant-design/icons-svg/lib/asn/FrownTwoTone'
+import Icon from '../components/AntdIcon';
+import FrownTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FrownTwoTone';
 
 export default {
   name: 'FrownTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: FrownTwoToneSvg } },
       children
-    )
+    ),
 };

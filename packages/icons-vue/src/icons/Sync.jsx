@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SyncSvg from '@ant-design/icons-svg/lib/asn/SyncOutlined'
+import Icon from '../components/AntdIcon';
+import SyncOutlineSvg from '@ant-design/icons-svg/lib/outline/SyncOutline';
 
 export default {
   name: 'Sync',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SyncSvg } },
+      { ...data, props: { ...data.props, icon: SyncOutlineSvg } },
       children
-    )
+    ),
 };

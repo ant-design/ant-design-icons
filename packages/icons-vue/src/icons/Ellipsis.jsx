@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import EllipsisSvg from '@ant-design/icons-svg/lib/asn/EllipsisOutlined'
+import Icon from '../components/AntdIcon';
+import EllipsisOutlineSvg from '@ant-design/icons-svg/lib/outline/EllipsisOutline';
 
 export default {
   name: 'Ellipsis',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: EllipsisSvg } },
+      { ...data, props: { ...data.props, icon: EllipsisOutlineSvg } },
       children
-    )
+    ),
 };

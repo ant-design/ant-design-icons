@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CodeSvg from '@ant-design/icons-svg/lib/asn/CodeOutlined'
+import Icon from '../components/AntdIcon';
+import CodeOutlineSvg from '@ant-design/icons-svg/lib/outline/CodeOutline';
 
 export default {
   name: 'Code',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CodeSvg } },
+      { ...data, props: { ...data.props, icon: CodeOutlineSvg } },
       children
-    )
+    ),
 };

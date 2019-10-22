@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PayCircleSvg from '@ant-design/icons-svg/lib/asn/PayCircleOutlined'
+import Icon from '../components/AntdIcon';
+import PayCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/PayCircleOutline';
 
 export default {
   name: 'PayCircle',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PayCircleSvg } },
+      { ...data, props: { ...data.props, icon: PayCircleOutlineSvg } },
       children
-    )
+    ),
 };

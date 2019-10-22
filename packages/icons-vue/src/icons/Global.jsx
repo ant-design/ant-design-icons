@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import GlobalSvg from '@ant-design/icons-svg/lib/asn/GlobalOutlined'
+import Icon from '../components/AntdIcon';
+import GlobalOutlineSvg from '@ant-design/icons-svg/lib/outline/GlobalOutline';
 
 export default {
   name: 'Global',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: GlobalSvg } },
+      { ...data, props: { ...data.props, icon: GlobalOutlineSvg } },
       children
-    )
+    ),
 };

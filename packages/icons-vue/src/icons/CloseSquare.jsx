@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CloseSquareSvg from '@ant-design/icons-svg/lib/asn/CloseSquareOutlined'
+import Icon from '../components/AntdIcon';
+import CloseSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/CloseSquareOutline';
 
 export default {
   name: 'CloseSquare',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CloseSquareSvg } },
+      { ...data, props: { ...data.props, icon: CloseSquareOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AlipaySvg from '@ant-design/icons-svg/lib/asn/AlipayOutlined'
+import Icon from '../components/AntdIcon';
+import AlipayOutlineSvg from '@ant-design/icons-svg/lib/outline/AlipayOutline';
 
 export default {
   name: 'Alipay',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AlipaySvg } },
+      { ...data, props: { ...data.props, icon: AlipayOutlineSvg } },
       children
-    )
+    ),
 };

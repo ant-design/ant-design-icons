@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import UpCircleSvg from '@ant-design/icons-svg/lib/asn/UpCircleOutlined'
+import Icon from '../components/AntdIcon';
+import UpCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/UpCircleOutline';
 
 export default {
   name: 'UpCircle',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: UpCircleSvg } },
+      { ...data, props: { ...data.props, icon: UpCircleOutlineSvg } },
       children
-    )
+    ),
 };

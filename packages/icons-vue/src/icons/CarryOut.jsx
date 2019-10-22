@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CarryOutSvg from '@ant-design/icons-svg/lib/asn/CarryOutOutlined'
+import Icon from '../components/AntdIcon';
+import CarryOutOutlineSvg from '@ant-design/icons-svg/lib/outline/CarryOutOutline';
 
 export default {
   name: 'CarryOut',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CarryOutSvg } },
+      { ...data, props: { ...data.props, icon: CarryOutOutlineSvg } },
       children
-    )
+    ),
 };

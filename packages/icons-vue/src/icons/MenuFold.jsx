@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import MenuFoldSvg from '@ant-design/icons-svg/lib/asn/MenuFoldOutlined'
+import Icon from '../components/AntdIcon';
+import MenuFoldOutlineSvg from '@ant-design/icons-svg/lib/outline/MenuFoldOutline';
 
 export default {
   name: 'MenuFold',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: MenuFoldSvg } },
+      { ...data, props: { ...data.props, icon: MenuFoldOutlineSvg } },
       children
-    )
+    ),
 };

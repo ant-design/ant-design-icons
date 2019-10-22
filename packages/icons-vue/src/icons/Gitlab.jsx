@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import GitlabSvg from '@ant-design/icons-svg/lib/asn/GitlabOutlined'
+import Icon from '../components/AntdIcon';
+import GitlabOutlineSvg from '@ant-design/icons-svg/lib/outline/GitlabOutline';
 
 export default {
   name: 'Gitlab',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: GitlabSvg } },
+      { ...data, props: { ...data.props, icon: GitlabOutlineSvg } },
       children
-    )
+    ),
 };

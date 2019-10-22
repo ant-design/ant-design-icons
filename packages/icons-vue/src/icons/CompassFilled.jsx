@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CompassFilledSvg from '@ant-design/icons-svg/lib/asn/CompassFilled'
+import Icon from '../components/AntdIcon';
+import CompassFillSvg from '@ant-design/icons-svg/lib/fill/CompassFill';
 
 export default {
   name: 'CompassFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CompassFilledSvg } },
+      { ...data, props: { ...data.props, icon: CompassFillSvg } },
       children
-    )
+    ),
 };

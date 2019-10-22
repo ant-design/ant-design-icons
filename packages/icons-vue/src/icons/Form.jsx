@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FormSvg from '@ant-design/icons-svg/lib/asn/FormOutlined'
+import Icon from '../components/AntdIcon';
+import FormOutlineSvg from '@ant-design/icons-svg/lib/outline/FormOutline';
 
 export default {
   name: 'Form',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FormSvg } },
+      { ...data, props: { ...data.props, icon: FormOutlineSvg } },
       children
-    )
+    ),
 };

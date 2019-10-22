@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FilePdfSvg from '@ant-design/icons-svg/lib/asn/FilePdfOutlined'
+import Icon from '../components/AntdIcon';
+import FilePdfOutlineSvg from '@ant-design/icons-svg/lib/outline/FilePdfOutline';
 
 export default {
   name: 'FilePdf',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FilePdfSvg } },
+      { ...data, props: { ...data.props, icon: FilePdfOutlineSvg } },
       children
-    )
+    ),
 };

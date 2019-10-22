@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CloudSyncSvg from '@ant-design/icons-svg/lib/asn/CloudSyncOutlined'
+import Icon from '../components/AntdIcon';
+import CloudSyncOutlineSvg from '@ant-design/icons-svg/lib/outline/CloudSyncOutline';
 
 export default {
   name: 'CloudSync',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CloudSyncSvg } },
+      { ...data, props: { ...data.props, icon: CloudSyncOutlineSvg } },
       children
-    )
+    ),
 };

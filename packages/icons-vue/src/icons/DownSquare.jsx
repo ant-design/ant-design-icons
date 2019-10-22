@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DownSquareSvg from '@ant-design/icons-svg/lib/asn/DownSquareOutlined'
+import Icon from '../components/AntdIcon';
+import DownSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/DownSquareOutline';
 
 export default {
   name: 'DownSquare',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DownSquareSvg } },
+      { ...data, props: { ...data.props, icon: DownSquareOutlineSvg } },
       children
-    )
+    ),
 };

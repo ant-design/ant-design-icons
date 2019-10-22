@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ClusterSvg from '@ant-design/icons-svg/lib/asn/ClusterOutlined'
+import Icon from '../components/AntdIcon';
+import ClusterOutlineSvg from '@ant-design/icons-svg/lib/outline/ClusterOutline';
 
 export default {
   name: 'Cluster',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ClusterSvg } },
+      { ...data, props: { ...data.props, icon: ClusterOutlineSvg } },
       children
-    )
+    ),
 };

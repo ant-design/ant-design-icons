@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CreditCardFilledSvg from '@ant-design/icons-svg/lib/asn/CreditCardFilled'
+import Icon from '../components/AntdIcon';
+import CreditCardFillSvg from '@ant-design/icons-svg/lib/fill/CreditCardFill';
 
 export default {
   name: 'CreditCardFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CreditCardFilledSvg } },
+      { ...data, props: { ...data.props, icon: CreditCardFillSvg } },
       children
-    )
+    ),
 };

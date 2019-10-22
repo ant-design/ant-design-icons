@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import YahooSvg from '@ant-design/icons-svg/lib/asn/YahooOutlined'
+import Icon from '../components/AntdIcon';
+import YahooOutlineSvg from '@ant-design/icons-svg/lib/outline/YahooOutline';
 
 export default {
   name: 'Yahoo',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: YahooSvg } },
+      { ...data, props: { ...data.props, icon: YahooOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import EditFilledSvg from '@ant-design/icons-svg/lib/asn/EditFilled'
+import Icon from '../components/AntdIcon';
+import EditFillSvg from '@ant-design/icons-svg/lib/fill/EditFill';
 
 export default {
   name: 'EditFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: EditFilledSvg } },
+      { ...data, props: { ...data.props, icon: EditFillSvg } },
       children
-    )
+    ),
 };

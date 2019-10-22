@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import UnlockFilledSvg from '@ant-design/icons-svg/lib/asn/UnlockFilled'
+import Icon from '../components/AntdIcon';
+import UnlockFillSvg from '@ant-design/icons-svg/lib/fill/UnlockFill';
 
 export default {
   name: 'UnlockFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: UnlockFilledSvg } },
+      { ...data, props: { ...data.props, icon: UnlockFillSvg } },
       children
-    )
+    ),
 };

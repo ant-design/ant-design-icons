@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FilePdfTwoToneSvg from '@ant-design/icons-svg/lib/asn/FilePdfTwoTone'
+import Icon from '../components/AntdIcon';
+import FilePdfTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FilePdfTwoTone';
 
 export default {
   name: 'FilePdfTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: FilePdfTwoToneSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import BookFilledSvg from '@ant-design/icons-svg/lib/asn/BookFilled'
+import Icon from '../components/AntdIcon';
+import BookFillSvg from '@ant-design/icons-svg/lib/fill/BookFill';
 
 export default {
   name: 'BookFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BookFilledSvg } },
+      { ...data, props: { ...data.props, icon: BookFillSvg } },
       children
-    )
+    ),
 };

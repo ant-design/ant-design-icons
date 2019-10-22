@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import UpSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/UpSquareTwoTone'
+import Icon from '../components/AntdIcon';
+import UpSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/UpSquareTwoTone';
 
 export default {
   name: 'UpSquareTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: UpSquareTwoToneSvg } },
       children
-    )
+    ),
 };

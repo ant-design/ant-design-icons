@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import LeftCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/LeftCircleTwoTone'
+import Icon from '../components/AntdIcon';
+import LeftCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/LeftCircleTwoTone';
 
 export default {
   name: 'LeftCircleTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: LeftCircleTwoToneSvg } },
       children
-    )
+    ),
 };

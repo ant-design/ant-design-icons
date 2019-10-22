@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import InterationFilledSvg from '@ant-design/icons-svg/lib/asn/InterationFilled'
+import Icon from '../components/AntdIcon';
+import InterationFillSvg from '@ant-design/icons-svg/lib/fill/InterationFill';
 
 export default {
   name: 'InterationFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: InterationFilledSvg } },
+      { ...data, props: { ...data.props, icon: InterationFillSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FileMarkdownFilledSvg from '@ant-design/icons-svg/lib/asn/FileMarkdownFilled'
+import Icon from '../components/AntdIcon';
+import FileMarkdownFillSvg from '@ant-design/icons-svg/lib/fill/FileMarkdownFill';
 
 export default {
   name: 'FileMarkdownFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FileMarkdownFilledSvg } },
+      { ...data, props: { ...data.props, icon: FileMarkdownFillSvg } },
       children
-    )
+    ),
 };

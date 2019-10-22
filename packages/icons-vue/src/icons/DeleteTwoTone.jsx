@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DeleteTwoToneSvg from '@ant-design/icons-svg/lib/asn/DeleteTwoTone'
+import Icon from '../components/AntdIcon';
+import DeleteTwoToneSvg from '@ant-design/icons-svg/lib/twotone/DeleteTwoTone';
 
 export default {
   name: 'DeleteTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: DeleteTwoToneSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FunnelPlotSvg from '@ant-design/icons-svg/lib/asn/FunnelPlotOutlined'
+import Icon from '../components/AntdIcon';
+import FunnelPlotOutlineSvg from '@ant-design/icons-svg/lib/outline/FunnelPlotOutline';
 
 export default {
   name: 'FunnelPlot',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FunnelPlotSvg } },
+      { ...data, props: { ...data.props, icon: FunnelPlotOutlineSvg } },
       children
-    )
+    ),
 };

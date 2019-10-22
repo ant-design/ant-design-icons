@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import EnterSvg from '@ant-design/icons-svg/lib/asn/EnterOutlined'
+import Icon from '../components/AntdIcon';
+import EnterOutlineSvg from '@ant-design/icons-svg/lib/outline/EnterOutline';
 
 export default {
   name: 'Enter',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: EnterSvg } },
+      { ...data, props: { ...data.props, icon: EnterOutlineSvg } },
       children
-    )
+    ),
 };

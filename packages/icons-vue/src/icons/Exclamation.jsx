@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ExclamationSvg from '@ant-design/icons-svg/lib/asn/ExclamationOutlined'
+import Icon from '../components/AntdIcon';
+import ExclamationOutlineSvg from '@ant-design/icons-svg/lib/outline/ExclamationOutline';
 
 export default {
   name: 'Exclamation',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ExclamationSvg } },
+      { ...data, props: { ...data.props, icon: ExclamationOutlineSvg } },
       children
-    )
+    ),
 };

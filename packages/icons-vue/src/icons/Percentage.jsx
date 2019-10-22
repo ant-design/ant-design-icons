@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PercentageSvg from '@ant-design/icons-svg/lib/asn/PercentageOutlined'
+import Icon from '../components/AntdIcon';
+import PercentageOutlineSvg from '@ant-design/icons-svg/lib/outline/PercentageOutline';
 
 export default {
   name: 'Percentage',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PercentageSvg } },
+      { ...data, props: { ...data.props, icon: PercentageOutlineSvg } },
       children
-    )
+    ),
 };

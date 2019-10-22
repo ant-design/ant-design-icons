@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import NotificationFilledSvg from '@ant-design/icons-svg/lib/asn/NotificationFilled'
+import Icon from '../components/AntdIcon';
+import NotificationFillSvg from '@ant-design/icons-svg/lib/fill/NotificationFill';
 
 export default {
   name: 'NotificationFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: NotificationFilledSvg } },
+      { ...data, props: { ...data.props, icon: NotificationFillSvg } },
       children
-    )
+    ),
 };

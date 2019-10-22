@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CheckSquareFilledSvg from '@ant-design/icons-svg/lib/asn/CheckSquareFilled'
+import Icon from '../components/AntdIcon';
+import CheckSquareFillSvg from '@ant-design/icons-svg/lib/fill/CheckSquareFill';
 
 export default {
   name: 'CheckSquareFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CheckSquareFilledSvg } },
+      { ...data, props: { ...data.props, icon: CheckSquareFillSvg } },
       children
-    )
+    ),
 };

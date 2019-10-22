@@ -2,7 +2,7 @@ import VueIcon from "./IconBase";
 
 export function setTwoToneColor(primaryColor) {
   return VueIcon.setTwoToneColors({
-    primaryColor
+    primaryColor,
   });
 }
 

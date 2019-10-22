@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import TaobaoSquareFilledSvg from '@ant-design/icons-svg/lib/asn/TaobaoSquareFilled'
+import Icon from '../components/AntdIcon';
+import TaobaoSquareFillSvg from '@ant-design/icons-svg/lib/fill/TaobaoSquareFill';
 
 export default {
   name: 'TaobaoSquareFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: TaobaoSquareFilledSvg } },
+      { ...data, props: { ...data.props, icon: TaobaoSquareFillSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SaveSvg from '@ant-design/icons-svg/lib/asn/SaveOutlined'
+import Icon from '../components/AntdIcon';
+import SaveOutlineSvg from '@ant-design/icons-svg/lib/outline/SaveOutline';
 
 export default {
   name: 'Save',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SaveSvg } },
+      { ...data, props: { ...data.props, icon: SaveOutlineSvg } },
       children
-    )
+    ),
 };

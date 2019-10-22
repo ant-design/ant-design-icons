@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SortDescendingSvg from '@ant-design/icons-svg/lib/asn/SortDescendingOutlined'
+import Icon from '../components/AntdIcon';
+import SortDescendingOutlineSvg from '@ant-design/icons-svg/lib/outline/SortDescendingOutline';
 
 export default {
   name: 'SortDescending',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SortDescendingSvg } },
+      { ...data, props: { ...data.props, icon: SortDescendingOutlineSvg } },
       children
-    )
+    ),
 };

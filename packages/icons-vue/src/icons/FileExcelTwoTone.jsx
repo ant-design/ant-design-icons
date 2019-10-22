@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FileExcelTwoToneSvg from '@ant-design/icons-svg/lib/asn/FileExcelTwoTone'
+import Icon from '../components/AntdIcon';
+import FileExcelTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FileExcelTwoTone';
 
 export default {
   name: 'FileExcelTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: FileExcelTwoToneSvg } },
       children
-    )
+    ),
 };

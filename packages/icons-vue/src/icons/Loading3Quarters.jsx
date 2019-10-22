@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import Loading3QuartersSvg from '@ant-design/icons-svg/lib/asn/Loading3QuartersOutlined'
+import Icon from '../components/AntdIcon';
+import Loading3QuartersOutlineSvg from '@ant-design/icons-svg/lib/outline/Loading3QuartersOutline';
 
 export default {
   name: 'Loading3Quarters',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: Loading3QuartersSvg } },
+      { ...data, props: { ...data.props, icon: Loading3QuartersOutlineSvg } },
       children
-    )
+    ),
 };

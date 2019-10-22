@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AlignCenterSvg from '@ant-design/icons-svg/lib/asn/AlignCenterOutlined'
+import Icon from '../components/AntdIcon';
+import AlignCenterOutlineSvg from '@ant-design/icons-svg/lib/outline/AlignCenterOutline';
 
 export default {
   name: 'AlignCenter',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AlignCenterSvg } },
+      { ...data, props: { ...data.props, icon: AlignCenterOutlineSvg } },
       children
-    )
+    ),
 };

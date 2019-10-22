@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SketchSvg from '@ant-design/icons-svg/lib/asn/SketchOutlined'
+import Icon from '../components/AntdIcon';
+import SketchOutlineSvg from '@ant-design/icons-svg/lib/outline/SketchOutline';
 
 export default {
   name: 'Sketch',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SketchSvg } },
+      { ...data, props: { ...data.props, icon: SketchOutlineSvg } },
       children
-    )
+    ),
 };

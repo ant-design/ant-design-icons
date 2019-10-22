@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RedEnvelopeFilledSvg from '@ant-design/icons-svg/lib/asn/RedEnvelopeFilled'
+import Icon from '../components/AntdIcon';
+import RedEnvelopeFillSvg from '@ant-design/icons-svg/lib/fill/RedEnvelopeFill';
 
 export default {
   name: 'RedEnvelopeFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RedEnvelopeFilledSvg } },
+      { ...data, props: { ...data.props, icon: RedEnvelopeFillSvg } },
       children
-    )
+    ),
 };

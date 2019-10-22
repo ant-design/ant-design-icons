@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SnippetsSvg from '@ant-design/icons-svg/lib/asn/SnippetsOutlined'
+import Icon from '../components/AntdIcon';
+import SnippetsOutlineSvg from '@ant-design/icons-svg/lib/outline/SnippetsOutline';
 
 export default {
   name: 'Snippets',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SnippetsSvg } },
+      { ...data, props: { ...data.props, icon: SnippetsOutlineSvg } },
       children
-    )
+    ),
 };

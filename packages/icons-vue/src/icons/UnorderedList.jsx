@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import UnorderedListSvg from '@ant-design/icons-svg/lib/asn/UnorderedListOutlined'
+import Icon from '../components/AntdIcon';
+import UnorderedListOutlineSvg from '@ant-design/icons-svg/lib/outline/UnorderedListOutline';
 
 export default {
   name: 'UnorderedList',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: UnorderedListSvg } },
+      { ...data, props: { ...data.props, icon: UnorderedListOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DiffTwoToneSvg from '@ant-design/icons-svg/lib/asn/DiffTwoTone'
+import Icon from '../components/AntdIcon';
+import DiffTwoToneSvg from '@ant-design/icons-svg/lib/twotone/DiffTwoTone';
 
 export default {
   name: 'DiffTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: DiffTwoToneSvg } },
       children
-    )
+    ),
 };

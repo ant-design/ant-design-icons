@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import BorderLeftSvg from '@ant-design/icons-svg/lib/asn/BorderLeftOutlined'
+import Icon from '../components/AntdIcon';
+import BorderLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/BorderLeftOutline';
 
 export default {
   name: 'BorderLeft',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BorderLeftSvg } },
+      { ...data, props: { ...data.props, icon: BorderLeftOutlineSvg } },
       children
-    )
+    ),
 };

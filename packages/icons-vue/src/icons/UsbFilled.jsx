@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import UsbFilledSvg from '@ant-design/icons-svg/lib/asn/UsbFilled'
+import Icon from '../components/AntdIcon';
+import UsbFillSvg from '@ant-design/icons-svg/lib/fill/UsbFill';
 
 export default {
   name: 'UsbFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: UsbFilledSvg } },
+      { ...data, props: { ...data.props, icon: UsbFillSvg } },
       children
-    )
+    ),
 };

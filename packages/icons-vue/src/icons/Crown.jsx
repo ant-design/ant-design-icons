@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CrownSvg from '@ant-design/icons-svg/lib/asn/CrownOutlined'
+import Icon from '../components/AntdIcon';
+import CrownOutlineSvg from '@ant-design/icons-svg/lib/outline/CrownOutline';
 
 export default {
   name: 'Crown',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CrownSvg } },
+      { ...data, props: { ...data.props, icon: CrownOutlineSvg } },
       children
-    )
+    ),
 };

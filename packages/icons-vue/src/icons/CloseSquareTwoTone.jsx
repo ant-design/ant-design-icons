@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CloseSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/CloseSquareTwoTone'
+import Icon from '../components/AntdIcon';
+import CloseSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CloseSquareTwoTone';
 
 export default {
   name: 'CloseSquareTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: CloseSquareTwoToneSvg } },
       children
-    )
+    ),
 };

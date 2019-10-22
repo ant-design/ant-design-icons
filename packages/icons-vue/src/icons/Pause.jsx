@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PauseSvg from '@ant-design/icons-svg/lib/asn/PauseOutlined'
+import Icon from '../components/AntdIcon';
+import PauseOutlineSvg from '@ant-design/icons-svg/lib/outline/PauseOutline';
 
 export default {
   name: 'Pause',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PauseSvg } },
+      { ...data, props: { ...data.props, icon: PauseOutlineSvg } },
       children
-    )
+    ),
 };

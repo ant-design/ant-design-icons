@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PhoneFilledSvg from '@ant-design/icons-svg/lib/asn/PhoneFilled'
+import Icon from '../components/AntdIcon';
+import PhoneFillSvg from '@ant-design/icons-svg/lib/fill/PhoneFill';
 
 export default {
   name: 'PhoneFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PhoneFilledSvg } },
+      { ...data, props: { ...data.props, icon: PhoneFillSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import LineChartSvg from '@ant-design/icons-svg/lib/asn/LineChartOutlined'
+import Icon from '../components/AntdIcon';
+import LineChartOutlineSvg from '@ant-design/icons-svg/lib/outline/LineChartOutline';
 
 export default {
   name: 'LineChart',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: LineChartSvg } },
+      { ...data, props: { ...data.props, icon: LineChartOutlineSvg } },
       children
-    )
+    ),
 };

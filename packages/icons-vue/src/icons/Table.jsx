@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import TableSvg from '@ant-design/icons-svg/lib/asn/TableOutlined'
+import Icon from '../components/AntdIcon';
+import TableOutlineSvg from '@ant-design/icons-svg/lib/outline/TableOutline';
 
 export default {
   name: 'Table',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: TableSvg } },
+      { ...data, props: { ...data.props, icon: TableOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import StopFilledSvg from '@ant-design/icons-svg/lib/asn/StopFilled'
+import Icon from '../components/AntdIcon';
+import StopFillSvg from '@ant-design/icons-svg/lib/fill/StopFill';
 
 export default {
   name: 'StopFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: StopFilledSvg } },
+      { ...data, props: { ...data.props, icon: StopFillSvg } },
       children
-    )
+    ),
 };

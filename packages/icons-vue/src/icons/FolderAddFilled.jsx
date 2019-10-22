@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FolderAddFilledSvg from '@ant-design/icons-svg/lib/asn/FolderAddFilled'
+import Icon from '../components/AntdIcon';
+import FolderAddFillSvg from '@ant-design/icons-svg/lib/fill/FolderAddFill';
 
 export default {
   name: 'FolderAddFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FolderAddFilledSvg } },
+      { ...data, props: { ...data.props, icon: FolderAddFillSvg } },
       children
-    )
+    ),
 };

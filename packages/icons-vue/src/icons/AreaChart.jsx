@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AreaChartSvg from '@ant-design/icons-svg/lib/asn/AreaChartOutlined'
+import Icon from '../components/AntdIcon';
+import AreaChartOutlineSvg from '@ant-design/icons-svg/lib/outline/AreaChartOutline';
 
 export default {
   name: 'AreaChart',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AreaChartSvg } },
+      { ...data, props: { ...data.props, icon: AreaChartOutlineSvg } },
       children
-    )
+    ),
 };

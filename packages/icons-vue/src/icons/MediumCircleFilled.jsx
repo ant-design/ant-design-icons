@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import MediumCircleFilledSvg from '@ant-design/icons-svg/lib/asn/MediumCircleFilled'
+import Icon from '../components/AntdIcon';
+import MediumCircleFillSvg from '@ant-design/icons-svg/lib/fill/MediumCircleFill';
 
 export default {
   name: 'MediumCircleFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: MediumCircleFilledSvg } },
+      { ...data, props: { ...data.props, icon: MediumCircleFillSvg } },
       children
-    )
+    ),
 };

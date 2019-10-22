@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ToolSvg from '@ant-design/icons-svg/lib/asn/ToolOutlined'
+import Icon from '../components/AntdIcon';
+import ToolOutlineSvg from '@ant-design/icons-svg/lib/outline/ToolOutline';
 
 export default {
   name: 'Tool',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ToolSvg } },
+      { ...data, props: { ...data.props, icon: ToolOutlineSvg } },
       children
-    )
+    ),
 };

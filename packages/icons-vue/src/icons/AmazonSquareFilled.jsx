@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AmazonSquareFilledSvg from '@ant-design/icons-svg/lib/asn/AmazonSquareFilled'
+import Icon from '../components/AntdIcon';
+import AmazonSquareFillSvg from '@ant-design/icons-svg/lib/fill/AmazonSquareFill';
 
 export default {
   name: 'AmazonSquareFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AmazonSquareFilledSvg } },
+      { ...data, props: { ...data.props, icon: AmazonSquareFillSvg } },
       children
-    )
+    ),
 };

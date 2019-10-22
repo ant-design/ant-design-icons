@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AccountBookSvg from '@ant-design/icons-svg/lib/asn/AccountBookOutlined'
+import Icon from '../components/AntdIcon';
+import AccountBookOutlineSvg from '@ant-design/icons-svg/lib/outline/AccountBookOutline';
 
 export default {
   name: 'AccountBook',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AccountBookSvg } },
+      { ...data, props: { ...data.props, icon: AccountBookOutlineSvg } },
       children
-    )
+    ),
 };

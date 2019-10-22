@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import MehSvg from '@ant-design/icons-svg/lib/asn/MehOutlined'
+import Icon from '../components/AntdIcon';
+import MehOutlineSvg from '@ant-design/icons-svg/lib/outline/MehOutline';
 
 export default {
   name: 'Meh',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: MehSvg } },
+      { ...data, props: { ...data.props, icon: MehOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import MobileFilledSvg from '@ant-design/icons-svg/lib/asn/MobileFilled'
+import Icon from '../components/AntdIcon';
+import MobileFillSvg from '@ant-design/icons-svg/lib/fill/MobileFill';
 
 export default {
   name: 'MobileFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: MobileFilledSvg } },
+      { ...data, props: { ...data.props, icon: MobileFillSvg } },
       children
-    )
+    ),
 };

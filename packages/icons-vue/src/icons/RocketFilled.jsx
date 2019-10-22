@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RocketFilledSvg from '@ant-design/icons-svg/lib/asn/RocketFilled'
+import Icon from '../components/AntdIcon';
+import RocketFillSvg from '@ant-design/icons-svg/lib/fill/RocketFill';
 
 export default {
   name: 'RocketFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RocketFilledSvg } },
+      { ...data, props: { ...data.props, icon: RocketFillSvg } },
       children
-    )
+    ),
 };

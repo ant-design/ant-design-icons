@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import UsergroupDeleteSvg from '@ant-design/icons-svg/lib/asn/UsergroupDeleteOutlined'
+import Icon from '../components/AntdIcon';
+import UsergroupDeleteOutlineSvg from '@ant-design/icons-svg/lib/outline/UsergroupDeleteOutline';
 
 export default {
   name: 'UsergroupDelete',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: UsergroupDeleteSvg } },
+      { ...data, props: { ...data.props, icon: UsergroupDeleteOutlineSvg } },
       children
-    )
+    ),
 };

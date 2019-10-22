@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FullscreenExitSvg from '@ant-design/icons-svg/lib/asn/FullscreenExitOutlined'
+import Icon from '../components/AntdIcon';
+import FullscreenExitOutlineSvg from '@ant-design/icons-svg/lib/outline/FullscreenExitOutline';
 
 export default {
   name: 'FullscreenExit',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FullscreenExitSvg } },
+      { ...data, props: { ...data.props, icon: FullscreenExitOutlineSvg } },
       children
-    )
+    ),
 };

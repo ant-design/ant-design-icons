@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import WechatSvg from '@ant-design/icons-svg/lib/asn/WechatOutlined'
+import Icon from '../components/AntdIcon';
+import WechatOutlineSvg from '@ant-design/icons-svg/lib/outline/WechatOutline';
 
 export default {
   name: 'Wechat',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: WechatSvg } },
+      { ...data, props: { ...data.props, icon: WechatOutlineSvg } },
       children
-    )
+    ),
 };

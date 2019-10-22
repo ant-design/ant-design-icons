@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AppstoreTwoToneSvg from '@ant-design/icons-svg/lib/asn/AppstoreTwoTone'
+import Icon from '../components/AntdIcon';
+import AppstoreTwoToneSvg from '@ant-design/icons-svg/lib/twotone/AppstoreTwoTone';
 
 export default {
   name: 'AppstoreTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: AppstoreTwoToneSvg } },
       children
-    )
+    ),
 };

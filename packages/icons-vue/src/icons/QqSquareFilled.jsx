@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import QqSquareFilledSvg from '@ant-design/icons-svg/lib/asn/QqSquareFilled'
+import Icon from '../components/AntdIcon';
+import QqSquareFillSvg from '@ant-design/icons-svg/lib/fill/QqSquareFill';
 
 export default {
   name: 'QqSquareFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: QqSquareFilledSvg } },
+      { ...data, props: { ...data.props, icon: QqSquareFillSvg } },
       children
-    )
+    ),
 };

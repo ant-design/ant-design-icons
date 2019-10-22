@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FacebookFilledSvg from '@ant-design/icons-svg/lib/asn/FacebookFilled'
+import Icon from '../components/AntdIcon';
+import FacebookFillSvg from '@ant-design/icons-svg/lib/fill/FacebookFill';
 
 export default {
   name: 'FacebookFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FacebookFilledSvg } },
+      { ...data, props: { ...data.props, icon: FacebookFillSvg } },
       children
-    )
+    ),
 };

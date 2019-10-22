@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ReconciliationTwoToneSvg from '@ant-design/icons-svg/lib/asn/ReconciliationTwoTone'
+import Icon from '../components/AntdIcon';
+import ReconciliationTwoToneSvg from '@ant-design/icons-svg/lib/twotone/ReconciliationTwoTone';
 
 export default {
   name: 'ReconciliationTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: ReconciliationTwoToneSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FileUnknownSvg from '@ant-design/icons-svg/lib/asn/FileUnknownOutlined'
+import Icon from '../components/AntdIcon';
+import FileUnknownOutlineSvg from '@ant-design/icons-svg/lib/outline/FileUnknownOutline';
 
 export default {
   name: 'FileUnknown',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FileUnknownSvg } },
+      { ...data, props: { ...data.props, icon: FileUnknownOutlineSvg } },
       children
-    )
+    ),
 };

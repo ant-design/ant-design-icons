@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import UnderlineSvg from '@ant-design/icons-svg/lib/asn/UnderlineOutlined'
+import Icon from '../components/AntdIcon';
+import UnderlineOutlineSvg from '@ant-design/icons-svg/lib/outline/UnderlineOutline';
 
 export default {
   name: 'Underline',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: UnderlineSvg } },
+      { ...data, props: { ...data.props, icon: UnderlineOutlineSvg } },
       children
-    )
+    ),
 };

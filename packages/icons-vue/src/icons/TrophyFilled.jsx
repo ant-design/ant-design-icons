@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import TrophyFilledSvg from '@ant-design/icons-svg/lib/asn/TrophyFilled'
+import Icon from '../components/AntdIcon';
+import TrophyFillSvg from '@ant-design/icons-svg/lib/fill/TrophyFill';
 
 export default {
   name: 'TrophyFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: TrophyFilledSvg } },
+      { ...data, props: { ...data.props, icon: TrophyFillSvg } },
       children
-    )
+    ),
 };

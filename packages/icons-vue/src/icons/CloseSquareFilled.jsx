@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CloseSquareFilledSvg from '@ant-design/icons-svg/lib/asn/CloseSquareFilled'
+import Icon from '../components/AntdIcon';
+import CloseSquareFillSvg from '@ant-design/icons-svg/lib/fill/CloseSquareFill';
 
 export default {
   name: 'CloseSquareFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CloseSquareFilledSvg } },
+      { ...data, props: { ...data.props, icon: CloseSquareFillSvg } },
       children
-    )
+    ),
 };

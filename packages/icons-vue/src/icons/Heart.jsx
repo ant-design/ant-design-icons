@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import HeartSvg from '@ant-design/icons-svg/lib/asn/HeartOutlined'
+import Icon from '../components/AntdIcon';
+import HeartOutlineSvg from '@ant-design/icons-svg/lib/outline/HeartOutline';
 
 export default {
   name: 'Heart',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: HeartSvg } },
+      { ...data, props: { ...data.props, icon: HeartOutlineSvg } },
       children
-    )
+    ),
 };

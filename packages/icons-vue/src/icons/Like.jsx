@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import LikeSvg from '@ant-design/icons-svg/lib/asn/LikeOutlined'
+import Icon from '../components/AntdIcon';
+import LikeOutlineSvg from '@ant-design/icons-svg/lib/outline/LikeOutline';
 
 export default {
   name: 'Like',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: LikeSvg } },
+      { ...data, props: { ...data.props, icon: LikeOutlineSvg } },
       children
-    )
+    ),
 };

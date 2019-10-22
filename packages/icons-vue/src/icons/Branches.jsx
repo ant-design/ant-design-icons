@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import BranchesSvg from '@ant-design/icons-svg/lib/asn/BranchesOutlined'
+import Icon from '../components/AntdIcon';
+import BranchesOutlineSvg from '@ant-design/icons-svg/lib/outline/BranchesOutline';
 
 export default {
   name: 'Branches',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BranchesSvg } },
+      { ...data, props: { ...data.props, icon: BranchesOutlineSvg } },
       children
-    )
+    ),
 };

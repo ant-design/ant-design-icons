@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ProfileSvg from '@ant-design/icons-svg/lib/asn/ProfileOutlined'
+import Icon from '../components/AntdIcon';
+import ProfileOutlineSvg from '@ant-design/icons-svg/lib/outline/ProfileOutline';
 
 export default {
   name: 'Profile',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ProfileSvg } },
+      { ...data, props: { ...data.props, icon: ProfileOutlineSvg } },
       children
-    )
+    ),
 };

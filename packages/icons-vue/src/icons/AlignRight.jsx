@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AlignRightSvg from '@ant-design/icons-svg/lib/asn/AlignRightOutlined'
+import Icon from '../components/AntdIcon';
+import AlignRightOutlineSvg from '@ant-design/icons-svg/lib/outline/AlignRightOutline';
 
 export default {
   name: 'AlignRight',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AlignRightSvg } },
+      { ...data, props: { ...data.props, icon: AlignRightOutlineSvg } },
       children
-    )
+    ),
 };

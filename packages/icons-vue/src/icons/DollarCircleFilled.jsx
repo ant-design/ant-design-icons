@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DollarCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DollarCircleFilled'
+import Icon from '../components/AntdIcon';
+import DollarCircleFillSvg from '@ant-design/icons-svg/lib/fill/DollarCircleFill';
 
 export default {
   name: 'DollarCircleFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DollarCircleFilledSvg } },
+      { ...data, props: { ...data.props, icon: DollarCircleFillSvg } },
       children
-    )
+    ),
 };

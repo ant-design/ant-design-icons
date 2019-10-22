@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import HddSvg from '@ant-design/icons-svg/lib/asn/HddOutlined'
+import Icon from '../components/AntdIcon';
+import HddOutlineSvg from '@ant-design/icons-svg/lib/outline/HddOutline';
 
 export default {
   name: 'Hdd',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: HddSvg } },
+      { ...data, props: { ...data.props, icon: HddOutlineSvg } },
       children
-    )
+    ),
 };

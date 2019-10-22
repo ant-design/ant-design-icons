@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PrinterSvg from '@ant-design/icons-svg/lib/asn/PrinterOutlined'
+import Icon from '../components/AntdIcon';
+import PrinterOutlineSvg from '@ant-design/icons-svg/lib/outline/PrinterOutline';
 
 export default {
   name: 'Printer',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PrinterSvg } },
+      { ...data, props: { ...data.props, icon: PrinterOutlineSvg } },
       children
-    )
+    ),
 };

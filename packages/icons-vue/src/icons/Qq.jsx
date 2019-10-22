@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import QqSvg from '@ant-design/icons-svg/lib/asn/QqOutlined'
+import Icon from '../components/AntdIcon';
+import QqOutlineSvg from '@ant-design/icons-svg/lib/outline/QqOutline';
 
 export default {
   name: 'Qq',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: QqSvg } },
+      { ...data, props: { ...data.props, icon: QqOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import IdcardSvg from '@ant-design/icons-svg/lib/asn/IdcardOutlined'
+import Icon from '../components/AntdIcon';
+import IdcardOutlineSvg from '@ant-design/icons-svg/lib/outline/IdcardOutline';
 
 export default {
   name: 'Idcard',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: IdcardSvg } },
+      { ...data, props: { ...data.props, icon: IdcardOutlineSvg } },
       children
-    )
+    ),
 };

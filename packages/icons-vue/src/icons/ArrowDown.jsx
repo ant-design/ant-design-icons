@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ArrowDownSvg from '@ant-design/icons-svg/lib/asn/ArrowDownOutlined'
+import Icon from '../components/AntdIcon';
+import ArrowDownOutlineSvg from '@ant-design/icons-svg/lib/outline/ArrowDownOutline';
 
 export default {
   name: 'ArrowDown',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ArrowDownSvg } },
+      { ...data, props: { ...data.props, icon: ArrowDownOutlineSvg } },
       children
-    )
+    ),
 };

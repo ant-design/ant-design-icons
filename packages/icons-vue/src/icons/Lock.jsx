@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import LockSvg from '@ant-design/icons-svg/lib/asn/LockOutlined'
+import Icon from '../components/AntdIcon';
+import LockOutlineSvg from '@ant-design/icons-svg/lib/outline/LockOutline';
 
 export default {
   name: 'Lock',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: LockSvg } },
+      { ...data, props: { ...data.props, icon: LockOutlineSvg } },
       children
-    )
+    ),
 };

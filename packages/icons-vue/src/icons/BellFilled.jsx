@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import BellFilledSvg from '@ant-design/icons-svg/lib/asn/BellFilled'
+import Icon from '../components/AntdIcon';
+import BellFillSvg from '@ant-design/icons-svg/lib/fill/BellFill';
 
 export default {
   name: 'BellFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BellFilledSvg } },
+      { ...data, props: { ...data.props, icon: BellFillSvg } },
       children
-    )
+    ),
 };

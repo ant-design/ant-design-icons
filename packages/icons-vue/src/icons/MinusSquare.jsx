@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import MinusSquareSvg from '@ant-design/icons-svg/lib/asn/MinusSquareOutlined'
+import Icon from '../components/AntdIcon';
+import MinusSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/MinusSquareOutline';
 
 export default {
   name: 'MinusSquare',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: MinusSquareSvg } },
+      { ...data, props: { ...data.props, icon: MinusSquareOutlineSvg } },
       children
-    )
+    ),
 };

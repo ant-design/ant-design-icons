@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RestSvg from '@ant-design/icons-svg/lib/asn/RestOutlined'
+import Icon from '../components/AntdIcon';
+import RestOutlineSvg from '@ant-design/icons-svg/lib/outline/RestOutline';
 
 export default {
   name: 'Rest',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RestSvg } },
+      { ...data, props: { ...data.props, icon: RestOutlineSvg } },
       children
-    )
+    ),
 };

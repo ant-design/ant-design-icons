@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import TagSvg from '@ant-design/icons-svg/lib/asn/TagOutlined'
+import Icon from '../components/AntdIcon';
+import TagOutlineSvg from '@ant-design/icons-svg/lib/outline/TagOutline';
 
 export default {
   name: 'Tag',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: TagSvg } },
+      { ...data, props: { ...data.props, icon: TagOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ToTopSvg from '@ant-design/icons-svg/lib/asn/ToTopOutlined'
+import Icon from '../components/AntdIcon';
+import ToTopOutlineSvg from '@ant-design/icons-svg/lib/outline/ToTopOutline';
 
 export default {
   name: 'ToTop',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ToTopSvg } },
+      { ...data, props: { ...data.props, icon: ToTopOutlineSvg } },
       children
-    )
+    ),
 };

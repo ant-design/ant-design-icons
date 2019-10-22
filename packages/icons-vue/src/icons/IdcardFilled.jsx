@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import IdcardFilledSvg from '@ant-design/icons-svg/lib/asn/IdcardFilled'
+import Icon from '../components/AntdIcon';
+import IdcardFillSvg from '@ant-design/icons-svg/lib/fill/IdcardFill';
 
 export default {
   name: 'IdcardFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: IdcardFilledSvg } },
+      { ...data, props: { ...data.props, icon: IdcardFillSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RobotSvg from '@ant-design/icons-svg/lib/asn/RobotOutlined'
+import Icon from '../components/AntdIcon';
+import RobotOutlineSvg from '@ant-design/icons-svg/lib/outline/RobotOutline';
 
 export default {
   name: 'Robot',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RobotSvg } },
+      { ...data, props: { ...data.props, icon: RobotOutlineSvg } },
       children
-    )
+    ),
 };

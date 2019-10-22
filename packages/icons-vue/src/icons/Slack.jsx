@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SlackSvg from '@ant-design/icons-svg/lib/asn/SlackOutlined'
+import Icon from '../components/AntdIcon';
+import SlackOutlineSvg from '@ant-design/icons-svg/lib/outline/SlackOutline';
 
 export default {
   name: 'Slack',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SlackSvg } },
+      { ...data, props: { ...data.props, icon: SlackOutlineSvg } },
       children
-    )
+    ),
 };

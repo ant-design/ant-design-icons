@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DownSvg from '@ant-design/icons-svg/lib/asn/DownOutlined'
+import Icon from '../components/AntdIcon';
+import DownOutlineSvg from '@ant-design/icons-svg/lib/outline/DownOutline';
 
 export default {
   name: 'Down',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DownSvg } },
+      { ...data, props: { ...data.props, icon: DownOutlineSvg } },
       children
-    )
+    ),
 };

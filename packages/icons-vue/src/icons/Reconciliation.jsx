@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ReconciliationSvg from '@ant-design/icons-svg/lib/asn/ReconciliationOutlined'
+import Icon from '../components/AntdIcon';
+import ReconciliationOutlineSvg from '@ant-design/icons-svg/lib/outline/ReconciliationOutline';
 
 export default {
   name: 'Reconciliation',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ReconciliationSvg } },
+      { ...data, props: { ...data.props, icon: ReconciliationOutlineSvg } },
       children
-    )
+    ),
 };

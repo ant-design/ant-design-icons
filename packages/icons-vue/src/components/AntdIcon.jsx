@@ -9,7 +9,7 @@ const Icon = {
   functional: true,
   props: ["icon", "spin", "rotate", "tabIndex", "twoToneColor"],
   render(h, ctx) {
-    const { data: { attrs } = {}, props = {}, listeners } = ctx;
+    const { data: { attrs, ...restData } = {}, props = {}, listeners } = ctx;
     const {
       // affect inner <svg>...</svg>
       icon,
@@ -22,11 +22,11 @@ const Icon = {
     } = { ...attrs, ...props };
     const { click: onClick } = listeners;
     const classString = classNames("anticon", {
-      [`anticon-${icon.name}`]: Boolean(icon.name)
+      [`anticon-${icon.name}`]: Boolean(icon.name),
     });
 
     const svgClassString = classNames({
-      "anticon-spin": !!spin || icon.name === "loading"
+      "anticon-spin": !!spin || icon.name === "loading",
     });
 
     let iconTabIndex = tabIndex;
@@ -37,7 +37,7 @@ const Icon = {
     const svgStyle = rotate
       ? {
           msTransform: `rotate(${rotate}deg)`,
-          transform: `rotate(${rotate}deg)`
+          transform: `rotate(${rotate}deg)`,
         }
       : undefined;
 
@@ -47,7 +47,7 @@ const Icon = {
         aria-label={icon.name}
         tabIndex={iconTabIndex}
         class={classString}
-        {...{ attrs: restProps, on: listeners }}
+        {...{ ...restData, attrs: restProps, on: listeners }}
       >
         <VueIcon
           class={svgClassString}
@@ -57,7 +57,7 @@ const Icon = {
         />
       </span>
     );
-  }
+  },
 };
 
 Icon.name = "AntdIcon";

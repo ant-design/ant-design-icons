@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FireFilledSvg from '@ant-design/icons-svg/lib/asn/FireFilled'
+import Icon from '../components/AntdIcon';
+import FireFillSvg from '@ant-design/icons-svg/lib/fill/FireFill';
 
 export default {
   name: 'FireFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FireFilledSvg } },
+      { ...data, props: { ...data.props, icon: FireFillSvg } },
       children
-    )
+    ),
 };

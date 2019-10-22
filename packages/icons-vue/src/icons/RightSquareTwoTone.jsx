@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RightSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/RightSquareTwoTone'
+import Icon from '../components/AntdIcon';
+import RightSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/RightSquareTwoTone';
 
 export default {
   name: 'RightSquareTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: RightSquareTwoToneSvg } },
       children
-    )
+    ),
 };

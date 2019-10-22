@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CalculatorSvg from '@ant-design/icons-svg/lib/asn/CalculatorOutlined'
+import Icon from '../components/AntdIcon';
+import CalculatorOutlineSvg from '@ant-design/icons-svg/lib/outline/CalculatorOutline';
 
 export default {
   name: 'Calculator',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CalculatorSvg } },
+      { ...data, props: { ...data.props, icon: CalculatorOutlineSvg } },
       children
-    )
+    ),
 };

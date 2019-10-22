@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RedditSquareFilledSvg from '@ant-design/icons-svg/lib/asn/RedditSquareFilled'
+import Icon from '../components/AntdIcon';
+import RedditSquareFillSvg from '@ant-design/icons-svg/lib/fill/RedditSquareFill';
 
 export default {
   name: 'RedditSquareFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RedditSquareFilledSvg } },
+      { ...data, props: { ...data.props, icon: RedditSquareFillSvg } },
       children
-    )
+    ),
 };

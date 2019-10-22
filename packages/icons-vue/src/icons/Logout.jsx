@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import LogoutSvg from '@ant-design/icons-svg/lib/asn/LogoutOutlined'
+import Icon from '../components/AntdIcon';
+import LogoutOutlineSvg from '@ant-design/icons-svg/lib/outline/LogoutOutline';
 
 export default {
   name: 'Logout',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: LogoutSvg } },
+      { ...data, props: { ...data.props, icon: LogoutOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CreditCardTwoToneSvg from '@ant-design/icons-svg/lib/asn/CreditCardTwoTone'
+import Icon from '../components/AntdIcon';
+import CreditCardTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CreditCardTwoTone';
 
 export default {
   name: 'CreditCardTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: CreditCardTwoToneSvg } },
       children
-    )
+    ),
 };

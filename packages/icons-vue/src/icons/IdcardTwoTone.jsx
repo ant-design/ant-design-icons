@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import IdcardTwoToneSvg from '@ant-design/icons-svg/lib/asn/IdcardTwoTone'
+import Icon from '../components/AntdIcon';
+import IdcardTwoToneSvg from '@ant-design/icons-svg/lib/twotone/IdcardTwoTone';
 
 export default {
   name: 'IdcardTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: IdcardTwoToneSvg } },
       children
-    )
+    ),
 };

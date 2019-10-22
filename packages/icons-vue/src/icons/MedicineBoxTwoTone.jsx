@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import MedicineBoxTwoToneSvg from '@ant-design/icons-svg/lib/asn/MedicineBoxTwoTone'
+import Icon from '../components/AntdIcon';
+import MedicineBoxTwoToneSvg from '@ant-design/icons-svg/lib/twotone/MedicineBoxTwoTone';
 
 export default {
   name: 'MedicineBoxTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: MedicineBoxTwoToneSvg } },
       children
-    )
+    ),
 };

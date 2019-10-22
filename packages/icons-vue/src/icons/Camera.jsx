@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CameraSvg from '@ant-design/icons-svg/lib/asn/CameraOutlined'
+import Icon from '../components/AntdIcon';
+import CameraOutlineSvg from '@ant-design/icons-svg/lib/outline/CameraOutline';
 
 export default {
   name: 'Camera',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CameraSvg } },
+      { ...data, props: { ...data.props, icon: CameraOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import LeftSquareSvg from '@ant-design/icons-svg/lib/asn/LeftSquareOutlined'
+import Icon from '../components/AntdIcon';
+import LeftSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/LeftSquareOutline';
 
 export default {
   name: 'LeftSquare',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: LeftSquareSvg } },
+      { ...data, props: { ...data.props, icon: LeftSquareOutlineSvg } },
       children
-    )
+    ),
 };

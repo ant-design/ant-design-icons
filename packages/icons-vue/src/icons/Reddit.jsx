@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RedditSvg from '@ant-design/icons-svg/lib/asn/RedditOutlined'
+import Icon from '../components/AntdIcon';
+import RedditOutlineSvg from '@ant-design/icons-svg/lib/outline/RedditOutline';
 
 export default {
   name: 'Reddit',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RedditSvg } },
+      { ...data, props: { ...data.props, icon: RedditOutlineSvg } },
       children
-    )
+    ),
 };

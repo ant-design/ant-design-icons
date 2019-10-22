@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ChromeFilledSvg from '@ant-design/icons-svg/lib/asn/ChromeFilled'
+import Icon from '../components/AntdIcon';
+import ChromeFillSvg from '@ant-design/icons-svg/lib/fill/ChromeFill';
 
 export default {
   name: 'ChromeFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ChromeFilledSvg } },
+      { ...data, props: { ...data.props, icon: ChromeFillSvg } },
       children
-    )
+    ),
 };

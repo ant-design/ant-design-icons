@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import EnvironmentFilledSvg from '@ant-design/icons-svg/lib/asn/EnvironmentFilled'
+import Icon from '../components/AntdIcon';
+import EnvironmentFillSvg from '@ant-design/icons-svg/lib/fill/EnvironmentFill';
 
 export default {
   name: 'EnvironmentFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: EnvironmentFilledSvg } },
+      { ...data, props: { ...data.props, icon: EnvironmentFillSvg } },
       children
-    )
+    ),
 };

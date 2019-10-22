@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ReadSvg from '@ant-design/icons-svg/lib/asn/ReadOutlined'
+import Icon from '../components/AntdIcon';
+import ReadOutlineSvg from '@ant-design/icons-svg/lib/outline/ReadOutline';
 
 export default {
   name: 'Read',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ReadSvg } },
+      { ...data, props: { ...data.props, icon: ReadOutlineSvg } },
       children
-    )
+    ),
 };

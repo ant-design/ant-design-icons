@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DropboxSvg from '@ant-design/icons-svg/lib/asn/DropboxOutlined'
+import Icon from '../components/AntdIcon';
+import DropboxOutlineSvg from '@ant-design/icons-svg/lib/outline/DropboxOutline';
 
 export default {
   name: 'Dropbox',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DropboxSvg } },
+      { ...data, props: { ...data.props, icon: DropboxOutlineSvg } },
       children
-    )
+    ),
 };

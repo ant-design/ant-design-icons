@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ForwardFilledSvg from '@ant-design/icons-svg/lib/asn/ForwardFilled'
+import Icon from '../components/AntdIcon';
+import ForwardFillSvg from '@ant-design/icons-svg/lib/fill/ForwardFill';
 
 export default {
   name: 'ForwardFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ForwardFilledSvg } },
+      { ...data, props: { ...data.props, icon: ForwardFillSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import LoginSvg from '@ant-design/icons-svg/lib/asn/LoginOutlined'
+import Icon from '../components/AntdIcon';
+import LoginOutlineSvg from '@ant-design/icons-svg/lib/outline/LoginOutline';
 
 export default {
   name: 'Login',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: LoginSvg } },
+      { ...data, props: { ...data.props, icon: LoginOutlineSvg } },
       children
-    )
+    ),
 };

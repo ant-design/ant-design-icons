@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CloseSvg from '@ant-design/icons-svg/lib/asn/CloseOutlined'
+import Icon from '../components/AntdIcon';
+import CloseOutlineSvg from '@ant-design/icons-svg/lib/outline/CloseOutline';
 
 export default {
   name: 'Close',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CloseSvg } },
+      { ...data, props: { ...data.props, icon: CloseOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import RedEnvelopeSvg from '@ant-design/icons-svg/lib/asn/RedEnvelopeOutlined'
+import Icon from '../components/AntdIcon';
+import RedEnvelopeOutlineSvg from '@ant-design/icons-svg/lib/outline/RedEnvelopeOutline';
 
 export default {
   name: 'RedEnvelope',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RedEnvelopeSvg } },
+      { ...data, props: { ...data.props, icon: RedEnvelopeOutlineSvg } },
       children
-    )
+    ),
 };

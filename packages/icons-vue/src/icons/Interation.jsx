@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import InterationSvg from '@ant-design/icons-svg/lib/asn/InterationOutlined'
+import Icon from '../components/AntdIcon';
+import InterationOutlineSvg from '@ant-design/icons-svg/lib/outline/InterationOutline';
 
 export default {
   name: 'Interation',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: InterationSvg } },
+      { ...data, props: { ...data.props, icon: InterationOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FundFilledSvg from '@ant-design/icons-svg/lib/asn/FundFilled'
+import Icon from '../components/AntdIcon';
+import FundFillSvg from '@ant-design/icons-svg/lib/fill/FundFill';
 
 export default {
   name: 'FundFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FundFilledSvg } },
+      { ...data, props: { ...data.props, icon: FundFillSvg } },
       children
-    )
+    ),
 };

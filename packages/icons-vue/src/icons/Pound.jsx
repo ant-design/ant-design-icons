@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PoundSvg from '@ant-design/icons-svg/lib/asn/PoundOutlined'
+import Icon from '../components/AntdIcon';
+import PoundOutlineSvg from '@ant-design/icons-svg/lib/outline/PoundOutline';
 
 export default {
   name: 'Pound',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PoundSvg } },
+      { ...data, props: { ...data.props, icon: PoundOutlineSvg } },
       children
-    )
+    ),
 };

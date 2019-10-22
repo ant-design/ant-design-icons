@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SlackCircleFilledSvg from '@ant-design/icons-svg/lib/asn/SlackCircleFilled'
+import Icon from '../components/AntdIcon';
+import SlackCircleFillSvg from '@ant-design/icons-svg/lib/fill/SlackCircleFill';
 
 export default {
   name: 'SlackCircleFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SlackCircleFilledSvg } },
+      { ...data, props: { ...data.props, icon: SlackCircleFillSvg } },
       children
-    )
+    ),
 };

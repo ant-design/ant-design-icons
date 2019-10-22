@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import InfoCircleSvg from '@ant-design/icons-svg/lib/asn/InfoCircleOutlined'
+import Icon from '../components/AntdIcon';
+import InfoCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/InfoCircleOutline';
 
 export default {
   name: 'InfoCircle',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: InfoCircleSvg } },
+      { ...data, props: { ...data.props, icon: InfoCircleOutlineSvg } },
       children
-    )
+    ),
 };

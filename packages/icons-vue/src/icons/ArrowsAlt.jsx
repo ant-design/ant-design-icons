@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ArrowsAltSvg from '@ant-design/icons-svg/lib/asn/ArrowsAltOutlined'
+import Icon from '../components/AntdIcon';
+import ArrowsAltOutlineSvg from '@ant-design/icons-svg/lib/outline/ArrowsAltOutline';
 
 export default {
   name: 'ArrowsAlt',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ArrowsAltSvg } },
+      { ...data, props: { ...data.props, icon: ArrowsAltOutlineSvg } },
       children
-    )
+    ),
 };

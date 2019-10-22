@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import SwapLeftSvg from '@ant-design/icons-svg/lib/asn/SwapLeftOutlined'
+import Icon from '../components/AntdIcon';
+import SwapLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/SwapLeftOutline';
 
 export default {
   name: 'SwapLeft',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SwapLeftSvg } },
+      { ...data, props: { ...data.props, icon: SwapLeftOutlineSvg } },
       children
-    )
+    ),
 };

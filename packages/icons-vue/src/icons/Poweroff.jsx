@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PoweroffSvg from '@ant-design/icons-svg/lib/asn/PoweroffOutlined'
+import Icon from '../components/AntdIcon';
+import PoweroffOutlineSvg from '@ant-design/icons-svg/lib/outline/PoweroffOutline';
 
 export default {
   name: 'Poweroff',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PoweroffSvg } },
+      { ...data, props: { ...data.props, icon: PoweroffOutlineSvg } },
       children
-    )
+    ),
 };

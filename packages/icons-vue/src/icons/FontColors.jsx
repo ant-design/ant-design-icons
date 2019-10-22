@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FontColorsSvg from '@ant-design/icons-svg/lib/asn/FontColorsOutlined'
+import Icon from '../components/AntdIcon';
+import FontColorsOutlineSvg from '@ant-design/icons-svg/lib/outline/FontColorsOutline';
 
 export default {
   name: 'FontColors',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FontColorsSvg } },
+      { ...data, props: { ...data.props, icon: FontColorsOutlineSvg } },
       children
-    )
+    ),
 };

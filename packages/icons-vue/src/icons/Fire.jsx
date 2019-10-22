@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FireSvg from '@ant-design/icons-svg/lib/asn/FireOutlined'
+import Icon from '../components/AntdIcon';
+import FireOutlineSvg from '@ant-design/icons-svg/lib/outline/FireOutline';
 
 export default {
   name: 'Fire',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FireSvg } },
+      { ...data, props: { ...data.props, icon: FireOutlineSvg } },
       children
-    )
+    ),
 };

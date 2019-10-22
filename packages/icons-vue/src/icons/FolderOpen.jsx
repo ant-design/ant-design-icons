@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FolderOpenSvg from '@ant-design/icons-svg/lib/asn/FolderOpenOutlined'
+import Icon from '../components/AntdIcon';
+import FolderOpenOutlineSvg from '@ant-design/icons-svg/lib/outline/FolderOpenOutline';
 
 export default {
   name: 'FolderOpen',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FolderOpenSvg } },
+      { ...data, props: { ...data.props, icon: FolderOpenOutlineSvg } },
       children
-    )
+    ),
 };

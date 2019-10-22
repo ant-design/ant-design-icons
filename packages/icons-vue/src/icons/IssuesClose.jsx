@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import IssuesCloseSvg from '@ant-design/icons-svg/lib/asn/IssuesCloseOutlined'
+import Icon from '../components/AntdIcon';
+import IssuesCloseOutlineSvg from '@ant-design/icons-svg/lib/outline/IssuesCloseOutline';
 
 export default {
   name: 'IssuesClose',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: IssuesCloseSvg } },
+      { ...data, props: { ...data.props, icon: IssuesCloseOutlineSvg } },
       children
-    )
+    ),
 };

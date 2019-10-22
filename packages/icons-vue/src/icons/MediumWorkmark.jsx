@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import MediumWorkmarkSvg from '@ant-design/icons-svg/lib/asn/MediumWorkmarkOutlined'
+import Icon from '../components/AntdIcon';
+import MediumWorkmarkOutlineSvg from '@ant-design/icons-svg/lib/outline/MediumWorkmarkOutline';
 
 export default {
   name: 'MediumWorkmark',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: MediumWorkmarkSvg } },
+      { ...data, props: { ...data.props, icon: MediumWorkmarkOutlineSvg } },
       children
-    )
+    ),
 };

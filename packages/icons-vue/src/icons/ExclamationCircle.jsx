@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ExclamationCircleSvg from '@ant-design/icons-svg/lib/asn/ExclamationCircleOutlined'
+import Icon from '../components/AntdIcon';
+import ExclamationCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/ExclamationCircleOutline';
 
 export default {
   name: 'ExclamationCircle',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ExclamationCircleSvg } },
+      { ...data, props: { ...data.props, icon: ExclamationCircleOutlineSvg } },
       children
-    )
+    ),
 };

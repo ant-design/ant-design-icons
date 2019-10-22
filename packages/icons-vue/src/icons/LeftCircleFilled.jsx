@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import LeftCircleFilledSvg from '@ant-design/icons-svg/lib/asn/LeftCircleFilled'
+import Icon from '../components/AntdIcon';
+import LeftCircleFillSvg from '@ant-design/icons-svg/lib/fill/LeftCircleFill';
 
 export default {
   name: 'LeftCircleFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: LeftCircleFilledSvg } },
+      { ...data, props: { ...data.props, icon: LeftCircleFillSvg } },
       children
-    )
+    ),
 };

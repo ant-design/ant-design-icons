@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AudioFilledSvg from '@ant-design/icons-svg/lib/asn/AudioFilled'
+import Icon from '../components/AntdIcon';
+import AudioFillSvg from '@ant-design/icons-svg/lib/fill/AudioFill';
 
 export default {
   name: 'AudioFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AudioFilledSvg } },
+      { ...data, props: { ...data.props, icon: AudioFillSvg } },
       children
-    )
+    ),
 };

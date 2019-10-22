@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import YoutubeSvg from '@ant-design/icons-svg/lib/asn/YoutubeOutlined'
+import Icon from '../components/AntdIcon';
+import YoutubeOutlineSvg from '@ant-design/icons-svg/lib/outline/YoutubeOutline';
 
 export default {
   name: 'Youtube',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: YoutubeSvg } },
+      { ...data, props: { ...data.props, icon: YoutubeOutlineSvg } },
       children
-    )
+    ),
 };

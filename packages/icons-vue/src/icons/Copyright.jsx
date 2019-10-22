@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CopyrightSvg from '@ant-design/icons-svg/lib/asn/CopyrightOutlined'
+import Icon from '../components/AntdIcon';
+import CopyrightOutlineSvg from '@ant-design/icons-svg/lib/outline/CopyrightOutline';
 
 export default {
   name: 'Copyright',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CopyrightSvg } },
+      { ...data, props: { ...data.props, icon: CopyrightOutlineSvg } },
       children
-    )
+    ),
 };

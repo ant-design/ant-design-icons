@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DeleteFilledSvg from '@ant-design/icons-svg/lib/asn/DeleteFilled'
+import Icon from '../components/AntdIcon';
+import DeleteFillSvg from '@ant-design/icons-svg/lib/fill/DeleteFill';
 
 export default {
   name: 'DeleteFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DeleteFilledSvg } },
+      { ...data, props: { ...data.props, icon: DeleteFillSvg } },
       children
-    )
+    ),
 };

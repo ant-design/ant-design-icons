@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import BorderOuterSvg from '@ant-design/icons-svg/lib/asn/BorderOuterOutlined'
+import Icon from '../components/AntdIcon';
+import BorderOuterOutlineSvg from '@ant-design/icons-svg/lib/outline/BorderOuterOutline';
 
 export default {
   name: 'BorderOuter',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BorderOuterSvg } },
+      { ...data, props: { ...data.props, icon: BorderOuterOutlineSvg } },
       children
-    )
+    ),
 };

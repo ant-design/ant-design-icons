@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AlertTwoToneSvg from '@ant-design/icons-svg/lib/asn/AlertTwoTone'
+import Icon from '../components/AntdIcon';
+import AlertTwoToneSvg from '@ant-design/icons-svg/lib/twotone/AlertTwoTone';
 
 export default {
   name: 'AlertTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: AlertTwoToneSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import LikeFilledSvg from '@ant-design/icons-svg/lib/asn/LikeFilled'
+import Icon from '../components/AntdIcon';
+import LikeFillSvg from '@ant-design/icons-svg/lib/fill/LikeFill';
 
 export default {
   name: 'LikeFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: LikeFilledSvg } },
+      { ...data, props: { ...data.props, icon: LikeFillSvg } },
       children
-    )
+    ),
 };

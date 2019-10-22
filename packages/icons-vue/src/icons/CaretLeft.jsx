@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import CaretLeftSvg from '@ant-design/icons-svg/lib/asn/CaretLeftOutlined'
+import Icon from '../components/AntdIcon';
+import CaretLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/CaretLeftOutline';
 
 export default {
   name: 'CaretLeft',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CaretLeftSvg } },
+      { ...data, props: { ...data.props, icon: CaretLeftOutlineSvg } },
       children
-    )
+    ),
 };

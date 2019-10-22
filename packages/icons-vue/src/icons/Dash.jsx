@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DashSvg from '@ant-design/icons-svg/lib/asn/DashOutlined'
+import Icon from '../components/AntdIcon';
+import DashOutlineSvg from '@ant-design/icons-svg/lib/outline/DashOutline';
 
 export default {
   name: 'Dash',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DashSvg } },
+      { ...data, props: { ...data.props, icon: DashOutlineSvg } },
       children
-    )
+    ),
 };

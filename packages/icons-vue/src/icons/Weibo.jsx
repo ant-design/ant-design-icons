@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import WeiboSvg from '@ant-design/icons-svg/lib/asn/WeiboOutlined'
+import Icon from '../components/AntdIcon';
+import WeiboOutlineSvg from '@ant-design/icons-svg/lib/outline/WeiboOutline';
 
 export default {
   name: 'Weibo',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: WeiboSvg } },
+      { ...data, props: { ...data.props, icon: WeiboOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import TabletFilledSvg from '@ant-design/icons-svg/lib/asn/TabletFilled'
+import Icon from '../components/AntdIcon';
+import TabletFillSvg from '@ant-design/icons-svg/lib/fill/TabletFill';
 
 export default {
   name: 'TabletFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: TabletFilledSvg } },
+      { ...data, props: { ...data.props, icon: TabletFillSvg } },
       children
-    )
+    ),
 };

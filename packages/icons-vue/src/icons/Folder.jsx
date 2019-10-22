@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import FolderSvg from '@ant-design/icons-svg/lib/asn/FolderOutlined'
+import Icon from '../components/AntdIcon';
+import FolderOutlineSvg from '@ant-design/icons-svg/lib/outline/FolderOutline';
 
 export default {
   name: 'Folder',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FolderSvg } },
+      { ...data, props: { ...data.props, icon: FolderOutlineSvg } },
       children
-    )
+    ),
 };

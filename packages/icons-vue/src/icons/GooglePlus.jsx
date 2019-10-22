@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import GooglePlusSvg from '@ant-design/icons-svg/lib/asn/GooglePlusOutlined'
+import Icon from '../components/AntdIcon';
+import GooglePlusOutlineSvg from '@ant-design/icons-svg/lib/outline/GooglePlusOutline';
 
 export default {
   name: 'GooglePlus',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: GooglePlusSvg } },
+      { ...data, props: { ...data.props, icon: GooglePlusOutlineSvg } },
       children
-    )
+    ),
 };

@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import LeftSquareFilledSvg from '@ant-design/icons-svg/lib/asn/LeftSquareFilled'
+import Icon from '../components/AntdIcon';
+import LeftSquareFillSvg from '@ant-design/icons-svg/lib/fill/LeftSquareFill';
 
 export default {
   name: 'LeftSquareFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: LeftSquareFilledSvg } },
+      { ...data, props: { ...data.props, icon: LeftSquareFillSvg } },
       children
-    )
+    ),
 };

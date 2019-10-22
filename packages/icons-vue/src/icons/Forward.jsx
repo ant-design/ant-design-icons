@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import ForwardSvg from '@ant-design/icons-svg/lib/asn/ForwardOutlined'
+import Icon from '../components/AntdIcon';
+import ForwardOutlineSvg from '@ant-design/icons-svg/lib/outline/ForwardOutline';
 
 export default {
   name: 'Forward',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ForwardSvg } },
+      { ...data, props: { ...data.props, icon: ForwardOutlineSvg } },
       children
-    )
+    ),
 };

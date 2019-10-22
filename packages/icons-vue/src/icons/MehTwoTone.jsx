@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import MehTwoToneSvg from '@ant-design/icons-svg/lib/asn/MehTwoTone'
+import Icon from '../components/AntdIcon';
+import MehTwoToneSvg from '@ant-design/icons-svg/lib/twotone/MehTwoTone';
 
 export default {
   name: 'MehTwoTone',
@@ -12,5 +13,5 @@ export default {
       Icon,
       { ...data, props: { ...data.props, icon: MehTwoToneSvg } },
       children
-    )
+    ),
 };

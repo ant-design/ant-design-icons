@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import PaperClipSvg from '@ant-design/icons-svg/lib/asn/PaperClipOutlined'
+import Icon from '../components/AntdIcon';
+import PaperClipOutlineSvg from '@ant-design/icons-svg/lib/outline/PaperClipOutline';
 
 export default {
   name: 'PaperClip',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PaperClipSvg } },
+      { ...data, props: { ...data.props, icon: PaperClipOutlineSvg } },
       children
-    )
+    ),
 };

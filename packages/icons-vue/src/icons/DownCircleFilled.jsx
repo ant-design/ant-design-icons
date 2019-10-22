@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DownCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DownCircleFilled'
+import Icon from '../components/AntdIcon';
+import DownCircleFillSvg from '@ant-design/icons-svg/lib/fill/DownCircleFill';
 
 export default {
   name: 'DownCircleFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DownCircleFilledSvg } },
+      { ...data, props: { ...data.props, icon: DownCircleFillSvg } },
       children
-    )
+    ),
 };

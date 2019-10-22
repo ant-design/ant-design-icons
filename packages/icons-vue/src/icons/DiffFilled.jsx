@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import DiffFilledSvg from '@ant-design/icons-svg/lib/asn/DiffFilled'
+import Icon from '../components/AntdIcon';
+import DiffFillSvg from '@ant-design/icons-svg/lib/fill/DiffFill';
 
 export default {
   name: 'DiffFilled',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DiffFilledSvg } },
+      { ...data, props: { ...data.props, icon: DiffFillSvg } },
       children
-    )
+    ),
 };

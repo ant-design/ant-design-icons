@@ -1,8 +1,9 @@
-// GENERATE BY ./scripts/generate.ts
+
+// GENERATE BY ./scripts/generateIcons.js
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/AntdIcon'
-import AuditSvg from '@ant-design/icons-svg/lib/asn/AuditOutlined'
+import Icon from '../components/AntdIcon';
+import AuditOutlineSvg from '@ant-design/icons-svg/lib/outline/AuditOutline';
 
 export default {
   name: 'Audit',
@@ -10,7 +11,7 @@ export default {
   render: (h, { data, children }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AuditSvg } },
+      { ...data, props: { ...data.props, icon: AuditOutlineSvg } },
       children
-    )
+    ),
 };
