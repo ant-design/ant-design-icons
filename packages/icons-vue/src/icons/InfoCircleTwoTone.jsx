@@ -1,11 +1,16 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/Icon'
-import InfoCircleTwoToneSvg from '@ant-design/icons-svg/es/asn/InfoCircleTwoTone'
+import Icon from '../components/AntdIcon'
+import InfoCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/InfoCircleTwoTone'
 
 export default {
   name: 'InfoCircleTwoTone',
   functional: true,
-  render: (h, { data, children }) => h(Icon, { ...data, type: InfoCircleTwoToneSvg }, children),
-}
+  render: (h, { data, children }) =>
+    h(
+      Icon,
+      { ...data, props: { ...data.props, icon: InfoCircleTwoToneSvg } },
+      children
+    )
+};

@@ -1,11 +1,16 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/Icon'
-import RocketTwoToneSvg from '@ant-design/icons-svg/es/asn/RocketTwoTone'
+import Icon from '../components/AntdIcon'
+import RocketTwoToneSvg from '@ant-design/icons-svg/lib/asn/RocketTwoTone'
 
 export default {
   name: 'RocketTwoTone',
   functional: true,
-  render: (h, { data, children }) => h(Icon, { ...data, type: RocketTwoToneSvg }, children),
-}
+  render: (h, { data, children }) =>
+    h(
+      Icon,
+      { ...data, props: { ...data.props, icon: RocketTwoToneSvg } },
+      children
+    )
+};

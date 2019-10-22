@@ -1,11 +1,16 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/Icon'
-import DiffTwoToneSvg from '@ant-design/icons-svg/es/asn/DiffTwoTone'
+import Icon from '../components/AntdIcon'
+import DiffTwoToneSvg from '@ant-design/icons-svg/lib/asn/DiffTwoTone'
 
 export default {
   name: 'DiffTwoTone',
   functional: true,
-  render: (h, { data, children }) => h(Icon, { ...data, type: DiffTwoToneSvg }, children),
-}
+  render: (h, { data, children }) =>
+    h(
+      Icon,
+      { ...data, props: { ...data.props, icon: DiffTwoToneSvg } },
+      children
+    )
+};

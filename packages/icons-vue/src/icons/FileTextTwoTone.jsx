@@ -1,11 +1,16 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import Icon from '../components/Icon'
-import FileTextTwoToneSvg from '@ant-design/icons-svg/es/asn/FileTextTwoTone'
+import Icon from '../components/AntdIcon'
+import FileTextTwoToneSvg from '@ant-design/icons-svg/lib/asn/FileTextTwoTone'
 
 export default {
   name: 'FileTextTwoTone',
   functional: true,
-  render: (h, { data, children }) => h(Icon, { ...data, type: FileTextTwoToneSvg }, children),
-}
+  render: (h, { data, children }) =>
+    h(
+      Icon,
+      { ...data, props: { ...data.props, icon: FileTextTwoToneSvg } },
+      children
+    )
+};
