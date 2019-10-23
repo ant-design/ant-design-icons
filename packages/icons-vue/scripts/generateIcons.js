@@ -22,7 +22,8 @@ import Icon from '../components/AntdIcon';
 import ${svgName}Svg from '@ant-design/icons-svg/lib/${theme}/${svgName}';
 
 export default {
-  name: '${componentName}',
+  name: 'Icon${componentName}',
+  displayName: '${componentName}',
   functional: true,
   render: (h, { data, children }) =>
     h(

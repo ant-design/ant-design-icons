@@ -1,58 +1,39 @@
-import Vue from 'vue'
-import * as icons from '@ant-design/icons/lib/dist';
-import manifest from '@ant-design/icons/lib/manifest';
+import Vue from 'vue';
+import * as AntdIcons from '../src/icons';
+import './index.less';
 
-import AntdIcon from '../src';
-import './index.less'
+const allIcons = AntdIcons;
 
-const antDesignIcons = icons;
-
-AntdIcon.add(...Object.keys(antDesignIcons).map((key) => antDesignIcons[key]));
-
-Vue.use(AntdIcon)
+const iconsList = Object.keys(allIcons).map(iconName => allIcons[iconName]);
 
 const AllIconDemo = {
   data() {
     return {
-      names: manifest,
-      currentTheme: 'outline',
-    }
+      currentTheme: 'Outlined',
+    };
   },
   computed: {
     Icons() {
-      return this.names[this.currentTheme].map((name) => {
-        let computedName = name;
-        switch (this.currentTheme) {
-          case 'fill':
-            computedName += '-fill';
-            break;
-          case 'outline':
-            computedName += '-o';
-            break;
-          case 'twotone':
-            computedName += '-twotone';
-            break;
-          default:
-            throw new TypeError(`Unknown theme ${this.currentTheme}`);
-        }
-        return (
-          <div class="card" key={name}>
-            <antd-icon
-              style={{ fontSize: '24px' }}
-              key={computedName}
-              type={computedName}
-            />
-            <p class="name-description">{computedName}</p>
+      return iconsList
+        .filter(icon => {
+          if (this.currentTheme !== 'Outlined') {
+            return icon.name.includes(this.currentTheme);
+          }
+          return ['Filled', 'TwoTone'].every(theme => !icon.name.includes(theme));
+        })
+        .map(Component => (
+          <div class="card" key={Component.displayName}>
+            <Component style={{ fontSize: '24px' }} />
+            <p class="name-description">{Component.displayName}</p>
           </div>
-        );
-      });
+        ));
     },
   },
   methods: {
     handleSelectChange(e) {
       const value = e.currentTarget.value;
       this.currentTheme = value;
-    }
+    },
   },
   render() {
     return (
@@ -64,20 +45,20 @@ const AllIconDemo = {
             value={this.currentTheme}
             onChange={this.handleSelectChange}
           >
-            <option value={'fill'}>Filled</option>
-            <option value={'outline'}>Outlined</option>
-            <option value={'twotone'}>Two-Tone</option>
+            <option value="Filled">Filled</option>
+            <option value="Outlined">Outlined</option>
+            <option value="TwoTone">Two-Tone</option>
           </select>
         </div>
         <div class="container">{this.Icons}</div>
       </div>
     );
-  }
-}
+  },
+};
 
 new Vue({
   el: '#__vue-content>div',
-  render(){
-    return <AllIconDemo/>
-  }
-})
+  render() {
+    return <AllIconDemo />;
+  },
+});

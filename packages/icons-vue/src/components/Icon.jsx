@@ -1,9 +1,9 @@
-import { svgBaseProps, warning, useInsertStyles, noop } from "../utils";
+import { svgBaseProps, warning, useInsertStyles } from '../utils';
 
 const Icon = {
-  name: "AntdIcon",
+  name: 'AntdIcon',
   functional: true,
-  props: ["component", "spin", "rotate", "tabIndex"],
+  props: ['component', 'spin', 'rotate', 'tabIndex'],
   render(h, ctx) {
     const { data: { attrs, ...restData } = {}, props = {}, listeners, children } = ctx;
     const {
@@ -16,20 +16,16 @@ const Icon = {
       ...restProps
     } = { ...attrs, ...props };
     const { click: onClick } = listeners;
-    warning(
-      Boolean(Component || children),
-      "Should have `component` prop or `default slot`."
-    );
+    const hasChildren = children && children.length;
+    warning(Boolean(Component || hasChildren), 'Should have `component` prop or `children`.');
 
     useInsertStyles();
 
-    const classString = "anticon";
+    const classString = 'anticon';
 
     const svgClassString = {
-      "anticon-spin": !!spin,
+      'anticon-spin': !!spin,
     };
-
-    let innerNode;
     const svgStyle = rotate
       ? {
           msTransform: `rotate(${rotate}deg)`,
@@ -49,18 +45,18 @@ const Icon = {
     const renderInnerNode = () => {
       // component > children
       if (Component) {
-        return <Component {...innerSvgProps}>{children}</Component>;
+        return typeof Component === 'function' ? (
+          Component(h, { ...innerSvgProps, children })
+        ) : (
+          <Component {...innerSvgProps}>{children}</Component>
+        );
       }
-
-      if (children) {
-        // warning(
-        //   Boolean(viewBox) ||
-        //     (React.Children.count(children) === 1 &&
-        //       React.isValidElement(children) &&
-        //       React.Children.only(children).type === "use"),
-        //   "Make sure that you provide correct `viewBox`" +
-        //     " prop (default `0 0 1024 1024`) to the icon."
-        // );
+      if (hasChildren) {
+        warning(
+          Boolean(viewBox) || (children.length === 1 && children[0] && children[0].tag === 'use'),
+          'Make sure that you provide correct `viewBox`' +
+            ' prop (default `0 0 1024 1024`) to the icon.',
+        );
 
         return (
           <svg {...innerSvgProps} viewBox={viewBox}>

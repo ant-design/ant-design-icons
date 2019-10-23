@@ -1,24 +1,17 @@
-import {
-  CheckCircleTwoTone,
-  HeartTwoTone,
-  SmileTwoTone
-} from '@ant-design/icons';
-import Vue from 'vue'
-import AntdIcon from '../src';
-import './index.less'
-
-AntdIcon.add(SmileTwoTone, HeartTwoTone, CheckCircleTwoTone);
+import Vue from 'vue';
+import { SmileTwoTone, HeartTwoTone, CheckCircleTwoTone } from '../src';
+import './index.less';
 
 new Vue({
   el: '#__vue-content>div',
-  render(){
+  render() {
     return (
-      <div class='icons-list'>
-        <AntdIcon type='smile-twotone' />
-        <AntdIcon type='heart-twotone' primaryColor='#eb2f96' />
-        <AntdIcon type='heart-twotone' />
-        <AntdIcon type='check-circle-twotone' primaryColor='#52c41a' />
+      <div class="icons-list">
+        <SmileTwoTone />
+        <HeartTwoTone twoToneColor="#eb2f96" />
+        <HeartTwoTone />
+        <CheckCircleTwoTone twoToneColor="#52c41a" />
       </div>
-    )
-  }
-})
+    );
+  },
+});

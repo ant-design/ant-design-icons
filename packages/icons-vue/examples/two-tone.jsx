@@ -7,10 +7,10 @@ const allIcons = AntdIcons;
 
 const iconsList = Object.keys(allIcons)
   .map(iconName => allIcons[iconName])
-  .filter((icon) => icon.name.includes('TwoTone'));
+  .filter(icon => icon.name.includes('TwoTone'));
 
 const AllIconDemo = {
-  data () {
+  data() {
     return {
       primaryColor: '#1890ff',
     };
@@ -19,7 +19,7 @@ const AllIconDemo = {
     setTwoToneColor(this.primaryColor);
   },
   methods: {
-    onPrimaryColorChange (e) {
+    onPrimaryColorChange(e) {
       console.log(e.currentTarget.value);
       setTwoToneColor(e.currentTarget.value);
       this.primaryColor = e.currentTarget.value;
@@ -31,33 +31,25 @@ const AllIconDemo = {
         <h1 style={{ textAlign: 'center' }}>Two Tone</h1>
         <div style={{ textAlign: 'center' }}>
           <h2>Primary Color</h2>
-          <input
-            type={'color'}
-            value={this.primaryColor}
-            onChange={this.onPrimaryColorChange}
-          />
+          <input type={'color'} value={this.primaryColor} onChange={this.onPrimaryColorChange} />
           <span class="text">{this.primaryColor}</span>
         </div>
         <div class="container">
-          {
-            iconsList.map(Component => (
-              <div class="card" key={Component.name}>
-                <Component style={{ fontSize: '26px' }} class="test"/>
-                <p class="name-description">{Component.name}</p>
-              </div>
-            ))
-          }
+          {iconsList.map(Component => (
+            <div class="card" key={Component.displayName}>
+              <Component style={{ fontSize: '26px' }} class="test" />
+              <p class="name-description">{Component.displayName}</p>
+            </div>
+          ))}
         </div>
       </div>
     );
   },
 };
 
-
-
 new Vue({
   el: '#__vue-content>div',
-  render(){
-    return <AllIconDemo/>;
+  render() {
+    return <AllIconDemo />;
   },
 });

@@ -1,29 +1,25 @@
-import Vue from "vue";
-import isPlainObject from "lodash/isPlainObject";
-import { generate as generateColor } from "@ant-design/colors";
-import { insertCss } from "insert-css";
+import Vue from 'vue';
+import isPlainObject from 'lodash/isPlainObject';
+import { generate as generateColor } from '@ant-design/colors';
+import { insertCss } from 'insert-css';
 
 export function warn(valid, message) {
   // Support uglify
-  if (
-    process.env.NODE_ENV !== "production" &&
-    !valid &&
-    console !== undefined
-  ) {
+  if (process.env.NODE_ENV !== 'production' && !valid && console !== undefined) {
     console.error(`Warning: ${message}`);
   }
 }
 
 export function warning(valid, message) {
-  warn(valid, `[@ant-design/icons] ${message}`);
+  warn(valid, `[@ant-design/icons-vue] ${message}`);
 }
 
 export function isIconDefinition(target) {
   return (
-    typeof target === "object" &&
-    typeof target.name === "string" &&
-    typeof target.theme === "string" &&
-    (typeof target.icon === "object" || typeof target.icon === "function")
+    typeof target === 'object' &&
+    typeof target.name === 'string' &&
+    typeof target.theme === 'string' &&
+    (typeof target.icon === 'object' || typeof target.icon === 'function')
   );
 }
 
@@ -31,7 +27,7 @@ export function normalizeAttrs(attrs = {}) {
   return Object.keys(attrs).reduce((acc, key) => {
     const val = attrs[key];
     switch (key) {
-      case "class":
+      case 'class':
         acc.className = val;
         delete acc.class;
         break;
@@ -48,8 +44,8 @@ export function generate(h, node, key, rootProps) {
       node.tag,
       { key, attrs: { ...normalizeAttrs(node.attrs) } },
       (node.children || []).map((child, index) =>
-        generate(h, child, `${key}-${node.tag}-${index}`)
-      )
+        generate(h, child, `${key}-${node.tag}-${index}`),
+      ),
     );
   }
   return h(
@@ -59,9 +55,7 @@ export function generate(h, node, key, rootProps) {
       ...rootProps,
       attrs: { ...normalizeAttrs(node.attrs), ...rootProps.attrs },
     },
-    (node.children || []).map((child, index) =>
-      generate(h, child, `${key}-${node.tag}-${index}`)
-    )
+    (node.children || []).map((child, index) => generate(h, child, `${key}-${node.tag}-${index}`)),
   );
 }
 
@@ -73,11 +67,11 @@ export function getSecondaryColor(primaryColor) {
 // These props make sure that the SVG behaviours like general text.
 // Reference: https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
 export const svgBaseProps = {
-  width: "1em",
-  height: "1em",
-  fill: "currentColor",
-  "aria-hidden": "true",
-  focusable: "false",
+  width: '1em',
+  height: '1em',
+  fill: 'currentColor',
+  'aria-hidden': 'true',
+  focusable: 'false',
 };
 
 export const iconStyles = `
