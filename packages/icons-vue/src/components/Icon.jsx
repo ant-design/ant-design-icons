@@ -1,110 +1,88 @@
-import {
-  generate,
-  getSecondaryColor,
-  isIconDefinition,
-  log,
-  MiniMap,
-  withSuffix,
-} from '../utils'
-
-const twoToneColorPalette = {
-  primaryColor: '#333',
-  secondaryColor: '#E6E6E6',
-}
+import { svgBaseProps, warning, useInsertStyles } from '../utils';
 
 const Icon = {
   name: 'AntdIcon',
-  props: ['type', 'primaryColor', 'secondaryColor'],
-  displayName: 'IconVue',
-  definitions: new MiniMap(),
-  data () {
-    return {
-      twoToneColorPalette,
-    }
-  },
-  add (...icons) {
-    icons.forEach((icon) => {
-      Icon.definitions.set(withSuffix(icon.name, icon.theme), icon)
-    })
-  },
-  clear () {
-    Icon.definitions.clear()
-  },
-  get (key, colors = twoToneColorPalette) {
-    if (key) {
-      let target = Icon.definitions.get(key)
-      if (target && typeof target.icon === 'function') {
-        target = {
-          ...target,
-          icon: target.icon(colors.primaryColor, colors.secondaryColor),
-        }
-      }
-      return target
-    }
-  },
-  setTwoToneColors ({
-    primaryColor,
-    secondaryColor,
-  }) {
-    twoToneColorPalette.primaryColor = primaryColor
-    twoToneColorPalette.secondaryColor =
-      secondaryColor || getSecondaryColor(primaryColor)
-  },
-  getTwoToneColors () {
-    return {
-      ...twoToneColorPalette,
-    }
-  },
-  render (h) {
+  functional: true,
+  props: ['component', 'spin', 'rotate', 'tabIndex'],
+  render(h, ctx) {
+    const { data: { attrs, ...restData } = {}, props = {}, listeners, children } = ctx;
     const {
-      type,
-      primaryColor,
-      secondaryColor,
-    } = this.$props
+      // affect inner <svg>...</svg>
+      component: Component,
+      viewBox,
+      spin,
+      rotate,
+      tabIndex,
+      ...restProps
+    } = { ...attrs, ...props };
+    const { click: onClick } = listeners;
+    const hasChildren = children && children.length;
+    warning(Boolean(Component || hasChildren), 'Should have `component` prop or `children`.');
 
-    let target
-    let colors = twoToneColorPalette
-    if (primaryColor) {
-      colors = {
-        primaryColor,
-        secondaryColor: secondaryColor || getSecondaryColor(primaryColor),
+    useInsertStyles();
+
+    const classString = 'anticon';
+
+    const svgClassString = {
+      'anticon-spin': !!spin,
+    };
+    const svgStyle = rotate
+      ? {
+          msTransform: `rotate(${rotate}deg)`,
+          transform: `rotate(${rotate}deg)`,
+        }
+      : undefined;
+
+    const innerSvgProps = {
+      attrs: { ...svgBaseProps, viewBox },
+      class: svgClassString,
+      style: svgStyle,
+    };
+
+    if (!viewBox) {
+      delete innerSvgProps.attrs.viewBox;
+    }
+    const renderInnerNode = () => {
+      // component > children
+      if (Component) {
+        return typeof Component === 'function' ? (
+          Component(h, { ...innerSvgProps, children })
+        ) : (
+          <Component {...innerSvgProps}>{children}</Component>
+        );
       }
-    }
-    if (isIconDefinition(type)) {
-      target = type
-    } else if (typeof type === 'string') {
-      target = Icon.get(type, colors)
-      if (!target) {
-        // log(`Could not find icon: ${type}`);
-        return null
+      if (hasChildren) {
+        warning(
+          Boolean(viewBox) || (children.length === 1 && children[0] && children[0].tag === 'use'),
+          'Make sure that you provide correct `viewBox`' +
+            ' prop (default `0 0 1024 1024`) to the icon.',
+        );
+
+        return (
+          <svg {...innerSvgProps} viewBox={viewBox}>
+            {children}
+          </svg>
+        );
       }
+      return null;
+    };
+
+    let iconTabIndex = tabIndex;
+    if (iconTabIndex === undefined && onClick) {
+      iconTabIndex = -1;
     }
-    if (!target) {
-      log(`type should be string or icon definiton, but got ${type}`)
-      return null
-    }
-    if (target && typeof target.icon === 'function') {
-      target = {
-        ...target,
-        icon: target.icon(colors.primaryColor, colors.secondaryColor),
-      }
-    }
-    return generate(h, target.icon, `svg-${target.name}`, {
-      attrs: {
-        'data-icon': target.name,
-        width: '1em',
-        height: '1em',
-        fill: 'currentColor',
-        'aria-hidden': 'true',
-      },
-      on: this.$listeners,
-    })
+
+    return (
+      <span
+        role="img"
+        tabIndex={iconTabIndex}
+        class={classString}
+        {...{ ...restData, attrs: restProps, on: listeners }}
+      >
+        {renderInnerNode()}
+      </span>
+    );
   },
-}
+};
 
-/* istanbul ignore next */
-Icon.install = function (Vue) {
-  Vue.component(Icon.name, Icon)
-}
-
-export default Icon
+export default Icon;
