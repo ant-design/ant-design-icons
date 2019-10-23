@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FundOutlineSvg from '@ant-design/icons-svg/lib/outline/FundOutline';
 
 export default {
-  name: 'Fund',
+  name: 'IconFund',
+  displayName: 'Fund',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import EnvironmentFillSvg from '@ant-design/icons-svg/lib/fill/EnvironmentFill';
 
 export default {
-  name: 'EnvironmentFilled',
+  name: 'IconEnvironmentFilled',
+  displayName: 'EnvironmentFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

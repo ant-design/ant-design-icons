@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FunnelPlotTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FunnelPlotTwoTone';
 
 export default {
-  name: 'FunnelPlotTwoTone',
+  name: 'IconFunnelPlotTwoTone',
+  displayName: 'FunnelPlotTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

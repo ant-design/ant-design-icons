@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SaveFillSvg from '@ant-design/icons-svg/lib/fill/SaveFill';
 
 export default {
-  name: 'SaveFilled',
+  name: 'IconSaveFilled',
+  displayName: 'SaveFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

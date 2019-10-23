@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PlusCircleFillSvg from '@ant-design/icons-svg/lib/fill/PlusCircleFill';
 
 export default {
-  name: 'PlusCircleFilled',
+  name: 'IconPlusCircleFilled',
+  displayName: 'PlusCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

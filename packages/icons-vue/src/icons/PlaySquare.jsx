@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PlaySquareOutlineSvg from '@ant-design/icons-svg/lib/outline/PlaySquareOutline';
 
 export default {
-  name: 'PlaySquare',
+  name: 'IconPlaySquare',
+  displayName: 'PlaySquare',
   functional: true,
   render: (h, { data, children }) =>
     h(

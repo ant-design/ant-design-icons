@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import HighlightFillSvg from '@ant-design/icons-svg/lib/fill/HighlightFill';
 
 export default {
-  name: 'HighlightFilled',
+  name: 'IconHighlightFilled',
+  displayName: 'HighlightFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

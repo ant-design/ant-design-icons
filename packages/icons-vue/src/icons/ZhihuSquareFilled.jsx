@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ZhihuSquareFillSvg from '@ant-design/icons-svg/lib/fill/ZhihuSquareFill';
 
 export default {
-  name: 'ZhihuSquareFilled',
+  name: 'IconZhihuSquareFilled',
+  displayName: 'ZhihuSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

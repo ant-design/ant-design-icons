@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SyncOutlineSvg from '@ant-design/icons-svg/lib/outline/SyncOutline';
 
 export default {
-  name: 'Sync',
+  name: 'IconSync',
+  displayName: 'Sync',
   functional: true,
   render: (h, { data, children }) =>
     h(

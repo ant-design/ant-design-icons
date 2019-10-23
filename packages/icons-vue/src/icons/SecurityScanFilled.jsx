@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SecurityScanFillSvg from '@ant-design/icons-svg/lib/fill/SecurityScanFill';
 
 export default {
-  name: 'SecurityScanFilled',
+  name: 'IconSecurityScanFilled',
+  displayName: 'SecurityScanFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

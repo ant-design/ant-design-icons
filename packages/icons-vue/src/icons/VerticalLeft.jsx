@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import VerticalLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/VerticalLeftOutline';
 
 export default {
-  name: 'VerticalLeft',
+  name: 'IconVerticalLeft',
+  displayName: 'VerticalLeft',
   functional: true,
   render: (h, { data, children }) =>
     h(

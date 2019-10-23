@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TwitterOutlineSvg from '@ant-design/icons-svg/lib/outline/TwitterOutline';
 
 export default {
-  name: 'Twitter',
+  name: 'IconTwitter',
+  displayName: 'Twitter',
   functional: true,
   render: (h, { data, children }) =>
     h(

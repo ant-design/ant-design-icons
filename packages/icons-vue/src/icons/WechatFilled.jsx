@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import WechatFillSvg from '@ant-design/icons-svg/lib/fill/WechatFill';
 
 export default {
-  name: 'WechatFilled',
+  name: 'IconWechatFilled',
+  displayName: 'WechatFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

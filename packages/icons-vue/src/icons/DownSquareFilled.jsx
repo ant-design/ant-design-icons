@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DownSquareFillSvg from '@ant-design/icons-svg/lib/fill/DownSquareFill';
 
 export default {
-  name: 'DownSquareFilled',
+  name: 'IconDownSquareFilled',
+  displayName: 'DownSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ArrowUpOutlineSvg from '@ant-design/icons-svg/lib/outline/ArrowUpOutline';
 
 export default {
-  name: 'ArrowUp',
+  name: 'IconArrowUp',
+  displayName: 'ArrowUp',
   functional: true,
   render: (h, { data, children }) =>
     h(

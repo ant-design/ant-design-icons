@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import GoldTwoToneSvg from '@ant-design/icons-svg/lib/twotone/GoldTwoTone';
 
 export default {
-  name: 'GoldTwoTone',
+  name: 'IconGoldTwoTone',
+  displayName: 'GoldTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

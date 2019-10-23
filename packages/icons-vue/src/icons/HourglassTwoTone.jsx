@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import HourglassTwoToneSvg from '@ant-design/icons-svg/lib/twotone/HourglassTwoTone';
 
 export default {
-  name: 'HourglassTwoTone',
+  name: 'IconHourglassTwoTone',
+  displayName: 'HourglassTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

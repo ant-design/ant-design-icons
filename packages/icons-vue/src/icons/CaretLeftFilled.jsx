@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CaretLeftFillSvg from '@ant-design/icons-svg/lib/fill/CaretLeftFill';
 
 export default {
-  name: 'CaretLeftFilled',
+  name: 'IconCaretLeftFilled',
+  displayName: 'CaretLeftFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

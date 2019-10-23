@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LikeFillSvg from '@ant-design/icons-svg/lib/fill/LikeFill';
 
 export default {
-  name: 'LikeFilled',
+  name: 'IconLikeFilled',
+  displayName: 'LikeFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CheckOutlineSvg from '@ant-design/icons-svg/lib/outline/CheckOutline';
 
 export default {
-  name: 'Check',
+  name: 'IconCheck',
+  displayName: 'Check',
   functional: true,
   render: (h, { data, children }) =>
     h(

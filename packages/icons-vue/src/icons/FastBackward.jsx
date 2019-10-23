@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FastBackwardOutlineSvg from '@ant-design/icons-svg/lib/outline/FastBackwardOutline';
 
 export default {
-  name: 'FastBackward',
+  name: 'IconFastBackward',
+  displayName: 'FastBackward',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FileUnknownFillSvg from '@ant-design/icons-svg/lib/fill/FileUnknownFill';
 
 export default {
-  name: 'FileUnknownFilled',
+  name: 'IconFileUnknownFilled',
+  displayName: 'FileUnknownFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

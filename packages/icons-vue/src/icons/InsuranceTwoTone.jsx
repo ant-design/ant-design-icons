@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import InsuranceTwoToneSvg from '@ant-design/icons-svg/lib/twotone/InsuranceTwoTone';
 
 export default {
-  name: 'InsuranceTwoTone',
+  name: 'IconInsuranceTwoTone',
+  displayName: 'InsuranceTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

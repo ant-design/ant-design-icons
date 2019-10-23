@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ReloadOutlineSvg from '@ant-design/icons-svg/lib/outline/ReloadOutline';
 
 export default {
-  name: 'Reload',
+  name: 'IconReload',
+  displayName: 'Reload',
   functional: true,
   render: (h, { data, children }) =>
     h(

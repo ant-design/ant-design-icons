@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LinkedinOutlineSvg from '@ant-design/icons-svg/lib/outline/LinkedinOutline';
 
 export default {
-  name: 'Linkedin',
+  name: 'IconLinkedin',
+  displayName: 'Linkedin',
   functional: true,
   render: (h, { data, children }) =>
     h(

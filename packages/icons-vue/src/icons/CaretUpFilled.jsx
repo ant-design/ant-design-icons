@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CaretUpFillSvg from '@ant-design/icons-svg/lib/fill/CaretUpFill';
 
 export default {
-  name: 'CaretUpFilled',
+  name: 'IconCaretUpFilled',
+  displayName: 'CaretUpFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

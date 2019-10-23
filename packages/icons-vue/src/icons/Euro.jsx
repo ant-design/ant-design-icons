@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import EuroOutlineSvg from '@ant-design/icons-svg/lib/outline/EuroOutline';
 
 export default {
-  name: 'Euro',
+  name: 'IconEuro',
+  displayName: 'Euro',
   functional: true,
   render: (h, { data, children }) =>
     h(

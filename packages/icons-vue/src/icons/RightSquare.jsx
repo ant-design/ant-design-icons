@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RightSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/RightSquareOutline';
 
 export default {
-  name: 'RightSquare',
+  name: 'IconRightSquare',
+  displayName: 'RightSquare',
   functional: true,
   render: (h, { data, children }) =>
     h(

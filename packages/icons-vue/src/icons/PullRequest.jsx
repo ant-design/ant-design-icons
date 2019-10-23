@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PullRequestOutlineSvg from '@ant-design/icons-svg/lib/outline/PullRequestOutline';
 
 export default {
-  name: 'PullRequest',
+  name: 'IconPullRequest',
+  displayName: 'PullRequest',
   functional: true,
   render: (h, { data, children }) =>
     h(

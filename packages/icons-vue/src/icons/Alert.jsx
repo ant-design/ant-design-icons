@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AlertOutlineSvg from '@ant-design/icons-svg/lib/outline/AlertOutline';
 
 export default {
-  name: 'Alert',
+  name: 'IconAlert',
+  displayName: 'Alert',
   functional: true,
   render: (h, { data, children }) =>
     h(

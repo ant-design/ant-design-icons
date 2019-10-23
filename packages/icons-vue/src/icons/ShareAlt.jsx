@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ShareAltOutlineSvg from '@ant-design/icons-svg/lib/outline/ShareAltOutline';
 
 export default {
-  name: 'ShareAlt',
+  name: 'IconShareAlt',
+  displayName: 'ShareAlt',
   functional: true,
   render: (h, { data, children }) =>
     h(

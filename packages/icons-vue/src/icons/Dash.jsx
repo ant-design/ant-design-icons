@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DashOutlineSvg from '@ant-design/icons-svg/lib/outline/DashOutline';
 
 export default {
-  name: 'Dash',
+  name: 'IconDash',
+  displayName: 'Dash',
   functional: true,
   render: (h, { data, children }) =>
     h(

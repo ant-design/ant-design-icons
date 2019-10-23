@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RestFillSvg from '@ant-design/icons-svg/lib/fill/RestFill';
 
 export default {
-  name: 'RestFilled',
+  name: 'IconRestFilled',
+  displayName: 'RestFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

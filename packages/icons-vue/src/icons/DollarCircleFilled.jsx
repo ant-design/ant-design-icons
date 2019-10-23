@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DollarCircleFillSvg from '@ant-design/icons-svg/lib/fill/DollarCircleFill';
 
 export default {
-  name: 'DollarCircleFilled',
+  name: 'IconDollarCircleFilled',
+  displayName: 'DollarCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

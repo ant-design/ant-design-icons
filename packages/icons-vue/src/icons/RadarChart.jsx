@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RadarChartOutlineSvg from '@ant-design/icons-svg/lib/outline/RadarChartOutline';
 
 export default {
-  name: 'RadarChart',
+  name: 'IconRadarChart',
+  displayName: 'RadarChart',
   functional: true,
   render: (h, { data, children }) =>
     h(

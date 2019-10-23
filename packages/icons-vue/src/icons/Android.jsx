@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AndroidOutlineSvg from '@ant-design/icons-svg/lib/outline/AndroidOutline';
 
 export default {
-  name: 'Android',
+  name: 'IconAndroid',
+  displayName: 'Android',
   functional: true,
   render: (h, { data, children }) =>
     h(

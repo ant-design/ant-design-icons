@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import EuroCircleFillSvg from '@ant-design/icons-svg/lib/fill/EuroCircleFill';
 
 export default {
-  name: 'EuroCircleFilled',
+  name: 'IconEuroCircleFilled',
+  displayName: 'EuroCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

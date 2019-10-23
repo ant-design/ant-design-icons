@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import HeartFillSvg from '@ant-design/icons-svg/lib/fill/HeartFill';
 
 export default {
-  name: 'HeartFilled',
+  name: 'IconHeartFilled',
+  displayName: 'HeartFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

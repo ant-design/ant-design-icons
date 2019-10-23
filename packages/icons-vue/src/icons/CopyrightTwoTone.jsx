@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CopyrightTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CopyrightTwoTone';
 
 export default {
-  name: 'CopyrightTwoTone',
+  name: 'IconCopyrightTwoTone',
+  displayName: 'CopyrightTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

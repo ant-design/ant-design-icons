@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import GoogleSquareFillSvg from '@ant-design/icons-svg/lib/fill/GoogleSquareFill';
 
 export default {
-  name: 'GoogleSquareFilled',
+  name: 'IconGoogleSquareFilled',
+  displayName: 'GoogleSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

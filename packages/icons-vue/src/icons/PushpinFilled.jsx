@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PushpinFillSvg from '@ant-design/icons-svg/lib/fill/PushpinFill';
 
 export default {
-  name: 'PushpinFilled',
+  name: 'IconPushpinFilled',
+  displayName: 'PushpinFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

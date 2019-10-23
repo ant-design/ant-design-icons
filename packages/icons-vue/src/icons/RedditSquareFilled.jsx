@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RedditSquareFillSvg from '@ant-design/icons-svg/lib/fill/RedditSquareFill';
 
 export default {
-  name: 'RedditSquareFilled',
+  name: 'IconRedditSquareFilled',
+  displayName: 'RedditSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

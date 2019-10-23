@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AlipayOutlineSvg from '@ant-design/icons-svg/lib/outline/AlipayOutline';
 
 export default {
-  name: 'Alipay',
+  name: 'IconAlipay',
+  displayName: 'Alipay',
   functional: true,
   render: (h, { data, children }) =>
     h(

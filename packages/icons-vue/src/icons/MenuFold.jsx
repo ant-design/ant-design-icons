@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MenuFoldOutlineSvg from '@ant-design/icons-svg/lib/outline/MenuFoldOutline';
 
 export default {
-  name: 'MenuFold',
+  name: 'IconMenuFold',
+  displayName: 'MenuFold',
   functional: true,
   render: (h, { data, children }) =>
     h(

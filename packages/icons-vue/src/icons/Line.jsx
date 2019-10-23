@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LineOutlineSvg from '@ant-design/icons-svg/lib/outline/LineOutline';
 
 export default {
-  name: 'Line',
+  name: 'IconLine',
+  displayName: 'Line',
   functional: true,
   render: (h, { data, children }) =>
     h(

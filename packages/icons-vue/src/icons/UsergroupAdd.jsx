@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import UsergroupAddOutlineSvg from '@ant-design/icons-svg/lib/outline/UsergroupAddOutline';
 
 export default {
-  name: 'UsergroupAdd',
+  name: 'IconUsergroupAdd',
+  displayName: 'UsergroupAdd',
   functional: true,
   render: (h, { data, children }) =>
     h(

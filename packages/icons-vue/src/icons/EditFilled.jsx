@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import EditFillSvg from '@ant-design/icons-svg/lib/fill/EditFill';
 
 export default {
-  name: 'EditFilled',
+  name: 'IconEditFilled',
+  displayName: 'EditFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

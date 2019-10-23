@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ColumHeightOutlineSvg from '@ant-design/icons-svg/lib/outline/ColumHeightOutline';
 
 export default {
-  name: 'ColumHeight',
+  name: 'IconColumHeight',
+  displayName: 'ColumHeight',
   functional: true,
   render: (h, { data, children }) =>
     h(

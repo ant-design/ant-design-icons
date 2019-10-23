@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TrademarkCircleFillSvg from '@ant-design/icons-svg/lib/fill/TrademarkCircleFill';
 
 export default {
-  name: 'TrademarkCircleFilled',
+  name: 'IconTrademarkCircleFilled',
+  displayName: 'TrademarkCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

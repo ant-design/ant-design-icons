@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LinkedinFillSvg from '@ant-design/icons-svg/lib/fill/LinkedinFill';
 
 export default {
-  name: 'LinkedinFilled',
+  name: 'IconLinkedinFilled',
+  displayName: 'LinkedinFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CrownOutlineSvg from '@ant-design/icons-svg/lib/outline/CrownOutline';
 
 export default {
-  name: 'Crown',
+  name: 'IconCrown',
+  displayName: 'Crown',
   functional: true,
   render: (h, { data, children }) =>
     h(

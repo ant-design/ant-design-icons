@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AlibabaOutlineSvg from '@ant-design/icons-svg/lib/outline/AlibabaOutline';
 
 export default {
-  name: 'Alibaba',
+  name: 'IconAlibaba',
+  displayName: 'Alibaba',
   functional: true,
   render: (h, { data, children }) =>
     h(

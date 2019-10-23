@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DatabaseOutlineSvg from '@ant-design/icons-svg/lib/outline/DatabaseOutline';
 
 export default {
-  name: 'Database',
+  name: 'IconDatabase',
+  displayName: 'Database',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import HourglassFillSvg from '@ant-design/icons-svg/lib/fill/HourglassFill';
 
 export default {
-  name: 'HourglassFilled',
+  name: 'IconHourglassFilled',
+  displayName: 'HourglassFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

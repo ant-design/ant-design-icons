@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PropertySafetyFillSvg from '@ant-design/icons-svg/lib/fill/PropertySafetyFill';
 
 export default {
-  name: 'PropertySafetyFilled',
+  name: 'IconPropertySafetyFilled',
+  displayName: 'PropertySafetyFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

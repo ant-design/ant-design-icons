@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ContainerOutlineSvg from '@ant-design/icons-svg/lib/outline/ContainerOutline';
 
 export default {
-  name: 'Container',
+  name: 'IconContainer',
+  displayName: 'Container',
   functional: true,
   render: (h, { data, children }) =>
     h(

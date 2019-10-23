@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BorderLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/BorderLeftOutline';
 
 export default {
-  name: 'BorderLeft',
+  name: 'IconBorderLeft',
+  displayName: 'BorderLeft',
   functional: true,
   render: (h, { data, children }) =>
     h(

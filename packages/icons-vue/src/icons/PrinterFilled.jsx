@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PrinterFillSvg from '@ant-design/icons-svg/lib/fill/PrinterFill';
 
 export default {
-  name: 'PrinterFilled',
+  name: 'IconPrinterFilled',
+  displayName: 'PrinterFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

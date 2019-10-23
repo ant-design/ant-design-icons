@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PlayCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/PlayCircleOutline';
 
 export default {
-  name: 'PlayCircle',
+  name: 'IconPlayCircle',
+  displayName: 'PlayCircle',
   functional: true,
   render: (h, { data, children }) =>
     h(

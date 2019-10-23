@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DoubleRightOutlineSvg from '@ant-design/icons-svg/lib/outline/DoubleRightOutline';
 
 export default {
-  name: 'DoubleRight',
+  name: 'IconDoubleRight',
+  displayName: 'DoubleRight',
   functional: true,
   render: (h, { data, children }) =>
     h(

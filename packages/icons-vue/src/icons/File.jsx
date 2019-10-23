@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FileOutlineSvg from '@ant-design/icons-svg/lib/outline/FileOutline';
 
 export default {
-  name: 'File',
+  name: 'IconFile',
+  displayName: 'File',
   functional: true,
   render: (h, { data, children }) =>
     h(

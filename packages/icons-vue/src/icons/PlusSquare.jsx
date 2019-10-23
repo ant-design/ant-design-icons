@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PlusSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/PlusSquareOutline';
 
 export default {
-  name: 'PlusSquare',
+  name: 'IconPlusSquare',
+  displayName: 'PlusSquare',
   functional: true,
   render: (h, { data, children }) =>
     h(

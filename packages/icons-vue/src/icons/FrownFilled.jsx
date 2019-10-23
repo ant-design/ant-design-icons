@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FrownFillSvg from '@ant-design/icons-svg/lib/fill/FrownFill';
 
 export default {
-  name: 'FrownFilled',
+  name: 'IconFrownFilled',
+  displayName: 'FrownFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

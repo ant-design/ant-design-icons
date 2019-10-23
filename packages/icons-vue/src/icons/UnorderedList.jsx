@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import UnorderedListOutlineSvg from '@ant-design/icons-svg/lib/outline/UnorderedListOutline';
 
 export default {
-  name: 'UnorderedList',
+  name: 'IconUnorderedList',
+  displayName: 'UnorderedList',
   functional: true,
   render: (h, { data, children }) =>
     h(

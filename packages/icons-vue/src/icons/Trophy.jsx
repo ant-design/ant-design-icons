@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TrophyOutlineSvg from '@ant-design/icons-svg/lib/outline/TrophyOutline';
 
 export default {
-  name: 'Trophy',
+  name: 'IconTrophy',
+  displayName: 'Trophy',
   functional: true,
   render: (h, { data, children }) =>
     h(

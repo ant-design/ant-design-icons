@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FileExcelFillSvg from '@ant-design/icons-svg/lib/fill/FileExcelFill';
 
 export default {
-  name: 'FileExcelFilled',
+  name: 'IconFileExcelFilled',
+  displayName: 'FileExcelFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

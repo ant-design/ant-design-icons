@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import WechatOutlineSvg from '@ant-design/icons-svg/lib/outline/WechatOutline';
 
 export default {
-  name: 'Wechat',
+  name: 'IconWechat',
+  displayName: 'Wechat',
   functional: true,
   render: (h, { data, children }) =>
     h(

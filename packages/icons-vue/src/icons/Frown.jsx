@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FrownOutlineSvg from '@ant-design/icons-svg/lib/outline/FrownOutline';
 
 export default {
-  name: 'Frown',
+  name: 'IconFrown',
+  displayName: 'Frown',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CheckSquareFillSvg from '@ant-design/icons-svg/lib/fill/CheckSquareFill';
 
 export default {
-  name: 'CheckSquareFilled',
+  name: 'IconCheckSquareFilled',
+  displayName: 'CheckSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

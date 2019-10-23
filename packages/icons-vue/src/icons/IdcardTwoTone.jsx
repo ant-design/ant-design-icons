@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import IdcardTwoToneSvg from '@ant-design/icons-svg/lib/twotone/IdcardTwoTone';
 
 export default {
-  name: 'IdcardTwoTone',
+  name: 'IconIdcardTwoTone',
+  displayName: 'IdcardTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import VideoCameraFillSvg from '@ant-design/icons-svg/lib/fill/VideoCameraFill';
 
 export default {
-  name: 'VideoCameraFilled',
+  name: 'IconVideoCameraFilled',
+  displayName: 'VideoCameraFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

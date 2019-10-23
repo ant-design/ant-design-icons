@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MobileFillSvg from '@ant-design/icons-svg/lib/fill/MobileFill';
 
 export default {
-  name: 'MobileFilled',
+  name: 'IconMobileFilled',
+  displayName: 'MobileFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

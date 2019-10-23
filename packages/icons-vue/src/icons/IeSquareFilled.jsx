@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import IeSquareFillSvg from '@ant-design/icons-svg/lib/fill/IeSquareFill';
 
 export default {
-  name: 'IeSquareFilled',
+  name: 'IconIeSquareFilled',
+  displayName: 'IeSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

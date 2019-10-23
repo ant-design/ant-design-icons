@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RocketOutlineSvg from '@ant-design/icons-svg/lib/outline/RocketOutline';
 
 export default {
-  name: 'Rocket',
+  name: 'IconRocket',
+  displayName: 'Rocket',
   functional: true,
   render: (h, { data, children }) =>
     h(

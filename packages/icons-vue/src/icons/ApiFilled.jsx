@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ApiFillSvg from '@ant-design/icons-svg/lib/fill/ApiFill';
 
 export default {
-  name: 'ApiFilled',
+  name: 'IconApiFilled',
+  displayName: 'ApiFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

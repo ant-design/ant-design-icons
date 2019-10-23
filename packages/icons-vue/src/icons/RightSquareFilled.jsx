@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RightSquareFillSvg from '@ant-design/icons-svg/lib/fill/RightSquareFill';
 
 export default {
-  name: 'RightSquareFilled',
+  name: 'IconRightSquareFilled',
+  displayName: 'RightSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

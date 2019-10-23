@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MinusCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/MinusCircleOutline';
 
 export default {
-  name: 'MinusCircle',
+  name: 'IconMinusCircle',
+  displayName: 'MinusCircle',
   functional: true,
   render: (h, { data, children }) =>
     h(

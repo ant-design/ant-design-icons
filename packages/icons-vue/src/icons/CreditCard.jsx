@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CreditCardOutlineSvg from '@ant-design/icons-svg/lib/outline/CreditCardOutline';
 
 export default {
-  name: 'CreditCard',
+  name: 'IconCreditCard',
+  displayName: 'CreditCard',
   functional: true,
   render: (h, { data, children }) =>
     h(

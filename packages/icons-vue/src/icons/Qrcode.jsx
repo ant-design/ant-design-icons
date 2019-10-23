@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import QrcodeOutlineSvg from '@ant-design/icons-svg/lib/outline/QrcodeOutline';
 
 export default {
-  name: 'Qrcode',
+  name: 'IconQrcode',
+  displayName: 'Qrcode',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import YoutubeFillSvg from '@ant-design/icons-svg/lib/fill/YoutubeFill';
 
 export default {
-  name: 'YoutubeFilled',
+  name: 'IconYoutubeFilled',
+  displayName: 'YoutubeFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

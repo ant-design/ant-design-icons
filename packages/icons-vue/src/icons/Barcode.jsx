@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BarcodeOutlineSvg from '@ant-design/icons-svg/lib/outline/BarcodeOutline';
 
 export default {
-  name: 'Barcode',
+  name: 'IconBarcode',
+  displayName: 'Barcode',
   functional: true,
   render: (h, { data, children }) =>
     h(

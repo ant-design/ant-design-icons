@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ExclamationCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/ExclamationCircleTwoTone';
 
 export default {
-  name: 'ExclamationCircleTwoTone',
+  name: 'IconExclamationCircleTwoTone',
+  displayName: 'ExclamationCircleTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

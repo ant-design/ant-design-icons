@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ForkOutlineSvg from '@ant-design/icons-svg/lib/outline/ForkOutline';
 
 export default {
-  name: 'Fork',
+  name: 'IconFork',
+  displayName: 'Fork',
   functional: true,
   render: (h, { data, children }) =>
     h(

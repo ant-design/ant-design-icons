@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SlidersOutlineSvg from '@ant-design/icons-svg/lib/outline/SlidersOutline';
 
 export default {
-  name: 'Sliders',
+  name: 'IconSliders',
+  displayName: 'Sliders',
   functional: true,
   render: (h, { data, children }) =>
     h(

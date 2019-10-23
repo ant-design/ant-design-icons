@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import VideoCameraTwoToneSvg from '@ant-design/icons-svg/lib/twotone/VideoCameraTwoTone';
 
 export default {
-  name: 'VideoCameraTwoTone',
+  name: 'IconVideoCameraTwoTone',
+  displayName: 'VideoCameraTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

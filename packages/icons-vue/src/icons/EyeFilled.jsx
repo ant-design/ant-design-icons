@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import EyeFillSvg from '@ant-design/icons-svg/lib/fill/EyeFill';
 
 export default {
-  name: 'EyeFilled',
+  name: 'IconEyeFilled',
+  displayName: 'EyeFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

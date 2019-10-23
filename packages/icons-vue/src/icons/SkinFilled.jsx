@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SkinFillSvg from '@ant-design/icons-svg/lib/fill/SkinFill';
 
 export default {
-  name: 'SkinFilled',
+  name: 'IconSkinFilled',
+  displayName: 'SkinFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

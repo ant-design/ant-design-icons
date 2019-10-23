@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DownCircleFillSvg from '@ant-design/icons-svg/lib/fill/DownCircleFill';
 
 export default {
-  name: 'DownCircleFilled',
+  name: 'IconDownCircleFilled',
+  displayName: 'DownCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CalculatorTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CalculatorTwoTone';
 
 export default {
-  name: 'CalculatorTwoTone',
+  name: 'IconCalculatorTwoTone',
+  displayName: 'CalculatorTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

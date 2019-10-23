@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AlignCenterOutlineSvg from '@ant-design/icons-svg/lib/outline/AlignCenterOutline';
 
 export default {
-  name: 'AlignCenter',
+  name: 'IconAlignCenter',
+  displayName: 'AlignCenter',
   functional: true,
   render: (h, { data, children }) =>
     h(

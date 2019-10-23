@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FacebookFillSvg from '@ant-design/icons-svg/lib/fill/FacebookFill';
 
 export default {
-  name: 'FacebookFilled',
+  name: 'IconFacebookFilled',
+  displayName: 'FacebookFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

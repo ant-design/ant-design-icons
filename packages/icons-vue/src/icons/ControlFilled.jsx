@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ControlFillSvg from '@ant-design/icons-svg/lib/fill/ControlFill';
 
 export default {
-  name: 'ControlFilled',
+  name: 'IconControlFilled',
+  displayName: 'ControlFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

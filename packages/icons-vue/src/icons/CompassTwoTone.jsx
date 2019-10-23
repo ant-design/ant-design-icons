@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CompassTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CompassTwoTone';
 
 export default {
-  name: 'CompassTwoTone',
+  name: 'IconCompassTwoTone',
+  displayName: 'CompassTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

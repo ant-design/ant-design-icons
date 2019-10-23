@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DownOutlineSvg from '@ant-design/icons-svg/lib/outline/DownOutline';
 
 export default {
-  name: 'Down',
+  name: 'IconDown',
+  displayName: 'Down',
   functional: true,
   render: (h, { data, children }) =>
     h(

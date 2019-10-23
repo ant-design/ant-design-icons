@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import WomanOutlineSvg from '@ant-design/icons-svg/lib/outline/WomanOutline';
 
 export default {
-  name: 'Woman',
+  name: 'IconWoman',
+  displayName: 'Woman',
   functional: true,
   render: (h, { data, children }) =>
     h(

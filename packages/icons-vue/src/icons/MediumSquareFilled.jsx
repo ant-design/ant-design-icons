@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MediumSquareFillSvg from '@ant-design/icons-svg/lib/fill/MediumSquareFill';
 
 export default {
-  name: 'MediumSquareFilled',
+  name: 'IconMediumSquareFilled',
+  displayName: 'MediumSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

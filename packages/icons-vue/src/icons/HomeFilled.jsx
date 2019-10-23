@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import HomeFillSvg from '@ant-design/icons-svg/lib/fill/HomeFill';
 
 export default {
-  name: 'HomeFilled',
+  name: 'IconHomeFilled',
+  displayName: 'HomeFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

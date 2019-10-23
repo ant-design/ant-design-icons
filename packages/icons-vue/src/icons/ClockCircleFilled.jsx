@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ClockCircleFillSvg from '@ant-design/icons-svg/lib/fill/ClockCircleFill';
 
 export default {
-  name: 'ClockCircleFilled',
+  name: 'IconClockCircleFilled',
+  displayName: 'ClockCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

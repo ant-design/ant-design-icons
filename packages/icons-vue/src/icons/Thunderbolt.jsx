@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ThunderboltOutlineSvg from '@ant-design/icons-svg/lib/outline/ThunderboltOutline';
 
 export default {
-  name: 'Thunderbolt',
+  name: 'IconThunderbolt',
+  displayName: 'Thunderbolt',
   functional: true,
   render: (h, { data, children }) =>
     h(

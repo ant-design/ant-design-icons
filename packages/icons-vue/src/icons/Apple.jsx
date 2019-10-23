@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AppleOutlineSvg from '@ant-design/icons-svg/lib/outline/AppleOutline';
 
 export default {
-  name: 'Apple',
+  name: 'IconApple',
+  displayName: 'Apple',
   functional: true,
   render: (h, { data, children }) =>
     h(

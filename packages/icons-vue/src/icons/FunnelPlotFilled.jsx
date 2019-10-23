@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FunnelPlotFillSvg from '@ant-design/icons-svg/lib/fill/FunnelPlotFill';
 
 export default {
-  name: 'FunnelPlotFilled',
+  name: 'IconFunnelPlotFilled',
+  displayName: 'FunnelPlotFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

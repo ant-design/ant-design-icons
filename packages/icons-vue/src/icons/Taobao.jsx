@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TaobaoOutlineSvg from '@ant-design/icons-svg/lib/outline/TaobaoOutline';
 
 export default {
-  name: 'Taobao',
+  name: 'IconTaobao',
+  displayName: 'Taobao',
   functional: true,
   render: (h, { data, children }) =>
     h(

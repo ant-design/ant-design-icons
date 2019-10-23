@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FormOutlineSvg from '@ant-design/icons-svg/lib/outline/FormOutline';
 
 export default {
-  name: 'Form',
+  name: 'IconForm',
+  displayName: 'Form',
   functional: true,
   render: (h, { data, children }) =>
     h(

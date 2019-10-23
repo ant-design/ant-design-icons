@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ZhihuOutlineSvg from '@ant-design/icons-svg/lib/outline/ZhihuOutline';
 
 export default {
-  name: 'Zhihu',
+  name: 'IconZhihu',
+  displayName: 'Zhihu',
   functional: true,
   render: (h, { data, children }) =>
     h(

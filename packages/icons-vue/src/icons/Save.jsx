@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SaveOutlineSvg from '@ant-design/icons-svg/lib/outline/SaveOutline';
 
 export default {
-  name: 'Save',
+  name: 'IconSave',
+  displayName: 'Save',
   functional: true,
   render: (h, { data, children }) =>
     h(

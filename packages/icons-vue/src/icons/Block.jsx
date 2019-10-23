@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BlockOutlineSvg from '@ant-design/icons-svg/lib/outline/BlockOutline';
 
 export default {
-  name: 'Block',
+  name: 'IconBlock',
+  displayName: 'Block',
   functional: true,
   render: (h, { data, children }) =>
     h(

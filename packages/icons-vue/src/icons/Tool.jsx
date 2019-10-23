@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ToolOutlineSvg from '@ant-design/icons-svg/lib/outline/ToolOutline';
 
 export default {
-  name: 'Tool',
+  name: 'IconTool',
+  displayName: 'Tool',
   functional: true,
   render: (h, { data, children }) =>
     h(

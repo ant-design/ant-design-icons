@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ProfileFillSvg from '@ant-design/icons-svg/lib/fill/ProfileFill';
 
 export default {
-  name: 'ProfileFilled',
+  name: 'IconProfileFilled',
+  displayName: 'ProfileFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

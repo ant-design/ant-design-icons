@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import HeartOutlineSvg from '@ant-design/icons-svg/lib/outline/HeartOutline';
 
 export default {
-  name: 'Heart',
+  name: 'IconHeart',
+  displayName: 'Heart',
   functional: true,
   render: (h, { data, children }) =>
     h(

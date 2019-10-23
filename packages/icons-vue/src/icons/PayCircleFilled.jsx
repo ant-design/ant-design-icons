@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PayCircleFillSvg from '@ant-design/icons-svg/lib/fill/PayCircleFill';
 
 export default {
-  name: 'PayCircleFilled',
+  name: 'IconPayCircleFilled',
+  displayName: 'PayCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

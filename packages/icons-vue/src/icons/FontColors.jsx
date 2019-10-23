@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FontColorsOutlineSvg from '@ant-design/icons-svg/lib/outline/FontColorsOutline';
 
 export default {
-  name: 'FontColors',
+  name: 'IconFontColors',
+  displayName: 'FontColors',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LoadingOutlineSvg from '@ant-design/icons-svg/lib/outline/LoadingOutline';
 
 export default {
-  name: 'Loading',
+  name: 'IconLoading',
+  displayName: 'Loading',
   functional: true,
   render: (h, { data, children }) =>
     h(

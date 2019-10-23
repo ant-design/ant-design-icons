@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ControlTwoToneSvg from '@ant-design/icons-svg/lib/twotone/ControlTwoTone';
 
 export default {
-  name: 'ControlTwoTone',
+  name: 'IconControlTwoTone',
+  displayName: 'ControlTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

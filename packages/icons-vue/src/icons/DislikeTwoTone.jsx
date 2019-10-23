@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DislikeTwoToneSvg from '@ant-design/icons-svg/lib/twotone/DislikeTwoTone';
 
 export default {
-  name: 'DislikeTwoTone',
+  name: 'IconDislikeTwoTone',
+  displayName: 'DislikeTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

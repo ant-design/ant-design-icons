@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import Html5OutlineSvg from '@ant-design/icons-svg/lib/outline/Html5Outline';
 
 export default {
-  name: 'Html5',
+  name: 'IconHtml5',
+  displayName: 'Html5',
   functional: true,
   render: (h, { data, children }) =>
     h(

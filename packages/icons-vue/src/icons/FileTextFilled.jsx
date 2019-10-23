@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FileTextFillSvg from '@ant-design/icons-svg/lib/fill/FileTextFill';
 
 export default {
-  name: 'FileTextFilled',
+  name: 'IconFileTextFilled',
+  displayName: 'FileTextFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

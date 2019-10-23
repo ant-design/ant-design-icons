@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DotChartOutlineSvg from '@ant-design/icons-svg/lib/outline/DotChartOutline';
 
 export default {
-  name: 'DotChart',
+  name: 'IconDotChart',
+  displayName: 'DotChart',
   functional: true,
   render: (h, { data, children }) =>
     h(

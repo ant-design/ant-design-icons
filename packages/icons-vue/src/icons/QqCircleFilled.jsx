@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import QqCircleFillSvg from '@ant-design/icons-svg/lib/fill/QqCircleFill';
 
 export default {
-  name: 'QqCircleFilled',
+  name: 'IconQqCircleFilled',
+  displayName: 'QqCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

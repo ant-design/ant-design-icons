@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import GoldenFillSvg from '@ant-design/icons-svg/lib/fill/GoldenFill';
 
 export default {
-  name: 'GoldenFilled',
+  name: 'IconGoldenFilled',
+  displayName: 'GoldenFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

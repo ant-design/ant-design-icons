@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ChromeFillSvg from '@ant-design/icons-svg/lib/fill/ChromeFill';
 
 export default {
-  name: 'ChromeFilled',
+  name: 'IconChromeFilled',
+  displayName: 'ChromeFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AuditOutlineSvg from '@ant-design/icons-svg/lib/outline/AuditOutline';
 
 export default {
-  name: 'Audit',
+  name: 'IconAudit',
+  displayName: 'Audit',
   functional: true,
   render: (h, { data, children }) =>
     h(

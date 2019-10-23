@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BackwardOutlineSvg from '@ant-design/icons-svg/lib/outline/BackwardOutline';
 
 export default {
-  name: 'Backward',
+  name: 'IconBackward',
+  displayName: 'Backward',
   functional: true,
   render: (h, { data, children }) =>
     h(

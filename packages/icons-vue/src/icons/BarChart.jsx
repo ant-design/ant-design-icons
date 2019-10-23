@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BarChartOutlineSvg from '@ant-design/icons-svg/lib/outline/BarChartOutline';
 
 export default {
-  name: 'BarChart',
+  name: 'IconBarChart',
+  displayName: 'BarChart',
   functional: true,
   render: (h, { data, children }) =>
     h(

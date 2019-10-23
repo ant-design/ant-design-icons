@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CloudSyncOutlineSvg from '@ant-design/icons-svg/lib/outline/CloudSyncOutline';
 
 export default {
-  name: 'CloudSync',
+  name: 'IconCloudSync',
+  displayName: 'CloudSync',
   functional: true,
   render: (h, { data, children }) =>
     h(

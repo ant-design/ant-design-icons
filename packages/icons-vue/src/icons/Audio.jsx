@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AudioOutlineSvg from '@ant-design/icons-svg/lib/outline/AudioOutline';
 
 export default {
-  name: 'Audio',
+  name: 'IconAudio',
+  displayName: 'Audio',
   functional: true,
   render: (h, { data, children }) =>
     h(

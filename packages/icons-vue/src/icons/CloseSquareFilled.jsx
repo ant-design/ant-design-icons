@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CloseSquareFillSvg from '@ant-design/icons-svg/lib/fill/CloseSquareFill';
 
 export default {
-  name: 'CloseSquareFilled',
+  name: 'IconCloseSquareFilled',
+  displayName: 'CloseSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

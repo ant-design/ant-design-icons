@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ThunderboltTwoToneSvg from '@ant-design/icons-svg/lib/twotone/ThunderboltTwoTone';
 
 export default {
-  name: 'ThunderboltTwoTone',
+  name: 'IconThunderboltTwoTone',
+  displayName: 'ThunderboltTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

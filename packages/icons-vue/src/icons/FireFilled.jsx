@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FireFillSvg from '@ant-design/icons-svg/lib/fill/FireFill';
 
 export default {
-  name: 'FireFilled',
+  name: 'IconFireFilled',
+  displayName: 'FireFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

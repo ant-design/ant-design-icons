@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FileExclamationOutlineSvg from '@ant-design/icons-svg/lib/outline/FileExclamationOutline';
 
 export default {
-  name: 'FileExclamation',
+  name: 'IconFileExclamation',
+  displayName: 'FileExclamation',
   functional: true,
   render: (h, { data, children }) =>
     h(

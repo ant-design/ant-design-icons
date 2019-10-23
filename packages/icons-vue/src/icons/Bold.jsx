@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BoldOutlineSvg from '@ant-design/icons-svg/lib/outline/BoldOutline';
 
 export default {
-  name: 'Bold',
+  name: 'IconBold',
+  displayName: 'Bold',
   functional: true,
   render: (h, { data, children }) =>
     h(

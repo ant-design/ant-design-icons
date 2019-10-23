@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AlignLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/AlignLeftOutline';
 
 export default {
-  name: 'AlignLeft',
+  name: 'IconAlignLeft',
+  displayName: 'AlignLeft',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RollbackOutlineSvg from '@ant-design/icons-svg/lib/outline/RollbackOutline';
 
 export default {
-  name: 'Rollback',
+  name: 'IconRollback',
+  displayName: 'Rollback',
   functional: true,
   render: (h, { data, children }) =>
     h(

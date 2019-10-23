@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MinusSquareFillSvg from '@ant-design/icons-svg/lib/fill/MinusSquareFill';
 
 export default {
-  name: 'MinusSquareFilled',
+  name: 'IconMinusSquareFilled',
+  displayName: 'MinusSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

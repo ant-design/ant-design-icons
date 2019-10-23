@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CodeFillSvg from '@ant-design/icons-svg/lib/fill/CodeFill';
 
 export default {
-  name: 'CodeFilled',
+  name: 'IconCodeFilled',
+  displayName: 'CodeFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

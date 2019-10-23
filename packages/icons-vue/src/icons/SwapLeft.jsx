@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SwapLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/SwapLeftOutline';
 
 export default {
-  name: 'SwapLeft',
+  name: 'IconSwapLeft',
+  displayName: 'SwapLeft',
   functional: true,
   render: (h, { data, children }) =>
     h(

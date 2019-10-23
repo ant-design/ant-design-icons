@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FolderAddTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FolderAddTwoTone';
 
 export default {
-  name: 'FolderAddTwoTone',
+  name: 'IconFolderAddTwoTone',
+  displayName: 'FolderAddTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SettingOutlineSvg from '@ant-design/icons-svg/lib/outline/SettingOutline';
 
 export default {
-  name: 'Setting',
+  name: 'IconSetting',
+  displayName: 'Setting',
   functional: true,
   render: (h, { data, children }) =>
     h(

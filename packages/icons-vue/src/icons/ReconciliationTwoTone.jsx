@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ReconciliationTwoToneSvg from '@ant-design/icons-svg/lib/twotone/ReconciliationTwoTone';
 
 export default {
-  name: 'ReconciliationTwoTone',
+  name: 'IconReconciliationTwoTone',
+  displayName: 'ReconciliationTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

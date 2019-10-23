@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CloseCircleFillSvg from '@ant-design/icons-svg/lib/fill/CloseCircleFill';
 
 export default {
-  name: 'CloseCircleFilled',
+  name: 'IconCloseCircleFilled',
+  displayName: 'CloseCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RedoOutlineSvg from '@ant-design/icons-svg/lib/outline/RedoOutline';
 
 export default {
-  name: 'Redo',
+  name: 'IconRedo',
+  displayName: 'Redo',
   functional: true,
   render: (h, { data, children }) =>
     h(

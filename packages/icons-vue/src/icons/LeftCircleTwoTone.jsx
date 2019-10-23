@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LeftCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/LeftCircleTwoTone';
 
 export default {
-  name: 'LeftCircleTwoTone',
+  name: 'IconLeftCircleTwoTone',
+  displayName: 'LeftCircleTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

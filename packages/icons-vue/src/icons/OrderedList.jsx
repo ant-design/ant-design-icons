@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import OrderedListOutlineSvg from '@ant-design/icons-svg/lib/outline/OrderedListOutline';
 
 export default {
-  name: 'OrderedList',
+  name: 'IconOrderedList',
+  displayName: 'OrderedList',
   functional: true,
   render: (h, { data, children }) =>
     h(

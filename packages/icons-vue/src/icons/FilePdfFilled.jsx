@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FilePdfFillSvg from '@ant-design/icons-svg/lib/fill/FilePdfFill';
 
 export default {
-  name: 'FilePdfFilled',
+  name: 'IconFilePdfFilled',
+  displayName: 'FilePdfFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

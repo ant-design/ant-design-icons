@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ContactsFillSvg from '@ant-design/icons-svg/lib/fill/ContactsFill';
 
 export default {
-  name: 'ContactsFilled',
+  name: 'IconContactsFilled',
+  displayName: 'ContactsFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

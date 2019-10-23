@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ScissorOutlineSvg from '@ant-design/icons-svg/lib/outline/ScissorOutline';
 
 export default {
-  name: 'Scissor',
+  name: 'IconScissor',
+  displayName: 'Scissor',
   functional: true,
   render: (h, { data, children }) =>
     h(

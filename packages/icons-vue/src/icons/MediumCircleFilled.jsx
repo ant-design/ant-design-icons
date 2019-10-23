@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MediumCircleFillSvg from '@ant-design/icons-svg/lib/fill/MediumCircleFill';
 
 export default {
-  name: 'MediumCircleFilled',
+  name: 'IconMediumCircleFilled',
+  displayName: 'MediumCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CompassFillSvg from '@ant-design/icons-svg/lib/fill/CompassFill';
 
 export default {
-  name: 'CompassFilled',
+  name: 'IconCompassFilled',
+  displayName: 'CompassFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CloseOutlineSvg from '@ant-design/icons-svg/lib/outline/CloseOutline';
 
 export default {
-  name: 'Close',
+  name: 'IconClose',
+  displayName: 'Close',
   functional: true,
   render: (h, { data, children }) =>
     h(

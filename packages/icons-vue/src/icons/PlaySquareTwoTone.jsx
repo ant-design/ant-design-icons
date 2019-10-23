@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PlaySquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/PlaySquareTwoTone';
 
 export default {
-  name: 'PlaySquareTwoTone',
+  name: 'IconPlaySquareTwoTone',
+  displayName: 'PlaySquareTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

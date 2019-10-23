@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import UsbOutlineSvg from '@ant-design/icons-svg/lib/outline/UsbOutline';
 
 export default {
-  name: 'Usb',
+  name: 'IconUsb',
+  displayName: 'Usb',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ShakeOutlineSvg from '@ant-design/icons-svg/lib/outline/ShakeOutline';
 
 export default {
-  name: 'Shake',
+  name: 'IconShake',
+  displayName: 'Shake',
   functional: true,
   render: (h, { data, children }) =>
     h(

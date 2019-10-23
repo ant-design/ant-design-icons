@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SmallDashOutlineSvg from '@ant-design/icons-svg/lib/outline/SmallDashOutline';
 
 export default {
-  name: 'SmallDash',
+  name: 'IconSmallDash',
+  displayName: 'SmallDash',
   functional: true,
   render: (h, { data, children }) =>
     h(

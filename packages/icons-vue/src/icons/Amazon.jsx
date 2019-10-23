@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AmazonOutlineSvg from '@ant-design/icons-svg/lib/outline/AmazonOutline';
 
 export default {
-  name: 'Amazon',
+  name: 'IconAmazon',
+  displayName: 'Amazon',
   functional: true,
   render: (h, { data, children }) =>
     h(

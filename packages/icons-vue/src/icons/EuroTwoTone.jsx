@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import EuroTwoToneSvg from '@ant-design/icons-svg/lib/twotone/EuroTwoTone';
 
 export default {
-  name: 'EuroTwoTone',
+  name: 'IconEuroTwoTone',
+  displayName: 'EuroTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

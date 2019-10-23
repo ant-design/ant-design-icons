@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DribbbleCircleFillSvg from '@ant-design/icons-svg/lib/fill/DribbbleCircleFill';
 
 export default {
-  name: 'DribbbleCircleFilled',
+  name: 'IconDribbbleCircleFilled',
+  displayName: 'DribbbleCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

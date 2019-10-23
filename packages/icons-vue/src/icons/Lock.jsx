@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LockOutlineSvg from '@ant-design/icons-svg/lib/outline/LockOutline';
 
 export default {
-  name: 'Lock',
+  name: 'IconLock',
+  displayName: 'Lock',
   functional: true,
   render: (h, { data, children }) =>
     h(

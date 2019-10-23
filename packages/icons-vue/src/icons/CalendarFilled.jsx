@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CalendarFillSvg from '@ant-design/icons-svg/lib/fill/CalendarFill';
 
 export default {
-  name: 'CalendarFilled',
+  name: 'IconCalendarFilled',
+  displayName: 'CalendarFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

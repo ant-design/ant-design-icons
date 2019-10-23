@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PaperClipOutlineSvg from '@ant-design/icons-svg/lib/outline/PaperClipOutline';
 
 export default {
-  name: 'PaperClip',
+  name: 'IconPaperClip',
+  displayName: 'PaperClip',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import UpOutlineSvg from '@ant-design/icons-svg/lib/outline/UpOutline';
 
 export default {
-  name: 'Up',
+  name: 'IconUp',
+  displayName: 'Up',
   functional: true,
   render: (h, { data, children }) =>
     h(

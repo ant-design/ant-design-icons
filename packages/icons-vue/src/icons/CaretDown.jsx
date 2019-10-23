@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CaretDownOutlineSvg from '@ant-design/icons-svg/lib/outline/CaretDownOutline';
 
 export default {
-  name: 'CaretDown',
+  name: 'IconCaretDown',
+  displayName: 'CaretDown',
   functional: true,
   render: (h, { data, children }) =>
     h(

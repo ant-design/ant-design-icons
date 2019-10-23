@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import IssuesCloseOutlineSvg from '@ant-design/icons-svg/lib/outline/IssuesCloseOutline';
 
 export default {
-  name: 'IssuesClose',
+  name: 'IconIssuesClose',
+  displayName: 'IssuesClose',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MenuUnfoldOutlineSvg from '@ant-design/icons-svg/lib/outline/MenuUnfoldOutline';
 
 export default {
-  name: 'MenuUnfold',
+  name: 'IconMenuUnfold',
+  displayName: 'MenuUnfold',
   functional: true,
   render: (h, { data, children }) =>
     h(

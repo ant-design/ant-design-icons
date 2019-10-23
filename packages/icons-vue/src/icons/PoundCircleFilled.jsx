@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PoundCircleFillSvg from '@ant-design/icons-svg/lib/fill/PoundCircleFill';
 
 export default {
-  name: 'PoundCircleFilled',
+  name: 'IconPoundCircleFilled',
+  displayName: 'PoundCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

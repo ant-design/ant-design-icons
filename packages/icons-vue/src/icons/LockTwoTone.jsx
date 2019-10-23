@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LockTwoToneSvg from '@ant-design/icons-svg/lib/twotone/LockTwoTone';
 
 export default {
-  name: 'LockTwoTone',
+  name: 'IconLockTwoTone',
+  displayName: 'LockTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

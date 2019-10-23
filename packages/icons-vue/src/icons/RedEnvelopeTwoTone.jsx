@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RedEnvelopeTwoToneSvg from '@ant-design/icons-svg/lib/twotone/RedEnvelopeTwoTone';
 
 export default {
-  name: 'RedEnvelopeTwoTone',
+  name: 'IconRedEnvelopeTwoTone',
+  displayName: 'RedEnvelopeTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

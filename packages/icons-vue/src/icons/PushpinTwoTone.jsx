@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PushpinTwoToneSvg from '@ant-design/icons-svg/lib/twotone/PushpinTwoTone';
 
 export default {
-  name: 'PushpinTwoTone',
+  name: 'IconPushpinTwoTone',
+  displayName: 'PushpinTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

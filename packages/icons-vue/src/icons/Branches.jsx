@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BranchesOutlineSvg from '@ant-design/icons-svg/lib/outline/BranchesOutline';
 
 export default {
-  name: 'Branches',
+  name: 'IconBranches',
+  displayName: 'Branches',
   functional: true,
   render: (h, { data, children }) =>
     h(

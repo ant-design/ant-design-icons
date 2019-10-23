@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RightOutlineSvg from '@ant-design/icons-svg/lib/outline/RightOutline';
 
 export default {
-  name: 'Right',
+  name: 'IconRight',
+  displayName: 'Right',
   functional: true,
   render: (h, { data, children }) =>
     h(

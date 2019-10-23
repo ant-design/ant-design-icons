@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CopyFillSvg from '@ant-design/icons-svg/lib/fill/CopyFill';
 
 export default {
-  name: 'CopyFilled',
+  name: 'IconCopyFilled',
+  displayName: 'CopyFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

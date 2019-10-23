@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BackwardFillSvg from '@ant-design/icons-svg/lib/fill/BackwardFill';
 
 export default {
-  name: 'BackwardFilled',
+  name: 'IconBackwardFilled',
+  displayName: 'BackwardFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

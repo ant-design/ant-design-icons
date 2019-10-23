@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import InfoCircleFillSvg from '@ant-design/icons-svg/lib/fill/InfoCircleFill';
 
 export default {
-  name: 'InfoCircleFilled',
+  name: 'IconInfoCircleFilled',
+  displayName: 'InfoCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

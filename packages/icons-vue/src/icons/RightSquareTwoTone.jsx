@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RightSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/RightSquareTwoTone';
 
 export default {
-  name: 'RightSquareTwoTone',
+  name: 'IconRightSquareTwoTone',
+  displayName: 'RightSquareTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

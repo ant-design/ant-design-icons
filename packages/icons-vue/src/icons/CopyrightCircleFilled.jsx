@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CopyrightCircleFillSvg from '@ant-design/icons-svg/lib/fill/CopyrightCircleFill';
 
 export default {
-  name: 'CopyrightCircleFilled',
+  name: 'IconCopyrightCircleFilled',
+  displayName: 'CopyrightCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

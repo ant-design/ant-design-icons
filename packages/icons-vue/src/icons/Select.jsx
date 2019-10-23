@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SelectOutlineSvg from '@ant-design/icons-svg/lib/outline/SelectOutline';
 
 export default {
-  name: 'Select',
+  name: 'IconSelect',
+  displayName: 'Select',
   functional: true,
   render: (h, { data, children }) =>
     h(

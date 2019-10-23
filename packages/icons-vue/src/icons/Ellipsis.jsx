@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import EllipsisOutlineSvg from '@ant-design/icons-svg/lib/outline/EllipsisOutline';
 
 export default {
-  name: 'Ellipsis',
+  name: 'IconEllipsis',
+  displayName: 'Ellipsis',
   functional: true,
   render: (h, { data, children }) =>
     h(

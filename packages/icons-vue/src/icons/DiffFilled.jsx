@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DiffFillSvg from '@ant-design/icons-svg/lib/fill/DiffFill';
 
 export default {
-  name: 'DiffFilled',
+  name: 'IconDiffFilled',
+  displayName: 'DiffFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

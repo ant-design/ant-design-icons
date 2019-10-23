@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FileZipOutlineSvg from '@ant-design/icons-svg/lib/outline/FileZipOutline';
 
 export default {
-  name: 'FileZip',
+  name: 'IconFileZip',
+  displayName: 'FileZip',
   functional: true,
   render: (h, { data, children }) =>
     h(

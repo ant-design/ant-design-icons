@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import InboxOutlineSvg from '@ant-design/icons-svg/lib/outline/InboxOutline';
 
 export default {
-  name: 'Inbox',
+  name: 'IconInbox',
+  displayName: 'Inbox',
   functional: true,
   render: (h, { data, children }) =>
     h(

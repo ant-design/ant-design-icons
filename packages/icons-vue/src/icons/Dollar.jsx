@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DollarOutlineSvg from '@ant-design/icons-svg/lib/outline/DollarOutline';
 
 export default {
-  name: 'Dollar',
+  name: 'IconDollar',
+  displayName: 'Dollar',
   functional: true,
   render: (h, { data, children }) =>
     h(

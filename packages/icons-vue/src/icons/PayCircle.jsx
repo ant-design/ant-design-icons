@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PayCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/PayCircleOutline';
 
 export default {
-  name: 'PayCircle',
+  name: 'IconPayCircle',
+  displayName: 'PayCircle',
   functional: true,
   render: (h, { data, children }) =>
     h(

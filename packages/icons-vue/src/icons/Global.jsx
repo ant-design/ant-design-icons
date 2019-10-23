@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import GlobalOutlineSvg from '@ant-design/icons-svg/lib/outline/GlobalOutline';
 
 export default {
-  name: 'Global',
+  name: 'IconGlobal',
+  displayName: 'Global',
   functional: true,
   render: (h, { data, children }) =>
     h(

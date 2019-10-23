@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import WindowsFillSvg from '@ant-design/icons-svg/lib/fill/WindowsFill';
 
 export default {
-  name: 'WindowsFilled',
+  name: 'IconWindowsFilled',
+  displayName: 'WindowsFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

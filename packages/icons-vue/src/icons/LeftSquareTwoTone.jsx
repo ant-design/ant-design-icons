@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LeftSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/LeftSquareTwoTone';
 
 export default {
-  name: 'LeftSquareTwoTone',
+  name: 'IconLeftSquareTwoTone',
+  displayName: 'LeftSquareTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

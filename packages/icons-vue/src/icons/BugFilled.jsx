@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BugFillSvg from '@ant-design/icons-svg/lib/fill/BugFill';
 
 export default {
-  name: 'BugFilled',
+  name: 'IconBugFilled',
+  displayName: 'BugFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

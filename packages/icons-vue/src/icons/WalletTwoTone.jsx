@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import WalletTwoToneSvg from '@ant-design/icons-svg/lib/twotone/WalletTwoTone';
 
 export default {
-  name: 'WalletTwoTone',
+  name: 'IconWalletTwoTone',
+  displayName: 'WalletTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import UnderlineOutlineSvg from '@ant-design/icons-svg/lib/outline/UnderlineOutline';
 
 export default {
-  name: 'Underline',
+  name: 'IconUnderline',
+  displayName: 'Underline',
   functional: true,
   render: (h, { data, children }) =>
     h(

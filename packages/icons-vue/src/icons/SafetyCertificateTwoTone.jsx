@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SafetyCertificateTwoToneSvg from '@ant-design/icons-svg/lib/twotone/SafetyCertificateTwoTone';
 
 export default {
-  name: 'SafetyCertificateTwoTone',
+  name: 'IconSafetyCertificateTwoTone',
+  displayName: 'SafetyCertificateTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AliwangwangOutlineSvg from '@ant-design/icons-svg/lib/outline/AliwangwangOutline';
 
 export default {
-  name: 'Aliwangwang',
+  name: 'IconAliwangwang',
+  displayName: 'Aliwangwang',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SlidersTwoToneSvg from '@ant-design/icons-svg/lib/twotone/SlidersTwoTone';
 
 export default {
-  name: 'SlidersTwoTone',
+  name: 'IconSlidersTwoTone',
+  displayName: 'SlidersTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

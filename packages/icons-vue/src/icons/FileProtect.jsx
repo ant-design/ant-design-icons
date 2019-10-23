@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FileProtectOutlineSvg from '@ant-design/icons-svg/lib/outline/FileProtectOutline';
 
 export default {
-  name: 'FileProtect',
+  name: 'IconFileProtect',
+  displayName: 'FileProtect',
   functional: true,
   render: (h, { data, children }) =>
     h(

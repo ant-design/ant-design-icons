@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BgColorsOutlineSvg from '@ant-design/icons-svg/lib/outline/BgColorsOutline';
 
 export default {
-  name: 'BgColors',
+  name: 'IconBgColors',
+  displayName: 'BgColors',
   functional: true,
   render: (h, { data, children }) =>
     h(

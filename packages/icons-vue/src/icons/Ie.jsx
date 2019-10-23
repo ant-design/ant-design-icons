@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import IeOutlineSvg from '@ant-design/icons-svg/lib/outline/IeOutline';
 
 export default {
-  name: 'Ie',
+  name: 'IconIe',
+  displayName: 'Ie',
   functional: true,
   render: (h, { data, children }) =>
     h(

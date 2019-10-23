@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PoundOutlineSvg from '@ant-design/icons-svg/lib/outline/PoundOutline';
 
 export default {
-  name: 'Pound',
+  name: 'IconPound',
+  displayName: 'Pound',
   functional: true,
   render: (h, { data, children }) =>
     h(

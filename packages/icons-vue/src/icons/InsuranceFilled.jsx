@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import InsuranceFillSvg from '@ant-design/icons-svg/lib/fill/InsuranceFill';
 
 export default {
-  name: 'InsuranceFilled',
+  name: 'IconInsuranceFilled',
+  displayName: 'InsuranceFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

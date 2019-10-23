@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ExperimentOutlineSvg from '@ant-design/icons-svg/lib/outline/ExperimentOutline';
 
 export default {
-  name: 'Experiment',
+  name: 'IconExperiment',
+  displayName: 'Experiment',
   functional: true,
   render: (h, { data, children }) =>
     h(

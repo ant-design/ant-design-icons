@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SmileTwoToneSvg from '@ant-design/icons-svg/lib/twotone/SmileTwoTone';
 
 export default {
-  name: 'SmileTwoTone',
+  name: 'IconSmileTwoTone',
+  displayName: 'SmileTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

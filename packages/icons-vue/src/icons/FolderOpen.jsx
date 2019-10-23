@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FolderOpenOutlineSvg from '@ant-design/icons-svg/lib/outline/FolderOpenOutline';
 
 export default {
-  name: 'FolderOpen',
+  name: 'IconFolderOpen',
+  displayName: 'FolderOpen',
   functional: true,
   render: (h, { data, children }) =>
     h(

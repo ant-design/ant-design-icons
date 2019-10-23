@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import IeCircleFillSvg from '@ant-design/icons-svg/lib/fill/IeCircleFill';
 
 export default {
-  name: 'IeCircleFilled',
+  name: 'IconIeCircleFilled',
+  displayName: 'IeCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

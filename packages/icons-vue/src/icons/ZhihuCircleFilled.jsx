@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ZhihuCircleFillSvg from '@ant-design/icons-svg/lib/fill/ZhihuCircleFill';
 
 export default {
-  name: 'ZhihuCircleFilled',
+  name: 'IconZhihuCircleFilled',
+  displayName: 'ZhihuCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

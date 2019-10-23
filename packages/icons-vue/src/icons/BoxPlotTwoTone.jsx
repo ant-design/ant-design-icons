@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BoxPlotTwoToneSvg from '@ant-design/icons-svg/lib/twotone/BoxPlotTwoTone';
 
 export default {
-  name: 'BoxPlotTwoTone',
+  name: 'IconBoxPlotTwoTone',
+  displayName: 'BoxPlotTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

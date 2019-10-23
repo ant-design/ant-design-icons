@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import InterationFillSvg from '@ant-design/icons-svg/lib/fill/InterationFill';
 
 export default {
-  name: 'InterationFilled',
+  name: 'IconInterationFilled',
+  displayName: 'InterationFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

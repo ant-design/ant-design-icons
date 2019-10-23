@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PrinterOutlineSvg from '@ant-design/icons-svg/lib/outline/PrinterOutline';
 
 export default {
-  name: 'Printer',
+  name: 'IconPrinter',
+  displayName: 'Printer',
   functional: true,
   render: (h, { data, children }) =>
     h(

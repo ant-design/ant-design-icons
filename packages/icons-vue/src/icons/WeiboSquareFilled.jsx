@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import WeiboSquareFillSvg from '@ant-design/icons-svg/lib/fill/WeiboSquareFill';
 
 export default {
-  name: 'WeiboSquareFilled',
+  name: 'IconWeiboSquareFilled',
+  displayName: 'WeiboSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

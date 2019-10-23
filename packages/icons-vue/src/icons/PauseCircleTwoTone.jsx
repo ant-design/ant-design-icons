@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PauseCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/PauseCircleTwoTone';
 
 export default {
-  name: 'PauseCircleTwoTone',
+  name: 'IconPauseCircleTwoTone',
+  displayName: 'PauseCircleTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

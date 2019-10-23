@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RedditCircleFillSvg from '@ant-design/icons-svg/lib/fill/RedditCircleFill';
 
 export default {
-  name: 'RedditCircleFilled',
+  name: 'IconRedditCircleFilled',
+  displayName: 'RedditCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

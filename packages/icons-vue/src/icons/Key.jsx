@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import KeyOutlineSvg from '@ant-design/icons-svg/lib/outline/KeyOutline';
 
 export default {
-  name: 'Key',
+  name: 'IconKey',
+  displayName: 'Key',
   functional: true,
   render: (h, { data, children }) =>
     h(

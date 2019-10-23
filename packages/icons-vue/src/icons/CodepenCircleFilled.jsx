@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CodepenCircleFillSvg from '@ant-design/icons-svg/lib/fill/CodepenCircleFill';
 
 export default {
-  name: 'CodepenCircleFilled',
+  name: 'IconCodepenCircleFilled',
+  displayName: 'CodepenCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

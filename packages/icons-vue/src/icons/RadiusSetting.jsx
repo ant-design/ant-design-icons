@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RadiusSettingOutlineSvg from '@ant-design/icons-svg/lib/outline/RadiusSettingOutline';
 
 export default {
-  name: 'RadiusSetting',
+  name: 'IconRadiusSetting',
+  displayName: 'RadiusSetting',
   functional: true,
   render: (h, { data, children }) =>
     h(

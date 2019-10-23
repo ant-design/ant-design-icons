@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DiffOutlineSvg from '@ant-design/icons-svg/lib/outline/DiffOutline';
 
 export default {
-  name: 'Diff',
+  name: 'IconDiff',
+  displayName: 'Diff',
   functional: true,
   render: (h, { data, children }) =>
     h(

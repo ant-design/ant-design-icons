@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PauseCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/PauseCircleOutline';
 
 export default {
-  name: 'PauseCircle',
+  name: 'IconPauseCircle',
+  displayName: 'PauseCircle',
   functional: true,
   render: (h, { data, children }) =>
     h(

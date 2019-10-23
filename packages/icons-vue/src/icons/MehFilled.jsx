@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MehFillSvg from '@ant-design/icons-svg/lib/fill/MehFill';
 
 export default {
-  name: 'MehFilled',
+  name: 'IconMehFilled',
+  displayName: 'MehFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

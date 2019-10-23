@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CustomerServiceFillSvg from '@ant-design/icons-svg/lib/fill/CustomerServiceFill';
 
 export default {
-  name: 'CustomerServiceFilled',
+  name: 'IconCustomerServiceFilled',
+  displayName: 'CustomerServiceFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

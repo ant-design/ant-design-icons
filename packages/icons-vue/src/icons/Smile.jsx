@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SmileOutlineSvg from '@ant-design/icons-svg/lib/outline/SmileOutline';
 
 export default {
-  name: 'Smile',
+  name: 'IconSmile',
+  displayName: 'Smile',
   functional: true,
   render: (h, { data, children }) =>
     h(

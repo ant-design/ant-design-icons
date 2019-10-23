@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import InsuranceOutlineSvg from '@ant-design/icons-svg/lib/outline/InsuranceOutline';
 
 export default {
-  name: 'Insurance',
+  name: 'IconInsurance',
+  displayName: 'Insurance',
   functional: true,
   render: (h, { data, children }) =>
     h(

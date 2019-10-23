@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ScheduleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/ScheduleTwoTone';
 
 export default {
-  name: 'ScheduleTwoTone',
+  name: 'IconScheduleTwoTone',
+  displayName: 'ScheduleTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

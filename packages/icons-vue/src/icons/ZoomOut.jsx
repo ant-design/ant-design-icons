@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ZoomOutOutlineSvg from '@ant-design/icons-svg/lib/outline/ZoomOutOutline';
 
 export default {
-  name: 'ZoomOut',
+  name: 'IconZoomOut',
+  displayName: 'ZoomOut',
   functional: true,
   render: (h, { data, children }) =>
     h(

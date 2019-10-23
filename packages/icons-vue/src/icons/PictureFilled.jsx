@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PictureFillSvg from '@ant-design/icons-svg/lib/fill/PictureFill';
 
 export default {
-  name: 'PictureFilled',
+  name: 'IconPictureFilled',
+  displayName: 'PictureFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

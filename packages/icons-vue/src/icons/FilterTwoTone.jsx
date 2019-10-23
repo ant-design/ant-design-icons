@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FilterTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FilterTwoTone';
 
 export default {
-  name: 'FilterTwoTone',
+  name: 'IconFilterTwoTone',
+  displayName: 'FilterTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ReconciliationFillSvg from '@ant-design/icons-svg/lib/fill/ReconciliationFill';
 
 export default {
-  name: 'ReconciliationFilled',
+  name: 'IconReconciliationFilled',
+  displayName: 'ReconciliationFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

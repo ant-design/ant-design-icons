@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DingtalkSquareFillSvg from '@ant-design/icons-svg/lib/fill/DingtalkSquareFill';
 
 export default {
-  name: 'DingtalkSquareFilled',
+  name: 'IconDingtalkSquareFilled',
+  displayName: 'DingtalkSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

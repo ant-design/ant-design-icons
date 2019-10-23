@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CheckCircleFillSvg from '@ant-design/icons-svg/lib/fill/CheckCircleFill';
 
 export default {
-  name: 'CheckCircleFilled',
+  name: 'IconCheckCircleFilled',
+  displayName: 'CheckCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ShrinkOutlineSvg from '@ant-design/icons-svg/lib/outline/ShrinkOutline';
 
 export default {
-  name: 'Shrink',
+  name: 'IconShrink',
+  displayName: 'Shrink',
   functional: true,
   render: (h, { data, children }) =>
     h(

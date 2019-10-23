@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LockFillSvg from '@ant-design/icons-svg/lib/fill/LockFill';
 
 export default {
-  name: 'LockFilled',
+  name: 'IconLockFilled',
+  displayName: 'LockFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

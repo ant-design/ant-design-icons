@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DingdingOutlineSvg from '@ant-design/icons-svg/lib/outline/DingdingOutline';
 
 export default {
-  name: 'Dingding',
+  name: 'IconDingding',
+  displayName: 'Dingding',
   functional: true,
   render: (h, { data, children }) =>
     h(

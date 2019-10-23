@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DribbbleSquareFillSvg from '@ant-design/icons-svg/lib/fill/DribbbleSquareFill';
 
 export default {
-  name: 'DribbbleSquareFilled',
+  name: 'IconDribbbleSquareFilled',
+  displayName: 'DribbbleSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

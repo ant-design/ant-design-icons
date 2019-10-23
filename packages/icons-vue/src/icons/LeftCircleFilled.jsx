@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LeftCircleFillSvg from '@ant-design/icons-svg/lib/fill/LeftCircleFill';
 
 export default {
-  name: 'LeftCircleFilled',
+  name: 'IconLeftCircleFilled',
+  displayName: 'LeftCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

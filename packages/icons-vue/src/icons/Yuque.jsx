@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import YuqueOutlineSvg from '@ant-design/icons-svg/lib/outline/YuqueOutline';
 
 export default {
-  name: 'Yuque',
+  name: 'IconYuque',
+  displayName: 'Yuque',
   functional: true,
   render: (h, { data, children }) =>
     h(

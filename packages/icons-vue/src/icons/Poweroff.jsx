@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PoweroffOutlineSvg from '@ant-design/icons-svg/lib/outline/PoweroffOutline';
 
 export default {
-  name: 'Poweroff',
+  name: 'IconPoweroff',
+  displayName: 'Poweroff',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DatabaseFillSvg from '@ant-design/icons-svg/lib/fill/DatabaseFill';
 
 export default {
-  name: 'DatabaseFilled',
+  name: 'IconDatabaseFilled',
+  displayName: 'DatabaseFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

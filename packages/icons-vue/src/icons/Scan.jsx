@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ScanOutlineSvg from '@ant-design/icons-svg/lib/outline/ScanOutline';
 
 export default {
-  name: 'Scan',
+  name: 'IconScan',
+  displayName: 'Scan',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ChromeOutlineSvg from '@ant-design/icons-svg/lib/outline/ChromeOutline';
 
 export default {
-  name: 'Chrome',
+  name: 'IconChrome',
+  displayName: 'Chrome',
   functional: true,
   render: (h, { data, children }) =>
     h(

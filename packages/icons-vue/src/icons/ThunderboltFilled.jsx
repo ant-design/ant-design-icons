@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ThunderboltFillSvg from '@ant-design/icons-svg/lib/fill/ThunderboltFill';
 
 export default {
-  name: 'ThunderboltFilled',
+  name: 'IconThunderboltFilled',
+  displayName: 'ThunderboltFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

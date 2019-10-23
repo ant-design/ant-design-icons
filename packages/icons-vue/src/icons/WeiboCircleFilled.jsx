@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import WeiboCircleFillSvg from '@ant-design/icons-svg/lib/fill/WeiboCircleFill';
 
 export default {
-  name: 'WeiboCircleFilled',
+  name: 'IconWeiboCircleFilled',
+  displayName: 'WeiboCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

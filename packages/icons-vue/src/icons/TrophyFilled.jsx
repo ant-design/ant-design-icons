@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TrophyFillSvg from '@ant-design/icons-svg/lib/fill/TrophyFill';
 
 export default {
-  name: 'TrophyFilled',
+  name: 'IconTrophyFilled',
+  displayName: 'TrophyFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

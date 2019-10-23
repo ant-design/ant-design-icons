@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FileExcelTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FileExcelTwoTone';
 
 export default {
-  name: 'FileExcelTwoTone',
+  name: 'IconFileExcelTwoTone',
+  displayName: 'FileExcelTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

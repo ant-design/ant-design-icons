@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FilePptFillSvg from '@ant-design/icons-svg/lib/fill/FilePptFill';
 
 export default {
-  name: 'FilePptFilled',
+  name: 'IconFilePptFilled',
+  displayName: 'FilePptFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

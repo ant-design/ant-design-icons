@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import YoutubeOutlineSvg from '@ant-design/icons-svg/lib/outline/YoutubeOutline';
 
 export default {
-  name: 'Youtube',
+  name: 'IconYoutube',
+  displayName: 'Youtube',
   functional: true,
   render: (h, { data, children }) =>
     h(

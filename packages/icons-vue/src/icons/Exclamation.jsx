@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ExclamationOutlineSvg from '@ant-design/icons-svg/lib/outline/ExclamationOutline';
 
 export default {
-  name: 'Exclamation',
+  name: 'IconExclamation',
+  displayName: 'Exclamation',
   functional: true,
   render: (h, { data, children }) =>
     h(

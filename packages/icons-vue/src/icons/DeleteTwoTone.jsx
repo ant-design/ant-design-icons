@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DeleteTwoToneSvg from '@ant-design/icons-svg/lib/twotone/DeleteTwoTone';
 
 export default {
-  name: 'DeleteTwoTone',
+  name: 'IconDeleteTwoTone',
+  displayName: 'DeleteTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

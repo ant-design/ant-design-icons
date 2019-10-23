@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AmazonCircleFillSvg from '@ant-design/icons-svg/lib/fill/AmazonCircleFill';
 
 export default {
-  name: 'AmazonCircleFilled',
+  name: 'IconAmazonCircleFilled',
+  displayName: 'AmazonCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

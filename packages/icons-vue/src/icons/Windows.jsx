@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import WindowsOutlineSvg from '@ant-design/icons-svg/lib/outline/WindowsOutline';
 
 export default {
-  name: 'Windows',
+  name: 'IconWindows',
+  displayName: 'Windows',
   functional: true,
   render: (h, { data, children }) =>
     h(

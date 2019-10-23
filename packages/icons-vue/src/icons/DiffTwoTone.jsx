@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DiffTwoToneSvg from '@ant-design/icons-svg/lib/twotone/DiffTwoTone';
 
 export default {
-  name: 'DiffTwoTone',
+  name: 'IconDiffTwoTone',
+  displayName: 'DiffTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

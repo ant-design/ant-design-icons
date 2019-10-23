@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PieChartTwoToneSvg from '@ant-design/icons-svg/lib/twotone/PieChartTwoTone';
 
 export default {
-  name: 'PieChartTwoTone',
+  name: 'IconPieChartTwoTone',
+  displayName: 'PieChartTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

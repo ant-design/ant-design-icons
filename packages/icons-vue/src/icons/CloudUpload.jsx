@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CloudUploadOutlineSvg from '@ant-design/icons-svg/lib/outline/CloudUploadOutline';
 
 export default {
-  name: 'CloudUpload',
+  name: 'IconCloudUpload',
+  displayName: 'CloudUpload',
   functional: true,
   render: (h, { data, children }) =>
     h(

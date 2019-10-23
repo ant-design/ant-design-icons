@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import GitlabOutlineSvg from '@ant-design/icons-svg/lib/outline/GitlabOutline';
 
 export default {
-  name: 'Gitlab',
+  name: 'IconGitlab',
+  displayName: 'Gitlab',
   functional: true,
   render: (h, { data, children }) =>
     h(

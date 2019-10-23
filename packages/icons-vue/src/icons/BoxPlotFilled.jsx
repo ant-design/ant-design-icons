@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BoxPlotFillSvg from '@ant-design/icons-svg/lib/fill/BoxPlotFill';
 
 export default {
-  name: 'BoxPlotFilled',
+  name: 'IconBoxPlotFilled',
+  displayName: 'BoxPlotFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

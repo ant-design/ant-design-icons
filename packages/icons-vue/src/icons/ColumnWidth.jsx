@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ColumnWidthOutlineSvg from '@ant-design/icons-svg/lib/outline/ColumnWidthOutline';
 
 export default {
-  name: 'ColumnWidth',
+  name: 'IconColumnWidth',
+  displayName: 'ColumnWidth',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import WarningTwoToneSvg from '@ant-design/icons-svg/lib/twotone/WarningTwoTone';
 
 export default {
-  name: 'WarningTwoTone',
+  name: 'IconWarningTwoTone',
+  displayName: 'WarningTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

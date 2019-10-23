@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DashboardTwoToneSvg from '@ant-design/icons-svg/lib/twotone/DashboardTwoTone';
 
 export default {
-  name: 'DashboardTwoTone',
+  name: 'IconDashboardTwoTone',
+  displayName: 'DashboardTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

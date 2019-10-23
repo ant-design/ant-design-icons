@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import UsbTwoToneSvg from '@ant-design/icons-svg/lib/twotone/UsbTwoTone';
 
 export default {
-  name: 'UsbTwoTone',
+  name: 'IconUsbTwoTone',
+  displayName: 'UsbTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

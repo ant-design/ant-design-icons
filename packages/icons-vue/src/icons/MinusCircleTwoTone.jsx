@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MinusCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/MinusCircleTwoTone';
 
 export default {
-  name: 'MinusCircleTwoTone',
+  name: 'IconMinusCircleTwoTone',
+  displayName: 'MinusCircleTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

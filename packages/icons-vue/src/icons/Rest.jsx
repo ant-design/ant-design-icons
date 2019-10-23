@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RestOutlineSvg from '@ant-design/icons-svg/lib/outline/RestOutline';
 
 export default {
-  name: 'Rest',
+  name: 'IconRest',
+  displayName: 'Rest',
   functional: true,
   render: (h, { data, children }) =>
     h(

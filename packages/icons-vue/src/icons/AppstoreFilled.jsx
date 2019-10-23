@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AppstoreFillSvg from '@ant-design/icons-svg/lib/fill/AppstoreFill';
 
 export default {
-  name: 'AppstoreFilled',
+  name: 'IconAppstoreFilled',
+  displayName: 'AppstoreFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

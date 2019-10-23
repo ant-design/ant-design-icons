@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PicRightOutlineSvg from '@ant-design/icons-svg/lib/outline/PicRightOutline';
 
 export default {
-  name: 'PicRight',
+  name: 'IconPicRight',
+  displayName: 'PicRight',
   functional: true,
   render: (h, { data, children }) =>
     h(

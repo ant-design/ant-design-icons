@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SnippetsOutlineSvg from '@ant-design/icons-svg/lib/outline/SnippetsOutline';
 
 export default {
-  name: 'Snippets',
+  name: 'IconSnippets',
+  displayName: 'Snippets',
   functional: true,
   render: (h, { data, children }) =>
     h(

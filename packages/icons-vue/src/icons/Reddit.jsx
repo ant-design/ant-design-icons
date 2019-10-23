@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RedditOutlineSvg from '@ant-design/icons-svg/lib/outline/RedditOutline';
 
 export default {
-  name: 'Reddit',
+  name: 'IconReddit',
+  displayName: 'Reddit',
   functional: true,
   render: (h, { data, children }) =>
     h(

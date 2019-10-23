@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SafetyCertificateFillSvg from '@ant-design/icons-svg/lib/fill/SafetyCertificateFill';
 
 export default {
-  name: 'SafetyCertificateFilled',
+  name: 'IconSafetyCertificateFilled',
+  displayName: 'SafetyCertificateFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

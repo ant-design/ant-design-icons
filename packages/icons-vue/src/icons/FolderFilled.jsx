@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FolderFillSvg from '@ant-design/icons-svg/lib/fill/FolderFill';
 
 export default {
-  name: 'FolderFilled',
+  name: 'IconFolderFilled',
+  displayName: 'FolderFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

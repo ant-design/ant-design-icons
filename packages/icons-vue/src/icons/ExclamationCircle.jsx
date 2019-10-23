@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ExclamationCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/ExclamationCircleOutline';
 
 export default {
-  name: 'ExclamationCircle',
+  name: 'IconExclamationCircle',
+  displayName: 'ExclamationCircle',
   functional: true,
   render: (h, { data, children }) =>
     h(

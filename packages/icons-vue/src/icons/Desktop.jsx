@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DesktopOutlineSvg from '@ant-design/icons-svg/lib/outline/DesktopOutline';
 
 export default {
-  name: 'Desktop',
+  name: 'IconDesktop',
+  displayName: 'Desktop',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AudioFillSvg from '@ant-design/icons-svg/lib/fill/AudioFill';
 
 export default {
-  name: 'AudioFilled',
+  name: 'IconAudioFilled',
+  displayName: 'AudioFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

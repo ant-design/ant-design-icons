@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BehanceCircleFillSvg from '@ant-design/icons-svg/lib/fill/BehanceCircleFill';
 
 export default {
-  name: 'BehanceCircleFilled',
+  name: 'IconBehanceCircleFilled',
+  displayName: 'BehanceCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

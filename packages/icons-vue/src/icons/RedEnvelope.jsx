@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RedEnvelopeOutlineSvg from '@ant-design/icons-svg/lib/outline/RedEnvelopeOutline';
 
 export default {
-  name: 'RedEnvelope',
+  name: 'IconRedEnvelope',
+  displayName: 'RedEnvelope',
   functional: true,
   render: (h, { data, children }) =>
     h(

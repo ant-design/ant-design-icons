@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SlackSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/SlackSquareOutline';
 
 export default {
-  name: 'SlackSquare',
+  name: 'IconSlackSquare',
+  displayName: 'SlackSquare',
   functional: true,
   render: (h, { data, children }) =>
     h(

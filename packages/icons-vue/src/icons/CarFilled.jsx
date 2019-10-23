@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CarFillSvg from '@ant-design/icons-svg/lib/fill/CarFill';
 
 export default {
-  name: 'CarFilled',
+  name: 'IconCarFilled',
+  displayName: 'CarFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

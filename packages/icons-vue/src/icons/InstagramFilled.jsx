@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import InstagramFillSvg from '@ant-design/icons-svg/lib/fill/InstagramFill';
 
 export default {
-  name: 'InstagramFilled',
+  name: 'IconInstagramFilled',
+  displayName: 'InstagramFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

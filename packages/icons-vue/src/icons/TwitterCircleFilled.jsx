@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TwitterCircleFillSvg from '@ant-design/icons-svg/lib/fill/TwitterCircleFill';
 
 export default {
-  name: 'TwitterCircleFilled',
+  name: 'IconTwitterCircleFilled',
+  displayName: 'TwitterCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

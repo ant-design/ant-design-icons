@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LayoutFillSvg from '@ant-design/icons-svg/lib/fill/LayoutFill';
 
 export default {
-  name: 'LayoutFilled',
+  name: 'IconLayoutFilled',
+  displayName: 'LayoutFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

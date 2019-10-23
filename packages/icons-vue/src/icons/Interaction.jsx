@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import InteractionOutlineSvg from '@ant-design/icons-svg/lib/outline/InteractionOutline';
 
 export default {
-  name: 'Interaction',
+  name: 'IconInteraction',
+  displayName: 'Interaction',
   functional: true,
   render: (h, { data, children }) =>
     h(

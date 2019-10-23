@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FlagFillSvg from '@ant-design/icons-svg/lib/fill/FlagFill';
 
 export default {
-  name: 'FlagFilled',
+  name: 'IconFlagFilled',
+  displayName: 'FlagFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

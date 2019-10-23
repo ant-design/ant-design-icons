@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import UpSquareFillSvg from '@ant-design/icons-svg/lib/fill/UpSquareFill';
 
 export default {
-  name: 'UpSquareFilled',
+  name: 'IconUpSquareFilled',
+  displayName: 'UpSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

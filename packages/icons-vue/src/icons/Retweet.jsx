@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RetweetOutlineSvg from '@ant-design/icons-svg/lib/outline/RetweetOutline';
 
 export default {
-  name: 'Retweet',
+  name: 'IconRetweet',
+  displayName: 'Retweet',
   functional: true,
   render: (h, { data, children }) =>
     h(

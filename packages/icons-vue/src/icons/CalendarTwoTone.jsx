@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CalendarTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CalendarTwoTone';
 
 export default {
-  name: 'CalendarTwoTone',
+  name: 'IconCalendarTwoTone',
+  displayName: 'CalendarTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

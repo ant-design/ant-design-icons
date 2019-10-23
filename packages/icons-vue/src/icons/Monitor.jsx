@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MonitorOutlineSvg from '@ant-design/icons-svg/lib/outline/MonitorOutline';
 
 export default {
-  name: 'Monitor',
+  name: 'IconMonitor',
+  displayName: 'Monitor',
   functional: true,
   render: (h, { data, children }) =>
     h(

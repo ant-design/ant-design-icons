@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SnippetsFillSvg from '@ant-design/icons-svg/lib/fill/SnippetsFill';
 
 export default {
-  name: 'SnippetsFilled',
+  name: 'IconSnippetsFilled',
+  displayName: 'SnippetsFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

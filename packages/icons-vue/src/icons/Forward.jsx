@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ForwardOutlineSvg from '@ant-design/icons-svg/lib/outline/ForwardOutline';
 
 export default {
-  name: 'Forward',
+  name: 'IconForward',
+  displayName: 'Forward',
   functional: true,
   render: (h, { data, children }) =>
     h(

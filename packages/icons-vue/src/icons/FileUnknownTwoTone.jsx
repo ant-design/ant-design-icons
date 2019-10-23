@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FileUnknownTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FileUnknownTwoTone';
 
 export default {
-  name: 'FileUnknownTwoTone',
+  name: 'IconFileUnknownTwoTone',
+  displayName: 'FileUnknownTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

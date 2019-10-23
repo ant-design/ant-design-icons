@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BugTwoToneSvg from '@ant-design/icons-svg/lib/twotone/BugTwoTone';
 
 export default {
-  name: 'BugTwoTone',
+  name: 'IconBugTwoTone',
+  displayName: 'BugTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

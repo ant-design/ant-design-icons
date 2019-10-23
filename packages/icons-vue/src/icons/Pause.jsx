@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PauseOutlineSvg from '@ant-design/icons-svg/lib/outline/PauseOutline';
 
 export default {
-  name: 'Pause',
+  name: 'IconPause',
+  displayName: 'Pause',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ShoppingCartOutlineSvg from '@ant-design/icons-svg/lib/outline/ShoppingCartOutline';
 
 export default {
-  name: 'ShoppingCart',
+  name: 'IconShoppingCart',
+  displayName: 'ShoppingCart',
   functional: true,
   render: (h, { data, children }) =>
     h(

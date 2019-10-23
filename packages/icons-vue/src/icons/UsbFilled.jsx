@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import UsbFillSvg from '@ant-design/icons-svg/lib/fill/UsbFill';
 
 export default {
-  name: 'UsbFilled',
+  name: 'IconUsbFilled',
+  displayName: 'UsbFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

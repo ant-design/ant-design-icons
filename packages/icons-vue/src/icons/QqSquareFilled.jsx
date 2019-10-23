@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import QqSquareFillSvg from '@ant-design/icons-svg/lib/fill/QqSquareFill';
 
 export default {
-  name: 'QqSquareFilled',
+  name: 'IconQqSquareFilled',
+  displayName: 'QqSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

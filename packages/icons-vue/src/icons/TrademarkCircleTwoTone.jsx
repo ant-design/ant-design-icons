@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TrademarkCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/TrademarkCircleTwoTone';
 
 export default {
-  name: 'TrademarkCircleTwoTone',
+  name: 'IconTrademarkCircleTwoTone',
+  displayName: 'TrademarkCircleTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

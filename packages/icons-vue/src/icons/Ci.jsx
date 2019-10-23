@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CiOutlineSvg from '@ant-design/icons-svg/lib/outline/CiOutline';
 
 export default {
-  name: 'Ci',
+  name: 'IconCi',
+  displayName: 'Ci',
   functional: true,
   render: (h, { data, children }) =>
     h(

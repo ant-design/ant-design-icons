@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BulbOutlineSvg from '@ant-design/icons-svg/lib/outline/BulbOutline';
 
 export default {
-  name: 'Bulb',
+  name: 'IconBulb',
+  displayName: 'Bulb',
   functional: true,
   render: (h, { data, children }) =>
     h(

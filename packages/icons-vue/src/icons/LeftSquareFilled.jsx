@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LeftSquareFillSvg from '@ant-design/icons-svg/lib/fill/LeftSquareFill';
 
 export default {
-  name: 'LeftSquareFilled',
+  name: 'IconLeftSquareFilled',
+  displayName: 'LeftSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

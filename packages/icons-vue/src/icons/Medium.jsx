@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MediumOutlineSvg from '@ant-design/icons-svg/lib/outline/MediumOutline';
 
 export default {
-  name: 'Medium',
+  name: 'IconMedium',
+  displayName: 'Medium',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CodeSandboxOutlineSvg from '@ant-design/icons-svg/lib/outline/CodeSandboxOutline';
 
 export default {
-  name: 'CodeSandbox',
+  name: 'IconCodeSandbox',
+  displayName: 'CodeSandbox',
   functional: true,
   render: (h, { data, children }) =>
     h(

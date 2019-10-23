@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import HddFillSvg from '@ant-design/icons-svg/lib/fill/HddFill';
 
 export default {
-  name: 'HddFilled',
+  name: 'IconHddFilled',
+  displayName: 'HddFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

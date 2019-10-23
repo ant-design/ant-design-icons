@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AppstoreOutlineSvg from '@ant-design/icons-svg/lib/outline/AppstoreOutline';
 
 export default {
-  name: 'Appstore',
+  name: 'IconAppstore',
+  displayName: 'Appstore',
   functional: true,
   render: (h, { data, children }) =>
     h(

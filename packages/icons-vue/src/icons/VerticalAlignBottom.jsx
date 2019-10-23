@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import VerticalAlignBottomOutlineSvg from '@ant-design/icons-svg/lib/outline/VerticalAlignBottomOutline';
 
 export default {
-  name: 'VerticalAlignBottom',
+  name: 'IconVerticalAlignBottom',
+  displayName: 'VerticalAlignBottom',
   functional: true,
   render: (h, { data, children }) =>
     h(

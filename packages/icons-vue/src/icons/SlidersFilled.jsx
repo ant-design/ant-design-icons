@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SlidersFillSvg from '@ant-design/icons-svg/lib/fill/SlidersFill';
 
 export default {
-  name: 'SlidersFilled',
+  name: 'IconSlidersFilled',
+  displayName: 'SlidersFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

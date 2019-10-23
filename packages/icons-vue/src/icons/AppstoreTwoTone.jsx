@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AppstoreTwoToneSvg from '@ant-design/icons-svg/lib/twotone/AppstoreTwoTone';
 
 export default {
-  name: 'AppstoreTwoTone',
+  name: 'IconAppstoreTwoTone',
+  displayName: 'AppstoreTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

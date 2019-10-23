@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SettingFillSvg from '@ant-design/icons-svg/lib/fill/SettingFill';
 
 export default {
-  name: 'SettingFilled',
+  name: 'IconSettingFilled',
+  displayName: 'SettingFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DropboxOutlineSvg from '@ant-design/icons-svg/lib/outline/DropboxOutline';
 
 export default {
-  name: 'Dropbox',
+  name: 'IconDropbox',
+  displayName: 'Dropbox',
   functional: true,
   render: (h, { data, children }) =>
     h(

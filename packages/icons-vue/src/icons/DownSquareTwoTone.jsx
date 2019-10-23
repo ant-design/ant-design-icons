@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DownSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/DownSquareTwoTone';
 
 export default {
-  name: 'DownSquareTwoTone',
+  name: 'IconDownSquareTwoTone',
+  displayName: 'DownSquareTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

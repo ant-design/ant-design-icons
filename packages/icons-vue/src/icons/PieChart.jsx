@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PieChartOutlineSvg from '@ant-design/icons-svg/lib/outline/PieChartOutline';
 
 export default {
-  name: 'PieChart',
+  name: 'IconPieChart',
+  displayName: 'PieChart',
   functional: true,
   render: (h, { data, children }) =>
     h(

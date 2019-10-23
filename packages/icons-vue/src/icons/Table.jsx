@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TableOutlineSvg from '@ant-design/icons-svg/lib/outline/TableOutline';
 
 export default {
-  name: 'Table',
+  name: 'IconTable',
+  displayName: 'Table',
   functional: true,
   render: (h, { data, children }) =>
     h(

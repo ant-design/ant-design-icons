@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AlertFillSvg from '@ant-design/icons-svg/lib/fill/AlertFill';
 
 export default {
-  name: 'AlertFilled',
+  name: 'IconAlertFilled',
+  displayName: 'AlertFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ReadFillSvg from '@ant-design/icons-svg/lib/fill/ReadFill';
 
 export default {
-  name: 'ReadFilled',
+  name: 'IconReadFilled',
+  displayName: 'ReadFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RocketTwoToneSvg from '@ant-design/icons-svg/lib/twotone/RocketTwoTone';
 
 export default {
-  name: 'RocketTwoTone',
+  name: 'IconRocketTwoTone',
+  displayName: 'RocketTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

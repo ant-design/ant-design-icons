@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TaobaoSquareFillSvg from '@ant-design/icons-svg/lib/fill/TaobaoSquareFill';
 
 export default {
-  name: 'TaobaoSquareFilled',
+  name: 'IconTaobaoSquareFilled',
+  displayName: 'TaobaoSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

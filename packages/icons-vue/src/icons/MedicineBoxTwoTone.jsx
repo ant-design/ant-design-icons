@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MedicineBoxTwoToneSvg from '@ant-design/icons-svg/lib/twotone/MedicineBoxTwoTone';
 
 export default {
-  name: 'MedicineBoxTwoTone',
+  name: 'IconMedicineBoxTwoTone',
+  displayName: 'MedicineBoxTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

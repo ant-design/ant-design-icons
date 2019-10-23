@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PoundCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/PoundCircleTwoTone';
 
 export default {
-  name: 'PoundCircleTwoTone',
+  name: 'IconPoundCircleTwoTone',
+  displayName: 'PoundCircleTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

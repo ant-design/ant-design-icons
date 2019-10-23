@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import GoldOutlineSvg from '@ant-design/icons-svg/lib/outline/GoldOutline';
 
 export default {
-  name: 'Gold',
+  name: 'IconGold',
+  displayName: 'Gold',
   functional: true,
   render: (h, { data, children }) =>
     h(

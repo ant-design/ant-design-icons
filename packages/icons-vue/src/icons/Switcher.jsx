@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SwitcherOutlineSvg from '@ant-design/icons-svg/lib/outline/SwitcherOutline';
 
 export default {
-  name: 'Switcher',
+  name: 'IconSwitcher',
+  displayName: 'Switcher',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SnippetsTwoToneSvg from '@ant-design/icons-svg/lib/twotone/SnippetsTwoTone';
 
 export default {
-  name: 'SnippetsTwoTone',
+  name: 'IconSnippetsTwoTone',
+  displayName: 'SnippetsTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

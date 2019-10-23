@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FullscreenOutlineSvg from '@ant-design/icons-svg/lib/outline/FullscreenOutline';
 
 export default {
-  name: 'Fullscreen',
+  name: 'IconFullscreen',
+  displayName: 'Fullscreen',
   functional: true,
   render: (h, { data, children }) =>
     h(

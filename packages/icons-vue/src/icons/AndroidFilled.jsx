@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AndroidFillSvg from '@ant-design/icons-svg/lib/fill/AndroidFill';
 
 export default {
-  name: 'AndroidFilled',
+  name: 'IconAndroidFilled',
+  displayName: 'AndroidFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

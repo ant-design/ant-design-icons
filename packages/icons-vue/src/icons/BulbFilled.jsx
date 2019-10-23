@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BulbFillSvg from '@ant-design/icons-svg/lib/fill/BulbFill';
 
 export default {
-  name: 'BulbFilled',
+  name: 'IconBulbFilled',
+  displayName: 'BulbFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

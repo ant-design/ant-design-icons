@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BankOutlineSvg from '@ant-design/icons-svg/lib/outline/BankOutline';
 
 export default {
-  name: 'Bank',
+  name: 'IconBank',
+  displayName: 'Bank',
   functional: true,
   render: (h, { data, children }) =>
     h(

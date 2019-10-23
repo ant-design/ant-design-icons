@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TagFillSvg from '@ant-design/icons-svg/lib/fill/TagFill';
 
 export default {
-  name: 'TagFilled',
+  name: 'IconTagFilled',
+  displayName: 'TagFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

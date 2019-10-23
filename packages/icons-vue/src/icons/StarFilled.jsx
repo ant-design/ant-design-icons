@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import StarFillSvg from '@ant-design/icons-svg/lib/fill/StarFill';
 
 export default {
-  name: 'StarFilled',
+  name: 'IconStarFilled',
+  displayName: 'StarFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

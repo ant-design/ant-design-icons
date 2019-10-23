@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DislikeOutlineSvg from '@ant-design/icons-svg/lib/outline/DislikeOutline';
 
 export default {
-  name: 'Dislike',
+  name: 'IconDislike',
+  displayName: 'Dislike',
   functional: true,
   render: (h, { data, children }) =>
     h(

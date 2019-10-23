@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import WarningFillSvg from '@ant-design/icons-svg/lib/fill/WarningFill';
 
 export default {
-  name: 'WarningFilled',
+  name: 'IconWarningFilled',
+  displayName: 'WarningFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

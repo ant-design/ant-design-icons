@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CalendarOutlineSvg from '@ant-design/icons-svg/lib/outline/CalendarOutline';
 
 export default {
-  name: 'Calendar',
+  name: 'IconCalendar',
+  displayName: 'Calendar',
   functional: true,
   render: (h, { data, children }) =>
     h(

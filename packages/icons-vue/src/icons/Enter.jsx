@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import EnterOutlineSvg from '@ant-design/icons-svg/lib/outline/EnterOutline';
 
 export default {
-  name: 'Enter',
+  name: 'IconEnter',
+  displayName: 'Enter',
   functional: true,
   render: (h, { data, children }) =>
     h(

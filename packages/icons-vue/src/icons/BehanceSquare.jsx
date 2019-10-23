@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BehanceSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/BehanceSquareOutline';
 
 export default {
-  name: 'BehanceSquare',
+  name: 'IconBehanceSquare',
+  displayName: 'BehanceSquare',
   functional: true,
   render: (h, { data, children }) =>
     h(

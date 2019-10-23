@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TaobaoCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/TaobaoCircleOutline';
 
 export default {
-  name: 'TaobaoCircle',
+  name: 'IconTaobaoCircle',
+  displayName: 'TaobaoCircle',
   functional: true,
   render: (h, { data, children }) =>
     h(

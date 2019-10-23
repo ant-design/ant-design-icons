@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import WalletOutlineSvg from '@ant-design/icons-svg/lib/outline/WalletOutline';
 
 export default {
-  name: 'Wallet',
+  name: 'IconWallet',
+  displayName: 'Wallet',
   functional: true,
   render: (h, { data, children }) =>
     h(

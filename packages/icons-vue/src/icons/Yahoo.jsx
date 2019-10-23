@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import YahooOutlineSvg from '@ant-design/icons-svg/lib/outline/YahooOutline';
 
 export default {
-  name: 'Yahoo',
+  name: 'IconYahoo',
+  displayName: 'Yahoo',
   functional: true,
   render: (h, { data, children }) =>
     h(

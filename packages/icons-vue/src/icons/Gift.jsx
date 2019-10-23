@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import GiftOutlineSvg from '@ant-design/icons-svg/lib/outline/GiftOutline';
 
 export default {
-  name: 'Gift',
+  name: 'IconGift',
+  displayName: 'Gift',
   functional: true,
   render: (h, { data, children }) =>
     h(

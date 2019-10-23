@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import HeartTwoToneSvg from '@ant-design/icons-svg/lib/twotone/HeartTwoTone';
 
 export default {
-  name: 'HeartTwoTone',
+  name: 'IconHeartTwoTone',
+  displayName: 'HeartTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

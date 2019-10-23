@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AreaChartOutlineSvg from '@ant-design/icons-svg/lib/outline/AreaChartOutline';
 
 export default {
-  name: 'AreaChart',
+  name: 'IconAreaChart',
+  displayName: 'AreaChart',
   functional: true,
   render: (h, { data, children }) =>
     h(

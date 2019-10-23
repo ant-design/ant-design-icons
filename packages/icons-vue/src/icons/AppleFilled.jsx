@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AppleFillSvg from '@ant-design/icons-svg/lib/fill/AppleFill';
 
 export default {
-  name: 'AppleFilled',
+  name: 'IconAppleFilled',
+  displayName: 'AppleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

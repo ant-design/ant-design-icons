@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import UsergroupDeleteOutlineSvg from '@ant-design/icons-svg/lib/outline/UsergroupDeleteOutline';
 
 export default {
-  name: 'UsergroupDelete',
+  name: 'IconUsergroupDelete',
+  displayName: 'UsergroupDelete',
   functional: true,
   render: (h, { data, children }) =>
     h(

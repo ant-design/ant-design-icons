@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SwitcherFillSvg from '@ant-design/icons-svg/lib/fill/SwitcherFill';
 
 export default {
-  name: 'SwitcherFilled',
+  name: 'IconSwitcherFilled',
+  displayName: 'SwitcherFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

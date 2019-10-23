@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TrophyTwoToneSvg from '@ant-design/icons-svg/lib/twotone/TrophyTwoTone';
 
 export default {
-  name: 'TrophyTwoTone',
+  name: 'IconTrophyTwoTone',
+  displayName: 'TrophyTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

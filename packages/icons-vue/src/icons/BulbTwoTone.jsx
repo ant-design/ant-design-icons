@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BulbTwoToneSvg from '@ant-design/icons-svg/lib/twotone/BulbTwoTone';
 
 export default {
-  name: 'BulbTwoTone',
+  name: 'IconBulbTwoTone',
+  displayName: 'BulbTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

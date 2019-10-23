@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ArrowsAltOutlineSvg from '@ant-design/icons-svg/lib/outline/ArrowsAltOutline';
 
 export default {
-  name: 'ArrowsAlt',
+  name: 'IconArrowsAlt',
+  displayName: 'ArrowsAlt',
   functional: true,
   render: (h, { data, children }) =>
     h(

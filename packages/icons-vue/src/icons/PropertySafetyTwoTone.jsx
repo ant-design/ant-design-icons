@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PropertySafetyTwoToneSvg from '@ant-design/icons-svg/lib/twotone/PropertySafetyTwoTone';
 
 export default {
-  name: 'PropertySafetyTwoTone',
+  name: 'IconPropertySafetyTwoTone',
+  displayName: 'PropertySafetyTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

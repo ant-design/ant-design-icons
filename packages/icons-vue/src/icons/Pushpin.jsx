@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PushpinOutlineSvg from '@ant-design/icons-svg/lib/outline/PushpinOutline';
 
 export default {
-  name: 'Pushpin',
+  name: 'IconPushpin',
+  displayName: 'Pushpin',
   functional: true,
   render: (h, { data, children }) =>
     h(

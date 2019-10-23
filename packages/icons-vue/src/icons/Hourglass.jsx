@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import HourglassOutlineSvg from '@ant-design/icons-svg/lib/outline/HourglassOutline';
 
 export default {
-  name: 'Hourglass',
+  name: 'IconHourglass',
+  displayName: 'Hourglass',
   functional: true,
   render: (h, { data, children }) =>
     h(

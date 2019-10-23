@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FilterFillSvg from '@ant-design/icons-svg/lib/fill/FilterFill';
 
 export default {
-  name: 'FilterFilled',
+  name: 'IconFilterFilled',
+  displayName: 'FilterFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

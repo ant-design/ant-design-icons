@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SlackCircleFillSvg from '@ant-design/icons-svg/lib/fill/SlackCircleFill';
 
 export default {
-  name: 'SlackCircleFilled',
+  name: 'IconSlackCircleFilled',
+  displayName: 'SlackCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MedicineBoxFillSvg from '@ant-design/icons-svg/lib/fill/MedicineBoxFill';
 
 export default {
-  name: 'MedicineBoxFilled',
+  name: 'IconMedicineBoxFilled',
+  displayName: 'MedicineBoxFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

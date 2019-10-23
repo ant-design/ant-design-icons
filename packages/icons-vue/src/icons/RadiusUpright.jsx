@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RadiusUprightOutlineSvg from '@ant-design/icons-svg/lib/outline/RadiusUprightOutline';
 
 export default {
-  name: 'RadiusUpright',
+  name: 'IconRadiusUpright',
+  displayName: 'RadiusUpright',
   functional: true,
   render: (h, { data, children }) =>
     h(

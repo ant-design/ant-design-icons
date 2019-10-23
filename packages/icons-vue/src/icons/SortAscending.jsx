@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SortAscendingOutlineSvg from '@ant-design/icons-svg/lib/outline/SortAscendingOutline';
 
 export default {
-  name: 'SortAscending',
+  name: 'IconSortAscending',
+  displayName: 'SortAscending',
   functional: true,
   render: (h, { data, children }) =>
     h(

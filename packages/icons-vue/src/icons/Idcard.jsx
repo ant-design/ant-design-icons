@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import IdcardOutlineSvg from '@ant-design/icons-svg/lib/outline/IdcardOutline';
 
 export default {
-  name: 'Idcard',
+  name: 'IconIdcard',
+  displayName: 'Idcard',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AudioTwoToneSvg from '@ant-design/icons-svg/lib/twotone/AudioTwoTone';
 
 export default {
-  name: 'AudioTwoTone',
+  name: 'IconAudioTwoTone',
+  displayName: 'AudioTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

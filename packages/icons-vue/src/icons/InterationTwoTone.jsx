@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import InterationTwoToneSvg from '@ant-design/icons-svg/lib/twotone/InterationTwoTone';
 
 export default {
-  name: 'InterationTwoTone',
+  name: 'IconInterationTwoTone',
+  displayName: 'InterationTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

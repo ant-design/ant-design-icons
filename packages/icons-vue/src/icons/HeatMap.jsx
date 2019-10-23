@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import HeatMapOutlineSvg from '@ant-design/icons-svg/lib/outline/HeatMapOutline';
 
 export default {
-  name: 'HeatMap',
+  name: 'IconHeatMap',
+  displayName: 'HeatMap',
   functional: true,
   render: (h, { data, children }) =>
     h(

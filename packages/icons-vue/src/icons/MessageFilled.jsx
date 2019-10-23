@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MessageFillSvg from '@ant-design/icons-svg/lib/fill/MessageFill';
 
 export default {
-  name: 'MessageFilled',
+  name: 'IconMessageFilled',
+  displayName: 'MessageFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

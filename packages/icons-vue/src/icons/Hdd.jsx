@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import HddOutlineSvg from '@ant-design/icons-svg/lib/outline/HddOutline';
 
 export default {
-  name: 'Hdd',
+  name: 'IconHdd',
+  displayName: 'Hdd',
   functional: true,
   render: (h, { data, children }) =>
     h(

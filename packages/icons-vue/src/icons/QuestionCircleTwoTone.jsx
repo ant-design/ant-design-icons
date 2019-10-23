@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import QuestionCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/QuestionCircleTwoTone';
 
 export default {
-  name: 'QuestionCircleTwoTone',
+  name: 'IconQuestionCircleTwoTone',
+  displayName: 'QuestionCircleTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

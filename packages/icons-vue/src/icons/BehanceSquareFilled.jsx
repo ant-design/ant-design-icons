@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BehanceSquareFillSvg from '@ant-design/icons-svg/lib/fill/BehanceSquareFill';
 
 export default {
-  name: 'BehanceSquareFilled',
+  name: 'IconBehanceSquareFilled',
+  displayName: 'BehanceSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

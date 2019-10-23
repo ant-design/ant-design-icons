@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PicCenterOutlineSvg from '@ant-design/icons-svg/lib/outline/PicCenterOutline';
 
 export default {
-  name: 'PicCenter',
+  name: 'IconPicCenter',
+  displayName: 'PicCenter',
   functional: true,
   render: (h, { data, children }) =>
     h(

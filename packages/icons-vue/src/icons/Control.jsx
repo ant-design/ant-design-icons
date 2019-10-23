@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ControlOutlineSvg from '@ant-design/icons-svg/lib/outline/ControlOutline';
 
 export default {
-  name: 'Control',
+  name: 'IconControl',
+  displayName: 'Control',
   functional: true,
   render: (h, { data, children }) =>
     h(

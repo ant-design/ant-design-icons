@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DropboxSquareFillSvg from '@ant-design/icons-svg/lib/fill/DropboxSquareFill';
 
 export default {
-  name: 'DropboxSquareFilled',
+  name: 'IconDropboxSquareFilled',
+  displayName: 'DropboxSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import StopTwoToneSvg from '@ant-design/icons-svg/lib/twotone/StopTwoTone';
 
 export default {
-  name: 'StopTwoTone',
+  name: 'IconStopTwoTone',
+  displayName: 'StopTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import HighlightOutlineSvg from '@ant-design/icons-svg/lib/outline/HighlightOutline';
 
 export default {
-  name: 'Highlight',
+  name: 'IconHighlight',
+  displayName: 'Highlight',
   functional: true,
   render: (h, { data, children }) =>
     h(

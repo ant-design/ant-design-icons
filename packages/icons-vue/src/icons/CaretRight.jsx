@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CaretRightOutlineSvg from '@ant-design/icons-svg/lib/outline/CaretRightOutline';
 
 export default {
-  name: 'CaretRight',
+  name: 'IconCaretRight',
+  displayName: 'CaretRight',
   functional: true,
   render: (h, { data, children }) =>
     h(

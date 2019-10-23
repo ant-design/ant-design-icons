@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SmileFillSvg from '@ant-design/icons-svg/lib/fill/SmileFill';
 
 export default {
-  name: 'SmileFilled',
+  name: 'IconSmileFilled',
+  displayName: 'SmileFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

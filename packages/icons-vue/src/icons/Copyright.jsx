@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CopyrightOutlineSvg from '@ant-design/icons-svg/lib/outline/CopyrightOutline';
 
 export default {
-  name: 'Copyright',
+  name: 'IconCopyright',
+  displayName: 'Copyright',
   functional: true,
   render: (h, { data, children }) =>
     h(

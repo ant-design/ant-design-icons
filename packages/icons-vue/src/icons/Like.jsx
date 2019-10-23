@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LikeOutlineSvg from '@ant-design/icons-svg/lib/outline/LikeOutline';
 
 export default {
-  name: 'Like',
+  name: 'IconLike',
+  displayName: 'Like',
   functional: true,
   render: (h, { data, children }) =>
     h(

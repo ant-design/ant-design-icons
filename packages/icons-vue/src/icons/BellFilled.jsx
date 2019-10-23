@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BellFillSvg from '@ant-design/icons-svg/lib/fill/BellFill';
 
 export default {
-  name: 'BellFilled',
+  name: 'IconBellFilled',
+  displayName: 'BellFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

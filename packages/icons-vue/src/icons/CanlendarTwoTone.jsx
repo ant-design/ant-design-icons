@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CanlendarTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CanlendarTwoTone';
 
 export default {
-  name: 'CanlendarTwoTone',
+  name: 'IconCanlendarTwoTone',
+  displayName: 'CanlendarTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

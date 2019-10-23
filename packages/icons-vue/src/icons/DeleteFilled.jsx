@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DeleteFillSvg from '@ant-design/icons-svg/lib/fill/DeleteFill';
 
 export default {
-  name: 'DeleteFilled',
+  name: 'IconDeleteFilled',
+  displayName: 'DeleteFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

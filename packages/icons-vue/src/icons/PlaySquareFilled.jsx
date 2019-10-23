@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import PlaySquareFillSvg from '@ant-design/icons-svg/lib/fill/PlaySquareFill';
 
 export default {
-  name: 'PlaySquareFilled',
+  name: 'IconPlaySquareFilled',
+  displayName: 'PlaySquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CreditCardTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CreditCardTwoTone';
 
 export default {
-  name: 'CreditCardTwoTone',
+  name: 'IconCreditCardTwoTone',
+  displayName: 'CreditCardTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

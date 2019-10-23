@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import GoogleCircleFillSvg from '@ant-design/icons-svg/lib/fill/GoogleCircleFill';
 
 export default {
-  name: 'GoogleCircleFilled',
+  name: 'IconGoogleCircleFilled',
+  displayName: 'GoogleCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

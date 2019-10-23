@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import QuestionCircleFillSvg from '@ant-design/icons-svg/lib/fill/QuestionCircleFill';
 
 export default {
-  name: 'QuestionCircleFilled',
+  name: 'IconQuestionCircleFilled',
+  displayName: 'QuestionCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

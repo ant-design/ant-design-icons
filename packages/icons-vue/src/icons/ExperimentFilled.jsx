@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ExperimentFillSvg from '@ant-design/icons-svg/lib/fill/ExperimentFill';
 
 export default {
-  name: 'ExperimentFilled',
+  name: 'IconExperimentFilled',
+  displayName: 'ExperimentFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

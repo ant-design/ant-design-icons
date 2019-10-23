@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TabletTwoToneSvg from '@ant-design/icons-svg/lib/twotone/TabletTwoTone';
 
 export default {
-  name: 'TabletTwoTone',
+  name: 'IconTabletTwoTone',
+  displayName: 'TabletTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

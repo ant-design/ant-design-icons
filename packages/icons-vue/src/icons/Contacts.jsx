@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ContactsOutlineSvg from '@ant-design/icons-svg/lib/outline/ContactsOutline';
 
 export default {
-  name: 'Contacts',
+  name: 'IconContacts',
+  displayName: 'Contacts',
   functional: true,
   render: (h, { data, children }) =>
     h(

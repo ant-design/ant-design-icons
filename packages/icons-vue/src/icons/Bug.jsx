@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BugOutlineSvg from '@ant-design/icons-svg/lib/outline/BugOutline';
 
 export default {
-  name: 'Bug',
+  name: 'IconBug',
+  displayName: 'Bug',
   functional: true,
   render: (h, { data, children }) =>
     h(

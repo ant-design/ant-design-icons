@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ApartmentOutlineSvg from '@ant-design/icons-svg/lib/outline/ApartmentOutline';
 
 export default {
-  name: 'Apartment',
+  name: 'IconApartment',
+  displayName: 'Apartment',
   functional: true,
   render: (h, { data, children }) =>
     h(

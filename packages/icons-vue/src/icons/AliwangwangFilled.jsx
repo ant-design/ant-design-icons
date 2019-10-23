@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AliwangwangFillSvg from '@ant-design/icons-svg/lib/fill/AliwangwangFill';
 
 export default {
-  name: 'AliwangwangFilled',
+  name: 'IconAliwangwangFilled',
+  displayName: 'AliwangwangFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

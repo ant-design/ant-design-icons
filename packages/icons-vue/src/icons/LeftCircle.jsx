@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import LeftCircleOutlineSvg from '@ant-design/icons-svg/lib/outline/LeftCircleOutline';
 
 export default {
-  name: 'LeftCircle',
+  name: 'IconLeftCircle',
+  displayName: 'LeftCircle',
   functional: true,
   render: (h, { data, children }) =>
     h(

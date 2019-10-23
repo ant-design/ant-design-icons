@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DropboxCircleFillSvg from '@ant-design/icons-svg/lib/fill/DropboxCircleFill';
 
 export default {
-  name: 'DropboxCircleFilled',
+  name: 'IconDropboxCircleFilled',
+  displayName: 'DropboxCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

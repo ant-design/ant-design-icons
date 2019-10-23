@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ShopFillSvg from '@ant-design/icons-svg/lib/fill/ShopFill';
 
 export default {
-  name: 'ShopFilled',
+  name: 'IconShopFilled',
+  displayName: 'ShopFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

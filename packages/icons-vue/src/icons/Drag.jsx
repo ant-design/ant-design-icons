@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DragOutlineSvg from '@ant-design/icons-svg/lib/outline/DragOutline';
 
 export default {
-  name: 'Drag',
+  name: 'IconDrag',
+  displayName: 'Drag',
   functional: true,
   render: (h, { data, children }) =>
     h(

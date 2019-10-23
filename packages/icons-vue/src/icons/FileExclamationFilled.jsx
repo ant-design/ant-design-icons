@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FileExclamationFillSvg from '@ant-design/icons-svg/lib/fill/FileExclamationFill';
 
 export default {
-  name: 'FileExclamationFilled',
+  name: 'IconFileExclamationFilled',
+  displayName: 'FileExclamationFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

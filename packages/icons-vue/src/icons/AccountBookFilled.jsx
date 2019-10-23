@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AccountBookFillSvg from '@ant-design/icons-svg/lib/fill/AccountBookFill';
 
 export default {
-  name: 'AccountBookFilled',
+  name: 'IconAccountBookFilled',
+  displayName: 'AccountBookFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

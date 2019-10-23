@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CheckCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CheckCircleTwoTone';
 
 export default {
-  name: 'CheckCircleTwoTone',
+  name: 'IconCheckCircleTwoTone',
+  displayName: 'CheckCircleTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

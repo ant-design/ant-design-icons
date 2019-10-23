@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ForwardFillSvg from '@ant-design/icons-svg/lib/fill/ForwardFill';
 
 export default {
-  name: 'ForwardFilled',
+  name: 'IconForwardFilled',
+  displayName: 'ForwardFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

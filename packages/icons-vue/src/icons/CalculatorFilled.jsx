@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CalculatorFillSvg from '@ant-design/icons-svg/lib/fill/CalculatorFill';
 
 export default {
-  name: 'CalculatorFilled',
+  name: 'IconCalculatorFilled',
+  displayName: 'CalculatorFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

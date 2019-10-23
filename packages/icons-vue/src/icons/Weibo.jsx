@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import WeiboOutlineSvg from '@ant-design/icons-svg/lib/outline/WeiboOutline';
 
 export default {
-  name: 'Weibo',
+  name: 'IconWeibo',
+  displayName: 'Weibo',
   functional: true,
   render: (h, { data, children }) =>
     h(

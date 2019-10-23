@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import VerticalAlignMiddleOutlineSvg from '@ant-design/icons-svg/lib/outline/VerticalAlignMiddleOutline';
 
 export default {
-  name: 'VerticalAlignMiddle',
+  name: 'IconVerticalAlignMiddle',
+  displayName: 'VerticalAlignMiddle',
   functional: true,
   render: (h, { data, children }) =>
     h(

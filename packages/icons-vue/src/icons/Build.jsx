@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BuildOutlineSvg from '@ant-design/icons-svg/lib/outline/BuildOutline';
 
 export default {
-  name: 'Build',
+  name: 'IconBuild',
+  displayName: 'Build',
   functional: true,
   render: (h, { data, children }) =>
     h(

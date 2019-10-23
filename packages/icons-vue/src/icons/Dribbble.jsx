@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DribbbleOutlineSvg from '@ant-design/icons-svg/lib/outline/DribbbleOutline';
 
 export default {
-  name: 'Dribbble',
+  name: 'IconDribbble',
+  displayName: 'Dribbble',
   functional: true,
   render: (h, { data, children }) =>
     h(

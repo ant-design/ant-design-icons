@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import YahooFillSvg from '@ant-design/icons-svg/lib/fill/YahooFill';
 
 export default {
-  name: 'YahooFilled',
+  name: 'IconYahooFilled',
+  displayName: 'YahooFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

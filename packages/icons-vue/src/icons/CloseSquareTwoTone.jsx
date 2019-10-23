@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CloseSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CloseSquareTwoTone';
 
 export default {
-  name: 'CloseSquareTwoTone',
+  name: 'IconCloseSquareTwoTone',
+  displayName: 'CloseSquareTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

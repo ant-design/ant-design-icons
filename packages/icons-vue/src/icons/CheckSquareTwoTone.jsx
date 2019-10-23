@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CheckSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CheckSquareTwoTone';
 
 export default {
-  name: 'CheckSquareTwoTone',
+  name: 'IconCheckSquareTwoTone',
+  displayName: 'CheckSquareTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

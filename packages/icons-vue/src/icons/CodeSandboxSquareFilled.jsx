@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CodeSandboxSquareFillSvg from '@ant-design/icons-svg/lib/fill/CodeSandboxSquareFill';
 
 export default {
-  name: 'CodeSandboxSquareFilled',
+  name: 'IconCodeSandboxSquareFilled',
+  displayName: 'CodeSandboxSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

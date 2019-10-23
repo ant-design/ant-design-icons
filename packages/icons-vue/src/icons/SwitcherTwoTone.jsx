@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SwitcherTwoToneSvg from '@ant-design/icons-svg/lib/twotone/SwitcherTwoTone';
 
 export default {
-  name: 'SwitcherTwoTone',
+  name: 'IconSwitcherTwoTone',
+  displayName: 'SwitcherTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

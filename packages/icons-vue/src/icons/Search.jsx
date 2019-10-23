@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import SearchOutlineSvg from '@ant-design/icons-svg/lib/outline/SearchOutline';
 
 export default {
-  name: 'Search',
+  name: 'IconSearch',
+  displayName: 'Search',
   functional: true,
   render: (h, { data, children }) =>
     h(

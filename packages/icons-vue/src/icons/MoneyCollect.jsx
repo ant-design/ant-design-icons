@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MoneyCollectOutlineSvg from '@ant-design/icons-svg/lib/outline/MoneyCollectOutline';
 
 export default {
-  name: 'MoneyCollect',
+  name: 'IconMoneyCollect',
+  displayName: 'MoneyCollect',
   functional: true,
   render: (h, { data, children }) =>
     h(

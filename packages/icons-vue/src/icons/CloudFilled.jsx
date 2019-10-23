@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CloudFillSvg from '@ant-design/icons-svg/lib/fill/CloudFill';
 
 export default {
-  name: 'CloudFilled',
+  name: 'IconCloudFilled',
+  displayName: 'CloudFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

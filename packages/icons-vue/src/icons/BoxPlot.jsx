@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BoxPlotOutlineSvg from '@ant-design/icons-svg/lib/outline/BoxPlotOutline';
 
 export default {
-  name: 'BoxPlot',
+  name: 'IconBoxPlot',
+  displayName: 'BoxPlot',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CopyTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CopyTwoTone';
 
 export default {
-  name: 'CopyTwoTone',
+  name: 'IconCopyTwoTone',
+  displayName: 'CopyTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

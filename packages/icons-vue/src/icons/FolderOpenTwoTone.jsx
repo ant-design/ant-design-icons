@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FolderOpenTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FolderOpenTwoTone';
 
 export default {
-  name: 'FolderOpenTwoTone',
+  name: 'IconFolderOpenTwoTone',
+  displayName: 'FolderOpenTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

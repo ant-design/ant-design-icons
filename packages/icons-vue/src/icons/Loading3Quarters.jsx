@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import Loading3QuartersOutlineSvg from '@ant-design/icons-svg/lib/outline/Loading3QuartersOutline';
 
 export default {
-  name: 'Loading3Quarters',
+  name: 'IconLoading3Quarters',
+  displayName: 'Loading3Quarters',
   functional: true,
   render: (h, { data, children }) =>
     h(

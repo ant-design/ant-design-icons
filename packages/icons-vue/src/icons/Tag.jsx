@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import TagOutlineSvg from '@ant-design/icons-svg/lib/outline/TagOutline';
 
 export default {
-  name: 'Tag',
+  name: 'IconTag',
+  displayName: 'Tag',
   functional: true,
   render: (h, { data, children }) =>
     h(

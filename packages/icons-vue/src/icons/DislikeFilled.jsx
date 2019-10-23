@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DislikeFillSvg from '@ant-design/icons-svg/lib/fill/DislikeFill';
 
 export default {
-  name: 'DislikeFilled',
+  name: 'IconDislikeFilled',
+  displayName: 'DislikeFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

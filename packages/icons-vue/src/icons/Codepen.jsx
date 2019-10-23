@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CodepenOutlineSvg from '@ant-design/icons-svg/lib/outline/CodepenOutline';
 
 export default {
-  name: 'Codepen',
+  name: 'IconCodepen',
+  displayName: 'Codepen',
   functional: true,
   render: (h, { data, children }) =>
     h(

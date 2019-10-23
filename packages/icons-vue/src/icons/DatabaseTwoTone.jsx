@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import DatabaseTwoToneSvg from '@ant-design/icons-svg/lib/twotone/DatabaseTwoTone';
 
 export default {
-  name: 'DatabaseTwoTone',
+  name: 'IconDatabaseTwoTone',
+  displayName: 'DatabaseTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

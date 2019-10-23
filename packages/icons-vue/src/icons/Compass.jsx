@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CompassOutlineSvg from '@ant-design/icons-svg/lib/outline/CompassOutline';
 
 export default {
-  name: 'Compass',
+  name: 'IconCompass',
+  displayName: 'Compass',
   functional: true,
   render: (h, { data, children }) =>
     h(

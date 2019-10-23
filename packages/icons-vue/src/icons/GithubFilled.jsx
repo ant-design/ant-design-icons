@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import GithubFillSvg from '@ant-design/icons-svg/lib/fill/GithubFill';
 
 export default {
-  name: 'GithubFilled',
+  name: 'IconGithubFilled',
+  displayName: 'GithubFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

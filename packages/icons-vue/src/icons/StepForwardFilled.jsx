@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import StepForwardFillSvg from '@ant-design/icons-svg/lib/fill/StepForwardFill';
 
 export default {
-  name: 'StepForwardFilled',
+  name: 'IconStepForwardFilled',
+  displayName: 'StepForwardFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

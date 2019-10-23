@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AmazonSquareFillSvg from '@ant-design/icons-svg/lib/fill/AmazonSquareFill';
 
 export default {
-  name: 'AmazonSquareFilled',
+  name: 'IconAmazonSquareFilled',
+  displayName: 'AmazonSquareFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

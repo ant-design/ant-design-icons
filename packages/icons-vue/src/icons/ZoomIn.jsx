@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ZoomInOutlineSvg from '@ant-design/icons-svg/lib/outline/ZoomInOutline';
 
 export default {
-  name: 'ZoomIn',
+  name: 'IconZoomIn',
+  displayName: 'ZoomIn',
   functional: true,
   render: (h, { data, children }) =>
     h(

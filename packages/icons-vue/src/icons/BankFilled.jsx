@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import BankFillSvg from '@ant-design/icons-svg/lib/fill/BankFill';
 
 export default {
-  name: 'BankFilled',
+  name: 'IconBankFilled',
+  displayName: 'BankFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

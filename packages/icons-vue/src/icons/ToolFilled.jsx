@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ToolFillSvg from '@ant-design/icons-svg/lib/fill/ToolFill';
 
 export default {
-  name: 'ToolFilled',
+  name: 'IconToolFilled',
+  displayName: 'ToolFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MobileTwoToneSvg from '@ant-design/icons-svg/lib/twotone/MobileTwoTone';
 
 export default {
-  name: 'MobileTwoTone',
+  name: 'IconMobileTwoTone',
+  displayName: 'MobileTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

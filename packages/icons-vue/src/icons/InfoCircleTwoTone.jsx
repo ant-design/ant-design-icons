@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import InfoCircleTwoToneSvg from '@ant-design/icons-svg/lib/twotone/InfoCircleTwoTone';
 
 export default {
-  name: 'InfoCircleTwoTone',
+  name: 'IconInfoCircleTwoTone',
+  displayName: 'InfoCircleTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

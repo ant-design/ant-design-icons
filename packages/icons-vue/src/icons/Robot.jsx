@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RobotOutlineSvg from '@ant-design/icons-svg/lib/outline/RobotOutline';
 
 export default {
-  name: 'Robot',
+  name: 'IconRobot',
+  displayName: 'Robot',
   functional: true,
   render: (h, { data, children }) =>
     h(

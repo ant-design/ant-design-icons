@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import ArrowLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/ArrowLeftOutline';
 
 export default {
-  name: 'ArrowLeft',
+  name: 'IconArrowLeft',
+  displayName: 'ArrowLeft',
   functional: true,
   render: (h, { data, children }) =>
     h(

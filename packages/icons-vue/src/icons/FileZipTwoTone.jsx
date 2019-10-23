@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FileZipTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FileZipTwoTone';
 
 export default {
-  name: 'FileZipTwoTone',
+  name: 'IconFileZipTwoTone',
+  displayName: 'FileZipTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

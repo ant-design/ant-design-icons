@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import RestTwoToneSvg from '@ant-design/icons-svg/lib/twotone/RestTwoTone';
 
 export default {
-  name: 'RestTwoTone',
+  name: 'IconRestTwoTone',
+  displayName: 'RestTwoTone',
   functional: true,
   render: (h, { data, children }) =>
     h(

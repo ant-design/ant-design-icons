@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import CarryOutFillSvg from '@ant-design/icons-svg/lib/fill/CarryOutFill';
 
 export default {
-  name: 'CarryOutFilled',
+  name: 'IconCarryOutFilled',
+  displayName: 'CarryOutFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

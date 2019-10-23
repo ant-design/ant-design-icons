@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import AlipayCircleFillSvg from '@ant-design/icons-svg/lib/fill/AlipayCircleFill';
 
 export default {
-  name: 'AlipayCircleFilled',
+  name: 'IconAlipayCircleFilled',
+  displayName: 'AlipayCircleFilled',
   functional: true,
   render: (h, { data, children }) =>
     h(

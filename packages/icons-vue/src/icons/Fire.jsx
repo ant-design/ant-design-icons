@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import FireOutlineSvg from '@ant-design/icons-svg/lib/outline/FireOutline';
 
 export default {
-  name: 'Fire',
+  name: 'IconFire',
+  displayName: 'Fire',
   functional: true,
   render: (h, { data, children }) =>
     h(

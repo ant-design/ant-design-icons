@@ -6,7 +6,8 @@ import Icon from '../components/AntdIcon';
 import MenuOutlineSvg from '@ant-design/icons-svg/lib/outline/MenuOutline';
 
 export default {
-  name: 'Menu',
+  name: 'IconMenu',
+  displayName: 'Menu',
   functional: true,
   render: (h, { data, children }) =>
     h(
