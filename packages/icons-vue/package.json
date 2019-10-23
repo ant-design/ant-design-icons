@@ -19,7 +19,7 @@
         "compile": "vc-tools run compile --babel-runtime",
         "test": "cross-env NODE_ENV=test jest --config .jest.js",
         "generate": "node scripts/generateIcons.js",
-        "prepublishOnly": "npm run lint && npm run test && npm run compile && np --no-cleanup --yolo --no-publish --any-branch"
+        "prepublishOnly": "npm run lint && npm run test && npm run compile && np --no-cleanup --yolo --no-publish"
     },
     "files": [
         "es",
