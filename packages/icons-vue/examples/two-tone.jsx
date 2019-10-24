@@ -1,42 +1,28 @@
-import Vue from 'vue'
-import * as icons from '@ant-design/icons/lib/dist';
-import AntdIcon from '../src';
-import './index.less'
+import Vue from 'vue';
+import { setTwoToneColor } from '../src';
+import * as AntdIcons from '../src/icons';
+import './index.less';
 
-const allIcons = icons;
+const allIcons = AntdIcons;
 
-const iconsList = Object.keys(allIcons).map((key) => allIcons[key]);
-const manifest = iconsList
-  .filter((icon) => icon.theme === 'twotone')
-  .map(({name}) => `${name}-twotone`);
-AntdIcon.add(...iconsList);
+const iconsList = Object.keys(allIcons)
+  .map(iconName => allIcons[iconName])
+  .filter(icon => icon.name.includes('TwoTone'));
 
 const AllIconDemo = {
-  data () {
+  data() {
     return {
-      primaryColor: '#1890ff'
-    }
+      primaryColor: '#1890ff',
+    };
   },
   beforeMount() {
-    AntdIcon.setTwoToneColors({
-      primaryColor: this.primaryColor
-    });
+    setTwoToneColor(this.primaryColor);
   },
   methods: {
-    onPrimaryColorChange (e) {
+    onPrimaryColorChange(e) {
       console.log(e.currentTarget.value);
-      AntdIcon.setTwoToneColors({
-        primaryColor: e.currentTarget.value
-      })
-      this.primaryColor = e.currentTarget.value
-    },
-    renderIcons(names) {
-      return names.map((name) => (
-        <div class="card" key={name}>
-          <AntdIcon style={{ fontSize: '16px' }} key={name} type={name} />
-          <p class="name-description">{name}</p>
-        </div>
-      ));
+      setTwoToneColor(e.currentTarget.value);
+      this.primaryColor = e.currentTarget.value;
     },
   },
   render() {
@@ -45,24 +31,25 @@ const AllIconDemo = {
         <h1 style={{ textAlign: 'center' }}>Two Tone</h1>
         <div style={{ textAlign: 'center' }}>
           <h2>Primary Color</h2>
-          <input
-            type={'color'}
-            value={this.primaryColor}
-            onChange={this.onPrimaryColorChange}
-          />
+          <input type={'color'} value={this.primaryColor} onChange={this.onPrimaryColorChange} />
           <span class="text">{this.primaryColor}</span>
         </div>
-        <div class="container">{this.renderIcons(manifest)}</div>
+        <div class="container">
+          {iconsList.map(Component => (
+            <div class="card" key={Component.displayName}>
+              <Component style={{ fontSize: '26px' }} class="test" />
+              <p class="name-description">{Component.displayName}</p>
+            </div>
+          ))}
+        </div>
       </div>
     );
-  }
-}
-
-
+  },
+};
 
 new Vue({
   el: '#__vue-content>div',
-  render(){
-    return <AllIconDemo/>
-  }
-})
+  render() {
+    return <AllIconDemo />;
+  },
+});

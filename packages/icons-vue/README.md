@@ -12,7 +12,6 @@ Ant Design Icons for Vue
 ## Install
 
 ```bash
-yarn add @ant-design/icons
 yarn add @ant-design/icons-vue
 ```
 
@@ -20,37 +19,22 @@ yarn add @ant-design/icons-vue
 
 First, you should add the icons that you need into the library.
 
-```ts
+```js
 import Vue from 'vue'
-import { AntDesignOutline, DashboardOutline, TwitterOutline } from '@ant-design/icons';
-import AntdIcon from '@ant-design/icons-vue';
-AntdIcon.add(AntDesignOutline, DashboardOutline);
-Vue.use(AntdIcon)
+import { Filter } from '@ant-design/icons-vue';
+Vue.component(Filter.name, Filter);
 ```
 
 After that, you can use antd icons in your Vue components as simply as this:
 
 ```jsx
-<antd-icon type="ant-design-o" />
-<antd-icon type="dashboard-o" />
-<antd-icon type={TwitterOutline} />
+<icon-filter />
 ```
 
-```ts
-export interface IconDefinition {
-    name: string;
-    theme: ThemeType;
-    icon: ((primaryColor: string, secondaryColor: string) => AbstractNode) | AbstractNode;
-}
+## Build project
+
+```bash
+npm run generate # Generate files to ./src
+npm run compile # Build library
+npm run test # Runing Test
 ```
-
-| Property | Description | Type | Default |
-| -------- | ----------- | ---- | ------- |
-| type | Type of ant design icon | string \| IconDefinition | - |
-| style | style properties of icon, like fontSize and color | object \| string | - |
-| class | class properties of icon | object \| string | - |
-
-### Events
-| Events Name | Description | Arguments |
-| --- | --- | --- |
-| click | set the handler to handle `click` event | function(e) |

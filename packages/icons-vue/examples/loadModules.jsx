@@ -1,5 +1,18 @@
-import * as icons from '@ant-design/icons';
+import Vue from "vue";
+import * as AntdIcons from "../src/icons";
 
-const allIcons = icons;
+const SimpleDemo = {
+  mounted() {
+    console.log(AntdIcons);
+  },
+  render() {
+    return null;
+  }
+};
 
-console.log(allIcons);
+new Vue({
+  el: "#__vue-content>div",
+  render() {
+    return <SimpleDemo />;
+  }
+});
