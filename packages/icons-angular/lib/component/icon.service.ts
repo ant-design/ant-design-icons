@@ -1,12 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { HttpBackend, HttpClient } from '@angular/common/http';
-import {
-  Inject,
-  Optional,
-  Renderer2,
-  RendererFactory2,
-  SecurityContext
-} from '@angular/core';
+import { Inject, Injectable, Optional, Renderer2, RendererFactory2, SecurityContext } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { of as rxof, Observable, Subject } from 'rxjs';
 import {
@@ -48,6 +42,7 @@ import {
 
 const JSONP_HANDLER_NAME = '__ant_icon_load';
 
+@Injectable()
 export class IconService {
   defaultTheme: ThemeType = 'outline';
 

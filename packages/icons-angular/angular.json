@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/examples",
             "index": "examples/index.html",
             "main": "examples/main.ts",
@@ -38,6 +39,12 @@
           },
           "configurations": {
             "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "examples/environments/environment.ts",
@@ -84,6 +91,11 @@
           "options": {
             "tsConfig": "lib/tsconfig.lib.json",
             "project": "lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "lib/tsconfig.lib.prod.json"
+            }
           }
         },
         "lint": {
@@ -117,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "examples"
+  "defaultProject": "examples",
+  "cli": {
+    "analytics": false
+  }
 }
