@@ -136,7 +136,7 @@ export const useInsertStyles = (styleStr: string = iconStyles) => {
   useEffect(() => {
     if (!cssInjectedFlag) {
       insertCss(styleStr, {
-        prepend: true
+        prepend: true,
       });
       cssInjectedFlag = true;
     }
