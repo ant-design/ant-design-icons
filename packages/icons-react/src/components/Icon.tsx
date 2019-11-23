@@ -65,14 +65,12 @@ const Icon: React.FC<IconComponentProps> = props => {
     'anticon-spin': !!spin,
   });
 
-  let innerNode: React.ReactNode;
   const svgStyle = rotate
     ? {
         msTransform: `rotate(${rotate}deg)`,
         transform: `rotate(${rotate}deg)`,
       }
     : undefined;
-
 
   const innerSvgProps: CustomIconComponentProps = {
     ...svgBaseProps,

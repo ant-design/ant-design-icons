@@ -139,4 +139,4 @@ export const useInsertStyles = (styleStr: string = iconStyles) => {
       cssInjectedFlag = true;
     }
   }, []);
-}
+};
