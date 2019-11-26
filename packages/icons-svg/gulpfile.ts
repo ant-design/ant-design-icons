@@ -5,7 +5,6 @@ import generateLibraryEntry from './tasks/generate/generateLibraryEntry';
 import generateFilledIcons from './tasks/generate/generateFilledIcons';
 import generateOutlinedIcons from './tasks/generate/generateOutlinedIcons';
 import generateTwoToneIcons from './tasks/generate/generateTwoToneIcons';
-import generateIconsListInDocs from './tasks/sideEffects/generateIconsListInDocs';
 
 export default series(
   cleanDirectories,
@@ -15,6 +14,5 @@ export default series(
     generateOutlinedIcons,
     generateTwoToneIcons,
     generateLibraryEntry
-  ),
-  generateIconsListInDocs
+  )
 );
