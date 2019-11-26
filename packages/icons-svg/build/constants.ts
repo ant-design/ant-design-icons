@@ -1,29 +1,13 @@
+// version < antd@3.9
 export const oldIconNames = [
-  'step-backward',
-  'step-forward',
-  'fast-backward',
-  'fast-forward',
-  'forward',
-  'backward',
-  'caret-up',
-  'caret-down',
-  'caret-left',
-  'caret-right',
-  'retweet',
-  'swap-left',
-  'swap-right',
   'loading',
   'loading-3-quarters',
   'coffee',
-  'bars',
   'file-jpg',
   'inbox',
   'shopping-cart',
-  'safety',
   'medium-workmark'
 ];
-
-export const twotoneRE = /twotone/g;
 
 export const twoToneColors = {
   primary: ['#333'],
@@ -38,16 +22,24 @@ export const twoToneIdentifiers = {
 // "{{ }}" or '{{ }}'
 export const vueLikeQuoteInterpolate = /['"]{{([\s\S]+?)}}['"]/g;
 
-export enum ThemeLowerCaseEnum {
-  filled = 'filled',
-  outlined = 'outlined',
-  twotone = 'twotone'
-}
+export const ThemeLowerCaseEnum: {
+  filled: 'filled';
+  outlined: 'outlined';
+  twotone: 'twotone';
+} = {
+  filled: 'filled',
+  outlined: 'outlined',
+  twotone: 'twotone'
+};
 
-export enum ThemeUpperCaseEnum {
-  Filled = 'Filled',
-  Outlined = 'Outlined',
-  TwoTone = 'TwoTone'
-}
+export const ThemeUpperCaseEnum: {
+  Filled: 'Filled';
+  Outlined: 'Outlined';
+  TwoTone: 'TwoTone';
+} = {
+  Filled: 'Filled',
+  Outlined: 'Outlined',
+  TwoTone: 'TwoTone'
+};
 
 export { ThemeType, ThemeTypeUpperCase } from './templates/types';

@@ -10,6 +10,8 @@ import {
 } from './constants';
 import { template } from 'lodash';
 
+let count = 0;
+
 /**
  * focusable: 'false'
  */
@@ -18,8 +20,16 @@ export function iconShouldNotBeFocusable({
   iconName
 }: AbstractNodeAndIconName): AbstractNodeAndIconName {
   if (abstractNode.tag === 'svg') {
-    abstractNode.attrs.focusable = 'false';
+    // make it immutable!
+    abstractNode = {
+      ...abstractNode,
+      attrs: {
+        ...abstractNode.attrs,
+        focusable: 'false'
+      }
+    };
   }
+
   return {
     abstractNode,
     iconName
@@ -38,7 +48,14 @@ export function iconsAfter3Dot9ShouldBeResizeViewbox({
   iconName
 }: AbstractNodeAndIconName): AbstractNodeAndIconName {
   if (abstractNode.tag === 'svg' && !oldIconNames.includes(iconName)) {
-    abstractNode.attrs.viewBox = '64 64 896 896';
+    // make it immutable!
+    abstractNode = {
+      ...abstractNode,
+      attrs: {
+        ...abstractNode.attrs,
+        viewBox: '64 64 896 896'
+      }
+    };
   }
   return {
     abstractNode,
