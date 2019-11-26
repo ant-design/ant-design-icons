@@ -41,7 +41,7 @@ export default function generateIconsListInDocs() {
     content += name + ' | ' + row.join(' | ') + '\n';
   });
 
-  return src('build/templates/list.md')
+  return src('build/templates/list.md.template')
     .pipe(gulpTemplate({ content }, templateSettings))
     .pipe(dest('docs'));
 }
