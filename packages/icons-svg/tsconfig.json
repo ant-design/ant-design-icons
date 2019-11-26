@@ -4,6 +4,8 @@
     "target": "esnext",
     "module": "commonjs",
     "moduleResolution": "node",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "jsx": "preserve"
   }
 }
