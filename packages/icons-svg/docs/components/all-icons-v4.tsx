@@ -1,40 +1,12 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import styled from 'styled-components';
-import * as allIconDefs from '../es';
-import { ThemeType, IconDefinition } from '../es/types';
-import { renderIconDefinitionToSVGElement } from '../es/helpers';
+import * as allIconDefs from '../../es';
+import { ThemeType, IconDefinition } from '../../es/types';
+import { renderIconDefinitionToSVGElement } from '../../es/helpers';
+import { Container, Card, NameDescription } from './commons';
 
 const defsList = Object.keys(allIconDefs).map(
   (iconName) => (allIconDefs as { [key: string]: IconDefinition })[iconName]
 );
-
-const Container = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: auto;
-`;
-
-const Card = styled.div`
-  margin: 8px;
-  width: 16.6666%;
-  text-align: center;
-
-  > div {
-    height: 60px;
-  }
-
-  svg {
-    height: 100%;
-  }
-`;
-
-const NameDescription = styled.p`
-  display: block;
-  text-align: center;
-  font-family: 'Lucida Console', Consolas;
-  word-break: break-all;
-`;
 
 const AllIconsV4: React.FC = () => {
   const [currentTheme, setCurrentTheme] = useState<ThemeType>('outlined');
