@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { AntDesign, Dashboard, Twitter } from '../src';
+import { AntDesignOutlined, DashboardOutlined, TwitterOutlined } from '../src';
 
 const Div = styled.div`
   position: relative;
@@ -44,11 +44,11 @@ export default class SimpleDemo extends React.Component<{}> {
       <Div key={fontSize} style={style}>
         {fontSize}
         Ant Design
-        <AntDesign />
+        <AntDesignOutlined />
         0123
-        <Dashboard />
+        <DashboardOutlined />
         你好
-        <Twitter />
+        <TwitterOutlined />
       </Div>
     );
   }
