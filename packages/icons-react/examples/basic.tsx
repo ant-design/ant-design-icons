@@ -1,17 +1,16 @@
 import * as React from 'react';
-import { Home, SettingFilled } from '../src';
-import { Smile, Sync, Loading } from '../src';
+import { SmileOutlined, SyncOutlined, LoadingOutlined, HomeOutlined, SettingFilled } from '../src';
 
 export default class Basic extends React.Component<{}> {
   render() {
     return (
       <div>
-        <Home />
+        <HomeOutlined />
         <SettingFilled />
-        <Smile />
-        <Sync spin />
-        <Smile rotate={180} />
-        <Loading />
+        <SmileOutlined />
+        <SyncOutlined spin />
+        <SmileOutlined rotate={180} />
+        <LoadingOutlined />
       </div>
     );
   }

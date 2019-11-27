@@ -2,24 +2,25 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import Icon, {
   getTwoToneColor, setTwoToneColor, createFromIconfontCN,
-  Home, SettingFilled, Smile, Sync, Loading, CheckCircleTwoTone, ClockCircle,
+  HomeOutlined, SettingFilled, SmileOutlined, SyncOutlined,
+  LoadingOutlined, CheckCircleTwoTone, ClockCircleOutlined,
 } from '../src';
 import { Tooltip } from 'antd';
 
 describe('Icon', () => {
   it('should render to a <span class="xxx"><svg>...</svg></span>', () => {
-    const wrapper = render(<Home className="my-icon-classname" />);
+    const wrapper = render(<HomeOutlined className="my-icon-classname" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should support basic usage', () => {
     const wrapper = render(
       <div>
-        <Home />
+        <HomeOutlined />
         <SettingFilled />
-        <Smile />
-        <Sync spin />
-        <Loading />
+        <SmileOutlined />
+        <SyncOutlined spin />
+        <LoadingOutlined />
       </div>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -62,7 +63,7 @@ describe('Icon', () => {
         mouseLeaveDelay={0}
         onVisibleChange={onVisibleChange}
       >
-        <Home />
+        <HomeOutlined />
       </Tooltip>,
     );
     expect(wrapper.find('span')).toHaveLength(1);
@@ -102,7 +103,7 @@ describe('Icon', () => {
     });
 
     it('does not warn', () => {
-      mount(<ClockCircle />);
+      mount(<ClockCircleOutlined />);
       expect(errorSpy).not.toHaveBeenCalled();
     });
   });

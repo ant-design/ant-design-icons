@@ -15,7 +15,7 @@ const Container = styled.div`
 const Card = styled.div`
   height: 90px;
   margin: 12px 0 16px;
-  width: 16.6666%;
+  width: 20%;
   text-align: center;
 `;
 
