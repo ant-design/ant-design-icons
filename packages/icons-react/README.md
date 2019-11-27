@@ -20,8 +20,8 @@ yarn add @ant-design/icons@4.0.0
 You can import it directly or destructure from `@ant-design/icons` when tree-shaking enabled.
 
 ```ts
-import Smile from '@ant-design/icons/Smile';
-import { Smile } from '@ant-design/icons';
+import SmileOutlined from '@ant-design/icons/SmileOutlined';
+import { SmileOutlined } from '@ant-design/icons';
 
 import SmileFilled from '@ant-design/icons/SmileFilled';
 import SmileTwoTone from '@ant-design/icons/SmileTwoTone';
