@@ -16,6 +16,9 @@ for (const theme of ['filled', 'outlined', 'twotone']) {
 
 fs.writeFileSync(
   path.resolve(__dirname, './digest.txt'),
-  list.map(({ name, theme }) => `${name}-${theme}`).join('\n'),
+  list
+    .map(({ name, theme }) => `${name}-${theme}`)
+    .sort()
+    .join('\n'),
   'utf8'
 );
