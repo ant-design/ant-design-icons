@@ -99,9 +99,13 @@ camera-twotone
 car-filled
 car-outlined
 car-twotone
+caret-down-filled
 caret-down-outlined
+caret-left-filled
 caret-left-outlined
+caret-right-filled
 caret-right-outlined
+caret-up-filled
 caret-up-outlined
 carry-out-filled
 carry-out-outlined
@@ -355,6 +359,7 @@ gif-outlined
 gift-filled
 gift-outlined
 gift-twotone
+github-filled
 github-outlined
 gitlab-filled
 gitlab-outlined
