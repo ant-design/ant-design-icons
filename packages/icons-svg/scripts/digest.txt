@@ -38,6 +38,7 @@ arrow-down-outlined
 arrow-left-outlined
 arrow-right-outlined
 arrow-up-outlined
+arrows-alt-outlined
 audio-filled
 audio-muted-outlined
 audio-outlined
@@ -122,6 +123,8 @@ chrome-outlined
 ci-circle-filled
 ci-circle-outlined
 ci-circle-twotone
+ci-outlined
+ci-twotone
 clear-outlined
 clock-circle-filled
 clock-circle-outlined
@@ -176,6 +179,8 @@ copy-twotone
 copyright-circle-filled
 copyright-circle-outlined
 copyright-circle-twotone
+copyright-outlined
+copyright-twotone
 credit-card-filled
 credit-card-outlined
 credit-card-twotone
@@ -203,6 +208,7 @@ desktop-outlined
 diff-filled
 diff-outlined
 diff-twotone
+dingding-outlined
 dingtalk-circle-filled
 dingtalk-outlined
 dingtalk-square-filled
@@ -213,6 +219,8 @@ dislike-twotone
 dollar-circle-filled
 dollar-circle-outlined
 dollar-circle-twotone
+dollar-outlined
+dollar-twotone
 dot-chart-outlined
 double-left-outlined
 double-right-outlined
@@ -243,6 +251,8 @@ environment-twotone
 euro-circle-filled
 euro-circle-outlined
 euro-circle-twotone
+euro-outlined
+euro-twotone
 exception-outlined
 exclamation-circle-filled
 exclamation-circle-outlined
@@ -367,6 +377,7 @@ global-outlined
 gold-filled
 gold-outlined
 gold-twotone
+golden-filled
 google-circle-filled
 google-outlined
 google-plus-circle-filled
@@ -532,6 +543,7 @@ plus-square-twotone
 pound-circle-filled
 pound-circle-outlined
 pound-circle-twotone
+pound-outlined
 poweroff-outlined
 printer-filled
 printer-outlined
@@ -703,6 +715,7 @@ tool-twotone
 trademark-circle-filled
 trademark-circle-outlined
 trademark-circle-twotone
+trademark-outlined
 transaction-outlined
 translation-outlined
 trophy-filled
