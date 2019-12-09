@@ -155,7 +155,6 @@ codepen-circle-outlined
 codepen-outlined
 codepen-square-filled
 coffee-outlined
-colum-height-outlined
 column-height-outlined
 column-width-outlined
 comment-outlined
