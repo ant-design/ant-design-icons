@@ -30,5 +30,9 @@ inline-svg
 es
 lib
 
+# docz
+.docz
+docz-dist
+
 # publish
 *.tgz

@@ -3,7 +3,6 @@ import svgo from '../../plugins/svgo';
 import {
   getIdentifier,
   getSrcByTheme,
-  getDocsInlinePathByTheme,
   getInlinePathByTheme
 } from '../../build/helpers';
 import merge from 'merge-stream';
@@ -43,16 +42,6 @@ export default function generateFilledIcons(): NodeJS.ReadWriteStream {
     );
 
   return merge(
-    iconDefinitionStream
-      .pipe(clone())
-      .pipe(
-        inlineSVG({
-          extraSVGAttrs: {
-            xmlns: 'http://www.w3.org/2000/svg'
-          }
-        })
-      )
-      .pipe(dest(getDocsInlinePathByTheme(filled))),
     iconDefinitionStream
       .pipe(clone())
       .pipe(inlineSVG())
