@@ -12,7 +12,9 @@ function walk<T>(
   fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>,
 ) {
   return Promise.all(
-    Object.keys(allIconDefs).map(svgIdentifier => {
+    Object.keys(allIconDefs)
+      .sort() // sort imports
+      .map(svgIdentifier => {
       const iconDef = (allIconDefs as { [id: string]: IconDefinition })[
         svgIdentifier
       ];
