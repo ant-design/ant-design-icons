@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React AntdIcon Component should create SVG element. 1`] = `
+<IconReact
+  className="my-icon"
+  extraProps={
+    Object {
+      "hello": "world",
+    }
+  }
+  style={
+    Object {
+      "fontSize": "3rem",
+    }
+  }
+/>
+`;

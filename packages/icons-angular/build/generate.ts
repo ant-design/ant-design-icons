@@ -136,6 +136,27 @@ export async function build(env: Environment): Promise<Subscription> {
     })
   );
 
+  const jsonpFiles$ = BuildTimeIconMetaData$.pipe(
+    map<BuildTimeIconMetaData, WriteFileMetaData>(({ icon }) => {
+      return {
+        path: path.resolve(
+          env.paths.INLINE_SVG_OUTPUT_DIR,
+          icon.theme,
+          `./${icon.name}.js`
+        ),
+        content: Prettier.format(`
+          (function() {
+            __ant_icon_load({
+              name: '${icon.name}',
+              theme: '${icon.theme}',
+              icon: '${icon.icon}'
+            });
+          })()
+        `, { ...env.options.prettier, parser: 'typescript' })
+      };
+    })
+  );
+
   // Icon files content flow.
   const iconTsTemplate = await fs.readFile(env.paths.ICON_TEMPLATE, 'utf8');
   const iconFiles$ = BuildTimeIconMetaData$.pipe(
@@ -236,7 +257,8 @@ export async function build(env: Environment): Promise<Subscription> {
     concat(inlineSVGFiles$),
     concat(manifestFile$),
     concat(indexFile$),
-    concat(types$)
+    concat(types$),
+    concat(jsonpFiles$)
   );
 
   return new Promise<Subscription>((resolve, reject) => {

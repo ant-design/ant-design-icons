@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons",
-  "version": "4.0.0-alpha.8",
+  "version": "4.0.0-alpha.11",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
@@ -20,7 +20,7 @@
     "compile": "father build",
     "test": "father test",
     "prepublishOnly": "npm run lint && npm run test && npm run generate && npm run compile && np --no-cleanup --yolo --no-publish",
-    "generate": "rm -rf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
+    "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
     "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry"
   },
   "peerDependencies": {
@@ -32,22 +32,21 @@
     "@types/insert-css": "^2.0.0",
     "@types/jest": "^24.0.17",
     "@types/lodash": "^4.14.136",
-    "@types/node": "^10.5.5",
+    "@types/node": "^12.7.2",
     "@types/react": "^16.4.12",
     "@types/react-dom": "^16.0.6",
     "antd": "^3.20.7",
-    "babel-core": "^6.26.3",
     "cross-env": "^5.2.0",
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",
-    "father": "^2.14.0",
+    "father": "^2.16.0",
     "lodash": "^4.17.15",
     "mobx": "^5.1.0",
-    "mobx-react": "^5.2.5",
+    "mobx-react": "^6.1.3",
     "np": "^5.0.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "rimraf": "^3.0.0",
     "styled-components": "^3.3.3",
     "ts-node": "^8.3.0",
     "typescript": "^3.0.3"
@@ -55,18 +54,9 @@
   "dependencies": {
     "@ant-design/colors": "^3.1.0",
     "@ant-design/icons-svg": "^4.0.0-alpha.0",
-    "babel-runtime": "^6.26.0",
     "classnames": "^2.2.6",
     "insert-css": "^2.0.0",
     "rc-util": "^4.9.0"
-  },
-  "config": {
-    "port": 9527,
-    "entry": {
-      "@ant-design/icons": [
-        "./src/index.ts"
-      ]
-    }
   },
   "gitHead": "225d4d2189720ee3b7e4a4d7a6d80e076fa15cbc"
 }
