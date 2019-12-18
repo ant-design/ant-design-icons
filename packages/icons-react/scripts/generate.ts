@@ -6,25 +6,19 @@ import { template } from 'lodash';
 
 interface IconDefinitionWithIdentifier extends IconDefinition {
   svgIdentifier: string;
-  componentIdentifier: string;
 }
 
 function walk<T>(
-  fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>
+  fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>,
 ) {
   return Promise.all(
-    Object.keys(allIconDefs).map((svgIdentifier) => {
+    Object.keys(allIconDefs).map(svgIdentifier => {
       const iconDef = (allIconDefs as { [id: string]: IconDefinition })[
         svgIdentifier
       ];
 
-      // It will be better if an react antd icon component has theme suffix.
-      // or use outline as default theme like this:
-      const componentIdentifier = svgIdentifier
-        .replace(/Outlined$/, '');
-
-      return fn({ svgIdentifier, componentIdentifier, ...iconDef });
-    })
+      return fn({ svgIdentifier, ...iconDef });
+    }),
   );
 }
 
@@ -41,27 +35,24 @@ async function generateIcons() {
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import <%= componentIdentifier %>Svg from '@ant-design/icons-svg/es/asn/<%= svgIdentifier %>';
+import <%= svgIdentifier %>Svg from '@ant-design/icons-svg/es/asn/<%= svgIdentifier %>';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const <%= componentIdentifier %> = (props: AntdIconProps) => <AntdIcon {...props} icon={<%= componentIdentifier %>Svg} />;
-export default <%= componentIdentifier %>;
+const <%= svgIdentifier %> = (props: AntdIconProps) => <AntdIcon {...props} icon={<%= svgIdentifier %>Svg} />;
+export default <%= svgIdentifier %>;
 `.trim());
 
-  await walk(async ({ svgIdentifier, componentIdentifier }) => {
+  await walk(async ({ svgIdentifier }) => {
     // generate icon file
     await fsPromises.writeFile(
-      path.resolve(__dirname, `../src/icons/${componentIdentifier}.tsx`),
-      render({
-        svgIdentifier,
-        componentIdentifier
-      }),
+      path.resolve(__dirname, `../src/icons/${svgIdentifier}.tsx`),
+      render({ svgIdentifier }),
     );
 
     // generate icon index
     await fsPromises.appendFile(
       path.resolve(__dirname, '../src/icons/index.tsx'),
-      `export { default as ${componentIdentifier} } from './${componentIdentifier}';\n`,
+      `export { default as ${svgIdentifier} } from './${svgIdentifier}';\n`,
     );
   });
 }
@@ -83,19 +74,19 @@ async function generateEntries() {
   module.exports = _default;
 `.trim());
 
-  await walk(async ({ componentIdentifier }) => {
+  await walk(async ({ svgIdentifier }) => {
     // generate `Icon.js` in root folder
     await fsPromises.writeFile(
-      path.resolve(__dirname, `../${componentIdentifier}.js`),
+      path.resolve(__dirname, `../${svgIdentifier}.js`),
       render({
-        componentIdentifier
+        svgIdentifier
       }),
     );
 
     // generate `Icon.d.ts` in root folder
     await fsPromises.writeFile(
-      path.resolve(__dirname, `../${componentIdentifier}.d.ts`),
-      `export { default } from './lib/icons/${componentIdentifier}';`,
+      path.resolve(__dirname, `../${svgIdentifier}.d.ts`),
+      `export { default } from './lib/icons/${svgIdentifier}';`,
     );
   });
 }
