@@ -21,8 +21,8 @@ export function getSecondaryColor(primaryColor: string): string {
 
 export function withSuffix(name: string, theme: ThemeType | undefined): string {
   switch (theme) {
-    case 'filled': return `${name}-filled`;
-    case 'outlined': return `${name}-o`;
+    case 'fill': return `${name}-fill`;
+    case 'outline': return `${name}-o`;
     case 'twotone': return `${name}-twotone`;
     case undefined: return name;
     default: throw new Error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}Theme "${theme}" is not a recognized theme!`);
@@ -34,7 +34,7 @@ export function withSuffixAndColor(name: string, theme: ThemeType, pri: string, 
 }
 
 export function mapAbbrToTheme(abbr: string): ThemeType {
-  return abbr === 'o' ? 'outlined' : abbr as ThemeType;
+  return abbr === 'o' ? 'outline' : abbr as ThemeType;
 }
 
 export function alreadyHasAThemeSuffix(name: string): boolean {

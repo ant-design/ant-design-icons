@@ -1,9 +1,11 @@
 import * as allIconDefs from '@ant-design/icons-svg';
-import { IconDefinition } from '@ant-design/icons-svg/es/types';
+import { IconDefinition, ThemeType } from '@ant-design/icons-svg/es/types';
 import { renderIconDefinitionToSVGElement } from '@ant-design/icons-svg/lib/helpers';
 import { promises as fsPromises } from 'fs';
 import { template } from 'lodash';
 import * as path from 'path';
+
+export type AngularTheme = 'fill' | 'outline' | 'twotone';
 
 interface IconDefinitionWithIdentifier extends IconDefinition {
   svgIdentifier: string;
@@ -21,8 +23,17 @@ function walk<T>(fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>) {
   );
 }
 
+/**
+ * There's a breaking of the underlying dependency but Angular don't have to
+ * break too.
+ * @param name theme
+ */
+function adaptTheme(name: string): string {
+  return name.replace(/illed$/, 'ill').replace(/utlined$/, 'utline');
+}
+
 async function generateIcons() {
-  const iconsDir = path.join(__dirname, '../lib/icons');
+  const iconsDir = path.join(__dirname, '../src/icons');
   try {
     await fsPromises.access(iconsDir);
   } catch {
@@ -43,23 +54,23 @@ async function generateIcons() {
 import { Manifest } from './types';
 
 export const manifest: Manifest = {
-  filled: [
-    <%= filled %>
+  fill: [
+    <%= fill %>
   ],
-  outlined: [
-    <%= outlined %>
+  outline: [
+    <%= outline %>
   ],
   twotone: [
     <%= twotone %>
   ]
 }`);
   const manifestContent: {
-    filled: string[];
-    outlined: string[];
+    fill: string[];
+    outline: string[];
     twotone: string[];
   } = {
-    filled: [],
-    outlined: [],
+    fill: [],
+    outline: [],
     twotone: []
   };
 
@@ -97,42 +108,43 @@ export const <%= svgIdentifier %>: IconDefinition = {
   await walk(async ({ svgIdentifier, name, theme, icon }) => {
     const inlineIcon = renderIconDefinitionToSVGElement({ name, theme, icon });
 
+    svgIdentifier = adaptTheme(svgIdentifier);
+
+    const _theme = adaptTheme(theme) as AngularTheme;
+
     // Generate static loading resources.
     await fsPromises.writeFile(
-      path.resolve(__dirname, `../lib/icons/${theme}/${svgIdentifier}.ts`),
-      staicFileRender({ svgIdentifier, name, theme, inlineIcon })
+      path.resolve(__dirname, `../src/icons/${_theme}/${svgIdentifier}.ts`),
+      staicFileRender({ svgIdentifier, name, theme: _theme, inlineIcon })
     );
 
     await fsPromises.writeFile(
-      path.resolve(
-        __dirname,
-        `../lib/inline-svg/${theme}/${name}.svg`
-      ),
+      path.resolve(__dirname, `../src/inline-svg/${_theme}/${name}.svg`),
       svgRender({ inlineIcon })
     );
 
     await fsPromises.writeFile(
-      path.resolve(__dirname, `../lib/inline-svg/${theme}/${name}.js`),
-      jsonpRender({ name, theme, inlineIcon })
+      path.resolve(__dirname, `../src/inline-svg/${_theme}/${name}.js`),
+      jsonpRender({ name, theme: _theme, inlineIcon })
     );
 
     indexContent.push(
-      `export { ${svgIdentifier} } from './${theme}/${svgIdentifier}';`
+      `export { ${svgIdentifier} } from './${_theme}/${svgIdentifier}';`
     );
 
-    manifestContent[theme].push(`'${name}'`);
+    manifestContent[_theme].push(`'${name}'`);
   });
 
   await fsPromises.writeFile(
-    path.resolve(__dirname, `../lib/icons/public_api.ts`),
+    path.resolve(__dirname, `../src/icons/public_api.ts`),
     indexRender({ content: indexContent.join('\n') })
   );
 
   await fsPromises.writeFile(
-    path.resolve(__dirname, `../lib/manifest.ts`),
+    path.resolve(__dirname, `../src/manifest.ts`),
     manifestRender({
-      filled: manifestContent.filled.join(', '),
-      outlined: manifestContent.outlined.join(', '),
+      fill: manifestContent.fill.join(', '),
+      outline: manifestContent.outline.join(', '),
       twotone: manifestContent.twotone.join(', ')
     })
   );

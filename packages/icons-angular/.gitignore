@@ -26,16 +26,16 @@ dist/
 
 src/manifest.ts
 
-src/icons/filled/*.ts
-src/icons/outlined/*.ts
+src/icons/fill/*.ts
+src/icons/outline/*.ts
 src/icons/twotone/*.ts
 src/icons/public_api.ts
 
-src/inline-svg/filled/*.svg
-src/inline-svg/outlined/*.svg
+src/inline-svg/fill/*.svg
+src/inline-svg/outline/*.svg
 src/inline-svg/twotone/*.svg
-src/inline-svg/filled/*.js
-src/inline-svg/outlined/*.js
+src/inline-svg/fill/*.js
+src/inline-svg/outline/*.js
 src/inline-svg/twotone/*.js
 
 # publish
