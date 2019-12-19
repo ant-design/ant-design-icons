@@ -12,7 +12,8 @@ function walk<T>(
   fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>,
 ) {
   return Promise.all(
-    Object.keys(allIconDefs).map(svgIdentifier => {
+    Object.keys(allIconDefs)
+      .map(svgIdentifier => {
       const iconDef = (allIconDefs as { [id: string]: IconDefinition })[
         svgIdentifier
       ];
@@ -48,13 +49,22 @@ export default <%= svgIdentifier %>;
       path.resolve(__dirname, `../src/icons/${svgIdentifier}.tsx`),
       render({ svgIdentifier }),
     );
-
-    // generate icon index
-    await fsPromises.appendFile(
-      path.resolve(__dirname, '../src/icons/index.tsx'),
-      `export { default as ${svgIdentifier} } from './${svgIdentifier}';\n`,
-    );
   });
+
+  // generate icon index
+  const entryText = Object.keys(allIconDefs)
+    .map(svgIdentifier => {
+      return `export { default as ${svgIdentifier} } from './${svgIdentifier}';`;
+    })
+    .join('\n');
+
+  await fsPromises.appendFile(
+    path.resolve(__dirname, '../src/icons/index.tsx'),
+    `
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+    `.trim() + '\n' + entryText,
+  );
 }
 
 async function generateEntries() {
