@@ -17,10 +17,10 @@
     ],
     "paths": {
       "@ant-design/icons-angular": [
-        "lib/public_api"
+        "src/public_api"
       ],
       "@ant-design/icons-angular/icons": [
-        "lib/icons/public_api"
+        "src/icons/public_api"
       ]
     }
   }

@@ -9,15 +9,14 @@
     "build": "ng build --prod",
     "build:lib": "npm run generate && ng build ant-design-icons-angular --prod && npm run copy:assets",
     "generate": "cross-env TS_NODE_PROJECT=scripts/tsconfig.json node --require ts-node/register scripts/generate.ts",
-    "copy:assets": "cross-env node --require ts-node/register build/copy.ts"
+    "copy:assets": "cross-env node --require ts-node/register scripts/copy.ts"
   },
   "license": "MIT",
   "private": true,
   "dependencies": {
     "@ant-design/colors": "^3.1.0",
     "@angular/common": "^9.0.0-rc.3",
-    "@angular/core": "^9.0.0-rc.3",
-    "tslib": "^1.10.0"
+    "@angular/core": "^9.0.0-rc.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.0-rc.2",
