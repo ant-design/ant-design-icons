@@ -124,7 +124,7 @@ export const <%= svgIdentifier %>: IconDefinition = {
   });
 
   await fsPromises.writeFile(
-    path.resolve(__dirname, `../lib/icons/index.ts`),
+    path.resolve(__dirname, `../lib/icons/public_api.ts`),
     indexRender({ content: indexContent.join('\n') })
   );
 
