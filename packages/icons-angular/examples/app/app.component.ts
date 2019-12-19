@@ -18,7 +18,7 @@ import { manifest, IconService, Manifest, ThemeType } from '@ant-design/icons-an
   styleUrls  : [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
-  currentTheme: ThemeType = 'fill';
+  currentTheme: ThemeType = 'filled';
   names: Manifest = manifest;
   icons: string[] = [];
 

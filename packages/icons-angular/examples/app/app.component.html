@@ -5,8 +5,8 @@
 <p>
   With 3 themes&nbsp;
   <select [(ngModel)]="currentTheme" (change)="changeIcons()">
-    <option value='fill'>Fill</option>
-    <option value='outline'>Outline</option>
+    <option value='filled'>Filled</option>
+    <option value='outlined'>Outlined</option>
     <option value='twotone'>Two Tone</option>
   </select>
 </p>
@@ -17,7 +17,7 @@
 
 <!-- To test `share` dynamic importing.  -->
 
-<ng-container *ngIf="currentTheme === 'fill'">
+<ng-container *ngIf="currentTheme === 'filled'">
   <h2>With Namespace</h2>
   <i antIcon [type]="'animal:panda'"></i>
   <i antIcon [type]="'animal:panda'"></i>

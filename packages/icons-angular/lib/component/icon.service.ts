@@ -44,7 +44,7 @@ const JSONP_HANDLER_NAME = '__ant_icon_load';
 
 @Injectable()
 export class IconService {
-  defaultTheme: ThemeType = 'outline';
+  defaultTheme: ThemeType = 'outlined';
 
   set twoToneColor({
     primaryColor,

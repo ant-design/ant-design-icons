@@ -5,11 +5,11 @@ export interface IconDefinition {
 }
 
 // svg folder names
-export type ThemeType = 'fill' | 'outline' | 'twotone';
+export type ThemeType = 'filled' | 'outlined' | 'twotone';
 
 export interface Manifest {
-  fill: string[];
-  outline: string[];
+  filled: string[];
+  outlined: string[];
   twotone: string[];
 }
 
