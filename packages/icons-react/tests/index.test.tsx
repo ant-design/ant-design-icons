@@ -36,6 +36,8 @@ describe('Icon', () => {
   });
 
   it('should support config global two-tone primary color', () => {
+    expect(typeof getTwoToneColor()).toBe('string');
+
     setTwoToneColor('#1890ff');
     expect(getTwoToneColor()).toBe('#1890ff');
     let wrapper = render(<CheckCircleTwoTone />);
