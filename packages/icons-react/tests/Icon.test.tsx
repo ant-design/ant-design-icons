@@ -1,4 +1,4 @@
-import { TwitterOutline } from '@ant-design/icons-svg';
+import { TwitterOutlined } from '@ant-design/icons-svg';
 import * as React from 'react';
 import { mount } from 'enzyme';
 import Icon from '../src/components/IconBase';
@@ -7,20 +7,20 @@ describe('React AntdIcon Component', () => {
   it('should create SVG element.', () => {
     const props = {
       style: {
-        fontSize: '3rem'
+        fontSize: '3rem',
       },
       className: 'my-icon',
-      extraProps: { hello: 'world' }
+      extraProps: { hello: 'world' },
     } as any;
     const icon = mount(
-      <Icon {...props} />
+      <Icon {...props} />,
     );
 
     expect(icon).toMatchSnapshot();
   });
 
   it('should allow explicit import.', () => {
-    const icon = mount(<Icon icon={TwitterOutline} />);
+    const icon = mount(<Icon icon={TwitterOutlined} />);
     expect(typeof icon.find('path').first().prop('d')).toBe('string');
   });
 

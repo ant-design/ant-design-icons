@@ -1,3 +1,4 @@
+import { Tooltip } from 'antd';
 import React from 'react';
 import { render, mount } from 'enzyme';
 import Icon, {
@@ -5,7 +6,6 @@ import Icon, {
   HomeOutlined, SettingFilled, SmileOutlined, SyncOutlined,
   LoadingOutlined, CheckCircleTwoTone, ClockCircleOutlined,
 } from '../src';
-import { Tooltip } from 'antd';
 
 describe('Icon', () => {
   it('should render to a <span class="xxx"><svg>...</svg></span>', () => {
@@ -173,4 +173,3 @@ describe('Icon.createFromIconfontCN()', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
-
