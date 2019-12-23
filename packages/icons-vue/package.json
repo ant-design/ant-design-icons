@@ -35,7 +35,7 @@
   "devDependencies": {
     "@ant-design/icons": "^2.0.0",
     "@types/jest": "^24.0.17",
-    "@types/node": "^10.5.5",
+    "@types/node": "^12.12.21",
     "@types/vue": "^2.0.0",
     "@vue/server-test-utils": "1.0.0-beta.16",
     "@vue/test-utils": "1.0.0-beta.16",
