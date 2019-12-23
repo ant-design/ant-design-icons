@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import FireFillSvg from '@ant-design/icons-svg/lib/fill/FireFill';
+
+import React from 'react'
+import FireFilledSvg from '@ant-design/icons-svg/es/asn/FireFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FireFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FireFillSvg} />;
+const FireFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FireFilledSvg} />;
 export default FireFilled;

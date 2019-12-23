@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import LayoutOutlineSvg from '@ant-design/icons-svg/lib/outline/LayoutOutline';
+
+import React from 'react'
+import LayoutOutlinedSvg from '@ant-design/icons-svg/es/asn/LayoutOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const LayoutOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={LayoutOutlineSvg} />;
+const LayoutOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={LayoutOutlinedSvg} />;
 export default LayoutOutlined;

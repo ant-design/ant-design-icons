@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ShareAltOutlineSvg from '@ant-design/icons-svg/lib/outline/ShareAltOutline';
+
+import React from 'react'
+import ShareAltOutlinedSvg from '@ant-design/icons-svg/es/asn/ShareAltOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ShareAltOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ShareAltOutlineSvg} />;
+const ShareAltOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ShareAltOutlinedSvg} />;
 export default ShareAltOutlined;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import MailOutlineSvg from '@ant-design/icons-svg/lib/outline/MailOutline';
+
+import React from 'react'
+import MailOutlinedSvg from '@ant-design/icons-svg/es/asn/MailOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MailOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={MailOutlineSvg} />;
+const MailOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={MailOutlinedSvg} />;
 export default MailOutlined;

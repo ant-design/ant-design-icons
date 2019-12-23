@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import SelectOutlineSvg from '@ant-design/icons-svg/lib/outline/SelectOutline';
+
+import React from 'react'
+import SelectOutlinedSvg from '@ant-design/icons-svg/es/asn/SelectOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SelectOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={SelectOutlineSvg} />;
+const SelectOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={SelectOutlinedSvg} />;
 export default SelectOutlined;

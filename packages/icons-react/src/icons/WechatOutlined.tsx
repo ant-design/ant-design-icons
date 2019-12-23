@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import WechatOutlineSvg from '@ant-design/icons-svg/lib/outline/WechatOutline';
+
+import React from 'react'
+import WechatOutlinedSvg from '@ant-design/icons-svg/es/asn/WechatOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const WechatOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={WechatOutlineSvg} />;
+const WechatOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={WechatOutlinedSvg} />;
 export default WechatOutlined;

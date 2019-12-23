@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import BlockOutlineSvg from '@ant-design/icons-svg/lib/outline/BlockOutline';
+
+import React from 'react'
+import BlockOutlinedSvg from '@ant-design/icons-svg/es/asn/BlockOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BlockOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BlockOutlineSvg} />;
+const BlockOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BlockOutlinedSvg} />;
 export default BlockOutlined;

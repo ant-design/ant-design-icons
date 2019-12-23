@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import ArrowRightOutlineSvg from '@ant-design/icons-svg/lib/outline/ArrowRightOutline';
+
+import React from 'react'
+import ArrowRightOutlinedSvg from '@ant-design/icons-svg/es/asn/ArrowRightOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ArrowRightOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ArrowRightOutlineSvg} />;
+const ArrowRightOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ArrowRightOutlinedSvg} />;
 export default ArrowRightOutlined;

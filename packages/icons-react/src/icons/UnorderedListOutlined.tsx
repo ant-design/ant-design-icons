@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import UnorderedListOutlineSvg from '@ant-design/icons-svg/lib/outline/UnorderedListOutline';
+
+import React from 'react'
+import UnorderedListOutlinedSvg from '@ant-design/icons-svg/es/asn/UnorderedListOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const UnorderedListOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={UnorderedListOutlineSvg} />;
+const UnorderedListOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={UnorderedListOutlinedSvg} />;
 export default UnorderedListOutlined;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import HddFillSvg from '@ant-design/icons-svg/lib/fill/HddFill';
+
+import React from 'react'
+import HddFilledSvg from '@ant-design/icons-svg/es/asn/HddFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const HddFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={HddFillSvg} />;
+const HddFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={HddFilledSvg} />;
 export default HddFilled;

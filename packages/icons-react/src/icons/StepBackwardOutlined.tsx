@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import StepBackwardOutlineSvg from '@ant-design/icons-svg/lib/outline/StepBackwardOutline';
+
+import React from 'react'
+import StepBackwardOutlinedSvg from '@ant-design/icons-svg/es/asn/StepBackwardOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const StepBackwardOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={StepBackwardOutlineSvg} />;
+const StepBackwardOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={StepBackwardOutlinedSvg} />;
 export default StepBackwardOutlined;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import HourglassOutlineSvg from '@ant-design/icons-svg/lib/outline/HourglassOutline';
+
+import React from 'react'
+import HourglassOutlinedSvg from '@ant-design/icons-svg/es/asn/HourglassOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const HourglassOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={HourglassOutlineSvg} />;
+const HourglassOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={HourglassOutlinedSvg} />;
 export default HourglassOutlined;

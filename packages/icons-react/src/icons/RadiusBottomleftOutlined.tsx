@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import RadiusBottomleftOutlineSvg from '@ant-design/icons-svg/lib/outline/RadiusBottomleftOutline';
+
+import React from 'react'
+import RadiusBottomleftOutlinedSvg from '@ant-design/icons-svg/es/asn/RadiusBottomleftOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RadiusBottomleftOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={RadiusBottomleftOutlineSvg} />;
+const RadiusBottomleftOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={RadiusBottomleftOutlinedSvg} />;
 export default RadiusBottomleftOutlined;

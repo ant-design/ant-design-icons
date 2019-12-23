@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import TableOutlineSvg from '@ant-design/icons-svg/lib/outline/TableOutline';
+
+import React from 'react'
+import TableOutlinedSvg from '@ant-design/icons-svg/es/asn/TableOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TableOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={TableOutlineSvg} />;
+const TableOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={TableOutlinedSvg} />;
 export default TableOutlined;

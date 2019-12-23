@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import MinusCircleFillSvg from '@ant-design/icons-svg/lib/fill/MinusCircleFill';
+
+import React from 'react'
+import MinusCircleFilledSvg from '@ant-design/icons-svg/es/asn/MinusCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MinusCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MinusCircleFillSvg} />;
+const MinusCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MinusCircleFilledSvg} />;
 export default MinusCircleFilled;

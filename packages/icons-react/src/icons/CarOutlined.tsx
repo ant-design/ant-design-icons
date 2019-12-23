@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CarOutlineSvg from '@ant-design/icons-svg/lib/outline/CarOutline';
+
+import React from 'react'
+import CarOutlinedSvg from '@ant-design/icons-svg/es/asn/CarOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CarOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={CarOutlineSvg} />;
+const CarOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={CarOutlinedSvg} />;
 export default CarOutlined;

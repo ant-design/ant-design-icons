@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import StarOutlineSvg from '@ant-design/icons-svg/lib/outline/StarOutline';
+
+import React from 'react'
+import StarOutlinedSvg from '@ant-design/icons-svg/es/asn/StarOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const StarOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={StarOutlineSvg} />;
+const StarOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={StarOutlinedSvg} />;
 export default StarOutlined;

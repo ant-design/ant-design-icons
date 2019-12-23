@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import HddOutlineSvg from '@ant-design/icons-svg/lib/outline/HddOutline';
+
+import React from 'react'
+import HddOutlinedSvg from '@ant-design/icons-svg/es/asn/HddOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const HddOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={HddOutlineSvg} />;
+const HddOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={HddOutlinedSvg} />;
 export default HddOutlined;

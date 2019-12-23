@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import AlibabaOutlineSvg from '@ant-design/icons-svg/lib/outline/AlibabaOutline';
+
+import React from 'react'
+import AlibabaOutlinedSvg from '@ant-design/icons-svg/es/asn/AlibabaOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AlibabaOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={AlibabaOutlineSvg} />;
+const AlibabaOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={AlibabaOutlinedSvg} />;
 export default AlibabaOutlined;

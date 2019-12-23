@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import SlackOutlineSvg from '@ant-design/icons-svg/lib/outline/SlackOutline';
+
+import React from 'react'
+import SlackOutlinedSvg from '@ant-design/icons-svg/es/asn/SlackOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SlackOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={SlackOutlineSvg} />;
+const SlackOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={SlackOutlinedSvg} />;
 export default SlackOutlined;

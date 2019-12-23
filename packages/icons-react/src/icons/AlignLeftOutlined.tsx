@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import AlignLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/AlignLeftOutline';
+
+import React from 'react'
+import AlignLeftOutlinedSvg from '@ant-design/icons-svg/es/asn/AlignLeftOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AlignLeftOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={AlignLeftOutlineSvg} />;
+const AlignLeftOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={AlignLeftOutlinedSvg} />;
 export default AlignLeftOutlined;

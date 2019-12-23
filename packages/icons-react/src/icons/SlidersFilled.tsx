@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import SlidersFillSvg from '@ant-design/icons-svg/lib/fill/SlidersFill';
+
+import React from 'react'
+import SlidersFilledSvg from '@ant-design/icons-svg/es/asn/SlidersFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SlidersFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SlidersFillSvg} />;
+const SlidersFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SlidersFilledSvg} />;
 export default SlidersFilled;

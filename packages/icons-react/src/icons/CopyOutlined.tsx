@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CopyOutlineSvg from '@ant-design/icons-svg/lib/outline/CopyOutline';
+
+import React from 'react'
+import CopyOutlinedSvg from '@ant-design/icons-svg/es/asn/CopyOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CopyOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={CopyOutlineSvg} />;
+const CopyOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={CopyOutlinedSvg} />;
 export default CopyOutlined;

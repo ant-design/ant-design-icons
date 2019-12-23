@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import BorderRightOutlineSvg from '@ant-design/icons-svg/lib/outline/BorderRightOutline';
+
+import React from 'react'
+import BorderRightOutlinedSvg from '@ant-design/icons-svg/es/asn/BorderRightOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BorderRightOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BorderRightOutlineSvg} />;
+const BorderRightOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BorderRightOutlinedSvg} />;
 export default BorderRightOutlined;

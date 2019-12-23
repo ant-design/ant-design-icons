@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import TaobaoSquareFillSvg from '@ant-design/icons-svg/lib/fill/TaobaoSquareFill';
+
+import React from 'react'
+import TaobaoSquareFilledSvg from '@ant-design/icons-svg/es/asn/TaobaoSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TaobaoSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={TaobaoSquareFillSvg} />;
+const TaobaoSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={TaobaoSquareFilledSvg} />;
 export default TaobaoSquareFilled;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import FileTextOutlineSvg from '@ant-design/icons-svg/lib/outline/FileTextOutline';
+
+import React from 'react'
+import FileTextOutlinedSvg from '@ant-design/icons-svg/es/asn/FileTextOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FileTextOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FileTextOutlineSvg} />;
+const FileTextOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FileTextOutlinedSvg} />;
 export default FileTextOutlined;

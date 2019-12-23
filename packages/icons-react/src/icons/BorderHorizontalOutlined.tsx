@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import BorderHorizontalOutlineSvg from '@ant-design/icons-svg/lib/outline/BorderHorizontalOutline';
+
+import React from 'react'
+import BorderHorizontalOutlinedSvg from '@ant-design/icons-svg/es/asn/BorderHorizontalOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BorderHorizontalOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BorderHorizontalOutlineSvg} />;
+const BorderHorizontalOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BorderHorizontalOutlinedSvg} />;
 export default BorderHorizontalOutlined;

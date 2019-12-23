@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import WeiboSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/WeiboSquareOutline';
+
+import React from 'react'
+import WeiboSquareOutlinedSvg from '@ant-design/icons-svg/es/asn/WeiboSquareOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const WeiboSquareOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={WeiboSquareOutlineSvg} />;
+const WeiboSquareOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={WeiboSquareOutlinedSvg} />;
 export default WeiboSquareOutlined;

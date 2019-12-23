@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CaretLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/CaretLeftOutline';
+
+import React from 'react'
+import CaretLeftOutlinedSvg from '@ant-design/icons-svg/es/asn/CaretLeftOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CaretLeftOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={CaretLeftOutlineSvg} />;
+const CaretLeftOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={CaretLeftOutlinedSvg} />;
 export default CaretLeftOutlined;

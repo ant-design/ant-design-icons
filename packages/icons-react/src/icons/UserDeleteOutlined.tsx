@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import UserDeleteOutlineSvg from '@ant-design/icons-svg/lib/outline/UserDeleteOutline';
+
+import React from 'react'
+import UserDeleteOutlinedSvg from '@ant-design/icons-svg/es/asn/UserDeleteOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const UserDeleteOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={UserDeleteOutlineSvg} />;
+const UserDeleteOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={UserDeleteOutlinedSvg} />;
 export default UserDeleteOutlined;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import BugOutlineSvg from '@ant-design/icons-svg/lib/outline/BugOutline';
+
+import React from 'react'
+import BugOutlinedSvg from '@ant-design/icons-svg/es/asn/BugOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BugOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BugOutlineSvg} />;
+const BugOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BugOutlinedSvg} />;
 export default BugOutlined;

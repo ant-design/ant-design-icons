@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import AliwangwangOutlineSvg from '@ant-design/icons-svg/lib/outline/AliwangwangOutline';
+
+import React from 'react'
+import AliwangwangOutlinedSvg from '@ant-design/icons-svg/es/asn/AliwangwangOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AliwangwangOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={AliwangwangOutlineSvg} />;
+const AliwangwangOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={AliwangwangOutlinedSvg} />;
 export default AliwangwangOutlined;

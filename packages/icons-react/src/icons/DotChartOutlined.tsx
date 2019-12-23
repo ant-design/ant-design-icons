@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DotChartOutlineSvg from '@ant-design/icons-svg/lib/outline/DotChartOutline';
+
+import React from 'react'
+import DotChartOutlinedSvg from '@ant-design/icons-svg/es/asn/DotChartOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DotChartOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DotChartOutlineSvg} />;
+const DotChartOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DotChartOutlinedSvg} />;
 export default DotChartOutlined;

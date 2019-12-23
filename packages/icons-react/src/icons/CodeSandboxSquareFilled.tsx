@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CodeSandboxSquareFillSvg from '@ant-design/icons-svg/lib/fill/CodeSandboxSquareFill';
+
+import React from 'react'
+import CodeSandboxSquareFilledSvg from '@ant-design/icons-svg/es/asn/CodeSandboxSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CodeSandboxSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CodeSandboxSquareFillSvg} />;
+const CodeSandboxSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CodeSandboxSquareFilledSvg} />;
 export default CodeSandboxSquareFilled;

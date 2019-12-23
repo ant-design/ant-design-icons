@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import YoutubeOutlineSvg from '@ant-design/icons-svg/lib/outline/YoutubeOutline';
+
+import React from 'react'
+import YoutubeOutlinedSvg from '@ant-design/icons-svg/es/asn/YoutubeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const YoutubeOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={YoutubeOutlineSvg} />;
+const YoutubeOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={YoutubeOutlinedSvg} />;
 export default YoutubeOutlined;

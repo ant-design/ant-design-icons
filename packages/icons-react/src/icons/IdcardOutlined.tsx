@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import IdcardOutlineSvg from '@ant-design/icons-svg/lib/outline/IdcardOutline';
+
+import React from 'react'
+import IdcardOutlinedSvg from '@ant-design/icons-svg/es/asn/IdcardOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const IdcardOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={IdcardOutlineSvg} />;
+const IdcardOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={IdcardOutlinedSvg} />;
 export default IdcardOutlined;

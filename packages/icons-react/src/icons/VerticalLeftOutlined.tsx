@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import VerticalLeftOutlineSvg from '@ant-design/icons-svg/lib/outline/VerticalLeftOutline';
+
+import React from 'react'
+import VerticalLeftOutlinedSvg from '@ant-design/icons-svg/es/asn/VerticalLeftOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const VerticalLeftOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={VerticalLeftOutlineSvg} />;
+const VerticalLeftOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={VerticalLeftOutlinedSvg} />;
 export default VerticalLeftOutlined;

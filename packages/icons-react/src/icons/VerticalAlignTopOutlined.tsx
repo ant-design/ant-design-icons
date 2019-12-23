@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import VerticalAlignTopOutlineSvg from '@ant-design/icons-svg/lib/outline/VerticalAlignTopOutline';
+
+import React from 'react'
+import VerticalAlignTopOutlinedSvg from '@ant-design/icons-svg/es/asn/VerticalAlignTopOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const VerticalAlignTopOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={VerticalAlignTopOutlineSvg} />;
+const VerticalAlignTopOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={VerticalAlignTopOutlinedSvg} />;
 export default VerticalAlignTopOutlined;

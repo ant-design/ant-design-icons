@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import MehFillSvg from '@ant-design/icons-svg/lib/fill/MehFill';
+
+import React from 'react'
+import MehFilledSvg from '@ant-design/icons-svg/es/asn/MehFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MehFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MehFillSvg} />;
+const MehFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MehFilledSvg} />;
 export default MehFilled;

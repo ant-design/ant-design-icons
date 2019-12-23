@@ -1,8 +1,8 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CloseSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CloseSquareTwoTone';
+
+import React from 'react'
+import CloseSquareTwoToneSvg from '@ant-design/icons-svg/es/asn/CloseSquareTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const CloseSquareTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseSquareTwoToneSvg} />;

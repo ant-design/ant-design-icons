@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import RollbackOutlineSvg from '@ant-design/icons-svg/lib/outline/RollbackOutline';
+
+import React from 'react'
+import RollbackOutlinedSvg from '@ant-design/icons-svg/es/asn/RollbackOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RollbackOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={RollbackOutlineSvg} />;
+const RollbackOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={RollbackOutlinedSvg} />;
 export default RollbackOutlined;

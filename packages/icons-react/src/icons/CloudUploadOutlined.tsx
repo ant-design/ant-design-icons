@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import CloudUploadOutlineSvg from '@ant-design/icons-svg/lib/outline/CloudUploadOutline';
+
+import React from 'react'
+import CloudUploadOutlinedSvg from '@ant-design/icons-svg/es/asn/CloudUploadOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CloudUploadOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={CloudUploadOutlineSvg} />;
+const CloudUploadOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={CloudUploadOutlinedSvg} />;
 export default CloudUploadOutlined;

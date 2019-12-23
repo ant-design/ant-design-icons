@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import RiseOutlineSvg from '@ant-design/icons-svg/lib/outline/RiseOutline';
+
+import React from 'react'
+import RiseOutlinedSvg from '@ant-design/icons-svg/es/asn/RiseOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RiseOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={RiseOutlineSvg} />;
+const RiseOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={RiseOutlinedSvg} />;
 export default RiseOutlined;

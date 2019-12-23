@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import FileSyncOutlineSvg from '@ant-design/icons-svg/lib/outline/FileSyncOutline';
+
+import React from 'react'
+import FileSyncOutlinedSvg from '@ant-design/icons-svg/es/asn/FileSyncOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FileSyncOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FileSyncOutlineSvg} />;
+const FileSyncOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FileSyncOutlinedSvg} />;
 export default FileSyncOutlined;

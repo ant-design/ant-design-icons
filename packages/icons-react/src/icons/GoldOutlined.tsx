@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import GoldOutlineSvg from '@ant-design/icons-svg/lib/outline/GoldOutline';
+
+import React from 'react'
+import GoldOutlinedSvg from '@ant-design/icons-svg/es/asn/GoldOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const GoldOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={GoldOutlineSvg} />;
+const GoldOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={GoldOutlinedSvg} />;
 export default GoldOutlined;

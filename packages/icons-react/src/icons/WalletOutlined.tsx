@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import WalletOutlineSvg from '@ant-design/icons-svg/lib/outline/WalletOutline';
+
+import React from 'react'
+import WalletOutlinedSvg from '@ant-design/icons-svg/es/asn/WalletOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const WalletOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={WalletOutlineSvg} />;
+const WalletOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={WalletOutlinedSvg} />;
 export default WalletOutlined;

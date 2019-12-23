@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import TrademarkOutlineSvg from '@ant-design/icons-svg/lib/outline/TrademarkOutline';
+
+import React from 'react'
+import TrademarkOutlinedSvg from '@ant-design/icons-svg/es/asn/TrademarkOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TrademarkOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={TrademarkOutlineSvg} />;
+const TrademarkOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={TrademarkOutlinedSvg} />;
 export default TrademarkOutlined;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import AndroidOutlineSvg from '@ant-design/icons-svg/lib/outline/AndroidOutline';
+
+import React from 'react'
+import AndroidOutlinedSvg from '@ant-design/icons-svg/es/asn/AndroidOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AndroidOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={AndroidOutlineSvg} />;
+const AndroidOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={AndroidOutlinedSvg} />;
 export default AndroidOutlined;

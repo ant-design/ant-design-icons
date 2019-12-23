@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import LineHeightOutlineSvg from '@ant-design/icons-svg/lib/outline/LineHeightOutline';
+
+import React from 'react'
+import LineHeightOutlinedSvg from '@ant-design/icons-svg/es/asn/LineHeightOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const LineHeightOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={LineHeightOutlineSvg} />;
+const LineHeightOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={LineHeightOutlinedSvg} />;
 export default LineHeightOutlined;

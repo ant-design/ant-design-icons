@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import BranchesOutlineSvg from '@ant-design/icons-svg/lib/outline/BranchesOutline';
+
+import React from 'react'
+import BranchesOutlinedSvg from '@ant-design/icons-svg/es/asn/BranchesOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BranchesOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BranchesOutlineSvg} />;
+const BranchesOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BranchesOutlinedSvg} />;
 export default BranchesOutlined;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DownSquareFillSvg from '@ant-design/icons-svg/lib/fill/DownSquareFill';
+
+import React from 'react'
+import DownSquareFilledSvg from '@ant-design/icons-svg/es/asn/DownSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DownSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DownSquareFillSvg} />;
+const DownSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DownSquareFilledSvg} />;
 export default DownSquareFilled;

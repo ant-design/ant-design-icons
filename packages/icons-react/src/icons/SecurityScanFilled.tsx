@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import SecurityScanFillSvg from '@ant-design/icons-svg/lib/fill/SecurityScanFill';
+
+import React from 'react'
+import SecurityScanFilledSvg from '@ant-design/icons-svg/es/asn/SecurityScanFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SecurityScanFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SecurityScanFillSvg} />;
+const SecurityScanFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SecurityScanFilledSvg} />;
 export default SecurityScanFilled;

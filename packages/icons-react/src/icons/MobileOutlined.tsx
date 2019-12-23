@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import MobileOutlineSvg from '@ant-design/icons-svg/lib/outline/MobileOutline';
+
+import React from 'react'
+import MobileOutlinedSvg from '@ant-design/icons-svg/es/asn/MobileOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MobileOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={MobileOutlineSvg} />;
+const MobileOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={MobileOutlinedSvg} />;
 export default MobileOutlined;

@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DownSquareOutlineSvg from '@ant-design/icons-svg/lib/outline/DownSquareOutline';
+
+import React from 'react'
+import DownSquareOutlinedSvg from '@ant-design/icons-svg/es/asn/DownSquareOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DownSquareOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DownSquareOutlineSvg} />;
+const DownSquareOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DownSquareOutlinedSvg} />;
 export default DownSquareOutlined;

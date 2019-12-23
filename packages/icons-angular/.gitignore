@@ -24,20 +24,19 @@ yarn-error.log*
 # assets
 dist/
 
-lib/manifest.ts
-lib/types.ts
+src/manifest.ts
 
-lib/icons/fill/*.ts
-lib/icons/outline/*.ts
-lib/icons/twotone/*.ts
-lib/icons/public_api.ts
+src/icons/fill/*.ts
+src/icons/outline/*.ts
+src/icons/twotone/*.ts
+src/icons/public_api.ts
 
-lib/inline-svg/fill/*.svg
-lib/inline-svg/outline/*.svg
-lib/inline-svg/twotone/*.svg
-lib/inline-svg/fill/*.js
-lib/inline-svg/outline/*.js
-lib/inline-svg/twotone/*.js
+src/inline-svg/fill/*.svg
+src/inline-svg/outline/*.svg
+src/inline-svg/twotone/*.svg
+src/inline-svg/fill/*.js
+src/inline-svg/outline/*.js
+src/inline-svg/twotone/*.js
 
 # publish
 *.tgz

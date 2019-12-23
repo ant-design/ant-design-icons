@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import FileExcelOutlineSvg from '@ant-design/icons-svg/lib/outline/FileExcelOutline';
+
+import React from 'react'
+import FileExcelOutlinedSvg from '@ant-design/icons-svg/es/asn/FileExcelOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FileExcelOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FileExcelOutlineSvg} />;
+const FileExcelOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FileExcelOutlinedSvg} />;
 export default FileExcelOutlined;

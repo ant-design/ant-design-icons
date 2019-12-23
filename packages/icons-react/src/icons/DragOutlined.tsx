@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import DragOutlineSvg from '@ant-design/icons-svg/lib/outline/DragOutline';
+
+import React from 'react'
+import DragOutlinedSvg from '@ant-design/icons-svg/es/asn/DragOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DragOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DragOutlineSvg} />;
+const DragOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DragOutlinedSvg} />;
 export default DragOutlined;

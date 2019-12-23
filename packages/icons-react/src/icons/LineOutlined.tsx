@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import LineOutlineSvg from '@ant-design/icons-svg/lib/outline/LineOutline';
+
+import React from 'react'
+import LineOutlinedSvg from '@ant-design/icons-svg/es/asn/LineOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const LineOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={LineOutlineSvg} />;
+const LineOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={LineOutlinedSvg} />;
 export default LineOutlined;

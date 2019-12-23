@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import SkypeFillSvg from '@ant-design/icons-svg/lib/fill/SkypeFill';
+
+import React from 'react'
+import SkypeFilledSvg from '@ant-design/icons-svg/es/asn/SkypeFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SkypeFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SkypeFillSvg} />;
+const SkypeFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SkypeFilledSvg} />;
 export default SkypeFilled;

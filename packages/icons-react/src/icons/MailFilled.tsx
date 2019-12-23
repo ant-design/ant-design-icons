@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import MailFillSvg from '@ant-design/icons-svg/lib/fill/MailFill';
+
+import React from 'react'
+import MailFilledSvg from '@ant-design/icons-svg/es/asn/MailFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MailFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MailFillSvg} />;
+const MailFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MailFilledSvg} />;
 export default MailFilled;

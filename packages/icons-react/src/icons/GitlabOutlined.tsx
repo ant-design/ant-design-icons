@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import GitlabOutlineSvg from '@ant-design/icons-svg/lib/outline/GitlabOutline';
+
+import React from 'react'
+import GitlabOutlinedSvg from '@ant-design/icons-svg/es/asn/GitlabOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const GitlabOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={GitlabOutlineSvg} />;
+const GitlabOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={GitlabOutlinedSvg} />;
 export default GitlabOutlined;

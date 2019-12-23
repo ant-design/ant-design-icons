@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import AlipayOutlineSvg from '@ant-design/icons-svg/lib/outline/AlipayOutline';
+
+import React from 'react'
+import AlipayOutlinedSvg from '@ant-design/icons-svg/es/asn/AlipayOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AlipayOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={AlipayOutlineSvg} />;
+const AlipayOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={AlipayOutlinedSvg} />;
 export default AlipayOutlined;

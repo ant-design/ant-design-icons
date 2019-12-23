@@ -1,9 +1,9 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-import React from 'react';
-import LikeOutlineSvg from '@ant-design/icons-svg/lib/outline/LikeOutline';
+
+import React from 'react'
+import LikeOutlinedSvg from '@ant-design/icons-svg/es/asn/LikeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const LikeOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={LikeOutlineSvg} />;
+const LikeOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={LikeOutlinedSvg} />;
 export default LikeOutlined;
