@@ -28,7 +28,7 @@
     "build": "cross-env NODE_ENV=production && npm run build:es && npm run build:lib",
     "test": "cross-env NODE_ENV=test && npm run test:unit",
     "test:unit": "jest",
-    "prepublishOnly": "npm run test && npm run g && npm run build && npm run type-check && npm run digest && && np --no-cleanup --yolo --no-publish",
+    "prepublishOnly": "npm run test && npm run g && npm run build && npm run type-check && npm run digest && np --no-cleanup --yolo --no-publish",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "digest": "node scripts/digest.js"
