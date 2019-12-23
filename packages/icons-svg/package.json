@@ -82,5 +82,8 @@
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3",
     "vinyl": "^2.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

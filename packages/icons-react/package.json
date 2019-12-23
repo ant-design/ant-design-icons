@@ -48,15 +48,19 @@
     "react-dom": "^16.4.2",
     "rimraf": "^3.0.0",
     "styled-components": "^3.3.3",
+    "ts-jest": "^24.2.0",
     "ts-node": "^8.3.0",
     "typescript": "^3.0.3"
   },
   "dependencies": {
     "@ant-design/colors": "^3.1.0",
-    "@ant-design/icons-svg": "^4.0.0-alpha.0",
+    "@ant-design/icons-svg": "^4.0.0-alpha.1",
     "classnames": "^2.2.6",
     "insert-css": "^2.0.0",
     "rc-util": "^4.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "gitHead": "225d4d2189720ee3b7e4a4d7a6d80e076fa15cbc"
 }
