@@ -24,7 +24,7 @@ export interface TwoToneColorPaletteSetter {
 }
 
 export interface TwoToneColorPalette extends TwoToneColorPaletteSetter {
-  secondaryColor: string;
+  calculated?: boolean; // marker for calculation
 }
 
 const twoToneColorPalette: TwoToneColorPalette = {
@@ -39,6 +39,7 @@ function setTwoToneColors({
   twoToneColorPalette.primaryColor = primaryColor;
   twoToneColorPalette.secondaryColor =
     secondaryColor || getSecondaryColor(primaryColor);
+  twoToneColorPalette.calculated = !!secondaryColor;
 }
 
 function getTwoToneColors(): TwoToneColorPalette {

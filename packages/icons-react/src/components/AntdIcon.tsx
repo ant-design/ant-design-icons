@@ -4,10 +4,11 @@ import { IconDefinition } from '@ant-design/icons-svg/lib/types';
 
 import { IconBaseProps } from './Icon';
 import ReactIcon from './IconBase';
-import { setTwoToneColor, getTwoToneColor } from './twoTonePrimaryColor';
+import { getTwoToneColor, TwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
+import { normalizeTwoToneColors } from '../utils';
 
 export interface AntdIconProps extends IconBaseProps {
-  twoToneColor?: string;
+  twoToneColor?: TwoToneColor;
 }
 
 export interface IconComponentProps extends AntdIconProps {
@@ -15,6 +16,7 @@ export interface IconComponentProps extends AntdIconProps {
 }
 
 // Initial setting
+// should move it to antd main repo?
 setTwoToneColor('#1890ff');
 
 interface IconBaseComponent<P> extends React.FC<P> {
@@ -22,7 +24,10 @@ interface IconBaseComponent<P> extends React.FC<P> {
   setTwoToneColor: typeof setTwoToneColor;
 }
 
-const Icon: IconBaseComponent<IconComponentProps> = props => {
+const Icon: IconBaseComponent<IconComponentProps> = (
+  props,
+  ref: React.MutableRefObject<HTMLInputElement>,
+) => {
   const {
     // affect outter <i>...</i>
     className,
@@ -63,6 +68,8 @@ const Icon: IconBaseComponent<IconComponentProps> = props => {
       }
     : undefined;
 
+  const [primaryColor, secondaryColor] = normalizeTwoToneColors(twoToneColor);
+
   return (
     <span
       role="img"
@@ -71,11 +78,13 @@ const Icon: IconBaseComponent<IconComponentProps> = props => {
       tabIndex={iconTabIndex}
       onClick={onClick}
       className={classString}
+      ref={ref}
     >
       <ReactIcon
         className={svgClassString}
         icon={icon}
-        primaryColor={twoToneColor}
+        primaryColor={primaryColor}
+        secondaryColor={secondaryColor}
         style={svgStyle}
       />
     </span>
@@ -86,4 +95,4 @@ Icon.displayName = 'AntdIcon';
 Icon.getTwoToneColor = getTwoToneColor;
 Icon.setTwoToneColor = setTwoToneColor;
 
-export default Icon;
+export default React.forwardRef<HTMLSpanElement, IconComponentProps>(Icon);
