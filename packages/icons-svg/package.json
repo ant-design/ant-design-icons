@@ -28,7 +28,7 @@
     "build": "cross-env NODE_ENV=production && npm run build:es && npm run build:lib",
     "test": "cross-env NODE_ENV=test && npm run test:unit",
     "test:unit": "jest",
-    "prepublishOnly": "npm run test && npm run g && npm run build && npm run type-check && npm run digest && np --no-cleanup --yolo --no-publish",
+    "prepublishOnly": "npm run test && npm run g && npm run build && npm run type-check && npm run digest",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "digest": "node scripts/digest.js"
@@ -70,7 +70,6 @@
     "lodash": "^4.17.15",
     "merge-stream": "^2.0.0",
     "minipass": "^3.1.1",
-    "np": "^5.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-is": "^16.12.0",
