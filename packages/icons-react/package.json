@@ -19,9 +19,9 @@
     "lint": "eslint src/ --ext .tsx,.ts",
     "compile": "father build",
     "test": "father test",
-    "ci": "npm run lint && npm run test && npm run generate && npm run compile && npm run test",
+    "ci": "npm run prepublishOnly",
     "test:local": "npm run generate && npm run compile && npm run test",
-    "prepublishOnly": "npm run lint && npm run test && npm run generate && npm run compile",
+    "prepublishOnly": "npm run lint && npm run generate && npm run compile && npm run test",
     "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
     "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry"
   },

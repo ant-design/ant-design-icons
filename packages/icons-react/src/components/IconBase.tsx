@@ -24,7 +24,7 @@ export interface TwoToneColorPaletteSetter {
 }
 
 export interface TwoToneColorPalette extends TwoToneColorPaletteSetter {
-  calculated: boolean; // marker for calculation
+  calculated?: boolean; // marker for calculation
 }
 
 const twoToneColorPalette: TwoToneColorPalette = {
