@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import QqSquareFilledSvg from '@ant-design/icons-svg/es/asn/QqSquareFilled';
+import QqSquareFilledSvg from '@ant-design/icons-svg/lib/asn/QqSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const QqSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={QqSquareFilledSvg} />;

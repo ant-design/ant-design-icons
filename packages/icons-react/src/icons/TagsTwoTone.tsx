@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import TagsTwoToneSvg from '@ant-design/icons-svg/es/asn/TagsTwoTone';
+import TagsTwoToneSvg from '@ant-design/icons-svg/lib/asn/TagsTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const TagsTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={TagsTwoToneSvg} />;

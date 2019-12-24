@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import CopyrightCircleTwoToneSvg from '@ant-design/icons-svg/es/asn/CopyrightCircleTwoTone';
+import CopyrightCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/CopyrightCircleTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const CopyrightCircleTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CopyrightCircleTwoToneSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import SlidersFilledSvg from '@ant-design/icons-svg/es/asn/SlidersFilled';
+import SlidersFilledSvg from '@ant-design/icons-svg/lib/asn/SlidersFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const SlidersFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SlidersFilledSvg} />;

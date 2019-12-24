@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import MedicineBoxOutlinedSvg from '@ant-design/icons-svg/es/asn/MedicineBoxOutlined';
+import MedicineBoxOutlinedSvg from '@ant-design/icons-svg/lib/asn/MedicineBoxOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const MedicineBoxOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={MedicineBoxOutlinedSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ExceptionOutlinedSvg from '@ant-design/icons-svg/es/asn/ExceptionOutlined';
+import ExceptionOutlinedSvg from '@ant-design/icons-svg/lib/asn/ExceptionOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ExceptionOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ExceptionOutlinedSvg} />;

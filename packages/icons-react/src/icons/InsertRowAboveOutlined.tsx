@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import InsertRowAboveOutlinedSvg from '@ant-design/icons-svg/es/asn/InsertRowAboveOutlined';
+import InsertRowAboveOutlinedSvg from '@ant-design/icons-svg/lib/asn/InsertRowAboveOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const InsertRowAboveOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={InsertRowAboveOutlinedSvg} />;

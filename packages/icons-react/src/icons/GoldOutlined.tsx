@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import GoldOutlinedSvg from '@ant-design/icons-svg/es/asn/GoldOutlined';
+import GoldOutlinedSvg from '@ant-design/icons-svg/lib/asn/GoldOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const GoldOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={GoldOutlinedSvg} />;

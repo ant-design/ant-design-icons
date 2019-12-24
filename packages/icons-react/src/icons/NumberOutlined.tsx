@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import NumberOutlinedSvg from '@ant-design/icons-svg/es/asn/NumberOutlined';
+import NumberOutlinedSvg from '@ant-design/icons-svg/lib/asn/NumberOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const NumberOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={NumberOutlinedSvg} />;

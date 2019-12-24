@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import PlusOutlinedSvg from '@ant-design/icons-svg/es/asn/PlusOutlined';
+import PlusOutlinedSvg from '@ant-design/icons-svg/lib/asn/PlusOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const PlusOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={PlusOutlinedSvg} />;

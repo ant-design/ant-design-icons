@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import SubnodeOutlinedSvg from '@ant-design/icons-svg/es/asn/SubnodeOutlined';
+import SubnodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/SubnodeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const SubnodeOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={SubnodeOutlinedSvg} />;

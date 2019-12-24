@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import CalendarTwoToneSvg from '@ant-design/icons-svg/es/asn/CalendarTwoTone';
+import CalendarTwoToneSvg from '@ant-design/icons-svg/lib/asn/CalendarTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const CalendarTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CalendarTwoToneSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import DashboardTwoToneSvg from '@ant-design/icons-svg/es/asn/DashboardTwoTone';
+import DashboardTwoToneSvg from '@ant-design/icons-svg/lib/asn/DashboardTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const DashboardTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={DashboardTwoToneSvg} />;

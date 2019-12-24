@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import MinusSquareTwoToneSvg from '@ant-design/icons-svg/es/asn/MinusSquareTwoTone';
+import MinusSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/MinusSquareTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const MinusSquareTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={MinusSquareTwoToneSvg} />;

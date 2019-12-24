@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import TagFilledSvg from '@ant-design/icons-svg/es/asn/TagFilled';
+import TagFilledSvg from '@ant-design/icons-svg/lib/asn/TagFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const TagFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={TagFilledSvg} />;

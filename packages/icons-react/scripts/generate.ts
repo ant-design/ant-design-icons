@@ -36,7 +36,7 @@ async function generateIcons() {
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import <%= svgIdentifier %>Svg from '@ant-design/icons-svg/es/asn/<%= svgIdentifier %>';
+import <%= svgIdentifier %>Svg from '@ant-design/icons-svg/lib/asn/<%= svgIdentifier %>';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const <%= svgIdentifier %> = (props: AntdIconProps) => <AntdIcon {...props} icon={<%= svgIdentifier %>Svg} />;
@@ -75,11 +75,11 @@ async function generateEntries() {
   });
   exports.default = void 0;
   
-  var _<%= componentIdentifier %> = _interopRequireDefault(require('./lib/icons/<%= componentIdentifier %>'));
+  var _<%= svgIdentifier %> = _interopRequireDefault(require('./lib/icons/<%= svgIdentifier %>'));
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
   
-  var _default = _<%= componentIdentifier %>;
+  var _default = _<%= svgIdentifier %>;
   exports.default = _default;
   module.exports = _default;
 `.trim());
@@ -89,7 +89,7 @@ async function generateEntries() {
     await fsPromises.writeFile(
       path.resolve(__dirname, `../${svgIdentifier}.js`),
       render({
-        svgIdentifier
+        svgIdentifier,
       }),
     );
 

@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons",
-  "version": "4.0.0-alpha.11",
+  "version": "4.0.0-alpha.12",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
@@ -19,6 +19,8 @@
     "lint": "eslint src/ --ext .tsx,.ts",
     "compile": "father build",
     "test": "father test",
+    "ci": "npm run lint && npm run test && npm run generate && npm run compile && npm run test",
+    "test:local": "npm run generate && npm run compile && npm run test",
     "prepublishOnly": "npm run lint && npm run test && npm run generate && npm run compile",
     "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
     "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry"
@@ -47,13 +49,12 @@
     "react-dom": "^16.4.2",
     "rimraf": "^3.0.0",
     "styled-components": "^3.3.3",
-    "ts-jest": "^24.2.0",
     "ts-node": "^8.3.0",
     "typescript": "^3.0.3"
   },
   "dependencies": {
     "@ant-design/colors": "^3.1.0",
-    "@ant-design/icons-svg": "^4.0.0-alpha.1",
+    "@ant-design/icons-svg": "^4.0.0-alpha.3",
     "classnames": "^2.2.6",
     "insert-css": "^2.0.0",
     "rc-util": "^4.9.0"

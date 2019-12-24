@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import LineChartOutlinedSvg from '@ant-design/icons-svg/es/asn/LineChartOutlined';
+import LineChartOutlinedSvg from '@ant-design/icons-svg/lib/asn/LineChartOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const LineChartOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={LineChartOutlinedSvg} />;

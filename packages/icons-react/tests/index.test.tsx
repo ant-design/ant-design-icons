@@ -5,7 +5,7 @@ import Icon, {
   getTwoToneColor, setTwoToneColor, createFromIconfontCN,
   HomeOutlined, SettingFilled, SmileOutlined, SyncOutlined,
   LoadingOutlined, CheckCircleTwoTone, ClockCircleOutlined,
-} from '../src';
+} from '../lib';
 
 describe('Icon', () => {
   it('should render to a <span class="xxx"><svg>...</svg></span>', () => {

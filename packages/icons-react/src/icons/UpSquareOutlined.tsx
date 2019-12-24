@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import UpSquareOutlinedSvg from '@ant-design/icons-svg/es/asn/UpSquareOutlined';
+import UpSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/UpSquareOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const UpSquareOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={UpSquareOutlinedSvg} />;

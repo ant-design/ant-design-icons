@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import RocketTwoToneSvg from '@ant-design/icons-svg/es/asn/RocketTwoTone';
+import RocketTwoToneSvg from '@ant-design/icons-svg/lib/asn/RocketTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const RocketTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={RocketTwoToneSvg} />;

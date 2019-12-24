@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ColumnHeightOutlinedSvg from '@ant-design/icons-svg/es/asn/ColumnHeightOutlined';
+import ColumnHeightOutlinedSvg from '@ant-design/icons-svg/lib/asn/ColumnHeightOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ColumnHeightOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ColumnHeightOutlinedSvg} />;

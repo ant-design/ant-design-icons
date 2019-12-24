@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-svg",
-  "version": "4.0.0-alpha.0",
+  "version": "4.0.0-alpha.3",
   "sideEffects": false,
   "description": "Abstract nodes for ant design icons.",
   "contributors": [

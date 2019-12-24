@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import PieChartTwoToneSvg from '@ant-design/icons-svg/es/asn/PieChartTwoTone';
+import PieChartTwoToneSvg from '@ant-design/icons-svg/lib/asn/PieChartTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const PieChartTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={PieChartTwoToneSvg} />;

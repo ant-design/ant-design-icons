@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import NodeIndexOutlinedSvg from '@ant-design/icons-svg/es/asn/NodeIndexOutlined';
+import NodeIndexOutlinedSvg from '@ant-design/icons-svg/lib/asn/NodeIndexOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const NodeIndexOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={NodeIndexOutlinedSvg} />;

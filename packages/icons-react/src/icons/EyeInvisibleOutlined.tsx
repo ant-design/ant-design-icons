@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import EyeInvisibleOutlinedSvg from '@ant-design/icons-svg/es/asn/EyeInvisibleOutlined';
+import EyeInvisibleOutlinedSvg from '@ant-design/icons-svg/lib/asn/EyeInvisibleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const EyeInvisibleOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={EyeInvisibleOutlinedSvg} />;

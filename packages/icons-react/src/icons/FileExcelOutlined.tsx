@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import FileExcelOutlinedSvg from '@ant-design/icons-svg/es/asn/FileExcelOutlined';
+import FileExcelOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileExcelOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FileExcelOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FileExcelOutlinedSvg} />;

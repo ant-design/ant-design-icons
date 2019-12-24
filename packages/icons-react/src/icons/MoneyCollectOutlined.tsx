@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import MoneyCollectOutlinedSvg from '@ant-design/icons-svg/es/asn/MoneyCollectOutlined';
+import MoneyCollectOutlinedSvg from '@ant-design/icons-svg/lib/asn/MoneyCollectOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const MoneyCollectOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={MoneyCollectOutlinedSvg} />;

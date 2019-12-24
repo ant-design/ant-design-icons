@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import FunnelPlotFilledSvg from '@ant-design/icons-svg/es/asn/FunnelPlotFilled';
+import FunnelPlotFilledSvg from '@ant-design/icons-svg/lib/asn/FunnelPlotFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FunnelPlotFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FunnelPlotFilledSvg} />;

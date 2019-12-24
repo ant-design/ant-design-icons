@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import EllipsisOutlinedSvg from '@ant-design/icons-svg/es/asn/EllipsisOutlined';
+import EllipsisOutlinedSvg from '@ant-design/icons-svg/lib/asn/EllipsisOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const EllipsisOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={EllipsisOutlinedSvg} />;
