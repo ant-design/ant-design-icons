@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import DownSquareFilledSvg from '@ant-design/icons-svg/es/asn/DownSquareFilled';
+import DownSquareFilledSvg from '@ant-design/icons-svg/lib/asn/DownSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const DownSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DownSquareFilledSvg} />;

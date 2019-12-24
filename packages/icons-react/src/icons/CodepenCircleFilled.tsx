@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import CodepenCircleFilledSvg from '@ant-design/icons-svg/es/asn/CodepenCircleFilled';
+import CodepenCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CodepenCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const CodepenCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CodepenCircleFilledSvg} />;

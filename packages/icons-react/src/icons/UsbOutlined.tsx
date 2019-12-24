@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import UsbOutlinedSvg from '@ant-design/icons-svg/es/asn/UsbOutlined';
+import UsbOutlinedSvg from '@ant-design/icons-svg/lib/asn/UsbOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const UsbOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={UsbOutlinedSvg} />;

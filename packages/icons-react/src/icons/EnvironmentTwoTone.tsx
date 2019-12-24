@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import EnvironmentTwoToneSvg from '@ant-design/icons-svg/es/asn/EnvironmentTwoTone';
+import EnvironmentTwoToneSvg from '@ant-design/icons-svg/lib/asn/EnvironmentTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const EnvironmentTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={EnvironmentTwoToneSvg} />;

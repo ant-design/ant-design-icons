@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import FormatPainterOutlinedSvg from '@ant-design/icons-svg/es/asn/FormatPainterOutlined';
+import FormatPainterOutlinedSvg from '@ant-design/icons-svg/lib/asn/FormatPainterOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FormatPainterOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FormatPainterOutlinedSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import RadiusBottomrightOutlinedSvg from '@ant-design/icons-svg/es/asn/RadiusBottomrightOutlined';
+import RadiusBottomrightOutlinedSvg from '@ant-design/icons-svg/lib/asn/RadiusBottomrightOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const RadiusBottomrightOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={RadiusBottomrightOutlinedSvg} />;

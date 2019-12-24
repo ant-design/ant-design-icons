@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ProjectOutlinedSvg from '@ant-design/icons-svg/es/asn/ProjectOutlined';
+import ProjectOutlinedSvg from '@ant-design/icons-svg/lib/asn/ProjectOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ProjectOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ProjectOutlinedSvg} />;

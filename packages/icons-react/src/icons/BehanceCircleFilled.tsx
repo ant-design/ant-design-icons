@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import BehanceCircleFilledSvg from '@ant-design/icons-svg/es/asn/BehanceCircleFilled';
+import BehanceCircleFilledSvg from '@ant-design/icons-svg/lib/asn/BehanceCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const BehanceCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BehanceCircleFilledSvg} />;

@@ -13,6 +13,7 @@ script:
   - yarn run icons:test
   - yarn run icons:generate
   - yarn run icons:build
+  - yarn run react:test
 branches:
   only:
     - master

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import CopyOutlinedSvg from '@ant-design/icons-svg/es/asn/CopyOutlined';
+import CopyOutlinedSvg from '@ant-design/icons-svg/lib/asn/CopyOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const CopyOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={CopyOutlinedSvg} />;

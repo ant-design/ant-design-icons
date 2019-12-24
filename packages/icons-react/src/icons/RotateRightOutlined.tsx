@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import RotateRightOutlinedSvg from '@ant-design/icons-svg/es/asn/RotateRightOutlined';
+import RotateRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/RotateRightOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const RotateRightOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={RotateRightOutlinedSvg} />;

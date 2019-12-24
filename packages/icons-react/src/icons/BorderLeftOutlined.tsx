@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import BorderLeftOutlinedSvg from '@ant-design/icons-svg/es/asn/BorderLeftOutlined';
+import BorderLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderLeftOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const BorderLeftOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BorderLeftOutlinedSvg} />;

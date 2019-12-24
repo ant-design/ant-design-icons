@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import InteractionOutlinedSvg from '@ant-design/icons-svg/es/asn/InteractionOutlined';
+import InteractionOutlinedSvg from '@ant-design/icons-svg/lib/asn/InteractionOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const InteractionOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={InteractionOutlinedSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import VerticalAlignMiddleOutlinedSvg from '@ant-design/icons-svg/es/asn/VerticalAlignMiddleOutlined';
+import VerticalAlignMiddleOutlinedSvg from '@ant-design/icons-svg/lib/asn/VerticalAlignMiddleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const VerticalAlignMiddleOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={VerticalAlignMiddleOutlinedSvg} />;

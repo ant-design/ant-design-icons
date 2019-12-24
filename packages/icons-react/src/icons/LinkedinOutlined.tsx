@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import LinkedinOutlinedSvg from '@ant-design/icons-svg/es/asn/LinkedinOutlined';
+import LinkedinOutlinedSvg from '@ant-design/icons-svg/lib/asn/LinkedinOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const LinkedinOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={LinkedinOutlinedSvg} />;

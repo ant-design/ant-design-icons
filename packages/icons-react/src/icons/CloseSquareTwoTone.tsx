@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import CloseSquareTwoToneSvg from '@ant-design/icons-svg/es/asn/CloseSquareTwoTone';
+import CloseSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/CloseSquareTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const CloseSquareTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseSquareTwoToneSvg} />;

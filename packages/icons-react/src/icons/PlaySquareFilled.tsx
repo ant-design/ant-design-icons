@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import PlaySquareFilledSvg from '@ant-design/icons-svg/es/asn/PlaySquareFilled';
+import PlaySquareFilledSvg from '@ant-design/icons-svg/lib/asn/PlaySquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const PlaySquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={PlaySquareFilledSvg} />;

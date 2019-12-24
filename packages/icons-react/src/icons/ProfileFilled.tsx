@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ProfileFilledSvg from '@ant-design/icons-svg/es/asn/ProfileFilled';
+import ProfileFilledSvg from '@ant-design/icons-svg/lib/asn/ProfileFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ProfileFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ProfileFilledSvg} />;

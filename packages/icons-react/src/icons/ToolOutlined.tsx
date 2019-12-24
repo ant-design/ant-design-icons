@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ToolOutlinedSvg from '@ant-design/icons-svg/es/asn/ToolOutlined';
+import ToolOutlinedSvg from '@ant-design/icons-svg/lib/asn/ToolOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ToolOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ToolOutlinedSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import BoxPlotOutlinedSvg from '@ant-design/icons-svg/es/asn/BoxPlotOutlined';
+import BoxPlotOutlinedSvg from '@ant-design/icons-svg/lib/asn/BoxPlotOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const BoxPlotOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BoxPlotOutlinedSvg} />;

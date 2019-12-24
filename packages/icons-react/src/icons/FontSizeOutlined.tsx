@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import FontSizeOutlinedSvg from '@ant-design/icons-svg/es/asn/FontSizeOutlined';
+import FontSizeOutlinedSvg from '@ant-design/icons-svg/lib/asn/FontSizeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const FontSizeOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FontSizeOutlinedSvg} />;

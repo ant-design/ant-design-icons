@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ThunderboltTwoToneSvg from '@ant-design/icons-svg/es/asn/ThunderboltTwoTone';
+import ThunderboltTwoToneSvg from '@ant-design/icons-svg/lib/asn/ThunderboltTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ThunderboltTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={ThunderboltTwoToneSvg} />;

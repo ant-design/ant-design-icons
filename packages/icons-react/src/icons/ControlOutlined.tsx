@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ControlOutlinedSvg from '@ant-design/icons-svg/es/asn/ControlOutlined';
+import ControlOutlinedSvg from '@ant-design/icons-svg/lib/asn/ControlOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ControlOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ControlOutlinedSvg} />;

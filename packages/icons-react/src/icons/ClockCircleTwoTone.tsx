@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ClockCircleTwoToneSvg from '@ant-design/icons-svg/es/asn/ClockCircleTwoTone';
+import ClockCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/ClockCircleTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ClockCircleTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={ClockCircleTwoToneSvg} />;

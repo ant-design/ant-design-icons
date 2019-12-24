@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import PrinterFilledSvg from '@ant-design/icons-svg/es/asn/PrinterFilled';
+import PrinterFilledSvg from '@ant-design/icons-svg/lib/asn/PrinterFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const PrinterFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={PrinterFilledSvg} />;

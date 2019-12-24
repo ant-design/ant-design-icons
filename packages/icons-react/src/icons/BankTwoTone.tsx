@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import BankTwoToneSvg from '@ant-design/icons-svg/es/asn/BankTwoTone';
+import BankTwoToneSvg from '@ant-design/icons-svg/lib/asn/BankTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const BankTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={BankTwoToneSvg} />;

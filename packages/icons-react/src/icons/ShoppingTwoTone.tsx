@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import ShoppingTwoToneSvg from '@ant-design/icons-svg/es/asn/ShoppingTwoTone';
+import ShoppingTwoToneSvg from '@ant-design/icons-svg/lib/asn/ShoppingTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const ShoppingTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={ShoppingTwoToneSvg} />;

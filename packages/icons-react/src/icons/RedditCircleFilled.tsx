@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import RedditCircleFilledSvg from '@ant-design/icons-svg/es/asn/RedditCircleFilled';
+import RedditCircleFilledSvg from '@ant-design/icons-svg/lib/asn/RedditCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const RedditCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={RedditCircleFilledSvg} />;

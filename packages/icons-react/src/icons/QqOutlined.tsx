@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import QqOutlinedSvg from '@ant-design/icons-svg/es/asn/QqOutlined';
+import QqOutlinedSvg from '@ant-design/icons-svg/lib/asn/QqOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const QqOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={QqOutlinedSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import LogoutOutlinedSvg from '@ant-design/icons-svg/es/asn/LogoutOutlined';
+import LogoutOutlinedSvg from '@ant-design/icons-svg/lib/asn/LogoutOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const LogoutOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={LogoutOutlinedSvg} />;

@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import DollarOutlinedSvg from '@ant-design/icons-svg/es/asn/DollarOutlined';
+import DollarOutlinedSvg from '@ant-design/icons-svg/lib/asn/DollarOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const DollarOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DollarOutlinedSvg} />;

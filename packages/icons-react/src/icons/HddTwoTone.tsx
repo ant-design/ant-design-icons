@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import React from 'react'
-import HddTwoToneSvg from '@ant-design/icons-svg/es/asn/HddTwoTone';
+import HddTwoToneSvg from '@ant-design/icons-svg/lib/asn/HddTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 const HddTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={HddTwoToneSvg} />;
