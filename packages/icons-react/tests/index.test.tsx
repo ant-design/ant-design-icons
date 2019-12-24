@@ -6,6 +6,7 @@ import Icon, {
   HomeOutlined, SettingFilled, SmileOutlined, SyncOutlined,
   LoadingOutlined, CheckCircleTwoTone, ClockCircleOutlined,
 } from '../lib';
+import { getSecondaryColor } from '../src/utils';
 
 describe('Icon', () => {
   it('should render to a <span class="xxx"><svg>...</svg></span>', () => {
@@ -27,14 +28,31 @@ describe('Icon', () => {
   });
 
   it('should support two-tone icon', () => {
-    const wrapper = render(<CheckCircleTwoTone twoToneColor="#f5222d" />);
+    let wrapper = render(<CheckCircleTwoTone twoToneColor="#f5222d" />);
+    expect(wrapper).toMatchSnapshot();
+
+    wrapper = render(<CheckCircleTwoTone twoToneColor={['#f5222d', '#eb2f96']} />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should support config global two-tone primary color', () => {
+    expect(typeof getTwoToneColor()).toBe('string');
+
     setTwoToneColor('#1890ff');
     expect(getTwoToneColor()).toBe('#1890ff');
-    const wrapper = render(<CheckCircleTwoTone />);
+    let wrapper = render(<CheckCircleTwoTone />);
+    expect(wrapper).toMatchSnapshot();
+
+    setTwoToneColor(['#1890ff', '#eb2f96']);
+    expect(getTwoToneColor()).toEqual(['#1890ff', '#eb2f96']);
+
+    wrapper = render(<CheckCircleTwoTone />);
+    expect(wrapper).toMatchSnapshot();
+
+    setTwoToneColor(['#1890ff', getSecondaryColor('#1890ff')]);
+    expect(getTwoToneColor()).toEqual(['#1890ff', getSecondaryColor('#1890ff')]);
+
+    wrapper = render(<CheckCircleTwoTone />);
     expect(wrapper).toMatchSnapshot();
   });
 

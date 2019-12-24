@@ -64,6 +64,16 @@ export function getSecondaryColor(primaryColor: string): string {
   return generateColor(primaryColor)[0];
 }
 
+export function normalizeTwoToneColors(
+  twoToneColor: string | [string, string] | undefined,
+): string[] {
+  if (!twoToneColor) {
+    return [];
+  }
+
+  return Array.isArray(twoToneColor) ? twoToneColor : [twoToneColor];
+}
+
 // These props make sure that the SVG behaviours like general text.
 // Reference: https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
 export const svgBaseProps = {

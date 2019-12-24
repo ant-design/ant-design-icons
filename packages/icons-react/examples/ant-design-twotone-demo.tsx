@@ -1,12 +1,13 @@
 import * as React from 'react';
 
-import { SmileTwoTone, HeartTwoTone, CheckCircleTwoTone } from '../src';
+import { AlertTwoTone, SmileTwoTone, HeartTwoTone, CheckCircleTwoTone } from '../src';
 
 export default () => (
-  <div className='icons-list'>
+  <div className="icons-list">
     <SmileTwoTone />
-    <HeartTwoTone twoToneColor='#eb2f96' />
+    <HeartTwoTone twoToneColor="#eb2f96" />
     <HeartTwoTone />
-    <CheckCircleTwoTone twoToneColor='#52c41a' />
+    <CheckCircleTwoTone twoToneColor="#52c41a" />
+    <AlertTwoTone twoToneColor={['#52c41a', 'transparent']} />
   </div>
 );

@@ -1,12 +1,20 @@
 import ReactIcon from './IconBase';
+import { normalizeTwoToneColors } from '../utils';
 
-export function setTwoToneColor(primaryColor: string): void {
+export type TwoToneColor = string | [string, string];
+
+export function setTwoToneColor(twoToneColor: TwoToneColor): void {
+  const [primaryColor, secondaryColor] = normalizeTwoToneColors(twoToneColor);
   return ReactIcon.setTwoToneColors({
     primaryColor,
+    secondaryColor,
   });
 }
 
-export function getTwoToneColor(): string {
+export function getTwoToneColor(): TwoToneColor {
   const colors = ReactIcon.getTwoToneColors();
-  return colors.primaryColor;
+  if (!colors.calculated) {
+    return colors.primaryColor;
+  }
+  return [colors.primaryColor, colors.secondaryColor];
 }
