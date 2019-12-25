@@ -105,6 +105,7 @@ async function generateEntries() {
     await fsPromises.writeFile(
       path.resolve(__dirname, `../${svgIdentifier}.d.ts`),
       `
+import Vue from 'vue';
 import { IconDefinition } from '@ant-design/icons-svg/lib/types';
 declare class ${svgIdentifier} extends Vue {
   static install(vue: typeof Vue): void;
