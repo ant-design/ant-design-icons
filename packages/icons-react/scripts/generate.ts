@@ -53,6 +53,7 @@ export default <%= svgIdentifier %>;
 
   // generate icon index
   const entryText = Object.keys(allIconDefs)
+    .sort()
     .map(svgIdentifier => {
       return `export { default as ${svgIdentifier} } from './${svgIdentifier}';`;
     })
