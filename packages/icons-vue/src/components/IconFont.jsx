@@ -1,5 +1,5 @@
-import Icon from "./Icon";
-import { mergeProps } from "../utils";
+import Icon from './Icon';
+import { mergeProps } from '../utils';
 
 const customCache = new Set();
 
@@ -13,24 +13,24 @@ export default function create(options = {}) {
    * that loads SVG symbols and insert the SVG Element into the document body.
    */
   if (
-    typeof document !== "undefined" &&
-    typeof window !== "undefined" &&
-    typeof document.createElement === "function" &&
-    typeof scriptUrl === "string" &&
+    typeof document !== 'undefined' &&
+    typeof window !== 'undefined' &&
+    typeof document.createElement === 'function' &&
+    typeof scriptUrl === 'string' &&
     scriptUrl.length &&
     !customCache.has(scriptUrl)
   ) {
-    const script = document.createElement("script");
-    script.setAttribute("src", scriptUrl);
-    script.setAttribute("data-namespace", scriptUrl);
+    const script = document.createElement('script');
+    script.setAttribute('src', scriptUrl);
+    script.setAttribute('data-namespace', scriptUrl);
     customCache.add(scriptUrl);
     document.body.appendChild(script);
   }
 
   const Iconfont = {
-    name: "Iconfont",
+    name: 'Iconfont',
     functional: true,
-    props: ["type"],
+    props: ['type'],
     render(h, ctx) {
       const { data: { attrs, ...restData } = {}, props = {}, listeners, children } = ctx;
       const { type, ...restProps } = {
@@ -41,14 +41,14 @@ export default function create(options = {}) {
       // children > type
       let content = null;
       if (props.type) {
-        content = <use {...{ attrs: { "xlink:href": `#${type}` } }} />;
+        content = <use {...{ attrs: { 'xlink:href': `#${type}` } }} />;
       }
       if (children) {
         content = children;
       }
       const iconProps = mergeProps(
         { ...restData, attrs: restProps, on: listeners },
-        extraCommonProps
+        extraCommonProps,
       );
       return <Icon {...iconProps}>{content}</Icon>;
     },

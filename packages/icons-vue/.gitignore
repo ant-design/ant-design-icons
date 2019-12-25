@@ -30,3 +30,9 @@ build/
 
 # publish
 *.tgz
+
+/icons
+/*.js
+/*.d.ts
+!.jest.js
+!Icon.d.ts

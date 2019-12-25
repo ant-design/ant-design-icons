@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import FilePdfFillSvg from '@ant-design/icons-svg/lib/fill/FilePdfFill';
+import FilePdfFilledSvg from '@ant-design/icons-svg/lib/asn/FilePdfFilled';
 
 export default {
   name: 'IconFilePdfFilled',
   displayName: 'FilePdfFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FilePdfFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: FilePdfFilledSvg } },
+      children,
     ),
 };

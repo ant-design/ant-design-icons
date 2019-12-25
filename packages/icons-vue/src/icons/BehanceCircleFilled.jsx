@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import BehanceCircleFillSvg from '@ant-design/icons-svg/lib/fill/BehanceCircleFill';
+import BehanceCircleFilledSvg from '@ant-design/icons-svg/lib/asn/BehanceCircleFilled';
 
 export default {
   name: 'IconBehanceCircleFilled',
   displayName: 'BehanceCircleFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BehanceCircleFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: BehanceCircleFilledSvg } },
+      children,
     ),
 };

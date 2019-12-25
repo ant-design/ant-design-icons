@@ -135,7 +135,9 @@ let cssInjectedFlag = false;
 export const useInsertStyles = (styleStr = iconStyles) => {
   Vue.nextTick(() => {
     if (!cssInjectedFlag) {
-      insertCss(styleStr);
+      insertCss(styleStr, {
+        prepend: true,
+      });
       cssInjectedFlag = true;
     }
   });

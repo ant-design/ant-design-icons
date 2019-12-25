@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import SlidersFillSvg from '@ant-design/icons-svg/lib/fill/SlidersFill';
+import SlidersFilledSvg from '@ant-design/icons-svg/lib/asn/SlidersFilled';
 
 export default {
   name: 'IconSlidersFilled',
   displayName: 'SlidersFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SlidersFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: SlidersFilledSvg } },
+      children,
     ),
 };

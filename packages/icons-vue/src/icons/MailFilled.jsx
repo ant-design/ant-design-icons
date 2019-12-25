@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import MailFillSvg from '@ant-design/icons-svg/lib/fill/MailFill';
+import MailFilledSvg from '@ant-design/icons-svg/lib/asn/MailFilled';
 
 export default {
   name: 'IconMailFilled',
   displayName: 'MailFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: MailFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: MailFilledSvg } },
+      children,
     ),
 };

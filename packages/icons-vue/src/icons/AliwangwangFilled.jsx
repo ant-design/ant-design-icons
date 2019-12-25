@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import AliwangwangFillSvg from '@ant-design/icons-svg/lib/fill/AliwangwangFill';
+import AliwangwangFilledSvg from '@ant-design/icons-svg/lib/asn/AliwangwangFilled';
 
 export default {
   name: 'IconAliwangwangFilled',
   displayName: 'AliwangwangFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AliwangwangFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: AliwangwangFilledSvg } },
+      children,
     ),
 };

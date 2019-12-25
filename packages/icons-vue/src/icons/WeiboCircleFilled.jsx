@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import WeiboCircleFillSvg from '@ant-design/icons-svg/lib/fill/WeiboCircleFill';
+import WeiboCircleFilledSvg from '@ant-design/icons-svg/lib/asn/WeiboCircleFilled';
 
 export default {
   name: 'IconWeiboCircleFilled',
   displayName: 'WeiboCircleFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: WeiboCircleFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: WeiboCircleFilledSvg } },
+      children,
     ),
 };

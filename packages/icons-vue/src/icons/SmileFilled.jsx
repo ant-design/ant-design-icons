@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import SmileFillSvg from '@ant-design/icons-svg/lib/fill/SmileFill';
+import SmileFilledSvg from '@ant-design/icons-svg/lib/asn/SmileFilled';
 
 export default {
   name: 'IconSmileFilled',
   displayName: 'SmileFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SmileFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: SmileFilledSvg } },
+      children,
     ),
 };

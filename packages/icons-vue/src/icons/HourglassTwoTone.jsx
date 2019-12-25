@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import HourglassTwoToneSvg from '@ant-design/icons-svg/lib/twotone/HourglassTwoTone';
+import HourglassTwoToneSvg from '@ant-design/icons-svg/lib/asn/HourglassTwoTone';
 
 export default {
   name: 'IconHourglassTwoTone',
   displayName: 'HourglassTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: HourglassTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: HourglassTwoToneSvg } },
+      children,
     ),
 };

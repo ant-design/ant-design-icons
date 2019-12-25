@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import YuqueFillSvg from '@ant-design/icons-svg/lib/fill/YuqueFill';
+import YuqueFilledSvg from '@ant-design/icons-svg/lib/asn/YuqueFilled';
 
 export default {
   name: 'IconYuqueFilled',
   displayName: 'YuqueFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: YuqueFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: YuqueFilledSvg } },
+      children,
     ),
 };

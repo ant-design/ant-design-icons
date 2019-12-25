@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import MediumSquareFillSvg from '@ant-design/icons-svg/lib/fill/MediumSquareFill';
+import MediumSquareFilledSvg from '@ant-design/icons-svg/lib/asn/MediumSquareFilled';
 
 export default {
   name: 'IconMediumSquareFilled',
   displayName: 'MediumSquareFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: MediumSquareFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: MediumSquareFilledSvg } },
+      children,
     ),
 };

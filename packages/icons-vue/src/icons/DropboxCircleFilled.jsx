@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import DropboxCircleFillSvg from '@ant-design/icons-svg/lib/fill/DropboxCircleFill';
+import DropboxCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DropboxCircleFilled';
 
 export default {
   name: 'IconDropboxCircleFilled',
   displayName: 'DropboxCircleFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DropboxCircleFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: DropboxCircleFilledSvg } },
+      children,
     ),
 };

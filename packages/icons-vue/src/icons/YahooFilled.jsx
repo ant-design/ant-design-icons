@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import YahooFillSvg from '@ant-design/icons-svg/lib/fill/YahooFill';
+import YahooFilledSvg from '@ant-design/icons-svg/lib/asn/YahooFilled';
 
 export default {
   name: 'IconYahooFilled',
   displayName: 'YahooFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: YahooFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: YahooFilledSvg } },
+      children,
     ),
 };

@@ -13,26 +13,22 @@
     ],
     "license": "MIT",
     "scripts": {
-        "cleanup": "./scripts/cleanup.sh",
+        "clean": "./scripts/cleanup.sh",
         "start": "vc-tools run server",
         "lint": "eslint -c ./.eslintrc --fix --ext .jsx,.js,.vue ./src",
         "compile": "vc-tools run compile --babel-runtime",
         "build": "vc-tools run build",
         "dist": "vc-tools run dist",
         "test": "cross-env NODE_ENV=test jest --config .jest.js",
-        "generate": "node scripts/generateIcons.js",
-        "prepublishOnly": "npm run lint && npm run test && npm run compile && np --no-cleanup --yolo --no-publish"
+        "generate": "rimraf src/icons && node scripts/generate.js --target=icon",
+        "postcompile": "npm run clean && node scripts/generate.js --target=entry",
+        "prepublishOnly": "npm run lint && npm run generate && npm run compile && npm run test && np --no-cleanup --yolo --no-publish"
     },
-    "files": [
-        "es",
-        "lib"
-    ],
     "peerDependencies": {
         "vue": ">=2.5.0",
         "vue-template-compiler": ">=2.5.0"
     },
     "devDependencies": {
-        "@ant-design/icons": "^2.0.0",
         "@types/jest": "^24.0.17",
         "@types/node": "^10.5.5",
         "@types/vue": "^2.0.0",

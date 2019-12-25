@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import RedditCircleFillSvg from '@ant-design/icons-svg/lib/fill/RedditCircleFill';
+import RedditCircleFilledSvg from '@ant-design/icons-svg/lib/asn/RedditCircleFilled';
 
 export default {
   name: 'IconRedditCircleFilled',
   displayName: 'RedditCircleFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RedditCircleFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: RedditCircleFilledSvg } },
+      children,
     ),
 };

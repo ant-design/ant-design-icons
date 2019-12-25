@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import YoutubeFillSvg from '@ant-design/icons-svg/lib/fill/YoutubeFill';
+import YoutubeFilledSvg from '@ant-design/icons-svg/lib/asn/YoutubeFilled';
 
 export default {
   name: 'IconYoutubeFilled',
   displayName: 'YoutubeFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: YoutubeFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: YoutubeFilledSvg } },
+      children,
     ),
 };

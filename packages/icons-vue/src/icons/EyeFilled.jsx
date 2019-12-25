@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import EyeFillSvg from '@ant-design/icons-svg/lib/fill/EyeFill';
+import EyeFilledSvg from '@ant-design/icons-svg/lib/asn/EyeFilled';
 
 export default {
   name: 'IconEyeFilled',
   displayName: 'EyeFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: EyeFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: EyeFilledSvg } },
+      children,
     ),
 };

@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import BoxPlotTwoToneSvg from '@ant-design/icons-svg/lib/twotone/BoxPlotTwoTone';
+import BoxPlotTwoToneSvg from '@ant-design/icons-svg/lib/asn/BoxPlotTwoTone';
 
 export default {
   name: 'IconBoxPlotTwoTone',
   displayName: 'BoxPlotTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BoxPlotTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: BoxPlotTwoToneSvg } },
+      children,
     ),
 };

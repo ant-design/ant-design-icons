@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import PushpinTwoToneSvg from '@ant-design/icons-svg/lib/twotone/PushpinTwoTone';
+import PushpinTwoToneSvg from '@ant-design/icons-svg/lib/asn/PushpinTwoTone';
 
 export default {
   name: 'IconPushpinTwoTone',
   displayName: 'PushpinTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PushpinTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: PushpinTwoToneSvg } },
+      children,
     ),
 };

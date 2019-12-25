@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import CaretDownFillSvg from '@ant-design/icons-svg/lib/fill/CaretDownFill';
+import CaretDownFilledSvg from '@ant-design/icons-svg/lib/asn/CaretDownFilled';
 
 export default {
   name: 'IconCaretDownFilled',
   displayName: 'CaretDownFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CaretDownFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: CaretDownFilledSvg } },
+      children,
     ),
 };

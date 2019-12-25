@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import WeiboSquareFillSvg from '@ant-design/icons-svg/lib/fill/WeiboSquareFill';
+import WeiboSquareFilledSvg from '@ant-design/icons-svg/lib/asn/WeiboSquareFilled';
 
 export default {
   name: 'IconWeiboSquareFilled',
   displayName: 'WeiboSquareFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: WeiboSquareFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: WeiboSquareFilledSvg } },
+      children,
     ),
 };

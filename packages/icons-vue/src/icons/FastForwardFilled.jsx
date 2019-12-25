@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import FastForwardFillSvg from '@ant-design/icons-svg/lib/fill/FastForwardFill';
+import FastForwardFilledSvg from '@ant-design/icons-svg/lib/asn/FastForwardFilled';
 
 export default {
   name: 'IconFastForwardFilled',
   displayName: 'FastForwardFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FastForwardFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: FastForwardFilledSvg } },
+      children,
     ),
 };

@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import VideoCameraFillSvg from '@ant-design/icons-svg/lib/fill/VideoCameraFill';
+import VideoCameraFilledSvg from '@ant-design/icons-svg/lib/asn/VideoCameraFilled';
 
 export default {
   name: 'IconVideoCameraFilled',
   displayName: 'VideoCameraFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: VideoCameraFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: VideoCameraFilledSvg } },
+      children,
     ),
 };

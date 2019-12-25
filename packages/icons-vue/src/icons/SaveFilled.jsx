@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import SaveFillSvg from '@ant-design/icons-svg/lib/fill/SaveFill';
+import SaveFilledSvg from '@ant-design/icons-svg/lib/asn/SaveFilled';
 
 export default {
   name: 'IconSaveFilled',
   displayName: 'SaveFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SaveFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: SaveFilledSvg } },
+      children,
     ),
 };

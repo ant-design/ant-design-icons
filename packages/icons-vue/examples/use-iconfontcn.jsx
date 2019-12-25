@@ -1,8 +1,8 @@
-import Vue from "vue";
-import { createFromIconfontCN } from "../src";
+import Vue from 'vue';
+import { createFromIconfontCN } from '../src';
 
 const IconFont = createFromIconfontCN({
-  scriptUrl: "//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"
+  scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
 });
 
 const SimpleDemo = {
@@ -20,12 +20,12 @@ const SimpleDemo = {
         <IconFont type="icon-twitter" />
       </div>
     );
-  }
+  },
 };
 
 new Vue({
-  el: "#__vue-content>div",
+  el: '#__vue-content>div',
   render() {
     return <SimpleDemo />;
-  }
+  },
 });

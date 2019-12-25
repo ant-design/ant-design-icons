@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import TrademarkCircleFillSvg from '@ant-design/icons-svg/lib/fill/TrademarkCircleFill';
+import TrademarkCircleFilledSvg from '@ant-design/icons-svg/lib/asn/TrademarkCircleFilled';
 
 export default {
   name: 'IconTrademarkCircleFilled',
   displayName: 'TrademarkCircleFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: TrademarkCircleFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: TrademarkCircleFilledSvg } },
+      children,
     ),
 };

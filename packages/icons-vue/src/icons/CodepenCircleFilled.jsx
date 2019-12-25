@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import CodepenCircleFillSvg from '@ant-design/icons-svg/lib/fill/CodepenCircleFill';
+import CodepenCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CodepenCircleFilled';
 
 export default {
   name: 'IconCodepenCircleFilled',
   displayName: 'CodepenCircleFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CodepenCircleFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: CodepenCircleFilledSvg } },
+      children,
     ),
 };

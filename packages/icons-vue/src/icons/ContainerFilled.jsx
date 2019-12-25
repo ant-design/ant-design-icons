@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import ContainerFillSvg from '@ant-design/icons-svg/lib/fill/ContainerFill';
+import ContainerFilledSvg from '@ant-design/icons-svg/lib/asn/ContainerFilled';
 
 export default {
   name: 'IconContainerFilled',
   displayName: 'ContainerFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ContainerFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: ContainerFilledSvg } },
+      children,
     ),
 };

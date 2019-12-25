@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import SketchSquareFillSvg from '@ant-design/icons-svg/lib/fill/SketchSquareFill';
+import SketchSquareFilledSvg from '@ant-design/icons-svg/lib/asn/SketchSquareFilled';
 
 export default {
   name: 'IconSketchSquareFilled',
   displayName: 'SketchSquareFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SketchSquareFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: SketchSquareFilledSvg } },
+      children,
     ),
 };

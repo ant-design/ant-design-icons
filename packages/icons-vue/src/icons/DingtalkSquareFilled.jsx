@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import DingtalkSquareFillSvg from '@ant-design/icons-svg/lib/fill/DingtalkSquareFill';
+import DingtalkSquareFilledSvg from '@ant-design/icons-svg/lib/asn/DingtalkSquareFilled';
 
 export default {
   name: 'IconDingtalkSquareFilled',
   displayName: 'DingtalkSquareFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DingtalkSquareFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: DingtalkSquareFilledSvg } },
+      children,
     ),
 };

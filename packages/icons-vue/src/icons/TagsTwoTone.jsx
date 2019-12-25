@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import TagsTwoToneSvg from '@ant-design/icons-svg/lib/twotone/TagsTwoTone';
+import TagsTwoToneSvg from '@ant-design/icons-svg/lib/asn/TagsTwoTone';
 
 export default {
   name: 'IconTagsTwoTone',
   displayName: 'TagsTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: TagsTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: TagsTwoToneSvg } },
+      children,
     ),
 };

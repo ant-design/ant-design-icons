@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import HeartFillSvg from '@ant-design/icons-svg/lib/fill/HeartFill';
+import HeartFilledSvg from '@ant-design/icons-svg/lib/asn/HeartFilled';
 
 export default {
   name: 'IconHeartFilled',
   displayName: 'HeartFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: HeartFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: HeartFilledSvg } },
+      children,
     ),
 };

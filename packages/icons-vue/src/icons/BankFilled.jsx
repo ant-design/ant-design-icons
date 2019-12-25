@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import BankFillSvg from '@ant-design/icons-svg/lib/fill/BankFill';
+import BankFilledSvg from '@ant-design/icons-svg/lib/asn/BankFilled';
 
 export default {
   name: 'IconBankFilled',
   displayName: 'BankFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BankFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: BankFilledSvg } },
+      children,
     ),
 };

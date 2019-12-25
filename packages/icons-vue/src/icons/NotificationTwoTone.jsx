@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import NotificationTwoToneSvg from '@ant-design/icons-svg/lib/twotone/NotificationTwoTone';
+import NotificationTwoToneSvg from '@ant-design/icons-svg/lib/asn/NotificationTwoTone';
 
 export default {
   name: 'IconNotificationTwoTone',
   displayName: 'NotificationTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: NotificationTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: NotificationTwoToneSvg } },
+      children,
     ),
 };

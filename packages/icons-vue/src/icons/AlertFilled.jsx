@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import AlertFillSvg from '@ant-design/icons-svg/lib/fill/AlertFill';
+import AlertFilledSvg from '@ant-design/icons-svg/lib/asn/AlertFilled';
 
 export default {
   name: 'IconAlertFilled',
   displayName: 'AlertFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: AlertFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: AlertFilledSvg } },
+      children,
     ),
 };

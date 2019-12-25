@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import GoogleSquareFillSvg from '@ant-design/icons-svg/lib/fill/GoogleSquareFill';
+import GoogleSquareFilledSvg from '@ant-design/icons-svg/lib/asn/GoogleSquareFilled';
 
 export default {
   name: 'IconGoogleSquareFilled',
   displayName: 'GoogleSquareFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: GoogleSquareFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: GoogleSquareFilledSvg } },
+      children,
     ),
 };

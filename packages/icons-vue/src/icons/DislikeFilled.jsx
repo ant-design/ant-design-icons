@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import DislikeFillSvg from '@ant-design/icons-svg/lib/fill/DislikeFill';
+import DislikeFilledSvg from '@ant-design/icons-svg/lib/asn/DislikeFilled';
 
 export default {
   name: 'IconDislikeFilled',
   displayName: 'DislikeFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DislikeFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: DislikeFilledSvg } },
+      children,
     ),
 };

@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import LeftSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/LeftSquareTwoTone';
+import LeftSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/LeftSquareTwoTone';
 
 export default {
   name: 'IconLeftSquareTwoTone',
   displayName: 'LeftSquareTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: LeftSquareTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: LeftSquareTwoToneSvg } },
+      children,
     ),
 };

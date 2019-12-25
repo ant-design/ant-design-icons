@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import FileExclamationFillSvg from '@ant-design/icons-svg/lib/fill/FileExclamationFill';
+import FileExclamationFilledSvg from '@ant-design/icons-svg/lib/asn/FileExclamationFilled';
 
 export default {
   name: 'IconFileExclamationFilled',
   displayName: 'FileExclamationFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FileExclamationFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: FileExclamationFilledSvg } },
+      children,
     ),
 };

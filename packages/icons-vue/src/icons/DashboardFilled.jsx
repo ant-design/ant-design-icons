@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import DashboardFillSvg from '@ant-design/icons-svg/lib/fill/DashboardFill';
+import DashboardFilledSvg from '@ant-design/icons-svg/lib/asn/DashboardFilled';
 
 export default {
   name: 'IconDashboardFilled',
   displayName: 'DashboardFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: DashboardFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: DashboardFilledSvg } },
+      children,
     ),
 };

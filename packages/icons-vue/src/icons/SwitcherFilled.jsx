@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import SwitcherFillSvg from '@ant-design/icons-svg/lib/fill/SwitcherFill';
+import SwitcherFilledSvg from '@ant-design/icons-svg/lib/asn/SwitcherFilled';
 
 export default {
   name: 'IconSwitcherFilled',
   displayName: 'SwitcherFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: SwitcherFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: SwitcherFilledSvg } },
+      children,
     ),
 };

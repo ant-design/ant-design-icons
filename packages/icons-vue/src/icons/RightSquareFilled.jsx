@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import RightSquareFillSvg from '@ant-design/icons-svg/lib/fill/RightSquareFill';
+import RightSquareFilledSvg from '@ant-design/icons-svg/lib/asn/RightSquareFilled';
 
 export default {
   name: 'IconRightSquareFilled',
   displayName: 'RightSquareFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RightSquareFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: RightSquareFilledSvg } },
+      children,
     ),
 };

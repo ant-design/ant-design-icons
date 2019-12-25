@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import Html5FillSvg from '@ant-design/icons-svg/lib/fill/Html5Fill';
+import Html5FilledSvg from '@ant-design/icons-svg/lib/asn/Html5Filled';
 
 export default {
   name: 'IconHtml5Filled',
   displayName: 'Html5Filled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: Html5FillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: Html5FilledSvg } },
+      children,
     ),
 };

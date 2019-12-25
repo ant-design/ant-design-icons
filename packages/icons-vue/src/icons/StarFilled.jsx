@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import StarFillSvg from '@ant-design/icons-svg/lib/fill/StarFill';
+import StarFilledSvg from '@ant-design/icons-svg/lib/asn/StarFilled';
 
 export default {
   name: 'IconStarFilled',
   displayName: 'StarFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: StarFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: StarFilledSvg } },
+      children,
     ),
 };

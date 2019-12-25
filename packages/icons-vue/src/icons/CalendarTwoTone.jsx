@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import CalendarTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CalendarTwoTone';
+import CalendarTwoToneSvg from '@ant-design/icons-svg/lib/asn/CalendarTwoTone';
 
 export default {
   name: 'IconCalendarTwoTone',
   displayName: 'CalendarTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CalendarTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: CalendarTwoToneSvg } },
+      children,
     ),
 };

@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import ScheduleFillSvg from '@ant-design/icons-svg/lib/fill/ScheduleFill';
+import ScheduleFilledSvg from '@ant-design/icons-svg/lib/asn/ScheduleFilled';
 
 export default {
   name: 'IconScheduleFilled',
   displayName: 'ScheduleFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ScheduleFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: ScheduleFilledSvg } },
+      children,
     ),
 };

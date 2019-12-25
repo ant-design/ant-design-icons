@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import FolderOpenTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FolderOpenTwoTone';
+import FolderOpenTwoToneSvg from '@ant-design/icons-svg/lib/asn/FolderOpenTwoTone';
 
 export default {
   name: 'IconFolderOpenTwoTone',
   displayName: 'FolderOpenTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FolderOpenTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: FolderOpenTwoToneSvg } },
+      children,
     ),
 };

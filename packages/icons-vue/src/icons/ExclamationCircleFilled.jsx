@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import ExclamationCircleFillSvg from '@ant-design/icons-svg/lib/fill/ExclamationCircleFill';
+import ExclamationCircleFilledSvg from '@ant-design/icons-svg/lib/asn/ExclamationCircleFilled';
 
 export default {
   name: 'IconExclamationCircleFilled',
   displayName: 'ExclamationCircleFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ExclamationCircleFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: ExclamationCircleFilledSvg } },
+      children,
     ),
 };

@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import MinusSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/MinusSquareTwoTone';
+import MinusSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/MinusSquareTwoTone';
 
 export default {
   name: 'IconMinusSquareTwoTone',
   displayName: 'MinusSquareTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: MinusSquareTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: MinusSquareTwoToneSvg } },
+      children,
     ),
 };

@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import ReconciliationFillSvg from '@ant-design/icons-svg/lib/fill/ReconciliationFill';
+import ReconciliationFilledSvg from '@ant-design/icons-svg/lib/asn/ReconciliationFilled';
 
 export default {
   name: 'IconReconciliationFilled',
   displayName: 'ReconciliationFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: ReconciliationFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: ReconciliationFilledSvg } },
+      children,
     ),
 };

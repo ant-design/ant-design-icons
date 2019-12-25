@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import FileZipFillSvg from '@ant-design/icons-svg/lib/fill/FileZipFill';
+import FileZipFilledSvg from '@ant-design/icons-svg/lib/asn/FileZipFilled';
 
 export default {
   name: 'IconFileZipFilled',
   displayName: 'FileZipFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FileZipFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: FileZipFilledSvg } },
+      children,
     ),
 };

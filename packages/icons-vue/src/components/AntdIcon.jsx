@@ -1,13 +1,13 @@
-import classNames from "classnames";
-import VueIcon from "./IconBase";
-import { setTwoToneColor, getTwoToneColor } from "./twoTonePrimaryColor";
+import classNames from 'classnames';
+import VueIcon from './IconBase';
+import { setTwoToneColor, getTwoToneColor } from './twoTonePrimaryColor';
 
 // Initial setting
-setTwoToneColor("#1890ff");
+setTwoToneColor('#1890ff');
 
 const Icon = {
   functional: true,
-  props: ["icon", "spin", "rotate", "tabIndex", "twoToneColor"],
+  props: ['icon', 'spin', 'rotate', 'tabIndex', 'twoToneColor'],
   render(h, ctx) {
     const { data: { attrs, ...restData } = {}, props = {}, listeners } = ctx;
     const {
@@ -21,12 +21,12 @@ const Icon = {
       ...restProps
     } = { ...attrs, ...props };
     const { click: onClick } = listeners;
-    const classString = classNames("anticon", {
+    const classString = classNames('anticon', {
       [`anticon-${icon.name}`]: Boolean(icon.name),
     });
 
     const svgClassString = classNames({
-      "anticon-spin": !!spin || icon.name === "loading",
+      'anticon-spin': !!spin || icon.name === 'loading',
     });
 
     let iconTabIndex = tabIndex;
@@ -49,18 +49,13 @@ const Icon = {
         class={classString}
         {...{ ...restData, attrs: restProps, on: listeners }}
       >
-        <VueIcon
-          class={svgClassString}
-          icon={icon}
-          primaryColor={twoToneColor}
-          style={svgStyle}
-        />
+        <VueIcon class={svgClassString} icon={icon} primaryColor={twoToneColor} style={svgStyle} />
       </span>
     );
   },
 };
 
-Icon.name = "AntdIcon";
+Icon.name = 'AntdIcon';
 Icon.getTwoToneColor = getTwoToneColor;
 Icon.setTwoToneColor = setTwoToneColor;
 

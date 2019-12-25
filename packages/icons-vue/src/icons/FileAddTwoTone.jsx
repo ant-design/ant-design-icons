@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import FileAddTwoToneSvg from '@ant-design/icons-svg/lib/twotone/FileAddTwoTone';
+import FileAddTwoToneSvg from '@ant-design/icons-svg/lib/asn/FileAddTwoTone';
 
 export default {
   name: 'IconFileAddTwoTone',
   displayName: 'FileAddTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FileAddTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: FileAddTwoToneSvg } },
+      children,
     ),
 };

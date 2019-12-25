@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import UsbTwoToneSvg from '@ant-design/icons-svg/lib/twotone/UsbTwoTone';
+import UsbTwoToneSvg from '@ant-design/icons-svg/lib/asn/UsbTwoTone';
 
 export default {
   name: 'IconUsbTwoTone',
   displayName: 'UsbTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: UsbTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: UsbTwoToneSvg } },
+      children,
     ),
 };

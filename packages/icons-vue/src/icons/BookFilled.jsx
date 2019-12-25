@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import BookFillSvg from '@ant-design/icons-svg/lib/fill/BookFill';
+import BookFilledSvg from '@ant-design/icons-svg/lib/asn/BookFilled';
 
 export default {
   name: 'IconBookFilled',
   displayName: 'BookFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: BookFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: BookFilledSvg } },
+      children,
     ),
 };

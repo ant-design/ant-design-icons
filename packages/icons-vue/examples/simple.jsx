@@ -1,26 +1,26 @@
-import Vue from "vue";
-import { AntDesign, Dashboard, Twitter } from "../src";
-import "./index.less";
+import Vue from 'vue';
+import { AntDesignOutlined, DashboardOutlined, TwitterOutlined } from '../src';
+import './index.less';
 
-const displaySize = ["64px", "48px", "32px", "24px", "16px", "12px", "8px"];
+const displaySize = ['64px', '48px', '32px', '24px', '16px', '12px', '8px'];
 const relatedHref =
-  "https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4";
+  'https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4';
 const SimpleDemo = {
   methods: {
     renderStatement(fontSize) {
       const style = {
         fontSize,
-        color: (fontSize === "48px" && "lightblue") || "inherit"
+        color: (fontSize === '48px' && 'lightblue') || 'inherit',
       };
       return (
         <div class="simple-wrap" key={fontSize} style={style}>
           {fontSize}
           Ant Design
-          <AntDesign />
+          <AntDesignOutlined />
           0123
-          <Dashboard />
+          <DashboardOutlined />
           你好
-          <Twitter />
+          <TwitterOutlined />
         </div>
       );
     },
@@ -28,7 +28,7 @@ const SimpleDemo = {
       return displaySize.map(fontSize => {
         return this.renderStatement(fontSize);
       });
-    }
+    },
   },
 
   render() {
@@ -36,19 +36,19 @@ const SimpleDemo = {
       <div>
         <h1>Simple Demo - Icons Alignments</h1>
         {this.renderStatements()}
-        See{" "}
-        <a href={relatedHref} target={"_blank"}>
+        See{' '}
+        <a href={relatedHref} target={'_blank'}>
           related blog
-        </a>{" "}
+        </a>{' '}
         for detail.
       </div>
     );
-  }
+  },
 };
 
 new Vue({
-  el: "#__vue-content>div",
+  el: '#__vue-content>div',
   render() {
     return <SimpleDemo />;
-  }
+  },
 });

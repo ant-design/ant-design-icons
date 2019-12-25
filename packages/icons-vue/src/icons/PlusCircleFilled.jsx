@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import PlusCircleFillSvg from '@ant-design/icons-svg/lib/fill/PlusCircleFill';
+import PlusCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PlusCircleFilled';
 
 export default {
   name: 'IconPlusCircleFilled',
   displayName: 'PlusCircleFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: PlusCircleFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: PlusCircleFilledSvg } },
+      children,
     ),
 };

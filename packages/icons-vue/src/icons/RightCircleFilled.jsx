@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import RightCircleFillSvg from '@ant-design/icons-svg/lib/fill/RightCircleFill';
+import RightCircleFilledSvg from '@ant-design/icons-svg/lib/asn/RightCircleFilled';
 
 export default {
   name: 'IconRightCircleFilled',
   displayName: 'RightCircleFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: RightCircleFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: RightCircleFilledSvg } },
+      children,
     ),
 };

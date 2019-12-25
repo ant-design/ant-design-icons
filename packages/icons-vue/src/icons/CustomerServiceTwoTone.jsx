@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import CustomerServiceTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CustomerServiceTwoTone';
+import CustomerServiceTwoToneSvg from '@ant-design/icons-svg/lib/asn/CustomerServiceTwoTone';
 
 export default {
   name: 'IconCustomerServiceTwoTone',
   displayName: 'CustomerServiceTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CustomerServiceTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: CustomerServiceTwoToneSvg } },
+      children,
     ),
 };

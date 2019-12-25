@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import FileExcelFillSvg from '@ant-design/icons-svg/lib/fill/FileExcelFill';
+import FileExcelFilledSvg from '@ant-design/icons-svg/lib/asn/FileExcelFilled';
 
 export default {
   name: 'IconFileExcelFilled',
   displayName: 'FileExcelFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: FileExcelFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: FileExcelFilledSvg } },
+      children,
     ),
 };

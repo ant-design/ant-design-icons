@@ -3,7 +3,7 @@ const manifest = require('@ant-design/icons-svg/lib/manifest').default;
 
 const themeMap = {
   fill: 'filled',
-  outline: '', // default theme
+  outline: 'outlined', // default theme
   twotone: 'twoTone',
 };
 
@@ -20,4 +20,4 @@ exports.getComponentNameList = () => {
     });
   });
   return icons;
-}
+};

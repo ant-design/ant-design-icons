@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import StopTwoToneSvg from '@ant-design/icons-svg/lib/twotone/StopTwoTone';
+import StopTwoToneSvg from '@ant-design/icons-svg/lib/asn/StopTwoTone';
 
 export default {
   name: 'IconStopTwoTone',
   displayName: 'StopTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: StopTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: StopTwoToneSvg } },
+      children,
     ),
 };

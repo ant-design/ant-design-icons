@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import TwitterSquareFillSvg from '@ant-design/icons-svg/lib/fill/TwitterSquareFill';
+import TwitterSquareFilledSvg from '@ant-design/icons-svg/lib/asn/TwitterSquareFilled';
 
 export default {
   name: 'IconTwitterSquareFilled',
   displayName: 'TwitterSquareFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: TwitterSquareFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: TwitterSquareFilledSvg } },
+      children,
     ),
 };

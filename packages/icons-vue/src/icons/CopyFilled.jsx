@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import CopyFillSvg from '@ant-design/icons-svg/lib/fill/CopyFill';
+import CopyFilledSvg from '@ant-design/icons-svg/lib/asn/CopyFilled';
 
 export default {
   name: 'IconCopyFilled',
   displayName: 'CopyFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CopyFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: CopyFilledSvg } },
+      children,
     ),
 };

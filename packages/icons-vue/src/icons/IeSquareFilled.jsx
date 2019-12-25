@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import IeSquareFillSvg from '@ant-design/icons-svg/lib/fill/IeSquareFill';
+import IeSquareFilledSvg from '@ant-design/icons-svg/lib/asn/IeSquareFilled';
 
 export default {
   name: 'IconIeSquareFilled',
   displayName: 'IeSquareFilled',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: IeSquareFillSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: IeSquareFilledSvg } },
+      children,
     ),
 };

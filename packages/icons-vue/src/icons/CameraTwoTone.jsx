@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import CameraTwoToneSvg from '@ant-design/icons-svg/lib/twotone/CameraTwoTone';
+import CameraTwoToneSvg from '@ant-design/icons-svg/lib/asn/CameraTwoTone';
 
 export default {
   name: 'IconCameraTwoTone',
   displayName: 'CameraTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: CameraTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: CameraTwoToneSvg } },
+      children,
     ),
 };

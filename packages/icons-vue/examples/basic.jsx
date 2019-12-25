@@ -1,24 +1,27 @@
 import Vue from 'vue';
-import { Home, SettingFilled } from '../src';
-import Icon, { Smile, Sync, Loading, Filter } from '../src';
+import { SmileOutlined, SyncOutlined, LoadingOutlined, HomeOutlined, SettingFilled } from '../src';
+import Icon, { FilterOutlined } from '../src';
+import { AntDesignOutlined } from '@ant-design/icons-svg';
+import IconBase from '../src/components/IconBase';
 
-Vue.component(Filter.name, Filter);
+Vue.component(FilterOutlined.name, FilterOutlined);
 const SimpleDemo = {
   render() {
     return (
       <div class="icons-list">
-        <Home />
+        <HomeOutlined />
         <SettingFilled />
-        <Smile />
-        <Sync spin />
-        <Smile rotate={180} />
-        <Loading />
-        <icon-filter />
+        <SmileOutlined />
+        <SyncOutlined spin />
+        <SmileOutlined rotate={180} />
+        <LoadingOutlined />
+        <icon-filter-outlined />
         <Icon viewBox="0 0 24 24">
           <title>Cool Home</title>
           <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
         </Icon>
         <Icon viewBox="0 0 24 24"></Icon>
+        <IconBase icon={AntDesignOutlined} />
       </div>
     );
   },

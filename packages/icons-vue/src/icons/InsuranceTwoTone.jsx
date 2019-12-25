@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import InsuranceTwoToneSvg from '@ant-design/icons-svg/lib/twotone/InsuranceTwoTone';
+import InsuranceTwoToneSvg from '@ant-design/icons-svg/lib/asn/InsuranceTwoTone';
 
 export default {
   name: 'IconInsuranceTwoTone',
   displayName: 'InsuranceTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: InsuranceTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: InsuranceTwoToneSvg } },
+      children,
     ),
 };

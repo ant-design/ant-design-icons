@@ -1,18 +1,18 @@
-
-// GENERATE BY ./scripts/generateIcons.js
+// GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
 
 import Icon from '../components/AntdIcon';
-import UpSquareTwoToneSvg from '@ant-design/icons-svg/lib/twotone/UpSquareTwoTone';
+import UpSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/UpSquareTwoTone';
 
 export default {
   name: 'IconUpSquareTwoTone',
   displayName: 'UpSquareTwoTone',
   functional: true,
-  render: (h, { data, children }) =>
+  props: [ ...Icon.props ],
+  render: (h, { data, children, props }) =>
     h(
       Icon,
-      { ...data, props: { ...data.props, icon: UpSquareTwoToneSvg } },
-      children
+      { ...data, props: { ...data.props, ...props, icon: UpSquareTwoToneSvg } },
+      children,
     ),
 };

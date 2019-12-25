@@ -1,5 +1,4 @@
-import Vue from 'vue';
-import { TwitterOutline, AntDesignOutline } from '@ant-design/icons-svg';
+import { TwitterOutlined, AntDesignOutlined } from '@ant-design/icons-svg';
 import { mount } from '@vue/test-utils';
 import Icon from '../src/components/IconBase';
 
@@ -7,7 +6,7 @@ describe('Vue AntdIcon Component', () => {
   it('should create SVG element.', () => {
     const iconProps = {
       props: {
-        icon: AntDesignOutline,
+        icon: AntDesignOutlined,
       },
       style: {
         fontSize: '3rem',
@@ -24,7 +23,7 @@ describe('Vue AntdIcon Component', () => {
   });
 
   it('should allow explicit import.', () => {
-    const icon = mount(Icon, { context: { props: { icon: TwitterOutline } } });
+    const icon = mount(Icon, { context: { props: { icon: TwitterOutlined } } });
     expect(typeof icon.find('path').vnode.data.attrs.d).toBe('string');
   });
 

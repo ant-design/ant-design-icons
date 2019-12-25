@@ -1,21 +1,20 @@
-import Vue from 'vue';
 import { mount } from '@vue/test-utils';
 import Icon from '../src/components/Icon';
 import createFromIconfontCN from '../src/components/IconFont';
 import { setTwoToneColor, getTwoToneColor } from '../src/components/twoTonePrimaryColor';
 import {
-  Home,
+  HomeOutlined,
   SettingFilled,
-  Smile,
-  Sync,
-  Loading,
+  SmileOutlined,
+  SyncOutlined,
+  LoadingOutlined,
   CheckCircleTwoTone,
-  ClockCircle,
+  ClockCircleOutlined,
 } from '../src/icons';
 
 describe('Icon', () => {
   it('should render to a <span class="xxx"><svg>...</svg></span>', () => {
-    const wrapper = mount(Home, { context: { class: 'my-icon-class' } });
+    const wrapper = mount(HomeOutlined, { context: { class: 'my-icon-class' } });
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -24,11 +23,11 @@ describe('Icon', () => {
       render() {
         return (
           <div>
-            <Home />
+            <HomeOutlined />
             <SettingFilled />
-            <Smile />
-            <Sync spin />
-            <Loading />
+            <SmileOutlined />
+            <SyncOutlined spin />
+            <LoadingOutlined />
           </div>
         );
       },
@@ -103,7 +102,7 @@ describe('Icon', () => {
     });
 
     it('does not warn', () => {
-      mount(ClockCircle);
+      mount(ClockCircleOutlined);
       expect(errorSpy).not.toHaveBeenCalled();
     });
   });

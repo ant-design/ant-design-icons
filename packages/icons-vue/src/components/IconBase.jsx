@@ -1,20 +1,13 @@
-import {
-  generate,
-  getSecondaryColor,
-  isIconDefinition,
-  warning,
-  useInsertStyles,
-} from "../utils";
+import { generate, getSecondaryColor, isIconDefinition, warning, useInsertStyles } from '../utils';
 
 const twoToneColorPalette = {
-  primaryColor: "#333",
-  secondaryColor: "#E6E6E6",
+  primaryColor: '#333',
+  secondaryColor: '#E6E6E6',
 };
 
 function setTwoToneColors({ primaryColor, secondaryColor }) {
   twoToneColorPalette.primaryColor = primaryColor;
-  twoToneColorPalette.secondaryColor =
-    secondaryColor || getSecondaryColor(primaryColor);
+  twoToneColorPalette.secondaryColor = secondaryColor || getSecondaryColor(primaryColor);
 }
 
 function getTwoToneColors() {
@@ -25,7 +18,7 @@ function getTwoToneColors() {
 
 const IconBase = {
   functional: true,
-  props: ["icon", "primaryColor", "secondaryColor"],
+  props: ['icon', 'primaryColor', 'secondaryColor'],
   render(h, ctx) {
     const { data: { attrs, ...restData } = {}, props = {}, listeners } = ctx;
     const { icon, primaryColor, secondaryColor, ...restProps } = {
@@ -43,17 +36,14 @@ const IconBase = {
 
     useInsertStyles();
 
-    warning(
-      isIconDefinition(icon),
-      `icon should be icon definiton, but got ${icon}`
-    );
+    warning(isIconDefinition(icon), `icon should be icon definiton, but got ${icon}`);
 
     if (!isIconDefinition(icon)) {
       return null;
     }
 
     let target = icon;
-    if (target && typeof target.icon === "function") {
+    if (target && typeof target.icon === 'function') {
       target = {
         ...target,
         icon: target.icon(colors.primaryColor, colors.secondaryColor),
@@ -63,11 +53,11 @@ const IconBase = {
     return generate(h, target.icon, `svg-${target.name}`, {
       ...restData,
       attrs: {
-        "data-icon": target.name,
-        width: "1em",
-        height: "1em",
-        fill: "currentColor",
-        "aria-hidden": "true",
+        'data-icon': target.name,
+        width: '1em',
+        height: '1em',
+        fill: 'currentColor',
+        'aria-hidden': 'true',
         ...restProps,
       },
       on: listeners,
@@ -75,7 +65,7 @@ const IconBase = {
   },
 };
 
-IconBase.name = "IconVue";
+IconBase.name = 'IconVue';
 IconBase.getTwoToneColors = getTwoToneColors;
 IconBase.setTwoToneColors = setTwoToneColors;
 
