@@ -1,5 +1,6 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
+
 export { default as AccountBookFilled } from './AccountBookFilled';
 export { default as AccountBookOutlined } from './AccountBookOutlined';
 export { default as AccountBookTwoTone } from './AccountBookTwoTone';
