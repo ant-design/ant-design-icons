@@ -1,8 +1,12 @@
 import * as allIconDefs from '@ant-design/icons-svg';
 import { IconDefinition } from '@ant-design/icons-svg/es/types';
 import * as path from 'path';
-import { promises as fsPromises } from 'fs';
+import * as fs from 'fs';
+import { promisify } from 'util';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { template } from 'lodash';
+
+const writeFile = promisify(fs.writeFile);
 
 interface IconDefinitionWithIdentifier extends IconDefinition {
   svgIdentifier: string;
@@ -26,9 +30,9 @@ function walk<T>(
 async function generateIcons() {
   const iconsDir = path.join(__dirname, '../src/icons');
   try {
-    await fsPromises.access(iconsDir);
+    await promisify(fs.access)(iconsDir);
   } catch (err) {
-    await fsPromises.mkdir(iconsDir);
+    await promisify(fs.mkdir)(iconsDir);
   }
 
   const render = template(`
@@ -45,7 +49,7 @@ export default <%= svgIdentifier %>;
 
   await walk(async ({ svgIdentifier }) => {
     // generate icon file
-    await fsPromises.writeFile(
+    await writeFile(
       path.resolve(__dirname, `../src/icons/${svgIdentifier}.tsx`),
       render({ svgIdentifier }),
     );
@@ -54,17 +58,17 @@ export default <%= svgIdentifier %>;
   // generate icon index
   const entryText = Object.keys(allIconDefs)
     .sort()
-    .map(svgIdentifier => {
-      return `export { default as ${svgIdentifier} } from './${svgIdentifier}';`;
-    })
+    .map(svgIdentifier => `export { default as ${svgIdentifier} } from './${svgIdentifier}';`)
     .join('\n');
 
-  await fsPromises.appendFile(
+  await promisify(fs.appendFile)(
     path.resolve(__dirname, '../src/icons/index.tsx'),
     `
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
-    `.trim() + '\n' + entryText,
+
+${entryText}
+    `.trim(),
   );
 }
 
@@ -87,7 +91,7 @@ async function generateEntries() {
 
   await walk(async ({ svgIdentifier }) => {
     // generate `Icon.js` in root folder
-    await fsPromises.writeFile(
+    await writeFile(
       path.resolve(__dirname, `../${svgIdentifier}.js`),
       render({
         svgIdentifier,
@@ -95,7 +99,7 @@ async function generateEntries() {
     );
 
     // generate `Icon.d.ts` in root folder
-    await fsPromises.writeFile(
+    await writeFile(
       path.resolve(__dirname, `../${svgIdentifier}.d.ts`),
       `export { default } from './lib/icons/${svgIdentifier}';`,
     );
