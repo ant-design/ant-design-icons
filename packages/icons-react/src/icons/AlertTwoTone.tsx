@@ -5,5 +5,10 @@ import React from 'react'
 import AlertTwoToneSvg from '@ant-design/icons-svg/lib/asn/AlertTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AlertTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={AlertTwoToneSvg} />;
-export default AlertTwoTone;
+const AlertTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={AlertTwoToneSvg} />;
+
+AlertTwoTone.displayName = 'AlertTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AlertTwoTone);

@@ -5,5 +5,10 @@ import React from 'react'
 import PushpinOutlinedSvg from '@ant-design/icons-svg/lib/asn/PushpinOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PushpinOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={PushpinOutlinedSvg} />;
-export default PushpinOutlined;
+const PushpinOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={PushpinOutlinedSvg} />;
+
+PushpinOutlined.displayName = 'PushpinOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PushpinOutlined);

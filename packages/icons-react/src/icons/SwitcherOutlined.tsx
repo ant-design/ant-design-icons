@@ -5,5 +5,10 @@ import React from 'react'
 import SwitcherOutlinedSvg from '@ant-design/icons-svg/lib/asn/SwitcherOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SwitcherOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={SwitcherOutlinedSvg} />;
-export default SwitcherOutlined;
+const SwitcherOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={SwitcherOutlinedSvg} />;
+
+SwitcherOutlined.displayName = 'SwitcherOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SwitcherOutlined);

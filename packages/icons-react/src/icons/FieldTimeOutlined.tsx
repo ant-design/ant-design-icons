@@ -5,5 +5,10 @@ import React from 'react'
 import FieldTimeOutlinedSvg from '@ant-design/icons-svg/lib/asn/FieldTimeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FieldTimeOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FieldTimeOutlinedSvg} />;
-export default FieldTimeOutlined;
+const FieldTimeOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FieldTimeOutlinedSvg} />;
+
+FieldTimeOutlined.displayName = 'FieldTimeOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldTimeOutlined);

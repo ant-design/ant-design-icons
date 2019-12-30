@@ -5,5 +5,10 @@ import React from 'react'
 import WifiOutlinedSvg from '@ant-design/icons-svg/lib/asn/WifiOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const WifiOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={WifiOutlinedSvg} />;
-export default WifiOutlined;
+const WifiOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={WifiOutlinedSvg} />;
+
+WifiOutlined.displayName = 'WifiOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WifiOutlined);

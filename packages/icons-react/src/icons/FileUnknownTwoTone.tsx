@@ -5,5 +5,10 @@ import React from 'react'
 import FileUnknownTwoToneSvg from '@ant-design/icons-svg/lib/asn/FileUnknownTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FileUnknownTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={FileUnknownTwoToneSvg} />;
-export default FileUnknownTwoTone;
+const FileUnknownTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FileUnknownTwoToneSvg} />;
+
+FileUnknownTwoTone.displayName = 'FileUnknownTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileUnknownTwoTone);

@@ -5,5 +5,10 @@ import React from 'react'
 import FolderFilledSvg from '@ant-design/icons-svg/lib/asn/FolderFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FolderFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FolderFilledSvg} />;
-export default FolderFilled;
+const FolderFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FolderFilledSvg} />;
+
+FolderFilled.displayName = 'FolderFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderFilled);

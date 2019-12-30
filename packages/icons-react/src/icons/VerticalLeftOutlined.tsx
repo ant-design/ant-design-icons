@@ -5,5 +5,10 @@ import React from 'react'
 import VerticalLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/VerticalLeftOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const VerticalLeftOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={VerticalLeftOutlinedSvg} />;
-export default VerticalLeftOutlined;
+const VerticalLeftOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={VerticalLeftOutlinedSvg} />;
+
+VerticalLeftOutlined.displayName = 'VerticalLeftOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(VerticalLeftOutlined);

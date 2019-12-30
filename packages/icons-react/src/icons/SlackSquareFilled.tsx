@@ -5,5 +5,10 @@ import React from 'react'
 import SlackSquareFilledSvg from '@ant-design/icons-svg/lib/asn/SlackSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SlackSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SlackSquareFilledSvg} />;
-export default SlackSquareFilled;
+const SlackSquareFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={SlackSquareFilledSvg} />;
+
+SlackSquareFilled.displayName = 'SlackSquareFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SlackSquareFilled);

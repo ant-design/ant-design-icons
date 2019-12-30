@@ -5,5 +5,10 @@ import React from 'react'
 import CopyrightCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CopyrightCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CopyrightCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CopyrightCircleFilledSvg} />;
-export default CopyrightCircleFilled;
+const CopyrightCircleFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CopyrightCircleFilledSvg} />;
+
+CopyrightCircleFilled.displayName = 'CopyrightCircleFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyrightCircleFilled);

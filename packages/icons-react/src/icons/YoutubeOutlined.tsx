@@ -5,5 +5,10 @@ import React from 'react'
 import YoutubeOutlinedSvg from '@ant-design/icons-svg/lib/asn/YoutubeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const YoutubeOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={YoutubeOutlinedSvg} />;
-export default YoutubeOutlined;
+const YoutubeOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={YoutubeOutlinedSvg} />;
+
+YoutubeOutlined.displayName = 'YoutubeOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(YoutubeOutlined);

@@ -5,5 +5,10 @@ import React from 'react'
 import CreditCardTwoToneSvg from '@ant-design/icons-svg/lib/asn/CreditCardTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CreditCardTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CreditCardTwoToneSvg} />;
-export default CreditCardTwoTone;
+const CreditCardTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CreditCardTwoToneSvg} />;
+
+CreditCardTwoTone.displayName = 'CreditCardTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CreditCardTwoTone);

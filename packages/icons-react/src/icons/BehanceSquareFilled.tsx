@@ -5,5 +5,10 @@ import React from 'react'
 import BehanceSquareFilledSvg from '@ant-design/icons-svg/lib/asn/BehanceSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BehanceSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BehanceSquareFilledSvg} />;
-export default BehanceSquareFilled;
+const BehanceSquareFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BehanceSquareFilledSvg} />;
+
+BehanceSquareFilled.displayName = 'BehanceSquareFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BehanceSquareFilled);

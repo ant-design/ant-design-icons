@@ -5,5 +5,10 @@ import React from 'react'
 import AmazonCircleFilledSvg from '@ant-design/icons-svg/lib/asn/AmazonCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AmazonCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={AmazonCircleFilledSvg} />;
-export default AmazonCircleFilled;
+const AmazonCircleFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={AmazonCircleFilledSvg} />;
+
+AmazonCircleFilled.displayName = 'AmazonCircleFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AmazonCircleFilled);

@@ -5,5 +5,10 @@ import React from 'react'
 import MedicineBoxOutlinedSvg from '@ant-design/icons-svg/lib/asn/MedicineBoxOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MedicineBoxOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={MedicineBoxOutlinedSvg} />;
-export default MedicineBoxOutlined;
+const MedicineBoxOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={MedicineBoxOutlinedSvg} />;
+
+MedicineBoxOutlined.displayName = 'MedicineBoxOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MedicineBoxOutlined);

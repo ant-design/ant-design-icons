@@ -5,5 +5,10 @@ import React from 'react'
 import DownSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/DownSquareTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DownSquareTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={DownSquareTwoToneSvg} />;
-export default DownSquareTwoTone;
+const DownSquareTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={DownSquareTwoToneSvg} />;
+
+DownSquareTwoTone.displayName = 'DownSquareTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DownSquareTwoTone);

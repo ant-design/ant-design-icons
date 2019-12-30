@@ -5,5 +5,10 @@ import React from 'react'
 import TaobaoOutlinedSvg from '@ant-design/icons-svg/lib/asn/TaobaoOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TaobaoOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={TaobaoOutlinedSvg} />;
-export default TaobaoOutlined;
+const TaobaoOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={TaobaoOutlinedSvg} />;
+
+TaobaoOutlined.displayName = 'TaobaoOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TaobaoOutlined);

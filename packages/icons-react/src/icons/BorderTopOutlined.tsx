@@ -5,5 +5,10 @@ import React from 'react'
 import BorderTopOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderTopOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BorderTopOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BorderTopOutlinedSvg} />;
-export default BorderTopOutlined;
+const BorderTopOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BorderTopOutlinedSvg} />;
+
+BorderTopOutlined.displayName = 'BorderTopOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BorderTopOutlined);

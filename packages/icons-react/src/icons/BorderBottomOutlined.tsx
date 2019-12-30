@@ -5,5 +5,10 @@ import React from 'react'
 import BorderBottomOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderBottomOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BorderBottomOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BorderBottomOutlinedSvg} />;
-export default BorderBottomOutlined;
+const BorderBottomOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BorderBottomOutlinedSvg} />;
+
+BorderBottomOutlined.displayName = 'BorderBottomOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BorderBottomOutlined);

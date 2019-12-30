@@ -5,5 +5,10 @@ import React from 'react'
 import ScheduleOutlinedSvg from '@ant-design/icons-svg/lib/asn/ScheduleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ScheduleOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ScheduleOutlinedSvg} />;
-export default ScheduleOutlined;
+const ScheduleOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ScheduleOutlinedSvg} />;
+
+ScheduleOutlined.displayName = 'ScheduleOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ScheduleOutlined);

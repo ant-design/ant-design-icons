@@ -5,5 +5,10 @@ import React from 'react'
 import UpCircleFilledSvg from '@ant-design/icons-svg/lib/asn/UpCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const UpCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={UpCircleFilledSvg} />;
-export default UpCircleFilled;
+const UpCircleFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={UpCircleFilledSvg} />;
+
+UpCircleFilled.displayName = 'UpCircleFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UpCircleFilled);

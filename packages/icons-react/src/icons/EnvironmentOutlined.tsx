@@ -5,5 +5,10 @@ import React from 'react'
 import EnvironmentOutlinedSvg from '@ant-design/icons-svg/lib/asn/EnvironmentOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const EnvironmentOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={EnvironmentOutlinedSvg} />;
-export default EnvironmentOutlined;
+const EnvironmentOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={EnvironmentOutlinedSvg} />;
+
+EnvironmentOutlined.displayName = 'EnvironmentOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EnvironmentOutlined);

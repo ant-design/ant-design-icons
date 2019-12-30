@@ -5,5 +5,10 @@ import React from 'react'
 import MediumSquareFilledSvg from '@ant-design/icons-svg/lib/asn/MediumSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MediumSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MediumSquareFilledSvg} />;
-export default MediumSquareFilled;
+const MediumSquareFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={MediumSquareFilledSvg} />;
+
+MediumSquareFilled.displayName = 'MediumSquareFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MediumSquareFilled);

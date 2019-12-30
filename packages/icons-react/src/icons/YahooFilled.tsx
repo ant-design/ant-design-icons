@@ -5,5 +5,10 @@ import React from 'react'
 import YahooFilledSvg from '@ant-design/icons-svg/lib/asn/YahooFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const YahooFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={YahooFilledSvg} />;
-export default YahooFilled;
+const YahooFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={YahooFilledSvg} />;
+
+YahooFilled.displayName = 'YahooFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(YahooFilled);

@@ -5,5 +5,10 @@ import React from 'react'
 import AudioMutedOutlinedSvg from '@ant-design/icons-svg/lib/asn/AudioMutedOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AudioMutedOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={AudioMutedOutlinedSvg} />;
-export default AudioMutedOutlined;
+const AudioMutedOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={AudioMutedOutlinedSvg} />;
+
+AudioMutedOutlined.displayName = 'AudioMutedOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AudioMutedOutlined);

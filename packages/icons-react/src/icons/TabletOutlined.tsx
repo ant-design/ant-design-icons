@@ -5,5 +5,10 @@ import React from 'react'
 import TabletOutlinedSvg from '@ant-design/icons-svg/lib/asn/TabletOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TabletOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={TabletOutlinedSvg} />;
-export default TabletOutlined;
+const TabletOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={TabletOutlinedSvg} />;
+
+TabletOutlined.displayName = 'TabletOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TabletOutlined);

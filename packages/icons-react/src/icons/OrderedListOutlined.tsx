@@ -5,5 +5,10 @@ import React from 'react'
 import OrderedListOutlinedSvg from '@ant-design/icons-svg/lib/asn/OrderedListOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const OrderedListOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={OrderedListOutlinedSvg} />;
-export default OrderedListOutlined;
+const OrderedListOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={OrderedListOutlinedSvg} />;
+
+OrderedListOutlined.displayName = 'OrderedListOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(OrderedListOutlined);

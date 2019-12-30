@@ -5,5 +5,10 @@ import React from 'react'
 import TagsTwoToneSvg from '@ant-design/icons-svg/lib/asn/TagsTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TagsTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={TagsTwoToneSvg} />;
-export default TagsTwoTone;
+const TagsTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={TagsTwoToneSvg} />;
+
+TagsTwoTone.displayName = 'TagsTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TagsTwoTone);

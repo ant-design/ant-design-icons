@@ -5,5 +5,10 @@ import React from 'react'
 import EnvironmentFilledSvg from '@ant-design/icons-svg/lib/asn/EnvironmentFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const EnvironmentFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={EnvironmentFilledSvg} />;
-export default EnvironmentFilled;
+const EnvironmentFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={EnvironmentFilledSvg} />;
+
+EnvironmentFilled.displayName = 'EnvironmentFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EnvironmentFilled);

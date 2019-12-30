@@ -5,5 +5,10 @@ import React from 'react'
 import QqCircleFilledSvg from '@ant-design/icons-svg/lib/asn/QqCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const QqCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={QqCircleFilledSvg} />;
-export default QqCircleFilled;
+const QqCircleFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={QqCircleFilledSvg} />;
+
+QqCircleFilled.displayName = 'QqCircleFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(QqCircleFilled);

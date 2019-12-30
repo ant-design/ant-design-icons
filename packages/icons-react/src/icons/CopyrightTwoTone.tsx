@@ -5,5 +5,10 @@ import React from 'react'
 import CopyrightTwoToneSvg from '@ant-design/icons-svg/lib/asn/CopyrightTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CopyrightTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CopyrightTwoToneSvg} />;
-export default CopyrightTwoTone;
+const CopyrightTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CopyrightTwoToneSvg} />;
+
+CopyrightTwoTone.displayName = 'CopyrightTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyrightTwoTone);

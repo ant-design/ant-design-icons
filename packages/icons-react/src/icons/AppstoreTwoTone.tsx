@@ -5,5 +5,10 @@ import React from 'react'
 import AppstoreTwoToneSvg from '@ant-design/icons-svg/lib/asn/AppstoreTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AppstoreTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={AppstoreTwoToneSvg} />;
-export default AppstoreTwoTone;
+const AppstoreTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={AppstoreTwoToneSvg} />;
+
+AppstoreTwoTone.displayName = 'AppstoreTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AppstoreTwoTone);

@@ -5,5 +5,10 @@ import React from 'react'
 import MailTwoToneSvg from '@ant-design/icons-svg/lib/asn/MailTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MailTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={MailTwoToneSvg} />;
-export default MailTwoTone;
+const MailTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={MailTwoToneSvg} />;
+
+MailTwoTone.displayName = 'MailTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MailTwoTone);

@@ -5,5 +5,10 @@ import React from 'react'
 import BellTwoToneSvg from '@ant-design/icons-svg/lib/asn/BellTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BellTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={BellTwoToneSvg} />;
-export default BellTwoTone;
+const BellTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BellTwoToneSvg} />;
+
+BellTwoTone.displayName = 'BellTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BellTwoTone);

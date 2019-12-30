@@ -5,5 +5,10 @@ import React from 'react'
 import FolderOpenOutlinedSvg from '@ant-design/icons-svg/lib/asn/FolderOpenOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FolderOpenOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FolderOpenOutlinedSvg} />;
-export default FolderOpenOutlined;
+const FolderOpenOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FolderOpenOutlinedSvg} />;
+
+FolderOpenOutlined.displayName = 'FolderOpenOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderOpenOutlined);

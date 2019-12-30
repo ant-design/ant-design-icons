@@ -5,5 +5,10 @@ import React from 'react'
 import ScissorOutlinedSvg from '@ant-design/icons-svg/lib/asn/ScissorOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ScissorOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ScissorOutlinedSvg} />;
-export default ScissorOutlined;
+const ScissorOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ScissorOutlinedSvg} />;
+
+ScissorOutlined.displayName = 'ScissorOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ScissorOutlined);

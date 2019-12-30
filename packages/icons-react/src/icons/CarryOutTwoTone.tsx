@@ -5,5 +5,10 @@ import React from 'react'
 import CarryOutTwoToneSvg from '@ant-design/icons-svg/lib/asn/CarryOutTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CarryOutTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CarryOutTwoToneSvg} />;
-export default CarryOutTwoTone;
+const CarryOutTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CarryOutTwoToneSvg} />;
+
+CarryOutTwoTone.displayName = 'CarryOutTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CarryOutTwoTone);

@@ -5,5 +5,10 @@ import React from 'react'
 import HighlightTwoToneSvg from '@ant-design/icons-svg/lib/asn/HighlightTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const HighlightTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={HighlightTwoToneSvg} />;
-export default HighlightTwoTone;
+const HighlightTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={HighlightTwoToneSvg} />;
+
+HighlightTwoTone.displayName = 'HighlightTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HighlightTwoTone);

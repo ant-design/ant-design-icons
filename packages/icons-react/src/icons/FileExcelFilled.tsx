@@ -5,5 +5,10 @@ import React from 'react'
 import FileExcelFilledSvg from '@ant-design/icons-svg/lib/asn/FileExcelFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FileExcelFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FileExcelFilledSvg} />;
-export default FileExcelFilled;
+const FileExcelFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FileExcelFilledSvg} />;
+
+FileExcelFilled.displayName = 'FileExcelFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileExcelFilled);

@@ -5,5 +5,10 @@ import React from 'react'
 import MobileTwoToneSvg from '@ant-design/icons-svg/lib/asn/MobileTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MobileTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={MobileTwoToneSvg} />;
-export default MobileTwoTone;
+const MobileTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={MobileTwoToneSvg} />;
+
+MobileTwoTone.displayName = 'MobileTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MobileTwoTone);

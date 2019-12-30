@@ -5,5 +5,10 @@ import React from 'react'
 import RocketFilledSvg from '@ant-design/icons-svg/lib/asn/RocketFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RocketFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={RocketFilledSvg} />;
-export default RocketFilled;
+const RocketFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={RocketFilledSvg} />;
+
+RocketFilled.displayName = 'RocketFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RocketFilled);

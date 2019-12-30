@@ -5,5 +5,10 @@ import React from 'react'
 import DribbbleCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DribbbleCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DribbbleCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DribbbleCircleFilledSvg} />;
-export default DribbbleCircleFilled;
+const DribbbleCircleFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={DribbbleCircleFilledSvg} />;
+
+DribbbleCircleFilled.displayName = 'DribbbleCircleFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DribbbleCircleFilled);

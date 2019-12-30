@@ -5,5 +5,10 @@ import React from 'react'
 import SwapLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/SwapLeftOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SwapLeftOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={SwapLeftOutlinedSvg} />;
-export default SwapLeftOutlined;
+const SwapLeftOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={SwapLeftOutlinedSvg} />;
+
+SwapLeftOutlined.displayName = 'SwapLeftOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SwapLeftOutlined);

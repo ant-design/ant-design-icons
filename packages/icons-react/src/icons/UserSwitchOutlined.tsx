@@ -5,5 +5,10 @@ import React from 'react'
 import UserSwitchOutlinedSvg from '@ant-design/icons-svg/lib/asn/UserSwitchOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const UserSwitchOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={UserSwitchOutlinedSvg} />;
-export default UserSwitchOutlined;
+const UserSwitchOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={UserSwitchOutlinedSvg} />;
+
+UserSwitchOutlined.displayName = 'UserSwitchOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UserSwitchOutlined);

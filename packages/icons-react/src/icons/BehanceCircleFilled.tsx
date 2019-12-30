@@ -5,5 +5,10 @@ import React from 'react'
 import BehanceCircleFilledSvg from '@ant-design/icons-svg/lib/asn/BehanceCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BehanceCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BehanceCircleFilledSvg} />;
-export default BehanceCircleFilled;
+const BehanceCircleFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BehanceCircleFilledSvg} />;
+
+BehanceCircleFilled.displayName = 'BehanceCircleFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BehanceCircleFilled);

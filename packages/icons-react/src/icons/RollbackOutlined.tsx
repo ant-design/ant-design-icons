@@ -5,5 +5,10 @@ import React from 'react'
 import RollbackOutlinedSvg from '@ant-design/icons-svg/lib/asn/RollbackOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RollbackOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={RollbackOutlinedSvg} />;
-export default RollbackOutlined;
+const RollbackOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={RollbackOutlinedSvg} />;
+
+RollbackOutlined.displayName = 'RollbackOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RollbackOutlined);

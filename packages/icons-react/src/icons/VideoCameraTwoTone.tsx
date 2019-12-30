@@ -5,5 +5,10 @@ import React from 'react'
 import VideoCameraTwoToneSvg from '@ant-design/icons-svg/lib/asn/VideoCameraTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const VideoCameraTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={VideoCameraTwoToneSvg} />;
-export default VideoCameraTwoTone;
+const VideoCameraTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={VideoCameraTwoToneSvg} />;
+
+VideoCameraTwoTone.displayName = 'VideoCameraTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(VideoCameraTwoTone);

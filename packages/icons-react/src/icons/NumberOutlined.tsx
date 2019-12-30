@@ -5,5 +5,10 @@ import React from 'react'
 import NumberOutlinedSvg from '@ant-design/icons-svg/lib/asn/NumberOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const NumberOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={NumberOutlinedSvg} />;
-export default NumberOutlined;
+const NumberOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={NumberOutlinedSvg} />;
+
+NumberOutlined.displayName = 'NumberOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(NumberOutlined);

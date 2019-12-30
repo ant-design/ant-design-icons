@@ -5,5 +5,10 @@ import React from 'react'
 import InsuranceTwoToneSvg from '@ant-design/icons-svg/lib/asn/InsuranceTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const InsuranceTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={InsuranceTwoToneSvg} />;
-export default InsuranceTwoTone;
+const InsuranceTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={InsuranceTwoToneSvg} />;
+
+InsuranceTwoTone.displayName = 'InsuranceTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(InsuranceTwoTone);

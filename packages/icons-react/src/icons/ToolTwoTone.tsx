@@ -5,5 +5,10 @@ import React from 'react'
 import ToolTwoToneSvg from '@ant-design/icons-svg/lib/asn/ToolTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ToolTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={ToolTwoToneSvg} />;
-export default ToolTwoTone;
+const ToolTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ToolTwoToneSvg} />;
+
+ToolTwoTone.displayName = 'ToolTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ToolTwoTone);

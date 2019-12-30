@@ -5,5 +5,10 @@ import React from 'react'
 import CopyOutlinedSvg from '@ant-design/icons-svg/lib/asn/CopyOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CopyOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={CopyOutlinedSvg} />;
-export default CopyOutlined;
+const CopyOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CopyOutlinedSvg} />;
+
+CopyOutlined.displayName = 'CopyOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyOutlined);

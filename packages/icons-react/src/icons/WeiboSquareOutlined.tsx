@@ -5,5 +5,10 @@ import React from 'react'
 import WeiboSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/WeiboSquareOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const WeiboSquareOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={WeiboSquareOutlinedSvg} />;
-export default WeiboSquareOutlined;
+const WeiboSquareOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={WeiboSquareOutlinedSvg} />;
+
+WeiboSquareOutlined.displayName = 'WeiboSquareOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WeiboSquareOutlined);

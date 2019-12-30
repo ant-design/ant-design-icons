@@ -5,5 +5,10 @@ import React from 'react'
 import HourglassOutlinedSvg from '@ant-design/icons-svg/lib/asn/HourglassOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const HourglassOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={HourglassOutlinedSvg} />;
-export default HourglassOutlined;
+const HourglassOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={HourglassOutlinedSvg} />;
+
+HourglassOutlined.displayName = 'HourglassOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HourglassOutlined);

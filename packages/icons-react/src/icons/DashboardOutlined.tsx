@@ -5,5 +5,10 @@ import React from 'react'
 import DashboardOutlinedSvg from '@ant-design/icons-svg/lib/asn/DashboardOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DashboardOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DashboardOutlinedSvg} />;
-export default DashboardOutlined;
+const DashboardOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={DashboardOutlinedSvg} />;
+
+DashboardOutlined.displayName = 'DashboardOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DashboardOutlined);

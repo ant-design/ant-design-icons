@@ -5,5 +5,10 @@ import React from 'react'
 import BehanceOutlinedSvg from '@ant-design/icons-svg/lib/asn/BehanceOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BehanceOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BehanceOutlinedSvg} />;
-export default BehanceOutlined;
+const BehanceOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BehanceOutlinedSvg} />;
+
+BehanceOutlined.displayName = 'BehanceOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BehanceOutlined);

@@ -5,5 +5,10 @@ import React from 'react'
 import BoxPlotTwoToneSvg from '@ant-design/icons-svg/lib/asn/BoxPlotTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BoxPlotTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={BoxPlotTwoToneSvg} />;
-export default BoxPlotTwoTone;
+const BoxPlotTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BoxPlotTwoToneSvg} />;
+
+BoxPlotTwoTone.displayName = 'BoxPlotTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BoxPlotTwoTone);

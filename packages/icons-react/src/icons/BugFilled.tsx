@@ -5,5 +5,10 @@ import React from 'react'
 import BugFilledSvg from '@ant-design/icons-svg/lib/asn/BugFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BugFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BugFilledSvg} />;
-export default BugFilled;
+const BugFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BugFilledSvg} />;
+
+BugFilled.displayName = 'BugFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BugFilled);

@@ -5,5 +5,10 @@ import React from 'react'
 import FileMarkdownOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileMarkdownOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FileMarkdownOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FileMarkdownOutlinedSvg} />;
-export default FileMarkdownOutlined;
+const FileMarkdownOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FileMarkdownOutlinedSvg} />;
+
+FileMarkdownOutlined.displayName = 'FileMarkdownOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileMarkdownOutlined);

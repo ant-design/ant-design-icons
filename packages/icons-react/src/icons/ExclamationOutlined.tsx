@@ -5,5 +5,10 @@ import React from 'react'
 import ExclamationOutlinedSvg from '@ant-design/icons-svg/lib/asn/ExclamationOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ExclamationOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ExclamationOutlinedSvg} />;
-export default ExclamationOutlined;
+const ExclamationOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ExclamationOutlinedSvg} />;
+
+ExclamationOutlined.displayName = 'ExclamationOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ExclamationOutlined);

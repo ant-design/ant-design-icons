@@ -5,5 +5,10 @@ import React from 'react'
 import QuestionCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/QuestionCircleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const QuestionCircleOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={QuestionCircleOutlinedSvg} />;
-export default QuestionCircleOutlined;
+const QuestionCircleOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={QuestionCircleOutlinedSvg} />;
+
+QuestionCircleOutlined.displayName = 'QuestionCircleOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(QuestionCircleOutlined);

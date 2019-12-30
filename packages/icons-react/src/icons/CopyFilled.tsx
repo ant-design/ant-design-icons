@@ -5,5 +5,10 @@ import React from 'react'
 import CopyFilledSvg from '@ant-design/icons-svg/lib/asn/CopyFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CopyFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CopyFilledSvg} />;
-export default CopyFilled;
+const CopyFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CopyFilledSvg} />;
+
+CopyFilled.displayName = 'CopyFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyFilled);

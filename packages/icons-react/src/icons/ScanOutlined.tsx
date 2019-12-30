@@ -5,5 +5,10 @@ import React from 'react'
 import ScanOutlinedSvg from '@ant-design/icons-svg/lib/asn/ScanOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ScanOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ScanOutlinedSvg} />;
-export default ScanOutlined;
+const ScanOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ScanOutlinedSvg} />;
+
+ScanOutlined.displayName = 'ScanOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ScanOutlined);

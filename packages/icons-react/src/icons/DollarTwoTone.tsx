@@ -5,5 +5,10 @@ import React from 'react'
 import DollarTwoToneSvg from '@ant-design/icons-svg/lib/asn/DollarTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DollarTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={DollarTwoToneSvg} />;
-export default DollarTwoTone;
+const DollarTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={DollarTwoToneSvg} />;
+
+DollarTwoTone.displayName = 'DollarTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DollarTwoTone);

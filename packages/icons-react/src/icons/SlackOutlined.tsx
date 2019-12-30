@@ -5,5 +5,10 @@ import React from 'react'
 import SlackOutlinedSvg from '@ant-design/icons-svg/lib/asn/SlackOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SlackOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={SlackOutlinedSvg} />;
-export default SlackOutlined;
+const SlackOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={SlackOutlinedSvg} />;
+
+SlackOutlined.displayName = 'SlackOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SlackOutlined);

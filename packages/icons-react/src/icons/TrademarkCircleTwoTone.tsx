@@ -5,5 +5,10 @@ import React from 'react'
 import TrademarkCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/TrademarkCircleTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TrademarkCircleTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={TrademarkCircleTwoToneSvg} />;
-export default TrademarkCircleTwoTone;
+const TrademarkCircleTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={TrademarkCircleTwoToneSvg} />;
+
+TrademarkCircleTwoTone.displayName = 'TrademarkCircleTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TrademarkCircleTwoTone);

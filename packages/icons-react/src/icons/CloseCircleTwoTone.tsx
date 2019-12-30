@@ -5,5 +5,10 @@ import React from 'react'
 import CloseCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/CloseCircleTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CloseCircleTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseCircleTwoToneSvg} />;
-export default CloseCircleTwoTone;
+const CloseCircleTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CloseCircleTwoToneSvg} />;
+
+CloseCircleTwoTone.displayName = 'CloseCircleTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloseCircleTwoTone);
