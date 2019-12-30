@@ -35,13 +35,13 @@ export default class SimpleDemo extends React.Component<{}> {
     'https://blog.prototypr.io/align-' +
     'svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4';
 
-  renderStatement(fontSize: string) {
+  static renderStatement(fontSize: string, index: number) {
     const style: React.CSSProperties = {
       fontSize,
-      color: (fontSize === '48px' && 'lightblue') || 'inherit'
+      color: (fontSize === '48px' && 'lightblue') || 'inherit',
     };
     return (
-      <Div key={fontSize} style={style}>
+      <Div key={fontSize + index} style={style}>
         {fontSize}
         Ant Design
         <AntDesignOutlined />
@@ -53,19 +53,15 @@ export default class SimpleDemo extends React.Component<{}> {
     );
   }
 
-  renderStatements() {
-    return SimpleDemo.displaySize.map((fontSize) => {
-      return this.renderStatement(fontSize);
-    });
-  }
-
   render() {
     return (
       <div>
         <h1>Simple Demo - Icons Alignments</h1>
-        {this.renderStatements()}
+        {
+          SimpleDemo.displaySize.map((fontSize, index) => SimpleDemo.renderStatement(fontSize, index))
+        }
         See{' '}
-        <a href={SimpleDemo.relatedHref} target={'_blank'}>
+        <a href={SimpleDemo.relatedHref} target="_blank" rel="noopener noreferrer">
           related blog
         </a>{' '}
         for detail.

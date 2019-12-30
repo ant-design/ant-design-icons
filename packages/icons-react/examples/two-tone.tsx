@@ -9,8 +9,8 @@ const allIcons: {
 } = AntdIcons;
 
 const iconsList = Object.keys(allIcons)
-  .map(iconName => allIcons[iconName])
-  .filter((icon) => icon.name.includes('TwoTone'));
+  .filter(iconName => iconName.includes('TwoTone'))
+  .map(iconName => allIcons[iconName]);
 
 const Container = styled.div`
   display: flex;
@@ -40,19 +40,18 @@ const Text = styled.span`
 
 export default class AllIconDemo extends React.Component {
   state = {
-    primaryColor: '#1890ff'
+    primaryColor: '#1890ff',
   };
-
-  onPrimaryColorChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
-    console.log(e.currentTarget.value);
-    setTwoToneColor(e.currentTarget.value);
-    this.setState({
-      primaryColor: e.currentTarget.value
-    });
-  }
 
   componentWillMount() {
     setTwoToneColor(this.state.primaryColor);
+  }
+
+  onPrimaryColorChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
+    setTwoToneColor(e.currentTarget.value);
+    this.setState({
+      primaryColor: e.currentTarget.value,
+    });
   }
 
   render() {
@@ -62,7 +61,7 @@ export default class AllIconDemo extends React.Component {
         <div style={{ textAlign: 'center' }}>
           <h2>Primary Color</h2>
           <input
-            type={'color'}
+            type="color"
             value={this.state.primaryColor}
             onChange={this.onPrimaryColorChange}
           />
