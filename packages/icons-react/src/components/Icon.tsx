@@ -30,7 +30,7 @@ export interface IconComponentProps extends IconBaseProps {
   ariaLabel?: React.AriaAttributes['aria-label'];
 }
 
-const Icon: React.FC<IconComponentProps> = props => {
+const Icon: React.FC<IconComponentProps> = (props, ref) => {
   const {
     // affect outter <i>...</i>
     className,
@@ -118,6 +118,7 @@ const Icon: React.FC<IconComponentProps> = props => {
     <span
       role="img"
       {...restProps}
+      ref={ref}
       tabIndex={iconTabIndex}
       onClick={onClick}
       className={classString}
@@ -129,4 +130,4 @@ const Icon: React.FC<IconComponentProps> = props => {
 
 Icon.displayName = 'AntdIcon';
 
-export default Icon;
+export default React.forwardRef<HTMLSpanElement, IconComponentProps>(Icon);

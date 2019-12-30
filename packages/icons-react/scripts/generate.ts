@@ -43,8 +43,13 @@ import React from 'react'
 import <%= svgIdentifier %>Svg from '@ant-design/icons-svg/lib/asn/<%= svgIdentifier %>';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const <%= svgIdentifier %> = (props: AntdIconProps) => <AntdIcon {...props} icon={<%= svgIdentifier %>Svg} />;
-export default <%= svgIdentifier %>;
+const <%= svgIdentifier %> = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={<%= svgIdentifier %>Svg} />;
+
+<%= svgIdentifier %>.displayName = '<%= svgIdentifier %>';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(<%= svgIdentifier %>);
 `.trim());
 
   await walk(async ({ svgIdentifier }) => {
