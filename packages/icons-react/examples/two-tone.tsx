@@ -9,8 +9,7 @@ const allIcons: {
 } = AntdIcons;
 
 const iconsList = Object.keys(allIcons)
-  .filter(iconName => iconName.includes('TwoTone'))
-  .map(iconName => allIcons[iconName]);
+  .filter(iconName => iconName.includes('TwoTone'));
 
 const Container = styled.div`
   display: flex;
@@ -69,12 +68,15 @@ export default class AllIconDemo extends React.Component {
         </div>
         <Container>
           {
-            iconsList.map(Component => (
-              <Card key={Component.name}>
-                <Component style={{ fontSize: '16px' }} />
-                <NameDescription>{Component.name}</NameDescription>
-              </Card>
-            ))
+            iconsList.map(iconName => {
+              const Component = allIcons[iconName];
+              return (
+                <Card key={iconName}>
+                  <Component style={{ fontSize: '16px' }} />
+                  <NameDescription>{iconName}</NameDescription>
+                </Card>
+              );
+            })
           }
         </Container>
       </div>

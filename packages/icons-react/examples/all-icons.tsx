@@ -37,10 +37,10 @@ const AllIconDemo = () => {
     setCurrentTheme(value);
   }, []);
 
-  const visibleIconList = React.useMemo(() => {
-    return Object.keys(allIcons)
-      .filter(iconName => iconName.includes(currentTheme));
-  }, [currentTheme]);
+  const visibleIconList = React.useMemo(
+    () => Object.keys(allIcons).filter(iconName => iconName.includes(currentTheme)),
+    [currentTheme],
+  );
 
   return (
     <div style={{ color: '#555' }}>

@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import { AlertTwoTone, SmileTwoTone, HeartTwoTone, CheckCircleTwoTone } from '../src';
 
 export default () => (

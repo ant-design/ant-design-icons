@@ -58,7 +58,9 @@ export default class SimpleDemo extends React.Component<{}> {
       <div>
         <h1>Simple Demo - Icons Alignments</h1>
         {
-          SimpleDemo.displaySize.map((fontSize, index) => SimpleDemo.renderStatement(fontSize, index))
+          SimpleDemo.displaySize.map((fontSize, index) =>
+            SimpleDemo.renderStatement(fontSize, index),
+          )
         }
         See{' '}
         <a href={SimpleDemo.relatedHref} target="_blank" rel="noopener noreferrer">
