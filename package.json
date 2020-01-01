@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
-    "bootstrap:china": "lerna bootstrap --hoist --registry=https://registry.npm.taobao.org",
+    "bootstrap": "lerna bootstrap",
+    "bootstrap:china": "lerna bootstrap --registry=https://registry.npm.taobao.org",
     "posticons:generate": "lerna run --scope @ant-design/icons-react-native generate",
     "icons:generate": "lerna run --scope @ant-design/icons-svg generate",
     "icons:build": "lerna run --scope @ant-design/icons-svg build",
