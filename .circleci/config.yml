@@ -22,6 +22,7 @@ references:
       - icons-react:
           requires:
           - setup
+          - icons-svg
 
 jobs:
   setup:
@@ -55,6 +56,10 @@ jobs:
       - run: npm run icons:test
       - persist_to_workspace:
           root: ~/ant-design-icons
+          paths:
+            - packages/icons-svg/es
+            - packages/icons-svg/lib
+            - packages/icons-svg/inline-svg
 
   icons-react:
     <<: *container_config
@@ -62,8 +67,6 @@ jobs:
       - checkout
       - *attach_workspace
       - run: npm run react:ci
-      - persist_to_workspace:
-          root: ~/ant-design-icons
 
 workflows:
   version: 2
