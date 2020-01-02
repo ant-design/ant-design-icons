@@ -5,5 +5,10 @@ import React from 'react'
 import BellFilledSvg from '@ant-design/icons-svg/lib/asn/BellFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BellFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BellFilledSvg} />;
-export default BellFilled;
+const BellFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BellFilledSvg} />;
+
+BellFilled.displayName = 'BellFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BellFilled);

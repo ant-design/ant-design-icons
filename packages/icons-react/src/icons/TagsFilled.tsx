@@ -5,5 +5,10 @@ import React from 'react'
 import TagsFilledSvg from '@ant-design/icons-svg/lib/asn/TagsFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TagsFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={TagsFilledSvg} />;
-export default TagsFilled;
+const TagsFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={TagsFilledSvg} />;
+
+TagsFilled.displayName = 'TagsFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TagsFilled);

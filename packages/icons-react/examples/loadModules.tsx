@@ -1,12 +1,12 @@
 import * as React from 'react';
 import * as AntdIcons from '../src/icons';
 
-export default class LoadModules extends React.Component {
-  componentDidMount() {
+const LoadModules = () => {
+  React.useEffect(() => {
     console.log(AntdIcons);
-  }
+  }, []);
 
-  render() {
-    return null;
-  }
+  return null;
 }
+
+export default LoadModules;

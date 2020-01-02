@@ -5,5 +5,10 @@ import React from 'react'
 import RadiusBottomrightOutlinedSvg from '@ant-design/icons-svg/lib/asn/RadiusBottomrightOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RadiusBottomrightOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={RadiusBottomrightOutlinedSvg} />;
-export default RadiusBottomrightOutlined;
+const RadiusBottomrightOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={RadiusBottomrightOutlinedSvg} />;
+
+RadiusBottomrightOutlined.displayName = 'RadiusBottomrightOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RadiusBottomrightOutlined);

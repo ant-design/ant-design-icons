@@ -5,5 +5,10 @@ import React from 'react'
 import AccountBookOutlinedSvg from '@ant-design/icons-svg/lib/asn/AccountBookOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AccountBookOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={AccountBookOutlinedSvg} />;
-export default AccountBookOutlined;
+const AccountBookOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={AccountBookOutlinedSvg} />;
+
+AccountBookOutlined.displayName = 'AccountBookOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AccountBookOutlined);

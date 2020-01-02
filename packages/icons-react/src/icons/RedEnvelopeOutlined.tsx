@@ -5,5 +5,10 @@ import React from 'react'
 import RedEnvelopeOutlinedSvg from '@ant-design/icons-svg/lib/asn/RedEnvelopeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RedEnvelopeOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={RedEnvelopeOutlinedSvg} />;
-export default RedEnvelopeOutlined;
+const RedEnvelopeOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={RedEnvelopeOutlinedSvg} />;
+
+RedEnvelopeOutlined.displayName = 'RedEnvelopeOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RedEnvelopeOutlined);

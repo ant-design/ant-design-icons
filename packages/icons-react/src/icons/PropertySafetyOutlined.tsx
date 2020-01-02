@@ -5,5 +5,10 @@ import React from 'react'
 import PropertySafetyOutlinedSvg from '@ant-design/icons-svg/lib/asn/PropertySafetyOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PropertySafetyOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={PropertySafetyOutlinedSvg} />;
-export default PropertySafetyOutlined;
+const PropertySafetyOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={PropertySafetyOutlinedSvg} />;
+
+PropertySafetyOutlined.displayName = 'PropertySafetyOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PropertySafetyOutlined);

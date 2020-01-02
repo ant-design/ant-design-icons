@@ -5,5 +5,10 @@ import React from 'react'
 import ClockCircleFilledSvg from '@ant-design/icons-svg/lib/asn/ClockCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ClockCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ClockCircleFilledSvg} />;
-export default ClockCircleFilled;
+const ClockCircleFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ClockCircleFilledSvg} />;
+
+ClockCircleFilled.displayName = 'ClockCircleFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ClockCircleFilled);

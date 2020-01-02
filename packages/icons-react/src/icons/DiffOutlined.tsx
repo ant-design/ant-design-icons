@@ -5,5 +5,10 @@ import React from 'react'
 import DiffOutlinedSvg from '@ant-design/icons-svg/lib/asn/DiffOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DiffOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DiffOutlinedSvg} />;
-export default DiffOutlined;
+const DiffOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={DiffOutlinedSvg} />;
+
+DiffOutlined.displayName = 'DiffOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DiffOutlined);

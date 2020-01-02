@@ -5,5 +5,10 @@ import React from 'react'
 import ColumnWidthOutlinedSvg from '@ant-design/icons-svg/lib/asn/ColumnWidthOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ColumnWidthOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ColumnWidthOutlinedSvg} />;
-export default ColumnWidthOutlined;
+const ColumnWidthOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ColumnWidthOutlinedSvg} />;
+
+ColumnWidthOutlined.displayName = 'ColumnWidthOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ColumnWidthOutlined);

@@ -56,13 +56,11 @@ const HeartIcon = (props: any) => <Icon component={HeartSvg} {...props} />;
 
 const PandaIcon = (props: any) => <Icon component={PandaSvg} {...props} />;
 
-const CustomIcon = () => {
-  return (
-    <div className="custom-icons-list">
-      <HeartIcon style={{ color: 'hotpink' }} />
-      <PandaIcon style={{ fontSize: '32px' }} />
-    </div>
-  );
-}
+const CustomIcon = () => (
+  <div className="custom-icons-list">
+    <HeartIcon style={{ color: 'hotpink' }} />
+    <PandaIcon style={{ fontSize: '32px' }} />
+  </div>
+);
 
 export default CustomIcon;

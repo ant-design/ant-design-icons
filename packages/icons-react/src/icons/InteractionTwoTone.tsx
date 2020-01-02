@@ -5,5 +5,10 @@ import React from 'react'
 import InteractionTwoToneSvg from '@ant-design/icons-svg/lib/asn/InteractionTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const InteractionTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={InteractionTwoToneSvg} />;
-export default InteractionTwoTone;
+const InteractionTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={InteractionTwoToneSvg} />;
+
+InteractionTwoTone.displayName = 'InteractionTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(InteractionTwoTone);

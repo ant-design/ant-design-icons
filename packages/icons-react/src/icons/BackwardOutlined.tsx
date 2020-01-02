@@ -5,5 +5,10 @@ import React from 'react'
 import BackwardOutlinedSvg from '@ant-design/icons-svg/lib/asn/BackwardOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BackwardOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={BackwardOutlinedSvg} />;
-export default BackwardOutlined;
+const BackwardOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BackwardOutlinedSvg} />;
+
+BackwardOutlined.displayName = 'BackwardOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BackwardOutlined);

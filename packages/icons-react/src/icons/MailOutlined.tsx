@@ -5,5 +5,10 @@ import React from 'react'
 import MailOutlinedSvg from '@ant-design/icons-svg/lib/asn/MailOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MailOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={MailOutlinedSvg} />;
-export default MailOutlined;
+const MailOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={MailOutlinedSvg} />;
+
+MailOutlined.displayName = 'MailOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MailOutlined);

@@ -5,5 +5,10 @@ import React from 'react'
 import ShoppingCartOutlinedSvg from '@ant-design/icons-svg/lib/asn/ShoppingCartOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ShoppingCartOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ShoppingCartOutlinedSvg} />;
-export default ShoppingCartOutlined;
+const ShoppingCartOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ShoppingCartOutlinedSvg} />;
+
+ShoppingCartOutlined.displayName = 'ShoppingCartOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ShoppingCartOutlined);

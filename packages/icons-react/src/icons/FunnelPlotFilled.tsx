@@ -5,5 +5,10 @@ import React from 'react'
 import FunnelPlotFilledSvg from '@ant-design/icons-svg/lib/asn/FunnelPlotFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FunnelPlotFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FunnelPlotFilledSvg} />;
-export default FunnelPlotFilled;
+const FunnelPlotFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FunnelPlotFilledSvg} />;
+
+FunnelPlotFilled.displayName = 'FunnelPlotFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FunnelPlotFilled);

@@ -5,5 +5,10 @@ import React from 'react'
 import HighlightFilledSvg from '@ant-design/icons-svg/lib/asn/HighlightFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const HighlightFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={HighlightFilledSvg} />;
-export default HighlightFilled;
+const HighlightFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={HighlightFilledSvg} />;
+
+HighlightFilled.displayName = 'HighlightFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HighlightFilled);

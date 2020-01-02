@@ -5,5 +5,10 @@ import React from 'react'
 import GatewayOutlinedSvg from '@ant-design/icons-svg/lib/asn/GatewayOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const GatewayOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={GatewayOutlinedSvg} />;
-export default GatewayOutlined;
+const GatewayOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={GatewayOutlinedSvg} />;
+
+GatewayOutlined.displayName = 'GatewayOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GatewayOutlined);

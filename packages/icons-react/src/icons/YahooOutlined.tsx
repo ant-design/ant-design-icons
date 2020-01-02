@@ -5,5 +5,10 @@ import React from 'react'
 import YahooOutlinedSvg from '@ant-design/icons-svg/lib/asn/YahooOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const YahooOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={YahooOutlinedSvg} />;
-export default YahooOutlined;
+const YahooOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={YahooOutlinedSvg} />;
+
+YahooOutlined.displayName = 'YahooOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(YahooOutlined);

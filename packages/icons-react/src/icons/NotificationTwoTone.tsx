@@ -5,5 +5,10 @@ import React from 'react'
 import NotificationTwoToneSvg from '@ant-design/icons-svg/lib/asn/NotificationTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const NotificationTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={NotificationTwoToneSvg} />;
-export default NotificationTwoTone;
+const NotificationTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={NotificationTwoToneSvg} />;
+
+NotificationTwoTone.displayName = 'NotificationTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(NotificationTwoTone);

@@ -5,5 +5,10 @@ import React from 'react'
 import WalletOutlinedSvg from '@ant-design/icons-svg/lib/asn/WalletOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const WalletOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={WalletOutlinedSvg} />;
-export default WalletOutlined;
+const WalletOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={WalletOutlinedSvg} />;
+
+WalletOutlined.displayName = 'WalletOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WalletOutlined);

@@ -5,5 +5,10 @@ import React from 'react'
 import PieChartOutlinedSvg from '@ant-design/icons-svg/lib/asn/PieChartOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PieChartOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={PieChartOutlinedSvg} />;
-export default PieChartOutlined;
+const PieChartOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={PieChartOutlinedSvg} />;
+
+PieChartOutlined.displayName = 'PieChartOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PieChartOutlined);

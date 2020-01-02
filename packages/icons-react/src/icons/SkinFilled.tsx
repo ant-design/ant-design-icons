@@ -5,5 +5,10 @@ import React from 'react'
 import SkinFilledSvg from '@ant-design/icons-svg/lib/asn/SkinFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SkinFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SkinFilledSvg} />;
-export default SkinFilled;
+const SkinFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={SkinFilledSvg} />;
+
+SkinFilled.displayName = 'SkinFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SkinFilled);

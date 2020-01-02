@@ -5,5 +5,10 @@ import React from 'react'
 import ImportOutlinedSvg from '@ant-design/icons-svg/lib/asn/ImportOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ImportOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ImportOutlinedSvg} />;
-export default ImportOutlined;
+const ImportOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ImportOutlinedSvg} />;
+
+ImportOutlined.displayName = 'ImportOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ImportOutlined);

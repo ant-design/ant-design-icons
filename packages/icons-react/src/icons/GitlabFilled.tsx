@@ -5,5 +5,10 @@ import React from 'react'
 import GitlabFilledSvg from '@ant-design/icons-svg/lib/asn/GitlabFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const GitlabFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={GitlabFilledSvg} />;
-export default GitlabFilled;
+const GitlabFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={GitlabFilledSvg} />;
+
+GitlabFilled.displayName = 'GitlabFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GitlabFilled);

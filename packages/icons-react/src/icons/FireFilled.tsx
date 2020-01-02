@@ -5,5 +5,10 @@ import React from 'react'
 import FireFilledSvg from '@ant-design/icons-svg/lib/asn/FireFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FireFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FireFilledSvg} />;
-export default FireFilled;
+const FireFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FireFilledSvg} />;
+
+FireFilled.displayName = 'FireFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FireFilled);

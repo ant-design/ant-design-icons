@@ -5,5 +5,10 @@ import React from 'react'
 import CiTwoToneSvg from '@ant-design/icons-svg/lib/asn/CiTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CiTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CiTwoToneSvg} />;
-export default CiTwoTone;
+const CiTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CiTwoToneSvg} />;
+
+CiTwoTone.displayName = 'CiTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CiTwoTone);

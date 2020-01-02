@@ -5,5 +5,10 @@ import React from 'react'
 import TrademarkCircleFilledSvg from '@ant-design/icons-svg/lib/asn/TrademarkCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TrademarkCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={TrademarkCircleFilledSvg} />;
-export default TrademarkCircleFilled;
+const TrademarkCircleFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={TrademarkCircleFilledSvg} />;
+
+TrademarkCircleFilled.displayName = 'TrademarkCircleFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TrademarkCircleFilled);

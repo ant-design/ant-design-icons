@@ -5,5 +5,10 @@ import React from 'react'
 import SlidersFilledSvg from '@ant-design/icons-svg/lib/asn/SlidersFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SlidersFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={SlidersFilledSvg} />;
-export default SlidersFilled;
+const SlidersFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={SlidersFilledSvg} />;
+
+SlidersFilled.displayName = 'SlidersFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SlidersFilled);

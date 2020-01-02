@@ -5,5 +5,10 @@ import React from 'react'
 import BankFilledSvg from '@ant-design/icons-svg/lib/asn/BankFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BankFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={BankFilledSvg} />;
-export default BankFilled;
+const BankFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={BankFilledSvg} />;
+
+BankFilled.displayName = 'BankFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BankFilled);

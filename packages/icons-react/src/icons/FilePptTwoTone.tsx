@@ -5,5 +5,10 @@ import React from 'react'
 import FilePptTwoToneSvg from '@ant-design/icons-svg/lib/asn/FilePptTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FilePptTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={FilePptTwoToneSvg} />;
-export default FilePptTwoTone;
+const FilePptTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FilePptTwoToneSvg} />;
+
+FilePptTwoTone.displayName = 'FilePptTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FilePptTwoTone);

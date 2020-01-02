@@ -5,5 +5,10 @@ import React from 'react'
 import RightSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/RightSquareTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RightSquareTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={RightSquareTwoToneSvg} />;
-export default RightSquareTwoTone;
+const RightSquareTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={RightSquareTwoToneSvg} />;
+
+RightSquareTwoTone.displayName = 'RightSquareTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RightSquareTwoTone);

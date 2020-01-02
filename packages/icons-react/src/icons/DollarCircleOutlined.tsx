@@ -5,5 +5,10 @@ import React from 'react'
 import DollarCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/DollarCircleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DollarCircleOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DollarCircleOutlinedSvg} />;
-export default DollarCircleOutlined;
+const DollarCircleOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={DollarCircleOutlinedSvg} />;
+
+DollarCircleOutlined.displayName = 'DollarCircleOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DollarCircleOutlined);

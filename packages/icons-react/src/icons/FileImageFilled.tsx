@@ -5,5 +5,10 @@ import React from 'react'
 import FileImageFilledSvg from '@ant-design/icons-svg/lib/asn/FileImageFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FileImageFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FileImageFilledSvg} />;
-export default FileImageFilled;
+const FileImageFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FileImageFilledSvg} />;
+
+FileImageFilled.displayName = 'FileImageFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileImageFilled);

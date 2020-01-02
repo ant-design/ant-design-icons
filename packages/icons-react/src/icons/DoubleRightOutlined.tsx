@@ -5,5 +5,10 @@ import React from 'react'
 import DoubleRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/DoubleRightOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DoubleRightOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DoubleRightOutlinedSvg} />;
-export default DoubleRightOutlined;
+const DoubleRightOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={DoubleRightOutlinedSvg} />;
+
+DoubleRightOutlined.displayName = 'DoubleRightOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DoubleRightOutlined);

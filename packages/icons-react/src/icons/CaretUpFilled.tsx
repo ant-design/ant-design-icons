@@ -5,5 +5,10 @@ import React from 'react'
 import CaretUpFilledSvg from '@ant-design/icons-svg/lib/asn/CaretUpFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CaretUpFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CaretUpFilledSvg} />;
-export default CaretUpFilled;
+const CaretUpFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CaretUpFilledSvg} />;
+
+CaretUpFilled.displayName = 'CaretUpFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CaretUpFilled);

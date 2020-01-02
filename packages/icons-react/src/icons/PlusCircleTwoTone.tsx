@@ -5,5 +5,10 @@ import React from 'react'
 import PlusCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/PlusCircleTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PlusCircleTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={PlusCircleTwoToneSvg} />;
-export default PlusCircleTwoTone;
+const PlusCircleTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={PlusCircleTwoToneSvg} />;
+
+PlusCircleTwoTone.displayName = 'PlusCircleTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PlusCircleTwoTone);

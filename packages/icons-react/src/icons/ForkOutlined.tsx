@@ -5,5 +5,10 @@ import React from 'react'
 import ForkOutlinedSvg from '@ant-design/icons-svg/lib/asn/ForkOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ForkOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ForkOutlinedSvg} />;
-export default ForkOutlined;
+const ForkOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ForkOutlinedSvg} />;
+
+ForkOutlined.displayName = 'ForkOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ForkOutlined);

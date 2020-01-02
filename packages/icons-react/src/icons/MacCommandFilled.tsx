@@ -5,5 +5,10 @@ import React from 'react'
 import MacCommandFilledSvg from '@ant-design/icons-svg/lib/asn/MacCommandFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MacCommandFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MacCommandFilledSvg} />;
-export default MacCommandFilled;
+const MacCommandFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={MacCommandFilledSvg} />;
+
+MacCommandFilled.displayName = 'MacCommandFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MacCommandFilled);

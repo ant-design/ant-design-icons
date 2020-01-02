@@ -5,5 +5,10 @@ import React from 'react'
 import LoadingOutlinedSvg from '@ant-design/icons-svg/lib/asn/LoadingOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const LoadingOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={LoadingOutlinedSvg} />;
-export default LoadingOutlined;
+const LoadingOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={LoadingOutlinedSvg} />;
+
+LoadingOutlined.displayName = 'LoadingOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LoadingOutlined);

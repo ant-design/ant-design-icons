@@ -5,5 +5,10 @@ import React from 'react'
 import CheckCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/CheckCircleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CheckCircleOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={CheckCircleOutlinedSvg} />;
-export default CheckCircleOutlined;
+const CheckCircleOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CheckCircleOutlinedSvg} />;
+
+CheckCircleOutlined.displayName = 'CheckCircleOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CheckCircleOutlined);

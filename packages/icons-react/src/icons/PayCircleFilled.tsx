@@ -5,5 +5,10 @@ import React from 'react'
 import PayCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PayCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PayCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={PayCircleFilledSvg} />;
-export default PayCircleFilled;
+const PayCircleFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={PayCircleFilledSvg} />;
+
+PayCircleFilled.displayName = 'PayCircleFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PayCircleFilled);

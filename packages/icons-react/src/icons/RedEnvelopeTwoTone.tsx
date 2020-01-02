@@ -5,5 +5,10 @@ import React from 'react'
 import RedEnvelopeTwoToneSvg from '@ant-design/icons-svg/lib/asn/RedEnvelopeTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RedEnvelopeTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={RedEnvelopeTwoToneSvg} />;
-export default RedEnvelopeTwoTone;
+const RedEnvelopeTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={RedEnvelopeTwoToneSvg} />;
+
+RedEnvelopeTwoTone.displayName = 'RedEnvelopeTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RedEnvelopeTwoTone);

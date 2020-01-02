@@ -5,5 +5,10 @@ import React from 'react'
 import CloseSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/CloseSquareTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CloseSquareTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseSquareTwoToneSvg} />;
-export default CloseSquareTwoTone;
+const CloseSquareTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CloseSquareTwoToneSvg} />;
+
+CloseSquareTwoTone.displayName = 'CloseSquareTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloseSquareTwoTone);

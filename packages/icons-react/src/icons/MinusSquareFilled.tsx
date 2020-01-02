@@ -5,5 +5,10 @@ import React from 'react'
 import MinusSquareFilledSvg from '@ant-design/icons-svg/lib/asn/MinusSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MinusSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={MinusSquareFilledSvg} />;
-export default MinusSquareFilled;
+const MinusSquareFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={MinusSquareFilledSvg} />;
+
+MinusSquareFilled.displayName = 'MinusSquareFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MinusSquareFilled);

@@ -5,5 +5,10 @@ import React from 'react'
 import SkypeOutlinedSvg from '@ant-design/icons-svg/lib/asn/SkypeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SkypeOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={SkypeOutlinedSvg} />;
-export default SkypeOutlined;
+const SkypeOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={SkypeOutlinedSvg} />;
+
+SkypeOutlined.displayName = 'SkypeOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SkypeOutlined);

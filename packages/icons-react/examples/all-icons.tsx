@@ -1,6 +1,4 @@
 import { ThemeType } from '@ant-design/icons-svg/lib/types';
-import { action, computed, observable } from 'mobx';
-import { observer } from 'mobx-react';
 import * as React from 'react';
 import styled from 'styled-components';
 import * as AntdIcons from '../src/icons';
@@ -31,54 +29,48 @@ const allIcons: {
   [key: string]: any;
 } = AntdIcons;
 
-const iconsList = Object.keys(allIcons)
-  .map(iconName => allIcons[iconName]);
+const AllIconDemo = () => {
+  const [currentTheme, setCurrentTheme] = React.useState('Outlined');
 
-@observer
-export default class AllIconDemo extends React.Component<{}> {
-  @observable
-  currentTheme = 'Outlined';
-
-  @computed
-  get Icons() {
-    return iconsList
-      .filter((icon) => {
-        if (this.currentTheme !== 'Outlined') {
-          return icon.name.includes(this.currentTheme);
-        }
-        return ['Filled', 'TwoTone'].every(theme => !icon.name.includes(theme));
-      })
-      .map((Component) => (
-        <Card key={Component.name}>
-          <Component style={{ fontSize: '24px' }} />
-          <NameDescription>{Component.name}</NameDescription>
-        </Card>
-      ));
-  }
-
-  @action
-  handleSelectChange: React.ChangeEventHandler<HTMLSelectElement> = (e) => {
+  const handleSelectChange = React.useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.currentTarget.value as ThemeType;
-    this.currentTheme = value;
-  }
+    setCurrentTheme(value);
+  }, []);
 
-  render() {
-    return (
-      <div style={{ color: '#555' }}>
-        <h1 style={{ textAlign: 'center' }}>All Icons</h1>
-        <div style={{ textAlign: 'center' }}>
-          <select
-            name={'theme-select'}
-            value={this.currentTheme}
-            onChange={this.handleSelectChange}
-          >
-            <option value="Filled">Filled</option>
-            <option value="Outlined">Outlined</option>
-            <option value="TwoTone">Two-Tone</option>
-          </select>
-        </div>
-        <Container>{this.Icons}</Container>
+  const visibleIconList = React.useMemo(
+    () => Object.keys(allIcons).filter(iconName => iconName.includes(currentTheme)),
+    [currentTheme],
+  );
+
+  return (
+    <div style={{ color: '#555' }}>
+      <h1 style={{ textAlign: 'center' }}>All Icons</h1>
+      <div style={{ textAlign: 'center' }}>
+        <select
+          name="theme-select"
+          value={currentTheme}
+          onChange={handleSelectChange}
+        >
+          <option value="Filled">Filled</option>
+          <option value="Outlined">Outlined</option>
+          <option value="TwoTone">Two-Tone</option>
+        </select>
       </div>
-    );
-  }
+      <Container>
+        {
+          visibleIconList.map(iconName => {
+            const Component = allIcons[iconName];
+            return (
+              <Card key={iconName}>
+                <Component style={{ fontSize: '24px' }} />
+                <NameDescription>{iconName}</NameDescription>
+              </Card>
+            );
+          })
+        }
+      </Container>
+    </div>
+  );
 }
+
+export default AllIconDemo;

@@ -5,5 +5,10 @@ import React from 'react'
 import DeleteColumnOutlinedSvg from '@ant-design/icons-svg/lib/asn/DeleteColumnOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DeleteColumnOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DeleteColumnOutlinedSvg} />;
-export default DeleteColumnOutlined;
+const DeleteColumnOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={DeleteColumnOutlinedSvg} />;
+
+DeleteColumnOutlined.displayName = 'DeleteColumnOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteColumnOutlined);

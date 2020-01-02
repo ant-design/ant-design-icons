@@ -5,5 +5,10 @@ import React from 'react'
 import FileProtectOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileProtectOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FileProtectOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={FileProtectOutlinedSvg} />;
-export default FileProtectOutlined;
+const FileProtectOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FileProtectOutlinedSvg} />;
+
+FileProtectOutlined.displayName = 'FileProtectOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileProtectOutlined);

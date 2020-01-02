@@ -5,5 +5,10 @@ import React from 'react'
 import FormatPainterFilledSvg from '@ant-design/icons-svg/lib/asn/FormatPainterFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FormatPainterFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={FormatPainterFilledSvg} />;
-export default FormatPainterFilled;
+const FormatPainterFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FormatPainterFilledSvg} />;
+
+FormatPainterFilled.displayName = 'FormatPainterFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FormatPainterFilled);

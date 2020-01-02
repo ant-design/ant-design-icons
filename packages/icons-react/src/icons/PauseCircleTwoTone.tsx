@@ -5,5 +5,10 @@ import React from 'react'
 import PauseCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/PauseCircleTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PauseCircleTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={PauseCircleTwoToneSvg} />;
-export default PauseCircleTwoTone;
+const PauseCircleTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={PauseCircleTwoToneSvg} />;
+
+PauseCircleTwoTone.displayName = 'PauseCircleTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PauseCircleTwoTone);

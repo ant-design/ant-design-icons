@@ -5,5 +5,10 @@ import React from 'react'
 import GiftFilledSvg from '@ant-design/icons-svg/lib/asn/GiftFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const GiftFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={GiftFilledSvg} />;
-export default GiftFilled;
+const GiftFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={GiftFilledSvg} />;
+
+GiftFilled.displayName = 'GiftFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GiftFilled);

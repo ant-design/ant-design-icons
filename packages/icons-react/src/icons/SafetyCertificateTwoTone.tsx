@@ -5,5 +5,10 @@ import React from 'react'
 import SafetyCertificateTwoToneSvg from '@ant-design/icons-svg/lib/asn/SafetyCertificateTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SafetyCertificateTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={SafetyCertificateTwoToneSvg} />;
-export default SafetyCertificateTwoTone;
+const SafetyCertificateTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={SafetyCertificateTwoToneSvg} />;
+
+SafetyCertificateTwoTone.displayName = 'SafetyCertificateTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SafetyCertificateTwoTone);

@@ -5,5 +5,10 @@ import React from 'react'
 import ShoppingTwoToneSvg from '@ant-design/icons-svg/lib/asn/ShoppingTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ShoppingTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={ShoppingTwoToneSvg} />;
-export default ShoppingTwoTone;
+const ShoppingTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ShoppingTwoToneSvg} />;
+
+ShoppingTwoTone.displayName = 'ShoppingTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ShoppingTwoTone);

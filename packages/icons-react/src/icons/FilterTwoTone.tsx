@@ -5,5 +5,10 @@ import React from 'react'
 import FilterTwoToneSvg from '@ant-design/icons-svg/lib/asn/FilterTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FilterTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={FilterTwoToneSvg} />;
-export default FilterTwoTone;
+const FilterTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={FilterTwoToneSvg} />;
+
+FilterTwoTone.displayName = 'FilterTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FilterTwoTone);

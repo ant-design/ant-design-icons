@@ -5,5 +5,10 @@ import React from 'react'
 import StopOutlinedSvg from '@ant-design/icons-svg/lib/asn/StopOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const StopOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={StopOutlinedSvg} />;
-export default StopOutlined;
+const StopOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={StopOutlinedSvg} />;
+
+StopOutlined.displayName = 'StopOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StopOutlined);

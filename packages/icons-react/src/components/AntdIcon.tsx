@@ -24,7 +24,7 @@ interface IconBaseComponent<P> extends React.FC<P> {
   setTwoToneColor: typeof setTwoToneColor;
 }
 
-const Icon: IconBaseComponent<IconComponentProps> = props => {
+const Icon: IconBaseComponent<IconComponentProps> = (props, ref) => {
   const {
     // affect outter <i>...</i>
     className,
@@ -72,6 +72,7 @@ const Icon: IconBaseComponent<IconComponentProps> = props => {
       role="img"
       aria-label={icon.name}
       {...restProps}
+      ref={ref}
       tabIndex={iconTabIndex}
       onClick={onClick}
       className={classString}
@@ -91,4 +92,4 @@ Icon.displayName = 'AntdIcon';
 Icon.getTwoToneColor = getTwoToneColor;
 Icon.setTwoToneColor = setTwoToneColor;
 
-export default Icon;
+export default React.forwardRef<HTMLSpanElement, IconComponentProps>(Icon);

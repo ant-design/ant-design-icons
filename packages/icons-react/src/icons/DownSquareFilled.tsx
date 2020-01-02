@@ -5,5 +5,10 @@ import React from 'react'
 import DownSquareFilledSvg from '@ant-design/icons-svg/lib/asn/DownSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DownSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={DownSquareFilledSvg} />;
-export default DownSquareFilled;
+const DownSquareFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={DownSquareFilledSvg} />;
+
+DownSquareFilled.displayName = 'DownSquareFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DownSquareFilled);

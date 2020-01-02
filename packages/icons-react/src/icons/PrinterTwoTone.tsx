@@ -5,5 +5,10 @@ import React from 'react'
 import PrinterTwoToneSvg from '@ant-design/icons-svg/lib/asn/PrinterTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PrinterTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={PrinterTwoToneSvg} />;
-export default PrinterTwoTone;
+const PrinterTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={PrinterTwoToneSvg} />;
+
+PrinterTwoTone.displayName = 'PrinterTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PrinterTwoTone);

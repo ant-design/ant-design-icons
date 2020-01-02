@@ -5,5 +5,10 @@ import React from 'react'
 import GroupOutlinedSvg from '@ant-design/icons-svg/lib/asn/GroupOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const GroupOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={GroupOutlinedSvg} />;
-export default GroupOutlined;
+const GroupOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={GroupOutlinedSvg} />;
+
+GroupOutlined.displayName = 'GroupOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GroupOutlined);

@@ -5,5 +5,10 @@ import React from 'react'
 import NodeExpandOutlinedSvg from '@ant-design/icons-svg/lib/asn/NodeExpandOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const NodeExpandOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={NodeExpandOutlinedSvg} />;
-export default NodeExpandOutlined;
+const NodeExpandOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={NodeExpandOutlinedSvg} />;
+
+NodeExpandOutlined.displayName = 'NodeExpandOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(NodeExpandOutlined);

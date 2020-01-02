@@ -5,5 +5,10 @@ import React from 'react'
 import ReconciliationFilledSvg from '@ant-design/icons-svg/lib/asn/ReconciliationFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ReconciliationFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={ReconciliationFilledSvg} />;
-export default ReconciliationFilled;
+const ReconciliationFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ReconciliationFilledSvg} />;
+
+ReconciliationFilled.displayName = 'ReconciliationFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ReconciliationFilled);

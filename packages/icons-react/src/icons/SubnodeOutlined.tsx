@@ -5,5 +5,10 @@ import React from 'react'
 import SubnodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/SubnodeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SubnodeOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={SubnodeOutlinedSvg} />;
-export default SubnodeOutlined;
+const SubnodeOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={SubnodeOutlinedSvg} />;
+
+SubnodeOutlined.displayName = 'SubnodeOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SubnodeOutlined);

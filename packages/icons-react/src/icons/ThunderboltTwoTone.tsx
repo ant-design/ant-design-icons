@@ -5,5 +5,10 @@ import React from 'react'
 import ThunderboltTwoToneSvg from '@ant-design/icons-svg/lib/asn/ThunderboltTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ThunderboltTwoTone = (props: AntdIconProps) => <AntdIcon {...props} icon={ThunderboltTwoToneSvg} />;
-export default ThunderboltTwoTone;
+const ThunderboltTwoTone = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ThunderboltTwoToneSvg} />;
+
+ThunderboltTwoTone.displayName = 'ThunderboltTwoTone';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ThunderboltTwoTone);

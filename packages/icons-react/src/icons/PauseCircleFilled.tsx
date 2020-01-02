@@ -5,5 +5,10 @@ import React from 'react'
 import PauseCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PauseCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PauseCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={PauseCircleFilledSvg} />;
-export default PauseCircleFilled;
+const PauseCircleFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={PauseCircleFilledSvg} />;
+
+PauseCircleFilled.displayName = 'PauseCircleFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PauseCircleFilled);

@@ -5,5 +5,10 @@ import React from 'react'
 import GithubOutlinedSvg from '@ant-design/icons-svg/lib/asn/GithubOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const GithubOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={GithubOutlinedSvg} />;
-export default GithubOutlined;
+const GithubOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={GithubOutlinedSvg} />;
+
+GithubOutlined.displayName = 'GithubOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GithubOutlined);

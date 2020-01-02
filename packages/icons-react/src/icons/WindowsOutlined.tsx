@@ -5,5 +5,10 @@ import React from 'react'
 import WindowsOutlinedSvg from '@ant-design/icons-svg/lib/asn/WindowsOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const WindowsOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={WindowsOutlinedSvg} />;
-export default WindowsOutlined;
+const WindowsOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={WindowsOutlinedSvg} />;
+
+WindowsOutlined.displayName = 'WindowsOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WindowsOutlined);

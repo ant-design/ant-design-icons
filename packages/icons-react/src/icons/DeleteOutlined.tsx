@@ -5,5 +5,10 @@ import React from 'react'
 import DeleteOutlinedSvg from '@ant-design/icons-svg/lib/asn/DeleteOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DeleteOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={DeleteOutlinedSvg} />;
-export default DeleteOutlined;
+const DeleteOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={DeleteOutlinedSvg} />;
+
+DeleteOutlined.displayName = 'DeleteOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteOutlined);

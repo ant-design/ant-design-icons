@@ -5,5 +5,10 @@ import React from 'react'
 import CloseCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CloseCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CloseCircleFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CloseCircleFilledSvg} />;
-export default CloseCircleFilled;
+const CloseCircleFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CloseCircleFilledSvg} />;
+
+CloseCircleFilled.displayName = 'CloseCircleFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloseCircleFilled);

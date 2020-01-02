@@ -5,5 +5,10 @@ import React from 'react'
 import CodepenSquareFilledSvg from '@ant-design/icons-svg/lib/asn/CodepenSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CodepenSquareFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={CodepenSquareFilledSvg} />;
-export default CodepenSquareFilled;
+const CodepenSquareFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CodepenSquareFilledSvg} />;
+
+CodepenSquareFilled.displayName = 'CodepenSquareFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CodepenSquareFilled);

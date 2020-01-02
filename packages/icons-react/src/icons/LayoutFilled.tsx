@@ -5,5 +5,10 @@ import React from 'react'
 import LayoutFilledSvg from '@ant-design/icons-svg/lib/asn/LayoutFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const LayoutFilled = (props: AntdIconProps) => <AntdIcon {...props} icon={LayoutFilledSvg} />;
-export default LayoutFilled;
+const LayoutFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={LayoutFilledSvg} />;
+
+LayoutFilled.displayName = 'LayoutFilled';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LayoutFilled);

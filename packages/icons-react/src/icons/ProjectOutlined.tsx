@@ -5,5 +5,10 @@ import React from 'react'
 import ProjectOutlinedSvg from '@ant-design/icons-svg/lib/asn/ProjectOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ProjectOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={ProjectOutlinedSvg} />;
-export default ProjectOutlined;
+const ProjectOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={ProjectOutlinedSvg} />;
+
+ProjectOutlined.displayName = 'ProjectOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ProjectOutlined);

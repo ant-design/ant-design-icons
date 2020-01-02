@@ -5,5 +5,10 @@ import React from 'react'
 import CheckOutlinedSvg from '@ant-design/icons-svg/lib/asn/CheckOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CheckOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={CheckOutlinedSvg} />;
-export default CheckOutlined;
+const CheckOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={CheckOutlinedSvg} />;
+
+CheckOutlined.displayName = 'CheckOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CheckOutlined);

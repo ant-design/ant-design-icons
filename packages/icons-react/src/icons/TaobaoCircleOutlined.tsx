@@ -5,5 +5,10 @@ import React from 'react'
 import TaobaoCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/TaobaoCircleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const TaobaoCircleOutlined = (props: AntdIconProps) => <AntdIcon {...props} icon={TaobaoCircleOutlinedSvg} />;
-export default TaobaoCircleOutlined;
+const TaobaoCircleOutlined = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={TaobaoCircleOutlinedSvg} />;
+
+TaobaoCircleOutlined.displayName = 'TaobaoCircleOutlined';
+export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TaobaoCircleOutlined);
