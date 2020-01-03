@@ -13,7 +13,7 @@ Ant Design Icons
 
 </div>
 
-Check [all icons list](./docs/list.md).
+Check [all icons list](./docs/all-icons-list.mdx).
 
 ## Install
 
@@ -85,14 +85,14 @@ export interface AbstractNode {
 ```
 
 ## Render Helpers
+
 ```ts
 import { AccountBookFill } from '@ant-design/icons-svg';
 import { renderIconDefinitionToSVGElement } from '@ant-design/icons-svg/es/helpers';
 
-const svgHTMLString = renderIconDefinitionToSVGElement(
-  AccountBookFill,
-  { extraSVGAttrs: { width: '1em', height: '1em', fill: 'currentColor' } }
-);
+const svgHTMLString = renderIconDefinitionToSVGElement(AccountBookFill, {
+  extraSVGAttrs: { width: '1em', height: '1em', fill: 'currentColor' }
+});
 
 console.log(svgHTMLString);
 // ==>
@@ -102,7 +102,10 @@ console.log(svgHTMLString);
 - Interfaces
 
 ```ts
-declare function renderIconDefinitionToSVGElement(icon: IconDefinition, options?: HelperRenderOptions): string;
+declare function renderIconDefinitionToSVGElement(
+  icon: IconDefinition,
+  options?: HelperRenderOptions
+): string;
 
 interface HelperRenderOptions {
   placeholders?: {
@@ -116,6 +119,7 @@ interface HelperRenderOptions {
 ```
 
 ## Build Project
+
 ```bash
 npm run generate # Generate files to ./src
 npm run build # Build library
