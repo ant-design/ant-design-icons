@@ -79,7 +79,7 @@ export const manifest: Manifest = {
 // GENERATE BY ./scripts/generate.ts
 // DO NOT EDIT IT MANUALLY
 
-import { IconDefinition } from '../types';
+import { IconDefinition } from '@ant-design/icons-angular';
 
 export const <%= svgIdentifier %>: IconDefinition = {
     name: '<%= name %>',
