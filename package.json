@@ -3,13 +3,11 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "bootstrap:china": "lerna bootstrap --registry=https://registry.npm.taobao.org",
+    "rn:generate": "lerna run --scope @ant-design/icons-react-native generate",
     "icons:generate": "lerna run --scope @ant-design/icons-svg generate",
-    "posticons:generate": "lerna run --scope @ant-design/icons-react-native generate",
     "icons:build": "lerna run --scope @ant-design/icons-svg build",
     "icons:test": "lerna run --scope @ant-design/icons-svg test",
-    "react:compile": "lerna run --scope @ant-design/icons compile",
-    "react:example": "lerna run --scope @ant-design/icons start",
-    "react:test": "lerna run --scope @ant-design/icons ci",
+    "react:ci": "lerna run --scope @ant-design/icons ci",
     "lint": "lerna run lint"
   },
   "devDependencies": {

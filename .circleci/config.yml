@@ -1,43 +1,83 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
-jobs:
-  build:
+
+references:
+  container_config: &container_config
     docker:
-      # specify the version you desire here
-      - image: circleci/node:8
+      - image: circleci/node:lts
+    working_directory: ~/ant-design-icons
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: ~/ant-design-icons
 
-    working_directory: ~/repo
+  workflow: &workflow
+    jobs:
+      - setup:
+          filters:
+            branches:
+              ignore: gh-pages
+      - icons-svg:
+          requires:
+          - setup
+      - icons-react:
+          requires:
+          - setup
+          - icons-svg
 
+jobs:
+  setup:
+    <<: *container_config
     steps:
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: yarn install
-
-      - save_cache:
+      - run: node -v
+      - run: yarn -v
+      - run: yarn
+      - run: yarn bootstrap
+      - run:
+          command: |
+            set +eo
+            yarn list
+            true
+      - persist_to_workspace:
+          root: ~/ant-design-icons
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+            - packages/icons-*/node_modules
+      - store_artifacts:
+          path: yarn.lock
 
-      - run: yarn run bootstrap
-      - run: yarn cache clean
+  icons-svg:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: yarn icons:generate
+      - run: yarn icons:build
+      - run: yarn icons:test
+      - persist_to_workspace:
+          root: ~/ant-design-icons
+          paths:
+            - packages/icons-svg/es
+            - packages/icons-svg/lib
+            - packages/icons-svg/inline-svg
 
-      - run: yarn run lint
-      - run: yarn run icons:test
-      - run: yarn run icons:generate
-      - run: yarn run icons:build
-      - run: yarn run react:test
+  icons-react:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: yarn react:ci
+
+workflows:
+  version: 2
+  build_test:
+    <<: *workflow
+  nightly:
+    <<: *workflow
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
