@@ -30,13 +30,13 @@ jobs:
     steps:
       - checkout
       - run: node -v
-      - run: npm -v
-      - run: npm install
-      - run: npm run bootstrap
+      - run: yarn -v
+      - run: yarn
+      - run: yarn bootstrap
       - run:
           command: |
             set +eo
-            npm ls
+            yarn list
             true
       - persist_to_workspace:
           root: ~/ant-design-icons
@@ -44,16 +44,16 @@ jobs:
             - node_modules
             - packages/icons-*/node_modules
       - store_artifacts:
-          path: package-lock.json
+          path: yarn.lock
 
   icons-svg:
     <<: *container_config
     steps:
       - checkout
       - *attach_workspace
-      - run: npm run icons:generate
-      - run: npm run icons:build
-      - run: npm run icons:test
+      - run: yarn icons:generate
+      - run: yarn icons:build
+      - run: yarn icons:test
       - persist_to_workspace:
           root: ~/ant-design-icons
           paths:
@@ -66,7 +66,7 @@ jobs:
     steps:
       - checkout
       - *attach_workspace
-      - run: npm run react:ci
+      - run: yarn react:ci
 
 workflows:
   version: 2
