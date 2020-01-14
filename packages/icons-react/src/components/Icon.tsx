@@ -26,7 +26,7 @@ export interface CustomIconComponentProps {
 
 export interface IconComponentProps extends IconBaseProps {
   viewBox?: string;
-  component?: React.ComponentType<CustomIconComponentProps>;
+  component?: React.ComponentType<CustomIconComponentProps | React.SVGProps<SVGSVGElement>>;
   ariaLabel?: React.AriaAttributes['aria-label'];
 }
 

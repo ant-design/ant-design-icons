@@ -48,7 +48,7 @@ export default function create(options: CustomIconOptions = {}): React.SFC<IconF
       content = children;
     }
     return (
-      <Icon {...restProps} {...extraCommonProps}>
+      <Icon {...extraCommonProps} {...restProps}>
         {content}
       </Icon>
     );
