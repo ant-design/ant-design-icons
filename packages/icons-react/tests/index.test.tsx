@@ -8,7 +8,23 @@ import Icon, {
 } from '../lib';
 import { getSecondaryColor } from '../src/utils';
 
+function mountTest(Component) {
+  describe(`mount and unmount`, () => {
+    // https://github.com/ant-design/ant-design/pull/18441
+    it(`component could be updated and unmounted without errors`, () => {
+      const wrapper = mount(<Component />);
+      expect(() => {
+        wrapper.setProps({});
+        wrapper.unmount();
+      }).not.toThrow();
+    });
+  });
+}
+
 describe('Icon', () => {
+  mountTest(HomeOutlined);
+  mountTest(CheckCircleTwoTone);
+
   it('should render to a <span class="xxx"><svg>...</svg></span>', () => {
     const wrapper = render(<HomeOutlined className="my-icon-classname" />);
     expect(wrapper).toMatchSnapshot();
@@ -160,7 +176,7 @@ describe('Icon', () => {
     // children props would make no sense
     const SvgComponent = props => (
       <svg viewBox="0 0 24 24" {...props}>
-        <title>Cool Home</title>
+        <title>Custom Svg</title>
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
       </svg>
     );
@@ -178,6 +194,9 @@ describe('Icon', () => {
 describe('Icon.createFromIconfontCN()', () => {
   const IconFont = createFromIconfontCN({
     scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
+    extraCommonProps: {
+      className: 'abc',
+    },
   });
 
   it('should support iconfont.cn', () => {
@@ -186,6 +205,17 @@ describe('Icon.createFromIconfontCN()', () => {
         <IconFont type="icon-tuichu" />
         <IconFont type="icon-facebook" />
         <IconFont type="icon-twitter" />
+      </div>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('extraCommonProps should works fine and can be overwritten', () => {
+    const wrapper = render(
+      <div className="icons-list">
+        <IconFont type="icon-tuichu" className="bcd" />
+        <IconFont type="icon-facebook" />
+        <IconFont type="icon-twitter" className="efg" />
       </div>,
     );
     expect(wrapper).toMatchSnapshot();
