@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-svg",
-  "version": "4.0.0-alpha.5",
+  "version": "4.0.0-rc.0",
   "sideEffects": false,
   "description": "Abstract nodes for ant design icons.",
   "contributors": [
@@ -83,6 +83,7 @@
     "vinyl": "^2.2.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }
