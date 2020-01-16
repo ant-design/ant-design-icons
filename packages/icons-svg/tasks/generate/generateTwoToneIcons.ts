@@ -5,7 +5,6 @@ import {
   getInlinePathByTheme
 } from '../../build/helpers';
 import merge from 'merge-stream';
-import { twoToneSVGOConfig } from '../../build/svgo-options';
 import iconDefinition from '../../plugins/icon-definition';
 import useTemplate from '../../plugins/use-template';
 import rename from 'gulp-rename';
@@ -20,6 +19,7 @@ import {
   twoToneStringfy
 } from '../../build/strategies';
 import { svgo } from '../../plugins';
+import { fillRemovedConfig } from '../../plugins/svgo/presets';
 
 const { twotone } = ThemeLowerCaseEnum;
 const { TwoTone } = ThemeUpperCaseEnum;
@@ -32,7 +32,7 @@ const { TwoTone } = ThemeUpperCaseEnum;
  */
 export default function generateTwoToneIcons(): NodeJS.ReadWriteStream {
   const iconDefinitionStream = src(getSrcByTheme(twotone))
-    .pipe(svgo(twoToneSVGOConfig))
+    .pipe(svgo(fillRemovedConfig))
     .pipe(
       iconDefinition({
         theme: 'twotone',

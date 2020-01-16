@@ -5,7 +5,6 @@ import {
   getInlinePathByTheme
 } from '../../build/helpers';
 import merge from 'merge-stream';
-import { singleColorSVGOConfig } from '../../build/svgo-options';
 import iconDefinition from '../../plugins/icon-definition';
 import useTemplate from '../../plugins/use-template';
 import rename from 'gulp-rename';
@@ -18,6 +17,7 @@ import {
   iconsAfter3Dot9ShouldBeResizeViewbox
 } from '../../build/strategies';
 import { svgo } from '../../plugins';
+import { generalConfig } from '../../plugins/svgo/presets';
 
 const { filled } = ThemeLowerCaseEnum;
 const { Filled } = ThemeUpperCaseEnum;
@@ -30,7 +30,7 @@ const { Filled } = ThemeUpperCaseEnum;
  */
 export default function generateFilledIcons(): NodeJS.ReadWriteStream {
   const iconDefinitionStream = src(getSrcByTheme(filled))
-    .pipe(svgo(singleColorSVGOConfig))
+    .pipe(svgo(generalConfig))
     .pipe(
       iconDefinition({
         theme: filled,

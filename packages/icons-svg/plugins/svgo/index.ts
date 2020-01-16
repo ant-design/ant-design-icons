@@ -1,5 +1,5 @@
 import SVGO from 'svgo';
-import { createTrasformStreamAsync } from './creator';
+import { createTrasformStreamAsync } from '../creator';
 
 export function svgo(options: SVGO.Options) {
   const optimizer = new SVGO(options);
