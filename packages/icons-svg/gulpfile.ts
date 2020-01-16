@@ -6,6 +6,7 @@ import generateTwoToneIcons from './tasks/generate/generateTwoToneIcons';
 import { clean, copy } from './tasks/creators';
 import { generateIcons } from './tasks/creators/generate';
 import { generalConfig } from './plugins/svgo/presets';
+import { assignAttrsAtTag } from './plugins/svg2Definition/transforms';
 
 export default series(
   clean(['src', 'inline-svg', 'es', 'lib']),
@@ -19,7 +20,11 @@ export default series(
       from: ['svg/filled/*.svg'],
       toDir: 'src/asn',
       svgoConfig: generalConfig,
-      extraNodeTransformFactories: []
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        assignAttrsAtTag('svg', { viewBox: 'oops' }),
+        assignAttrsAtTag('path', { ggb: '123' })
+      ]
     }),
     generateFilledIcons,
     generateOutlinedIcons,

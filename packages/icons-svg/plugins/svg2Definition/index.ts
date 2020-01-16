@@ -10,11 +10,14 @@ import {
   filter,
   where,
   equals,
-  when,
-  propSatisfies,
+  gt as greaterThan,
+  both,
+  unless,
+  length,
   dissoc as deleteProp,
   reduce,
-  compose
+  compose,
+  __
 } from 'ramda';
 import parseXML from '@rgrove/parse-xml';
 
@@ -46,11 +49,10 @@ const element2AbstractNode = ({
     reduce(
       (transformedNode, extraTransformFn: ReturnType<TransformFactory>) =>
         extraTransformFn(transformedNode),
-      when<AbstractNode, AbstractNode>(
-        propSatisfies(
-          (children) => !(Array.isArray(children) && children.length),
-          'children'
-        ),
+      unless<AbstractNode, AbstractNode>(
+        where({
+          children: both(Array.isArray, pipe(length, greaterThan(__, 0)))
+        }),
         deleteProp('children')
       )({
         tag,

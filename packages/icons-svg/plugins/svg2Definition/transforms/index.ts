@@ -1,0 +1,1 @@
+export { assignAttrsAtTag } from './creator';
