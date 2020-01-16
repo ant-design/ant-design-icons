@@ -1,5 +1,4 @@
 import { src, dest } from 'gulp';
-import svgo from '../../plugins/svgo';
 import {
   getIdentifier,
   getSrcByTheme,
@@ -18,6 +17,7 @@ import {
   iconShouldNotBeFocusable,
   iconsAfter3Dot9ShouldBeResizeViewbox
 } from '../../build/strategies';
+import { svgo } from '../../plugins';
 
 const { filled } = ThemeLowerCaseEnum;
 const { Filled } = ThemeUpperCaseEnum;

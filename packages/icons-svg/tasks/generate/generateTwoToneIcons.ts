@@ -1,5 +1,4 @@
 import { src, dest } from 'gulp';
-import svgo from '../../plugins/svgo';
 import {
   getIdentifier,
   getSrcByTheme,
@@ -20,6 +19,7 @@ import {
   twoToneIconExtractColor,
   twoToneStringfy
 } from '../../build/strategies';
+import { svgo } from '../../plugins';
 
 const { twotone } = ThemeLowerCaseEnum;
 const { TwoTone } = ThemeUpperCaseEnum;
