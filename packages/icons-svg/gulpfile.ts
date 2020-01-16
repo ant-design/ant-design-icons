@@ -15,9 +15,11 @@ export default series(
       toDir: 'src'
     }),
     generateIcons({
+      theme: 'filled',
       from: ['svg/filled/*.svg'],
       toDir: 'src/asn',
-      svgoConfig: generalConfig
+      svgoConfig: generalConfig,
+      extraNodeTransformFactories: []
     }),
     generateFilledIcons,
     generateOutlinedIcons,
