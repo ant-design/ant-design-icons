@@ -13,7 +13,7 @@ Ant Design Icons
 
 </div>
 
-Check [all icons list](./docs/list.md).
+Check [all icons list](https://github.com/ant-design/ant-design-icons/issues/227).
 
 ## Install
 
