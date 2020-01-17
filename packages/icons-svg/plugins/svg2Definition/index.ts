@@ -1,10 +1,7 @@
-import { createTrasformStreamAsync } from '../creator';
+import { createTrasformStream } from '../creator';
 import { ThemeType, AbstractNode } from '../../build/templates/types';
 import {
   pipe,
-  prop,
-  head,
-  defaultTo,
   clone,
   map,
   filter,
@@ -16,10 +13,12 @@ import {
   length,
   dissoc as deleteProp,
   reduce,
-  compose,
-  __
+  path as get,
+  __,
+  applyTo,
+  defaultTo
 } from 'ramda';
-import parseXML from '@rgrove/parse-xml';
+import parseXML, { Element } from '@rgrove/parse-xml';
 
 export interface SVG2DefinitionOptions {
   theme: ThemeType;
@@ -36,61 +35,102 @@ export interface TransformFactory {
   ) => AbstractNode;
 }
 
-const element2AbstractNode = ({
+// SVG => IconDefinition
+export const svg2Definition = ({ theme, factories }: SVG2DefinitionOptions) =>
+  createTrasformStream((SVGString, { stem: name }) =>
+    applyTo(SVGString)(
+      pipe(
+        // 0. The SVG string is like that:
+        // <svg viewBox="0 0 1024 1024"><path d="..."/></svg>
+        parseXML,
+        // 1. The parsed XML root node is with the JSON shape:
+        // {
+        //   "type": "document",
+        //   "children": [
+        //     {
+        //       "type": "element",
+        //       "name": "svg",
+        //       "attributes": { "viewBox": "0 0 1024 1024" },
+        //       "children": [
+        //         {
+        //           "type": "element",
+        //           "name": "path",
+        //           "attributes": {
+        //             "d": "..."
+        //           },
+        //           "children": []
+        //         }
+        //       ]
+        //     }
+        //   ]
+        // }
+        get<Element>(['children', 0]),
+        defaultTo(({} as any) as Element), // @todo: "defaultTo" is not the best way to deal with the type Maybe<Element>
+        // 2. The element node is with the JSON shape:
+        // {
+        //   "type": "element",
+        //   "name": "svg",
+        //   "attributes": { "viewBox": "0 0 1024 1024" },
+        //   "children": [
+        //     {
+        //       "type": "element",
+        //       "name": "path",
+        //       "attributes": {
+        //         "d": "..."
+        //       },
+        //       "children": []
+        //     }
+        //   ]
+        // }
+        element2AbstractNode({ name, theme, factories }),
+        // 3. The abstract node is with the JSON shape:
+        // {
+        //   "tag": "svg",
+        //   "attrs": { "viewBox": "0 0 1024 1024", "focusable": "false" },
+        //   "children": [
+        //     {
+        //       "tag": "path",
+        //       "attrs": {
+        //         "d": "..."
+        //       }
+        //     }
+        //   ]
+        // }
+        JSON.stringify
+      )
+    )
+  );
+
+function element2AbstractNode({
   name,
   theme,
   factories
-}: XML2AbstractNodeOptions) => ({
-  name: tag,
-  attributes,
-  children
-}: parseXML.Element): AbstractNode =>
-  compose(
-    reduce(
-      (transformedNode, extraTransformFn: ReturnType<TransformFactory>) =>
-        extraTransformFn(transformedNode),
-      unless<AbstractNode, AbstractNode>(
-        where({
-          children: both(Array.isArray, pipe(length, greaterThan(__, 0)))
-        }),
-        deleteProp('children')
-      )({
-        tag,
-        attrs: clone(attributes),
-        children: pipe(
-          filter<parseXML.Element, 'array'>(where({ type: equals('element') })),
-          map(element2AbstractNode({ name, theme, factories }))
-        )(children as parseXML.Element[])
-      })
-    ),
-    map((factory: TransformFactory) => factory({ name, theme }))
-  )(factories);
-
-export const svg2Definition = ({ theme, factories }: SVG2DefinitionOptions) => {
-  return createTrasformStreamAsync(async (before, { stem: name }) => {
-    return pipe(
-      parseXML,
-      prop('children'),
-      defaultTo<parseXML.Element[]>([]),
-      head,
-      // Here is an abstract node with the shape:
-      // {
-      //   "type": "element",
-      //   "name": "svg",
-      //   "attributes": { "viewBox": "0 0 1024 1024" },
-      //   "children": [
-      //     {
-      //       "type": "element",
-      //       "name": "path",
-      //       "attributes": {
-      //         "d": "M854.6 370.6c-9.9-39......"
-      //       },
-      //       "children": []
-      //     }
-      //   ]
-      // }
-      element2AbstractNode({ name, theme, factories }),
-      JSON.stringify
-    )(before);
-  });
-};
+}: XML2AbstractNodeOptions) {
+  return ({ name: tag, attributes, children }: Element): AbstractNode =>
+    applyTo(factories)(
+      pipe(
+        map((factory: TransformFactory) => factory({ name, theme })),
+        reduce(
+          (transformedNode, extraTransformFn) =>
+            extraTransformFn(transformedNode),
+          applyTo({
+            tag,
+            attrs: clone(attributes),
+            children: applyTo(children as Element[])(
+              pipe(
+                filter<Element, 'array'>(where({ type: equals('element') })),
+                map(element2AbstractNode({ name, theme, factories }))
+              )
+            )
+          })(
+            unless<AbstractNode, AbstractNode>(
+              where({
+                children: both(Array.isArray, pipe(length, greaterThan(__, 0)))
+              }),
+              deleteProp('children')
+            )
+          )
+        )
+      )
+    );
+}

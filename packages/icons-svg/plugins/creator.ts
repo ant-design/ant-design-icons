@@ -10,7 +10,7 @@ export const createTrasformStream = (fn: (raw: string, file: File) => string) =>
         file.contents = Buffer.from(after);
         done(null, file);
       } catch (err) {
-        done(err, file);
+        done(err, null);
       }
     } else {
       done(null, file);
@@ -29,7 +29,7 @@ export const createTrasformStreamAsync = (
           done(null, file);
         })
         .catch((err) => {
-          done(err, file);
+          done(err, null);
         });
     } else {
       done(null, file);

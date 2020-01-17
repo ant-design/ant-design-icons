@@ -21,9 +21,7 @@ export default series(
       toDir: 'src/asn',
       svgoConfig: generalConfig,
       extraNodeTransformFactories: [
-        assignAttrsAtTag('svg', { focusable: 'false' }),
-        assignAttrsAtTag('svg', { viewBox: 'oops' }),
-        assignAttrsAtTag('path', { ggb: '123' })
+        assignAttrsAtTag('svg', { focusable: 'false' })
       ]
     }),
     generateFilledIcons,
