@@ -5,8 +5,11 @@ import generateOutlinedIcons from './tasks/generate/generateOutlinedIcons';
 import generateTwoToneIcons from './tasks/generate/generateTwoToneIcons';
 import { clean, copy } from './tasks/creators';
 import { generateIcons } from './tasks/creators/generate';
-import { generalConfig } from './plugins/svgo/presets';
-import { assignAttrsAtTag } from './plugins/svg2Definition/transforms';
+import { generalConfig, remainFillConfig } from './plugins/svgo/presets';
+import {
+  assignAttrsAtTag,
+  adjustViewBox
+} from './plugins/svg2Definition/transforms';
 
 export default series(
   clean(['src', 'inline-svg', 'es', 'lib']),
@@ -16,12 +19,13 @@ export default series(
       toDir: 'src'
     }),
     generateIcons({
-      theme: 'filled',
-      from: ['svg/filled/*.svg'],
+      theme: 'twotone',
+      from: ['svg/twotone/*.svg'],
       toDir: 'src/asn',
-      svgoConfig: generalConfig,
+      svgoConfig: remainFillConfig,
       extraNodeTransformFactories: [
-        assignAttrsAtTag('svg', { focusable: 'false' })
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox
       ]
     }),
     generateFilledIcons,

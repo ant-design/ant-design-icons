@@ -29,10 +29,10 @@ export interface XML2AbstractNodeOptions extends SVG2DefinitionOptions {
   name: string;
 }
 
+export type TransformOptions = Pick<XML2AbstractNodeOptions, 'name' | 'theme'>;
+
 export interface TransformFactory {
-  (options: Pick<XML2AbstractNodeOptions, 'name' | 'theme'>): (
-    asn: AbstractNode
-  ) => AbstractNode;
+  (options: TransformOptions): (asn: AbstractNode) => AbstractNode;
 }
 
 // SVG => IconDefinition

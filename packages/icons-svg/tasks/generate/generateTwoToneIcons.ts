@@ -19,7 +19,7 @@ import {
   twoToneStringfy
 } from '../../build/strategies';
 import { svgo } from '../../plugins';
-import { fillRemovedConfig } from '../../plugins/svgo/presets';
+import { remainFillConfig } from '../../plugins/svgo/presets';
 
 const { twotone } = ThemeLowerCaseEnum;
 const { TwoTone } = ThemeUpperCaseEnum;
@@ -32,7 +32,7 @@ const { TwoTone } = ThemeUpperCaseEnum;
  */
 export default function generateTwoToneIcons(): NodeJS.ReadWriteStream {
   const iconDefinitionStream = src(getSrcByTheme(twotone))
-    .pipe(svgo(fillRemovedConfig))
+    .pipe(svgo(remainFillConfig))
     .pipe(
       iconDefinition({
         theme: 'twotone',
