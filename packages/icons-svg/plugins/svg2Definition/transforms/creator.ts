@@ -1,14 +1,27 @@
 import { TransformFactory, TransformOptions } from '..';
-import { evolve, clone, pipe, mergeLeft, when, equals, where } from 'ramda';
+import {
+  evolve,
+  clone,
+  pipe,
+  mergeLeft,
+  when,
+  equals,
+  where,
+  mergeRight
+} from 'ramda';
 import { AbstractNode } from '../../../build/templates/types';
 
 type Dictionary = Record<string, string>;
 
 export function assignAttrsAtTag(
   tag: string,
-  extraPropsOrFn: Dictionary | ((options: TransformOptions) => Dictionary)
+  extraPropsOrFn:
+    | Dictionary
+    | ((
+        options: TransformOptions & { previousAttrs: Dictionary }
+      ) => Dictionary)
 ): TransformFactory {
-  return (options) =>
+  return (options) => (asn) =>
     when<AbstractNode, AbstractNode>(
       where({
         tag: equals(tag)
@@ -18,10 +31,12 @@ export function assignAttrsAtTag(
           clone,
           mergeLeft(
             typeof extraPropsOrFn === 'function'
-              ? extraPropsOrFn(options)
+              ? extraPropsOrFn(
+                  mergeRight(options, { previousAttrs: asn.attrs })
+                )
               : extraPropsOrFn
           )
         )
       })
-    );
+    )(asn);
 }

@@ -1,16 +1,16 @@
 import { src, dest } from 'gulp';
 import SVGO from 'svgo';
 import { svgo } from '../../plugins';
-import { svg2Definition, TransformFactory } from '../../plugins/svg2Definition';
-import { ThemeType } from '../../build/templates/types';
+import {
+  svg2Definition,
+  SVG2DefinitionOptions
+} from '../../plugins/svg2Definition';
 import rename from 'gulp-rename';
 
-export interface GenerateIconsOptions {
+export interface GenerateIconsOptions extends SVG2DefinitionOptions {
   from: string[];
   toDir: string;
-  theme: ThemeType;
   svgoConfig: SVGO.Options;
-  extraNodeTransformFactories: TransformFactory[];
 }
 
 export const generateIcons = ({
@@ -18,7 +18,8 @@ export const generateIcons = ({
   toDir,
   svgoConfig,
   theme,
-  extraNodeTransformFactories
+  extraNodeTransformFactories,
+  stringify
 }: GenerateIconsOptions) =>
   function GenerateIcons() {
     return src(from)
@@ -26,12 +27,13 @@ export const generateIcons = ({
       .pipe(
         svg2Definition({
           theme,
-          factories: extraNodeTransformFactories
+          extraNodeTransformFactories,
+          stringify
         })
       )
       .pipe(
         rename((file) => {
-          file.extname = '.json';
+          file.extname = '.ts';
         })
       )
       .pipe(dest(toDir));

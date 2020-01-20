@@ -8,9 +8,10 @@ import { generateIcons } from './tasks/creators/generate';
 import { generalConfig, remainFillConfig } from './plugins/svgo/presets';
 import {
   assignAttrsAtTag,
-  adjustViewBox
+  adjustViewBox,
+  setDefaultColorAtPathTag
 } from './plugins/svg2Definition/transforms';
-
+import { twotoneStringify } from './plugins/svg2Definition/stringify';
 export default series(
   clean(['src', 'inline-svg', 'es', 'lib']),
   parallel(
@@ -25,8 +26,10 @@ export default series(
       svgoConfig: remainFillConfig,
       extraNodeTransformFactories: [
         assignAttrsAtTag('svg', { focusable: 'false' }),
-        adjustViewBox
-      ]
+        adjustViewBox,
+        setDefaultColorAtPathTag('#333')
+      ],
+      stringify: twotoneStringify
     }),
     generateFilledIcons,
     generateOutlinedIcons,
