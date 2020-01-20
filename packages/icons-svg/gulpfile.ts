@@ -12,6 +12,20 @@ import {
   setDefaultColorAtPathTag
 } from './plugins/svg2Definition/transforms';
 import { twotoneStringify } from './plugins/svg2Definition/stringify';
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
+import { getIdentifier } from './build/helpers';
+import { ThemeTypeUpperCase } from './build/templates/types';
+
+const iconTemplate = readFileSync(
+  resolve(__dirname, './build/templates/icon.ts.ejs'),
+  'utf8'
+);
+
+function getMapToInterpolateByTheme(theme:ThemeTypeUpperCase) {
+
+}
+
 export default series(
   clean(['src', 'inline-svg', 'es', 'lib']),
   parallel(
@@ -29,11 +43,16 @@ export default series(
         adjustViewBox,
         setDefaultColorAtPathTag('#333')
       ],
-      stringify: twotoneStringify
+      stringify: twotoneStringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: 'TwoTone' }),
+        content
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: 'TwoTone' })
     }),
     generateFilledIcons,
     generateOutlinedIcons,
-    generateTwoToneIcons,
     generateLibraryEntry
   )
 );
