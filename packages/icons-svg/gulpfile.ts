@@ -1,10 +1,5 @@
 import { series, parallel } from 'gulp';
-import generateLibraryEntry from './tasks/generate/generateLibraryEntry';
-import generateFilledIcons from './tasks/generate/generateFilledIcons';
-import generateOutlinedIcons from './tasks/generate/generateOutlinedIcons';
-import generateTwoToneIcons from './tasks/generate/generateTwoToneIcons';
-import { clean, copy } from './tasks/creators';
-import { generateIcons } from './tasks/creators/generate';
+import { clean, copy, generateIcons, generateEntry } from './tasks/creators';
 import { generalConfig, remainFillConfig } from './plugins/svgo/presets';
 import {
   assignAttrsAtTag,
@@ -16,15 +11,12 @@ import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { getIdentifier } from './build/helpers';
 import { ThemeTypeUpperCase } from './build/templates/types';
+import { MapToInterpolate } from './plugins/useTemplate';
 
 const iconTemplate = readFileSync(
   resolve(__dirname, './build/templates/icon.ts.ejs'),
   'utf8'
 );
-
-function getMapToInterpolateByTheme(theme:ThemeTypeUpperCase) {
-
-}
 
 export default series(
   clean(['src', 'inline-svg', 'es', 'lib']),
@@ -32,6 +24,34 @@ export default series(
     copy({
       from: ['build/templates/*.ts'],
       toDir: 'src'
+    }),
+    generateIcons({
+      theme: 'filled',
+      from: ['svg/filled/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: generalConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: getMapToInterpolateByTheme('Filled'),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Filled' })
+    }),
+    generateIcons({
+      theme: 'outlined',
+      from: ['svg/outlined/*.svg'],
+      toDir: 'src/asn',
+      svgoConfig: generalConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: getMapToInterpolateByTheme('Outlined'),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Outlined' })
     }),
     generateIcons({
       theme: 'twotone',
@@ -45,14 +65,28 @@ export default series(
       ],
       stringify: twotoneStringify,
       template: iconTemplate,
-      mapToInterpolate: ({ name, content }) => ({
-        identifier: getIdentifier({ name, themeSuffix: 'TwoTone' }),
-        content
-      }),
+      mapToInterpolate: getMapToInterpolateByTheme('TwoTone'),
       filename: ({ name }) => getIdentifier({ name, themeSuffix: 'TwoTone' })
-    }),
-    generateFilledIcons,
-    generateOutlinedIcons,
-    generateLibraryEntry
-  )
+    })
+  ),
+  generateEntry({
+    entryName: 'index.ts',
+    from: ['src/asn/*.ts'],
+    toDir: 'src',
+    banner: `// This index.ts file is generated automatically.\n`,
+    template: `export { default as <%= identifier %> } from '<%= path %>';`,
+    mapToInterpolate: ({ name: identifier }) => ({
+      identifier,
+      path: `./asn/${identifier}`
+    })
+  })
 );
+
+function getMapToInterpolateByTheme(
+  theme: ThemeTypeUpperCase
+): MapToInterpolate {
+  return ({ name, content }) => ({
+    identifier: getIdentifier({ name, themeSuffix: theme }),
+    content
+  });
+}

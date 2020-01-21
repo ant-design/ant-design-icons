@@ -6,8 +6,8 @@ export interface UseTemplatePluginOptions {
   mapToInterpolate: MapToInterpolate;
 }
 
-interface MapToInterpolate {
-  (meta: { name: string; content: string }): object;
+export interface MapToInterpolate {
+  (meta: { name: string; content: string; path: string }): object;
 }
 
 export const useTemplate = ({
@@ -15,7 +15,7 @@ export const useTemplate = ({
   mapToInterpolate
 }: UseTemplatePluginOptions) => {
   const executor = template(tplContent);
-  return createTrasformStream((content, { stem: name }) =>
-    executor(mapToInterpolate({ name, content }))
+  return createTrasformStream((content, { stem: name, path }) =>
+    executor(mapToInterpolate({ name, content, path }))
   );
 };
