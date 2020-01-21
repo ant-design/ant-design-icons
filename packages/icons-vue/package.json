@@ -32,7 +32,7 @@
         "@types/jest": "^24.0.17",
         "@types/node": "^10.5.5",
         "@types/vue": "^2.0.0",
-        "@vue/server-test-utils": "1.0.0-beta.16",
+        "@vue/server-test-utils": "1.0.0-beta.31",
         "@vue/test-utils": "1.0.0-beta.16",
         "babel-core": "^6.26.3",
         "babel-helper-vue-jsx-merge-props": "^2.0.3",
