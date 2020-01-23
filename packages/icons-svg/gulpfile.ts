@@ -1,5 +1,11 @@
 import { series, parallel } from 'gulp';
-import { clean, copy, generateIcons, generateEntry } from './tasks/creators';
+import {
+  clean,
+  copy,
+  generateIcons,
+  generateEntry,
+  generateInline
+} from './tasks/creators';
 import { generalConfig, remainFillConfig } from './plugins/svgo/presets';
 import {
   assignAttrsAtTag,
@@ -10,7 +16,7 @@ import { twotoneStringify } from './plugins/svg2Definition/stringify';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { getIdentifier } from './build/helpers';
-import { ThemeTypeUpperCase } from './build/templates/types';
+import { ThemeTypeUpperCase, IconDefinition } from './build/templates/types';
 import { MapToInterpolate } from './plugins/useTemplate';
 
 const iconTemplate = readFileSync(
@@ -69,17 +75,32 @@ export default series(
       filename: ({ name }) => getIdentifier({ name, themeSuffix: 'TwoTone' })
     })
   ),
-  generateEntry({
-    entryName: 'index.ts',
-    from: ['src/asn/*.ts'],
-    toDir: 'src',
-    banner: `// This index.ts file is generated automatically.\n`,
-    template: `export { default as <%= identifier %> } from '<%= path %>';`,
-    mapToInterpolate: ({ name: identifier }) => ({
-      identifier,
-      path: `./asn/${identifier}`
+  parallel(
+    generateEntry({
+      entryName: 'index.ts',
+      from: ['src/asn/*.ts'],
+      toDir: 'src',
+      banner: `// This index.ts file is generated automatically.\n`,
+      template: `export { default as <%= identifier %> } from '<%= path %>';`,
+      mapToInterpolate: ({ name: identifier }) => ({
+        identifier,
+        path: `./asn/${identifier}`
+      })
+    }),
+    generateInline({
+      from: ['src/asn/*.ts'],
+      toDir: ({ _renderData: _ }) => `inline-svg/${_ && _.theme}`,
+      getIconDefinitionFromSource: ((regexp: RegExp) => (
+        content: string
+      ): IconDefinition => {
+        const extract = regexp.exec(content);
+        if (extract === null || !extract[1]) {
+          throw new Error('Failed to parse raw icon definition: ' + content);
+        }
+        return new Function(`return ${extract[1]}`)() as IconDefinition;
+      })(/({\s*".*});/)
     })
-  })
+  )
 );
 
 function getMapToInterpolateByTheme(
