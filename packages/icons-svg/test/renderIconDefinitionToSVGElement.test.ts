@@ -1,5 +1,5 @@
-import { renderIconDefinitionToSVGElement } from '../build/templates/helpers';
-import { IconDefinition } from '../build/templates/types';
+import { renderIconDefinitionToSVGElement } from '../templates/helpers';
+import { IconDefinition } from '../templates/types';
 
 describe('renderIconDefinitionToSVGElement', () => {
   it('should render fill correctly.', () => {

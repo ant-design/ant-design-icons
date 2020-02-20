@@ -15,12 +15,13 @@ import {
 import { twotoneStringify } from './plugins/svg2Definition/stringify';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
-import { getIdentifier } from './build/helpers';
-import { ThemeTypeUpperCase, IconDefinition } from './build/templates/types';
+import { getIdentifier } from './utils';
+import { ThemeTypeUpperCase, IconDefinition } from './templates/types';
 import { MapToInterpolate } from './plugins/useTemplate';
+import { ExtractRegExp } from './tasks/creators/generateInline';
 
 const iconTemplate = readFileSync(
-  resolve(__dirname, './build/templates/icon.ts.ejs'),
+  resolve(__dirname, './templates/icon.ts.ejs'),
   'utf8'
 );
 
@@ -28,7 +29,7 @@ export default series(
   clean(['src', 'inline-svg', 'es', 'lib']),
   parallel(
     copy({
-      from: ['build/templates/*.ts'],
+      from: ['templates/*.ts'],
       toDir: 'src'
     }),
     generateIcons({
@@ -90,15 +91,13 @@ export default series(
     generateInline({
       from: ['src/asn/*.ts'],
       toDir: ({ _renderData: _ }) => `inline-svg/${_ && _.theme}`,
-      getIconDefinitionFromSource: ((regexp: RegExp) => (
-        content: string
-      ): IconDefinition => {
-        const extract = regexp.exec(content);
+      getIconDefinitionFromSource: (content: string): IconDefinition => {
+        const extract = ExtractRegExp.exec(content);
         if (extract === null || !extract[1]) {
           throw new Error('Failed to parse raw icon definition: ' + content);
         }
         return new Function(`return ${extract[1]}`)() as IconDefinition;
-      })(/({\s*".*});/)
+      }
     })
   )
 );

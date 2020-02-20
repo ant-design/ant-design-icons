@@ -1,4 +1,4 @@
-import { IdentifierMeta, getIdentifier } from '../build/helpers';
+import { IdentifierMeta, getIdentifier } from '../utils';
 
 describe('getIdentifier', () => {
   const examples: IdentifierMeta[] = [

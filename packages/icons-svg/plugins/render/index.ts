@@ -2,8 +2,8 @@ import { createTrasformStream } from '../creator';
 import {
   renderIconDefinitionToSVGElement,
   HelperRenderOptions
-} from '../../build/templates/helpers';
-import { IconDefinition, ThemeType } from '../../build/templates/types';
+} from '../../templates/helpers';
+import { IconDefinition, ThemeType } from '../../templates/types';
 
 export interface RenderOptions extends HelperRenderOptions {
   getIconDefinitionFromSource: (raw: string) => IconDefinition;
