@@ -81,7 +81,7 @@ export default series(
       entryName: 'index.ts',
       from: ['src/asn/*.ts'],
       toDir: 'src',
-      banner: `// This index.ts file is generated automatically.\n`,
+      banner: '// This index.ts file is generated automatically.\n',
       template: `export { default as <%= identifier %> } from '<%= path %>';`,
       mapToInterpolate: ({ name: identifier }) => ({
         identifier,
@@ -90,13 +90,16 @@ export default series(
     }),
     generateInline({
       from: ['src/asn/*.ts'],
-      toDir: ({ _renderData: _ }) => `inline-svg/${_ && _.theme}`,
+      toDir: ({ _meta }) => `inline-svg/${_meta && _meta.theme}`,
       getIconDefinitionFromSource: (content: string): IconDefinition => {
         const extract = ExtractRegExp.exec(content);
         if (extract === null || !extract[1]) {
           throw new Error('Failed to parse raw icon definition: ' + content);
         }
         return new Function(`return ${extract[1]}`)() as IconDefinition;
+      },
+      renderOptions: {
+        extraSVGAttrs: { xmlns: 'http://www.w3.org/2000/svg' }
       }
     })
   )

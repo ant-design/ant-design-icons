@@ -5,8 +5,9 @@ import {
 } from '../../templates/helpers';
 import { IconDefinition, ThemeType } from '../../templates/types';
 
-export interface RenderOptions extends HelperRenderOptions {
+export interface RenderOptions {
   getIconDefinitionFromSource: (raw: string) => IconDefinition;
+  renderOptions: HelperRenderOptions;
 }
 
 export interface RenderCustomData {
@@ -15,14 +16,14 @@ export interface RenderCustomData {
 
 export const useRender = ({
   getIconDefinitionFromSource,
-  ...options
+  renderOptions
 }: RenderOptions) =>
   createTrasformStream((content, file) => {
     const def = getIconDefinitionFromSource(content);
     file.extname = '.svg';
     file.stem = def.name;
-    file._renderData = {
+    file._meta = {
       theme: def.theme
     } as RenderCustomData;
-    return renderIconDefinitionToSVGElement(def, options);
+    return renderIconDefinitionToSVGElement(def, renderOptions);
   });
