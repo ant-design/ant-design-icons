@@ -1,7 +1,7 @@
 {
   "name": "@ant-design/icons",
   "version": "4.0.0",
-  "main": "./lib/index.js",
+  "main": "./dist/index.umd.js",
   "module": "./es/index.js",
   "sideEffects": false,
   "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-react",
