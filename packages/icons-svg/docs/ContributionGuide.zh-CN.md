@@ -27,3 +27,36 @@
 ├── typings.d.ts
 └── utils
 ```
+
+## 生成流程
+
+通过运行命令
+
+```bash
+yarn generate # or `yarn g`
+```
+
+开始 `gulp` 构建，整个构建流程如下
+
+```txt
+1. 清理之前生成、编译的文件
+2. 并行运行下列任务
+  2.1 直接拷贝部分代码至 src 目录，例如辅助函数 helpers.ts、类型定义 types.ts
+  2.2 生成 filled 主题风格的图标抽象节点
+  2.3 生成 outlined 主题风格的图标抽象节点
+  2.4 生成 twotone 主题风格的图标抽象节点
+3. 并行运行下列任务
+  3.1 生成入口文件 index.ts
+  3.2 生成内联图标 inline-svg
+  3.3 生成包含名字空间的内联图标 inline-namespaced-svg
+```
+
+## 编译流程
+
+通过运行命令
+
+```bash
+yarn build
+```
+
+使用 `tsc` 编译输出至 `es`、`lib` 目录
