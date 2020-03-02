@@ -60,3 +60,206 @@ yarn build
 ```
 
 使用 `tsc` 编译输出至 `es`、`lib` 目录
+
+## 如何新增/修改/删除图标
+
+### 新增
+
+首先确保图标符合以下要求
+
+- 图标来自 [Ant Design 官方图标库](https://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512&cid=9402)
+- 原始图标的 `viewBox` 为 `0 0 1024 1024`
+
+然后将需要新增的图标添加至 `svg` 目录下对应的主题风格目录中，即 `filled`, `outlined`, `twotone` 中的一个
+
+运行目录下的 `npm scripts`
+
+```bash
+# 生成 ts 源文件至 src
+yarn generate
+
+# 编译 src 文件至 es、lib
+yarn build
+```
+
+### 修改/删除
+
+修改和删除跟新增图标类似，直接修改/删除 `svg` 目录下对应主题风格目录中的 `.svg` 图标即可
+
+## gulp 任务
+
+### 生成图标任务
+
+```ts
+generateIcons(options: GenerateIconsOptions): () => NodeJS.ReadWriteStream
+```
+
+该任务将指定目录下的 `.svg` 文件，使用 `svgo` 进行图标压缩，然后将压缩后的图标解析成抽象节点。
+
+配置说明
+
+```ts
+// gulpfile.ts
+
+generateIcons({
+  // 告知生成图标的主题风格
+  theme: 'filled',
+
+  // 图标来源
+  from: ['svg/filled/*.svg'],
+
+  // 输出目录
+  toDir: 'src/asn',
+
+  // 图标压缩插件 svgo 的配置
+  svgoConfig: generalConfig,
+
+  // 对节点的额外转换，详细说明见下
+  extraNodeTransformFactories: [
+    assignAttrsAtTag('svg', { focusable: 'false' }),
+    adjustViewBox
+  ],
+
+  // 在套用模板前，对抽象节点的序列化操作，详细说明见下
+  stringify: JSON.stringify,
+
+  // 套用的模板
+  template: iconTemplate,
+
+  // 模板中的插值映射
+  mapToInterpolate: ({ name, content }) => ({
+    identifier: getIdentifier({ name, themeSuffix: 'Filled' }),
+    content
+  }),
+
+  // 最后输出文件命名
+  filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Filled' })
+});
+```
+
+#### extraNodeTransformFactories
+
+是一个包含对节点进行额外处理的工厂函数数组 `TransformFactory[]` ，相关类型定义如下
+
+```ts
+interface TransformFactory {
+  (options: TransformOptions): (asn: AbstractNode) => AbstractNode;
+}
+
+type TransformOptions = {
+  name: string;
+  theme: ThemeType;
+};
+
+interface AbstractNode {
+  tag: string;
+  attrs: {
+    [key: string]: string;
+  };
+  children?: AbstractNode[];
+}
+```
+
+例子中的
+
+```ts
+extraNodeTransformFactories: [
+    assignAttrsAtTag('svg', { focusable: 'false' }),
+    adjustViewBox
+  ],
+```
+
+中的两个工厂函数的作用分别是：
+
+- `assignAttrsAtTag('svg', { focusable: 'false' })` 对所有类型为 `svg` 的节点（即 `svg` 标签），赋值添加 `focusable="false"` 属性
+- `adjustViewBox`，本质是将非老图标(<= 3.9) 的 `viewBox` 调整为 `viewBox="64 64 896 896"`
+
+```ts
+const adjustViewBox: TransformFactory = assignAttrsAtTag('svg', ({ name }) => ({
+  viewBox: includes(name, OLD_ICON_NAMES) ? '0 0 1024 1024' : '64 64 896 896'
+}));
+```
+
+其中 `assignAttrsAtTag` 是一个帮助对节点添加额外属性的辅助函数，类型如下
+
+```ts
+function assignAttrsAtTag(
+  tag: string,
+  extraPropsOrFn:
+    | Dictionary
+    | ((
+        options: TransformOptions & { previousAttrs: Dictionary }
+      ) => Dictionary)
+): TransformFactory;
+
+type Dictionary = Record<string, string>;
+```
+
+用法：给所有 `svg` 图标的 `path` 标签添加 `hello="world"`
+
+```ts
+extraNodeTransformFactories: [
+    assignAttrsAtTag('path', { hello: 'world'})
+  ],
+```
+
+结果如下
+
+```ts
+// src/asn/AccountBookFilled.ts
+
+const AccountBookFilled: IconDefinition = {
+  icon: {
+    tag: 'svg',
+    attrs: { viewBox: '0 0 1024 1024' },
+    children: [
+      {
+        tag: 'path',
+        attrs: {
+          d:
+            'M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zM648.3 426.8l-87.7 161.1h45.7c5.5 0 10 4.5 10 10v21.3c0 5.5-4.5 10-10 10h-63.4v29.7h63.4c5.5 0 10 4.5 10 10v21.3c0 5.5-4.5 10-10 10h-63.4V752c0 5.5-4.5 10-10 10h-41.3c-5.5 0-10-4.5-10-10v-51.8h-63.1c-5.5 0-10-4.5-10-10v-21.3c0-5.5 4.5-10 10-10h63.1v-29.7h-63.1c-5.5 0-10-4.5-10-10v-21.3c0-5.5 4.5-10 10-10h45.2l-88-161.1c-2.6-4.8-.9-10.9 4-13.6 1.5-.8 3.1-1.2 4.8-1.2h46c3.8 0 7.2 2.1 8.9 5.5l72.9 144.3 73.2-144.3a10 10 0 018.9-5.5h45c5.5 0 10 4.5 10 10 .1 1.7-.3 3.3-1.1 4.8z',
+          hello: 'world'
+        }
+      }
+    ]
+  },
+  name: 'account-book',
+  theme: 'filled'
+};
+```
+
+同时，也可以传入函数作为参数访问到主题、名字，甚至原来属性等字段
+
+```ts
+extraNodeTransformFactories: [
+    assignAttrsAtTag('path', ({ name, theme, previousAttrs }) => ({
+          hello: `${name}-${theme}-${previousAttrs.d}`
+        }))
+  ],
+```
+
+结果如下
+
+```ts
+// src/asn/AccountBookFilled.ts
+
+const AccountBookFilled: IconDefinition = {
+  icon: {
+    tag: 'svg',
+    attrs: { viewBox: '0 0 1024 1024' },
+    children: [
+      {
+        tag: 'path',
+        attrs: {
+          d:
+            'M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zM648.3 426.8l-87.7 161.1h45.7c5.5 0 10 4.5 10 10v21.3c0 5.5-4.5 10-10 10h-63.4v29.7h63.4c5.5 0 10 4.5 10 10v21.3c0 5.5-4.5 10-10 10h-63.4V752c0 5.5-4.5 10-10 10h-41.3c-5.5 0-10-4.5-10-10v-51.8h-63.1c-5.5 0-10-4.5-10-10v-21.3c0-5.5 4.5-10 10-10h63.1v-29.7h-63.1c-5.5 0-10-4.5-10-10v-21.3c0-5.5 4.5-10 10-10h45.2l-88-161.1c-2.6-4.8-.9-10.9 4-13.6 1.5-.8 3.1-1.2 4.8-1.2h46c3.8 0 7.2 2.1 8.9 5.5l72.9 144.3 73.2-144.3a10 10 0 018.9-5.5h45c5.5 0 10 4.5 10 10 .1 1.7-.3 3.3-1.1 4.8z',
+          hello:
+            'account-book-filled-M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zM648.3 426.8l-87.7 161.1h45.7c5.5 0 10 4.5 10 10v21.3c0 5.5-4.5 10-10 10h-63.4v29.7h63.4c5.5 0 10 4.5 10 10v21.3c0 5.5-4.5 10-10 10h-63.4V752c0 5.5-4.5 10-10 10h-41.3c-5.5 0-10-4.5-10-10v-51.8h-63.1c-5.5 0-10-4.5-10-10v-21.3c0-5.5 4.5-10 10-10h63.1v-29.7h-63.1c-5.5 0-10-4.5-10-10v-21.3c0-5.5 4.5-10 10-10h45.2l-88-161.1c-2.6-4.8-.9-10.9 4-13.6 1.5-.8 3.1-1.2 4.8-1.2h46c3.8 0 7.2 2.1 8.9 5.5l72.9 144.3 73.2-144.3a10 10 0 018.9-5.5h45c5.5 0 10 4.5 10 10 .1 1.7-.3 3.3-1.1 4.8z'
+        }
+      }
+    ]
+  },
+  name: 'account-book',
+  theme: 'filled'
+};
+```
