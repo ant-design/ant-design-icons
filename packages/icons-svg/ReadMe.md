@@ -18,10 +18,11 @@ Check [all icons list](https://github.com/ant-design/ant-design-icons/issues/227
 ## Install
 
 ```bash
-yarn add @ant-design/icons-svg
+# use yarn
+$ yarn add @ant-design/icons-svg
 
 # or use npm
-npm install @ant-design/icons --save
+$ npm install @ant-design/icons --save
 ```
 
 ## Use Library Adapter
@@ -31,15 +32,15 @@ npm install @ant-design/icons --save
 ## Basic Usage
 
 ```ts
-import { AccountBookOutline } from '@ant-design/icons-svg';
+import { AccountBookOutlined } from '@ant-design/icons-svg';
 // or
-// import AccountBookOutline from '@ant-design/icons-svg/es/AccountBookOutline';
+// import AccountBookOutlined from '@ant-design/icons-svg/es/asn/AccountBookOutlined';
 
-console.log(AccountBookOutline);
+console.log(AccountBookOutlined);
 // ==>
 // {
 //   name: 'account-book',
-//   theme: 'outline',
+//   theme: 'outlined',
 //   icon: {
 //     tag: 'svg',
 //     attrs: {
@@ -65,32 +66,30 @@ This library export all SVG files as `IconDefinition`.
 
 ```ts
 // types.d.ts
-export type ThemeType = 'fill' | 'outline' | 'twotone';
-
-export interface IconDefinition {
-  name: string; // kebab-case-style
-  theme: ThemeType;
-  icon:
-    | ((primaryColor: string, secondaryColor: string) => AbstractNode)
-    | AbstractNode;
-}
+export declare type ThemeType = 'filled' | 'outlined' | 'twotone';
 
 export interface AbstractNode {
-  tag: string;
-  attrs: {
-    [key: string]: string;
-  };
-  children?: AbstractNode[];
+    tag: string;
+    attrs: {
+        [key: string]: string;
+    };
+    children?: AbstractNode[];
+}
+
+export interface IconDefinition {
+    name: string; // kebab-case-style
+    theme: ThemeType;
+    icon: ((primaryColor: string, secondaryColor: string) => AbstractNode) | AbstractNode;
 }
 ```
 
 ## Render Helpers
 ```ts
-import { AccountBookFill } from '@ant-design/icons-svg';
+import { AccountBookFilled } from '@ant-design/icons-svg';
 import { renderIconDefinitionToSVGElement } from '@ant-design/icons-svg/es/helpers';
 
 const svgHTMLString = renderIconDefinitionToSVGElement(
-  AccountBookFill,
+  AccountBookFilled,
   { extraSVGAttrs: { width: '1em', height: '1em', fill: 'currentColor' } }
 );
 
@@ -115,9 +114,6 @@ interface HelperRenderOptions {
 }
 ```
 
-## Build Project
-```bash
-npm run generate # Generate files to ./src
-npm run build # Build library
-npm run test # Runing Test
-```
+## Contribution Guide
+
+See contribution guide. [中文](./docs/ContributionGuide.zh-CN.md) | English

@@ -14,7 +14,8 @@
   "files": [
     "lib",
     "es",
-    "inline-svg"
+    "inline-svg",
+    "inline-namespaced-svg"
   ],
   "repository": {
     "type": "git",

@@ -16,8 +16,7 @@ import { twotoneStringify } from './plugins/svg2Definition/stringify';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { getIdentifier } from './utils';
-import { ThemeTypeUpperCase, IconDefinition } from './templates/types';
-import { MapToInterpolate } from './plugins/useTemplate';
+import { IconDefinition } from './templates/types';
 import { ExtractRegExp } from './tasks/creators/generateInline';
 
 const iconTemplate = readFileSync(
@@ -26,12 +25,17 @@ const iconTemplate = readFileSync(
 );
 
 export default series(
+  // 1. clean
   clean(['src', 'inline-svg', 'es', 'lib']),
+
   parallel(
+    // 2.1 copy helpers.ts, types.ts
     copy({
       from: ['templates/*.ts'],
       toDir: 'src'
     }),
+
+    // 2.2 generate abstract node with the theme "filled"
     generateIcons({
       theme: 'filled',
       from: ['svg/filled/*.svg'],
@@ -43,9 +47,14 @@ export default series(
       ],
       stringify: JSON.stringify,
       template: iconTemplate,
-      mapToInterpolate: getMapToInterpolateByTheme('Filled'),
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: 'Filled' }),
+        content
+      }),
       filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Filled' })
     }),
+
+    // 2.2 generate abstract node with the theme "outlined"
     generateIcons({
       theme: 'outlined',
       from: ['svg/outlined/*.svg'],
@@ -57,9 +66,14 @@ export default series(
       ],
       stringify: JSON.stringify,
       template: iconTemplate,
-      mapToInterpolate: getMapToInterpolateByTheme('Outlined'),
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: 'Outlined' }),
+        content
+      }),
       filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Outlined' })
     }),
+
+    // 2.3 generate abstract node with the theme "outlined"
     generateIcons({
       theme: 'twotone',
       from: ['svg/twotone/*.svg'],
@@ -72,11 +86,15 @@ export default series(
       ],
       stringify: twotoneStringify,
       template: iconTemplate,
-      mapToInterpolate: getMapToInterpolateByTheme('TwoTone'),
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: 'TwoTone' }),
+        content
+      }),
       filename: ({ name }) => getIdentifier({ name, themeSuffix: 'TwoTone' })
     })
   ),
   parallel(
+    // 3.1 generate entry file: src/index.ts
     generateEntry({
       entryName: 'index.ts',
       from: ['src/asn/*.ts'],
@@ -88,9 +106,23 @@ export default series(
         path: `./asn/${identifier}`
       })
     }),
+
+    // 3.2 generate inline SVG files
     generateInline({
       from: ['src/asn/*.ts'],
       toDir: ({ _meta }) => `inline-svg/${_meta && _meta.theme}`,
+      getIconDefinitionFromSource: (content: string): IconDefinition => {
+        const extract = ExtractRegExp.exec(content);
+        if (extract === null || !extract[1]) {
+          throw new Error('Failed to parse raw icon definition: ' + content);
+        }
+        return new Function(`return ${extract[1]}`)() as IconDefinition;
+      }
+    }),
+    // 3.3 generate inline SVG files with namespace
+    generateInline({
+      from: ['src/asn/*.ts'],
+      toDir: ({ _meta }) => `inline-namespaced-svg/${_meta && _meta.theme}`,
       getIconDefinitionFromSource: (content: string): IconDefinition => {
         const extract = ExtractRegExp.exec(content);
         if (extract === null || !extract[1]) {
@@ -104,12 +136,3 @@ export default series(
     })
   )
 );
-
-function getMapToInterpolateByTheme(
-  theme: ThemeTypeUpperCase
-): MapToInterpolate {
-  return ({ name, content }) => ({
-    identifier: getIdentifier({ name, themeSuffix: theme }),
-    content
-  });
-}
