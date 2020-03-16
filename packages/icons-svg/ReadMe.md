@@ -69,29 +69,31 @@ This library export all SVG files as `IconDefinition`.
 export declare type ThemeType = 'filled' | 'outlined' | 'twotone';
 
 export interface AbstractNode {
-    tag: string;
-    attrs: {
-        [key: string]: string;
-    };
-    children?: AbstractNode[];
+  tag: string;
+  attrs: {
+    [key: string]: string;
+  };
+  children?: AbstractNode[];
 }
 
 export interface IconDefinition {
-    name: string; // kebab-case-style
-    theme: ThemeType;
-    icon: ((primaryColor: string, secondaryColor: string) => AbstractNode) | AbstractNode;
+  name: string; // kebab-case-style
+  theme: ThemeType;
+  icon:
+    | ((primaryColor: string, secondaryColor: string) => AbstractNode)
+    | AbstractNode;
 }
 ```
 
 ## Render Helpers
+
 ```ts
 import { AccountBookFilled } from '@ant-design/icons-svg';
 import { renderIconDefinitionToSVGElement } from '@ant-design/icons-svg/es/helpers';
 
-const svgHTMLString = renderIconDefinitionToSVGElement(
-  AccountBookFilled,
-  { extraSVGAttrs: { width: '1em', height: '1em', fill: 'currentColor' } }
-);
+const svgHTMLString = renderIconDefinitionToSVGElement(AccountBookFilled, {
+  extraSVGAttrs: { width: '1em', height: '1em', fill: 'currentColor' }
+});
 
 console.log(svgHTMLString);
 // ==>
@@ -101,7 +103,10 @@ console.log(svgHTMLString);
 - Interfaces
 
 ```ts
-declare function renderIconDefinitionToSVGElement(icon: IconDefinition, options?: HelperRenderOptions): string;
+declare function renderIconDefinitionToSVGElement(
+  icon: IconDefinition,
+  options?: HelperRenderOptions
+): string;
 
 interface HelperRenderOptions {
   placeholders?: {
