@@ -33,7 +33,7 @@ $ npm install @ant-design/icons --save
 
 See contribution guide. [English](./docs/ContributionGuide.md) ｜ [中文](./docs/ContributionGuide.zh-CN.md)
 
-## Basic Usage
+## Get started
 
 ```ts
 import { AccountBookOutlined } from '@ant-design/icons-svg';
