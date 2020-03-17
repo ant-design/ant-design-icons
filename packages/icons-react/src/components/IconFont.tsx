@@ -36,7 +36,7 @@ export default function create(options: CustomIconOptions = {}): React.SFC<IconF
     document.body.appendChild(script);
   }
 
-  const Iconfont: React.SFC<IconFontProps> = props => {
+  const Iconfont = React.forwardRef<HTMLSpanElement, IconFontProps>((props, ref) => {
     const { type, children, ...restProps } = props;
 
     // children > type
@@ -48,11 +48,11 @@ export default function create(options: CustomIconOptions = {}): React.SFC<IconF
       content = children;
     }
     return (
-      <Icon {...extraCommonProps} {...restProps}>
+      <Icon {...extraCommonProps} {...restProps} ref={ref}>
         {content}
       </Icon>
     );
-  };
+  });
 
   Iconfont.displayName = 'Iconfont';
 

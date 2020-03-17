@@ -19,12 +19,15 @@ export interface IconComponentProps extends AntdIconProps {
 // should move it to antd main repo?
 setTwoToneColor('#1890ff');
 
-interface IconBaseComponent<P> extends React.FC<P> {
+// https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757#issuecomment-488848720
+interface IconBaseComponent<Props> extends React.ForwardRefExoticComponent<
+  Props & React.RefAttributes<HTMLSpanElement>
+> {
   getTwoToneColor: typeof getTwoToneColor;
   setTwoToneColor: typeof setTwoToneColor;
 }
 
-const Icon: IconBaseComponent<IconComponentProps> = (props, ref) => {
+const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) => {
   const {
     // affect outter <i>...</i>
     className,
@@ -60,9 +63,9 @@ const Icon: IconBaseComponent<IconComponentProps> = (props, ref) => {
 
   const svgStyle = rotate
     ? {
-        msTransform: `rotate(${rotate}deg)`,
-        transform: `rotate(${rotate}deg)`,
-      }
+      msTransform: `rotate(${rotate}deg)`,
+      transform: `rotate(${rotate}deg)`,
+    }
     : undefined;
 
   const [primaryColor, secondaryColor] = normalizeTwoToneColors(twoToneColor);
@@ -86,10 +89,10 @@ const Icon: IconBaseComponent<IconComponentProps> = (props, ref) => {
       />
     </span>
   );
-}
+}) as IconBaseComponent<IconComponentProps>;
 
 Icon.displayName = 'AntdIcon';
 Icon.getTwoToneColor = getTwoToneColor;
 Icon.setTwoToneColor = setTwoToneColor;
 
-export default React.forwardRef<HTMLSpanElement, IconComponentProps>(Icon);
+export default Icon;
