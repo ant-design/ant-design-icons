@@ -21,6 +21,10 @@
 - Angular: [@ant-design/icons-angular](./packages/icons-angular) [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-angular.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-angular) [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-angular.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-angular)
 - Vue: [@ant-design/icons-vue](./packages/icons-vue) [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-vue.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-vue) [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-vue.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-vue)
 
+## Contribution Guides 贡献指南
+
+- @ant-design/icons-svg: [English](./packages/icons-svg/docs/ContributionGuide.md) ｜ [中文](./packages/icons-svg/docs/ContributionGuide.zh-CN.md)
+
 
 ## License
 
