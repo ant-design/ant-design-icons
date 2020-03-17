@@ -29,6 +29,10 @@ $ npm install @ant-design/icons --save
 
 - React: See [@ant-design/icons](../icons-react) to learn about detail usage.
 
+## Contribution Guide 贡献指南
+
+See contribution guide. [English](./docs/ContributionGuide.md) ｜ [中文](./docs/ContributionGuide.zh-CN.md)
+
 ## Basic Usage
 
 ```ts
@@ -118,7 +122,3 @@ interface HelperRenderOptions {
   };
 }
 ```
-
-## Contribution Guide
-
-See contribution guide. [中文](./docs/ContributionGuide.zh-CN.md) | English
