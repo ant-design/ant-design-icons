@@ -9,9 +9,9 @@ import Icon, {
 import { getSecondaryColor } from '../src/utils';
 
 function mountTest(Component) {
-  describe(`mount and unmount`, () => {
+  describe('mount and unmount', () => {
     // https://github.com/ant-design/ant-design/pull/18441
-    it(`component could be updated and unmounted without errors`, () => {
+    it('component could be updated and unmounted without errors', () => {
       const wrapper = mount(<Component />);
       expect(() => {
         wrapper.setProps({});
@@ -199,6 +199,8 @@ describe('Icon.createFromIconfontCN()', () => {
     },
   });
 
+  mountTest(() => <IconFont type="icon-facebook" />);
+
   it('should support iconfont.cn', () => {
     const wrapper = render(
       <div className="icons-list">
@@ -219,5 +221,28 @@ describe('Icon.createFromIconfontCN()', () => {
       </div>,
     );
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should support wrapped by Tooltip', () => {
+    const onVisibleChange = jest.fn();
+    const wrapper = mount(
+      <Tooltip
+        title="xxxxx"
+        mouseEnterDelay={0}
+        mouseLeaveDelay={0}
+        onVisibleChange={onVisibleChange}
+      >
+        <IconFont type="icon-facebook" />
+      </Tooltip>,
+    );
+    expect(wrapper.find('span')).toHaveLength(1);
+    const icon = wrapper.find('span').at(0);
+    icon.simulate('mouseenter');
+    expect(onVisibleChange).toHaveBeenCalledWith(true);
+    expect((wrapper.instance() as any).tooltip.props.visible).toBe(true);
+
+    icon.simulate('mouseleave');
+    expect(onVisibleChange).toHaveBeenCalledWith(false);
+    expect((wrapper.instance() as any).tooltip.props.visible).toBe(false);
   });
 });

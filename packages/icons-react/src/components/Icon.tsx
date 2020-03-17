@@ -13,6 +13,7 @@ export interface IconBaseProps {
   role?: string;
   spin?: boolean;
   rotate?: number;
+  children?: React.ReactNode;
 }
 
 export interface CustomIconComponentProps {
@@ -30,7 +31,8 @@ export interface IconComponentProps extends IconBaseProps {
   ariaLabel?: React.AriaAttributes['aria-label'];
 }
 
-const Icon: React.FC<IconComponentProps> = (props, ref) => {
+
+const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) => {
   const {
     // affect outter <i>...</i>
     className,
@@ -126,8 +128,8 @@ const Icon: React.FC<IconComponentProps> = (props, ref) => {
       {renderInnerNode()}
     </span>
   );
-}
+});
 
 Icon.displayName = 'AntdIcon';
 
-export default React.forwardRef<HTMLSpanElement, IconComponentProps>(Icon);
+export default Icon;
