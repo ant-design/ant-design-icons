@@ -30,7 +30,9 @@ export default function create(options = {}) {
   const Iconfont = {
     name: 'Iconfont',
     functional: true,
-    props: ['type'],
+    props: {
+      type: String,
+    },
     render(h, ctx) {
       const { data: { attrs, ...restData } = {}, props = {}, listeners, children } = ctx;
       const { type, ...restProps } = {

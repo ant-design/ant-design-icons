@@ -8,7 +8,13 @@ setTwoToneColor('#1890ff');
 
 const Icon = {
   functional: true,
-  props: ['icon', 'spin', 'rotate', 'tabIndex', 'twoToneColor'],
+  props: {
+    icon: Object,
+    spin: Boolean,
+    rotate: Number,
+    tabIndex: [String, Number],
+    twoToneColor: [String, Array],
+  },
   render(h, ctx) {
     const { data: { attrs, ...restData } = {}, props = {}, listeners } = ctx;
     const {

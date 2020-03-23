@@ -20,7 +20,12 @@ function getTwoToneColors() {
 
 const IconBase = {
   functional: true,
-  props: ['icon', 'primaryColor', 'secondaryColor', 'calculated'],
+  props: {
+    icon: Object,
+    primaryColor: String,
+    secondaryColor: String,
+    calculated: Boolean,
+  },
   render(h, ctx) {
     const { data: { attrs, ...restData } = {}, props = {}, listeners } = ctx;
     const { icon, primaryColor, secondaryColor, ...restProps } = {

@@ -40,7 +40,7 @@ export default {
   name: 'Icon<%= svgIdentifier %>',
   displayName: '<%= svgIdentifier %>',
   functional: true,
-  props: [ ...Icon.props ],
+  props: { ...Icon.props },
   render: (h, { data, children, props }) =>
     h(
       Icon,
