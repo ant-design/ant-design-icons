@@ -5,7 +5,6 @@ const allIconDefs = require('@ant-design/icons-svg');
 const util = require('util');
 
 const promisify = util.promisify;
-const fsPromises = fs.promises;
 const template = lodash.template;
 
 const writeFile = promisify(fs.writeFile);
@@ -104,11 +103,7 @@ async function generateEntries() {
         svgIdentifier,
       }),
     );
-
-    // generate `Icon.d.ts` in root folder
-    await writeFile(
-      path.resolve(__dirname, `../${svgIdentifier}.d.ts`),
-      `
+    const tsType = `
 import Vue from 'vue';
 import { IconDefinition } from '@ant-design/icons-svg/lib/types';
 declare class ${svgIdentifier} extends Vue {
@@ -120,8 +115,15 @@ declare class ${svgIdentifier} extends Vue {
   rotate?: number;
 };
 export default ${svgIdentifier};
-      `.trim(),
-    );
+      `.trim();
+    // generate `Icon.d.ts` in root folder
+    await writeFile(path.resolve(__dirname, `../${svgIdentifier}.d.ts`), tsType);
+
+    // generate `Icon.d.ts` in lib/icons folder
+    await writeFile(path.resolve(__dirname, `../lib/icons/${svgIdentifier}.d.ts`), tsType);
+
+    // generate `Icon.d.ts` in es/icons folder
+    await writeFile(path.resolve(__dirname, `../es/icons/${svgIdentifier}.d.ts`), tsType);
   });
 }
 
