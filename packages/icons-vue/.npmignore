@@ -1,0 +1,16 @@
+tests/
+examples/
+src/
+scripts/
+.storybook/
+
+.eslintignore
+.eslintrc.js
+.fatherrc.js
+.gitignore
+jest.config.js
+.jest.js
+tsconfig.json
+tslint.json
+.prettierrc
+.prettierignore
