@@ -8,7 +8,7 @@ export default {
   name: 'IconTwitterCircleFilled',
   displayName: 'TwitterCircleFilled',
   functional: true,
-  props: [ ...Icon.props ],
+  props: { ...Icon.props },
   render: (h, { data, children, props }) =>
     h(
       Icon,

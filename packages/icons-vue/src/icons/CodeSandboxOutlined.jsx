@@ -8,7 +8,7 @@ export default {
   name: 'IconCodeSandboxOutlined',
   displayName: 'CodeSandboxOutlined',
   functional: true,
-  props: [ ...Icon.props ],
+  props: { ...Icon.props },
   render: (h, { data, children, props }) =>
     h(
       Icon,
