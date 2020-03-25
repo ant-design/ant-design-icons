@@ -47,7 +47,7 @@
     "prettier": "^1.18.2",
     "vc-tools": "^1.0.3",
     "vue": ">=2.5.0",
-    "vue-jest": "^2.5.0",
+    "vue-jest": "^3.0.5",
     "vue-template-compiler": ">=2.5.0"
   },
   "dependencies": {
