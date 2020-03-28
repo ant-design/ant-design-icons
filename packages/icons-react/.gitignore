@@ -36,3 +36,4 @@ build/
 /*.d.ts
 !.fatherrc.js
 !jest.config.js
+tsconfig.json
