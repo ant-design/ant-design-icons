@@ -1,5 +1,5 @@
 import { Tooltip } from 'antd';
-import React from 'react';
+import * as React from 'react';
 import { render, mount } from 'enzyme';
 import Icon, {
   getTwoToneColor, setTwoToneColor, createFromIconfontCN,

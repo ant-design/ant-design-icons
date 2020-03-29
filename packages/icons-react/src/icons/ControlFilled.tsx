@@ -1,7 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import React from 'react'
+import * as React from 'react'
 import ControlFilledSvg from '@ant-design/icons-svg/lib/asn/ControlFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 

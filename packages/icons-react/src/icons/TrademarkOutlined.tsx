@@ -1,7 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import React from 'react'
+import * as React from 'react'
 import TrademarkOutlinedSvg from '@ant-design/icons-svg/lib/asn/TrademarkOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 

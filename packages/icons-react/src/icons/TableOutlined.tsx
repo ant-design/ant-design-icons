@@ -1,7 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import React from 'react'
+import * as React from 'react'
 import TableOutlinedSvg from '@ant-design/icons-svg/lib/asn/TableOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
