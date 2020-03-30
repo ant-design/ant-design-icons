@@ -43,6 +43,33 @@ describe('Icon', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should support event listeners', () => {
+    const onClickHandler = jest.fn();
+    const onKeyUpHandler = jest.fn();
+    const onMouseEnterHandler = jest.fn();
+    const wrapper = mount(
+      <div>
+        <HomeOutlined onClick={onClickHandler} />
+        <SettingFilled />
+        <SmileOutlined onMouseEnter={onMouseEnterHandler} />
+        <SyncOutlined spin onKeyUp={onKeyUpHandler} />
+      </div>,
+    );
+    expect(wrapper).toMatchSnapshot();
+
+    const icon1 = wrapper.find('span').at(0);
+    icon1.simulate('click');
+    expect(onClickHandler).toBeCalledTimes(1);
+
+    const icon2 = wrapper.find('span').at(2);
+    icon2.simulate('mouseenter');
+    expect(onMouseEnterHandler).toBeCalledTimes(1);
+
+    const icon3 = wrapper.find('span').at(3);
+    icon3.simulate('keyup');
+    expect(onKeyUpHandler).toBeCalledTimes(1);
+  });
+
   it('should support two-tone icon', () => {
     let wrapper = render(<CheckCircleTwoTone twoToneColor="#f5222d" />);
     expect(wrapper).toMatchSnapshot();
@@ -82,7 +109,31 @@ describe('Icon', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  // what's this?
+  it('should support event listeners when passing svg paths as children', () => {
+    const onClickHandler = jest.fn();
+    const onKeyUpHandler = jest.fn();
+    const onMouseEnterHandler = jest.fn();
+
+    const wrapper = mount(
+      <Icon
+        viewBox="0 0 24 24"
+        onClick={onClickHandler}
+        onKeyUp={onKeyUpHandler}
+        onMouseEnter={onMouseEnterHandler}>
+        <title>Cool Home</title>
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+      </Icon>,
+    );
+    expect(wrapper).toMatchSnapshot();
+    const icon = wrapper.find('span').at(0);
+    icon.simulate('click');
+    expect(onClickHandler).toBeCalledTimes(1);
+    icon.simulate('mouseenter');
+    expect(onMouseEnterHandler).toBeCalledTimes(1);
+    icon.simulate('keyup');
+    expect(onKeyUpHandler).toBeCalledTimes(1);
+  });
+
   it('should give warning and render <i>{null}</i>', () => {
     const wrapper = render(<Icon viewBox="0 0 24 24" />);
     expect(wrapper).toMatchSnapshot();
@@ -189,6 +240,41 @@ describe('Icon', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should support event listeners', () => {
+    const onClickHandler = jest.fn();
+    const onKeyUpHandler = jest.fn();
+    const onMouseEnterHandler = jest.fn();
+    // children props would make no sense
+    const SvgComponent = props => (
+      <svg viewBox="0 0 24 24" {...props}>
+        <title>Custom Svg</title>
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+      </svg>
+    );
+
+    const wrapper = mount(
+      <Icon
+        className="my-home-icon"
+        component={SvgComponent}
+        onClick={onClickHandler}
+        onKeyUp={onKeyUpHandler}
+        onMouseEnter={onMouseEnterHandler}>
+        <title>Cool Home</title>
+        <path d="'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'" />
+      </Icon>,
+    );
+    expect(wrapper).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
+
+    const icon = wrapper.find('span').at(0);
+    icon.simulate('click');
+    expect(onClickHandler).toBeCalledTimes(1);
+    icon.simulate('mouseenter');
+    expect(onMouseEnterHandler).toBeCalledTimes(1);
+    icon.simulate('keyup');
+    expect(onKeyUpHandler).toBeCalledTimes(1);
+  });
 });
 
 describe('Icon.createFromIconfontCN()', () => {
@@ -210,6 +296,33 @@ describe('Icon.createFromIconfontCN()', () => {
       </div>,
     );
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should support event listeners', () => {
+    const onClickHandler = jest.fn();
+    const onKeyUpHandler = jest.fn();
+    const onMouseEnterHandler = jest.fn();
+    const wrapper = mount(
+      <div>
+        <IconFont type="icon-tuichu" onClick={onClickHandler} />
+        <IconFont type="icon-suofang" />
+        <IconFont type="icon-facebook" onMouseEnter={onMouseEnterHandler} />
+        <IconFont type="icon-twitter" spin onKeyUp={onKeyUpHandler} />
+      </div>,
+    );
+    expect(wrapper).toMatchSnapshot();
+
+    const icon1 = wrapper.find('span').at(0);
+    icon1.simulate('click');
+    expect(onClickHandler).toBeCalledTimes(1);
+
+    const icon2 = wrapper.find('span').at(2);
+    icon2.simulate('mouseenter');
+    expect(onMouseEnterHandler).toBeCalledTimes(1);
+
+    const icon3 = wrapper.find('span').at(3);
+    icon3.simulate('keyup');
+    expect(onKeyUpHandler).toBeCalledTimes(1);
   });
 
   it('extraCommonProps should works fine and can be overwritten', () => {
