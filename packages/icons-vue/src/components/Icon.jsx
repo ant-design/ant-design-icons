@@ -3,7 +3,12 @@ import { svgBaseProps, warning, useInsertStyles } from '../utils';
 const Icon = {
   name: 'AntdIcon',
   functional: true,
-  props: ['component', 'spin', 'rotate', 'tabIndex'],
+  props: {
+    component: [Object, Function],
+    spin: Boolean,
+    rotate: Number,
+    tabIndex: [String, Number],
+  },
   render(h, ctx) {
     const { data: { attrs, ...restData } = {}, props = {}, listeners, children } = ctx;
     const {

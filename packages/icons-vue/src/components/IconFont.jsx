@@ -30,7 +30,9 @@ export default function create(options = {}) {
   const Iconfont = {
     name: 'Iconfont',
     functional: true,
-    props: ['type'],
+    props: {
+      type: String,
+    },
     render(h, ctx) {
       const { data: { attrs, ...restData } = {}, props = {}, listeners, children } = ctx;
       const { type, ...restProps } = {
@@ -46,10 +48,11 @@ export default function create(options = {}) {
       if (children) {
         content = children;
       }
-      const iconProps = mergeProps(
-        { ...restData, attrs: restProps, on: listeners },
-        extraCommonProps,
-      );
+      const iconProps = mergeProps(extraCommonProps, {
+        ...restData,
+        attrs: restProps,
+        on: listeners,
+      });
       return <Icon {...iconProps}>{content}</Icon>;
     },
   };

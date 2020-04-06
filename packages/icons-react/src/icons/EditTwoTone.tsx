@@ -1,7 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import React from 'react'
+import * as React from 'react'
 import EditTwoToneSvg from '@ant-design/icons-svg/lib/asn/EditTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
