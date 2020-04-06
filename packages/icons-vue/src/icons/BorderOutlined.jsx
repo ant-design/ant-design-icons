@@ -8,7 +8,7 @@ export default {
   name: 'IconBorderOutlined',
   displayName: 'BorderOutlined',
   functional: true,
-  props: [ ...Icon.props ],
+  props: { ...Icon.props },
   render: (h, { data, children, props }) =>
     h(
       Icon,

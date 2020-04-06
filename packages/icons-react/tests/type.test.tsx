@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from 'react';
+import * as React from 'react';
 import Icon from '../src/components/IconBase';
 import { ReactComponent as logo } from './logo.svg';
 

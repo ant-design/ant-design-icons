@@ -3,11 +3,13 @@ import { generate, getSecondaryColor, isIconDefinition, warning, useInsertStyles
 const twoToneColorPalette = {
   primaryColor: '#333',
   secondaryColor: '#E6E6E6',
+  calculated: false,
 };
 
 function setTwoToneColors({ primaryColor, secondaryColor }) {
   twoToneColorPalette.primaryColor = primaryColor;
   twoToneColorPalette.secondaryColor = secondaryColor || getSecondaryColor(primaryColor);
+  twoToneColorPalette.calculated = !!secondaryColor;
 }
 
 function getTwoToneColors() {
@@ -18,7 +20,12 @@ function getTwoToneColors() {
 
 const IconBase = {
   functional: true,
-  props: ['icon', 'primaryColor', 'secondaryColor'],
+  props: {
+    icon: Object,
+    primaryColor: String,
+    secondaryColor: String,
+    calculated: Boolean,
+  },
   render(h, ctx) {
     const { data: { attrs, ...restData } = {}, props = {}, listeners } = ctx;
     const { icon, primaryColor, secondaryColor, ...restProps } = {

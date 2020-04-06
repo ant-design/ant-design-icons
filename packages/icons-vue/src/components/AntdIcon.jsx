@@ -1,13 +1,20 @@
 import classNames from 'classnames';
 import VueIcon from './IconBase';
 import { setTwoToneColor, getTwoToneColor } from './twoTonePrimaryColor';
+import { normalizeTwoToneColors } from '../utils';
 
 // Initial setting
 setTwoToneColor('#1890ff');
 
 const Icon = {
   functional: true,
-  props: ['icon', 'spin', 'rotate', 'tabIndex', 'twoToneColor'],
+  props: {
+    icon: Object,
+    spin: Boolean,
+    rotate: Number,
+    tabIndex: [String, Number],
+    twoToneColor: [String, Array],
+  },
   render(h, ctx) {
     const { data: { attrs, ...restData } = {}, props = {}, listeners } = ctx;
     const {
@@ -40,6 +47,7 @@ const Icon = {
           transform: `rotate(${rotate}deg)`,
         }
       : undefined;
+    const [primaryColor, secondaryColor] = normalizeTwoToneColors(twoToneColor);
 
     return (
       <span
@@ -49,7 +57,13 @@ const Icon = {
         class={classString}
         {...{ ...restData, attrs: restProps, on: listeners }}
       >
-        <VueIcon class={svgClassString} icon={icon} primaryColor={twoToneColor} style={svgStyle} />
+        <VueIcon
+          class={svgClassString}
+          icon={icon}
+          primaryColor={primaryColor}
+          secondaryColor={secondaryColor}
+          style={svgStyle}
+        />
       </span>
     );
   },

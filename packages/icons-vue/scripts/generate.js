@@ -2,9 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const lodash = require('lodash');
 const allIconDefs = require('@ant-design/icons-svg');
+const util = require('util');
 
-const fsPromises = fs.promises;
+const promisify = util.promisify;
 const template = lodash.template;
+
+const writeFile = promisify(fs.writeFile);
 
 function walk(fn) {
   return Promise.all(
@@ -19,9 +22,9 @@ function walk(fn) {
 async function generateIcons() {
   const iconsDir = path.join(__dirname, '../src/icons');
   try {
-    await fsPromises.access(iconsDir);
+    await promisify(fs.access)(iconsDir);
   } catch (err) {
-    await fsPromises.mkdir(iconsDir);
+    await promisify(fs.mkdir)(iconsDir);
   }
 
   const render = template(
@@ -36,7 +39,7 @@ export default {
   name: 'Icon<%= svgIdentifier %>',
   displayName: '<%= svgIdentifier %>',
   functional: true,
-  props: [ ...Icon.props ],
+  props: { ...Icon.props },
   render: (h, { data, children, props }) =>
     h(
       Icon,
@@ -49,7 +52,7 @@ export default {
 
   await walk(async ({ svgIdentifier }) => {
     // generate icon file
-    await fsPromises.writeFile(
+    await writeFile(
       path.resolve(__dirname, `../src/icons/${svgIdentifier}.jsx`),
       render({ svgIdentifier }),
     );
@@ -57,19 +60,19 @@ export default {
 
   // generate icon index
   const entryText = Object.keys(allIconDefs)
+    .sort()
     .map(svgIdentifier => {
       return `export { default as ${svgIdentifier} } from './${svgIdentifier}';`;
     })
     .join('\n');
 
-  await fsPromises.appendFile(
+  await promisify(fs.appendFile)(
     path.resolve(__dirname, '../src/icons/index.jsx'),
     `
 // GENERATE BY ./scripts/generate.js
 // DON NOT EDIT IT MANUALLY
-    `.trim() +
-      '\n' +
-      entryText,
+${entryText}
+    `.trim(),
   );
 }
 
@@ -94,17 +97,13 @@ async function generateEntries() {
 
   await walk(async ({ svgIdentifier }) => {
     // generate `Icon.js` in root folder
-    await fsPromises.writeFile(
+    await writeFile(
       path.resolve(__dirname, `../${svgIdentifier}.js`),
       render({
         svgIdentifier,
       }),
     );
-
-    // generate `Icon.d.ts` in root folder
-    await fsPromises.writeFile(
-      path.resolve(__dirname, `../${svgIdentifier}.d.ts`),
-      `
+    const tsType = `
 import Vue from 'vue';
 import { IconDefinition } from '@ant-design/icons-svg/lib/types';
 declare class ${svgIdentifier} extends Vue {
@@ -116,8 +115,15 @@ declare class ${svgIdentifier} extends Vue {
   rotate?: number;
 };
 export default ${svgIdentifier};
-      `.trim(),
-    );
+      `.trim();
+    // generate `Icon.d.ts` in root folder
+    await writeFile(path.resolve(__dirname, `../${svgIdentifier}.d.ts`), tsType);
+
+    // generate `Icon.d.ts` in lib/icons folder
+    await writeFile(path.resolve(__dirname, `../lib/icons/${svgIdentifier}.d.ts`), tsType);
+
+    // generate `Icon.d.ts` in es/icons folder
+    await writeFile(path.resolve(__dirname, `../es/icons/${svgIdentifier}.d.ts`), tsType);
   });
 }
 
