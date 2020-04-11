@@ -3,6 +3,20 @@ import { mergeProps } from '../utils';
 
 const customCache = new Set();
 
+function isValidCustomScriptUrl(scriptUrl) {
+  return typeof scriptUrl === 'string' &&
+    scriptUrl.length &&
+    !customCache.has(scriptUrl);
+}
+
+function createScriptUrlElement(scriptUrl) {
+  const script = document.createElement('script');
+  script.setAttribute('src', scriptUrl);
+  script.setAttribute('data-namespace', scriptUrl);
+  customCache.add(scriptUrl);
+  document.body.appendChild(script);
+}
+
 export default function create(options = {}) {
   const { scriptUrl, extraCommonProps = {} } = options;
 
@@ -15,16 +29,18 @@ export default function create(options = {}) {
   if (
     typeof document !== 'undefined' &&
     typeof window !== 'undefined' &&
-    typeof document.createElement === 'function' &&
-    typeof scriptUrl === 'string' &&
-    scriptUrl.length &&
-    !customCache.has(scriptUrl)
+    typeof document.createElement === 'function'
   ) {
-    const script = document.createElement('script');
-    script.setAttribute('src', scriptUrl);
-    script.setAttribute('data-namespace', scriptUrl);
-    customCache.add(scriptUrl);
-    document.body.appendChild(script);
+    if (isValidCustomScriptUrl(scriptUrl)) {
+      createScriptUrlElement(scriptUrl);
+    }
+    if (Array.isArray(scriptUrls)) {
+      scriptUrls.forEach(url => {
+        if (isValidCustomScriptUrl(url)) {
+          createScriptUrlElement(url);
+        }
+      })
+    }
   }
 
   const Iconfont = {

@@ -5,6 +5,7 @@ const customCache = new Set<string>();
 
 export interface CustomIconOptions {
   scriptUrl?: string;
+  scriptUrls?: string[];
   extraCommonProps?: { [key: string]: any };
 }
 
@@ -12,8 +13,22 @@ export interface IconFontProps extends IconBaseProps {
   type: string;
 }
 
+function isValidCustomScriptUrl(scriptUrl: string): boolean {
+  return typeof scriptUrl === 'string' &&
+    scriptUrl.length &&
+    !customCache.has(scriptUrl);
+}
+
+function createScriptUrlElement(scriptUrl: string): void {
+  const script = document.createElement('script');
+  script.setAttribute('src', scriptUrl);
+  script.setAttribute('data-namespace', scriptUrl);
+  customCache.add(scriptUrl);
+  document.body.appendChild(script);
+}
+
 export default function create(options: CustomIconOptions = {}): React.SFC<IconFontProps> {
-  const { scriptUrl, extraCommonProps = {} } = options;
+  const { scriptUrl, scriptUrls, extraCommonProps = {} } = options;
 
   /**
    * DOM API required.
@@ -24,16 +39,18 @@ export default function create(options: CustomIconOptions = {}): React.SFC<IconF
   if (
     typeof document !== 'undefined' &&
     typeof window !== 'undefined' &&
-    typeof document.createElement === 'function' &&
-    typeof scriptUrl === 'string' &&
-    scriptUrl.length &&
-    !customCache.has(scriptUrl)
+    typeof document.createElement === 'function'
   ) {
-    const script = document.createElement('script');
-    script.setAttribute('src', scriptUrl);
-    script.setAttribute('data-namespace', scriptUrl);
-    customCache.add(scriptUrl);
-    document.body.appendChild(script);
+    if (isValidCustomScriptUrl(scriptUrl)) {
+      createScriptUrlElement(scriptUrl);
+    }
+    if (Array.isArray(scriptUrls)) {
+      scriptUrls.forEach(url => {
+        if (isValidCustomScriptUrl(url)) {
+          createScriptUrlElement(url);
+        }
+      })
+    }
   }
 
   const Iconfont = React.forwardRef<HTMLSpanElement, IconFontProps>((props, ref) => {
