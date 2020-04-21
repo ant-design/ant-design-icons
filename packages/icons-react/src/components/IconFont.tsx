@@ -25,9 +25,12 @@ function createScriptUrlElements(scriptUrls: string[], index: number = 0): void 
     script.setAttribute('src', currentScriptUrl);
     script.setAttribute('data-namespace', currentScriptUrl);
     if (scriptUrls.length > index + 1) {
-      script.onload = script.onerror = () => {
+      script.onload = () => {
         createScriptUrlElements(scriptUrls, index + 1);
-      }
+      };
+      script.onerror = () => {
+        createScriptUrlElements(scriptUrls, index + 1);
+      };
     }
     customCache.add(currentScriptUrl);
     document.body.appendChild(script);
