@@ -384,6 +384,7 @@ google-plus-outlined
 google-plus-square-filled
 google-square-filled
 group-outlined
+gumroad-filled
 hdd-filled
 hdd-outlined
 hdd-twotone
