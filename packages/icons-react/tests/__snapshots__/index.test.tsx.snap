@@ -1064,3 +1064,256 @@ exports[`Icon.createFromIconfontCN() should support iconfont.cn 1`] = `
   </span>
 </div>
 `;
+
+exports[`Icon.createFromIconfontCN({scriptUrl:[]}) extraCommonProps should works fine and can be overwritten 1`] = `
+<div
+  class="icons-list"
+>
+  <span
+    class="anticon bcd"
+    role="img"
+  >
+    <svg
+      aria-hidden="true"
+      class=""
+      fill="currentColor"
+      focusable="false"
+      height="1em"
+      width="1em"
+    >
+      <use
+        href="#icon-tuichu"
+      />
+    </svg>
+  </span>
+  <span
+    class="anticon abc"
+    role="img"
+  >
+    <svg
+      aria-hidden="true"
+      class=""
+      fill="currentColor"
+      focusable="false"
+      height="1em"
+      width="1em"
+    >
+      <use
+        href="#icon-facebook"
+      />
+    </svg>
+  </span>
+  <span
+    class="anticon efg"
+    role="img"
+  >
+    <svg
+      aria-hidden="true"
+      class=""
+      fill="currentColor"
+      focusable="false"
+      height="1em"
+      width="1em"
+    >
+      <use
+        href="#icon-twitter"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`Icon.createFromIconfontCN({scriptUrl:[]}) should support event listeners 1`] = `
+<div>
+  <Iconfont
+    onClick={[MockFunction]}
+    type="icon-tuichu"
+  >
+    <AntdIcon
+      className="abc"
+      onClick={[MockFunction]}
+    >
+      <span
+        className="anticon abc"
+        onClick={[MockFunction]}
+        role="img"
+        tabIndex={-1}
+      >
+        <svg
+          aria-hidden="true"
+          className=""
+          fill="currentColor"
+          focusable="false"
+          height="1em"
+          width="1em"
+        >
+          <use
+            xlinkHref="#icon-tuichu"
+          />
+        </svg>
+      </span>
+    </AntdIcon>
+  </Iconfont>
+  <Iconfont
+    type="icon-suofang"
+  >
+    <AntdIcon
+      className="abc"
+    >
+      <span
+        className="anticon abc"
+        role="img"
+      >
+        <svg
+          aria-hidden="true"
+          className=""
+          fill="currentColor"
+          focusable="false"
+          height="1em"
+          width="1em"
+        >
+          <use
+            xlinkHref="#icon-suofang"
+          />
+        </svg>
+      </span>
+    </AntdIcon>
+  </Iconfont>
+  <Iconfont
+    onMouseEnter={[MockFunction]}
+    type="icon-facebook"
+  >
+    <AntdIcon
+      className="abc"
+      onMouseEnter={[MockFunction]}
+    >
+      <span
+        className="anticon abc"
+        onMouseEnter={[MockFunction]}
+        role="img"
+      >
+        <svg
+          aria-hidden="true"
+          className=""
+          fill="currentColor"
+          focusable="false"
+          height="1em"
+          width="1em"
+        >
+          <use
+            xlinkHref="#icon-facebook"
+          />
+        </svg>
+      </span>
+    </AntdIcon>
+  </Iconfont>
+  <Iconfont
+    onKeyUp={[MockFunction]}
+    spin={true}
+    type="icon-twitter"
+  >
+    <AntdIcon
+      className="abc"
+      onKeyUp={[MockFunction]}
+      spin={true}
+    >
+      <span
+        className="anticon abc"
+        onKeyUp={[MockFunction]}
+        role="img"
+      >
+        <svg
+          aria-hidden="true"
+          className="anticon-spin"
+          fill="currentColor"
+          focusable="false"
+          height="1em"
+          width="1em"
+        >
+          <use
+            xlinkHref="#icon-twitter"
+          />
+        </svg>
+      </span>
+    </AntdIcon>
+  </Iconfont>
+</div>
+`;
+
+exports[`Icon.createFromIconfontCN({scriptUrl:[]}) should support iconfont.cn 1`] = `
+<div
+  class="icons-list"
+>
+  <span
+    class="anticon abc"
+    role="img"
+  >
+    <svg
+      aria-hidden="true"
+      class=""
+      fill="currentColor"
+      focusable="false"
+      height="1em"
+      width="1em"
+    >
+      <use
+        href="#icon-tuichu"
+      />
+    </svg>
+  </span>
+  <span
+    class="anticon abc"
+    role="img"
+  >
+    <svg
+      aria-hidden="true"
+      class=""
+      fill="currentColor"
+      focusable="false"
+      height="1em"
+      width="1em"
+    >
+      <use
+        href="#icon-facebook"
+      />
+    </svg>
+  </span>
+  <span
+    class="anticon abc"
+    role="img"
+  >
+    <svg
+      aria-hidden="true"
+      class=""
+      fill="currentColor"
+      focusable="false"
+      height="1em"
+      width="1em"
+    >
+      <use
+        href="#icon-twitter"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`Icon.createFromIconfontCN({scriptUrl:[]}) should support ignore load error 1`] = `
+<span
+  class="anticon abc"
+  role="img"
+>
+  <svg
+    aria-hidden="true"
+    class=""
+    fill="currentColor"
+    focusable="false"
+    height="1em"
+    width="1em"
+  >
+    <use
+      href="#icon-facebook"
+    />
+  </svg>
+</span>
+`;
