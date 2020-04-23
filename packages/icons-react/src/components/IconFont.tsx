@@ -8,7 +8,7 @@ export interface CustomIconOptions {
   extraCommonProps?: { [key: string]: any };
 }
 
-interface IconFontProps extends IconBaseProps {
+export interface IconFontProps extends IconBaseProps {
   type: string;
 }
 

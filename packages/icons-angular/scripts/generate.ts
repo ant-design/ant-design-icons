@@ -41,16 +41,10 @@ async function generateIcons() {
   }
 
   const indexRender = template(`
-// GENERATE BY ./scripts/generate.ts
-// DO NOT EDIT IT MANUALLY
-
 <%= content %>`);
   const indexContent: string[] = [];
 
   const manifestRender = template(`
-// GENERATE BY ./scripts/generate.ts
-// DO NOT EDIT IT MANUALLY
-
 import { Manifest } from './types';
 
 export const manifest: Manifest = {
@@ -76,9 +70,6 @@ export const manifest: Manifest = {
 
   const staicFileRender = template(
     `
-// GENERATE BY ./scripts/generate.ts
-// DO NOT EDIT IT MANUALLY
-
 import { IconDefinition } from '@ant-design/icons-angular';
 
 export const <%= svgIdentifier %>: IconDefinition = {
@@ -92,9 +83,6 @@ export const <%= svgIdentifier %>: IconDefinition = {
 
   const jsonpRender = template(
     `
-// GENERATE BY ./scripts/generate.ts
-// DO NOT EDIT IT MANUALLY
-
 (function() {
   __ant_icon_load({
       name: '<%= name %>',

@@ -113,7 +113,7 @@ declare class ${svgIdentifier} extends Vue {
   tabIndex?: number;
   spin?: boolean;
   rotate?: number;
-};
+}
 export default ${svgIdentifier};
       `.trim();
     // generate `Icon.d.ts` in root folder
