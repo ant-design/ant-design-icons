@@ -26,6 +26,7 @@ _site/
 public
 src
 inline-svg
+inline-namespaced-svg
 !docs/inline-svg
 es
 lib
