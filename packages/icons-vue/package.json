@@ -42,7 +42,7 @@
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-vue": "^5.2.3",
-    "jest": "^23.4.2",
+    "jest": "^25.4.0",
     "jest-serializer-vue": "^2.0.2",
     "prettier": "^1.18.2",
     "vc-tools": "^1.0.3",
