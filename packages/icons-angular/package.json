@@ -31,7 +31,7 @@
     "@angular/platform-browser": "^9.0.0",
     "@angular/router": "^9.0.0",
     "@ant-design/colors": "^3.1.0",
-    "@ant-design/icons-svg": "^4.0.0-rc.0",
+    "@ant-design/icons-svg": "^4.0.0",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/lodash": "^4.14.136",
