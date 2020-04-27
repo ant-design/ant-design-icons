@@ -359,3 +359,99 @@ describe('Icon.createFromIconfontCN()', () => {
     expect((wrapper.instance() as any).tooltip.props.visible).toBe(false);
   });
 });
+
+describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
+  const IconFont = createFromIconfontCN({
+    scriptUrl: ['//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js'],
+    extraCommonProps: {
+      className: 'abc',
+    },
+  });
+
+  mountTest(() => <IconFont type="icon-facebook" />);
+
+  it('should support iconfont.cn', () => {
+    const wrapper = render(
+      <div className="icons-list">
+        <IconFont type="icon-tuichu" />
+        <IconFont type="icon-facebook" />
+        <IconFont type="icon-twitter" />
+      </div>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should support event listeners', () => {
+    const onClickHandler = jest.fn();
+    const onKeyUpHandler = jest.fn();
+    const onMouseEnterHandler = jest.fn();
+    const wrapper = mount(
+      <div>
+        <IconFont type="icon-tuichu" onClick={onClickHandler} />
+        <IconFont type="icon-suofang" />
+        <IconFont type="icon-facebook" onMouseEnter={onMouseEnterHandler} />
+        <IconFont type="icon-twitter" spin onKeyUp={onKeyUpHandler} />
+      </div>,
+    );
+    expect(wrapper).toMatchSnapshot();
+
+    const icon1 = wrapper.find('span').at(0);
+    icon1.simulate('click');
+    expect(onClickHandler).toBeCalledTimes(1);
+
+    const icon2 = wrapper.find('span').at(2);
+    icon2.simulate('mouseenter');
+    expect(onMouseEnterHandler).toBeCalledTimes(1);
+
+    const icon3 = wrapper.find('span').at(3);
+    icon3.simulate('keyup');
+    expect(onKeyUpHandler).toBeCalledTimes(1);
+  });
+
+  it('extraCommonProps should works fine and can be overwritten', () => {
+    const wrapper = render(
+      <div className="icons-list">
+        <IconFont type="icon-tuichu" className="bcd" />
+        <IconFont type="icon-facebook" />
+        <IconFont type="icon-twitter" className="efg" />
+      </div>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should support wrapped by Tooltip', () => {
+    const onVisibleChange = jest.fn();
+    const wrapper = mount(
+      <Tooltip
+        title="xxxxx"
+        mouseEnterDelay={0}
+        mouseLeaveDelay={0}
+        onVisibleChange={onVisibleChange}
+      >
+        <IconFont type="icon-facebook" />
+      </Tooltip>,
+    );
+    expect(wrapper.find('span')).toHaveLength(1);
+    const icon = wrapper.find('span').at(0);
+    icon.simulate('mouseenter');
+    expect(onVisibleChange).toHaveBeenCalledWith(true);
+    expect((wrapper.instance() as any).tooltip.props.visible).toBe(true);
+
+    icon.simulate('mouseleave');
+    expect(onVisibleChange).toHaveBeenCalledWith(false);
+    expect((wrapper.instance() as any).tooltip.props.visible).toBe(false);
+  });
+
+  const IconFont2 = createFromIconfontCN({
+    scriptUrl: ['//at.alicdn.com/t/font_xxx.js', '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js'],
+    extraCommonProps: {
+      className: 'abc',
+    },
+  });
+
+  it('should support ignore load error', () => {
+    const wrapper = render(<IconFont2 type="icon-facebook" />);
+    expect(wrapper).toMatchSnapshot();
+  })
+
+});
