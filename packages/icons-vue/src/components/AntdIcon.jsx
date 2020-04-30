@@ -11,6 +11,7 @@ const Icon = {
   props: {
     icon: Object,
     spin: Boolean,
+    ccw: Boolean,
     rotate: Number,
     tabIndex: [String, Number],
     twoToneColor: [String, Array],
@@ -34,6 +35,7 @@ const Icon = {
 
     const svgClassString = classNames({
       'anticon-spin': !!spin || icon.name === 'loading',
+      'anticon-spin-ccw': (!!spin || icon.name === 'loading') && !!ccw,
     });
 
     let iconTabIndex = tabIndex;

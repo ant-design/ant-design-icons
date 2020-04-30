@@ -11,8 +11,10 @@ const Basic = () => (
     <SettingFilled />
     <SmileOutlined />
     <SyncOutlined spin />
+    <SyncOutlined spin ccw/>
     <SmileOutlined rotate={180} />
     <LoadingOutlined />
+    <LoadingOutlined ccw/>
     <AntDesignOutlined onMouseDown={() => console.log('mouse down')} />
     <DashboardOutlined onKeyUp={() => console.log('key up')} />
     <TwitterOutlined onClick={() => console.log('click')} />

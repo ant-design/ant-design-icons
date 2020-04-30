@@ -5,6 +5,7 @@ import { svgBaseProps, warning, useInsertStyles } from '../utils';
 
 export interface IconBaseProps extends React.HTMLProps<HTMLSpanElement> {
   spin?: boolean;
+  ccw?: boolean;
   rotate?: number;
 }
 
@@ -32,6 +33,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     component: Component,
     viewBox,
     spin,
+    ccw,
     rotate,
 
     tabIndex,
@@ -56,6 +58,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
 
   const svgClassString = classNames({
     'anticon-spin': !!spin,
+    'anticon-spin-ccw': !!spin && !!ccw,
   });
 
   const svgStyle = rotate

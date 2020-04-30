@@ -123,6 +123,13 @@ export const iconStyles = `
   animation: loadingCircle 1s infinite linear;
 }
 
+.anticon-spin-ccw::before,
+.anticon-spin-ccw {
+  display: inline-block;
+  -webkit-animation: loadingCircleCcw 1s infinite linear;
+  animation: loadingCircleCcw 1s infinite linear;
+}
+
 @-webkit-keyframes loadingCircle {
   100% {
     -webkit-transform: rotate(360deg);
@@ -134,6 +141,20 @@ export const iconStyles = `
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loadingCircleCcw {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes loadingCircleCcw {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
 `;

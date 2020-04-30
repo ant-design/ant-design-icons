@@ -6,6 +6,7 @@ const Icon = {
   props: {
     component: [Object, Function],
     spin: Boolean,
+    ccw: Boolean,
     rotate: Number,
     tabIndex: [String, Number],
   },
@@ -16,6 +17,7 @@ const Icon = {
       component: Component,
       viewBox,
       spin,
+      ccw,
       rotate,
       tabIndex,
       ...restProps
@@ -30,6 +32,7 @@ const Icon = {
 
     const svgClassString = {
       'anticon-spin': !!spin,
+      'anticon-spin-ccw': !!spin && !!ccw,
     };
     const svgStyle = rotate
       ? {

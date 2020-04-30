@@ -27,7 +27,10 @@ describe('Icon', () => {
             <SettingFilled />
             <SmileOutlined />
             <SyncOutlined spin />
+            <SyncOutlined spin ccw/>
+            <SyncOutlined ccw/>
             <LoadingOutlined />
+            <LoadingOutlined ccw/>
           </div>
         );
       },

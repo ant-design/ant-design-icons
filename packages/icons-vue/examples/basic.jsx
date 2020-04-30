@@ -13,8 +13,10 @@ const SimpleDemo = {
         <SettingFilled />
         <SmileOutlined />
         <SyncOutlined spin />
+        <SyncOutlined spin ccw/>
         <SmileOutlined rotate={180} />
         <LoadingOutlined />
+        <LoadingOutlined ccw/>
         <icon-filter-outlined />
         <Icon viewBox="0 0 24 24">
           <title>Cool Home</title>

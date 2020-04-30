@@ -35,6 +35,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     // affect inner <svg>...</svg>
     icon,
     spin,
+    ccw,
     rotate,
 
     tabIndex,
@@ -54,6 +55,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
 
   const svgClassString = classNames({
     'anticon-spin': !!spin || icon.name === 'loading',
+    'anticon-spin-ccw': (!!spin || icon.name === 'loading') && !!ccw,
   });
 
   let iconTabIndex = tabIndex;
