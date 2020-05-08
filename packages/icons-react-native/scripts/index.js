@@ -27,11 +27,10 @@ fonts.forEach((name) => {
     fontsOutput: path.join(dist, ""),
     cssOutput: path.join(dist, "font.css"),
     htmlOutput: path.join(dist, "_font-preview.html"),
-    jsOutput: path.join(dist, "fonts.js"),
+    jsOutput: path.join(dist, "fonts.json"),
   };
-  options.metadataProvider = require("./metadata")(options);
   new WebpackIconfontPluginNodejs(options).build(() => {
-    const json = require("./map.json")[fontName];
+    const json = require(path.join("../", options.jsOutput));
     fs.copyFileSync(
       path.join(dist, `${fontName}.ttf`),
       `fonts/${fontName}.ttf`
