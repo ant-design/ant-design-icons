@@ -1,16 +1,18 @@
-const build = require("buildfont/src/executing");
 const path = require("path");
 const fs = require("fs-extra");
 const prettier = require("prettier");
+const WebpackIconfontPluginNodejs = require("webpack-iconfont-plugin-nodejs");
 
 const fonts = ["fill", "outline"];
-const upperName = name => name.charAt(0).toUpperCase() + name.slice(1);
+const upperName = (name) => name.charAt(0).toUpperCase() + name.slice(1);
 
 fs.ensureDirSync("fonts");
 fs.ensureDirSync("iconfont");
-fonts.forEach(name => {
+
+fonts.forEach((name) => {
   const fontName = `ant${name}`;
   const uppercaseName = upperName(name);
+
   const svgFolder = path.resolve(
     process.cwd(),
     "../icons-svg/svg/",
@@ -18,8 +20,18 @@ fonts.forEach(name => {
     name === "fill" ? "filled" : "outlined"
   );
   const dist = `iconfont/${name}`;
-  build(svgFolder, fontName, dist).then(() => {
-    const json = fs.readFileSync(path.join(dist, `${fontName}.json`), "utf-8");
+
+  var options = {
+    fontName,
+    svgs: path.join(svgFolder, "*.svg"),
+    fontsOutput: path.join(dist, ""),
+    cssOutput: path.join(dist, "font.css"),
+    htmlOutput: path.join(dist, "_font-preview.html"),
+    jsOutput: path.join(dist, "fonts.js"),
+  };
+  options.metadataProvider = require("./metadata")(options);
+  new WebpackIconfontPluginNodejs(options).build(() => {
+    const json = require("./map.json")[fontName];
     fs.copyFileSync(
       path.join(dist, `${fontName}.ttf`),
       `fonts/${fontName}.ttf`
@@ -29,7 +41,7 @@ fonts.forEach(name => {
 // tslint:disable
 import * as React from 'react';
 import { Text, TextProps, TextStyle } from 'react-native';
-export const ${name}GlyphMap = ${json};
+export const ${name}GlyphMap = ${JSON.stringify(json, null, 2)};
 
 export type ${uppercaseName}GlyphMapType = keyof typeof ${name}GlyphMap;
 
@@ -79,7 +91,7 @@ export default class Icon${uppercaseName} extends React.PureComponent<Icon${uppe
 });
 
 // index.tsx
-const contents = fonts.map(font => {
+const contents = fonts.map((font) => {
   return `export { default as Icon${upperName(font)}, Icon${upperName(
     font
   )}Props, ${upperName(font)}GlyphMapType } from './${font}';\n`;
