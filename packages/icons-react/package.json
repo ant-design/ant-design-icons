@@ -2,6 +2,7 @@
   "name": "@ant-design/icons",
   "version": "4.1.0",
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "module": "./es/index.js",
   "unpkg": "./dist/index.umd.js",
   "sideEffects": false,
