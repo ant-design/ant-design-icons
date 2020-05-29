@@ -46,6 +46,7 @@
     "cross-env": "^5.2.0",
     "enzyme": "^3.10.0",
     "enzyme-to-json": "^3.3.5",
+    "eslint": "^7.1.0",
     "father": "^2.16.0",
     "lodash": "^4.17.15",
     "mobx": "^5.1.0",
@@ -62,7 +63,7 @@
     "@ant-design/icons-svg": "^4.0.0",
     "classnames": "^2.2.6",
     "insert-css": "^2.0.0",
-    "rc-util": "^4.9.0"
+    "rc-util": "^5.0.1"
   },
   "gitHead": "225d4d2189720ee3b7e4a4d7a6d80e076fa15cbc"
 }
