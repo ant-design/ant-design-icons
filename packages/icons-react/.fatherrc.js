@@ -5,6 +5,7 @@ const config = {
     eslint: true,
     prettier: true,
   },
+  runtimeHelpers: true,
 };
 
 if (process.env.NODE_ENV !== 'ci') {
