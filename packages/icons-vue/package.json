@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-vue",
-  "version": "4.0.4",
+  "version": "4.0.6",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
