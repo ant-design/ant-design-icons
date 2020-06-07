@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import AppstoreFilledSvg from '@ant-design/icons-svg/lib/asn/AppstoreFilled';
 
-export default {
-  name: 'IconAppstoreFilled',
-  displayName: 'AppstoreFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: AppstoreFilledSvg } },
-      children,
-    ),
+const AppstoreFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={AppstoreFilledSvg}></Icon>;
 };
+
+AppstoreFilled.inheritAttrs = false;
+export default AppstoreFilled;

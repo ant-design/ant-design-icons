@@ -1,9 +1,8 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import { SmileTwoTone, HeartTwoTone, CheckCircleTwoTone } from '../src';
 import './index.less';
 
-new Vue({
-  el: '#__vue-content>div',
+const Demo = {
   render() {
     return (
       <div class="icons-list">
@@ -14,4 +13,6 @@ new Vue({
       </div>
     );
   },
-});
+};
+
+createApp(Demo).mount('#__vue-content>div');

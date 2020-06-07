@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import { AntDesignOutlined, DashboardOutlined, TwitterOutlined } from '../src';
 import './index.less';
 
@@ -46,9 +46,4 @@ const SimpleDemo = {
   },
 };
 
-new Vue({
-  el: '#__vue-content>div',
-  render() {
-    return <SimpleDemo />;
-  },
-});
+createApp(SimpleDemo).mount('#__vue-content>div');

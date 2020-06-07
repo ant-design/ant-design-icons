@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import LoginOutlinedSvg from '@ant-design/icons-svg/lib/asn/LoginOutlined';
 
-export default {
-  name: 'IconLoginOutlined',
-  displayName: 'LoginOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: LoginOutlinedSvg } },
-      children,
-    ),
+const LoginOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={LoginOutlinedSvg}></Icon>;
 };
+
+LoginOutlined.inheritAttrs = false;
+export default LoginOutlined;

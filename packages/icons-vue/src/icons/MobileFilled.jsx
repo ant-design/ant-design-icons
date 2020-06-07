@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import MobileFilledSvg from '@ant-design/icons-svg/lib/asn/MobileFilled';
 
-export default {
-  name: 'IconMobileFilled',
-  displayName: 'MobileFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: MobileFilledSvg } },
-      children,
-    ),
+const MobileFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={MobileFilledSvg}></Icon>;
 };
+
+MobileFilled.inheritAttrs = false;
+export default MobileFilled;

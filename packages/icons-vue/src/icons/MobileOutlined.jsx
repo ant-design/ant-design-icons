@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import MobileOutlinedSvg from '@ant-design/icons-svg/lib/asn/MobileOutlined';
 
-export default {
-  name: 'IconMobileOutlined',
-  displayName: 'MobileOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: MobileOutlinedSvg } },
-      children,
-    ),
+const MobileOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={MobileOutlinedSvg}></Icon>;
 };
+
+MobileOutlined.inheritAttrs = false;
+export default MobileOutlined;

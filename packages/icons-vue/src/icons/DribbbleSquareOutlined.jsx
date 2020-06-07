@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DribbbleSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/DribbbleSquareOutlined';
 
-export default {
-  name: 'IconDribbbleSquareOutlined',
-  displayName: 'DribbbleSquareOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DribbbleSquareOutlinedSvg } },
-      children,
-    ),
+const DribbbleSquareOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DribbbleSquareOutlinedSvg}></Icon>;
 };
+
+DribbbleSquareOutlined.inheritAttrs = false;
+export default DribbbleSquareOutlined;

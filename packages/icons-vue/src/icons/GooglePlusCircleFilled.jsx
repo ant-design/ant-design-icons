@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import GooglePlusCircleFilledSvg from '@ant-design/icons-svg/lib/asn/GooglePlusCircleFilled';
 
-export default {
-  name: 'IconGooglePlusCircleFilled',
-  displayName: 'GooglePlusCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: GooglePlusCircleFilledSvg } },
-      children,
-    ),
+const GooglePlusCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={GooglePlusCircleFilledSvg}></Icon>;
 };
+
+GooglePlusCircleFilled.inheritAttrs = false;
+export default GooglePlusCircleFilled;

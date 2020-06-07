@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import LikeOutlinedSvg from '@ant-design/icons-svg/lib/asn/LikeOutlined';
 
-export default {
-  name: 'IconLikeOutlined',
-  displayName: 'LikeOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: LikeOutlinedSvg } },
-      children,
-    ),
+const LikeOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={LikeOutlinedSvg}></Icon>;
 };
+
+LikeOutlined.inheritAttrs = false;
+export default LikeOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import RightOutlinedSvg from '@ant-design/icons-svg/lib/asn/RightOutlined';
 
-export default {
-  name: 'IconRightOutlined',
-  displayName: 'RightOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: RightOutlinedSvg } },
-      children,
-    ),
+const RightOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={RightOutlinedSvg}></Icon>;
 };
+
+RightOutlined.inheritAttrs = false;
+export default RightOutlined;

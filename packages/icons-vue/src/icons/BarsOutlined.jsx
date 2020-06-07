@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BarsOutlinedSvg from '@ant-design/icons-svg/lib/asn/BarsOutlined';
 
-export default {
-  name: 'IconBarsOutlined',
-  displayName: 'BarsOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BarsOutlinedSvg } },
-      children,
-    ),
+const BarsOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BarsOutlinedSvg}></Icon>;
 };
+
+BarsOutlined.inheritAttrs = false;
+export default BarsOutlined;

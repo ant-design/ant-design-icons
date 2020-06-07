@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SignalFilledSvg from '@ant-design/icons-svg/lib/asn/SignalFilled';
 
-export default {
-  name: 'IconSignalFilled',
-  displayName: 'SignalFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SignalFilledSvg } },
-      children,
-    ),
+const SignalFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SignalFilledSvg}></Icon>;
 };
+
+SignalFilled.inheritAttrs = false;
+export default SignalFilled;

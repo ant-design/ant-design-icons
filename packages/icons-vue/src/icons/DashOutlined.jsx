@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DashOutlinedSvg from '@ant-design/icons-svg/lib/asn/DashOutlined';
 
-export default {
-  name: 'IconDashOutlined',
-  displayName: 'DashOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DashOutlinedSvg } },
-      children,
-    ),
+const DashOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DashOutlinedSvg}></Icon>;
 };
+
+DashOutlined.inheritAttrs = false;
+export default DashOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import LeftSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/LeftSquareOutlined';
 
-export default {
-  name: 'IconLeftSquareOutlined',
-  displayName: 'LeftSquareOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: LeftSquareOutlinedSvg } },
-      children,
-    ),
+const LeftSquareOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={LeftSquareOutlinedSvg}></Icon>;
 };
+
+LeftSquareOutlined.inheritAttrs = false;
+export default LeftSquareOutlined;

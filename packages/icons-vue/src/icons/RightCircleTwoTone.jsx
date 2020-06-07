@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import RightCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/RightCircleTwoTone';
 
-export default {
-  name: 'IconRightCircleTwoTone',
-  displayName: 'RightCircleTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: RightCircleTwoToneSvg } },
-      children,
-    ),
+const RightCircleTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={RightCircleTwoToneSvg}></Icon>;
 };
+
+RightCircleTwoTone.inheritAttrs = false;
+export default RightCircleTwoTone;

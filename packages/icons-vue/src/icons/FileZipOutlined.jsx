@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FileZipOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileZipOutlined';
 
-export default {
-  name: 'IconFileZipOutlined',
-  displayName: 'FileZipOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FileZipOutlinedSvg } },
-      children,
-    ),
+const FileZipOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FileZipOutlinedSvg}></Icon>;
 };
+
+FileZipOutlined.inheritAttrs = false;
+export default FileZipOutlined;

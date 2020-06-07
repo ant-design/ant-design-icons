@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ProjectFilledSvg from '@ant-design/icons-svg/lib/asn/ProjectFilled';
 
-export default {
-  name: 'IconProjectFilled',
-  displayName: 'ProjectFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ProjectFilledSvg } },
-      children,
-    ),
+const ProjectFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ProjectFilledSvg}></Icon>;
 };
+
+ProjectFilled.inheritAttrs = false;
+export default ProjectFilled;

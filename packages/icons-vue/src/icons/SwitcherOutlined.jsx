@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SwitcherOutlinedSvg from '@ant-design/icons-svg/lib/asn/SwitcherOutlined';
 
-export default {
-  name: 'IconSwitcherOutlined',
-  displayName: 'SwitcherOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SwitcherOutlinedSvg } },
-      children,
-    ),
+const SwitcherOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SwitcherOutlinedSvg}></Icon>;
 };
+
+SwitcherOutlined.inheritAttrs = false;
+export default SwitcherOutlined;

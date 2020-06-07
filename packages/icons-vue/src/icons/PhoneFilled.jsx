@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PhoneFilledSvg from '@ant-design/icons-svg/lib/asn/PhoneFilled';
 
-export default {
-  name: 'IconPhoneFilled',
-  displayName: 'PhoneFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PhoneFilledSvg } },
-      children,
-    ),
+const PhoneFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PhoneFilledSvg}></Icon>;
 };
+
+PhoneFilled.inheritAttrs = false;
+export default PhoneFilled;

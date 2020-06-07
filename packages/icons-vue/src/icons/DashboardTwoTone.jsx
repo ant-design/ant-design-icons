@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DashboardTwoToneSvg from '@ant-design/icons-svg/lib/asn/DashboardTwoTone';
 
-export default {
-  name: 'IconDashboardTwoTone',
-  displayName: 'DashboardTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DashboardTwoToneSvg } },
-      children,
-    ),
+const DashboardTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DashboardTwoToneSvg}></Icon>;
 };
+
+DashboardTwoTone.inheritAttrs = false;
+export default DashboardTwoTone;

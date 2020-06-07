@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PrinterOutlinedSvg from '@ant-design/icons-svg/lib/asn/PrinterOutlined';
 
-export default {
-  name: 'IconPrinterOutlined',
-  displayName: 'PrinterOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PrinterOutlinedSvg } },
-      children,
-    ),
+const PrinterOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PrinterOutlinedSvg}></Icon>;
 };
+
+PrinterOutlined.inheritAttrs = false;
+export default PrinterOutlined;

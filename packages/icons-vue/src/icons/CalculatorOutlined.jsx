@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CalculatorOutlinedSvg from '@ant-design/icons-svg/lib/asn/CalculatorOutlined';
 
-export default {
-  name: 'IconCalculatorOutlined',
-  displayName: 'CalculatorOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CalculatorOutlinedSvg } },
-      children,
-    ),
+const CalculatorOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CalculatorOutlinedSvg}></Icon>;
 };
+
+CalculatorOutlined.inheritAttrs = false;
+export default CalculatorOutlined;

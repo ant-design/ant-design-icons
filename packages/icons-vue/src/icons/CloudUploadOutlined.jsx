@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CloudUploadOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloudUploadOutlined';
 
-export default {
-  name: 'IconCloudUploadOutlined',
-  displayName: 'CloudUploadOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CloudUploadOutlinedSvg } },
-      children,
-    ),
+const CloudUploadOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CloudUploadOutlinedSvg}></Icon>;
 };
+
+CloudUploadOutlined.inheritAttrs = false;
+export default CloudUploadOutlined;

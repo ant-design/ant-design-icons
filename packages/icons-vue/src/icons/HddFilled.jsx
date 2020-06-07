@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import HddFilledSvg from '@ant-design/icons-svg/lib/asn/HddFilled';
 
-export default {
-  name: 'IconHddFilled',
-  displayName: 'HddFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: HddFilledSvg } },
-      children,
-    ),
+const HddFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={HddFilledSvg}></Icon>;
 };
+
+HddFilled.inheritAttrs = false;
+export default HddFilled;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import LeftSquareFilledSvg from '@ant-design/icons-svg/lib/asn/LeftSquareFilled';
 
-export default {
-  name: 'IconLeftSquareFilled',
-  displayName: 'LeftSquareFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: LeftSquareFilledSvg } },
-      children,
-    ),
+const LeftSquareFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={LeftSquareFilledSvg}></Icon>;
 };
+
+LeftSquareFilled.inheritAttrs = false;
+export default LeftSquareFilled;

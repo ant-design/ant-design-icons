@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FormatPainterOutlinedSvg from '@ant-design/icons-svg/lib/asn/FormatPainterOutlined';
 
-export default {
-  name: 'IconFormatPainterOutlined',
-  displayName: 'FormatPainterOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FormatPainterOutlinedSvg } },
-      children,
-    ),
+const FormatPainterOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FormatPainterOutlinedSvg}></Icon>;
 };
+
+FormatPainterOutlined.inheritAttrs = false;
+export default FormatPainterOutlined;

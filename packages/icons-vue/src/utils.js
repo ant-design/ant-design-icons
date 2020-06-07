@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { nextTick, h } from 'vue';
 import isPlainObject from 'lodash/isPlainObject';
 import { generate as generateColor } from '@ant-design/colors';
 import { insertCss } from 'insert-css';
@@ -38,14 +38,12 @@ export function normalizeAttrs(attrs = {}) {
   }, {});
 }
 
-export function generate(h, node, key, rootProps) {
+export function generate(node, key, rootProps) {
   if (!rootProps) {
     return h(
       node.tag,
-      { key, attrs: { ...normalizeAttrs(node.attrs) } },
-      (node.children || []).map((child, index) =>
-        generate(h, child, `${key}-${node.tag}-${index}`),
-      ),
+      { key, ...node.attrs },
+      (node.children || []).map((child, index) => generate(child, `${key}-${node.tag}-${index}`)),
     );
   }
   return h(
@@ -53,9 +51,9 @@ export function generate(h, node, key, rootProps) {
     {
       key,
       ...rootProps,
-      attrs: { ...normalizeAttrs(node.attrs), ...rootProps.attrs },
+      ...node.attrs,
     },
-    (node.children || []).map((child, index) => generate(h, child, `${key}-${node.tag}-${index}`)),
+    (node.children || []).map((child, index) => generate(child, `${key}-${node.tag}-${index}`)),
   );
 }
 
@@ -141,7 +139,7 @@ export const iconStyles = `
 let cssInjectedFlag = false;
 
 export const useInsertStyles = (styleStr = iconStyles) => {
-  Vue.nextTick(() => {
+  nextTick(() => {
     if (!cssInjectedFlag) {
       insertCss(styleStr, {
         prepend: true,

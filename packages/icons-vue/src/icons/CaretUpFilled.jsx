@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CaretUpFilledSvg from '@ant-design/icons-svg/lib/asn/CaretUpFilled';
 
-export default {
-  name: 'IconCaretUpFilled',
-  displayName: 'CaretUpFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CaretUpFilledSvg } },
-      children,
-    ),
+const CaretUpFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CaretUpFilledSvg}></Icon>;
 };
+
+CaretUpFilled.inheritAttrs = false;
+export default CaretUpFilled;

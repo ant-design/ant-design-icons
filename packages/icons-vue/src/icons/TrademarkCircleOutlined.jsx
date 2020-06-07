@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import TrademarkCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/TrademarkCircleOutlined';
 
-export default {
-  name: 'IconTrademarkCircleOutlined',
-  displayName: 'TrademarkCircleOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: TrademarkCircleOutlinedSvg } },
-      children,
-    ),
+const TrademarkCircleOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={TrademarkCircleOutlinedSvg}></Icon>;
 };
+
+TrademarkCircleOutlined.inheritAttrs = false;
+export default TrademarkCircleOutlined;

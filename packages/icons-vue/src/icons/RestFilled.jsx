@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import RestFilledSvg from '@ant-design/icons-svg/lib/asn/RestFilled';
 
-export default {
-  name: 'IconRestFilled',
-  displayName: 'RestFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: RestFilledSvg } },
-      children,
-    ),
+const RestFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={RestFilledSvg}></Icon>;
 };
+
+RestFilled.inheritAttrs = false;
+export default RestFilled;

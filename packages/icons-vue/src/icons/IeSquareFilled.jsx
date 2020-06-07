@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import IeSquareFilledSvg from '@ant-design/icons-svg/lib/asn/IeSquareFilled';
 
-export default {
-  name: 'IconIeSquareFilled',
-  displayName: 'IeSquareFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: IeSquareFilledSvg } },
-      children,
-    ),
+const IeSquareFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={IeSquareFilledSvg}></Icon>;
 };
+
+IeSquareFilled.inheritAttrs = false;
+export default IeSquareFilled;

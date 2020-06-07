@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CiCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/CiCircleOutlined';
 
-export default {
-  name: 'IconCiCircleOutlined',
-  displayName: 'CiCircleOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CiCircleOutlinedSvg } },
-      children,
-    ),
+const CiCircleOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CiCircleOutlinedSvg}></Icon>;
 };
+
+CiCircleOutlined.inheritAttrs = false;
+export default CiCircleOutlined;

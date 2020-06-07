@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import LayoutTwoToneSvg from '@ant-design/icons-svg/lib/asn/LayoutTwoTone';
 
-export default {
-  name: 'IconLayoutTwoTone',
-  displayName: 'LayoutTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: LayoutTwoToneSvg } },
-      children,
-    ),
+const LayoutTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={LayoutTwoToneSvg}></Icon>;
 };
+
+LayoutTwoTone.inheritAttrs = false;
+export default LayoutTwoTone;

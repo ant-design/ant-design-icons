@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CloseSquareFilledSvg from '@ant-design/icons-svg/lib/asn/CloseSquareFilled';
 
-export default {
-  name: 'IconCloseSquareFilled',
-  displayName: 'CloseSquareFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CloseSquareFilledSvg } },
-      children,
-    ),
+const CloseSquareFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CloseSquareFilledSvg}></Icon>;
 };
+
+CloseSquareFilled.inheritAttrs = false;
+export default CloseSquareFilled;

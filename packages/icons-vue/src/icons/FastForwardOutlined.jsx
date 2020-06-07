@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FastForwardOutlinedSvg from '@ant-design/icons-svg/lib/asn/FastForwardOutlined';
 
-export default {
-  name: 'IconFastForwardOutlined',
-  displayName: 'FastForwardOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FastForwardOutlinedSvg } },
-      children,
-    ),
+const FastForwardOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FastForwardOutlinedSvg}></Icon>;
 };
+
+FastForwardOutlined.inheritAttrs = false;
+export default FastForwardOutlined;

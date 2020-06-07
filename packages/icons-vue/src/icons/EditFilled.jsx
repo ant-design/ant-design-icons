@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import EditFilledSvg from '@ant-design/icons-svg/lib/asn/EditFilled';
 
-export default {
-  name: 'IconEditFilled',
-  displayName: 'EditFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: EditFilledSvg } },
-      children,
-    ),
+const EditFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={EditFilledSvg}></Icon>;
 };
+
+EditFilled.inheritAttrs = false;
+export default EditFilled;

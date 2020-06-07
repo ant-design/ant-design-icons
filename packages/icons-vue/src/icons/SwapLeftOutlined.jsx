@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SwapLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/SwapLeftOutlined';
 
-export default {
-  name: 'IconSwapLeftOutlined',
-  displayName: 'SwapLeftOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SwapLeftOutlinedSvg } },
-      children,
-    ),
+const SwapLeftOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SwapLeftOutlinedSvg}></Icon>;
 };
+
+SwapLeftOutlined.inheritAttrs = false;
+export default SwapLeftOutlined;

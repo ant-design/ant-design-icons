@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CodepenCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/CodepenCircleOutlined';
 
-export default {
-  name: 'IconCodepenCircleOutlined',
-  displayName: 'CodepenCircleOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CodepenCircleOutlinedSvg } },
-      children,
-    ),
+const CodepenCircleOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CodepenCircleOutlinedSvg}></Icon>;
 };
+
+CodepenCircleOutlined.inheritAttrs = false;
+export default CodepenCircleOutlined;

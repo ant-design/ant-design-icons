@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PieChartOutlinedSvg from '@ant-design/icons-svg/lib/asn/PieChartOutlined';
 
-export default {
-  name: 'IconPieChartOutlined',
-  displayName: 'PieChartOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PieChartOutlinedSvg } },
-      children,
-    ),
+const PieChartOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PieChartOutlinedSvg}></Icon>;
 };
+
+PieChartOutlined.inheritAttrs = false;
+export default PieChartOutlined;

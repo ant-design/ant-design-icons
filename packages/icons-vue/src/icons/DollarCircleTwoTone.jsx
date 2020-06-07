@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DollarCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/DollarCircleTwoTone';
 
-export default {
-  name: 'IconDollarCircleTwoTone',
-  displayName: 'DollarCircleTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DollarCircleTwoToneSvg } },
-      children,
-    ),
+const DollarCircleTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DollarCircleTwoToneSvg}></Icon>;
 };
+
+DollarCircleTwoTone.inheritAttrs = false;
+export default DollarCircleTwoTone;

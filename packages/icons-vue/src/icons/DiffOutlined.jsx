@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DiffOutlinedSvg from '@ant-design/icons-svg/lib/asn/DiffOutlined';
 
-export default {
-  name: 'IconDiffOutlined',
-  displayName: 'DiffOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DiffOutlinedSvg } },
-      children,
-    ),
+const DiffOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DiffOutlinedSvg}></Icon>;
 };
+
+DiffOutlined.inheritAttrs = false;
+export default DiffOutlined;

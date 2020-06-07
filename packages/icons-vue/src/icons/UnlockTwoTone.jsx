@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import UnlockTwoToneSvg from '@ant-design/icons-svg/lib/asn/UnlockTwoTone';
 
-export default {
-  name: 'IconUnlockTwoTone',
-  displayName: 'UnlockTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: UnlockTwoToneSvg } },
-      children,
-    ),
+const UnlockTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={UnlockTwoToneSvg}></Icon>;
 };
+
+UnlockTwoTone.inheritAttrs = false;
+export default UnlockTwoTone;

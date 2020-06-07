@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import WechatOutlinedSvg from '@ant-design/icons-svg/lib/asn/WechatOutlined';
 
-export default {
-  name: 'IconWechatOutlined',
-  displayName: 'WechatOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: WechatOutlinedSvg } },
-      children,
-    ),
+const WechatOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={WechatOutlinedSvg}></Icon>;
 };
+
+WechatOutlined.inheritAttrs = false;
+export default WechatOutlined;

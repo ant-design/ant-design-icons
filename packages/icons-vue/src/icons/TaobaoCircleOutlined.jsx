@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import TaobaoCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/TaobaoCircleOutlined';
 
-export default {
-  name: 'IconTaobaoCircleOutlined',
-  displayName: 'TaobaoCircleOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: TaobaoCircleOutlinedSvg } },
-      children,
-    ),
+const TaobaoCircleOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={TaobaoCircleOutlinedSvg}></Icon>;
 };
+
+TaobaoCircleOutlined.inheritAttrs = false;
+export default TaobaoCircleOutlined;

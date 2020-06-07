@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ExpandAltOutlinedSvg from '@ant-design/icons-svg/lib/asn/ExpandAltOutlined';
 
-export default {
-  name: 'IconExpandAltOutlined',
-  displayName: 'ExpandAltOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ExpandAltOutlinedSvg } },
-      children,
-    ),
+const ExpandAltOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ExpandAltOutlinedSvg}></Icon>;
 };
+
+ExpandAltOutlined.inheritAttrs = false;
+export default ExpandAltOutlined;

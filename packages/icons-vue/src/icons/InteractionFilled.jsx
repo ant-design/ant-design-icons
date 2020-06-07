@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import InteractionFilledSvg from '@ant-design/icons-svg/lib/asn/InteractionFilled';
 
-export default {
-  name: 'IconInteractionFilled',
-  displayName: 'InteractionFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: InteractionFilledSvg } },
-      children,
-    ),
+const InteractionFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={InteractionFilledSvg}></Icon>;
 };
+
+InteractionFilled.inheritAttrs = false;
+export default InteractionFilled;

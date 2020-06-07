@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import GlobalOutlinedSvg from '@ant-design/icons-svg/lib/asn/GlobalOutlined';
 
-export default {
-  name: 'IconGlobalOutlined',
-  displayName: 'GlobalOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: GlobalOutlinedSvg } },
-      children,
-    ),
+const GlobalOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={GlobalOutlinedSvg}></Icon>;
 };
+
+GlobalOutlined.inheritAttrs = false;
+export default GlobalOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import UpCircleFilledSvg from '@ant-design/icons-svg/lib/asn/UpCircleFilled';
 
-export default {
-  name: 'IconUpCircleFilled',
-  displayName: 'UpCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: UpCircleFilledSvg } },
-      children,
-    ),
+const UpCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={UpCircleFilledSvg}></Icon>;
 };
+
+UpCircleFilled.inheritAttrs = false;
+export default UpCircleFilled;

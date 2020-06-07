@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ExperimentTwoToneSvg from '@ant-design/icons-svg/lib/asn/ExperimentTwoTone';
 
-export default {
-  name: 'IconExperimentTwoTone',
-  displayName: 'ExperimentTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ExperimentTwoToneSvg } },
-      children,
-    ),
+const ExperimentTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ExperimentTwoToneSvg}></Icon>;
 };
+
+ExperimentTwoTone.inheritAttrs = false;
+export default ExperimentTwoTone;

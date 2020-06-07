@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import HeartFilledSvg from '@ant-design/icons-svg/lib/asn/HeartFilled';
 
-export default {
-  name: 'IconHeartFilled',
-  displayName: 'HeartFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: HeartFilledSvg } },
-      children,
-    ),
+const HeartFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={HeartFilledSvg}></Icon>;
 };
+
+HeartFilled.inheritAttrs = false;
+export default HeartFilled;

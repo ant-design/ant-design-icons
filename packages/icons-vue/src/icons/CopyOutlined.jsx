@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CopyOutlinedSvg from '@ant-design/icons-svg/lib/asn/CopyOutlined';
 
-export default {
-  name: 'IconCopyOutlined',
-  displayName: 'CopyOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CopyOutlinedSvg } },
-      children,
-    ),
+const CopyOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CopyOutlinedSvg}></Icon>;
 };
+
+CopyOutlined.inheritAttrs = false;
+export default CopyOutlined;

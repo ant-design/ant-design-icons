@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PayCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/PayCircleOutlined';
 
-export default {
-  name: 'IconPayCircleOutlined',
-  displayName: 'PayCircleOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PayCircleOutlinedSvg } },
-      children,
-    ),
+const PayCircleOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PayCircleOutlinedSvg}></Icon>;
 };
+
+PayCircleOutlined.inheritAttrs = false;
+export default PayCircleOutlined;

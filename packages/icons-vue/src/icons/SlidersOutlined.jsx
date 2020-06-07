@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SlidersOutlinedSvg from '@ant-design/icons-svg/lib/asn/SlidersOutlined';
 
-export default {
-  name: 'IconSlidersOutlined',
-  displayName: 'SlidersOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SlidersOutlinedSvg } },
-      children,
-    ),
+const SlidersOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SlidersOutlinedSvg}></Icon>;
 };
+
+SlidersOutlined.inheritAttrs = false;
+export default SlidersOutlined;

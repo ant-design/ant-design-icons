@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import RetweetOutlinedSvg from '@ant-design/icons-svg/lib/asn/RetweetOutlined';
 
-export default {
-  name: 'IconRetweetOutlined',
-  displayName: 'RetweetOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: RetweetOutlinedSvg } },
-      children,
-    ),
+const RetweetOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={RetweetOutlinedSvg}></Icon>;
 };
+
+RetweetOutlined.inheritAttrs = false;
+export default RetweetOutlined;

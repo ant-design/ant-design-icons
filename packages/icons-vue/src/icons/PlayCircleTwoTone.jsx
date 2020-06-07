@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PlayCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/PlayCircleTwoTone';
 
-export default {
-  name: 'IconPlayCircleTwoTone',
-  displayName: 'PlayCircleTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PlayCircleTwoToneSvg } },
-      children,
-    ),
+const PlayCircleTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PlayCircleTwoToneSvg}></Icon>;
 };
+
+PlayCircleTwoTone.inheritAttrs = false;
+export default PlayCircleTwoTone;

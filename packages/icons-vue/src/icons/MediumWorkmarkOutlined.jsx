@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import MediumWorkmarkOutlinedSvg from '@ant-design/icons-svg/lib/asn/MediumWorkmarkOutlined';
 
-export default {
-  name: 'IconMediumWorkmarkOutlined',
-  displayName: 'MediumWorkmarkOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: MediumWorkmarkOutlinedSvg } },
-      children,
-    ),
+const MediumWorkmarkOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={MediumWorkmarkOutlinedSvg}></Icon>;
 };
+
+MediumWorkmarkOutlined.inheritAttrs = false;
+export default MediumWorkmarkOutlined;

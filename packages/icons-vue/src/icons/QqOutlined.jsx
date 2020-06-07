@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import QqOutlinedSvg from '@ant-design/icons-svg/lib/asn/QqOutlined';
 
-export default {
-  name: 'IconQqOutlined',
-  displayName: 'QqOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: QqOutlinedSvg } },
-      children,
-    ),
+const QqOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={QqOutlinedSvg}></Icon>;
 };
+
+QqOutlined.inheritAttrs = false;
+export default QqOutlined;

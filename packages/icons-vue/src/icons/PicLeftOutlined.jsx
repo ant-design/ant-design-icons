@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PicLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/PicLeftOutlined';
 
-export default {
-  name: 'IconPicLeftOutlined',
-  displayName: 'PicLeftOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PicLeftOutlinedSvg } },
-      children,
-    ),
+const PicLeftOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PicLeftOutlinedSvg}></Icon>;
 };
+
+PicLeftOutlined.inheritAttrs = false;
+export default PicLeftOutlined;

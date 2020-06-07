@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import QuestionCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/QuestionCircleOutlined';
 
-export default {
-  name: 'IconQuestionCircleOutlined',
-  displayName: 'QuestionCircleOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: QuestionCircleOutlinedSvg } },
-      children,
-    ),
+const QuestionCircleOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={QuestionCircleOutlinedSvg}></Icon>;
 };
+
+QuestionCircleOutlined.inheritAttrs = false;
+export default QuestionCircleOutlined;

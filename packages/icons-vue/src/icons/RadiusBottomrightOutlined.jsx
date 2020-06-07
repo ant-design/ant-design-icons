@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import RadiusBottomrightOutlinedSvg from '@ant-design/icons-svg/lib/asn/RadiusBottomrightOutlined';
 
-export default {
-  name: 'IconRadiusBottomrightOutlined',
-  displayName: 'RadiusBottomrightOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: RadiusBottomrightOutlinedSvg } },
-      children,
-    ),
+const RadiusBottomrightOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={RadiusBottomrightOutlinedSvg}></Icon>;
 };
+
+RadiusBottomrightOutlined.inheritAttrs = false;
+export default RadiusBottomrightOutlined;

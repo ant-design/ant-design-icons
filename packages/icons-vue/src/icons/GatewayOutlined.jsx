@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import GatewayOutlinedSvg from '@ant-design/icons-svg/lib/asn/GatewayOutlined';
 
-export default {
-  name: 'IconGatewayOutlined',
-  displayName: 'GatewayOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: GatewayOutlinedSvg } },
-      children,
-    ),
+const GatewayOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={GatewayOutlinedSvg}></Icon>;
 };
+
+GatewayOutlined.inheritAttrs = false;
+export default GatewayOutlined;

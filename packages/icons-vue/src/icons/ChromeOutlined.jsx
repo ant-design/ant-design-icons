@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ChromeOutlinedSvg from '@ant-design/icons-svg/lib/asn/ChromeOutlined';
 
-export default {
-  name: 'IconChromeOutlined',
-  displayName: 'ChromeOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ChromeOutlinedSvg } },
-      children,
-    ),
+const ChromeOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ChromeOutlinedSvg}></Icon>;
 };
+
+ChromeOutlined.inheritAttrs = false;
+export default ChromeOutlined;

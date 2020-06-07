@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PoweroffOutlinedSvg from '@ant-design/icons-svg/lib/asn/PoweroffOutlined';
 
-export default {
-  name: 'IconPoweroffOutlined',
-  displayName: 'PoweroffOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PoweroffOutlinedSvg } },
-      children,
-    ),
+const PoweroffOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PoweroffOutlinedSvg}></Icon>;
 };
+
+PoweroffOutlined.inheritAttrs = false;
+export default PoweroffOutlined;

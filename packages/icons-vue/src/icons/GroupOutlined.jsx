@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import GroupOutlinedSvg from '@ant-design/icons-svg/lib/asn/GroupOutlined';
 
-export default {
-  name: 'IconGroupOutlined',
-  displayName: 'GroupOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: GroupOutlinedSvg } },
-      children,
-    ),
+const GroupOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={GroupOutlinedSvg}></Icon>;
 };
+
+GroupOutlined.inheritAttrs = false;
+export default GroupOutlined;

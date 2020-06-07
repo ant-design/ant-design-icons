@@ -1,10 +1,9 @@
-import Vue from 'vue';
-import { SmileOutlined, SyncOutlined, LoadingOutlined, HomeOutlined, SettingFilled } from '../src';
+import { createApp } from 'vue';
+import { HomeOutlined, SettingFilled, SyncOutlined, SmileOutlined, LoadingOutlined } from '../src';
 import Icon, { FilterOutlined } from '../src';
 import { AntDesignOutlined } from '@ant-design/icons-svg';
 import IconBase from '../src/components/IconBase';
 
-Vue.component(FilterOutlined.name, FilterOutlined);
 const SimpleDemo = {
   render() {
     return (
@@ -15,7 +14,7 @@ const SimpleDemo = {
         <SyncOutlined spin />
         <SmileOutlined rotate={180} />
         <LoadingOutlined />
-        <icon-filter-outlined />
+        <filter-outlined />
         <Icon viewBox="0 0 24 24">
           <title>Cool Home</title>
           <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
@@ -27,9 +26,10 @@ const SimpleDemo = {
   },
 };
 
-new Vue({
-  el: '#__vue-content>div',
+const app = createApp(SimpleDemo);
+app.component('filter-outlined', {
   render() {
-    return <SimpleDemo />;
+    return <FilterOutlined />;
   },
 });
+app.mount('#__vue-content>div');

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ConsoleSqlOutlinedSvg from '@ant-design/icons-svg/lib/asn/ConsoleSqlOutlined';
 
-export default {
-  name: 'IconConsoleSqlOutlined',
-  displayName: 'ConsoleSqlOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ConsoleSqlOutlinedSvg } },
-      children,
-    ),
+const ConsoleSqlOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ConsoleSqlOutlinedSvg}></Icon>;
 };
+
+ConsoleSqlOutlined.inheritAttrs = false;
+export default ConsoleSqlOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ZhihuSquareFilledSvg from '@ant-design/icons-svg/lib/asn/ZhihuSquareFilled';
 
-export default {
-  name: 'IconZhihuSquareFilled',
-  displayName: 'ZhihuSquareFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ZhihuSquareFilledSvg } },
-      children,
-    ),
+const ZhihuSquareFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ZhihuSquareFilledSvg}></Icon>;
 };
+
+ZhihuSquareFilled.inheritAttrs = false;
+export default ZhihuSquareFilled;

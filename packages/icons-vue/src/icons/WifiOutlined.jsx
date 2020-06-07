@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import WifiOutlinedSvg from '@ant-design/icons-svg/lib/asn/WifiOutlined';
 
-export default {
-  name: 'IconWifiOutlined',
-  displayName: 'WifiOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: WifiOutlinedSvg } },
-      children,
-    ),
+const WifiOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={WifiOutlinedSvg}></Icon>;
 };
+
+WifiOutlined.inheritAttrs = false;
+export default WifiOutlined;

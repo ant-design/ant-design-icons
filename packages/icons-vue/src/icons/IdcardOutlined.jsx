@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import IdcardOutlinedSvg from '@ant-design/icons-svg/lib/asn/IdcardOutlined';
 
-export default {
-  name: 'IconIdcardOutlined',
-  displayName: 'IdcardOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: IdcardOutlinedSvg } },
-      children,
-    ),
+const IdcardOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={IdcardOutlinedSvg}></Icon>;
 };
+
+IdcardOutlined.inheritAttrs = false;
+export default IdcardOutlined;

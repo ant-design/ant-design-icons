@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CheckSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/CheckSquareTwoTone';
 
-export default {
-  name: 'IconCheckSquareTwoTone',
-  displayName: 'CheckSquareTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CheckSquareTwoToneSvg } },
-      children,
-    ),
+const CheckSquareTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CheckSquareTwoToneSvg}></Icon>;
 };
+
+CheckSquareTwoTone.inheritAttrs = false;
+export default CheckSquareTwoTone;

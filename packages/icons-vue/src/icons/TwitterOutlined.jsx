@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import TwitterOutlinedSvg from '@ant-design/icons-svg/lib/asn/TwitterOutlined';
 
-export default {
-  name: 'IconTwitterOutlined',
-  displayName: 'TwitterOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: TwitterOutlinedSvg } },
-      children,
-    ),
+const TwitterOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={TwitterOutlinedSvg}></Icon>;
 };
+
+TwitterOutlined.inheritAttrs = false;
+export default TwitterOutlined;

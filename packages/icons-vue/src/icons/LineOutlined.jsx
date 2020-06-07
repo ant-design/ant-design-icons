@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import LineOutlinedSvg from '@ant-design/icons-svg/lib/asn/LineOutlined';
 
-export default {
-  name: 'IconLineOutlined',
-  displayName: 'LineOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: LineOutlinedSvg } },
-      children,
-    ),
+const LineOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={LineOutlinedSvg}></Icon>;
 };
+
+LineOutlined.inheritAttrs = false;
+export default LineOutlined;

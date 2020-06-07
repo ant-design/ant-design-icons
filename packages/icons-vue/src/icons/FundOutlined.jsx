@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FundOutlinedSvg from '@ant-design/icons-svg/lib/asn/FundOutlined';
 
-export default {
-  name: 'IconFundOutlined',
-  displayName: 'FundOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FundOutlinedSvg } },
-      children,
-    ),
+const FundOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FundOutlinedSvg}></Icon>;
 };
+
+FundOutlined.inheritAttrs = false;
+export default FundOutlined;

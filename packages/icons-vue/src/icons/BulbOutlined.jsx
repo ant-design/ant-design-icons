@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BulbOutlinedSvg from '@ant-design/icons-svg/lib/asn/BulbOutlined';
 
-export default {
-  name: 'IconBulbOutlined',
-  displayName: 'BulbOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BulbOutlinedSvg } },
-      children,
-    ),
+const BulbOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BulbOutlinedSvg}></Icon>;
 };
+
+BulbOutlined.inheritAttrs = false;
+export default BulbOutlined;

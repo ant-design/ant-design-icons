@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import OrderedListOutlinedSvg from '@ant-design/icons-svg/lib/asn/OrderedListOutlined';
 
-export default {
-  name: 'IconOrderedListOutlined',
-  displayName: 'OrderedListOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: OrderedListOutlinedSvg } },
-      children,
-    ),
+const OrderedListOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={OrderedListOutlinedSvg}></Icon>;
 };
+
+OrderedListOutlined.inheritAttrs = false;
+export default OrderedListOutlined;

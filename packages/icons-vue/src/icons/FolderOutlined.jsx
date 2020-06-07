@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FolderOutlinedSvg from '@ant-design/icons-svg/lib/asn/FolderOutlined';
 
-export default {
-  name: 'IconFolderOutlined',
-  displayName: 'FolderOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FolderOutlinedSvg } },
-      children,
-    ),
+const FolderOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FolderOutlinedSvg}></Icon>;
 };
+
+FolderOutlined.inheritAttrs = false;
+export default FolderOutlined;

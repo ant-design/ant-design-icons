@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ShareAltOutlinedSvg from '@ant-design/icons-svg/lib/asn/ShareAltOutlined';
 
-export default {
-  name: 'IconShareAltOutlined',
-  displayName: 'ShareAltOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ShareAltOutlinedSvg } },
-      children,
-    ),
+const ShareAltOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ShareAltOutlinedSvg}></Icon>;
 };
+
+ShareAltOutlined.inheritAttrs = false;
+export default ShareAltOutlined;

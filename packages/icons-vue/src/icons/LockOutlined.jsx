@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import LockOutlinedSvg from '@ant-design/icons-svg/lib/asn/LockOutlined';
 
-export default {
-  name: 'IconLockOutlined',
-  displayName: 'LockOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: LockOutlinedSvg } },
-      children,
-    ),
+const LockOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={LockOutlinedSvg}></Icon>;
 };
+
+LockOutlined.inheritAttrs = false;
+export default LockOutlined;

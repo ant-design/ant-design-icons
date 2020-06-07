@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PoundCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PoundCircleFilled';
 
-export default {
-  name: 'IconPoundCircleFilled',
-  displayName: 'PoundCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PoundCircleFilledSvg } },
-      children,
-    ),
+const PoundCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PoundCircleFilledSvg}></Icon>;
 };
+
+PoundCircleFilled.inheritAttrs = false;
+export default PoundCircleFilled;

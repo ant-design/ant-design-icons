@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BugFilledSvg from '@ant-design/icons-svg/lib/asn/BugFilled';
 
-export default {
-  name: 'IconBugFilled',
-  displayName: 'BugFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BugFilledSvg } },
-      children,
-    ),
+const BugFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BugFilledSvg}></Icon>;
 };
+
+BugFilled.inheritAttrs = false;
+export default BugFilled;

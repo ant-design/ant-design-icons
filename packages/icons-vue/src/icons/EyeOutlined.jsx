@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import EyeOutlinedSvg from '@ant-design/icons-svg/lib/asn/EyeOutlined';
 
-export default {
-  name: 'IconEyeOutlined',
-  displayName: 'EyeOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: EyeOutlinedSvg } },
-      children,
-    ),
+const EyeOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={EyeOutlinedSvg}></Icon>;
 };
+
+EyeOutlined.inheritAttrs = false;
+export default EyeOutlined;

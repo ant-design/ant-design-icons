@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import HourglassTwoToneSvg from '@ant-design/icons-svg/lib/asn/HourglassTwoTone';
 
-export default {
-  name: 'IconHourglassTwoTone',
-  displayName: 'HourglassTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: HourglassTwoToneSvg } },
-      children,
-    ),
+const HourglassTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={HourglassTwoToneSvg}></Icon>;
 };
+
+HourglassTwoTone.inheritAttrs = false;
+export default HourglassTwoTone;

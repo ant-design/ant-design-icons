@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ColumnWidthOutlinedSvg from '@ant-design/icons-svg/lib/asn/ColumnWidthOutlined';
 
-export default {
-  name: 'IconColumnWidthOutlined',
-  displayName: 'ColumnWidthOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ColumnWidthOutlinedSvg } },
-      children,
-    ),
+const ColumnWidthOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ColumnWidthOutlinedSvg}></Icon>;
 };
+
+ColumnWidthOutlined.inheritAttrs = false;
+export default ColumnWidthOutlined;

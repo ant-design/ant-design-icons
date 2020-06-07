@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import VideoCameraAddOutlinedSvg from '@ant-design/icons-svg/lib/asn/VideoCameraAddOutlined';
 
-export default {
-  name: 'IconVideoCameraAddOutlined',
-  displayName: 'VideoCameraAddOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: VideoCameraAddOutlinedSvg } },
-      children,
-    ),
+const VideoCameraAddOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={VideoCameraAddOutlinedSvg}></Icon>;
 };
+
+VideoCameraAddOutlined.inheritAttrs = false;
+export default VideoCameraAddOutlined;

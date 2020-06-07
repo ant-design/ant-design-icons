@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BoxPlotFilledSvg from '@ant-design/icons-svg/lib/asn/BoxPlotFilled';
 
-export default {
-  name: 'IconBoxPlotFilled',
-  displayName: 'BoxPlotFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BoxPlotFilledSvg } },
-      children,
-    ),
+const BoxPlotFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BoxPlotFilledSvg}></Icon>;
 };
+
+BoxPlotFilled.inheritAttrs = false;
+export default BoxPlotFilled;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DislikeFilledSvg from '@ant-design/icons-svg/lib/asn/DislikeFilled';
 
-export default {
-  name: 'IconDislikeFilled',
-  displayName: 'DislikeFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DislikeFilledSvg } },
-      children,
-    ),
+const DislikeFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DislikeFilledSvg}></Icon>;
 };
+
+DislikeFilled.inheritAttrs = false;
+export default DislikeFilled;

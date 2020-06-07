@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DropboxCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DropboxCircleFilled';
 
-export default {
-  name: 'IconDropboxCircleFilled',
-  displayName: 'DropboxCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DropboxCircleFilledSvg } },
-      children,
-    ),
+const DropboxCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DropboxCircleFilledSvg}></Icon>;
 };
+
+DropboxCircleFilled.inheritAttrs = false;
+export default DropboxCircleFilled;

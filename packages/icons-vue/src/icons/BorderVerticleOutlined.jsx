@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BorderVerticleOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderVerticleOutlined';
 
-export default {
-  name: 'IconBorderVerticleOutlined',
-  displayName: 'BorderVerticleOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BorderVerticleOutlinedSvg } },
-      children,
-    ),
+const BorderVerticleOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BorderVerticleOutlinedSvg}></Icon>;
 };
+
+BorderVerticleOutlined.inheritAttrs = false;
+export default BorderVerticleOutlined;

@@ -5,37 +5,31 @@ import Icon from '../src/components/IconBase';
 describe('Vue AntdIcon Component', () => {
   it('should create SVG element.', () => {
     const iconProps = {
-      props: {
-        icon: AntDesignOutlined,
-      },
+      icon: AntDesignOutlined,
       style: {
         fontSize: '3rem',
       },
       class: 'my-icon',
-      attrs: { hello: 'world' },
+      hello: 'world',
     };
     const icon = mount({
       render() {
         return <Icon {...iconProps} />;
       },
     });
-    expect(icon).toMatchSnapshot();
+    expect(icon.html()).toMatchSnapshot();
   });
 
   it('should allow explicit import.', () => {
-    const icon = mount(Icon, { context: { props: { icon: TwitterOutlined } } });
-    expect(typeof icon.find('path').vnode.data.attrs.d).toBe('string');
+    const icon = mount(Icon, { props: { icon: TwitterOutlined } });
+    expect(typeof icon.find('path').attributes().d).toBe('string');
   });
 
   it('should render null, when the type is invalid.', () => {
-    const iconWithObjectTypeProp = mount(Icon, { context: { props: { icon: { invalid: true } } } });
-    expect(iconWithObjectTypeProp.isEmpty()).toBe(true);
+    const iconWithObjectTypeProp = mount(Icon, { props: { icon: { invalid: true } } });
+    expect(iconWithObjectTypeProp.findAll('svg').length).toBe(0);
 
-    const iconWithStringTypeProp = mount(Icon, {
-      context: {
-        props: { icon: 'Later is better than never.' },
-      },
-    });
-    expect(iconWithStringTypeProp.isEmpty()).toBe(true);
+    const iconWithStringTypeProp = mount(Icon, { props: { icon: 'Later is better than never.' } });
+    expect(iconWithStringTypeProp.findAll('svg').length).toBe(0);
   });
 });

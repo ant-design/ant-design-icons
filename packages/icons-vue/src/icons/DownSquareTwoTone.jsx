@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DownSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/DownSquareTwoTone';
 
-export default {
-  name: 'IconDownSquareTwoTone',
-  displayName: 'DownSquareTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DownSquareTwoToneSvg } },
-      children,
-    ),
+const DownSquareTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DownSquareTwoToneSvg}></Icon>;
 };
+
+DownSquareTwoTone.inheritAttrs = false;
+export default DownSquareTwoTone;

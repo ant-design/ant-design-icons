@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import UnorderedListOutlinedSvg from '@ant-design/icons-svg/lib/asn/UnorderedListOutlined';
 
-export default {
-  name: 'IconUnorderedListOutlined',
-  displayName: 'UnorderedListOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: UnorderedListOutlinedSvg } },
-      children,
-    ),
+const UnorderedListOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={UnorderedListOutlinedSvg}></Icon>;
 };
+
+UnorderedListOutlined.inheritAttrs = false;
+export default UnorderedListOutlined;

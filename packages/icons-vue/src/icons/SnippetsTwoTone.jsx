@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SnippetsTwoToneSvg from '@ant-design/icons-svg/lib/asn/SnippetsTwoTone';
 
-export default {
-  name: 'IconSnippetsTwoTone',
-  displayName: 'SnippetsTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SnippetsTwoToneSvg } },
-      children,
-    ),
+const SnippetsTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SnippetsTwoToneSvg}></Icon>;
 };
+
+SnippetsTwoTone.inheritAttrs = false;
+export default SnippetsTwoTone;

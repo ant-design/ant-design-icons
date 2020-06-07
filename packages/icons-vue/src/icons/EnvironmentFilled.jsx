@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import EnvironmentFilledSvg from '@ant-design/icons-svg/lib/asn/EnvironmentFilled';
 
-export default {
-  name: 'IconEnvironmentFilled',
-  displayName: 'EnvironmentFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: EnvironmentFilledSvg } },
-      children,
-    ),
+const EnvironmentFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={EnvironmentFilledSvg}></Icon>;
 };
+
+EnvironmentFilled.inheritAttrs = false;
+export default EnvironmentFilled;

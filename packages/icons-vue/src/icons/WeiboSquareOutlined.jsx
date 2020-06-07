@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import WeiboSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/WeiboSquareOutlined';
 
-export default {
-  name: 'IconWeiboSquareOutlined',
-  displayName: 'WeiboSquareOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: WeiboSquareOutlinedSvg } },
-      children,
-    ),
+const WeiboSquareOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={WeiboSquareOutlinedSvg}></Icon>;
 };
+
+WeiboSquareOutlined.inheritAttrs = false;
+export default WeiboSquareOutlined;

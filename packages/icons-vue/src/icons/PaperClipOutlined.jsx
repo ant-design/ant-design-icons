@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PaperClipOutlinedSvg from '@ant-design/icons-svg/lib/asn/PaperClipOutlined';
 
-export default {
-  name: 'IconPaperClipOutlined',
-  displayName: 'PaperClipOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PaperClipOutlinedSvg } },
-      children,
-    ),
+const PaperClipOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PaperClipOutlinedSvg}></Icon>;
 };
+
+PaperClipOutlined.inheritAttrs = false;
+export default PaperClipOutlined;

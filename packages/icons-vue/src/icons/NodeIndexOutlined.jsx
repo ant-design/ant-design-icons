@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import NodeIndexOutlinedSvg from '@ant-design/icons-svg/lib/asn/NodeIndexOutlined';
 
-export default {
-  name: 'IconNodeIndexOutlined',
-  displayName: 'NodeIndexOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: NodeIndexOutlinedSvg } },
-      children,
-    ),
+const NodeIndexOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={NodeIndexOutlinedSvg}></Icon>;
 };
+
+NodeIndexOutlined.inheritAttrs = false;
+export default NodeIndexOutlined;

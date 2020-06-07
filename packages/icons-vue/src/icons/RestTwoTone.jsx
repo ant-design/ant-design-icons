@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import RestTwoToneSvg from '@ant-design/icons-svg/lib/asn/RestTwoTone';
 
-export default {
-  name: 'IconRestTwoTone',
-  displayName: 'RestTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: RestTwoToneSvg } },
-      children,
-    ),
+const RestTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={RestTwoToneSvg}></Icon>;
 };
+
+RestTwoTone.inheritAttrs = false;
+export default RestTwoTone;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BarcodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/BarcodeOutlined';
 
-export default {
-  name: 'IconBarcodeOutlined',
-  displayName: 'BarcodeOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BarcodeOutlinedSvg } },
-      children,
-    ),
+const BarcodeOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BarcodeOutlinedSvg}></Icon>;
 };
+
+BarcodeOutlined.inheritAttrs = false;
+export default BarcodeOutlined;

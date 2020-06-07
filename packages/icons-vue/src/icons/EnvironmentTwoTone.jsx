@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import EnvironmentTwoToneSvg from '@ant-design/icons-svg/lib/asn/EnvironmentTwoTone';
 
-export default {
-  name: 'IconEnvironmentTwoTone',
-  displayName: 'EnvironmentTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: EnvironmentTwoToneSvg } },
-      children,
-    ),
+const EnvironmentTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={EnvironmentTwoToneSvg}></Icon>;
 };
+
+EnvironmentTwoTone.inheritAttrs = false;
+export default EnvironmentTwoTone;

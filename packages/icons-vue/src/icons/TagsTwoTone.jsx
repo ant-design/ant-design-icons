@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import TagsTwoToneSvg from '@ant-design/icons-svg/lib/asn/TagsTwoTone';
 
-export default {
-  name: 'IconTagsTwoTone',
-  displayName: 'TagsTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: TagsTwoToneSvg } },
-      children,
-    ),
+const TagsTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={TagsTwoToneSvg}></Icon>;
 };
+
+TagsTwoTone.inheritAttrs = false;
+export default TagsTwoTone;

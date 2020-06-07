@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import MinusSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/MinusSquareTwoTone';
 
-export default {
-  name: 'IconMinusSquareTwoTone',
-  displayName: 'MinusSquareTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: MinusSquareTwoToneSvg } },
-      children,
-    ),
+const MinusSquareTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={MinusSquareTwoToneSvg}></Icon>;
 };
+
+MinusSquareTwoTone.inheritAttrs = false;
+export default MinusSquareTwoTone;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PartitionOutlinedSvg from '@ant-design/icons-svg/lib/asn/PartitionOutlined';
 
-export default {
-  name: 'IconPartitionOutlined',
-  displayName: 'PartitionOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PartitionOutlinedSvg } },
-      children,
-    ),
+const PartitionOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PartitionOutlinedSvg}></Icon>;
 };
+
+PartitionOutlined.inheritAttrs = false;
+export default PartitionOutlined;

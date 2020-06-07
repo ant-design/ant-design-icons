@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DoubleLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/DoubleLeftOutlined';
 
-export default {
-  name: 'IconDoubleLeftOutlined',
-  displayName: 'DoubleLeftOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DoubleLeftOutlinedSvg } },
-      children,
-    ),
+const DoubleLeftOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DoubleLeftOutlinedSvg}></Icon>;
 };
+
+DoubleLeftOutlined.inheritAttrs = false;
+export default DoubleLeftOutlined;

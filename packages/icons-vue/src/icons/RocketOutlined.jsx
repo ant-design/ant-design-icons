@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import RocketOutlinedSvg from '@ant-design/icons-svg/lib/asn/RocketOutlined';
 
-export default {
-  name: 'IconRocketOutlined',
-  displayName: 'RocketOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: RocketOutlinedSvg } },
-      children,
-    ),
+const RocketOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={RocketOutlinedSvg}></Icon>;
 };
+
+RocketOutlined.inheritAttrs = false;
+export default RocketOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PieChartFilledSvg from '@ant-design/icons-svg/lib/asn/PieChartFilled';
 
-export default {
-  name: 'IconPieChartFilled',
-  displayName: 'PieChartFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PieChartFilledSvg } },
-      children,
-    ),
+const PieChartFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PieChartFilledSvg}></Icon>;
 };
+
+PieChartFilled.inheritAttrs = false;
+export default PieChartFilled;

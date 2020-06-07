@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FlagOutlinedSvg from '@ant-design/icons-svg/lib/asn/FlagOutlined';
 
-export default {
-  name: 'IconFlagOutlined',
-  displayName: 'FlagOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FlagOutlinedSvg } },
-      children,
-    ),
+const FlagOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FlagOutlinedSvg}></Icon>;
 };
+
+FlagOutlined.inheritAttrs = false;
+export default FlagOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import MediumOutlinedSvg from '@ant-design/icons-svg/lib/asn/MediumOutlined';
 
-export default {
-  name: 'IconMediumOutlined',
-  displayName: 'MediumOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: MediumOutlinedSvg } },
-      children,
-    ),
+const MediumOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={MediumOutlinedSvg}></Icon>;
 };
+
+MediumOutlined.inheritAttrs = false;
+export default MediumOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BoldOutlinedSvg from '@ant-design/icons-svg/lib/asn/BoldOutlined';
 
-export default {
-  name: 'IconBoldOutlined',
-  displayName: 'BoldOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BoldOutlinedSvg } },
-      children,
-    ),
+const BoldOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BoldOutlinedSvg}></Icon>;
 };
+
+BoldOutlined.inheritAttrs = false;
+export default BoldOutlined;

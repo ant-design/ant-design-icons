@@ -35,18 +35,12 @@ async function generateIcons() {
 import Icon from '../components/AntdIcon';
 import <%= svgIdentifier %>Svg from '@ant-design/icons-svg/lib/asn/<%= svgIdentifier %>';
 
-export default {
-  name: 'Icon<%= svgIdentifier %>',
-  displayName: '<%= svgIdentifier %>',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: <%= svgIdentifier %>Svg } },
-      children,
-    ),
+const <%= svgIdentifier %> = (_, { attrs }) => {
+  return <Icon {...attrs} icon={<%= svgIdentifier %>Svg}></Icon>;
 };
+
+<%= svgIdentifier %>.inheritAttrs = false;
+export default <%= svgIdentifier %>;
 `.trim(),
   );
 
@@ -103,27 +97,11 @@ async function generateEntries() {
         svgIdentifier,
       }),
     );
-    const tsType = `
-import Vue from 'vue';
-import { IconDefinition } from '@ant-design/icons-svg/lib/types';
-declare class ${svgIdentifier} extends Vue {
-  static install(vue: typeof Vue): void;
-  icon: IconDefinition;
-  twoToneColor?: string | [string, string];
-  tabIndex?: number;
-  spin?: boolean;
-  rotate?: number;
-}
-export default ${svgIdentifier};
-      `.trim();
     // generate `Icon.d.ts` in root folder
-    await writeFile(path.resolve(__dirname, `../${svgIdentifier}.d.ts`), tsType);
-
-    // generate `Icon.d.ts` in lib/icons folder
-    await writeFile(path.resolve(__dirname, `../lib/icons/${svgIdentifier}.d.ts`), tsType);
-
-    // generate `Icon.d.ts` in es/icons folder
-    await writeFile(path.resolve(__dirname, `../es/icons/${svgIdentifier}.d.ts`), tsType);
+    await writeFile(
+      path.resolve(__dirname, `../${svgIdentifier}.d.ts`),
+      `export { default } from './lib/icons/${svgIdentifier}';`,
+    );
   });
 }
 

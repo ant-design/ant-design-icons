@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ArrowDownOutlinedSvg from '@ant-design/icons-svg/lib/asn/ArrowDownOutlined';
 
-export default {
-  name: 'IconArrowDownOutlined',
-  displayName: 'ArrowDownOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ArrowDownOutlinedSvg } },
-      children,
-    ),
+const ArrowDownOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ArrowDownOutlinedSvg}></Icon>;
 };
+
+ArrowDownOutlined.inheritAttrs = false;
+export default ArrowDownOutlined;

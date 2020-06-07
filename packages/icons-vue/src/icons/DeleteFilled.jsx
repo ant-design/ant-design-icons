@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DeleteFilledSvg from '@ant-design/icons-svg/lib/asn/DeleteFilled';
 
-export default {
-  name: 'IconDeleteFilled',
-  displayName: 'DeleteFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DeleteFilledSvg } },
-      children,
-    ),
+const DeleteFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DeleteFilledSvg}></Icon>;
 };
+
+DeleteFilled.inheritAttrs = false;
+export default DeleteFilled;

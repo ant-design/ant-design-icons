@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import MessageFilledSvg from '@ant-design/icons-svg/lib/asn/MessageFilled';
 
-export default {
-  name: 'IconMessageFilled',
-  displayName: 'MessageFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: MessageFilledSvg } },
-      children,
-    ),
+const MessageFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={MessageFilledSvg}></Icon>;
 };
+
+MessageFilled.inheritAttrs = false;
+export default MessageFilled;

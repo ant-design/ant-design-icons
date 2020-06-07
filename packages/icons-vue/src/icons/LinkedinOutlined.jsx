@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import LinkedinOutlinedSvg from '@ant-design/icons-svg/lib/asn/LinkedinOutlined';
 
-export default {
-  name: 'IconLinkedinOutlined',
-  displayName: 'LinkedinOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: LinkedinOutlinedSvg } },
-      children,
-    ),
+const LinkedinOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={LinkedinOutlinedSvg}></Icon>;
 };
+
+LinkedinOutlined.inheritAttrs = false;
+export default LinkedinOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import GitlabOutlinedSvg from '@ant-design/icons-svg/lib/asn/GitlabOutlined';
 
-export default {
-  name: 'IconGitlabOutlined',
-  displayName: 'GitlabOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: GitlabOutlinedSvg } },
-      children,
-    ),
+const GitlabOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={GitlabOutlinedSvg}></Icon>;
 };
+
+GitlabOutlined.inheritAttrs = false;
+export default GitlabOutlined;

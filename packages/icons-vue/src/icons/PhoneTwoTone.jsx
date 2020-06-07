@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PhoneTwoToneSvg from '@ant-design/icons-svg/lib/asn/PhoneTwoTone';
 
-export default {
-  name: 'IconPhoneTwoTone',
-  displayName: 'PhoneTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PhoneTwoToneSvg } },
-      children,
-    ),
+const PhoneTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PhoneTwoToneSvg}></Icon>;
 };
+
+PhoneTwoTone.inheritAttrs = false;
+export default PhoneTwoTone;

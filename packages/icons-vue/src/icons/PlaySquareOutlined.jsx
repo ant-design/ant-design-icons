@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PlaySquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/PlaySquareOutlined';
 
-export default {
-  name: 'IconPlaySquareOutlined',
-  displayName: 'PlaySquareOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PlaySquareOutlinedSvg } },
-      children,
-    ),
+const PlaySquareOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PlaySquareOutlinedSvg}></Icon>;
 };
+
+PlaySquareOutlined.inheritAttrs = false;
+export default PlaySquareOutlined;

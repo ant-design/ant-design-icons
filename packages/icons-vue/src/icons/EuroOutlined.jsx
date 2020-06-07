@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import EuroOutlinedSvg from '@ant-design/icons-svg/lib/asn/EuroOutlined';
 
-export default {
-  name: 'IconEuroOutlined',
-  displayName: 'EuroOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: EuroOutlinedSvg } },
-      children,
-    ),
+const EuroOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={EuroOutlinedSvg}></Icon>;
 };
+
+EuroOutlined.inheritAttrs = false;
+export default EuroOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ScheduleOutlinedSvg from '@ant-design/icons-svg/lib/asn/ScheduleOutlined';
 
-export default {
-  name: 'IconScheduleOutlined',
-  displayName: 'ScheduleOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ScheduleOutlinedSvg } },
-      children,
-    ),
+const ScheduleOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ScheduleOutlinedSvg}></Icon>;
 };
+
+ScheduleOutlined.inheritAttrs = false;
+export default ScheduleOutlined;

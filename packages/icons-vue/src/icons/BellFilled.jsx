@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BellFilledSvg from '@ant-design/icons-svg/lib/asn/BellFilled';
 
-export default {
-  name: 'IconBellFilled',
-  displayName: 'BellFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BellFilledSvg } },
-      children,
-    ),
+const BellFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BellFilledSvg}></Icon>;
 };
+
+BellFilled.inheritAttrs = false;
+export default BellFilled;

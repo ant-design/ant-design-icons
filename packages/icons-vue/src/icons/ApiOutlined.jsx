@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ApiOutlinedSvg from '@ant-design/icons-svg/lib/asn/ApiOutlined';
 
-export default {
-  name: 'IconApiOutlined',
-  displayName: 'ApiOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ApiOutlinedSvg } },
-      children,
-    ),
+const ApiOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ApiOutlinedSvg}></Icon>;
 };
+
+ApiOutlined.inheritAttrs = false;
+export default ApiOutlined;

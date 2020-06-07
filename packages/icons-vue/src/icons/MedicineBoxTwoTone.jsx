@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import MedicineBoxTwoToneSvg from '@ant-design/icons-svg/lib/asn/MedicineBoxTwoTone';
 
-export default {
-  name: 'IconMedicineBoxTwoTone',
-  displayName: 'MedicineBoxTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: MedicineBoxTwoToneSvg } },
-      children,
-    ),
+const MedicineBoxTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={MedicineBoxTwoToneSvg}></Icon>;
 };
+
+MedicineBoxTwoTone.inheritAttrs = false;
+export default MedicineBoxTwoTone;

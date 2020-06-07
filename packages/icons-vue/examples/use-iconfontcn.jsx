@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import { createFromIconfontCN } from '../src';
 
 const IconFont = createFromIconfontCN({
@@ -24,9 +24,4 @@ const SimpleDemo = {
   },
 };
 
-new Vue({
-  el: '#__vue-content>div',
-  render() {
-    return <SimpleDemo />;
-  },
-});
+createApp(SimpleDemo).mount('#__vue-content>div');

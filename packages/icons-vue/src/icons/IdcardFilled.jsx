@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import IdcardFilledSvg from '@ant-design/icons-svg/lib/asn/IdcardFilled';
 
-export default {
-  name: 'IconIdcardFilled',
-  displayName: 'IdcardFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: IdcardFilledSvg } },
-      children,
-    ),
+const IdcardFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={IdcardFilledSvg}></Icon>;
 };
+
+IdcardFilled.inheritAttrs = false;
+export default IdcardFilled;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import LeftCircleFilledSvg from '@ant-design/icons-svg/lib/asn/LeftCircleFilled';
 
-export default {
-  name: 'IconLeftCircleFilled',
-  displayName: 'LeftCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: LeftCircleFilledSvg } },
-      children,
-    ),
+const LeftCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={LeftCircleFilledSvg}></Icon>;
 };
+
+LeftCircleFilled.inheritAttrs = false;
+export default LeftCircleFilled;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CloudServerOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloudServerOutlined';
 
-export default {
-  name: 'IconCloudServerOutlined',
-  displayName: 'CloudServerOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CloudServerOutlinedSvg } },
-      children,
-    ),
+const CloudServerOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CloudServerOutlinedSvg}></Icon>;
 };
+
+CloudServerOutlined.inheritAttrs = false;
+export default CloudServerOutlined;

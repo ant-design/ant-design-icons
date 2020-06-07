@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import AmazonSquareFilledSvg from '@ant-design/icons-svg/lib/asn/AmazonSquareFilled';
 
-export default {
-  name: 'IconAmazonSquareFilled',
-  displayName: 'AmazonSquareFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: AmazonSquareFilledSvg } },
-      children,
-    ),
+const AmazonSquareFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={AmazonSquareFilledSvg}></Icon>;
 };
+
+AmazonSquareFilled.inheritAttrs = false;
+export default AmazonSquareFilled;

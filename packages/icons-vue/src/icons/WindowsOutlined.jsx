@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import WindowsOutlinedSvg from '@ant-design/icons-svg/lib/asn/WindowsOutlined';
 
-export default {
-  name: 'IconWindowsOutlined',
-  displayName: 'WindowsOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: WindowsOutlinedSvg } },
-      children,
-    ),
+const WindowsOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={WindowsOutlinedSvg}></Icon>;
 };
+
+WindowsOutlined.inheritAttrs = false;
+export default WindowsOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import MailTwoToneSvg from '@ant-design/icons-svg/lib/asn/MailTwoTone';
 
-export default {
-  name: 'IconMailTwoTone',
-  displayName: 'MailTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: MailTwoToneSvg } },
-      children,
-    ),
+const MailTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={MailTwoToneSvg}></Icon>;
 };
+
+MailTwoTone.inheritAttrs = false;
+export default MailTwoTone;

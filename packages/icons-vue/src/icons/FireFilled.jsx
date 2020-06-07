@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FireFilledSvg from '@ant-design/icons-svg/lib/asn/FireFilled';
 
-export default {
-  name: 'IconFireFilled',
-  displayName: 'FireFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FireFilledSvg } },
-      children,
-    ),
+const FireFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FireFilledSvg}></Icon>;
 };
+
+FireFilled.inheritAttrs = false;
+export default FireFilled;

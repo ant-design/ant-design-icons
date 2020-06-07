@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FieldNumberOutlinedSvg from '@ant-design/icons-svg/lib/asn/FieldNumberOutlined';
 
-export default {
-  name: 'IconFieldNumberOutlined',
-  displayName: 'FieldNumberOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FieldNumberOutlinedSvg } },
-      children,
-    ),
+const FieldNumberOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FieldNumberOutlinedSvg}></Icon>;
 };
+
+FieldNumberOutlined.inheritAttrs = false;
+export default FieldNumberOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ExclamationOutlinedSvg from '@ant-design/icons-svg/lib/asn/ExclamationOutlined';
 
-export default {
-  name: 'IconExclamationOutlined',
-  displayName: 'ExclamationOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ExclamationOutlinedSvg } },
-      children,
-    ),
+const ExclamationOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ExclamationOutlinedSvg}></Icon>;
 };
+
+ExclamationOutlined.inheritAttrs = false;
+export default ExclamationOutlined;

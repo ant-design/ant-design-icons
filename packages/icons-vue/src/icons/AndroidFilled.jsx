@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import AndroidFilledSvg from '@ant-design/icons-svg/lib/asn/AndroidFilled';
 
-export default {
-  name: 'IconAndroidFilled',
-  displayName: 'AndroidFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: AndroidFilledSvg } },
-      children,
-    ),
+const AndroidFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={AndroidFilledSvg}></Icon>;
 };
+
+AndroidFilled.inheritAttrs = false;
+export default AndroidFilled;

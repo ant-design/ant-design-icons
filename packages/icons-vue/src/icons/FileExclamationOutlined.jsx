@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FileExclamationOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileExclamationOutlined';
 
-export default {
-  name: 'IconFileExclamationOutlined',
-  displayName: 'FileExclamationOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FileExclamationOutlinedSvg } },
-      children,
-    ),
+const FileExclamationOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FileExclamationOutlinedSvg}></Icon>;
 };
+
+FileExclamationOutlined.inheritAttrs = false;
+export default FileExclamationOutlined;

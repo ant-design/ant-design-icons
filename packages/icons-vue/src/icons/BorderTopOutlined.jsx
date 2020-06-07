@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BorderTopOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderTopOutlined';
 
-export default {
-  name: 'IconBorderTopOutlined',
-  displayName: 'BorderTopOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BorderTopOutlinedSvg } },
-      children,
-    ),
+const BorderTopOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BorderTopOutlinedSvg}></Icon>;
 };
+
+BorderTopOutlined.inheritAttrs = false;
+export default BorderTopOutlined;

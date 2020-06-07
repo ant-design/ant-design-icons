@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CaretDownOutlinedSvg from '@ant-design/icons-svg/lib/asn/CaretDownOutlined';
 
-export default {
-  name: 'IconCaretDownOutlined',
-  displayName: 'CaretDownOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CaretDownOutlinedSvg } },
-      children,
-    ),
+const CaretDownOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CaretDownOutlinedSvg}></Icon>;
 };
+
+CaretDownOutlined.inheritAttrs = false;
+export default CaretDownOutlined;

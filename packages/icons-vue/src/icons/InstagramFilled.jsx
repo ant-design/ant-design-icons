@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import InstagramFilledSvg from '@ant-design/icons-svg/lib/asn/InstagramFilled';
 
-export default {
-  name: 'IconInstagramFilled',
-  displayName: 'InstagramFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: InstagramFilledSvg } },
-      children,
-    ),
+const InstagramFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={InstagramFilledSvg}></Icon>;
 };
+
+InstagramFilled.inheritAttrs = false;
+export default InstagramFilled;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DollarCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/DollarCircleOutlined';
 
-export default {
-  name: 'IconDollarCircleOutlined',
-  displayName: 'DollarCircleOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DollarCircleOutlinedSvg } },
-      children,
-    ),
+const DollarCircleOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DollarCircleOutlinedSvg}></Icon>;
 };
+
+DollarCircleOutlined.inheritAttrs = false;
+export default DollarCircleOutlined;

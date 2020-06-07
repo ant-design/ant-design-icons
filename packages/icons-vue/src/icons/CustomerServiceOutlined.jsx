@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CustomerServiceOutlinedSvg from '@ant-design/icons-svg/lib/asn/CustomerServiceOutlined';
 
-export default {
-  name: 'IconCustomerServiceOutlined',
-  displayName: 'CustomerServiceOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CustomerServiceOutlinedSvg } },
-      children,
-    ),
+const CustomerServiceOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CustomerServiceOutlinedSvg}></Icon>;
 };
+
+CustomerServiceOutlined.inheritAttrs = false;
+export default CustomerServiceOutlined;

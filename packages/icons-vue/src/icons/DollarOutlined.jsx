@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DollarOutlinedSvg from '@ant-design/icons-svg/lib/asn/DollarOutlined';
 
-export default {
-  name: 'IconDollarOutlined',
-  displayName: 'DollarOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DollarOutlinedSvg } },
-      children,
-    ),
+const DollarOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DollarOutlinedSvg}></Icon>;
 };
+
+DollarOutlined.inheritAttrs = false;
+export default DollarOutlined;

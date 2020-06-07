@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PlayCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PlayCircleFilled';
 
-export default {
-  name: 'IconPlayCircleFilled',
-  displayName: 'PlayCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PlayCircleFilledSvg } },
-      children,
-    ),
+const PlayCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PlayCircleFilledSvg}></Icon>;
 };
+
+PlayCircleFilled.inheritAttrs = false;
+export default PlayCircleFilled;

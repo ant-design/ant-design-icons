@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ExperimentOutlinedSvg from '@ant-design/icons-svg/lib/asn/ExperimentOutlined';
 
-export default {
-  name: 'IconExperimentOutlined',
-  displayName: 'ExperimentOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ExperimentOutlinedSvg } },
-      children,
-    ),
+const ExperimentOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ExperimentOutlinedSvg}></Icon>;
 };
+
+ExperimentOutlined.inheritAttrs = false;
+export default ExperimentOutlined;

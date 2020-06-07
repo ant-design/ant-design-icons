@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DribbbleSquareFilledSvg from '@ant-design/icons-svg/lib/asn/DribbbleSquareFilled';
 
-export default {
-  name: 'IconDribbbleSquareFilled',
-  displayName: 'DribbbleSquareFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DribbbleSquareFilledSvg } },
-      children,
-    ),
+const DribbbleSquareFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DribbbleSquareFilledSvg}></Icon>;
 };
+
+DribbbleSquareFilled.inheritAttrs = false;
+export default DribbbleSquareFilled;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ProfileOutlinedSvg from '@ant-design/icons-svg/lib/asn/ProfileOutlined';
 
-export default {
-  name: 'IconProfileOutlined',
-  displayName: 'ProfileOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ProfileOutlinedSvg } },
-      children,
-    ),
+const ProfileOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ProfileOutlinedSvg}></Icon>;
 };
+
+ProfileOutlined.inheritAttrs = false;
+export default ProfileOutlined;

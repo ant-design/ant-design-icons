@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FolderAddTwoToneSvg from '@ant-design/icons-svg/lib/asn/FolderAddTwoTone';
 
-export default {
-  name: 'IconFolderAddTwoTone',
-  displayName: 'FolderAddTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FolderAddTwoToneSvg } },
-      children,
-    ),
+const FolderAddTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FolderAddTwoToneSvg}></Icon>;
 };
+
+FolderAddTwoTone.inheritAttrs = false;
+export default FolderAddTwoTone;

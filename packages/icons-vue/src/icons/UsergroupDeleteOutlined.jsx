@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import UsergroupDeleteOutlinedSvg from '@ant-design/icons-svg/lib/asn/UsergroupDeleteOutlined';
 
-export default {
-  name: 'IconUsergroupDeleteOutlined',
-  displayName: 'UsergroupDeleteOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: UsergroupDeleteOutlinedSvg } },
-      children,
-    ),
+const UsergroupDeleteOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={UsergroupDeleteOutlinedSvg}></Icon>;
 };
+
+UsergroupDeleteOutlined.inheritAttrs = false;
+export default UsergroupDeleteOutlined;

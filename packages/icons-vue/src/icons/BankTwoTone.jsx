@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BankTwoToneSvg from '@ant-design/icons-svg/lib/asn/BankTwoTone';
 
-export default {
-  name: 'IconBankTwoTone',
-  displayName: 'BankTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BankTwoToneSvg } },
-      children,
-    ),
+const BankTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BankTwoToneSvg}></Icon>;
 };
+
+BankTwoTone.inheritAttrs = false;
+export default BankTwoTone;

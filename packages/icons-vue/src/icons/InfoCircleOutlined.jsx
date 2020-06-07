@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import InfoCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/InfoCircleOutlined';
 
-export default {
-  name: 'IconInfoCircleOutlined',
-  displayName: 'InfoCircleOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: InfoCircleOutlinedSvg } },
-      children,
-    ),
+const InfoCircleOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={InfoCircleOutlinedSvg}></Icon>;
 };
+
+InfoCircleOutlined.inheritAttrs = false;
+export default InfoCircleOutlined;

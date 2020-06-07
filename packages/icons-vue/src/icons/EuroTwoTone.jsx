@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import EuroTwoToneSvg from '@ant-design/icons-svg/lib/asn/EuroTwoTone';
 
-export default {
-  name: 'IconEuroTwoTone',
-  displayName: 'EuroTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: EuroTwoToneSvg } },
-      children,
-    ),
+const EuroTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={EuroTwoToneSvg}></Icon>;
 };
+
+EuroTwoTone.inheritAttrs = false;
+export default EuroTwoTone;

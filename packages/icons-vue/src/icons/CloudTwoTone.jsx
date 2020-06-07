@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CloudTwoToneSvg from '@ant-design/icons-svg/lib/asn/CloudTwoTone';
 
-export default {
-  name: 'IconCloudTwoTone',
-  displayName: 'CloudTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CloudTwoToneSvg } },
-      children,
-    ),
+const CloudTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CloudTwoToneSvg}></Icon>;
 };
+
+CloudTwoTone.inheritAttrs = false;
+export default CloudTwoTone;

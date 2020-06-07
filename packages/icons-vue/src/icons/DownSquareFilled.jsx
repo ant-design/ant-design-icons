@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DownSquareFilledSvg from '@ant-design/icons-svg/lib/asn/DownSquareFilled';
 
-export default {
-  name: 'IconDownSquareFilled',
-  displayName: 'DownSquareFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DownSquareFilledSvg } },
-      children,
-    ),
+const DownSquareFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DownSquareFilledSvg}></Icon>;
 };
+
+DownSquareFilled.inheritAttrs = false;
+export default DownSquareFilled;

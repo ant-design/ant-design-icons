@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FontSizeOutlinedSvg from '@ant-design/icons-svg/lib/asn/FontSizeOutlined';
 
-export default {
-  name: 'IconFontSizeOutlined',
-  displayName: 'FontSizeOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FontSizeOutlinedSvg } },
-      children,
-    ),
+const FontSizeOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FontSizeOutlinedSvg}></Icon>;
 };
+
+FontSizeOutlined.inheritAttrs = false;
+export default FontSizeOutlined;

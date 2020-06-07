@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import RotateLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/RotateLeftOutlined';
 
-export default {
-  name: 'IconRotateLeftOutlined',
-  displayName: 'RotateLeftOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: RotateLeftOutlinedSvg } },
-      children,
-    ),
+const RotateLeftOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={RotateLeftOutlinedSvg}></Icon>;
 };
+
+RotateLeftOutlined.inheritAttrs = false;
+export default RotateLeftOutlined;

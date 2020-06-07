@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import QrcodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/QrcodeOutlined';
 
-export default {
-  name: 'IconQrcodeOutlined',
-  displayName: 'QrcodeOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: QrcodeOutlinedSvg } },
-      children,
-    ),
+const QrcodeOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={QrcodeOutlinedSvg}></Icon>;
 };
+
+QrcodeOutlined.inheritAttrs = false;
+export default QrcodeOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CreditCardFilledSvg from '@ant-design/icons-svg/lib/asn/CreditCardFilled';
 
-export default {
-  name: 'IconCreditCardFilled',
-  displayName: 'CreditCardFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CreditCardFilledSvg } },
-      children,
-    ),
+const CreditCardFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CreditCardFilledSvg}></Icon>;
 };
+
+CreditCardFilled.inheritAttrs = false;
+export default CreditCardFilled;

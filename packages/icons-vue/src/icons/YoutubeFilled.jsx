@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import YoutubeFilledSvg from '@ant-design/icons-svg/lib/asn/YoutubeFilled';
 
-export default {
-  name: 'IconYoutubeFilled',
-  displayName: 'YoutubeFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: YoutubeFilledSvg } },
-      children,
-    ),
+const YoutubeFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={YoutubeFilledSvg}></Icon>;
 };
+
+YoutubeFilled.inheritAttrs = false;
+export default YoutubeFilled;

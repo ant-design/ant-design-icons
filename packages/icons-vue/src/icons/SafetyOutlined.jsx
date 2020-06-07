@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SafetyOutlinedSvg from '@ant-design/icons-svg/lib/asn/SafetyOutlined';
 
-export default {
-  name: 'IconSafetyOutlined',
-  displayName: 'SafetyOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SafetyOutlinedSvg } },
-      children,
-    ),
+const SafetyOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SafetyOutlinedSvg}></Icon>;
 };
+
+SafetyOutlined.inheritAttrs = false;
+export default SafetyOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import StopTwoToneSvg from '@ant-design/icons-svg/lib/asn/StopTwoTone';
 
-export default {
-  name: 'IconStopTwoTone',
-  displayName: 'StopTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: StopTwoToneSvg } },
-      children,
-    ),
+const StopTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={StopTwoToneSvg}></Icon>;
 };
+
+StopTwoTone.inheritAttrs = false;
+export default StopTwoTone;

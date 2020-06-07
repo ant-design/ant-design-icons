@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import WindowsFilledSvg from '@ant-design/icons-svg/lib/asn/WindowsFilled';
 
-export default {
-  name: 'IconWindowsFilled',
-  displayName: 'WindowsFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: WindowsFilledSvg } },
-      children,
-    ),
+const WindowsFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={WindowsFilledSvg}></Icon>;
 };
+
+WindowsFilled.inheritAttrs = false;
+export default WindowsFilled;

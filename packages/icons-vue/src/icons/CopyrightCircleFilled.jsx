@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CopyrightCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CopyrightCircleFilled';
 
-export default {
-  name: 'IconCopyrightCircleFilled',
-  displayName: 'CopyrightCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CopyrightCircleFilledSvg } },
-      children,
-    ),
+const CopyrightCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CopyrightCircleFilledSvg}></Icon>;
 };
+
+CopyrightCircleFilled.inheritAttrs = false;
+export default CopyrightCircleFilled;

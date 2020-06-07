@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import RiseOutlinedSvg from '@ant-design/icons-svg/lib/asn/RiseOutlined';
 
-export default {
-  name: 'IconRiseOutlined',
-  displayName: 'RiseOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: RiseOutlinedSvg } },
-      children,
-    ),
+const RiseOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={RiseOutlinedSvg}></Icon>;
 };
+
+RiseOutlined.inheritAttrs = false;
+export default RiseOutlined;

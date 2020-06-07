@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import VideoCameraFilledSvg from '@ant-design/icons-svg/lib/asn/VideoCameraFilled';
 
-export default {
-  name: 'IconVideoCameraFilled',
-  displayName: 'VideoCameraFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: VideoCameraFilledSvg } },
-      children,
-    ),
+const VideoCameraFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={VideoCameraFilledSvg}></Icon>;
 };
+
+VideoCameraFilled.inheritAttrs = false;
+export default VideoCameraFilled;

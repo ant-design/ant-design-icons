@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import QuestionCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/QuestionCircleTwoTone';
 
-export default {
-  name: 'IconQuestionCircleTwoTone',
-  displayName: 'QuestionCircleTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: QuestionCircleTwoToneSvg } },
-      children,
-    ),
+const QuestionCircleTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={QuestionCircleTwoToneSvg}></Icon>;
 };
+
+QuestionCircleTwoTone.inheritAttrs = false;
+export default QuestionCircleTwoTone;

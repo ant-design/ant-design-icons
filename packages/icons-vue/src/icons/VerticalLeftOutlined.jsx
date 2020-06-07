@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import VerticalLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/VerticalLeftOutlined';
 
-export default {
-  name: 'IconVerticalLeftOutlined',
-  displayName: 'VerticalLeftOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: VerticalLeftOutlinedSvg } },
-      children,
-    ),
+const VerticalLeftOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={VerticalLeftOutlinedSvg}></Icon>;
 };
+
+VerticalLeftOutlined.inheritAttrs = false;
+export default VerticalLeftOutlined;

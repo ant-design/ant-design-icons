@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DiffTwoToneSvg from '@ant-design/icons-svg/lib/asn/DiffTwoTone';
 
-export default {
-  name: 'IconDiffTwoTone',
-  displayName: 'DiffTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DiffTwoToneSvg } },
-      children,
-    ),
+const DiffTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DiffTwoToneSvg}></Icon>;
 };
+
+DiffTwoTone.inheritAttrs = false;
+export default DiffTwoTone;

@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import { setTwoToneColor } from '../src';
 import * as AntdIcons from '../src/icons';
 import './index.less';
@@ -47,9 +47,4 @@ const AllIconDemo = {
   },
 };
 
-new Vue({
-  el: '#__vue-content>div',
-  render() {
-    return <AllIconDemo />;
-  },
-});
+createApp(AllIconDemo).mount('#__vue-content>div');

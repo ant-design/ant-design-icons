@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import RestOutlinedSvg from '@ant-design/icons-svg/lib/asn/RestOutlined';
 
-export default {
-  name: 'IconRestOutlined',
-  displayName: 'RestOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: RestOutlinedSvg } },
-      children,
-    ),
+const RestOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={RestOutlinedSvg}></Icon>;
 };
+
+RestOutlined.inheritAttrs = false;
+export default RestOutlined;

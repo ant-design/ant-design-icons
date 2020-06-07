@@ -1,5 +1,5 @@
-import Vue from "vue";
-import * as AntdIcons from "../src/icons";
+import { createApp } from 'vue';
+import * as AntdIcons from '../src/icons';
 
 const SimpleDemo = {
   mounted() {
@@ -7,12 +7,7 @@ const SimpleDemo = {
   },
   render() {
     return null;
-  }
+  },
 };
 
-new Vue({
-  el: "#__vue-content>div",
-  render() {
-    return <SimpleDemo />;
-  }
-});
+createApp(SimpleDemo).mount('#__vue-content>div');

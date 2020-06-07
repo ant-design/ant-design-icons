@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PieChartTwoToneSvg from '@ant-design/icons-svg/lib/asn/PieChartTwoTone';
 
-export default {
-  name: 'IconPieChartTwoTone',
-  displayName: 'PieChartTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PieChartTwoToneSvg } },
-      children,
-    ),
+const PieChartTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PieChartTwoToneSvg}></Icon>;
 };
+
+PieChartTwoTone.inheritAttrs = false;
+export default PieChartTwoTone;

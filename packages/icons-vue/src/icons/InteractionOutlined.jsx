@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import InteractionOutlinedSvg from '@ant-design/icons-svg/lib/asn/InteractionOutlined';
 
-export default {
-  name: 'IconInteractionOutlined',
-  displayName: 'InteractionOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: InteractionOutlinedSvg } },
-      children,
-    ),
+const InteractionOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={InteractionOutlinedSvg}></Icon>;
 };
+
+InteractionOutlined.inheritAttrs = false;
+export default InteractionOutlined;

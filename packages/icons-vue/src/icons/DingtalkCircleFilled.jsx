@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DingtalkCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DingtalkCircleFilled';
 
-export default {
-  name: 'IconDingtalkCircleFilled',
-  displayName: 'DingtalkCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DingtalkCircleFilledSvg } },
-      children,
-    ),
+const DingtalkCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DingtalkCircleFilledSvg}></Icon>;
 };
+
+DingtalkCircleFilled.inheritAttrs = false;
+export default DingtalkCircleFilled;

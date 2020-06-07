@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FileGifOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileGifOutlined';
 
-export default {
-  name: 'IconFileGifOutlined',
-  displayName: 'FileGifOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FileGifOutlinedSvg } },
-      children,
-    ),
+const FileGifOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FileGifOutlinedSvg}></Icon>;
 };
+
+FileGifOutlined.inheritAttrs = false;
+export default FileGifOutlined;

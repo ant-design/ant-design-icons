@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import YuqueFilledSvg from '@ant-design/icons-svg/lib/asn/YuqueFilled';
 
-export default {
-  name: 'IconYuqueFilled',
-  displayName: 'YuqueFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: YuqueFilledSvg } },
-      children,
-    ),
+const YuqueFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={YuqueFilledSvg}></Icon>;
 };
+
+YuqueFilled.inheritAttrs = false;
+export default YuqueFilled;

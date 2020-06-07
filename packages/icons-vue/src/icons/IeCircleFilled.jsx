@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import IeCircleFilledSvg from '@ant-design/icons-svg/lib/asn/IeCircleFilled';
 
-export default {
-  name: 'IconIeCircleFilled',
-  displayName: 'IeCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: IeCircleFilledSvg } },
-      children,
-    ),
+const IeCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={IeCircleFilledSvg}></Icon>;
 };
+
+IeCircleFilled.inheritAttrs = false;
+export default IeCircleFilled;

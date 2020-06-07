@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import Loading3QuartersOutlinedSvg from '@ant-design/icons-svg/lib/asn/Loading3QuartersOutlined';
 
-export default {
-  name: 'IconLoading3QuartersOutlined',
-  displayName: 'Loading3QuartersOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: Loading3QuartersOutlinedSvg } },
-      children,
-    ),
+const Loading3QuartersOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={Loading3QuartersOutlinedSvg}></Icon>;
 };
+
+Loading3QuartersOutlined.inheritAttrs = false;
+export default Loading3QuartersOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BackwardOutlinedSvg from '@ant-design/icons-svg/lib/asn/BackwardOutlined';
 
-export default {
-  name: 'IconBackwardOutlined',
-  displayName: 'BackwardOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BackwardOutlinedSvg } },
-      children,
-    ),
+const BackwardOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BackwardOutlinedSvg}></Icon>;
 };
+
+BackwardOutlined.inheritAttrs = false;
+export default BackwardOutlined;

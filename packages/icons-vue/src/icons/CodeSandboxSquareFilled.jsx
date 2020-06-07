@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CodeSandboxSquareFilledSvg from '@ant-design/icons-svg/lib/asn/CodeSandboxSquareFilled';
 
-export default {
-  name: 'IconCodeSandboxSquareFilled',
-  displayName: 'CodeSandboxSquareFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CodeSandboxSquareFilledSvg } },
-      children,
-    ),
+const CodeSandboxSquareFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CodeSandboxSquareFilledSvg}></Icon>;
 };
+
+CodeSandboxSquareFilled.inheritAttrs = false;
+export default CodeSandboxSquareFilled;

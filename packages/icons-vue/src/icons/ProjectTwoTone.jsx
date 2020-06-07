@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ProjectTwoToneSvg from '@ant-design/icons-svg/lib/asn/ProjectTwoTone';
 
-export default {
-  name: 'IconProjectTwoTone',
-  displayName: 'ProjectTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ProjectTwoToneSvg } },
-      children,
-    ),
+const ProjectTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ProjectTwoToneSvg}></Icon>;
 };
+
+ProjectTwoTone.inheritAttrs = false;
+export default ProjectTwoTone;

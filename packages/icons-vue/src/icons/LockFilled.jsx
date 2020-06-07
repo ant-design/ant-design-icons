@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import LockFilledSvg from '@ant-design/icons-svg/lib/asn/LockFilled';
 
-export default {
-  name: 'IconLockFilled',
-  displayName: 'LockFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: LockFilledSvg } },
-      children,
-    ),
+const LockFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={LockFilledSvg}></Icon>;
 };
+
+LockFilled.inheritAttrs = false;
+export default LockFilled;

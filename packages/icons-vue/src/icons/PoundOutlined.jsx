@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PoundOutlinedSvg from '@ant-design/icons-svg/lib/asn/PoundOutlined';
 
-export default {
-  name: 'IconPoundOutlined',
-  displayName: 'PoundOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PoundOutlinedSvg } },
-      children,
-    ),
+const PoundOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PoundOutlinedSvg}></Icon>;
 };
+
+PoundOutlined.inheritAttrs = false;
+export default PoundOutlined;

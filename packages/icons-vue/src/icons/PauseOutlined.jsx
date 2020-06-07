@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PauseOutlinedSvg from '@ant-design/icons-svg/lib/asn/PauseOutlined';
 
-export default {
-  name: 'IconPauseOutlined',
-  displayName: 'PauseOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PauseOutlinedSvg } },
-      children,
-    ),
+const PauseOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PauseOutlinedSvg}></Icon>;
 };
+
+PauseOutlined.inheritAttrs = false;
+export default PauseOutlined;

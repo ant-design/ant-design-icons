@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import HomeFilledSvg from '@ant-design/icons-svg/lib/asn/HomeFilled';
 
-export default {
-  name: 'IconHomeFilled',
-  displayName: 'HomeFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: HomeFilledSvg } },
-      children,
-    ),
+const HomeFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={HomeFilledSvg}></Icon>;
 };
+
+HomeFilled.inheritAttrs = false;
+export default HomeFilled;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import LockTwoToneSvg from '@ant-design/icons-svg/lib/asn/LockTwoTone';
 
-export default {
-  name: 'IconLockTwoTone',
-  displayName: 'LockTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: LockTwoToneSvg } },
-      children,
-    ),
+const LockTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={LockTwoToneSvg}></Icon>;
 };
+
+LockTwoTone.inheritAttrs = false;
+export default LockTwoTone;

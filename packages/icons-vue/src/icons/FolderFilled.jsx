@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FolderFilledSvg from '@ant-design/icons-svg/lib/asn/FolderFilled';
 
-export default {
-  name: 'IconFolderFilled',
-  displayName: 'FolderFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FolderFilledSvg } },
-      children,
-    ),
+const FolderFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FolderFilledSvg}></Icon>;
 };
+
+FolderFilled.inheritAttrs = false;
+export default FolderFilled;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FrownFilledSvg from '@ant-design/icons-svg/lib/asn/FrownFilled';
 
-export default {
-  name: 'IconFrownFilled',
-  displayName: 'FrownFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FrownFilledSvg } },
-      children,
-    ),
+const FrownFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FrownFilledSvg}></Icon>;
 };
+
+FrownFilled.inheritAttrs = false;
+export default FrownFilled;

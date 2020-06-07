@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import TrophyFilledSvg from '@ant-design/icons-svg/lib/asn/TrophyFilled';
 
-export default {
-  name: 'IconTrophyFilled',
-  displayName: 'TrophyFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: TrophyFilledSvg } },
-      children,
-    ),
+const TrophyFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={TrophyFilledSvg}></Icon>;
 };
+
+TrophyFilled.inheritAttrs = false;
+export default TrophyFilled;

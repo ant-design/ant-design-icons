@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import QqSquareFilledSvg from '@ant-design/icons-svg/lib/asn/QqSquareFilled';
 
-export default {
-  name: 'IconQqSquareFilled',
-  displayName: 'QqSquareFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: QqSquareFilledSvg } },
-      children,
-    ),
+const QqSquareFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={QqSquareFilledSvg}></Icon>;
 };
+
+QqSquareFilled.inheritAttrs = false;
+export default QqSquareFilled;

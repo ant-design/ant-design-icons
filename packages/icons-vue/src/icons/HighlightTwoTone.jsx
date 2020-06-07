@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import HighlightTwoToneSvg from '@ant-design/icons-svg/lib/asn/HighlightTwoTone';
 
-export default {
-  name: 'IconHighlightTwoTone',
-  displayName: 'HighlightTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: HighlightTwoToneSvg } },
-      children,
-    ),
+const HighlightTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={HighlightTwoToneSvg}></Icon>;
 };
+
+HighlightTwoTone.inheritAttrs = false;
+export default HighlightTwoTone;

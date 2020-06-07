@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import TabletOutlinedSvg from '@ant-design/icons-svg/lib/asn/TabletOutlined';
 
-export default {
-  name: 'IconTabletOutlined',
-  displayName: 'TabletOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: TabletOutlinedSvg } },
-      children,
-    ),
+const TabletOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={TabletOutlinedSvg}></Icon>;
 };
+
+TabletOutlined.inheritAttrs = false;
+export default TabletOutlined;

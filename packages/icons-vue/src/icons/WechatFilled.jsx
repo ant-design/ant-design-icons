@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import WechatFilledSvg from '@ant-design/icons-svg/lib/asn/WechatFilled';
 
-export default {
-  name: 'IconWechatFilled',
-  displayName: 'WechatFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: WechatFilledSvg } },
-      children,
-    ),
+const WechatFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={WechatFilledSvg}></Icon>;
 };
+
+WechatFilled.inheritAttrs = false;
+export default WechatFilled;

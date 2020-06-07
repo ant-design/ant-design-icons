@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ForwardOutlinedSvg from '@ant-design/icons-svg/lib/asn/ForwardOutlined';
 
-export default {
-  name: 'IconForwardOutlined',
-  displayName: 'ForwardOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ForwardOutlinedSvg } },
-      children,
-    ),
+const ForwardOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ForwardOutlinedSvg}></Icon>;
 };
+
+ForwardOutlined.inheritAttrs = false;
+export default ForwardOutlined;

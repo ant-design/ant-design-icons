@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CloseSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/CloseSquareTwoTone';
 
-export default {
-  name: 'IconCloseSquareTwoTone',
-  displayName: 'CloseSquareTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CloseSquareTwoToneSvg } },
-      children,
-    ),
+const CloseSquareTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CloseSquareTwoToneSvg}></Icon>;
 };
+
+CloseSquareTwoTone.inheritAttrs = false;
+export default CloseSquareTwoTone;

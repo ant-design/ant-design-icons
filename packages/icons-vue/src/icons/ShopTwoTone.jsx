@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ShopTwoToneSvg from '@ant-design/icons-svg/lib/asn/ShopTwoTone';
 
-export default {
-  name: 'IconShopTwoTone',
-  displayName: 'ShopTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ShopTwoToneSvg } },
-      children,
-    ),
+const ShopTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ShopTwoToneSvg}></Icon>;
 };
+
+ShopTwoTone.inheritAttrs = false;
+export default ShopTwoTone;

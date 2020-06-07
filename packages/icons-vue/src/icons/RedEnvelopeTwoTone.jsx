@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import RedEnvelopeTwoToneSvg from '@ant-design/icons-svg/lib/asn/RedEnvelopeTwoTone';
 
-export default {
-  name: 'IconRedEnvelopeTwoTone',
-  displayName: 'RedEnvelopeTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: RedEnvelopeTwoToneSvg } },
-      children,
-    ),
+const RedEnvelopeTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={RedEnvelopeTwoToneSvg}></Icon>;
 };
+
+RedEnvelopeTwoTone.inheritAttrs = false;
+export default RedEnvelopeTwoTone;

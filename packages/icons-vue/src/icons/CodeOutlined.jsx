@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/CodeOutlined';
 
-export default {
-  name: 'IconCodeOutlined',
-  displayName: 'CodeOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CodeOutlinedSvg } },
-      children,
-    ),
+const CodeOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CodeOutlinedSvg}></Icon>;
 };
+
+CodeOutlined.inheritAttrs = false;
+export default CodeOutlined;

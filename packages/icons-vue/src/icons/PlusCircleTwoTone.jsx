@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PlusCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/PlusCircleTwoTone';
 
-export default {
-  name: 'IconPlusCircleTwoTone',
-  displayName: 'PlusCircleTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PlusCircleTwoToneSvg } },
-      children,
-    ),
+const PlusCircleTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PlusCircleTwoToneSvg}></Icon>;
 };
+
+PlusCircleTwoTone.inheritAttrs = false;
+export default PlusCircleTwoTone;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import TeamOutlinedSvg from '@ant-design/icons-svg/lib/asn/TeamOutlined';
 
-export default {
-  name: 'IconTeamOutlined',
-  displayName: 'TeamOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: TeamOutlinedSvg } },
-      children,
-    ),
+const TeamOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={TeamOutlinedSvg}></Icon>;
 };
+
+TeamOutlined.inheritAttrs = false;
+export default TeamOutlined;

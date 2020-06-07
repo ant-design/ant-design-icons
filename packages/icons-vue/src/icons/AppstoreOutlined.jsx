@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import AppstoreOutlinedSvg from '@ant-design/icons-svg/lib/asn/AppstoreOutlined';
 
-export default {
-  name: 'IconAppstoreOutlined',
-  displayName: 'AppstoreOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: AppstoreOutlinedSvg } },
-      children,
-    ),
+const AppstoreOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={AppstoreOutlinedSvg}></Icon>;
 };
+
+AppstoreOutlined.inheritAttrs = false;
+export default AppstoreOutlined;

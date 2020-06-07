@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import StarOutlinedSvg from '@ant-design/icons-svg/lib/asn/StarOutlined';
 
-export default {
-  name: 'IconStarOutlined',
-  displayName: 'StarOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: StarOutlinedSvg } },
-      children,
-    ),
+const StarOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={StarOutlinedSvg}></Icon>;
 };
+
+StarOutlined.inheritAttrs = false;
+export default StarOutlined;

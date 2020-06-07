@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import EuroCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/EuroCircleTwoTone';
 
-export default {
-  name: 'IconEuroCircleTwoTone',
-  displayName: 'EuroCircleTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: EuroCircleTwoToneSvg } },
-      children,
-    ),
+const EuroCircleTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={EuroCircleTwoToneSvg}></Icon>;
 };
+
+EuroCircleTwoTone.inheritAttrs = false;
+export default EuroCircleTwoTone;

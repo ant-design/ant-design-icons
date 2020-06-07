@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DashboardFilledSvg from '@ant-design/icons-svg/lib/asn/DashboardFilled';
 
-export default {
-  name: 'IconDashboardFilled',
-  displayName: 'DashboardFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DashboardFilledSvg } },
-      children,
-    ),
+const DashboardFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DashboardFilledSvg}></Icon>;
 };
+
+DashboardFilled.inheritAttrs = false;
+export default DashboardFilled;

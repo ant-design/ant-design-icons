@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BookTwoToneSvg from '@ant-design/icons-svg/lib/asn/BookTwoTone';
 
-export default {
-  name: 'IconBookTwoTone',
-  displayName: 'BookTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BookTwoToneSvg } },
-      children,
-    ),
+const BookTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BookTwoToneSvg}></Icon>;
 };
+
+BookTwoTone.inheritAttrs = false;
+export default BookTwoTone;

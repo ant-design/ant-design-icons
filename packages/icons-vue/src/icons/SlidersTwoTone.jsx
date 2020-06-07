@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SlidersTwoToneSvg from '@ant-design/icons-svg/lib/asn/SlidersTwoTone';
 
-export default {
-  name: 'IconSlidersTwoTone',
-  displayName: 'SlidersTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SlidersTwoToneSvg } },
-      children,
-    ),
+const SlidersTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SlidersTwoToneSvg}></Icon>;
 };
+
+SlidersTwoTone.inheritAttrs = false;
+export default SlidersTwoTone;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import InsuranceTwoToneSvg from '@ant-design/icons-svg/lib/asn/InsuranceTwoTone';
 
-export default {
-  name: 'IconInsuranceTwoTone',
-  displayName: 'InsuranceTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: InsuranceTwoToneSvg } },
-      children,
-    ),
+const InsuranceTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={InsuranceTwoToneSvg}></Icon>;
 };
+
+InsuranceTwoTone.inheritAttrs = false;
+export default InsuranceTwoTone;

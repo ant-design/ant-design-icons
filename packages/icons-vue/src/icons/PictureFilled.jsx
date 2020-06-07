@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PictureFilledSvg from '@ant-design/icons-svg/lib/asn/PictureFilled';
 
-export default {
-  name: 'IconPictureFilled',
-  displayName: 'PictureFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PictureFilledSvg } },
-      children,
-    ),
+const PictureFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PictureFilledSvg}></Icon>;
 };
+
+PictureFilled.inheritAttrs = false;
+export default PictureFilled;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CopyTwoToneSvg from '@ant-design/icons-svg/lib/asn/CopyTwoTone';
 
-export default {
-  name: 'IconCopyTwoTone',
-  displayName: 'CopyTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CopyTwoToneSvg } },
-      children,
-    ),
+const CopyTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CopyTwoToneSvg}></Icon>;
 };
+
+CopyTwoTone.inheritAttrs = false;
+export default CopyTwoTone;

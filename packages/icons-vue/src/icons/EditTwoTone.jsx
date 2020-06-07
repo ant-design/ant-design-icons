@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import EditTwoToneSvg from '@ant-design/icons-svg/lib/asn/EditTwoTone';
 
-export default {
-  name: 'IconEditTwoTone',
-  displayName: 'EditTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: EditTwoToneSvg } },
-      children,
-    ),
+const EditTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={EditTwoToneSvg}></Icon>;
 };
+
+EditTwoTone.inheritAttrs = false;
+export default EditTwoTone;

@@ -1,12 +1,9 @@
 import Icon from './Icon';
-import { mergeProps } from '../utils';
 
 const customCache = new Set();
 
 function isValidCustomScriptUrl(scriptUrl) {
-  return typeof scriptUrl === 'string' &&
-    scriptUrl.length &&
-    !customCache.has(scriptUrl);
+  return typeof scriptUrl === 'string' && scriptUrl.length && !customCache.has(scriptUrl);
 }
 
 function createScriptUrlElements(scriptUrls, index = 0) {
@@ -50,35 +47,23 @@ export default function create(options = {}) {
     }
   }
 
-  const Iconfont = {
-    name: 'Iconfont',
-    functional: true,
-    props: {
-      type: String,
-    },
-    render(h, ctx) {
-      const { data: { attrs, ...restData } = {}, props = {}, listeners, children } = ctx;
-      const { type, ...restProps } = {
-        ...attrs,
-        ...props,
-      };
-
-      // children > type
-      let content = null;
-      if (props.type) {
-        content = <use {...{ attrs: { 'xlink:href': `#${type}` } }} />;
-      }
-      if (children) {
-        content = children;
-      }
-      const iconProps = mergeProps(extraCommonProps, {
-        ...restData,
-        attrs: restProps,
-        on: listeners,
-      });
-      return <Icon {...iconProps}>{content}</Icon>;
-    },
+  const Iconfont = (_, { attrs, slots }) => {
+    const { type, ...restProps } = attrs;
+    const children = slots.default && slots.default();
+    // children > type
+    let content = null;
+    if (type) {
+      content = <use {...{ 'xlink:href': `#${type}` }} />;
+    }
+    if (children && children.length) {
+      content = children;
+    }
+    const iconProps = {
+      ...extraCommonProps,
+      ...restProps,
+    };
+    return <Icon {...iconProps}>{content}</Icon>;
   };
-
+  Iconfont.inheritAttrs = false;
   return Iconfont;
 }

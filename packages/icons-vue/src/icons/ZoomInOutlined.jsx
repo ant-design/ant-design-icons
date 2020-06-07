@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ZoomInOutlinedSvg from '@ant-design/icons-svg/lib/asn/ZoomInOutlined';
 
-export default {
-  name: 'IconZoomInOutlined',
-  displayName: 'ZoomInOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ZoomInOutlinedSvg } },
-      children,
-    ),
+const ZoomInOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ZoomInOutlinedSvg}></Icon>;
 };
+
+ZoomInOutlined.inheritAttrs = false;
+export default ZoomInOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PlusSquareFilledSvg from '@ant-design/icons-svg/lib/asn/PlusSquareFilled';
 
-export default {
-  name: 'IconPlusSquareFilled',
-  displayName: 'PlusSquareFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PlusSquareFilledSvg } },
-      children,
-    ),
+const PlusSquareFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PlusSquareFilledSvg}></Icon>;
 };
+
+PlusSquareFilled.inheritAttrs = false;
+export default PlusSquareFilled;

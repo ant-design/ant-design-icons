@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SortAscendingOutlinedSvg from '@ant-design/icons-svg/lib/asn/SortAscendingOutlined';
 
-export default {
-  name: 'IconSortAscendingOutlined',
-  displayName: 'SortAscendingOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SortAscendingOutlinedSvg } },
-      children,
-    ),
+const SortAscendingOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SortAscendingOutlinedSvg}></Icon>;
 };
+
+SortAscendingOutlined.inheritAttrs = false;
+export default SortAscendingOutlined;

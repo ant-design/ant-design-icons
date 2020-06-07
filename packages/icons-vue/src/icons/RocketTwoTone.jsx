@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import RocketTwoToneSvg from '@ant-design/icons-svg/lib/asn/RocketTwoTone';
 
-export default {
-  name: 'IconRocketTwoTone',
-  displayName: 'RocketTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: RocketTwoToneSvg } },
-      children,
-    ),
+const RocketTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={RocketTwoToneSvg}></Icon>;
 };
+
+RocketTwoTone.inheritAttrs = false;
+export default RocketTwoTone;

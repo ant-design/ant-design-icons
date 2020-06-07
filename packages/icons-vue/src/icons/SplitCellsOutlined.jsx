@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SplitCellsOutlinedSvg from '@ant-design/icons-svg/lib/asn/SplitCellsOutlined';
 
-export default {
-  name: 'IconSplitCellsOutlined',
-  displayName: 'SplitCellsOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SplitCellsOutlinedSvg } },
-      children,
-    ),
+const SplitCellsOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SplitCellsOutlinedSvg}></Icon>;
 };
+
+SplitCellsOutlined.inheritAttrs = false;
+export default SplitCellsOutlined;

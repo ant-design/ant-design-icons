@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CalculatorTwoToneSvg from '@ant-design/icons-svg/lib/asn/CalculatorTwoTone';
 
-export default {
-  name: 'IconCalculatorTwoTone',
-  displayName: 'CalculatorTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CalculatorTwoToneSvg } },
-      children,
-    ),
+const CalculatorTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CalculatorTwoToneSvg}></Icon>;
 };
+
+CalculatorTwoTone.inheritAttrs = false;
+export default CalculatorTwoTone;

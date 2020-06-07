@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import InstagramOutlinedSvg from '@ant-design/icons-svg/lib/asn/InstagramOutlined';
 
-export default {
-  name: 'IconInstagramOutlined',
-  displayName: 'InstagramOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: InstagramOutlinedSvg } },
-      children,
-    ),
+const InstagramOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={InstagramOutlinedSvg}></Icon>;
 };
+
+InstagramOutlined.inheritAttrs = false;
+export default InstagramOutlined;

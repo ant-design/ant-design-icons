@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ContainerOutlinedSvg from '@ant-design/icons-svg/lib/asn/ContainerOutlined';
 
-export default {
-  name: 'IconContainerOutlined',
-  displayName: 'ContainerOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ContainerOutlinedSvg } },
-      children,
-    ),
+const ContainerOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ContainerOutlinedSvg}></Icon>;
 };
+
+ContainerOutlined.inheritAttrs = false;
+export default ContainerOutlined;

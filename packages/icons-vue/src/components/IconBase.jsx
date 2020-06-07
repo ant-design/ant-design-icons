@@ -18,61 +18,51 @@ function getTwoToneColors() {
   };
 }
 
-const IconBase = {
-  functional: true,
-  props: {
-    icon: Object,
-    primaryColor: String,
-    secondaryColor: String,
-    calculated: Boolean,
-  },
-  render(h, ctx) {
-    const { data: { attrs, ...restData } = {}, props = {}, listeners } = ctx;
-    const { icon, primaryColor, secondaryColor, ...restProps } = {
-      ...attrs,
-      ...props,
+const IconBase = (_, { attrs }) => {
+  // props: {
+  //   icon: Object,
+  //   primaryColor: String,
+  //   secondaryColor: String,
+  //   calculated: Boolean,
+  // },
+  const { icon, primaryColor, secondaryColor, ...restProps } = attrs;
+
+  let colors = twoToneColorPalette;
+  if (primaryColor) {
+    colors = {
+      primaryColor,
+      secondaryColor: secondaryColor || getSecondaryColor(primaryColor),
     };
+  }
 
-    let colors = twoToneColorPalette;
-    if (primaryColor) {
-      colors = {
-        primaryColor,
-        secondaryColor: secondaryColor || getSecondaryColor(primaryColor),
-      };
-    }
+  useInsertStyles();
 
-    useInsertStyles();
+  warning(isIconDefinition(icon), `icon should be icon definiton, but got ${icon}`);
 
-    warning(isIconDefinition(icon), `icon should be icon definiton, but got ${icon}`);
+  if (!isIconDefinition(icon)) {
+    return null;
+  }
 
-    if (!isIconDefinition(icon)) {
-      return null;
-    }
+  let target = icon;
+  if (target && typeof target.icon === 'function') {
+    target = {
+      ...target,
+      icon: target.icon(colors.primaryColor, colors.secondaryColor),
+    };
+  }
 
-    let target = icon;
-    if (target && typeof target.icon === 'function') {
-      target = {
-        ...target,
-        icon: target.icon(colors.primaryColor, colors.secondaryColor),
-      };
-    }
-
-    return generate(h, target.icon, `svg-${target.name}`, {
-      ...restData,
-      attrs: {
-        'data-icon': target.name,
-        width: '1em',
-        height: '1em',
-        fill: 'currentColor',
-        'aria-hidden': 'true',
-        ...restProps,
-      },
-      on: listeners,
-    });
-  },
+  return generate(target.icon, `svg-${target.name}`, {
+    ...restProps,
+    'data-icon': target.name,
+    width: '1em',
+    height: '1em',
+    fill: 'currentColor',
+    'aria-hidden': 'true',
+  });
+  // },
 };
 
-IconBase.name = 'IconVue';
+IconBase.inheritAttrs = false;
 IconBase.getTwoToneColors = getTwoToneColors;
 IconBase.setTwoToneColors = setTwoToneColors;
 

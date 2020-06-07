@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-vue",
-  "version": "4.0.6",
+  "version": "5.0.0-beta.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
@@ -15,10 +15,8 @@
   "scripts": {
     "clean": "./scripts/cleanup.sh",
     "start": "vc-tools run server",
-    "lint": "eslint -c ./.eslintrc --fix --ext .jsx,.js,.vue ./src",
+    "lint": "vc-tools run lint",
     "compile": "vc-tools run compile --babel-runtime",
-    "build": "vc-tools run build",
-    "dist": "vc-tools run dist",
     "test": "cross-env NODE_ENV=test jest --config .jest.js",
     "generate": "rimraf src/icons && node scripts/generate.js --target=icon",
     "postcompile": "npm run clean && node scripts/generate.js --target=entry",
@@ -29,26 +27,21 @@
     "vue-template-compiler": ">=2.5.0"
   },
   "devDependencies": {
+    "@ant-design-vue/babel-plugin-jsx": "^1.0.0-alpha.4",
+    "@babel/runtime": "^7.10.1",
     "@types/jest": "^24.0.17",
     "@types/node": "^13.9.3",
-    "@types/vue": "^2.0.0",
-    "@vue/server-test-utils": "1.0.0-beta.16",
-    "@vue/test-utils": "1.0.0-beta.16",
-    "babel-core": "^6.26.3",
-    "babel-helper-vue-jsx-merge-props": "^2.0.3",
-    "babel-plugin-transform-vue-jsx": "^3.7.0",
-    "babel-runtime": "^6.26.0",
+    "@vue/test-utils": "^2.0.0-alpha.6",
     "cross-env": "^5.2.0",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-vue": "^5.2.3",
+    "eslint-plugin-vue": "^7.0.0-alpha.0",
     "jest": "^25.4.0",
     "jest-serializer-vue": "^2.0.2",
     "prettier": "^1.18.2",
-    "vc-tools": "^1.0.3",
-    "vue": ">=2.5.0",
-    "vue-jest": "^3.0.5",
-    "vue-template-compiler": ">=2.5.0"
+    "vc-tools": "^2.0.0",
+    "vue": "^3.0.0-beta.14",
+    "vue-jest": "^3.0.5"
   },
   "dependencies": {
     "@ant-design/colors": "^3.1.0",

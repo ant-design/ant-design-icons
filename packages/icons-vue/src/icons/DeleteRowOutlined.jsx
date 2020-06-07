@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DeleteRowOutlinedSvg from '@ant-design/icons-svg/lib/asn/DeleteRowOutlined';
 
-export default {
-  name: 'IconDeleteRowOutlined',
-  displayName: 'DeleteRowOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DeleteRowOutlinedSvg } },
-      children,
-    ),
+const DeleteRowOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DeleteRowOutlinedSvg}></Icon>;
 };
+
+DeleteRowOutlined.inheritAttrs = false;
+export default DeleteRowOutlined;

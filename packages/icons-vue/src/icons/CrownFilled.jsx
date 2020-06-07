@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CrownFilledSvg from '@ant-design/icons-svg/lib/asn/CrownFilled';
 
-export default {
-  name: 'IconCrownFilled',
-  displayName: 'CrownFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CrownFilledSvg } },
-      children,
-    ),
+const CrownFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CrownFilledSvg}></Icon>;
 };
+
+CrownFilled.inheritAttrs = false;
+export default CrownFilled;

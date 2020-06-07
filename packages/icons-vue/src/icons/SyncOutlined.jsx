@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SyncOutlinedSvg from '@ant-design/icons-svg/lib/asn/SyncOutlined';
 
-export default {
-  name: 'IconSyncOutlined',
-  displayName: 'SyncOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SyncOutlinedSvg } },
-      children,
-    ),
+const SyncOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SyncOutlinedSvg}></Icon>;
 };
+
+SyncOutlined.inheritAttrs = false;
+export default SyncOutlined;

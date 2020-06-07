@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ScanOutlinedSvg from '@ant-design/icons-svg/lib/asn/ScanOutlined';
 
-export default {
-  name: 'IconScanOutlined',
-  displayName: 'ScanOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ScanOutlinedSvg } },
-      children,
-    ),
+const ScanOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ScanOutlinedSvg}></Icon>;
 };
+
+ScanOutlined.inheritAttrs = false;
+export default ScanOutlined;

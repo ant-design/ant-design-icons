@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import IdcardTwoToneSvg from '@ant-design/icons-svg/lib/asn/IdcardTwoTone';
 
-export default {
-  name: 'IconIdcardTwoTone',
-  displayName: 'IdcardTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: IdcardTwoToneSvg } },
-      children,
-    ),
+const IdcardTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={IdcardTwoToneSvg}></Icon>;
 };
+
+IdcardTwoTone.inheritAttrs = false;
+export default IdcardTwoTone;

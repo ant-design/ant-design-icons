@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PushpinFilledSvg from '@ant-design/icons-svg/lib/asn/PushpinFilled';
 
-export default {
-  name: 'IconPushpinFilled',
-  displayName: 'PushpinFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PushpinFilledSvg } },
-      children,
-    ),
+const PushpinFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PushpinFilledSvg}></Icon>;
 };
+
+PushpinFilled.inheritAttrs = false;
+export default PushpinFilled;

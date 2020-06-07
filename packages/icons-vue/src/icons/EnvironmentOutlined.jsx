@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import EnvironmentOutlinedSvg from '@ant-design/icons-svg/lib/asn/EnvironmentOutlined';
 
-export default {
-  name: 'IconEnvironmentOutlined',
-  displayName: 'EnvironmentOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: EnvironmentOutlinedSvg } },
-      children,
-    ),
+const EnvironmentOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={EnvironmentOutlinedSvg}></Icon>;
 };
+
+EnvironmentOutlined.inheritAttrs = false;
+export default EnvironmentOutlined;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ReadFilledSvg from '@ant-design/icons-svg/lib/asn/ReadFilled';
 
-export default {
-  name: 'IconReadFilled',
-  displayName: 'ReadFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ReadFilledSvg } },
-      children,
-    ),
+const ReadFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ReadFilledSvg}></Icon>;
 };
+
+ReadFilled.inheritAttrs = false;
+export default ReadFilled;

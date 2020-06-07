@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import UnlockOutlinedSvg from '@ant-design/icons-svg/lib/asn/UnlockOutlined';
 
-export default {
-  name: 'IconUnlockOutlined',
-  displayName: 'UnlockOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: UnlockOutlinedSvg } },
-      children,
-    ),
+const UnlockOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={UnlockOutlinedSvg}></Icon>;
 };
+
+UnlockOutlined.inheritAttrs = false;
+export default UnlockOutlined;

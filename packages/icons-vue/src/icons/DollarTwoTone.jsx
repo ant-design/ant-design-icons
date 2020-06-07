@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DollarTwoToneSvg from '@ant-design/icons-svg/lib/asn/DollarTwoTone';
 
-export default {
-  name: 'IconDollarTwoTone',
-  displayName: 'DollarTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DollarTwoToneSvg } },
-      children,
-    ),
+const DollarTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DollarTwoToneSvg}></Icon>;
 };
+
+DollarTwoTone.inheritAttrs = false;
+export default DollarTwoTone;

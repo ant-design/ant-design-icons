@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import VerticalAlignTopOutlinedSvg from '@ant-design/icons-svg/lib/asn/VerticalAlignTopOutlined';
 
-export default {
-  name: 'IconVerticalAlignTopOutlined',
-  displayName: 'VerticalAlignTopOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: VerticalAlignTopOutlinedSvg } },
-      children,
-    ),
+const VerticalAlignTopOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={VerticalAlignTopOutlinedSvg}></Icon>;
 };
+
+VerticalAlignTopOutlined.inheritAttrs = false;
+export default VerticalAlignTopOutlined;

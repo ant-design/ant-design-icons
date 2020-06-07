@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import AccountBookOutlinedSvg from '@ant-design/icons-svg/lib/asn/AccountBookOutlined';
 
-export default {
-  name: 'IconAccountBookOutlined',
-  displayName: 'AccountBookOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: AccountBookOutlinedSvg } },
-      children,
-    ),
+const AccountBookOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={AccountBookOutlinedSvg}></Icon>;
 };
+
+AccountBookOutlined.inheritAttrs = false;
+export default AccountBookOutlined;

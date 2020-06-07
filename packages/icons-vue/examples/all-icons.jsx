@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import * as AntdIcons from '../src/icons';
 import './index.less';
 
@@ -36,15 +36,12 @@ const AllIconDemo = {
     },
   },
   render() {
+    console.log(this.currentTheme);
     return (
       <div class="all-icons-wrap" style={{ color: '#555' }}>
         <h1 style={{ textAlign: 'center' }}>All Icons</h1>
         <div style={{ textAlign: 'center' }}>
-          <select
-            name={'theme-select'}
-            value={this.currentTheme}
-            onChange={this.handleSelectChange}
-          >
+          <select name="theme-select" v-model={this.currentTheme}>
             <option value="Filled">Filled</option>
             <option value="Outlined">Outlined</option>
             <option value="TwoTone">Two-Tone</option>
@@ -56,9 +53,4 @@ const AllIconDemo = {
   },
 };
 
-new Vue({
-  el: '#__vue-content>div',
-  render() {
-    return <AllIconDemo />;
-  },
-});
+createApp(AllIconDemo).mount('#__vue-content>div');

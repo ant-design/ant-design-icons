@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SettingFilledSvg from '@ant-design/icons-svg/lib/asn/SettingFilled';
 
-export default {
-  name: 'IconSettingFilled',
-  displayName: 'SettingFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SettingFilledSvg } },
-      children,
-    ),
+const SettingFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SettingFilledSvg}></Icon>;
 };
+
+SettingFilled.inheritAttrs = false;
+export default SettingFilled;

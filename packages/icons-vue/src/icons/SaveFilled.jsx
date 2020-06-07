@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SaveFilledSvg from '@ant-design/icons-svg/lib/asn/SaveFilled';
 
-export default {
-  name: 'IconSaveFilled',
-  displayName: 'SaveFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SaveFilledSvg } },
-      children,
-    ),
+const SaveFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SaveFilledSvg}></Icon>;
 };
+
+SaveFilled.inheritAttrs = false;
+export default SaveFilled;

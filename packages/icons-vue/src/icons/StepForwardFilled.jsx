@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import StepForwardFilledSvg from '@ant-design/icons-svg/lib/asn/StepForwardFilled';
 
-export default {
-  name: 'IconStepForwardFilled',
-  displayName: 'StepForwardFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: StepForwardFilledSvg } },
-      children,
-    ),
+const StepForwardFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={StepForwardFilledSvg}></Icon>;
 };
+
+StepForwardFilled.inheritAttrs = false;
+export default StepForwardFilled;

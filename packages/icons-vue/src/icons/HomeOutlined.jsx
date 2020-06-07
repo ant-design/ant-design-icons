@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import HomeOutlinedSvg from '@ant-design/icons-svg/lib/asn/HomeOutlined';
 
-export default {
-  name: 'IconHomeOutlined',
-  displayName: 'HomeOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: HomeOutlinedSvg } },
-      children,
-    ),
+const HomeOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={HomeOutlinedSvg}></Icon>;
 };
+
+HomeOutlined.inheritAttrs = false;
+export default HomeOutlined;

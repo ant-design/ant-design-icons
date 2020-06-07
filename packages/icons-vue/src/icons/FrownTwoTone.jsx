@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FrownTwoToneSvg from '@ant-design/icons-svg/lib/asn/FrownTwoTone';
 
-export default {
-  name: 'IconFrownTwoTone',
-  displayName: 'FrownTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FrownTwoToneSvg } },
-      children,
-    ),
+const FrownTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FrownTwoToneSvg}></Icon>;
 };
+
+FrownTwoTone.inheritAttrs = false;
+export default FrownTwoTone;

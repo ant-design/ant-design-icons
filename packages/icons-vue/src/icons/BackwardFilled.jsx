@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BackwardFilledSvg from '@ant-design/icons-svg/lib/asn/BackwardFilled';
 
-export default {
-  name: 'IconBackwardFilled',
-  displayName: 'BackwardFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BackwardFilledSvg } },
-      children,
-    ),
+const BackwardFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BackwardFilledSvg}></Icon>;
 };
+
+BackwardFilled.inheritAttrs = false;
+export default BackwardFilled;

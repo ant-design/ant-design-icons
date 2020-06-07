@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DiffFilledSvg from '@ant-design/icons-svg/lib/asn/DiffFilled';
 
-export default {
-  name: 'IconDiffFilled',
-  displayName: 'DiffFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DiffFilledSvg } },
-      children,
-    ),
+const DiffFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DiffFilledSvg}></Icon>;
 };
+
+DiffFilled.inheritAttrs = false;
+export default DiffFilled;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SwitcherTwoToneSvg from '@ant-design/icons-svg/lib/asn/SwitcherTwoTone';
 
-export default {
-  name: 'IconSwitcherTwoTone',
-  displayName: 'SwitcherTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SwitcherTwoToneSvg } },
-      children,
-    ),
+const SwitcherTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SwitcherTwoToneSvg}></Icon>;
 };
+
+SwitcherTwoTone.inheritAttrs = false;
+export default SwitcherTwoTone;

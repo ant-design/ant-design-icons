@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ReadOutlinedSvg from '@ant-design/icons-svg/lib/asn/ReadOutlined';
 
-export default {
-  name: 'IconReadOutlined',
-  displayName: 'ReadOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ReadOutlinedSvg } },
-      children,
-    ),
+const ReadOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ReadOutlinedSvg}></Icon>;
 };
+
+ReadOutlined.inheritAttrs = false;
+export default ReadOutlined;

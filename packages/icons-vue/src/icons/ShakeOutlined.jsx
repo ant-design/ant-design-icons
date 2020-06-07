@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ShakeOutlinedSvg from '@ant-design/icons-svg/lib/asn/ShakeOutlined';
 
-export default {
-  name: 'IconShakeOutlined',
-  displayName: 'ShakeOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ShakeOutlinedSvg } },
-      children,
-    ),
+const ShakeOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ShakeOutlinedSvg}></Icon>;
 };
+
+ShakeOutlined.inheritAttrs = false;
+export default ShakeOutlined;

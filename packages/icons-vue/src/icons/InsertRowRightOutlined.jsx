@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import InsertRowRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/InsertRowRightOutlined';
 
-export default {
-  name: 'IconInsertRowRightOutlined',
-  displayName: 'InsertRowRightOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: InsertRowRightOutlinedSvg } },
-      children,
-    ),
+const InsertRowRightOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={InsertRowRightOutlinedSvg}></Icon>;
 };
+
+InsertRowRightOutlined.inheritAttrs = false;
+export default InsertRowRightOutlined;

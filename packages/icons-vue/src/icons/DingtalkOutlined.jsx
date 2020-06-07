@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DingtalkOutlinedSvg from '@ant-design/icons-svg/lib/asn/DingtalkOutlined';
 
-export default {
-  name: 'IconDingtalkOutlined',
-  displayName: 'DingtalkOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DingtalkOutlinedSvg } },
-      children,
-    ),
+const DingtalkOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DingtalkOutlinedSvg}></Icon>;
 };
+
+DingtalkOutlined.inheritAttrs = false;
+export default DingtalkOutlined;

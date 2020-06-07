@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PlusCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PlusCircleFilled';
 
-export default {
-  name: 'IconPlusCircleFilled',
-  displayName: 'PlusCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PlusCircleFilledSvg } },
-      children,
-    ),
+const PlusCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PlusCircleFilledSvg}></Icon>;
 };
+
+PlusCircleFilled.inheritAttrs = false;
+export default PlusCircleFilled;

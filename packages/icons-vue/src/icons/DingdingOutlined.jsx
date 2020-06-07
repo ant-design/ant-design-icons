@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DingdingOutlinedSvg from '@ant-design/icons-svg/lib/asn/DingdingOutlined';
 
-export default {
-  name: 'IconDingdingOutlined',
-  displayName: 'DingdingOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DingdingOutlinedSvg } },
-      children,
-    ),
+const DingdingOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DingdingOutlinedSvg}></Icon>;
 };
+
+DingdingOutlined.inheritAttrs = false;
+export default DingdingOutlined;

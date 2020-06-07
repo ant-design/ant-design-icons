@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import EuroCircleFilledSvg from '@ant-design/icons-svg/lib/asn/EuroCircleFilled';
 
-export default {
-  name: 'IconEuroCircleFilled',
-  displayName: 'EuroCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: EuroCircleFilledSvg } },
-      children,
-    ),
+const EuroCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={EuroCircleFilledSvg}></Icon>;
 };
+
+EuroCircleFilled.inheritAttrs = false;
+export default EuroCircleFilled;

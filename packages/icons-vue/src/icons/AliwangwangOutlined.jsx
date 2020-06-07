@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import AliwangwangOutlinedSvg from '@ant-design/icons-svg/lib/asn/AliwangwangOutlined';
 
-export default {
-  name: 'IconAliwangwangOutlined',
-  displayName: 'AliwangwangOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: AliwangwangOutlinedSvg } },
-      children,
-    ),
+const AliwangwangOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={AliwangwangOutlinedSvg}></Icon>;
 };
+
+AliwangwangOutlined.inheritAttrs = false;
+export default AliwangwangOutlined;

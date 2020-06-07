@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import InfoOutlinedSvg from '@ant-design/icons-svg/lib/asn/InfoOutlined';
 
-export default {
-  name: 'IconInfoOutlined',
-  displayName: 'InfoOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: InfoOutlinedSvg } },
-      children,
-    ),
+const InfoOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={InfoOutlinedSvg}></Icon>;
 };
+
+InfoOutlined.inheritAttrs = false;
+export default InfoOutlined;

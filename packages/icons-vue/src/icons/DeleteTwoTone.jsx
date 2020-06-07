@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DeleteTwoToneSvg from '@ant-design/icons-svg/lib/asn/DeleteTwoTone';
 
-export default {
-  name: 'IconDeleteTwoTone',
-  displayName: 'DeleteTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DeleteTwoToneSvg } },
-      children,
-    ),
+const DeleteTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DeleteTwoToneSvg}></Icon>;
 };
+
+DeleteTwoTone.inheritAttrs = false;
+export default DeleteTwoTone;

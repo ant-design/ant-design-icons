@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PropertySafetyTwoToneSvg from '@ant-design/icons-svg/lib/asn/PropertySafetyTwoTone';
 
-export default {
-  name: 'IconPropertySafetyTwoTone',
-  displayName: 'PropertySafetyTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PropertySafetyTwoToneSvg } },
-      children,
-    ),
+const PropertySafetyTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PropertySafetyTwoToneSvg}></Icon>;
 };
+
+PropertySafetyTwoTone.inheritAttrs = false;
+export default PropertySafetyTwoTone;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FacebookOutlinedSvg from '@ant-design/icons-svg/lib/asn/FacebookOutlined';
 
-export default {
-  name: 'IconFacebookOutlined',
-  displayName: 'FacebookOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FacebookOutlinedSvg } },
-      children,
-    ),
+const FacebookOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FacebookOutlinedSvg}></Icon>;
 };
+
+FacebookOutlined.inheritAttrs = false;
+export default FacebookOutlined;

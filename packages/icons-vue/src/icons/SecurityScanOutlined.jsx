@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import SecurityScanOutlinedSvg from '@ant-design/icons-svg/lib/asn/SecurityScanOutlined';
 
-export default {
-  name: 'IconSecurityScanOutlined',
-  displayName: 'SecurityScanOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: SecurityScanOutlinedSvg } },
-      children,
-    ),
+const SecurityScanOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={SecurityScanOutlinedSvg}></Icon>;
 };
+
+SecurityScanOutlined.inheritAttrs = false;
+export default SecurityScanOutlined;

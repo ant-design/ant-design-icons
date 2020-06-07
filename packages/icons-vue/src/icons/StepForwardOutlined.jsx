@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import StepForwardOutlinedSvg from '@ant-design/icons-svg/lib/asn/StepForwardOutlined';
 
-export default {
-  name: 'IconStepForwardOutlined',
-  displayName: 'StepForwardOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: StepForwardOutlinedSvg } },
-      children,
-    ),
+const StepForwardOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={StepForwardOutlinedSvg}></Icon>;
 };
+
+StepForwardOutlined.inheritAttrs = false;
+export default StepForwardOutlined;

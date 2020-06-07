@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import MacCommandOutlinedSvg from '@ant-design/icons-svg/lib/asn/MacCommandOutlined';
 
-export default {
-  name: 'IconMacCommandOutlined',
-  displayName: 'MacCommandOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: MacCommandOutlinedSvg } },
-      children,
-    ),
+const MacCommandOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={MacCommandOutlinedSvg}></Icon>;
 };
+
+MacCommandOutlined.inheritAttrs = false;
+export default MacCommandOutlined;

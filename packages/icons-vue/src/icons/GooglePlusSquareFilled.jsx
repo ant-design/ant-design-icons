@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import GooglePlusSquareFilledSvg from '@ant-design/icons-svg/lib/asn/GooglePlusSquareFilled';
 
-export default {
-  name: 'IconGooglePlusSquareFilled',
-  displayName: 'GooglePlusSquareFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: GooglePlusSquareFilledSvg } },
-      children,
-    ),
+const GooglePlusSquareFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={GooglePlusSquareFilledSvg}></Icon>;
 };
+
+GooglePlusSquareFilled.inheritAttrs = false;
+export default GooglePlusSquareFilled;

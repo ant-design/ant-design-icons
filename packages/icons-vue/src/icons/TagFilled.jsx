@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import TagFilledSvg from '@ant-design/icons-svg/lib/asn/TagFilled';
 
-export default {
-  name: 'IconTagFilled',
-  displayName: 'TagFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: TagFilledSvg } },
-      children,
-    ),
+const TagFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={TagFilledSvg}></Icon>;
 };
+
+TagFilled.inheritAttrs = false;
+export default TagFilled;

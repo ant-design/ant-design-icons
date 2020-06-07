@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import HourglassOutlinedSvg from '@ant-design/icons-svg/lib/asn/HourglassOutlined';
 
-export default {
-  name: 'IconHourglassOutlined',
-  displayName: 'HourglassOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: HourglassOutlinedSvg } },
-      children,
-    ),
+const HourglassOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={HourglassOutlinedSvg}></Icon>;
 };
+
+HourglassOutlined.inheritAttrs = false;
+export default HourglassOutlined;

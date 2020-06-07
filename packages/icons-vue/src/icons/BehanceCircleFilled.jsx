@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BehanceCircleFilledSvg from '@ant-design/icons-svg/lib/asn/BehanceCircleFilled';
 
-export default {
-  name: 'IconBehanceCircleFilled',
-  displayName: 'BehanceCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BehanceCircleFilledSvg } },
-      children,
-    ),
+const BehanceCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BehanceCircleFilledSvg}></Icon>;
 };
+
+BehanceCircleFilled.inheritAttrs = false;
+export default BehanceCircleFilled;

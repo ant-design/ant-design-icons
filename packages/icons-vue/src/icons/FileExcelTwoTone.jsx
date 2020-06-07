@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FileExcelTwoToneSvg from '@ant-design/icons-svg/lib/asn/FileExcelTwoTone';
 
-export default {
-  name: 'IconFileExcelTwoTone',
-  displayName: 'FileExcelTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FileExcelTwoToneSvg } },
-      children,
-    ),
+const FileExcelTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FileExcelTwoToneSvg}></Icon>;
 };
+
+FileExcelTwoTone.inheritAttrs = false;
+export default FileExcelTwoTone;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CarTwoToneSvg from '@ant-design/icons-svg/lib/asn/CarTwoTone';
 
-export default {
-  name: 'IconCarTwoTone',
-  displayName: 'CarTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CarTwoToneSvg } },
-      children,
-    ),
+const CarTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CarTwoToneSvg}></Icon>;
 };
+
+CarTwoTone.inheritAttrs = false;
+export default CarTwoTone;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import BankOutlinedSvg from '@ant-design/icons-svg/lib/asn/BankOutlined';
 
-export default {
-  name: 'IconBankOutlined',
-  displayName: 'BankOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: BankOutlinedSvg } },
-      children,
-    ),
+const BankOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={BankOutlinedSvg}></Icon>;
 };
+
+BankOutlined.inheritAttrs = false;
+export default BankOutlined;

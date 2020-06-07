@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import FileZipFilledSvg from '@ant-design/icons-svg/lib/asn/FileZipFilled';
 
-export default {
-  name: 'IconFileZipFilled',
-  displayName: 'FileZipFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: FileZipFilledSvg } },
-      children,
-    ),
+const FileZipFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={FileZipFilledSvg}></Icon>;
 };
+
+FileZipFilled.inheritAttrs = false;
+export default FileZipFilled;

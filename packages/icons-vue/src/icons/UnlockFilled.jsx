@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import UnlockFilledSvg from '@ant-design/icons-svg/lib/asn/UnlockFilled';
 
-export default {
-  name: 'IconUnlockFilled',
-  displayName: 'UnlockFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: UnlockFilledSvg } },
-      children,
-    ),
+const UnlockFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={UnlockFilledSvg}></Icon>;
 };
+
+UnlockFilled.inheritAttrs = false;
+export default UnlockFilled;

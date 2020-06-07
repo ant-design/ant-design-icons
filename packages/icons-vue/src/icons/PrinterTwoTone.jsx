@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PrinterTwoToneSvg from '@ant-design/icons-svg/lib/asn/PrinterTwoTone';
 
-export default {
-  name: 'IconPrinterTwoTone',
-  displayName: 'PrinterTwoTone',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PrinterTwoToneSvg } },
-      children,
-    ),
+const PrinterTwoTone = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PrinterTwoToneSvg}></Icon>;
 };
+
+PrinterTwoTone.inheritAttrs = false;
+export default PrinterTwoTone;

@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import AlignCenterOutlinedSvg from '@ant-design/icons-svg/lib/asn/AlignCenterOutlined';
 
-export default {
-  name: 'IconAlignCenterOutlined',
-  displayName: 'AlignCenterOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: AlignCenterOutlinedSvg } },
-      children,
-    ),
+const AlignCenterOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={AlignCenterOutlinedSvg}></Icon>;
 };
+
+AlignCenterOutlined.inheritAttrs = false;
+export default AlignCenterOutlined;

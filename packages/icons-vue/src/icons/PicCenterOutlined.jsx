@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import PicCenterOutlinedSvg from '@ant-design/icons-svg/lib/asn/PicCenterOutlined';
 
-export default {
-  name: 'IconPicCenterOutlined',
-  displayName: 'PicCenterOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: PicCenterOutlinedSvg } },
-      children,
-    ),
+const PicCenterOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={PicCenterOutlinedSvg}></Icon>;
 };
+
+PicCenterOutlined.inheritAttrs = false;
+export default PicCenterOutlined;

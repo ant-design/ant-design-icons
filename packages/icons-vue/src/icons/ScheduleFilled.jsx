@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import ScheduleFilledSvg from '@ant-design/icons-svg/lib/asn/ScheduleFilled';
 
-export default {
-  name: 'IconScheduleFilled',
-  displayName: 'ScheduleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: ScheduleFilledSvg } },
-      children,
-    ),
+const ScheduleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={ScheduleFilledSvg}></Icon>;
 };
+
+ScheduleFilled.inheritAttrs = false;
+export default ScheduleFilled;

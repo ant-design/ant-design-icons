@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import InfoCircleFilledSvg from '@ant-design/icons-svg/lib/asn/InfoCircleFilled';
 
-export default {
-  name: 'IconInfoCircleFilled',
-  displayName: 'InfoCircleFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: InfoCircleFilledSvg } },
-      children,
-    ),
+const InfoCircleFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={InfoCircleFilledSvg}></Icon>;
 };
+
+InfoCircleFilled.inheritAttrs = false;
+export default InfoCircleFilled;

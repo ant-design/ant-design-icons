@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import KeyOutlinedSvg from '@ant-design/icons-svg/lib/asn/KeyOutlined';
 
-export default {
-  name: 'IconKeyOutlined',
-  displayName: 'KeyOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: KeyOutlinedSvg } },
-      children,
-    ),
+const KeyOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={KeyOutlinedSvg}></Icon>;
 };
+
+KeyOutlined.inheritAttrs = false;
+export default KeyOutlined;

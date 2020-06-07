@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import DesktopOutlinedSvg from '@ant-design/icons-svg/lib/asn/DesktopOutlined';
 
-export default {
-  name: 'IconDesktopOutlined',
-  displayName: 'DesktopOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: DesktopOutlinedSvg } },
-      children,
-    ),
+const DesktopOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={DesktopOutlinedSvg}></Icon>;
 };
+
+DesktopOutlined.inheritAttrs = false;
+export default DesktopOutlined;

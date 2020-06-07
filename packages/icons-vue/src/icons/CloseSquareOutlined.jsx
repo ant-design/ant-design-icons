@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CloseSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloseSquareOutlined';
 
-export default {
-  name: 'IconCloseSquareOutlined',
-  displayName: 'CloseSquareOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CloseSquareOutlinedSvg } },
-      children,
-    ),
+const CloseSquareOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CloseSquareOutlinedSvg}></Icon>;
 };
+
+CloseSquareOutlined.inheritAttrs = false;
+export default CloseSquareOutlined;

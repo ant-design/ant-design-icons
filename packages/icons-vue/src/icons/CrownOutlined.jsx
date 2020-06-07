@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import CrownOutlinedSvg from '@ant-design/icons-svg/lib/asn/CrownOutlined';
 
-export default {
-  name: 'IconCrownOutlined',
-  displayName: 'CrownOutlined',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: CrownOutlinedSvg } },
-      children,
-    ),
+const CrownOutlined = (_, { attrs }) => {
+  return <Icon {...attrs} icon={CrownOutlinedSvg}></Icon>;
 };
+
+CrownOutlined.inheritAttrs = false;
+export default CrownOutlined;

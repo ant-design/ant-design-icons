@@ -4,15 +4,9 @@
 import Icon from '../components/AntdIcon';
 import WarningFilledSvg from '@ant-design/icons-svg/lib/asn/WarningFilled';
 
-export default {
-  name: 'IconWarningFilled',
-  displayName: 'WarningFilled',
-  functional: true,
-  props: { ...Icon.props },
-  render: (h, { data, children, props }) =>
-    h(
-      Icon,
-      { ...data, props: { ...data.props, ...props, icon: WarningFilledSvg } },
-      children,
-    ),
+const WarningFilled = (_, { attrs }) => {
+  return <Icon {...attrs} icon={WarningFilledSvg}></Icon>;
 };
+
+WarningFilled.inheritAttrs = false;
+export default WarningFilled;
