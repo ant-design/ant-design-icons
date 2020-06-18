@@ -10,6 +10,16 @@ import { IconDefinition, ThemeType } from '../types';
 import { alreadyHasAThemeSuffix, getNameAndNamespace, isIconDefinition, warn, withSuffix } from '../utils';
 import { IconService } from './icon.service';
 
+interface RenderMeta {
+  type: string | IconDefinition;
+  theme: ThemeType;
+  twoToneColor: string;
+}
+
+function checkMeta(prev: RenderMeta, after: RenderMeta): boolean {
+  return prev.type === after.type && prev.theme === after.theme && prev.theme === after.twoToneColor;
+}
+
 @Directive({
   selector: '[antIcon]'
 })
@@ -35,20 +45,35 @@ export class IconDirective implements OnChanges {
         this._clearSVGElement();
         resolve(null);
       } else {
+        const preMeta = this._getSelfRenderMeta();
         this._iconService.getRenderedContent(
           this._parseIconType(this.type, this.theme),
           this.twoToneColor
         ).subscribe(svg => {
-          this._setSVGElement(svg);
-          resolve(svg);
+          // avoid race condition, see https://github.com/ant-design/ant-design-icons/issues/315
+          if (checkMeta(preMeta, this._getSelfRenderMeta())) {
+            this._setSVGElement(svg);
+            resolve(svg);
+          } else {
+            resolve(null);
+          }
         });
       }
     });
   }
 
+  protected _getSelfRenderMeta(): RenderMeta {
+    return {
+      type: this.type,
+      theme: this.theme,
+      twoToneColor: this.twoToneColor
+    };
+  }
+
   /**
    * Parse a icon to the standard form, an `IconDefinition` or a string like 'account-book-fill` (with a theme suffixed).
    * If namespace is specified, ignore theme because it meaningless for users' icons.
+   *
    * @param type
    * @param theme
    */
