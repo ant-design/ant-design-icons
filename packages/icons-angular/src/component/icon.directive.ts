@@ -17,7 +17,7 @@ interface RenderMeta {
 }
 
 function checkMeta(prev: RenderMeta, after: RenderMeta): boolean {
-  return prev.type === after.type && prev.theme === after.theme && prev.theme === after.twoToneColor;
+  return prev.type === after.type && prev.theme === after.theme && prev.twoToneColor === after.twoToneColor;
 }
 
 @Directive({
