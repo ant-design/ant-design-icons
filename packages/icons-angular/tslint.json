@@ -147,7 +147,6 @@
     "no-parameter-reassignment": false,
     "no-unnecessary-initializer": true,
     "no-unused-expression": true,
-    "no-use-before-declare": true,
     "no-var-keyword": true,
     "number-literal-format": true,
     "object-literal-key-quotes": [
