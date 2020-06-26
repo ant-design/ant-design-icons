@@ -1,18 +1,19 @@
 {
   "name": "@ant-design/icons-angular",
-  "version": "9.0.1",
+  "version": "10.0.0-beta.0",
   "license": "MIT",
   "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-angular",
   "contributors": [
     "Wendell Hu <wendellhu95@gmail.com>"
   ],
   "dependencies": {
-    "@ant-design/colors": "^3.1.0"
-  },
+    "@ant-design/colors": "^3.1.0",
+    "tslib": "^2.0.0"
+},
   "peerDependencies": {
-    "@angular/common": "^9.0.0",
-    "@angular/core": "^9.0.0",
-    "@angular/platform-browser": "^9.0.0",
+    "@angular/common": "^10.0.0",
+    "@angular/core": "^10.0.0",
+    "@angular/platform-browser": "^10.0.0",
     "rxjs": "^6.4.0"
   }
 }
