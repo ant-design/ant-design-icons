@@ -13,9 +13,11 @@ export interface IconFontProps extends IconBaseProps {
 }
 
 function isValidCustomScriptUrl(scriptUrl: string): boolean {
-  return typeof scriptUrl === 'string' &&
-    scriptUrl.length &&
-    !customCache.has(scriptUrl);
+  return Boolean(
+    typeof scriptUrl === 'string'
+      && scriptUrl.length
+      && !customCache.has(scriptUrl)
+  );
 }
 
 function createScriptUrlElements(scriptUrls: string[], index: number = 0): void {
@@ -47,6 +49,7 @@ export default function create(options: CustomIconOptions = {}): React.SFC<IconF
    * that loads SVG symbols and insert the SVG Element into the document body.
    */
   if (
+    scriptUrl &&
     typeof document !== 'undefined' &&
     typeof window !== 'undefined' &&
     typeof document.createElement === 'function'
@@ -63,7 +66,7 @@ export default function create(options: CustomIconOptions = {}): React.SFC<IconF
     const { type, children, ...restProps } = props;
 
     // children > type
-    let content = null;
+    let content: React.ReactNode = null;
     if (props.type) {
       content = <use xlinkHref={`#${type}`} />;
     }
