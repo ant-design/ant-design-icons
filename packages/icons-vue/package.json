@@ -23,8 +23,7 @@
     "prepublishOnly": "npm run lint && npm run generate && npm run compile && npm run test"
   },
   "peerDependencies": {
-    "vue": ">=2.5.0",
-    "vue-template-compiler": ">=2.5.0"
+    "vue": ">=3.0.0"
   },
   "devDependencies": {
     "@ant-design-vue/babel-plugin-jsx": "^1.0.0-0",
