@@ -62,7 +62,7 @@ describe('Icon', () => {
   });
 
   // what's this?
-  it('should give warning and render <i>{null}</i>', () => {
+  it('should give warning and render <span>{null}</span>', () => {
     const wrapper = mount(Icon, { props: { viewBox: '0 0 24 24' } });
     expect(wrapper.html()).toMatchSnapshot();
   });
