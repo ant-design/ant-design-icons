@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@ant-design-vue/babel-plugin-jsx": "^1.0.0-0",
-    "@babel/runtime": "^7.10.1",
+    "@babel/runtime": "^7.10.4",
     "@types/jest": "^24.0.17",
     "@types/node": "^13.9.3",
     "@vue/test-utils": "^2.0.0-alpha.6",
