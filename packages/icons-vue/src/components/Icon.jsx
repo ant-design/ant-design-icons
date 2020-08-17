@@ -5,7 +5,7 @@ const Icon = (_, { attrs, slots }) => {
   //   component: [Object, Function],
   //   spin: Boolean,
   //   rotate: Number,
-  //   tabIndex: [String, Number],
+  //   tabindex: [String, Number],
   // },
   const {
     class: cls,
@@ -14,7 +14,7 @@ const Icon = (_, { attrs, slots }) => {
     viewBox,
     spin,
     rotate,
-    tabIndex,
+    tabindex,
     onClick,
     ...restProps
   } = attrs;
@@ -69,10 +69,10 @@ const Icon = (_, { attrs, slots }) => {
     return null;
   };
 
-  let iconTabIndex = tabIndex;
+  let iconTabIndex = tabindex;
   if (iconTabIndex === undefined && onClick) {
     iconTabIndex = -1;
-    restProps.tabIndex = iconTabIndex;
+    restProps.tabindex = iconTabIndex;
   }
 
   return (

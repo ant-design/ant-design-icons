@@ -11,7 +11,7 @@ const Icon = (_, { attrs }) => {
   //   icon: Object,
   //   spin: Boolean,
   //   rotate: Number,
-  //   tabIndex: [String, Number],
+  //   tabindex: [String, Number],
   //   twoToneColor: [String, Array],
   // },
   const {
@@ -20,7 +20,7 @@ const Icon = (_, { attrs }) => {
     icon,
     spin,
     rotate,
-    tabIndex,
+    tabindex,
     // other
     twoToneColor,
     onClick,
@@ -35,10 +35,10 @@ const Icon = (_, { attrs }) => {
     'anticon-spin': !!spin || icon.name === 'loading',
   });
 
-  let iconTabIndex = tabIndex;
+  let iconTabIndex = tabindex;
   if (iconTabIndex === undefined && onClick) {
     iconTabIndex = -1;
-    restProps.tabIndex = iconTabIndex;
+    restProps.tabindex = iconTabIndex;
   }
 
   const svgStyle = rotate
