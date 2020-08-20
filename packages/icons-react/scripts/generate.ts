@@ -103,6 +103,12 @@ async function generateEntries() {
       }),
     );
 
+    // generate esm module entries
+    await writeFile(
+      path.resolve(__dirname, `../${svgIdentifier}.mjs`),
+      template(`export { default } from './es/icons/<%= svgIdentifier %>';`)({ svgIdentifier }),
+    );
+
     // generate `Icon.d.ts` in root folder
     await writeFile(
       path.resolve(__dirname, `../${svgIdentifier}.d.ts`),
