@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-vue",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
@@ -18,8 +18,8 @@
     "lint": "eslint src/ --ext .tsx,.ts",
     "compile": "vc-tools run compile",
     "test": "cross-env NODE_ENV=test jest --config .jest.js",
-    "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
-    "prepublishOnly": "npm run lint && npm run generate && npm run compile && npm run test"
+    "prepublishOnly": "npm run lint && npm run generate && npm run compile && npm run test",
+    "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon"
   },
   "peerDependencies": {
     "vue": ">=3.0.0"
