@@ -1,0 +1,14 @@
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+import ItalicOutlinedSvg from '@ant-design/icons-svg/lib/asn/ItalicOutlined';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+
+const ItalicOutlined = (props: AntdIconProps, { attrs }) => {
+  const p = { ...props, ...attrs };
+  return <AntdIcon {...p} icon={ItalicOutlinedSvg}></AntdIcon>;
+};
+
+ItalicOutlined.displayName = 'ItalicOutlined';
+ItalicOutlined.inheritAttrs = false;
+export default ItalicOutlined;
