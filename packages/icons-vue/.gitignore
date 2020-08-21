@@ -36,3 +36,5 @@ build/
 /*.d.ts
 !.jest.js
 !Icon.d.ts
+!.fatherrc.js
+!.eslintrc.js
