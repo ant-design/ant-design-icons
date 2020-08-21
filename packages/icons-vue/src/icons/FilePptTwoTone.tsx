@@ -1,11 +1,12 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
+import { SetupContext } from 'vue';
 import FilePptTwoToneSvg from '@ant-design/icons-svg/lib/asn/FilePptTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FilePptTwoTone = (props: AntdIconProps, { attrs }) => {
-  const p = { ...props, ...attrs };
+const FilePptTwoTone = (props: AntdIconProps, context: SetupContext) => {
+  const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={FilePptTwoToneSvg}></AntdIcon>;
 };
 

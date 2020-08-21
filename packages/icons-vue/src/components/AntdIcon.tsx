@@ -4,6 +4,7 @@ import { IconBaseProps } from './Icon';
 import { IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { getTwoToneColor, TwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
 import { normalizeTwoToneColors } from '../utils';
+import { SetupContext } from 'vue';
 
 export interface AntdIconProps extends IconBaseProps {
   twoToneColor?: TwoToneColor;
@@ -16,16 +17,8 @@ export interface IconComponentProps extends AntdIconProps {
 // Initial setting
 setTwoToneColor('#1890ff');
 
-const Icon = (props: IconComponentProps, { attrs }) => {
-  // props: {
-  //   icon: Object,
-  //   spin: Boolean,
-  //   rotate: Number,
-  //   tabindex: [String, Number],
-  //   twoToneColor: [String, Array],
-  // },
+const Icon = (props: IconComponentProps, context: SetupContext) => {
   const {
-    // affect inner <svg>...</svg>
     class: cls,
     icon,
     spin,
@@ -35,7 +28,7 @@ const Icon = (props: IconComponentProps, { attrs }) => {
     twoToneColor,
     onClick,
     ...restProps
-  } = { ...props, ...attrs } as any;
+  } = { ...props, ...context.attrs } as any;
   const classString = classNames('anticon', {
     [`anticon-${icon.name}`]: Boolean(icon.name),
     [cls]: cls,

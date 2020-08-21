@@ -1,8 +1,8 @@
 import { mount } from '@vue/test-utils';
-import Icon from '../src/components/Icon';
-import createFromIconfontCN from '../src/components/IconFont';
-import { setTwoToneColor, getTwoToneColor } from '../src/components/twoTonePrimaryColor';
-import {
+import Icon, {
+  getTwoToneColor,
+  setTwoToneColor,
+  createFromIconfontCN,
   HomeOutlined,
   SettingFilled,
   SmileOutlined,
@@ -10,8 +10,7 @@ import {
   LoadingOutlined,
   CheckCircleTwoTone,
   ClockCircleOutlined,
-} from '../src/icons';
-
+} from '../lib';
 describe('Icon', () => {
   it('should render to a <span class="xxx"><svg>...</svg></span>', () => {
     const wrapper = mount(HomeOutlined, { props: { class: 'my-icon-class' } });
@@ -115,8 +114,8 @@ describe('Icon', () => {
                 <svg {...svgProps}>
                   <defs>
                     <linearGradient id="gradient">
-                      <stop offset="20%" stopColor="#39F" />
-                      <stop offset="90%" stopColor="#F3F" />
+                      <stop offset="20%" stop-color="#39F" />
+                      <stop offset="90%" stop-color="#F3F" />
                     </linearGradient>
                   </defs>
                   {slots.default()}

@@ -1,11 +1,12 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
+import { SetupContext } from 'vue';
 import DownSquareFilledSvg from '@ant-design/icons-svg/lib/asn/DownSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DownSquareFilled = (props: AntdIconProps, { attrs }) => {
-  const p = { ...props, ...attrs };
+const DownSquareFilled = (props: AntdIconProps, context: SetupContext) => {
+  const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={DownSquareFilledSvg}></AntdIcon>;
 };
 

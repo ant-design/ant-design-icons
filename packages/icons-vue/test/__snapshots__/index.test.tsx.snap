@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Icon \`component\` prop can access to svg defs if has children 1`] = `<span role="img" class="anticon my-home-icon"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><defs><linearGradient id="gradient"><stop offset="20%" stopColor="#39F"></stop><stop offset="90%" stopColor="#F3F"></stop></linearGradient></defs><title>Cool Home</title><path d="'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'"></path></svg></span>`;
+exports[`Icon \`component\` prop can access to svg defs if has children 1`] = `<span role="img" class="anticon my-home-icon"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><defs><linearGradient id="gradient"><stop offset="20%" stop-color="#39F"></stop><stop offset="90%" stop-color="#F3F"></stop></linearGradient></defs><title>Cool Home</title><path d="'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'"></path></svg></span>`;
 
 exports[`Icon should give warning and render <span>{null}</span> 1`] = `<span role="img" class="anticon"><!----></span>`;
 

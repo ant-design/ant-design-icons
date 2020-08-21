@@ -1,11 +1,12 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
+import { SetupContext } from 'vue';
 import NodeCollapseOutlinedSvg from '@ant-design/icons-svg/lib/asn/NodeCollapseOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const NodeCollapseOutlined = (props: AntdIconProps, { attrs }) => {
-  const p = { ...props, ...attrs };
+const NodeCollapseOutlined = (props: AntdIconProps, context: SetupContext) => {
+  const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={NodeCollapseOutlinedSvg}></AntdIcon>;
 };
 

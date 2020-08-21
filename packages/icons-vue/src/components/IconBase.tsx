@@ -1,6 +1,6 @@
 import { generate, getSecondaryColor, isIconDefinition, warning, useInsertStyles } from '../utils';
 import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
-import { CSSProperties } from 'vue';
+import { CSSProperties, SetupContext } from 'vue';
 
 export interface IconProps {
   icon: IconDefinition;
@@ -39,14 +39,11 @@ function getTwoToneColors(): TwoToneColorPalette {
   };
 }
 
-const IconBase = (_: IconProps, { attrs }) => {
-  // props: {
-  //   icon: Object,
-  //   primaryColor: String,
-  //   secondaryColor: String,
-  //   calculated: Boolean,
-  // },
-  const { icon, primaryColor, secondaryColor, ...restProps } = attrs;
+const IconBase = (props: IconProps, context: SetupContext) => {
+  const { icon, primaryColor, secondaryColor, ...restProps } = {
+    ...props,
+    ...context.attrs,
+  } as any;
 
   let colors = twoToneColorPalette;
   if (primaryColor) {

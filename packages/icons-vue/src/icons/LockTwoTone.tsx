@@ -1,11 +1,12 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
+import { SetupContext } from 'vue';
 import LockTwoToneSvg from '@ant-design/icons-svg/lib/asn/LockTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const LockTwoTone = (props: AntdIconProps, { attrs }) => {
-  const p = { ...props, ...attrs };
+const LockTwoTone = (props: AntdIconProps, context: SetupContext) => {
+  const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={LockTwoToneSvg}></AntdIcon>;
 };
 

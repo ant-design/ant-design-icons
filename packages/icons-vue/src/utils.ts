@@ -1,6 +1,5 @@
 import { nextTick, h } from 'vue';
 import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
-import isPlainObject from 'lodash/isPlainObject';
 import { generate as generateColor } from '@ant-design/colors';
 import { insertCss } from 'insert-css';
 
@@ -158,21 +157,3 @@ export const useInsertStyles = (styleStr: string = iconStyles) => {
     }
   });
 };
-
-export function noop() {}
-
-export function mergeProps() {
-  const args = [].slice.call(arguments, 0);
-  const props = {};
-  args.forEach((p = {}) => {
-    for (const [k, v] of Object.entries(p)) {
-      props[k] = props[k] || {};
-      if (isPlainObject(v)) {
-        Object.assign(props[k], v);
-      } else {
-        props[k] = v;
-      }
-    }
-  });
-  return props;
-}

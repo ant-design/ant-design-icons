@@ -1,11 +1,12 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
+import { SetupContext } from 'vue';
 import SecurityScanOutlinedSvg from '@ant-design/icons-svg/lib/asn/SecurityScanOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SecurityScanOutlined = (props: AntdIconProps, { attrs }) => {
-  const p = { ...props, ...attrs };
+const SecurityScanOutlined = (props: AntdIconProps, context: SetupContext) => {
+  const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={SecurityScanOutlinedSvg}></AntdIcon>;
 };
 

@@ -1,5 +1,5 @@
 import { svgBaseProps, warning, useInsertStyles } from '../utils';
-import { Component, HTMLAttributes } from 'vue';
+import { Component, HTMLAttributes, SetupContext } from 'vue';
 
 export interface IconBaseProps extends HTMLAttributes {
   spin?: boolean;
@@ -16,13 +16,14 @@ export interface IconComponentProps extends IconBaseProps {
   component?: Component;
   ariaLabel?: string;
 }
-const Icon = (props: IconComponentProps, { attrs, slots }) => {
+const Icon = (props: IconComponentProps, context: SetupContext) => {
   // props: {
   //   component: [Object, Function],
   //   spin: Boolean,
   //   rotate: Number,
   //   tabindex: [String, Number],
   // },
+  const { attrs, slots } = context;
   const {
     class: cls,
     // affect inner <svg>...</svg>

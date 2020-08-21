@@ -1,4 +1,5 @@
 import Icon, { IconBaseProps } from './Icon';
+import { SetupContext } from 'vue';
 
 const customCache = new Set<string>();
 
@@ -56,7 +57,8 @@ export default function create(options: CustomIconOptions = {}): Function {
     }
   }
 
-  const Iconfont = (props: IconFontProps, { attrs, slots }) => {
+  const Iconfont = (props: IconFontProps, context: SetupContext) => {
+    const { attrs, slots } = context;
     const { type, ...restProps } = { ...props, ...attrs } as any;
     const children = slots.default && slots.default();
     // children > type

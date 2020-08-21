@@ -1,11 +1,12 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
+import { SetupContext } from 'vue';
 import WechatFilledSvg from '@ant-design/icons-svg/lib/asn/WechatFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const WechatFilled = (props: AntdIconProps, { attrs }) => {
-  const p = { ...props, ...attrs };
+const WechatFilled = (props: AntdIconProps, context: SetupContext) => {
+  const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={WechatFilledSvg}></AntdIcon>;
 };
 

@@ -1,11 +1,12 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
+import { SetupContext } from 'vue';
 import RestTwoToneSvg from '@ant-design/icons-svg/lib/asn/RestTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RestTwoTone = (props: AntdIconProps, { attrs }) => {
-  const p = { ...props, ...attrs };
+const RestTwoTone = (props: AntdIconProps, context: SetupContext) => {
+  const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={RestTwoToneSvg}></AntdIcon>;
 };
 
