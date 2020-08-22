@@ -40,7 +40,7 @@
     "cross-env": "^5.2.0",
     "jest": "^25.4.0",
     "patch-package": "^6.2.2",
-    "prettier": "^1.15.2",
+    "prettier": "^2.0.5",
     "rc-tools": "^9.6.1-alpha.1",
     "react": "^16.6.3",
     "react-dom": "^16.4.2",
