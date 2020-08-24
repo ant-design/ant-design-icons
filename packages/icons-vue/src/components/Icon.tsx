@@ -1,7 +1,7 @@
-import { svgBaseProps, warning, useInsertStyles } from '../utils';
-import { Component, HTMLAttributes, SetupContext } from 'vue';
+import { svgBaseProps, warning, useInsertStyles, EventHandlers } from '../utils';
+import { Component, HTMLAttributes, SetupContext, Events } from 'vue';
 
-export interface IconBaseProps extends HTMLAttributes {
+export interface IconBaseProps extends HTMLAttributes, Partial<EventHandlers<Events>> {
   spin?: boolean;
   rotate?: number;
 }

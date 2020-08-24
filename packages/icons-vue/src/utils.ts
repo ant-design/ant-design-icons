@@ -40,7 +40,10 @@ export function normalizeAttrs(attrs: Attrs = {}): Attrs {
 export interface Attrs {
   [key: string]: string;
 }
-
+export type StringKeyOf<T> = Extract<keyof T, string>;
+export type EventHandlers<E> = {
+  [K in StringKeyOf<E>]?: E[K] extends Function ? E[K] : (payload: E[K]) => void;
+};
 export function generate(
   node: AbstractNode,
   key: string,
