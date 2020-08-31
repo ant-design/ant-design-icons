@@ -89,7 +89,7 @@ async function generateEntries() {
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
   
-  var _default = _<%= svgIdentifier %>;
+  var _default = _<%= svgIdentifier %>.default || _<%= svgIdentifier %>;
   exports.default = _default;
   module.exports = _default;
 `.trim(),
