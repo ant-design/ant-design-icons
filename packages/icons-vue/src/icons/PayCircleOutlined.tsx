@@ -1,0 +1,15 @@
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+import { SetupContext } from 'vue';
+import PayCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/PayCircleOutlined';
+import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+
+const PayCircleOutlined = (props: AntdIconProps, context: SetupContext) => {
+  const p = { ...props, ...context.attrs };
+  return <AntdIcon {...p} icon={PayCircleOutlinedSvg}></AntdIcon>;
+};
+
+PayCircleOutlined.displayName = 'PayCircleOutlined';
+PayCircleOutlined.inheritAttrs = false;
+export default PayCircleOutlined;
