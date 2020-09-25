@@ -106,8 +106,8 @@ export class IconDirective implements OnChanges {
     const children = el.childNodes;
     const length = children.length;
     for (let i = length - 1; i >= 0; i--) {
-      const child = children[ i ] as HTMLElement;
-      if (child.tagName.toLowerCase() === 'svg') {
+      const child = children[ i ] as any;
+      if (child.tagName?.toLowerCase() === 'svg') {
         this._renderer.removeChild(el, child);
       }
     }

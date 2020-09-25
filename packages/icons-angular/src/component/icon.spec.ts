@@ -188,7 +188,6 @@ describe('@ant-design/icons-angular', () => {
       }, 50);
     });
   });
-
 });
 
 @Component({
