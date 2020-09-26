@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "lint": "ng lint",
-    "test": "ng test --watch=false",
+    "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI --code-coverage",
     "build": "ng build --prod",
     "build:lib": "npm run generate && ng build ant-design-icons-angular --prod && npm run copy:assets",
     "generate": "cross-env TS_NODE_PROJECT=scripts/tsconfig.json node --require ts-node/register scripts/generate.ts",
