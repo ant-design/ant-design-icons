@@ -23,6 +23,10 @@ references:
           requires:
           - setup
           - icons-svg
+      - icons-angular:
+          requires:
+          - setup
+          - icons-svg
 
 jobs:
   setup:
@@ -67,6 +71,13 @@ jobs:
       - checkout
       - *attach_workspace
       - run: yarn react:ci
+  
+  icons-angular:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: yarn angular:ci
 
 workflows:
   version: 2
