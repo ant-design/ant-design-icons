@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons",
-  "version": "4.2.2",
+  "version": "4.3.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "unpkg": "./dist/index.umd.js",
@@ -60,7 +60,7 @@
     "typescript": "^3.0.3"
   },
   "dependencies": {
-    "@ant-design/colors": "^3.1.0",
+    "@ant-design/colors": "^4.0.5",
     "@ant-design/icons-svg": "^4.0.0",
     "@babel/runtime": "^7.10.4",
     "classnames": "^2.2.6",
