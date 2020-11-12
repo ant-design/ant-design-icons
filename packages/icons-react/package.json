@@ -43,6 +43,8 @@
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
     "@umijs/fabric": "^2.2.2",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
     "antd": "^4.8.2",
     "cross-env": "^5.2.0",
     "enzyme": "^3.10.0",
