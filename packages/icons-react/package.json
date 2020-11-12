@@ -60,7 +60,7 @@
     "typescript": "^3.0.3"
   },
   "dependencies": {
-    "@ant-design/colors": "^3.1.0",
+    "@ant-design/colors": "^5.0.0",
     "@ant-design/icons-svg": "^4.0.0",
     "@babel/runtime": "^7.10.4",
     "classnames": "^2.2.6",

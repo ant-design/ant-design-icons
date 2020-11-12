@@ -55,7 +55,7 @@
     "vue-jest": "^5.0.0-alpha.3"
   },
   "dependencies": {
-    "@ant-design/colors": "^4.0.0",
+    "@ant-design/colors": "^5.0.0",
     "@ant-design/icons-svg": "^4.0.0",
     "@babel/runtime": "^7.10.4",
     "lodash": "^4.17.15"
