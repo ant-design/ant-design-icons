@@ -49,12 +49,9 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
   const classString = classNames(
     'anticon',
     { [`anticon-${icon.name}`]: Boolean(icon.name) },
+    { 'anticon-spin': !!spin || icon.name === 'loading' },
     className,
   );
-
-  const svgClassString = classNames({
-    'anticon-spin': !!spin || icon.name === 'loading',
-  });
 
   let iconTabIndex = tabIndex;
   if (iconTabIndex === undefined && onClick) {
@@ -81,7 +78,6 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
       className={classString}
     >
       <ReactIcon
-        className={svgClassString}
         icon={icon}
         primaryColor={primaryColor}
         secondaryColor={secondaryColor}
