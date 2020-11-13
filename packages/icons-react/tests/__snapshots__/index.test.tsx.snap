@@ -53,7 +53,6 @@ exports[`Icon should render to a <span class="xxx"><svg>...</svg></span> 1`] = `
 >
   <svg
     aria-hidden="true"
-    class=""
     data-icon="home"
     fill="currentColor"
     focusable="false"
@@ -77,7 +76,6 @@ exports[`Icon should support basic usage 1`] = `
   >
     <svg
       aria-hidden="true"
-      class=""
       data-icon="home"
       fill="currentColor"
       focusable="false"
@@ -97,7 +95,6 @@ exports[`Icon should support basic usage 1`] = `
   >
     <svg
       aria-hidden="true"
-      class=""
       data-icon="setting"
       fill="currentColor"
       focusable="false"
@@ -117,7 +114,6 @@ exports[`Icon should support basic usage 1`] = `
   >
     <svg
       aria-hidden="true"
-      class=""
       data-icon="smile"
       fill="currentColor"
       focusable="false"
@@ -132,12 +128,11 @@ exports[`Icon should support basic usage 1`] = `
   </span>
   <span
     aria-label="sync"
-    class="anticon anticon-sync"
+    class="anticon anticon-sync anticon-spin"
     role="img"
   >
     <svg
       aria-hidden="true"
-      class="anticon-spin"
       data-icon="sync"
       fill="currentColor"
       focusable="false"
@@ -152,12 +147,11 @@ exports[`Icon should support basic usage 1`] = `
   </span>
   <span
     aria-label="loading"
-    class="anticon anticon-loading"
+    class="anticon anticon-loading anticon-spin"
     role="img"
   >
     <svg
       aria-hidden="true"
-      class="anticon-spin"
       data-icon="loading"
       fill="currentColor"
       focusable="false"
@@ -181,7 +175,6 @@ exports[`Icon should support config global two-tone primary color 1`] = `
 >
   <svg
     aria-hidden="true"
-    class=""
     data-icon="check-circle"
     fill="currentColor"
     focusable="false"
@@ -213,7 +206,6 @@ exports[`Icon should support config global two-tone primary color 2`] = `
 >
   <svg
     aria-hidden="true"
-    class=""
     data-icon="check-circle"
     fill="currentColor"
     focusable="false"
@@ -245,7 +237,6 @@ exports[`Icon should support config global two-tone primary color 3`] = `
 >
   <svg
     aria-hidden="true"
-    class=""
     data-icon="check-circle"
     fill="currentColor"
     focusable="false"
@@ -306,7 +297,6 @@ exports[`Icon should support event listeners 1`] = `
         tabIndex={-1}
       >
         <IconReact
-          className=""
           icon={
             Object {
               "icon": Object {
@@ -331,7 +321,6 @@ exports[`Icon should support event listeners 1`] = `
         >
           <svg
             aria-hidden="true"
-            className=""
             data-icon="home"
             fill="currentColor"
             focusable="false"
@@ -379,7 +368,6 @@ exports[`Icon should support event listeners 1`] = `
         role="img"
       >
         <IconReact
-          className=""
           icon={
             Object {
               "icon": Object {
@@ -404,7 +392,6 @@ exports[`Icon should support event listeners 1`] = `
         >
           <svg
             aria-hidden="true"
-            className=""
             data-icon="setting"
             fill="currentColor"
             focusable="false"
@@ -456,7 +443,6 @@ exports[`Icon should support event listeners 1`] = `
         role="img"
       >
         <IconReact
-          className=""
           icon={
             Object {
               "icon": Object {
@@ -481,7 +467,6 @@ exports[`Icon should support event listeners 1`] = `
         >
           <svg
             aria-hidden="true"
-            className=""
             data-icon="smile"
             fill="currentColor"
             focusable="false"
@@ -530,12 +515,11 @@ exports[`Icon should support event listeners 1`] = `
     >
       <span
         aria-label="sync"
-        className="anticon anticon-sync"
+        className="anticon anticon-sync anticon-spin"
         onKeyUp={[MockFunction]}
         role="img"
       >
         <IconReact
-          className="anticon-spin"
           icon={
             Object {
               "icon": Object {
@@ -560,7 +544,6 @@ exports[`Icon should support event listeners 1`] = `
         >
           <svg
             aria-hidden="true"
-            className="anticon-spin"
             data-icon="sync"
             fill="currentColor"
             focusable="false"
@@ -762,7 +745,6 @@ exports[`Icon should support two-tone icon 1`] = `
 >
   <svg
     aria-hidden="true"
-    class=""
     data-icon="check-circle"
     fill="currentColor"
     focusable="false"
@@ -794,7 +776,6 @@ exports[`Icon should support two-tone icon 2`] = `
 >
   <svg
     aria-hidden="true"
-    class=""
     data-icon="check-circle"
     fill="currentColor"
     focusable="false"
