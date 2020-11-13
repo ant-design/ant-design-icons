@@ -15,7 +15,7 @@ describe('IconFill', () => {
 
   it('should create Icon element.', () => {
     const icon = mount({ name: 'account-book' });
-    expect(icon!.children![0]).toBe(
+    expect((icon as any).children![0]).toBe(
       String.fromCharCode(fillGlyphMap['account-book'])
     );
     expect(icon).toMatchSnapshot();
