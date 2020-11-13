@@ -27,6 +27,14 @@ references:
           requires:
           - setup
           - icons-svg
+      - icons-vue:
+          requires:
+          - setup
+          - icons-svg
+      - icons-react-native:
+          requires:
+          - setup
+          - icons-svg
 
 jobs:
   setup:
@@ -76,6 +84,20 @@ jobs:
       - checkout
       - *attach_workspace
       - run: yarn angular:ci
+
+  icons-vue:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: yarn vue:ci
+
+  icons-react-native:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: yarn react-native:ci
 
 workflows:
   version: 2

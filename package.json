@@ -9,6 +9,8 @@
     "icons:test": "lerna run --scope @ant-design/icons-svg test",
     "react:ci": "lerna run --scope @ant-design/icons ci",
     "angular:ci": "lerna run --scope @ant-design/icons-angular-workspace ci",
+    "vue:ci": "lerna run --scope @ant-design/icons-vue ci",
+    "react-native:ci": "lerna run --scope @ant-design/icons-react-native ci",
     "lint": "lerna run lint"
   },
   "devDependencies": {

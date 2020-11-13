@@ -20,7 +20,8 @@
     "test": "cross-env NODE_ENV=test jest --config .jest.js",
     "prepublishOnly": "npm run lint && npm run generate && npm run compile && npm run test",
     "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
-    "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry"
+    "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry",
+    "ci": "npm run lint && npm run test && npm run compile"
   },
   "peerDependencies": {
     "vue": ">=3.0.0"
