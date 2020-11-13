@@ -21,6 +21,7 @@
     "pregenerate": "npm run clean",
     "clean": "rimraf -rf fonts iconfont src/*.tsx",
     "prepublishOnly": "npm run lint && npm run test && npm run compile",
+    "postinstall": "npm run patch-package",
     "patch-package": "patch-package",
     "ci": "npm run lint && npm run test && npm run compile"
   },
