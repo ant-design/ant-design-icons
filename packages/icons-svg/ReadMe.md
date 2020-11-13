@@ -22,7 +22,7 @@ Check [all icons list](https://github.com/ant-design/ant-design-icons/issues/227
 $ yarn add @ant-design/icons-svg
 
 # or use npm
-$ npm install @ant-design/icons --save
+$ npm install @ant-design/icons-svg --save
 ```
 
 ## Use Library Adapter
