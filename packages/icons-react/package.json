@@ -31,7 +31,7 @@
     "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry"
   },
   "peerDependencies": {
-    "react": "16.x"
+    "react": ">=16.0.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.9",
@@ -43,7 +43,9 @@
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
     "@umijs/fabric": "^2.2.2",
-    "antd": "^3.20.7",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "antd": "^4.8.2",
     "cross-env": "^5.2.0",
     "enzyme": "^3.10.0",
     "enzyme-to-json": "^3.3.5",
@@ -56,11 +58,11 @@
     "react-dom": "^16.4.2",
     "rimraf": "^3.0.0",
     "styled-components": "^3.3.3",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.0.3"
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
   },
   "dependencies": {
-    "@ant-design/colors": "^3.1.0",
+    "@ant-design/colors": "^5.0.0",
     "@ant-design/icons-svg": "^4.0.0",
     "@babel/runtime": "^7.10.4",
     "classnames": "^2.2.6",

@@ -27,6 +27,14 @@ references:
           requires:
           - setup
           - icons-svg
+      - icons-vue:
+          requires:
+          - setup
+          - icons-svg
+      - icons-react-native:
+          requires:
+          - setup
+          - icons-svg
 
 jobs:
   setup:
@@ -47,8 +55,6 @@ jobs:
           paths:
             - node_modules
             - packages/icons-*/node_modules
-      - store_artifacts:
-          path: yarn.lock
 
   icons-svg:
     <<: *container_config
@@ -78,6 +84,20 @@ jobs:
       - checkout
       - *attach_workspace
       - run: yarn angular:ci
+
+  icons-vue:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: yarn vue:ci
+
+  icons-react-native:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: yarn react-native:ci
 
 workflows:
   version: 2
