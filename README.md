@@ -9,9 +9,11 @@
 
 <div align="center">
 
-[![travis](https://img.shields.io/travis/ant-design/ant-design-icons/master.svg?style=flat&label=travis)](https://travis-ci.org/ant-design/ant-design-icons)
+[![CircleCI status][circleci-image]][circleci-url]
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
+[circleci-image]: https://img.shields.io/circleci/build/github/ant-design/ant-design-icons/master?style=flat-square
+[circleci-url]: https://circleci.com/gh/ant-design/ant-design-icons
 </div>
 
 ## Packages
