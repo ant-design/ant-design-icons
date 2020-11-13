@@ -42,9 +42,9 @@
     "@types/node": "^13.9.3",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
-    "@umijs/fabric": "^2.2.2",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
+    "@umijs/fabric": "^2.2.2",
     "antd": "^4.8.2",
     "cross-env": "^5.2.0",
     "enzyme": "^3.10.0",
@@ -64,7 +64,7 @@
   "dependencies": {
     "@ant-design/colors": "^5.0.0",
     "@ant-design/icons-svg": "^4.0.0",
-    "@babel/runtime": "^7.10.4",
+    "@babel/runtime": "^7.11.2",
     "classnames": "^2.2.6",
     "insert-css": "^2.0.0",
     "rc-util": "^5.0.1"
