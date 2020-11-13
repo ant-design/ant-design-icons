@@ -47,8 +47,6 @@ jobs:
           paths:
             - node_modules
             - packages/icons-*/node_modules
-      - store_artifacts:
-          path: yarn.lock
 
   icons-svg:
     <<: *container_config
