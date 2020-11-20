@@ -34,7 +34,7 @@ const Icon = (props: IconComponentProps, context: SetupContext) => {
     [cls]: cls,
   };
 
-  const svgClassString = !!spin || icon.name === 'loading' ? 'anticon-spin' : '';
+  const svgClassString = spin === '' || !!spin || icon.name === 'loading' ? 'anticon-spin' : '';
 
   let iconTabIndex = tabindex;
   if (iconTabIndex === undefined && onClick) {

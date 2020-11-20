@@ -47,7 +47,7 @@ const Icon = (props: IconComponentProps, context: SetupContext) => {
   };
 
   const svgClassString = {
-    'anticon-spin': !!spin,
+    'anticon-spin': spin === '' || !!spin,
   };
   const svgStyle = rotate
     ? {
