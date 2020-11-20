@@ -153,9 +153,11 @@ let cssInjectedFlag = false;
 export const useInsertStyles = (styleStr: string = iconStyles) => {
   nextTick(() => {
     if (!cssInjectedFlag) {
-      insertCss(styleStr, {
-        prepend: true,
-      });
+      if (typeof window !== 'undefined' && window.document && window.document.documentElement) {
+        insertCss(styleStr, {
+          prepend: true,
+        });
+      }
       cssInjectedFlag = true;
     }
   });
