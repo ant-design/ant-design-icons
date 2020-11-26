@@ -6,7 +6,7 @@ import ColumnWidthOutlinedSvg from '@ant-design/icons-svg/lib/asn/ColumnWidthOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ColumnWidthOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ColumnWidthOutlined: ColumnWidthOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import HeartFilledSvg from '@ant-design/icons-svg/lib/asn/HeartFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HeartFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HeartFilled: HeartFilledIconType = (props, context) => {

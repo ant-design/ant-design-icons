@@ -6,7 +6,7 @@ import PoundCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/PoundCircleOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PoundCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PoundCircleOutlined: PoundCircleOutlinedIconType = (props, context) => {

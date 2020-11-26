@@ -6,7 +6,7 @@ import ControlFilledSvg from '@ant-design/icons-svg/lib/asn/ControlFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ControlFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ControlFilled: ControlFilledIconType = (props, context) => {

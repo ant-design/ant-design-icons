@@ -6,7 +6,7 @@ import StopOutlinedSvg from '@ant-design/icons-svg/lib/asn/StopOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface StopOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const StopOutlined: StopOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import EyeInvisibleFilledSvg from '@ant-design/icons-svg/lib/asn/EyeInvisibleFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EyeInvisibleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EyeInvisibleFilled: EyeInvisibleFilledIconType = (props, context) => {

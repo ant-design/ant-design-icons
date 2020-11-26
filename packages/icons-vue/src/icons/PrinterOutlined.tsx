@@ -6,7 +6,7 @@ import PrinterOutlinedSvg from '@ant-design/icons-svg/lib/asn/PrinterOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PrinterOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PrinterOutlined: PrinterOutlinedIconType = (props, context) => {

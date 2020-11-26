@@ -6,7 +6,7 @@ import BellFilledSvg from '@ant-design/icons-svg/lib/asn/BellFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BellFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BellFilled: BellFilledIconType = (props, context) => {

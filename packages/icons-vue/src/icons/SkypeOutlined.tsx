@@ -6,7 +6,7 @@ import SkypeOutlinedSvg from '@ant-design/icons-svg/lib/asn/SkypeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SkypeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SkypeOutlined: SkypeOutlinedIconType = (props, context) => {

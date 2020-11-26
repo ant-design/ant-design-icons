@@ -6,7 +6,7 @@ import MailOutlinedSvg from '@ant-design/icons-svg/lib/asn/MailOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MailOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MailOutlined: MailOutlinedIconType = (props, context) => {

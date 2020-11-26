@@ -6,7 +6,7 @@ import ShopTwoToneSvg from '@ant-design/icons-svg/lib/asn/ShopTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ShopTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ShopTwoTone: ShopTwoToneIconType = (props, context) => {

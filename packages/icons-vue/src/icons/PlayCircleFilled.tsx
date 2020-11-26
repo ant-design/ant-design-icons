@@ -6,7 +6,7 @@ import PlayCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PlayCircleFilled'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PlayCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PlayCircleFilled: PlayCircleFilledIconType = (props, context) => {

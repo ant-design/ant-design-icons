@@ -6,7 +6,7 @@ import SmallDashOutlinedSvg from '@ant-design/icons-svg/lib/asn/SmallDashOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SmallDashOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SmallDashOutlined: SmallDashOutlinedIconType = (props, context) => {

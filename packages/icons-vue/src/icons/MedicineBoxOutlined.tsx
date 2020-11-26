@@ -6,7 +6,7 @@ import MedicineBoxOutlinedSvg from '@ant-design/icons-svg/lib/asn/MedicineBoxOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MedicineBoxOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MedicineBoxOutlined: MedicineBoxOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import FastBackwardFilledSvg from '@ant-design/icons-svg/lib/asn/FastBackwardFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FastBackwardFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FastBackwardFilled: FastBackwardFilledIconType = (props, context) => {

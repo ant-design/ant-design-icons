@@ -6,7 +6,7 @@ import PoweroffOutlinedSvg from '@ant-design/icons-svg/lib/asn/PoweroffOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PoweroffOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PoweroffOutlined: PoweroffOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import CheckCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/CheckCircleTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CheckCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CheckCircleTwoTone: CheckCircleTwoToneIconType = (props, context) => {

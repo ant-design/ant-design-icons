@@ -6,7 +6,7 @@ import BorderInnerOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderInnerOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BorderInnerOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BorderInnerOutlined: BorderInnerOutlinedIconType = (props, context) => {

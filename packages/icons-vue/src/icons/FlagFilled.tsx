@@ -6,7 +6,7 @@ import FlagFilledSvg from '@ant-design/icons-svg/lib/asn/FlagFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FlagFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FlagFilled: FlagFilledIconType = (props, context) => {

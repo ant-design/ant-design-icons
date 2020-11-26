@@ -39,7 +39,7 @@ import <%= svgIdentifier %>Svg from '@ant-design/icons-svg/lib/asn/<%= svgIdenti
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface <%= svgIdentifier %>IconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const <%= svgIdentifier %>: <%= svgIdentifier %>IconType = (props, context) => {

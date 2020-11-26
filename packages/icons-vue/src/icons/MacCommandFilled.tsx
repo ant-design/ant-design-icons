@@ -6,7 +6,7 @@ import MacCommandFilledSvg from '@ant-design/icons-svg/lib/asn/MacCommandFilled'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MacCommandFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MacCommandFilled: MacCommandFilledIconType = (props, context) => {

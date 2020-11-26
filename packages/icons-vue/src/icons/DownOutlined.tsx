@@ -6,7 +6,7 @@ import DownOutlinedSvg from '@ant-design/icons-svg/lib/asn/DownOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DownOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DownOutlined: DownOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import UsbOutlinedSvg from '@ant-design/icons-svg/lib/asn/UsbOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UsbOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UsbOutlined: UsbOutlinedIconType = (props, context) => {

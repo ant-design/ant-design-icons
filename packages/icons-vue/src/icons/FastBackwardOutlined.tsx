@@ -6,7 +6,7 @@ import FastBackwardOutlinedSvg from '@ant-design/icons-svg/lib/asn/FastBackwardO
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FastBackwardOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FastBackwardOutlined: FastBackwardOutlinedIconType = (props, context) => {

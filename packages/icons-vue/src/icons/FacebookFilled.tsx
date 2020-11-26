@@ -6,7 +6,7 @@ import FacebookFilledSvg from '@ant-design/icons-svg/lib/asn/FacebookFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FacebookFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FacebookFilled: FacebookFilledIconType = (props, context) => {

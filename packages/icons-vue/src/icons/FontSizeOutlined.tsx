@@ -6,7 +6,7 @@ import FontSizeOutlinedSvg from '@ant-design/icons-svg/lib/asn/FontSizeOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FontSizeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FontSizeOutlined: FontSizeOutlinedIconType = (props, context) => {

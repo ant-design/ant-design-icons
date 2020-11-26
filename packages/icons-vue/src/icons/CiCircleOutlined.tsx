@@ -6,7 +6,7 @@ import CiCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/CiCircleOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CiCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CiCircleOutlined: CiCircleOutlinedIconType = (props, context) => {

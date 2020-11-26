@@ -6,7 +6,7 @@ import FallOutlinedSvg from '@ant-design/icons-svg/lib/asn/FallOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FallOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FallOutlined: FallOutlinedIconType = (props, context) => {

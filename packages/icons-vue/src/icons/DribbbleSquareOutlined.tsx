@@ -6,7 +6,7 @@ import DribbbleSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/DribbbleSqu
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DribbbleSquareOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DribbbleSquareOutlined: DribbbleSquareOutlinedIconType = (props, context) => {

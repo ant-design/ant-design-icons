@@ -6,7 +6,7 @@ import SwitcherFilledSvg from '@ant-design/icons-svg/lib/asn/SwitcherFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SwitcherFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SwitcherFilled: SwitcherFilledIconType = (props, context) => {

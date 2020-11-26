@@ -6,7 +6,7 @@ import BugTwoToneSvg from '@ant-design/icons-svg/lib/asn/BugTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BugTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BugTwoTone: BugTwoToneIconType = (props, context) => {

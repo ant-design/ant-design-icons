@@ -6,7 +6,7 @@ import SmileTwoToneSvg from '@ant-design/icons-svg/lib/asn/SmileTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SmileTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SmileTwoTone: SmileTwoToneIconType = (props, context) => {

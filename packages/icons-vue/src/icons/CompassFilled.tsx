@@ -6,7 +6,7 @@ import CompassFilledSvg from '@ant-design/icons-svg/lib/asn/CompassFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CompassFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CompassFilled: CompassFilledIconType = (props, context) => {

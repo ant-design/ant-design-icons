@@ -6,7 +6,7 @@ import RedEnvelopeTwoToneSvg from '@ant-design/icons-svg/lib/asn/RedEnvelopeTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RedEnvelopeTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RedEnvelopeTwoTone: RedEnvelopeTwoToneIconType = (props, context) => {

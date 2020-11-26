@@ -6,7 +6,7 @@ import FastForwardOutlinedSvg from '@ant-design/icons-svg/lib/asn/FastForwardOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FastForwardOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FastForwardOutlined: FastForwardOutlinedIconType = (props, context) => {

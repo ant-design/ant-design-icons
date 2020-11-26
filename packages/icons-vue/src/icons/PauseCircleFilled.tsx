@@ -6,7 +6,7 @@ import PauseCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PauseCircleFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PauseCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PauseCircleFilled: PauseCircleFilledIconType = (props, context) => {

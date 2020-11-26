@@ -6,7 +6,7 @@ import EyeInvisibleTwoToneSvg from '@ant-design/icons-svg/lib/asn/EyeInvisibleTw
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EyeInvisibleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EyeInvisibleTwoTone: EyeInvisibleTwoToneIconType = (props, context) => {

@@ -6,7 +6,7 @@ import LeftCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/LeftCircleTwoTon
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LeftCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LeftCircleTwoTone: LeftCircleTwoToneIconType = (props, context) => {

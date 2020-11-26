@@ -6,7 +6,7 @@ import CiTwoToneSvg from '@ant-design/icons-svg/lib/asn/CiTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CiTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CiTwoTone: CiTwoToneIconType = (props, context) => {

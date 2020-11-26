@@ -6,7 +6,7 @@ import CodepenSquareFilledSvg from '@ant-design/icons-svg/lib/asn/CodepenSquareF
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CodepenSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CodepenSquareFilled: CodepenSquareFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import HomeFilledSvg from '@ant-design/icons-svg/lib/asn/HomeFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HomeFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HomeFilled: HomeFilledIconType = (props, context) => {

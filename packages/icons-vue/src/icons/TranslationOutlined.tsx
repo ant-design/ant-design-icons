@@ -6,7 +6,7 @@ import TranslationOutlinedSvg from '@ant-design/icons-svg/lib/asn/TranslationOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TranslationOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TranslationOutlined: TranslationOutlinedIconType = (props, context) => {

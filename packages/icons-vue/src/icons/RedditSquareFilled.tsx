@@ -6,7 +6,7 @@ import RedditSquareFilledSvg from '@ant-design/icons-svg/lib/asn/RedditSquareFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RedditSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RedditSquareFilled: RedditSquareFilledIconType = (props, context) => {

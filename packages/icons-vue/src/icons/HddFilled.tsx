@@ -6,7 +6,7 @@ import HddFilledSvg from '@ant-design/icons-svg/lib/asn/HddFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HddFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HddFilled: HddFilledIconType = (props, context) => {

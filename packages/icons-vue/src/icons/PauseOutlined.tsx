@@ -6,7 +6,7 @@ import PauseOutlinedSvg from '@ant-design/icons-svg/lib/asn/PauseOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PauseOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PauseOutlined: PauseOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import DiffOutlinedSvg from '@ant-design/icons-svg/lib/asn/DiffOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DiffOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DiffOutlined: DiffOutlinedIconType = (props, context) => {

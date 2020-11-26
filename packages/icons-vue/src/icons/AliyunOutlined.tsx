@@ -6,7 +6,7 @@ import AliyunOutlinedSvg from '@ant-design/icons-svg/lib/asn/AliyunOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AliyunOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AliyunOutlined: AliyunOutlinedIconType = (props, context) => {

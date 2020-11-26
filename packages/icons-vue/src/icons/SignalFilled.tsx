@@ -6,7 +6,7 @@ import SignalFilledSvg from '@ant-design/icons-svg/lib/asn/SignalFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SignalFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SignalFilled: SignalFilledIconType = (props, context) => {

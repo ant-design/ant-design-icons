@@ -6,7 +6,7 @@ import MailFilledSvg from '@ant-design/icons-svg/lib/asn/MailFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MailFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MailFilled: MailFilledIconType = (props, context) => {

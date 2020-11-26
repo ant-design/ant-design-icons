@@ -6,7 +6,7 @@ import CalendarTwoToneSvg from '@ant-design/icons-svg/lib/asn/CalendarTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CalendarTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CalendarTwoTone: CalendarTwoToneIconType = (props, context) => {

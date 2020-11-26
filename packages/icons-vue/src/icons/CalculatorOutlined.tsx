@@ -6,7 +6,7 @@ import CalculatorOutlinedSvg from '@ant-design/icons-svg/lib/asn/CalculatorOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CalculatorOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CalculatorOutlined: CalculatorOutlinedIconType = (props, context) => {

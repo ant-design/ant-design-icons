@@ -6,7 +6,7 @@ import ReadOutlinedSvg from '@ant-design/icons-svg/lib/asn/ReadOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ReadOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ReadOutlined: ReadOutlinedIconType = (props, context) => {

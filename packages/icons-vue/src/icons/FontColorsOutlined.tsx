@@ -6,7 +6,7 @@ import FontColorsOutlinedSvg from '@ant-design/icons-svg/lib/asn/FontColorsOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FontColorsOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FontColorsOutlined: FontColorsOutlinedIconType = (props, context) => {

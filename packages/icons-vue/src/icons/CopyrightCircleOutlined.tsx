@@ -6,7 +6,7 @@ import CopyrightCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/CopyrightC
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CopyrightCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CopyrightCircleOutlined: CopyrightCircleOutlinedIconType = (props, context) => {

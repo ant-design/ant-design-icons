@@ -6,7 +6,7 @@ import ManOutlinedSvg from '@ant-design/icons-svg/lib/asn/ManOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ManOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ManOutlined: ManOutlinedIconType = (props, context) => {

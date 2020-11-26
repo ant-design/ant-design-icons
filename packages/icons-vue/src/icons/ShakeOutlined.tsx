@@ -6,7 +6,7 @@ import ShakeOutlinedSvg from '@ant-design/icons-svg/lib/asn/ShakeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ShakeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ShakeOutlined: ShakeOutlinedIconType = (props, context) => {

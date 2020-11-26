@@ -6,7 +6,7 @@ import BlockOutlinedSvg from '@ant-design/icons-svg/lib/asn/BlockOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BlockOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BlockOutlined: BlockOutlinedIconType = (props, context) => {

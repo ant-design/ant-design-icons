@@ -6,7 +6,7 @@ import StrikethroughOutlinedSvg from '@ant-design/icons-svg/lib/asn/Strikethroug
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface StrikethroughOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const StrikethroughOutlined: StrikethroughOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import BuildFilledSvg from '@ant-design/icons-svg/lib/asn/BuildFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BuildFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BuildFilled: BuildFilledIconType = (props, context) => {

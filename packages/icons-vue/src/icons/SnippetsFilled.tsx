@@ -6,7 +6,7 @@ import SnippetsFilledSvg from '@ant-design/icons-svg/lib/asn/SnippetsFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SnippetsFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SnippetsFilled: SnippetsFilledIconType = (props, context) => {

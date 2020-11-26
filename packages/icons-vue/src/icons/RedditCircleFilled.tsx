@@ -6,7 +6,7 @@ import RedditCircleFilledSvg from '@ant-design/icons-svg/lib/asn/RedditCircleFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RedditCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RedditCircleFilled: RedditCircleFilledIconType = (props, context) => {

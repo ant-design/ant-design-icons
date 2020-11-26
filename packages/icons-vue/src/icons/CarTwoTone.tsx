@@ -6,7 +6,7 @@ import CarTwoToneSvg from '@ant-design/icons-svg/lib/asn/CarTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CarTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CarTwoTone: CarTwoToneIconType = (props, context) => {

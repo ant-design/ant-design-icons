@@ -6,7 +6,7 @@ import UsbTwoToneSvg from '@ant-design/icons-svg/lib/asn/UsbTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UsbTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UsbTwoTone: UsbTwoToneIconType = (props, context) => {

@@ -6,7 +6,7 @@ import PicRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/PicRightOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PicRightOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PicRightOutlined: PicRightOutlinedIconType = (props, context) => {

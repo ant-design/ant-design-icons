@@ -6,7 +6,7 @@ import IeCircleFilledSvg from '@ant-design/icons-svg/lib/asn/IeCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface IeCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const IeCircleFilled: IeCircleFilledIconType = (props, context) => {

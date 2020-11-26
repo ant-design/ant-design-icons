@@ -6,7 +6,7 @@ import PartitionOutlinedSvg from '@ant-design/icons-svg/lib/asn/PartitionOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PartitionOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PartitionOutlined: PartitionOutlinedIconType = (props, context) => {

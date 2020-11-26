@@ -6,7 +6,7 @@ import QuestionCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/QuestionCirc
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface QuestionCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const QuestionCircleTwoTone: QuestionCircleTwoToneIconType = (props, context) => {

@@ -6,7 +6,7 @@ import PlusSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/PlusSquareTwoTon
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PlusSquareTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PlusSquareTwoTone: PlusSquareTwoToneIconType = (props, context) => {

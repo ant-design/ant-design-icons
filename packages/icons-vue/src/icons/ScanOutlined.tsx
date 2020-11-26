@@ -6,7 +6,7 @@ import ScanOutlinedSvg from '@ant-design/icons-svg/lib/asn/ScanOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ScanOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ScanOutlined: ScanOutlinedIconType = (props, context) => {

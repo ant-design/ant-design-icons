@@ -6,7 +6,7 @@ import BugOutlinedSvg from '@ant-design/icons-svg/lib/asn/BugOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BugOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BugOutlined: BugOutlinedIconType = (props, context) => {

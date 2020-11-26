@@ -6,7 +6,7 @@ import PayCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PayCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PayCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PayCircleFilled: PayCircleFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import YoutubeFilledSvg from '@ant-design/icons-svg/lib/asn/YoutubeFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface YoutubeFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const YoutubeFilled: YoutubeFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import RightSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/RightSquareTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RightSquareTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RightSquareTwoTone: RightSquareTwoToneIconType = (props, context) => {

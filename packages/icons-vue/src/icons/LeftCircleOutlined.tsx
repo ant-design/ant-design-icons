@@ -6,7 +6,7 @@ import LeftCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/LeftCircleOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LeftCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LeftCircleOutlined: LeftCircleOutlinedIconType = (props, context) => {

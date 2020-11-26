@@ -6,7 +6,7 @@ import FundProjectionScreenOutlinedSvg from '@ant-design/icons-svg/lib/asn/FundP
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FundProjectionScreenOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FundProjectionScreenOutlined: FundProjectionScreenOutlinedIconType = (props, context) => {

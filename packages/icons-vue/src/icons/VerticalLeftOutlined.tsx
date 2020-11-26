@@ -6,7 +6,7 @@ import VerticalLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/VerticalLeftO
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface VerticalLeftOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const VerticalLeftOutlined: VerticalLeftOutlinedIconType = (props, context) => {

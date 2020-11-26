@@ -6,7 +6,7 @@ import AlibabaOutlinedSvg from '@ant-design/icons-svg/lib/asn/AlibabaOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AlibabaOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AlibabaOutlined: AlibabaOutlinedIconType = (props, context) => {

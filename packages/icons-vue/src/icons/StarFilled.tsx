@@ -6,7 +6,7 @@ import StarFilledSvg from '@ant-design/icons-svg/lib/asn/StarFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface StarFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const StarFilled: StarFilledIconType = (props, context) => {

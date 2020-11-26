@@ -6,7 +6,7 @@ import RedEnvelopeFilledSvg from '@ant-design/icons-svg/lib/asn/RedEnvelopeFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RedEnvelopeFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RedEnvelopeFilled: RedEnvelopeFilledIconType = (props, context) => {

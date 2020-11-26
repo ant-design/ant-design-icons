@@ -6,7 +6,7 @@ import GoldFilledSvg from '@ant-design/icons-svg/lib/asn/GoldFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface GoldFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const GoldFilled: GoldFilledIconType = (props, context) => {

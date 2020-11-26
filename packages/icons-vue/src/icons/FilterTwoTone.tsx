@@ -6,7 +6,7 @@ import FilterTwoToneSvg from '@ant-design/icons-svg/lib/asn/FilterTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FilterTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FilterTwoTone: FilterTwoToneIconType = (props, context) => {

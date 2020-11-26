@@ -6,7 +6,7 @@ import CheckSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/CheckSquareOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CheckSquareOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CheckSquareOutlined: CheckSquareOutlinedIconType = (props, context) => {

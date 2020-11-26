@@ -6,7 +6,7 @@ import FileExcelTwoToneSvg from '@ant-design/icons-svg/lib/asn/FileExcelTwoTone'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileExcelTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileExcelTwoTone: FileExcelTwoToneIconType = (props, context) => {

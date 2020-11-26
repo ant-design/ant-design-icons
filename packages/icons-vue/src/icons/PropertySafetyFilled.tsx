@@ -6,7 +6,7 @@ import PropertySafetyFilledSvg from '@ant-design/icons-svg/lib/asn/PropertySafet
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PropertySafetyFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PropertySafetyFilled: PropertySafetyFilledIconType = (props, context) => {

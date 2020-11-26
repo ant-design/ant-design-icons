@@ -6,7 +6,7 @@ import TrophyTwoToneSvg from '@ant-design/icons-svg/lib/asn/TrophyTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TrophyTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TrophyTwoTone: TrophyTwoToneIconType = (props, context) => {

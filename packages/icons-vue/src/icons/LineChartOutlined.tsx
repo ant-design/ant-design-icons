@@ -6,7 +6,7 @@ import LineChartOutlinedSvg from '@ant-design/icons-svg/lib/asn/LineChartOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LineChartOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LineChartOutlined: LineChartOutlinedIconType = (props, context) => {

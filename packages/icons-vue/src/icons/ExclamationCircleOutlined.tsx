@@ -6,7 +6,7 @@ import ExclamationCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/Exclamat
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ExclamationCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ExclamationCircleOutlined: ExclamationCircleOutlinedIconType = (props, context) => {

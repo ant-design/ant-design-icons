@@ -6,7 +6,7 @@ import GithubFilledSvg from '@ant-design/icons-svg/lib/asn/GithubFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface GithubFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const GithubFilled: GithubFilledIconType = (props, context) => {

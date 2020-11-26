@@ -6,7 +6,7 @@ import DeleteRowOutlinedSvg from '@ant-design/icons-svg/lib/asn/DeleteRowOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DeleteRowOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DeleteRowOutlined: DeleteRowOutlinedIconType = (props, context) => {

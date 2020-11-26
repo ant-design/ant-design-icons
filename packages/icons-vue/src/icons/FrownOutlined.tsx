@@ -6,7 +6,7 @@ import FrownOutlinedSvg from '@ant-design/icons-svg/lib/asn/FrownOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FrownOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FrownOutlined: FrownOutlinedIconType = (props, context) => {

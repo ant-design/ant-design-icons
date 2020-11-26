@@ -6,7 +6,7 @@ import CloseSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloseSquareOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CloseSquareOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CloseSquareOutlined: CloseSquareOutlinedIconType = (props, context) => {

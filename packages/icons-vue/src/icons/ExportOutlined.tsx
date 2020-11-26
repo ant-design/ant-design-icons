@@ -6,7 +6,7 @@ import ExportOutlinedSvg from '@ant-design/icons-svg/lib/asn/ExportOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ExportOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ExportOutlined: ExportOutlinedIconType = (props, context) => {

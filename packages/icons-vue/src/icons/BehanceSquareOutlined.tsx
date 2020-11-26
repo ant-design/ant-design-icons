@@ -6,7 +6,7 @@ import BehanceSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/BehanceSquar
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BehanceSquareOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BehanceSquareOutlined: BehanceSquareOutlinedIconType = (props, context) => {

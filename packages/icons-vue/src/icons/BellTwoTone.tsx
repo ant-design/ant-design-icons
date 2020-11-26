@@ -6,7 +6,7 @@ import BellTwoToneSvg from '@ant-design/icons-svg/lib/asn/BellTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BellTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BellTwoTone: BellTwoToneIconType = (props, context) => {

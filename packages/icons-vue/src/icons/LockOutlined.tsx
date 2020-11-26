@@ -6,7 +6,7 @@ import LockOutlinedSvg from '@ant-design/icons-svg/lib/asn/LockOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LockOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LockOutlined: LockOutlinedIconType = (props, context) => {

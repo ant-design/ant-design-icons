@@ -6,7 +6,7 @@ import EuroTwoToneSvg from '@ant-design/icons-svg/lib/asn/EuroTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EuroTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EuroTwoTone: EuroTwoToneIconType = (props, context) => {

@@ -6,7 +6,7 @@ import HomeTwoToneSvg from '@ant-design/icons-svg/lib/asn/HomeTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HomeTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HomeTwoTone: HomeTwoToneIconType = (props, context) => {

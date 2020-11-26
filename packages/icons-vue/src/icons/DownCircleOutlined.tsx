@@ -6,7 +6,7 @@ import DownCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/DownCircleOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DownCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DownCircleOutlined: DownCircleOutlinedIconType = (props, context) => {

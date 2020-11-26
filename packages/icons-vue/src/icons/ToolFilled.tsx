@@ -6,7 +6,7 @@ import ToolFilledSvg from '@ant-design/icons-svg/lib/asn/ToolFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ToolFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ToolFilled: ToolFilledIconType = (props, context) => {

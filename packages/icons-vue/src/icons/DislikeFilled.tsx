@@ -6,7 +6,7 @@ import DislikeFilledSvg from '@ant-design/icons-svg/lib/asn/DislikeFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DislikeFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DislikeFilled: DislikeFilledIconType = (props, context) => {

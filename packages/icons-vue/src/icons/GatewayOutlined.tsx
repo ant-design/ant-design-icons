@@ -6,7 +6,7 @@ import GatewayOutlinedSvg from '@ant-design/icons-svg/lib/asn/GatewayOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface GatewayOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const GatewayOutlined: GatewayOutlinedIconType = (props, context) => {

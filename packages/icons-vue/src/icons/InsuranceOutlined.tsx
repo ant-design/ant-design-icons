@@ -6,7 +6,7 @@ import InsuranceOutlinedSvg from '@ant-design/icons-svg/lib/asn/InsuranceOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface InsuranceOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const InsuranceOutlined: InsuranceOutlinedIconType = (props, context) => {

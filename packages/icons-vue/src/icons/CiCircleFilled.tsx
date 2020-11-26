@@ -6,7 +6,7 @@ import CiCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CiCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CiCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CiCircleFilled: CiCircleFilledIconType = (props, context) => {

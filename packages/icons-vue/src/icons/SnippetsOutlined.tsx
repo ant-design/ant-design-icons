@@ -6,7 +6,7 @@ import SnippetsOutlinedSvg from '@ant-design/icons-svg/lib/asn/SnippetsOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SnippetsOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SnippetsOutlined: SnippetsOutlinedIconType = (props, context) => {

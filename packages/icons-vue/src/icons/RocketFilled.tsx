@@ -6,7 +6,7 @@ import RocketFilledSvg from '@ant-design/icons-svg/lib/asn/RocketFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RocketFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RocketFilled: RocketFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import ExperimentFilledSvg from '@ant-design/icons-svg/lib/asn/ExperimentFilled'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ExperimentFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ExperimentFilled: ExperimentFilledIconType = (props, context) => {

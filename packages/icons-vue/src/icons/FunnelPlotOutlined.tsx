@@ -6,7 +6,7 @@ import FunnelPlotOutlinedSvg from '@ant-design/icons-svg/lib/asn/FunnelPlotOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FunnelPlotOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FunnelPlotOutlined: FunnelPlotOutlinedIconType = (props, context) => {

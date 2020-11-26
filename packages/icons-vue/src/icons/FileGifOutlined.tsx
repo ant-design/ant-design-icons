@@ -6,7 +6,7 @@ import FileGifOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileGifOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileGifOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileGifOutlined: FileGifOutlinedIconType = (props, context) => {

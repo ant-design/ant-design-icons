@@ -6,7 +6,7 @@ import ClockCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/ClockCircleOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ClockCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ClockCircleOutlined: ClockCircleOutlinedIconType = (props, context) => {

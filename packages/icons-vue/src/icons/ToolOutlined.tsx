@@ -6,7 +6,7 @@ import ToolOutlinedSvg from '@ant-design/icons-svg/lib/asn/ToolOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ToolOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ToolOutlined: ToolOutlinedIconType = (props, context) => {

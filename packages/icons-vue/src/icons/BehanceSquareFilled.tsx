@@ -6,7 +6,7 @@ import BehanceSquareFilledSvg from '@ant-design/icons-svg/lib/asn/BehanceSquareF
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BehanceSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BehanceSquareFilled: BehanceSquareFilledIconType = (props, context) => {

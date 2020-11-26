@@ -6,7 +6,7 @@ import AppstoreOutlinedSvg from '@ant-design/icons-svg/lib/asn/AppstoreOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AppstoreOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AppstoreOutlined: AppstoreOutlinedIconType = (props, context) => {

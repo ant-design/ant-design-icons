@@ -6,7 +6,7 @@ import SlidersFilledSvg from '@ant-design/icons-svg/lib/asn/SlidersFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SlidersFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SlidersFilled: SlidersFilledIconType = (props, context) => {

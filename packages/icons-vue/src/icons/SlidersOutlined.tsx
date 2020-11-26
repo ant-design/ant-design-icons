@@ -6,7 +6,7 @@ import SlidersOutlinedSvg from '@ant-design/icons-svg/lib/asn/SlidersOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SlidersOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SlidersOutlined: SlidersOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import UndoOutlinedSvg from '@ant-design/icons-svg/lib/asn/UndoOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UndoOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UndoOutlined: UndoOutlinedIconType = (props, context) => {

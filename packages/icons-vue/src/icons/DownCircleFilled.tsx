@@ -6,7 +6,7 @@ import DownCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DownCircleFilled'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DownCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DownCircleFilled: DownCircleFilledIconType = (props, context) => {

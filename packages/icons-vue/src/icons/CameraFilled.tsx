@@ -6,7 +6,7 @@ import CameraFilledSvg from '@ant-design/icons-svg/lib/asn/CameraFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CameraFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CameraFilled: CameraFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import FileExclamationTwoToneSvg from '@ant-design/icons-svg/lib/asn/FileExclama
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileExclamationTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileExclamationTwoTone: FileExclamationTwoToneIconType = (props, context) => {

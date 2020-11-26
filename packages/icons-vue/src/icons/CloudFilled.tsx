@@ -6,7 +6,7 @@ import CloudFilledSvg from '@ant-design/icons-svg/lib/asn/CloudFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CloudFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CloudFilled: CloudFilledIconType = (props, context) => {

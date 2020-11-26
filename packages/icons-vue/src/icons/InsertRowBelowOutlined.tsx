@@ -6,7 +6,7 @@ import InsertRowBelowOutlinedSvg from '@ant-design/icons-svg/lib/asn/InsertRowBe
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface InsertRowBelowOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const InsertRowBelowOutlined: InsertRowBelowOutlinedIconType = (props, context) => {

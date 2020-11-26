@@ -6,7 +6,7 @@ import TwitterCircleFilledSvg from '@ant-design/icons-svg/lib/asn/TwitterCircleF
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TwitterCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TwitterCircleFilled: TwitterCircleFilledIconType = (props, context) => {

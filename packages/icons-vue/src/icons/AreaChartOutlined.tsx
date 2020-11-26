@@ -6,7 +6,7 @@ import AreaChartOutlinedSvg from '@ant-design/icons-svg/lib/asn/AreaChartOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AreaChartOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AreaChartOutlined: AreaChartOutlinedIconType = (props, context) => {

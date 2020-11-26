@@ -6,7 +6,7 @@ import TagOutlinedSvg from '@ant-design/icons-svg/lib/asn/TagOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TagOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TagOutlined: TagOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import AppleOutlinedSvg from '@ant-design/icons-svg/lib/asn/AppleOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AppleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AppleOutlined: AppleOutlinedIconType = (props, context) => {

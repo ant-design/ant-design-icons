@@ -6,7 +6,7 @@ import LockTwoToneSvg from '@ant-design/icons-svg/lib/asn/LockTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LockTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LockTwoTone: LockTwoToneIconType = (props, context) => {

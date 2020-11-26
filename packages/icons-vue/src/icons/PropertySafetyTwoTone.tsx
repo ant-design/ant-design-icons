@@ -6,7 +6,7 @@ import PropertySafetyTwoToneSvg from '@ant-design/icons-svg/lib/asn/PropertySafe
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PropertySafetyTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PropertySafetyTwoTone: PropertySafetyTwoToneIconType = (props, context) => {

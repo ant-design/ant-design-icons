@@ -6,7 +6,7 @@ import QrcodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/QrcodeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface QrcodeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const QrcodeOutlined: QrcodeOutlinedIconType = (props, context) => {

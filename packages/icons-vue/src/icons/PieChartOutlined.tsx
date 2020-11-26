@@ -6,7 +6,7 @@ import PieChartOutlinedSvg from '@ant-design/icons-svg/lib/asn/PieChartOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PieChartOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PieChartOutlined: PieChartOutlinedIconType = (props, context) => {

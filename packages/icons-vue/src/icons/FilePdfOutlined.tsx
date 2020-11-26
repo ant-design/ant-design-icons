@@ -6,7 +6,7 @@ import FilePdfOutlinedSvg from '@ant-design/icons-svg/lib/asn/FilePdfOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FilePdfOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FilePdfOutlined: FilePdfOutlinedIconType = (props, context) => {

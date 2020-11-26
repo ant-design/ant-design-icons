@@ -6,7 +6,7 @@ import LikeFilledSvg from '@ant-design/icons-svg/lib/asn/LikeFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LikeFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LikeFilled: LikeFilledIconType = (props, context) => {

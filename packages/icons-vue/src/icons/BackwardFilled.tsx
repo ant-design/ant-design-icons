@@ -6,7 +6,7 @@ import BackwardFilledSvg from '@ant-design/icons-svg/lib/asn/BackwardFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BackwardFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BackwardFilled: BackwardFilledIconType = (props, context) => {

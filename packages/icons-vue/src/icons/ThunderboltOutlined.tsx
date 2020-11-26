@@ -6,7 +6,7 @@ import ThunderboltOutlinedSvg from '@ant-design/icons-svg/lib/asn/ThunderboltOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ThunderboltOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ThunderboltOutlined: ThunderboltOutlinedIconType = (props, context) => {

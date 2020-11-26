@@ -6,7 +6,7 @@ import LockFilledSvg from '@ant-design/icons-svg/lib/asn/LockFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LockFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LockFilled: LockFilledIconType = (props, context) => {

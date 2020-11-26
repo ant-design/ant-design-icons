@@ -6,7 +6,7 @@ import ZhihuCircleFilledSvg from '@ant-design/icons-svg/lib/asn/ZhihuCircleFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ZhihuCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ZhihuCircleFilled: ZhihuCircleFilledIconType = (props, context) => {

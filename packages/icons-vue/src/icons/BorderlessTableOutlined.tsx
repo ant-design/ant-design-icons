@@ -6,7 +6,7 @@ import BorderlessTableOutlinedSvg from '@ant-design/icons-svg/lib/asn/Borderless
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BorderlessTableOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BorderlessTableOutlined: BorderlessTableOutlinedIconType = (props, context) => {

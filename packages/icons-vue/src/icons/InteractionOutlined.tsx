@@ -6,7 +6,7 @@ import InteractionOutlinedSvg from '@ant-design/icons-svg/lib/asn/InteractionOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface InteractionOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const InteractionOutlined: InteractionOutlinedIconType = (props, context) => {

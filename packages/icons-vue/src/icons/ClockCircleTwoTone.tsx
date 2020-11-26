@@ -6,7 +6,7 @@ import ClockCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/ClockCircleTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ClockCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ClockCircleTwoTone: ClockCircleTwoToneIconType = (props, context) => {

@@ -6,7 +6,7 @@ import ConsoleSqlOutlinedSvg from '@ant-design/icons-svg/lib/asn/ConsoleSqlOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ConsoleSqlOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ConsoleSqlOutlined: ConsoleSqlOutlinedIconType = (props, context) => {

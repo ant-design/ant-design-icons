@@ -6,7 +6,7 @@ import CreditCardTwoToneSvg from '@ant-design/icons-svg/lib/asn/CreditCardTwoTon
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CreditCardTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CreditCardTwoTone: CreditCardTwoToneIconType = (props, context) => {

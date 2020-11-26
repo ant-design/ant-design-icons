@@ -6,7 +6,7 @@ import LeftCircleFilledSvg from '@ant-design/icons-svg/lib/asn/LeftCircleFilled'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LeftCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LeftCircleFilled: LeftCircleFilledIconType = (props, context) => {

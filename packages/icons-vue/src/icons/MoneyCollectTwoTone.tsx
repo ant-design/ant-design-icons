@@ -6,7 +6,7 @@ import MoneyCollectTwoToneSvg from '@ant-design/icons-svg/lib/asn/MoneyCollectTw
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MoneyCollectTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MoneyCollectTwoTone: MoneyCollectTwoToneIconType = (props, context) => {

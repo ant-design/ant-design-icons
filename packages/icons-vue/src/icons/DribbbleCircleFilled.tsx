@@ -6,7 +6,7 @@ import DribbbleCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DribbbleCircl
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DribbbleCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DribbbleCircleFilled: DribbbleCircleFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import CloseCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CloseCircleFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CloseCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CloseCircleFilled: CloseCircleFilledIconType = (props, context) => {

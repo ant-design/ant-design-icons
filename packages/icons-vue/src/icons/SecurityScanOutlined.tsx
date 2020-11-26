@@ -6,7 +6,7 @@ import SecurityScanOutlinedSvg from '@ant-design/icons-svg/lib/asn/SecurityScanO
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SecurityScanOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SecurityScanOutlined: SecurityScanOutlinedIconType = (props, context) => {

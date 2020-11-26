@@ -6,7 +6,7 @@ import CompressOutlinedSvg from '@ant-design/icons-svg/lib/asn/CompressOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CompressOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CompressOutlined: CompressOutlinedIconType = (props, context) => {

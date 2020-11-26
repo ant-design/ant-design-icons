@@ -6,7 +6,7 @@ import Html5FilledSvg from '@ant-design/icons-svg/lib/asn/Html5Filled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface Html5FilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const Html5Filled: Html5FilledIconType = (props, context) => {

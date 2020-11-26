@@ -6,7 +6,7 @@ import TwitterSquareFilledSvg from '@ant-design/icons-svg/lib/asn/TwitterSquareF
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TwitterSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TwitterSquareFilled: TwitterSquareFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import SoundFilledSvg from '@ant-design/icons-svg/lib/asn/SoundFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SoundFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SoundFilled: SoundFilledIconType = (props, context) => {

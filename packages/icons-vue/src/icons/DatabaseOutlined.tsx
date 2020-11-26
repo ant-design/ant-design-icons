@@ -6,7 +6,7 @@ import DatabaseOutlinedSvg from '@ant-design/icons-svg/lib/asn/DatabaseOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DatabaseOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DatabaseOutlined: DatabaseOutlinedIconType = (props, context) => {

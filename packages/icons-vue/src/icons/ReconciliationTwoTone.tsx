@@ -6,7 +6,7 @@ import ReconciliationTwoToneSvg from '@ant-design/icons-svg/lib/asn/Reconciliati
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ReconciliationTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ReconciliationTwoTone: ReconciliationTwoToneIconType = (props, context) => {

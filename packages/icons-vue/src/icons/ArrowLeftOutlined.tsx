@@ -6,7 +6,7 @@ import ArrowLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/ArrowLeftOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ArrowLeftOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ArrowLeftOutlined: ArrowLeftOutlinedIconType = (props, context) => {

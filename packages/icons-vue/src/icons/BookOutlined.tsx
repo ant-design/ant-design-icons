@@ -6,7 +6,7 @@ import BookOutlinedSvg from '@ant-design/icons-svg/lib/asn/BookOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BookOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BookOutlined: BookOutlinedIconType = (props, context) => {

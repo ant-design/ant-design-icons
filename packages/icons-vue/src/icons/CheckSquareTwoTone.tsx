@@ -6,7 +6,7 @@ import CheckSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/CheckSquareTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CheckSquareTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CheckSquareTwoTone: CheckSquareTwoToneIconType = (props, context) => {

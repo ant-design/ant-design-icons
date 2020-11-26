@@ -6,7 +6,7 @@ import HourglassOutlinedSvg from '@ant-design/icons-svg/lib/asn/HourglassOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HourglassOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HourglassOutlined: HourglassOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import SearchOutlinedSvg from '@ant-design/icons-svg/lib/asn/SearchOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SearchOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SearchOutlined: SearchOutlinedIconType = (props, context) => {

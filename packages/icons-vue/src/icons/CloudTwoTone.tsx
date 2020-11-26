@@ -6,7 +6,7 @@ import CloudTwoToneSvg from '@ant-design/icons-svg/lib/asn/CloudTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CloudTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CloudTwoTone: CloudTwoToneIconType = (props, context) => {

@@ -6,7 +6,7 @@ import BankOutlinedSvg from '@ant-design/icons-svg/lib/asn/BankOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BankOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BankOutlined: BankOutlinedIconType = (props, context) => {

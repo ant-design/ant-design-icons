@@ -6,7 +6,7 @@ import AppstoreFilledSvg from '@ant-design/icons-svg/lib/asn/AppstoreFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AppstoreFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AppstoreFilled: AppstoreFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import CompassOutlinedSvg from '@ant-design/icons-svg/lib/asn/CompassOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CompassOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CompassOutlined: CompassOutlinedIconType = (props, context) => {

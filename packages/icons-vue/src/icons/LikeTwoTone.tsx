@@ -6,7 +6,7 @@ import LikeTwoToneSvg from '@ant-design/icons-svg/lib/asn/LikeTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LikeTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LikeTwoTone: LikeTwoToneIconType = (props, context) => {

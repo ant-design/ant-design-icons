@@ -6,7 +6,7 @@ import HighlightFilledSvg from '@ant-design/icons-svg/lib/asn/HighlightFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HighlightFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HighlightFilled: HighlightFilledIconType = (props, context) => {

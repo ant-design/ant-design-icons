@@ -6,7 +6,7 @@ import SwitcherOutlinedSvg from '@ant-design/icons-svg/lib/asn/SwitcherOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SwitcherOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SwitcherOutlined: SwitcherOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import WindowsFilledSvg from '@ant-design/icons-svg/lib/asn/WindowsFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WindowsFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WindowsFilled: WindowsFilledIconType = (props, context) => {

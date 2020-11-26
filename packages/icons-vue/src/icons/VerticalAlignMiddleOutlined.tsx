@@ -6,7 +6,7 @@ import VerticalAlignMiddleOutlinedSvg from '@ant-design/icons-svg/lib/asn/Vertic
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface VerticalAlignMiddleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const VerticalAlignMiddleOutlined: VerticalAlignMiddleOutlinedIconType = (props, context) => {

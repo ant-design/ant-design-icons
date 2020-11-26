@@ -6,7 +6,7 @@ import DoubleLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/DoubleLeftOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DoubleLeftOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DoubleLeftOutlined: DoubleLeftOutlinedIconType = (props, context) => {

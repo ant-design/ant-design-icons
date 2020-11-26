@@ -6,7 +6,7 @@ import RedditOutlinedSvg from '@ant-design/icons-svg/lib/asn/RedditOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RedditOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RedditOutlined: RedditOutlinedIconType = (props, context) => {

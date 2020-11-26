@@ -6,7 +6,7 @@ import DashboardTwoToneSvg from '@ant-design/icons-svg/lib/asn/DashboardTwoTone'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DashboardTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DashboardTwoTone: DashboardTwoToneIconType = (props, context) => {

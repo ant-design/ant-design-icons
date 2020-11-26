@@ -6,7 +6,7 @@ import BulbFilledSvg from '@ant-design/icons-svg/lib/asn/BulbFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BulbFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BulbFilled: BulbFilledIconType = (props, context) => {

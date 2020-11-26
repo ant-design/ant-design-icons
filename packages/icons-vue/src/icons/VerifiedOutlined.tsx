@@ -6,7 +6,7 @@ import VerifiedOutlinedSvg from '@ant-design/icons-svg/lib/asn/VerifiedOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface VerifiedOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const VerifiedOutlined: VerifiedOutlinedIconType = (props, context) => {

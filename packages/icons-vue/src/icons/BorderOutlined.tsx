@@ -6,7 +6,7 @@ import BorderOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BorderOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BorderOutlined: BorderOutlinedIconType = (props, context) => {

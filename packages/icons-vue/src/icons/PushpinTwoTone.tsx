@@ -6,7 +6,7 @@ import PushpinTwoToneSvg from '@ant-design/icons-svg/lib/asn/PushpinTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PushpinTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PushpinTwoTone: PushpinTwoToneIconType = (props, context) => {

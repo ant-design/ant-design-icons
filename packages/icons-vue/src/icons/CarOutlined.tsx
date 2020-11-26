@@ -6,7 +6,7 @@ import CarOutlinedSvg from '@ant-design/icons-svg/lib/asn/CarOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CarOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CarOutlined: CarOutlinedIconType = (props, context) => {

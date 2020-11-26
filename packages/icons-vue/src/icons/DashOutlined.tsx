@@ -6,7 +6,7 @@ import DashOutlinedSvg from '@ant-design/icons-svg/lib/asn/DashOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DashOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DashOutlined: DashOutlinedIconType = (props, context) => {

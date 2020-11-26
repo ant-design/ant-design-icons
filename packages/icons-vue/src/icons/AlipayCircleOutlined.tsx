@@ -6,7 +6,7 @@ import AlipayCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/AlipayCircleO
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AlipayCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AlipayCircleOutlined: AlipayCircleOutlinedIconType = (props, context) => {

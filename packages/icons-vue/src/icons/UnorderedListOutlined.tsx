@@ -6,7 +6,7 @@ import UnorderedListOutlinedSvg from '@ant-design/icons-svg/lib/asn/UnorderedLis
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UnorderedListOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UnorderedListOutlined: UnorderedListOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import LinkedinOutlinedSvg from '@ant-design/icons-svg/lib/asn/LinkedinOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LinkedinOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LinkedinOutlined: LinkedinOutlinedIconType = (props, context) => {

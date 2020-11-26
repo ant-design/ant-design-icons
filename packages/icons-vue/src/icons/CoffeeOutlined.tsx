@@ -6,7 +6,7 @@ import CoffeeOutlinedSvg from '@ant-design/icons-svg/lib/asn/CoffeeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CoffeeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CoffeeOutlined: CoffeeOutlinedIconType = (props, context) => {

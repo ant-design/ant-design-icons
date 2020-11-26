@@ -6,7 +6,7 @@ import PlayCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/PlayCircleOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PlayCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PlayCircleOutlined: PlayCircleOutlinedIconType = (props, context) => {

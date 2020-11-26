@@ -6,7 +6,7 @@ import FundFilledSvg from '@ant-design/icons-svg/lib/asn/FundFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FundFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FundFilled: FundFilledIconType = (props, context) => {

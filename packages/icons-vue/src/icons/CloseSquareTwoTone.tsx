@@ -6,7 +6,7 @@ import CloseSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/CloseSquareTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CloseSquareTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CloseSquareTwoTone: CloseSquareTwoToneIconType = (props, context) => {

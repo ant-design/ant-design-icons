@@ -6,7 +6,7 @@ import PictureTwoToneSvg from '@ant-design/icons-svg/lib/asn/PictureTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PictureTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PictureTwoTone: PictureTwoToneIconType = (props, context) => {

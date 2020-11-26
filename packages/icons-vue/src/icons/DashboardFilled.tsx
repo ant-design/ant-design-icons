@@ -6,7 +6,7 @@ import DashboardFilledSvg from '@ant-design/icons-svg/lib/asn/DashboardFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DashboardFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DashboardFilled: DashboardFilledIconType = (props, context) => {

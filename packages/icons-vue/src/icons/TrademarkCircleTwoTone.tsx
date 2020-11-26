@@ -6,7 +6,7 @@ import TrademarkCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/TrademarkCi
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TrademarkCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TrademarkCircleTwoTone: TrademarkCircleTwoToneIconType = (props, context) => {

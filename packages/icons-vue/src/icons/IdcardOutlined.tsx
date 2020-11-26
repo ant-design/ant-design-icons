@@ -6,7 +6,7 @@ import IdcardOutlinedSvg from '@ant-design/icons-svg/lib/asn/IdcardOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface IdcardOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const IdcardOutlined: IdcardOutlinedIconType = (props, context) => {

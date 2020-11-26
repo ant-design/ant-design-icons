@@ -6,7 +6,7 @@ import GiftOutlinedSvg from '@ant-design/icons-svg/lib/asn/GiftOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface GiftOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const GiftOutlined: GiftOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import IeSquareFilledSvg from '@ant-design/icons-svg/lib/asn/IeSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface IeSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const IeSquareFilled: IeSquareFilledIconType = (props, context) => {

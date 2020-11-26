@@ -6,7 +6,7 @@ import InteractionFilledSvg from '@ant-design/icons-svg/lib/asn/InteractionFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface InteractionFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const InteractionFilled: InteractionFilledIconType = (props, context) => {

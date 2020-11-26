@@ -6,7 +6,7 @@ import EnvironmentFilledSvg from '@ant-design/icons-svg/lib/asn/EnvironmentFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EnvironmentFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EnvironmentFilled: EnvironmentFilledIconType = (props, context) => {

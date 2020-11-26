@@ -6,7 +6,7 @@ import MessageTwoToneSvg from '@ant-design/icons-svg/lib/asn/MessageTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MessageTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MessageTwoTone: MessageTwoToneIconType = (props, context) => {

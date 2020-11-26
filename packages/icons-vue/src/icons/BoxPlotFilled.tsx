@@ -6,7 +6,7 @@ import BoxPlotFilledSvg from '@ant-design/icons-svg/lib/asn/BoxPlotFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BoxPlotFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BoxPlotFilled: BoxPlotFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import DownSquareFilledSvg from '@ant-design/icons-svg/lib/asn/DownSquareFilled'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DownSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DownSquareFilled: DownSquareFilledIconType = (props, context) => {

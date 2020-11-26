@@ -6,7 +6,7 @@ import MacCommandOutlinedSvg from '@ant-design/icons-svg/lib/asn/MacCommandOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MacCommandOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MacCommandOutlined: MacCommandOutlinedIconType = (props, context) => {

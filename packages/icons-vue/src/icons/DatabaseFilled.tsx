@@ -6,7 +6,7 @@ import DatabaseFilledSvg from '@ant-design/icons-svg/lib/asn/DatabaseFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DatabaseFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DatabaseFilled: DatabaseFilledIconType = (props, context) => {

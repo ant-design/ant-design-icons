@@ -6,7 +6,7 @@ import FileZipTwoToneSvg from '@ant-design/icons-svg/lib/asn/FileZipTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileZipTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileZipTwoTone: FileZipTwoToneIconType = (props, context) => {

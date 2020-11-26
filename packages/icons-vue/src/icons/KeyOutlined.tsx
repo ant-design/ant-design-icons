@@ -6,7 +6,7 @@ import KeyOutlinedSvg from '@ant-design/icons-svg/lib/asn/KeyOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface KeyOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const KeyOutlined: KeyOutlinedIconType = (props, context) => {

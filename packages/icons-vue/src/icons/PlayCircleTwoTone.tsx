@@ -6,7 +6,7 @@ import PlayCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/PlayCircleTwoTon
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PlayCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PlayCircleTwoTone: PlayCircleTwoToneIconType = (props, context) => {

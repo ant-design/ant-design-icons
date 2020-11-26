@@ -6,7 +6,7 @@ import WarningOutlinedSvg from '@ant-design/icons-svg/lib/asn/WarningOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WarningOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WarningOutlined: WarningOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import SecurityScanTwoToneSvg from '@ant-design/icons-svg/lib/asn/SecurityScanTw
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SecurityScanTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SecurityScanTwoTone: SecurityScanTwoToneIconType = (props, context) => {

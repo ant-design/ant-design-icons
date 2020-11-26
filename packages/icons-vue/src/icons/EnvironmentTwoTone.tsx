@@ -6,7 +6,7 @@ import EnvironmentTwoToneSvg from '@ant-design/icons-svg/lib/asn/EnvironmentTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EnvironmentTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EnvironmentTwoTone: EnvironmentTwoToneIconType = (props, context) => {

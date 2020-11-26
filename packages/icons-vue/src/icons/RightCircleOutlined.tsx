@@ -6,7 +6,7 @@ import RightCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/RightCircleOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RightCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RightCircleOutlined: RightCircleOutlinedIconType = (props, context) => {

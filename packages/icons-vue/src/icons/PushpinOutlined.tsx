@@ -6,7 +6,7 @@ import PushpinOutlinedSvg from '@ant-design/icons-svg/lib/asn/PushpinOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PushpinOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PushpinOutlined: PushpinOutlinedIconType = (props, context) => {

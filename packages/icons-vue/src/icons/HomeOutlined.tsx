@@ -6,7 +6,7 @@ import HomeOutlinedSvg from '@ant-design/icons-svg/lib/asn/HomeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HomeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HomeOutlined: HomeOutlinedIconType = (props, context) => {

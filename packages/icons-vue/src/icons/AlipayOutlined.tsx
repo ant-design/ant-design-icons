@@ -6,7 +6,7 @@ import AlipayOutlinedSvg from '@ant-design/icons-svg/lib/asn/AlipayOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AlipayOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AlipayOutlined: AlipayOutlinedIconType = (props, context) => {

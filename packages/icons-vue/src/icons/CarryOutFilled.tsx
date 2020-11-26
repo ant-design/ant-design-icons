@@ -6,7 +6,7 @@ import CarryOutFilledSvg from '@ant-design/icons-svg/lib/asn/CarryOutFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CarryOutFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CarryOutFilled: CarryOutFilledIconType = (props, context) => {

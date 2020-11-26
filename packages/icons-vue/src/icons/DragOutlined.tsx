@@ -6,7 +6,7 @@ import DragOutlinedSvg from '@ant-design/icons-svg/lib/asn/DragOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DragOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DragOutlined: DragOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import YoutubeOutlinedSvg from '@ant-design/icons-svg/lib/asn/YoutubeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface YoutubeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const YoutubeOutlined: YoutubeOutlinedIconType = (props, context) => {

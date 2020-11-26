@@ -6,7 +6,7 @@ import SkypeFilledSvg from '@ant-design/icons-svg/lib/asn/SkypeFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SkypeFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SkypeFilled: SkypeFilledIconType = (props, context) => {

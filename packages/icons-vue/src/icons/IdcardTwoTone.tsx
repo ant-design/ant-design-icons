@@ -6,7 +6,7 @@ import IdcardTwoToneSvg from '@ant-design/icons-svg/lib/asn/IdcardTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface IdcardTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const IdcardTwoTone: IdcardTwoToneIconType = (props, context) => {

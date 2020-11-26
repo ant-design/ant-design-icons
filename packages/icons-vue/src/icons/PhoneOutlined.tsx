@@ -6,7 +6,7 @@ import PhoneOutlinedSvg from '@ant-design/icons-svg/lib/asn/PhoneOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PhoneOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PhoneOutlined: PhoneOutlinedIconType = (props, context) => {

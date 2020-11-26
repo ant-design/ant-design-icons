@@ -6,7 +6,7 @@ import HeatMapOutlinedSvg from '@ant-design/icons-svg/lib/asn/HeatMapOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HeatMapOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HeatMapOutlined: HeatMapOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import EuroCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/EuroCircleTwoTon
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EuroCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EuroCircleTwoTone: EuroCircleTwoToneIconType = (props, context) => {

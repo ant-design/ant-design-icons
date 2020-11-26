@@ -6,7 +6,7 @@ import GooglePlusSquareFilledSvg from '@ant-design/icons-svg/lib/asn/GooglePlusS
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface GooglePlusSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const GooglePlusSquareFilled: GooglePlusSquareFilledIconType = (props, context) => {

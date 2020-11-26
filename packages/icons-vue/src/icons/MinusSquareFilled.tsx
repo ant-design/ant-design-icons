@@ -6,7 +6,7 @@ import MinusSquareFilledSvg from '@ant-design/icons-svg/lib/asn/MinusSquareFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MinusSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MinusSquareFilled: MinusSquareFilledIconType = (props, context) => {

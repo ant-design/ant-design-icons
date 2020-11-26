@@ -6,7 +6,7 @@ import EditOutlinedSvg from '@ant-design/icons-svg/lib/asn/EditOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EditOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EditOutlined: EditOutlinedIconType = (props, context) => {

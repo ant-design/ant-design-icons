@@ -6,7 +6,7 @@ import FileExcelFilledSvg from '@ant-design/icons-svg/lib/asn/FileExcelFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileExcelFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileExcelFilled: FileExcelFilledIconType = (props, context) => {

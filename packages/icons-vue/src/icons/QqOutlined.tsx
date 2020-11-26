@@ -6,7 +6,7 @@ import QqOutlinedSvg from '@ant-design/icons-svg/lib/asn/QqOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface QqOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const QqOutlined: QqOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import CodeSandboxOutlinedSvg from '@ant-design/icons-svg/lib/asn/CodeSandboxOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CodeSandboxOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CodeSandboxOutlined: CodeSandboxOutlinedIconType = (props, context) => {

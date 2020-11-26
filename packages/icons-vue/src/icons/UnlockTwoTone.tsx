@@ -6,7 +6,7 @@ import UnlockTwoToneSvg from '@ant-design/icons-svg/lib/asn/UnlockTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UnlockTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UnlockTwoTone: UnlockTwoToneIconType = (props, context) => {

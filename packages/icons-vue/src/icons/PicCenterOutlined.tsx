@@ -6,7 +6,7 @@ import PicCenterOutlinedSvg from '@ant-design/icons-svg/lib/asn/PicCenterOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PicCenterOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PicCenterOutlined: PicCenterOutlinedIconType = (props, context) => {

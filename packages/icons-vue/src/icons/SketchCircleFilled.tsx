@@ -6,7 +6,7 @@ import SketchCircleFilledSvg from '@ant-design/icons-svg/lib/asn/SketchCircleFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SketchCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SketchCircleFilled: SketchCircleFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import DownCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/DownCircleTwoTon
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DownCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DownCircleTwoTone: DownCircleTwoToneIconType = (props, context) => {

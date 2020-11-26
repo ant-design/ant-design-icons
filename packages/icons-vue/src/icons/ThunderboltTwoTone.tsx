@@ -6,7 +6,7 @@ import ThunderboltTwoToneSvg from '@ant-design/icons-svg/lib/asn/ThunderboltTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ThunderboltTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ThunderboltTwoTone: ThunderboltTwoToneIconType = (props, context) => {

@@ -6,7 +6,7 @@ import AppstoreTwoToneSvg from '@ant-design/icons-svg/lib/asn/AppstoreTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AppstoreTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AppstoreTwoTone: AppstoreTwoToneIconType = (props, context) => {

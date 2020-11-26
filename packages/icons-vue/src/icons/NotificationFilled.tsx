@@ -6,7 +6,7 @@ import NotificationFilledSvg from '@ant-design/icons-svg/lib/asn/NotificationFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface NotificationFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const NotificationFilled: NotificationFilledIconType = (props, context) => {

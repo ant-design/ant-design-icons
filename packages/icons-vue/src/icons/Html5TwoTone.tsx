@@ -6,7 +6,7 @@ import Html5TwoToneSvg from '@ant-design/icons-svg/lib/asn/Html5TwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface Html5TwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const Html5TwoTone: Html5TwoToneIconType = (props, context) => {

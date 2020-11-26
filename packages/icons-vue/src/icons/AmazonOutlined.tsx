@@ -6,7 +6,7 @@ import AmazonOutlinedSvg from '@ant-design/icons-svg/lib/asn/AmazonOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AmazonOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AmazonOutlined: AmazonOutlinedIconType = (props, context) => {

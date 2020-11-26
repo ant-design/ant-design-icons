@@ -6,7 +6,7 @@ import PullRequestOutlinedSvg from '@ant-design/icons-svg/lib/asn/PullRequestOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PullRequestOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PullRequestOutlined: PullRequestOutlinedIconType = (props, context) => {

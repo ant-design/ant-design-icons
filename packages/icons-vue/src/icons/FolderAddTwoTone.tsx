@@ -6,7 +6,7 @@ import FolderAddTwoToneSvg from '@ant-design/icons-svg/lib/asn/FolderAddTwoTone'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FolderAddTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FolderAddTwoTone: FolderAddTwoToneIconType = (props, context) => {

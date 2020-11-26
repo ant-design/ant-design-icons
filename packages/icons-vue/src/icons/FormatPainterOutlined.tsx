@@ -6,7 +6,7 @@ import FormatPainterOutlinedSvg from '@ant-design/icons-svg/lib/asn/FormatPainte
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FormatPainterOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FormatPainterOutlined: FormatPainterOutlinedIconType = (props, context) => {

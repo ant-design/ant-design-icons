@@ -6,7 +6,7 @@ import DownSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/DownSquareOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DownSquareOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DownSquareOutlined: DownSquareOutlinedIconType = (props, context) => {

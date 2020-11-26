@@ -6,7 +6,7 @@ import ArrowsAltOutlinedSvg from '@ant-design/icons-svg/lib/asn/ArrowsAltOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ArrowsAltOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ArrowsAltOutlined: ArrowsAltOutlinedIconType = (props, context) => {

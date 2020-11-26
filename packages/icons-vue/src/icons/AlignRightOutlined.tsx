@@ -6,7 +6,7 @@ import AlignRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/AlignRightOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AlignRightOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AlignRightOutlined: AlignRightOutlinedIconType = (props, context) => {

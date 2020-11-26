@@ -6,7 +6,7 @@ import EditTwoToneSvg from '@ant-design/icons-svg/lib/asn/EditTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EditTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EditTwoTone: EditTwoToneIconType = (props, context) => {

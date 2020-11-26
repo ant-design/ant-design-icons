@@ -6,7 +6,7 @@ import RedoOutlinedSvg from '@ant-design/icons-svg/lib/asn/RedoOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RedoOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RedoOutlined: RedoOutlinedIconType = (props, context) => {

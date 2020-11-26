@@ -6,7 +6,7 @@ import BehanceCircleFilledSvg from '@ant-design/icons-svg/lib/asn/BehanceCircleF
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BehanceCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BehanceCircleFilled: BehanceCircleFilledIconType = (props, context) => {

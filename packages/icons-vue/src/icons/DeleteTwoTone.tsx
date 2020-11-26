@@ -6,7 +6,7 @@ import DeleteTwoToneSvg from '@ant-design/icons-svg/lib/asn/DeleteTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DeleteTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DeleteTwoTone: DeleteTwoToneIconType = (props, context) => {

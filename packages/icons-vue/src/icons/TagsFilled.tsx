@@ -6,7 +6,7 @@ import TagsFilledSvg from '@ant-design/icons-svg/lib/asn/TagsFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TagsFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TagsFilled: TagsFilledIconType = (props, context) => {

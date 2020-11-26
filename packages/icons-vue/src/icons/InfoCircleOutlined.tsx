@@ -6,7 +6,7 @@ import InfoCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/InfoCircleOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface InfoCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const InfoCircleOutlined: InfoCircleOutlinedIconType = (props, context) => {

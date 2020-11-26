@@ -6,7 +6,7 @@ import TransactionOutlinedSvg from '@ant-design/icons-svg/lib/asn/TransactionOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TransactionOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TransactionOutlined: TransactionOutlinedIconType = (props, context) => {

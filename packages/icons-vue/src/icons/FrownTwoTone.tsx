@@ -6,7 +6,7 @@ import FrownTwoToneSvg from '@ant-design/icons-svg/lib/asn/FrownTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FrownTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FrownTwoTone: FrownTwoToneIconType = (props, context) => {

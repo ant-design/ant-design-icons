@@ -6,7 +6,7 @@ import DisconnectOutlinedSvg from '@ant-design/icons-svg/lib/asn/DisconnectOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DisconnectOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DisconnectOutlined: DisconnectOutlinedIconType = (props, context) => {

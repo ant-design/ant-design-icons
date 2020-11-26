@@ -6,7 +6,7 @@ import TrademarkCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/TrademarkC
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TrademarkCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TrademarkCircleOutlined: TrademarkCircleOutlinedIconType = (props, context) => {

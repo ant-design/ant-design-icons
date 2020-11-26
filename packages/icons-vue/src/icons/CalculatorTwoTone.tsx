@@ -6,7 +6,7 @@ import CalculatorTwoToneSvg from '@ant-design/icons-svg/lib/asn/CalculatorTwoTon
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CalculatorTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CalculatorTwoTone: CalculatorTwoToneIconType = (props, context) => {

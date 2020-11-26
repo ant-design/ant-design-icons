@@ -6,7 +6,7 @@ import AndroidOutlinedSvg from '@ant-design/icons-svg/lib/asn/AndroidOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AndroidOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AndroidOutlined: AndroidOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import DiffTwoToneSvg from '@ant-design/icons-svg/lib/asn/DiffTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DiffTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DiffTwoTone: DiffTwoToneIconType = (props, context) => {

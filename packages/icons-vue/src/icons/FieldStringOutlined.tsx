@@ -6,7 +6,7 @@ import FieldStringOutlinedSvg from '@ant-design/icons-svg/lib/asn/FieldStringOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FieldStringOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FieldStringOutlined: FieldStringOutlinedIconType = (props, context) => {

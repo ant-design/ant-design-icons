@@ -6,7 +6,7 @@ import BarChartOutlinedSvg from '@ant-design/icons-svg/lib/asn/BarChartOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BarChartOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BarChartOutlined: BarChartOutlinedIconType = (props, context) => {

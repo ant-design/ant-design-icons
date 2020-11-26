@@ -6,7 +6,7 @@ import BankTwoToneSvg from '@ant-design/icons-svg/lib/asn/BankTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BankTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BankTwoTone: BankTwoToneIconType = (props, context) => {

@@ -6,7 +6,7 @@ import UnlockFilledSvg from '@ant-design/icons-svg/lib/asn/UnlockFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UnlockFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UnlockFilled: UnlockFilledIconType = (props, context) => {

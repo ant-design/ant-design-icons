@@ -6,7 +6,7 @@ import AudioTwoToneSvg from '@ant-design/icons-svg/lib/asn/AudioTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AudioTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AudioTwoTone: AudioTwoToneIconType = (props, context) => {

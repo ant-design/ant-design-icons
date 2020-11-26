@@ -6,7 +6,7 @@ import BellOutlinedSvg from '@ant-design/icons-svg/lib/asn/BellOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BellOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BellOutlined: BellOutlinedIconType = (props, context) => {

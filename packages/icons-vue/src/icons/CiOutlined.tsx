@@ -6,7 +6,7 @@ import CiOutlinedSvg from '@ant-design/icons-svg/lib/asn/CiOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CiOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CiOutlined: CiOutlinedIconType = (props, context) => {

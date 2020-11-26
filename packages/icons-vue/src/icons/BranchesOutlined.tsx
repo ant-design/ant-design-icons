@@ -6,7 +6,7 @@ import BranchesOutlinedSvg from '@ant-design/icons-svg/lib/asn/BranchesOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BranchesOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BranchesOutlined: BranchesOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import MediumSquareFilledSvg from '@ant-design/icons-svg/lib/asn/MediumSquareFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MediumSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MediumSquareFilled: MediumSquareFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import PoundCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/PoundCircleTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PoundCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PoundCircleTwoTone: PoundCircleTwoToneIconType = (props, context) => {

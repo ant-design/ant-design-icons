@@ -6,7 +6,7 @@ import BorderRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderRightOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BorderRightOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BorderRightOutlined: BorderRightOutlinedIconType = (props, context) => {

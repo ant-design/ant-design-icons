@@ -6,7 +6,7 @@ import YahooOutlinedSvg from '@ant-design/icons-svg/lib/asn/YahooOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface YahooOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const YahooOutlined: YahooOutlinedIconType = (props, context) => {

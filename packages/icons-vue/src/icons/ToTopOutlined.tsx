@@ -6,7 +6,7 @@ import ToTopOutlinedSvg from '@ant-design/icons-svg/lib/asn/ToTopOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ToTopOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ToTopOutlined: ToTopOutlinedIconType = (props, context) => {

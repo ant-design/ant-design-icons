@@ -6,7 +6,7 @@ import ShopFilledSvg from '@ant-design/icons-svg/lib/asn/ShopFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ShopFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ShopFilled: ShopFilledIconType = (props, context) => {

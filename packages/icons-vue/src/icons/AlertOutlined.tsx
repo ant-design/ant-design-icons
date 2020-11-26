@@ -6,7 +6,7 @@ import AlertOutlinedSvg from '@ant-design/icons-svg/lib/asn/AlertOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AlertOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AlertOutlined: AlertOutlinedIconType = (props, context) => {

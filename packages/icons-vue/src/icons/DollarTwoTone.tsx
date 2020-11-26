@@ -6,7 +6,7 @@ import DollarTwoToneSvg from '@ant-design/icons-svg/lib/asn/DollarTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DollarTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DollarTwoTone: DollarTwoToneIconType = (props, context) => {

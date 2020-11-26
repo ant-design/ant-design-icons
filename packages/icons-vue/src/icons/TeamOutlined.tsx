@@ -6,7 +6,7 @@ import TeamOutlinedSvg from '@ant-design/icons-svg/lib/asn/TeamOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TeamOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TeamOutlined: TeamOutlinedIconType = (props, context) => {

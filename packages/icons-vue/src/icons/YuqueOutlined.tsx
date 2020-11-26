@@ -6,7 +6,7 @@ import YuqueOutlinedSvg from '@ant-design/icons-svg/lib/asn/YuqueOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface YuqueOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const YuqueOutlined: YuqueOutlinedIconType = (props, context) => {

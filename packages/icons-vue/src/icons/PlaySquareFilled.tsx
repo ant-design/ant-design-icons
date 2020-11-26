@@ -6,7 +6,7 @@ import PlaySquareFilledSvg from '@ant-design/icons-svg/lib/asn/PlaySquareFilled'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PlaySquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PlaySquareFilled: PlaySquareFilledIconType = (props, context) => {

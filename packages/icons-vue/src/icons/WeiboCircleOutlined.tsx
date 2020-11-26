@@ -6,7 +6,7 @@ import WeiboCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/WeiboCircleOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WeiboCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WeiboCircleOutlined: WeiboCircleOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import SisternodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/SisternodeOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SisternodeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SisternodeOutlined: SisternodeOutlinedIconType = (props, context) => {

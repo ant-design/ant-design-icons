@@ -6,7 +6,7 @@ import FormOutlinedSvg from '@ant-design/icons-svg/lib/asn/FormOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FormOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FormOutlined: FormOutlinedIconType = (props, context) => {

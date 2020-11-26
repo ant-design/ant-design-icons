@@ -6,7 +6,7 @@ import UserAddOutlinedSvg from '@ant-design/icons-svg/lib/asn/UserAddOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UserAddOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UserAddOutlined: UserAddOutlinedIconType = (props, context) => {

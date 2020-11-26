@@ -6,7 +6,7 @@ import OneToOneOutlinedSvg from '@ant-design/icons-svg/lib/asn/OneToOneOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface OneToOneOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const OneToOneOutlined: OneToOneOutlinedIconType = (props, context) => {

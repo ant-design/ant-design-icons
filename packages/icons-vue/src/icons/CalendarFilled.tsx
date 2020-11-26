@@ -6,7 +6,7 @@ import CalendarFilledSvg from '@ant-design/icons-svg/lib/asn/CalendarFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CalendarFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CalendarFilled: CalendarFilledIconType = (props, context) => {

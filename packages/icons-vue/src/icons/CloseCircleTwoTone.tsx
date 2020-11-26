@@ -6,7 +6,7 @@ import CloseCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/CloseCircleTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CloseCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CloseCircleTwoTone: CloseCircleTwoToneIconType = (props, context) => {

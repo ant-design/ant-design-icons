@@ -6,7 +6,7 @@ import FireTwoToneSvg from '@ant-design/icons-svg/lib/asn/FireTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FireTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FireTwoTone: FireTwoToneIconType = (props, context) => {

@@ -6,7 +6,7 @@ import RadarChartOutlinedSvg from '@ant-design/icons-svg/lib/asn/RadarChartOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RadarChartOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RadarChartOutlined: RadarChartOutlinedIconType = (props, context) => {

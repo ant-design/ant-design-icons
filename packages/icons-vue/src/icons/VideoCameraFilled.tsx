@@ -6,7 +6,7 @@ import VideoCameraFilledSvg from '@ant-design/icons-svg/lib/asn/VideoCameraFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface VideoCameraFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const VideoCameraFilled: VideoCameraFilledIconType = (props, context) => {

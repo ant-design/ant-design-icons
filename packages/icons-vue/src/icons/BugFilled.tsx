@@ -6,7 +6,7 @@ import BugFilledSvg from '@ant-design/icons-svg/lib/asn/BugFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BugFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BugFilled: BugFilledIconType = (props, context) => {

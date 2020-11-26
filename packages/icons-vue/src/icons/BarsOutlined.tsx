@@ -6,7 +6,7 @@ import BarsOutlinedSvg from '@ant-design/icons-svg/lib/asn/BarsOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BarsOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BarsOutlined: BarsOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import ThunderboltFilledSvg from '@ant-design/icons-svg/lib/asn/ThunderboltFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ThunderboltFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ThunderboltFilled: ThunderboltFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import UpCircleFilledSvg from '@ant-design/icons-svg/lib/asn/UpCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UpCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UpCircleFilled: UpCircleFilledIconType = (props, context) => {

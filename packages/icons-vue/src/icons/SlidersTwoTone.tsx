@@ -6,7 +6,7 @@ import SlidersTwoToneSvg from '@ant-design/icons-svg/lib/asn/SlidersTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SlidersTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SlidersTwoTone: SlidersTwoToneIconType = (props, context) => {

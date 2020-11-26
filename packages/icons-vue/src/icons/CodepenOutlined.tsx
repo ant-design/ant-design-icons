@@ -6,7 +6,7 @@ import CodepenOutlinedSvg from '@ant-design/icons-svg/lib/asn/CodepenOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CodepenOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CodepenOutlined: CodepenOutlinedIconType = (props, context) => {

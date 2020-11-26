@@ -6,7 +6,7 @@ import RestFilledSvg from '@ant-design/icons-svg/lib/asn/RestFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RestFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RestFilled: RestFilledIconType = (props, context) => {

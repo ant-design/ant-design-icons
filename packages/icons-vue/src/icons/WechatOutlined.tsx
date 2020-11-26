@@ -6,7 +6,7 @@ import WechatOutlinedSvg from '@ant-design/icons-svg/lib/asn/WechatOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WechatOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WechatOutlined: WechatOutlinedIconType = (props, context) => {

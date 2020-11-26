@@ -6,7 +6,7 @@ import IssuesCloseOutlinedSvg from '@ant-design/icons-svg/lib/asn/IssuesCloseOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface IssuesCloseOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const IssuesCloseOutlined: IssuesCloseOutlinedIconType = (props, context) => {

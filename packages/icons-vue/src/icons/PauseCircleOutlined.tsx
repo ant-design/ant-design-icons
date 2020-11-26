@@ -6,7 +6,7 @@ import PauseCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/PauseCircleOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PauseCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PauseCircleOutlined: PauseCircleOutlinedIconType = (props, context) => {

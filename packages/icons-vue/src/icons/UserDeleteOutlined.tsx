@@ -6,7 +6,7 @@ import UserDeleteOutlinedSvg from '@ant-design/icons-svg/lib/asn/UserDeleteOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UserDeleteOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UserDeleteOutlined: UserDeleteOutlinedIconType = (props, context) => {

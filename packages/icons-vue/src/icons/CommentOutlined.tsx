@@ -6,7 +6,7 @@ import CommentOutlinedSvg from '@ant-design/icons-svg/lib/asn/CommentOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CommentOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CommentOutlined: CommentOutlinedIconType = (props, context) => {

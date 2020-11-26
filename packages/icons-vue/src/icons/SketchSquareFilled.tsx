@@ -6,7 +6,7 @@ import SketchSquareFilledSvg from '@ant-design/icons-svg/lib/asn/SketchSquareFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SketchSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SketchSquareFilled: SketchSquareFilledIconType = (props, context) => {

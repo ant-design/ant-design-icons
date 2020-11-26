@@ -6,7 +6,7 @@ import UserSwitchOutlinedSvg from '@ant-design/icons-svg/lib/asn/UserSwitchOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UserSwitchOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UserSwitchOutlined: UserSwitchOutlinedIconType = (props, context) => {

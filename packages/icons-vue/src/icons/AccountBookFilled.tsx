@@ -6,7 +6,7 @@ import AccountBookFilledSvg from '@ant-design/icons-svg/lib/asn/AccountBookFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AccountBookFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AccountBookFilled: AccountBookFilledIconType = (props, context) => {

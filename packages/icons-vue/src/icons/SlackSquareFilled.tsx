@@ -6,7 +6,7 @@ import SlackSquareFilledSvg from '@ant-design/icons-svg/lib/asn/SlackSquareFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SlackSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SlackSquareFilled: SlackSquareFilledIconType = (props, context) => {

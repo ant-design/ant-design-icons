@@ -6,7 +6,7 @@ import EnvironmentOutlinedSvg from '@ant-design/icons-svg/lib/asn/EnvironmentOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EnvironmentOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EnvironmentOutlined: EnvironmentOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import WalletOutlinedSvg from '@ant-design/icons-svg/lib/asn/WalletOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WalletOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WalletOutlined: WalletOutlinedIconType = (props, context) => {

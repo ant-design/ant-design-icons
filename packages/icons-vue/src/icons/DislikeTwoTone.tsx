@@ -6,7 +6,7 @@ import DislikeTwoToneSvg from '@ant-design/icons-svg/lib/asn/DislikeTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DislikeTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DislikeTwoTone: DislikeTwoToneIconType = (props, context) => {

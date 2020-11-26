@@ -6,7 +6,7 @@ import StopFilledSvg from '@ant-design/icons-svg/lib/asn/StopFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface StopFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const StopFilled: StopFilledIconType = (props, context) => {

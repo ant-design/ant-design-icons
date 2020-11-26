@@ -45,7 +45,7 @@ interface Color {
 }
 
 export interface IconBaseType extends Color, FunctionalComponent<IconProps> {
-  displayName: string,
+  displayName: string;
 }
 const IconBase: IconBaseType = (props, context) => {
   const { icon, primaryColor, secondaryColor, ...restProps } = {

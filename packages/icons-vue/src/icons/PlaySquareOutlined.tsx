@@ -6,7 +6,7 @@ import PlaySquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/PlaySquareOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PlaySquareOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PlaySquareOutlined: PlaySquareOutlinedIconType = (props, context) => {

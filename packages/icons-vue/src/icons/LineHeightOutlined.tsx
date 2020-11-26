@@ -6,7 +6,7 @@ import LineHeightOutlinedSvg from '@ant-design/icons-svg/lib/asn/LineHeightOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LineHeightOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LineHeightOutlined: LineHeightOutlinedIconType = (props, context) => {

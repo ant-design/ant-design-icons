@@ -6,7 +6,7 @@ import CloudSyncOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloudSyncOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CloudSyncOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CloudSyncOutlined: CloudSyncOutlinedIconType = (props, context) => {

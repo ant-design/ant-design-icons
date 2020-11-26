@@ -6,7 +6,7 @@ import ExceptionOutlinedSvg from '@ant-design/icons-svg/lib/asn/ExceptionOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ExceptionOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ExceptionOutlined: ExceptionOutlinedIconType = (props, context) => {

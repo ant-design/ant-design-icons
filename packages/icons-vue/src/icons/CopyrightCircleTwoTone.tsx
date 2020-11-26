@@ -6,7 +6,7 @@ import CopyrightCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/CopyrightCi
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CopyrightCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CopyrightCircleTwoTone: CopyrightCircleTwoToneIconType = (props, context) => {

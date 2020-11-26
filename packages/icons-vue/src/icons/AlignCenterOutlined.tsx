@@ -6,7 +6,7 @@ import AlignCenterOutlinedSvg from '@ant-design/icons-svg/lib/asn/AlignCenterOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AlignCenterOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AlignCenterOutlined: AlignCenterOutlinedIconType = (props, context) => {

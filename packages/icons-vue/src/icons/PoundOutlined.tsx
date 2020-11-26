@@ -6,7 +6,7 @@ import PoundOutlinedSvg from '@ant-design/icons-svg/lib/asn/PoundOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PoundOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PoundOutlined: PoundOutlinedIconType = (props, context) => {

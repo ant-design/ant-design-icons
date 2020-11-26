@@ -6,7 +6,7 @@ import FundTwoToneSvg from '@ant-design/icons-svg/lib/asn/FundTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FundTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FundTwoTone: FundTwoToneIconType = (props, context) => {

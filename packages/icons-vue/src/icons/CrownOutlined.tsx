@@ -6,7 +6,7 @@ import CrownOutlinedSvg from '@ant-design/icons-svg/lib/asn/CrownOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CrownOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CrownOutlined: CrownOutlinedIconType = (props, context) => {

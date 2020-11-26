@@ -6,7 +6,7 @@ import ClusterOutlinedSvg from '@ant-design/icons-svg/lib/asn/ClusterOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ClusterOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ClusterOutlined: ClusterOutlinedIconType = (props, context) => {

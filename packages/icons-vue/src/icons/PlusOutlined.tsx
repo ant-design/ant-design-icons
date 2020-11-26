@@ -6,7 +6,7 @@ import PlusOutlinedSvg from '@ant-design/icons-svg/lib/asn/PlusOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PlusOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PlusOutlined: PlusOutlinedIconType = (props, context) => {

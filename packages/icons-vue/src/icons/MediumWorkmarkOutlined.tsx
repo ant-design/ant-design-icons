@@ -6,7 +6,7 @@ import MediumWorkmarkOutlinedSvg from '@ant-design/icons-svg/lib/asn/MediumWorkm
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MediumWorkmarkOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MediumWorkmarkOutlined: MediumWorkmarkOutlinedIconType = (props, context) => {

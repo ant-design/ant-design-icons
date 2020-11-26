@@ -6,7 +6,7 @@ import LeftSquareFilledSvg from '@ant-design/icons-svg/lib/asn/LeftSquareFilled'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LeftSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LeftSquareFilled: LeftSquareFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import HourglassTwoToneSvg from '@ant-design/icons-svg/lib/asn/HourglassTwoTone'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HourglassTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HourglassTwoTone: HourglassTwoToneIconType = (props, context) => {

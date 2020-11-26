@@ -6,7 +6,7 @@ import FireOutlinedSvg from '@ant-design/icons-svg/lib/asn/FireOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FireOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FireOutlined: FireOutlinedIconType = (props, context) => {

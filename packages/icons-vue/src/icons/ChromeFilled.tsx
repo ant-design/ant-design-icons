@@ -6,7 +6,7 @@ import ChromeFilledSvg from '@ant-design/icons-svg/lib/asn/ChromeFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ChromeFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ChromeFilled: ChromeFilledIconType = (props, context) => {

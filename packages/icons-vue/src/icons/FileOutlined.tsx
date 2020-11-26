@@ -6,7 +6,7 @@ import FileOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileOutlined: FileOutlinedIconType = (props, context) => {

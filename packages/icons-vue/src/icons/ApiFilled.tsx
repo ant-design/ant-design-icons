@@ -6,7 +6,7 @@ import ApiFilledSvg from '@ant-design/icons-svg/lib/asn/ApiFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ApiFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ApiFilled: ApiFilledIconType = (props, context) => {

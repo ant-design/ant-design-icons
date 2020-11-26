@@ -6,7 +6,7 @@ import CheckSquareFilledSvg from '@ant-design/icons-svg/lib/asn/CheckSquareFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CheckSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CheckSquareFilled: CheckSquareFilledIconType = (props, context) => {

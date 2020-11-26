@@ -6,7 +6,7 @@ import ZoomInOutlinedSvg from '@ant-design/icons-svg/lib/asn/ZoomInOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ZoomInOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ZoomInOutlined: ZoomInOutlinedIconType = (props, context) => {

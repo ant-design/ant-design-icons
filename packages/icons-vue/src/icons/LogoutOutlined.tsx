@@ -6,7 +6,7 @@ import LogoutOutlinedSvg from '@ant-design/icons-svg/lib/asn/LogoutOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LogoutOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LogoutOutlined: LogoutOutlinedIconType = (props, context) => {

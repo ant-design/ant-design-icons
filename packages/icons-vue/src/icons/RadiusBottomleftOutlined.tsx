@@ -6,7 +6,7 @@ import RadiusBottomleftOutlinedSvg from '@ant-design/icons-svg/lib/asn/RadiusBot
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RadiusBottomleftOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RadiusBottomleftOutlined: RadiusBottomleftOutlinedIconType = (props, context) => {

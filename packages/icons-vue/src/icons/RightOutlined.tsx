@@ -6,7 +6,7 @@ import RightOutlinedSvg from '@ant-design/icons-svg/lib/asn/RightOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RightOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RightOutlined: RightOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import ReconciliationOutlinedSvg from '@ant-design/icons-svg/lib/asn/Reconciliat
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ReconciliationOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ReconciliationOutlined: ReconciliationOutlinedIconType = (props, context) => {

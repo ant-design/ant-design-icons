@@ -17,7 +17,7 @@ export interface IconComponentProps extends IconBaseProps {
   ariaLabel?: string;
 }
 export interface IconType extends FunctionalComponent<IconComponentProps> {
-  displayName: string,
+  displayName: string;
 }
 const Icon: IconType = (props, context) => {
   const { attrs, slots } = context;

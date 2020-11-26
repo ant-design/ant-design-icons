@@ -6,7 +6,7 @@ import IdcardFilledSvg from '@ant-design/icons-svg/lib/asn/IdcardFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface IdcardFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const IdcardFilled: IdcardFilledIconType = (props, context) => {

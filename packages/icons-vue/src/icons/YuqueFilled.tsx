@@ -6,7 +6,7 @@ import YuqueFilledSvg from '@ant-design/icons-svg/lib/asn/YuqueFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface YuqueFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const YuqueFilled: YuqueFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import DribbbleOutlinedSvg from '@ant-design/icons-svg/lib/asn/DribbbleOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DribbbleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DribbbleOutlined: DribbbleOutlinedIconType = (props, context) => {

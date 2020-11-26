@@ -6,7 +6,7 @@ import SmileFilledSvg from '@ant-design/icons-svg/lib/asn/SmileFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SmileFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SmileFilled: SmileFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import SplitCellsOutlinedSvg from '@ant-design/icons-svg/lib/asn/SplitCellsOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SplitCellsOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SplitCellsOutlined: SplitCellsOutlinedIconType = (props, context) => {

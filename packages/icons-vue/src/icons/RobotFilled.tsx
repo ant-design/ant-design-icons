@@ -6,7 +6,7 @@ import RobotFilledSvg from '@ant-design/icons-svg/lib/asn/RobotFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RobotFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RobotFilled: RobotFilledIconType = (props, context) => {

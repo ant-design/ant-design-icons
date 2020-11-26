@@ -6,7 +6,7 @@ import EllipsisOutlinedSvg from '@ant-design/icons-svg/lib/asn/EllipsisOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EllipsisOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EllipsisOutlined: EllipsisOutlinedIconType = (props, context) => {

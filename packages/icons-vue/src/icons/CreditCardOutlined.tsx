@@ -6,7 +6,7 @@ import CreditCardOutlinedSvg from '@ant-design/icons-svg/lib/asn/CreditCardOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CreditCardOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CreditCardOutlined: CreditCardOutlinedIconType = (props, context) => {

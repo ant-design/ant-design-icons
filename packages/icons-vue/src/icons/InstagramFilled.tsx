@@ -6,7 +6,7 @@ import InstagramFilledSvg from '@ant-design/icons-svg/lib/asn/InstagramFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface InstagramFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const InstagramFilled: InstagramFilledIconType = (props, context) => {

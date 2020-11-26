@@ -6,7 +6,7 @@ import BankFilledSvg from '@ant-design/icons-svg/lib/asn/BankFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BankFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BankFilled: BankFilledIconType = (props, context) => {

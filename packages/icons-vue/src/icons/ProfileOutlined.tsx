@@ -6,7 +6,7 @@ import ProfileOutlinedSvg from '@ant-design/icons-svg/lib/asn/ProfileOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ProfileOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ProfileOutlined: ProfileOutlinedIconType = (props, context) => {

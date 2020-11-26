@@ -6,7 +6,7 @@ import TrophyFilledSvg from '@ant-design/icons-svg/lib/asn/TrophyFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TrophyFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TrophyFilled: TrophyFilledIconType = (props, context) => {

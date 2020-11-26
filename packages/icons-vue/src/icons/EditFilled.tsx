@@ -6,7 +6,7 @@ import EditFilledSvg from '@ant-design/icons-svg/lib/asn/EditFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EditFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EditFilled: EditFilledIconType = (props, context) => {

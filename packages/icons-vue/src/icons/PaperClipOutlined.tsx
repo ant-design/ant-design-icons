@@ -6,7 +6,7 @@ import PaperClipOutlinedSvg from '@ant-design/icons-svg/lib/asn/PaperClipOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PaperClipOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PaperClipOutlined: PaperClipOutlinedIconType = (props, context) => {

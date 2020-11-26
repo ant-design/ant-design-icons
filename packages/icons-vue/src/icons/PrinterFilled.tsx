@@ -6,7 +6,7 @@ import PrinterFilledSvg from '@ant-design/icons-svg/lib/asn/PrinterFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PrinterFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PrinterFilled: PrinterFilledIconType = (props, context) => {

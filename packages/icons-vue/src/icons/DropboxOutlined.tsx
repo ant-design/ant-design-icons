@@ -6,7 +6,7 @@ import DropboxOutlinedSvg from '@ant-design/icons-svg/lib/asn/DropboxOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DropboxOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DropboxOutlined: DropboxOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import GitlabFilledSvg from '@ant-design/icons-svg/lib/asn/GitlabFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface GitlabFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const GitlabFilled: GitlabFilledIconType = (props, context) => {

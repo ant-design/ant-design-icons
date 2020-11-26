@@ -6,7 +6,7 @@ import NotificationTwoToneSvg from '@ant-design/icons-svg/lib/asn/NotificationTw
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface NotificationTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const NotificationTwoTone: NotificationTwoToneIconType = (props, context) => {

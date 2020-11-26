@@ -6,7 +6,7 @@ import PoundCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PoundCircleFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PoundCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PoundCircleFilled: PoundCircleFilledIconType = (props, context) => {

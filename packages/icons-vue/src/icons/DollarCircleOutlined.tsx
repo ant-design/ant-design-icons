@@ -6,7 +6,7 @@ import DollarCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/DollarCircleO
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DollarCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DollarCircleOutlined: DollarCircleOutlinedIconType = (props, context) => {

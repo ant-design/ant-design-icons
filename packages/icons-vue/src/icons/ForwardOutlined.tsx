@@ -6,7 +6,7 @@ import ForwardOutlinedSvg from '@ant-design/icons-svg/lib/asn/ForwardOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ForwardOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ForwardOutlined: ForwardOutlinedIconType = (props, context) => {

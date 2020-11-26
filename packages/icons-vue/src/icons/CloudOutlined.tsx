@@ -6,7 +6,7 @@ import CloudOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloudOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CloudOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CloudOutlined: CloudOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import TabletOutlinedSvg from '@ant-design/icons-svg/lib/asn/TabletOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TabletOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TabletOutlined: TabletOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import HighlightTwoToneSvg from '@ant-design/icons-svg/lib/asn/HighlightTwoTone'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HighlightTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HighlightTwoTone: HighlightTwoToneIconType = (props, context) => {

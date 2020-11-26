@@ -6,7 +6,7 @@ import FolderAddOutlinedSvg from '@ant-design/icons-svg/lib/asn/FolderAddOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FolderAddOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FolderAddOutlined: FolderAddOutlinedIconType = (props, context) => {

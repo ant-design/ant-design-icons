@@ -6,7 +6,7 @@ import CodeSandboxSquareFilledSvg from '@ant-design/icons-svg/lib/asn/CodeSandbo
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CodeSandboxSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CodeSandboxSquareFilled: CodeSandboxSquareFilledIconType = (props, context) => {

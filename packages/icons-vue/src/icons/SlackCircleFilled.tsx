@@ -6,7 +6,7 @@ import SlackCircleFilledSvg from '@ant-design/icons-svg/lib/asn/SlackCircleFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SlackCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SlackCircleFilled: SlackCircleFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import InteractionTwoToneSvg from '@ant-design/icons-svg/lib/asn/InteractionTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface InteractionTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const InteractionTwoTone: InteractionTwoToneIconType = (props, context) => {

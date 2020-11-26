@@ -6,7 +6,7 @@ import YahooFilledSvg from '@ant-design/icons-svg/lib/asn/YahooFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface YahooFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const YahooFilled: YahooFilledIconType = (props, context) => {

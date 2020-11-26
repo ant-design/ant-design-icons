@@ -6,7 +6,7 @@ import DeliveredProcedureOutlinedSvg from '@ant-design/icons-svg/lib/asn/Deliver
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DeliveredProcedureOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DeliveredProcedureOutlined: DeliveredProcedureOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import HeartTwoToneSvg from '@ant-design/icons-svg/lib/asn/HeartTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HeartTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HeartTwoTone: HeartTwoToneIconType = (props, context) => {

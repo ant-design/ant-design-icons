@@ -6,7 +6,7 @@ import UsergroupAddOutlinedSvg from '@ant-design/icons-svg/lib/asn/UsergroupAddO
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UsergroupAddOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UsergroupAddOutlined: UsergroupAddOutlinedIconType = (props, context) => {

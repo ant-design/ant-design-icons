@@ -6,7 +6,7 @@ import QqSquareFilledSvg from '@ant-design/icons-svg/lib/asn/QqSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface QqSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const QqSquareFilled: QqSquareFilledIconType = (props, context) => {

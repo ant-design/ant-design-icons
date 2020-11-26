@@ -6,7 +6,7 @@ import PlaySquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/PlaySquareTwoTon
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PlaySquareTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PlaySquareTwoTone: PlaySquareTwoToneIconType = (props, context) => {

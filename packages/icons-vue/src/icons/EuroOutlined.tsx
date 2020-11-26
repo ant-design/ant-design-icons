@@ -6,7 +6,7 @@ import EuroOutlinedSvg from '@ant-design/icons-svg/lib/asn/EuroOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EuroOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EuroOutlined: EuroOutlinedIconType = (props, context) => {

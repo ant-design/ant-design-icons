@@ -6,7 +6,7 @@ import BulbTwoToneSvg from '@ant-design/icons-svg/lib/asn/BulbTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BulbTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BulbTwoTone: BulbTwoToneIconType = (props, context) => {

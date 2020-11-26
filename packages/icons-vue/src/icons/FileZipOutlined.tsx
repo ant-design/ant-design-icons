@@ -6,7 +6,7 @@ import FileZipOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileZipOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileZipOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileZipOutlined: FileZipOutlinedIconType = (props, context) => {

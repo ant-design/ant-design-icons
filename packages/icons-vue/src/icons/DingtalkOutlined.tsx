@@ -6,7 +6,7 @@ import DingtalkOutlinedSvg from '@ant-design/icons-svg/lib/asn/DingtalkOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DingtalkOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DingtalkOutlined: DingtalkOutlinedIconType = (props, context) => {

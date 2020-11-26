@@ -6,7 +6,7 @@ import PushpinFilledSvg from '@ant-design/icons-svg/lib/asn/PushpinFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PushpinFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PushpinFilled: PushpinFilledIconType = (props, context) => {

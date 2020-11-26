@@ -6,7 +6,7 @@ import SkinTwoToneSvg from '@ant-design/icons-svg/lib/asn/SkinTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SkinTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SkinTwoTone: SkinTwoToneIconType = (props, context) => {

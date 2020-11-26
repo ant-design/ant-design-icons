@@ -6,7 +6,7 @@ import EuroCircleFilledSvg from '@ant-design/icons-svg/lib/asn/EuroCircleFilled'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EuroCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EuroCircleFilled: EuroCircleFilledIconType = (props, context) => {

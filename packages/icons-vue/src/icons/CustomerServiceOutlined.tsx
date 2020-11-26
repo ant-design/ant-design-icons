@@ -6,7 +6,7 @@ import CustomerServiceOutlinedSvg from '@ant-design/icons-svg/lib/asn/CustomerSe
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CustomerServiceOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CustomerServiceOutlined: CustomerServiceOutlinedIconType = (props, context) => {

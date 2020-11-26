@@ -6,7 +6,7 @@ import ContactsTwoToneSvg from '@ant-design/icons-svg/lib/asn/ContactsTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ContactsTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ContactsTwoTone: ContactsTwoToneIconType = (props, context) => {

@@ -6,7 +6,7 @@ import BackwardOutlinedSvg from '@ant-design/icons-svg/lib/asn/BackwardOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BackwardOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BackwardOutlined: BackwardOutlinedIconType = (props, context) => {

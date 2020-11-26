@@ -6,7 +6,7 @@ import StarTwoToneSvg from '@ant-design/icons-svg/lib/asn/StarTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface StarTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const StarTwoTone: StarTwoToneIconType = (props, context) => {

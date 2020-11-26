@@ -6,7 +6,7 @@ import AudioMutedOutlinedSvg from '@ant-design/icons-svg/lib/asn/AudioMutedOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AudioMutedOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AudioMutedOutlined: AudioMutedOutlinedIconType = (props, context) => {

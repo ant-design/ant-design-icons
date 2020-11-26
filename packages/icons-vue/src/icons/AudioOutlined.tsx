@@ -6,7 +6,7 @@ import AudioOutlinedSvg from '@ant-design/icons-svg/lib/asn/AudioOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AudioOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AudioOutlined: AudioOutlinedIconType = (props, context) => {

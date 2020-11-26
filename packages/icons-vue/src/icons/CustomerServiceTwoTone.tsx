@@ -6,7 +6,7 @@ import CustomerServiceTwoToneSvg from '@ant-design/icons-svg/lib/asn/CustomerSer
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CustomerServiceTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CustomerServiceTwoTone: CustomerServiceTwoToneIconType = (props, context) => {

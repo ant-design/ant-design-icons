@@ -6,7 +6,7 @@ import CopyFilledSvg from '@ant-design/icons-svg/lib/asn/CopyFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CopyFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CopyFilled: CopyFilledIconType = (props, context) => {

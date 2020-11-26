@@ -6,7 +6,7 @@ import DingtalkSquareFilledSvg from '@ant-design/icons-svg/lib/asn/DingtalkSquar
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DingtalkSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DingtalkSquareFilled: DingtalkSquareFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import CameraTwoToneSvg from '@ant-design/icons-svg/lib/asn/CameraTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CameraTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CameraTwoTone: CameraTwoToneIconType = (props, context) => {

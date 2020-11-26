@@ -6,7 +6,7 @@ import FlagOutlinedSvg from '@ant-design/icons-svg/lib/asn/FlagOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FlagOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FlagOutlined: FlagOutlinedIconType = (props, context) => {

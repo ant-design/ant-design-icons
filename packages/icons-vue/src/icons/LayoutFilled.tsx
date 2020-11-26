@@ -6,7 +6,7 @@ import LayoutFilledSvg from '@ant-design/icons-svg/lib/asn/LayoutFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LayoutFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LayoutFilled: LayoutFilledIconType = (props, context) => {

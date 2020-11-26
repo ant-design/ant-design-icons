@@ -6,7 +6,7 @@ import CloseSquareFilledSvg from '@ant-design/icons-svg/lib/asn/CloseSquareFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CloseSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CloseSquareFilled: CloseSquareFilledIconType = (props, context) => {

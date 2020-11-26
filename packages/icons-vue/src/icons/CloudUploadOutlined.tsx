@@ -6,7 +6,7 @@ import CloudUploadOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloudUploadOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CloudUploadOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CloudUploadOutlined: CloudUploadOutlinedIconType = (props, context) => {

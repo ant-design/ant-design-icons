@@ -6,7 +6,7 @@ import CopyrightTwoToneSvg from '@ant-design/icons-svg/lib/asn/CopyrightTwoTone'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CopyrightTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CopyrightTwoTone: CopyrightTwoToneIconType = (props, context) => {

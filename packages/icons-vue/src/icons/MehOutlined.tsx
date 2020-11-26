@@ -6,7 +6,7 @@ import MehOutlinedSvg from '@ant-design/icons-svg/lib/asn/MehOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MehOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MehOutlined: MehOutlinedIconType = (props, context) => {

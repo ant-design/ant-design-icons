@@ -6,7 +6,7 @@ import RollbackOutlinedSvg from '@ant-design/icons-svg/lib/asn/RollbackOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RollbackOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RollbackOutlined: RollbackOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import CopyOutlinedSvg from '@ant-design/icons-svg/lib/asn/CopyOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CopyOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CopyOutlined: CopyOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import FolderOpenFilledSvg from '@ant-design/icons-svg/lib/asn/FolderOpenFilled'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FolderOpenFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FolderOpenFilled: FolderOpenFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import MehTwoToneSvg from '@ant-design/icons-svg/lib/asn/MehTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MehTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MehTwoTone: MehTwoToneIconType = (props, context) => {

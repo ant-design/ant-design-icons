@@ -6,7 +6,7 @@ import AuditOutlinedSvg from '@ant-design/icons-svg/lib/asn/AuditOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AuditOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AuditOutlined: AuditOutlinedIconType = (props, context) => {

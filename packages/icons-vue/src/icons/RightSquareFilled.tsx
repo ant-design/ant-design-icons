@@ -6,7 +6,7 @@ import RightSquareFilledSvg from '@ant-design/icons-svg/lib/asn/RightSquareFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RightSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RightSquareFilled: RightSquareFilledIconType = (props, context) => {

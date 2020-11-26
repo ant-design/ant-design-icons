@@ -6,7 +6,7 @@ import FullscreenOutlinedSvg from '@ant-design/icons-svg/lib/asn/FullscreenOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FullscreenOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FullscreenOutlined: FullscreenOutlinedIconType = (props, context) => {

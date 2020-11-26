@@ -6,7 +6,7 @@ import FilterOutlinedSvg from '@ant-design/icons-svg/lib/asn/FilterOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FilterOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FilterOutlined: FilterOutlinedIconType = (props, context) => {

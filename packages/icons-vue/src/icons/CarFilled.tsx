@@ -6,7 +6,7 @@ import CarFilledSvg from '@ant-design/icons-svg/lib/asn/CarFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CarFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CarFilled: CarFilledIconType = (props, context) => {

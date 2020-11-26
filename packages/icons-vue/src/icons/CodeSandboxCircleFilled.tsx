@@ -6,7 +6,7 @@ import CodeSandboxCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CodeSandbo
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CodeSandboxCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CodeSandboxCircleFilled: CodeSandboxCircleFilledIconType = (props, context) => {

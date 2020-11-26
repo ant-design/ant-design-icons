@@ -6,7 +6,7 @@ import FileAddFilledSvg from '@ant-design/icons-svg/lib/asn/FileAddFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileAddFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileAddFilled: FileAddFilledIconType = (props, context) => {

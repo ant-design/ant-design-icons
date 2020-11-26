@@ -6,7 +6,7 @@ import RocketOutlinedSvg from '@ant-design/icons-svg/lib/asn/RocketOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RocketOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RocketOutlined: RocketOutlinedIconType = (props, context) => {

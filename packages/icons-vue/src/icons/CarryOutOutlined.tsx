@@ -6,7 +6,7 @@ import CarryOutOutlinedSvg from '@ant-design/icons-svg/lib/asn/CarryOutOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CarryOutOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CarryOutOutlined: CarryOutOutlinedIconType = (props, context) => {

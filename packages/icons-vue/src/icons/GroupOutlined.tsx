@@ -6,7 +6,7 @@ import GroupOutlinedSvg from '@ant-design/icons-svg/lib/asn/GroupOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface GroupOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const GroupOutlined: GroupOutlinedIconType = (props, context) => {

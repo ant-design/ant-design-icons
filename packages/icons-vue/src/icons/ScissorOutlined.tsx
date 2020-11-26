@@ -6,7 +6,7 @@ import ScissorOutlinedSvg from '@ant-design/icons-svg/lib/asn/ScissorOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ScissorOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ScissorOutlined: ScissorOutlinedIconType = (props, context) => {

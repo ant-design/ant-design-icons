@@ -6,7 +6,7 @@ import CheckCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/CheckCircleOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CheckCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CheckCircleOutlined: CheckCircleOutlinedIconType = (props, context) => {

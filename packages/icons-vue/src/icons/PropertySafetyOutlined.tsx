@@ -6,7 +6,7 @@ import PropertySafetyOutlinedSvg from '@ant-design/icons-svg/lib/asn/PropertySaf
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PropertySafetyOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PropertySafetyOutlined: PropertySafetyOutlinedIconType = (props, context) => {

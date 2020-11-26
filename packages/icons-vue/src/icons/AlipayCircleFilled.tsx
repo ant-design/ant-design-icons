@@ -6,7 +6,7 @@ import AlipayCircleFilledSvg from '@ant-design/icons-svg/lib/asn/AlipayCircleFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AlipayCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AlipayCircleFilled: AlipayCircleFilledIconType = (props, context) => {

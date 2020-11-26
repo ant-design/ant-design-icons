@@ -6,7 +6,7 @@ import RestTwoToneSvg from '@ant-design/icons-svg/lib/asn/RestTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RestTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RestTwoTone: RestTwoToneIconType = (props, context) => {

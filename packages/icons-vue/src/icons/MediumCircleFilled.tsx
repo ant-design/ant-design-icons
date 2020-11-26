@@ -6,7 +6,7 @@ import MediumCircleFilledSvg from '@ant-design/icons-svg/lib/asn/MediumCircleFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MediumCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MediumCircleFilled: MediumCircleFilledIconType = (props, context) => {

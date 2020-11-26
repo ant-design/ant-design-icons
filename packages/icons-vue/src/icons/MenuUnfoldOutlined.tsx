@@ -6,7 +6,7 @@ import MenuUnfoldOutlinedSvg from '@ant-design/icons-svg/lib/asn/MenuUnfoldOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MenuUnfoldOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MenuUnfoldOutlined: MenuUnfoldOutlinedIconType = (props, context) => {

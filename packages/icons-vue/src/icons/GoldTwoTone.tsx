@@ -6,7 +6,7 @@ import GoldTwoToneSvg from '@ant-design/icons-svg/lib/asn/GoldTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface GoldTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const GoldTwoTone: GoldTwoToneIconType = (props, context) => {

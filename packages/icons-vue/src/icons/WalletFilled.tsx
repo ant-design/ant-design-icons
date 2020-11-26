@@ -6,7 +6,7 @@ import WalletFilledSvg from '@ant-design/icons-svg/lib/asn/WalletFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WalletFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WalletFilled: WalletFilledIconType = (props, context) => {

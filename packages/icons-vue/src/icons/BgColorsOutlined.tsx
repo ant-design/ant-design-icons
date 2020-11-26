@@ -6,7 +6,7 @@ import BgColorsOutlinedSvg from '@ant-design/icons-svg/lib/asn/BgColorsOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BgColorsOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BgColorsOutlined: BgColorsOutlinedIconType = (props, context) => {

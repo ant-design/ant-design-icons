@@ -6,7 +6,7 @@ import FundOutlinedSvg from '@ant-design/icons-svg/lib/asn/FundOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FundOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FundOutlined: FundOutlinedIconType = (props, context) => {

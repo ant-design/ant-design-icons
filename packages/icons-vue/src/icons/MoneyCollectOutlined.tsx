@@ -6,7 +6,7 @@ import MoneyCollectOutlinedSvg from '@ant-design/icons-svg/lib/asn/MoneyCollectO
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MoneyCollectOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MoneyCollectOutlined: MoneyCollectOutlinedIconType = (props, context) => {

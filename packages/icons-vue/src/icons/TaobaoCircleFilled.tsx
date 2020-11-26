@@ -6,7 +6,7 @@ import TaobaoCircleFilledSvg from '@ant-design/icons-svg/lib/asn/TaobaoCircleFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TaobaoCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TaobaoCircleFilled: TaobaoCircleFilledIconType = (props, context) => {

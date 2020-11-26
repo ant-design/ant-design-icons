@@ -6,7 +6,7 @@ import NodeCollapseOutlinedSvg from '@ant-design/icons-svg/lib/asn/NodeCollapseO
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface NodeCollapseOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const NodeCollapseOutlined: NodeCollapseOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import InstagramOutlinedSvg from '@ant-design/icons-svg/lib/asn/InstagramOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface InstagramOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const InstagramOutlined: InstagramOutlinedIconType = (props, context) => {

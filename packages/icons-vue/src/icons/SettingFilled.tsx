@@ -6,7 +6,7 @@ import SettingFilledSvg from '@ant-design/icons-svg/lib/asn/SettingFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SettingFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SettingFilled: SettingFilledIconType = (props, context) => {

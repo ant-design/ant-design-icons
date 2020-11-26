@@ -6,7 +6,7 @@ import RiseOutlinedSvg from '@ant-design/icons-svg/lib/asn/RiseOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RiseOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RiseOutlined: RiseOutlinedIconType = (props, context) => {

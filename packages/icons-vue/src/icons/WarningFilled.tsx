@@ -6,7 +6,7 @@ import WarningFilledSvg from '@ant-design/icons-svg/lib/asn/WarningFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WarningFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WarningFilled: WarningFilledIconType = (props, context) => {

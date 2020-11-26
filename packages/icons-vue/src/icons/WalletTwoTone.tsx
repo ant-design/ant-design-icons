@@ -6,7 +6,7 @@ import WalletTwoToneSvg from '@ant-design/icons-svg/lib/asn/WalletTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WalletTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WalletTwoTone: WalletTwoToneIconType = (props, context) => {

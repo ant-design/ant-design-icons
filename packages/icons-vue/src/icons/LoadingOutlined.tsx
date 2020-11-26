@@ -6,7 +6,7 @@ import LoadingOutlinedSvg from '@ant-design/icons-svg/lib/asn/LoadingOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LoadingOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LoadingOutlined: LoadingOutlinedIconType = (props, context) => {

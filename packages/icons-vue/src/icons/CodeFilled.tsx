@@ -6,7 +6,7 @@ import CodeFilledSvg from '@ant-design/icons-svg/lib/asn/CodeFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CodeFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CodeFilled: CodeFilledIconType = (props, context) => {

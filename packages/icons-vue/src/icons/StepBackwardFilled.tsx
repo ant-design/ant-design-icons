@@ -6,7 +6,7 @@ import StepBackwardFilledSvg from '@ant-design/icons-svg/lib/asn/StepBackwardFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface StepBackwardFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const StepBackwardFilled: StepBackwardFilledIconType = (props, context) => {

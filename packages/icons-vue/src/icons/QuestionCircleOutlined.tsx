@@ -6,7 +6,7 @@ import QuestionCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/QuestionCir
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface QuestionCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const QuestionCircleOutlined: QuestionCircleOutlinedIconType = (props, context) => {

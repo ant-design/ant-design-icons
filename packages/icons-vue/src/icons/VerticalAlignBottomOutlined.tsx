@@ -6,7 +6,7 @@ import VerticalAlignBottomOutlinedSvg from '@ant-design/icons-svg/lib/asn/Vertic
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface VerticalAlignBottomOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const VerticalAlignBottomOutlined: VerticalAlignBottomOutlinedIconType = (props, context) => {

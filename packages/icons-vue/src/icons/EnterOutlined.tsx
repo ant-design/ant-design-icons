@@ -6,7 +6,7 @@ import EnterOutlinedSvg from '@ant-design/icons-svg/lib/asn/EnterOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EnterOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EnterOutlined: EnterOutlinedIconType = (props, context) => {

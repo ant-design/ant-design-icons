@@ -6,7 +6,7 @@ import StopTwoToneSvg from '@ant-design/icons-svg/lib/asn/StopTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface StopTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const StopTwoTone: StopTwoToneIconType = (props, context) => {

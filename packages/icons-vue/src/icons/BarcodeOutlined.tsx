@@ -6,7 +6,7 @@ import BarcodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/BarcodeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BarcodeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BarcodeOutlined: BarcodeOutlinedIconType = (props, context) => {

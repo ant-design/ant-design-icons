@@ -6,7 +6,7 @@ import TabletTwoToneSvg from '@ant-design/icons-svg/lib/asn/TabletTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TabletTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TabletTwoTone: TabletTwoToneIconType = (props, context) => {

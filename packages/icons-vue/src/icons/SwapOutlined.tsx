@@ -6,7 +6,7 @@ import SwapOutlinedSvg from '@ant-design/icons-svg/lib/asn/SwapOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SwapOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SwapOutlined: SwapOutlinedIconType = (props, context) => {

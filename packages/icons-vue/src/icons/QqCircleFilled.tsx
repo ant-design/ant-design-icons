@@ -6,7 +6,7 @@ import QqCircleFilledSvg from '@ant-design/icons-svg/lib/asn/QqCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface QqCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const QqCircleFilled: QqCircleFilledIconType = (props, context) => {

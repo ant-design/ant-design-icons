@@ -6,7 +6,7 @@ import VideoCameraOutlinedSvg from '@ant-design/icons-svg/lib/asn/VideoCameraOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface VideoCameraOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const VideoCameraOutlined: VideoCameraOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import ContactsFilledSvg from '@ant-design/icons-svg/lib/asn/ContactsFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ContactsFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ContactsFilled: ContactsFilledIconType = (props, context) => {

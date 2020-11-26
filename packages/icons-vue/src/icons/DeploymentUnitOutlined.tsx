@@ -6,7 +6,7 @@ import DeploymentUnitOutlinedSvg from '@ant-design/icons-svg/lib/asn/DeploymentU
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DeploymentUnitOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DeploymentUnitOutlined: DeploymentUnitOutlinedIconType = (props, context) => {

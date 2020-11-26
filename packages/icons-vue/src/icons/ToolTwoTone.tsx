@@ -6,7 +6,7 @@ import ToolTwoToneSvg from '@ant-design/icons-svg/lib/asn/ToolTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ToolTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ToolTwoTone: ToolTwoToneIconType = (props, context) => {

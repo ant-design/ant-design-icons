@@ -6,7 +6,7 @@ import BulbOutlinedSvg from '@ant-design/icons-svg/lib/asn/BulbOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BulbOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BulbOutlined: BulbOutlinedIconType = (props, context) => {

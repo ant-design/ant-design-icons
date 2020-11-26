@@ -6,7 +6,7 @@ import NumberOutlinedSvg from '@ant-design/icons-svg/lib/asn/NumberOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface NumberOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const NumberOutlined: NumberOutlinedIconType = (props, context) => {

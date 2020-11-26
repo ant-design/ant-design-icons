@@ -6,7 +6,7 @@ import TrademarkCircleFilledSvg from '@ant-design/icons-svg/lib/asn/TrademarkCir
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TrademarkCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TrademarkCircleFilled: TrademarkCircleFilledIconType = (props, context) => {

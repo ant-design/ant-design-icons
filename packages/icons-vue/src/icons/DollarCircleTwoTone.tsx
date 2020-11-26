@@ -6,7 +6,7 @@ import DollarCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/DollarCircleTw
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DollarCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DollarCircleTwoTone: DollarCircleTwoToneIconType = (props, context) => {

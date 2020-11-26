@@ -6,7 +6,7 @@ import FormatPainterFilledSvg from '@ant-design/icons-svg/lib/asn/FormatPainterF
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FormatPainterFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FormatPainterFilled: FormatPainterFilledIconType = (props, context) => {

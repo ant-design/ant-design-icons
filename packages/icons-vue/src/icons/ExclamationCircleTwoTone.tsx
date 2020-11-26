@@ -6,7 +6,7 @@ import ExclamationCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/Exclamati
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ExclamationCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ExclamationCircleTwoTone: ExclamationCircleTwoToneIconType = (props, context) => {

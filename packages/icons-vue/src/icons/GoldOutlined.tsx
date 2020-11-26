@@ -6,7 +6,7 @@ import GoldOutlinedSvg from '@ant-design/icons-svg/lib/asn/GoldOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface GoldOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const GoldOutlined: GoldOutlinedIconType = (props, context) => {

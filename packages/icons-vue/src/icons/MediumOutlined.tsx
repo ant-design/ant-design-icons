@@ -6,7 +6,7 @@ import MediumOutlinedSvg from '@ant-design/icons-svg/lib/asn/MediumOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MediumOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MediumOutlined: MediumOutlinedIconType = (props, context) => {

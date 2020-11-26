@@ -6,7 +6,7 @@ import MinusCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/MinusCircleTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MinusCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MinusCircleTwoTone: MinusCircleTwoToneIconType = (props, context) => {

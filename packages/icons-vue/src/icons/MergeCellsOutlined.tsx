@@ -6,7 +6,7 @@ import MergeCellsOutlinedSvg from '@ant-design/icons-svg/lib/asn/MergeCellsOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MergeCellsOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MergeCellsOutlined: MergeCellsOutlinedIconType = (props, context) => {

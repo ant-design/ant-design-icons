@@ -6,7 +6,7 @@ import HourglassFilledSvg from '@ant-design/icons-svg/lib/asn/HourglassFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HourglassFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HourglassFilled: HourglassFilledIconType = (props, context) => {

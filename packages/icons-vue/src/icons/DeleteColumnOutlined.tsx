@@ -6,7 +6,7 @@ import DeleteColumnOutlinedSvg from '@ant-design/icons-svg/lib/asn/DeleteColumnO
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DeleteColumnOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DeleteColumnOutlined: DeleteColumnOutlinedIconType = (props, context) => {

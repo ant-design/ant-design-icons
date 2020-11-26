@@ -6,7 +6,7 @@ import ContainerOutlinedSvg from '@ant-design/icons-svg/lib/asn/ContainerOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ContainerOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ContainerOutlined: ContainerOutlinedIconType = (props, context) => {

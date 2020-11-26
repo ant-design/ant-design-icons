@@ -6,7 +6,7 @@ import ReadFilledSvg from '@ant-design/icons-svg/lib/asn/ReadFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ReadFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ReadFilled: ReadFilledIconType = (props, context) => {

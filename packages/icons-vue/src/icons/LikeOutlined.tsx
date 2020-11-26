@@ -6,7 +6,7 @@ import LikeOutlinedSvg from '@ant-design/icons-svg/lib/asn/LikeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LikeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LikeOutlined: LikeOutlinedIconType = (props, context) => {

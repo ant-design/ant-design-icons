@@ -6,7 +6,7 @@ import UngroupOutlinedSvg from '@ant-design/icons-svg/lib/asn/UngroupOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UngroupOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UngroupOutlined: UngroupOutlinedIconType = (props, context) => {

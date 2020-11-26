@@ -6,7 +6,7 @@ import ColumnHeightOutlinedSvg from '@ant-design/icons-svg/lib/asn/ColumnHeightO
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ColumnHeightOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ColumnHeightOutlined: ColumnHeightOutlinedIconType = (props, context) => {

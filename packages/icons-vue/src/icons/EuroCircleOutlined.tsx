@@ -6,7 +6,7 @@ import EuroCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/EuroCircleOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface EuroCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const EuroCircleOutlined: EuroCircleOutlinedIconType = (props, context) => {

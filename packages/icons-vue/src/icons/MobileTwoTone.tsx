@@ -6,7 +6,7 @@ import MobileTwoToneSvg from '@ant-design/icons-svg/lib/asn/MobileTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MobileTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MobileTwoTone: MobileTwoToneIconType = (props, context) => {

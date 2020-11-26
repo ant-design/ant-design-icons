@@ -6,7 +6,7 @@ import DeleteFilledSvg from '@ant-design/icons-svg/lib/asn/DeleteFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DeleteFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DeleteFilled: DeleteFilledIconType = (props, context) => {

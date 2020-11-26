@@ -6,7 +6,7 @@ import PauseCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/PauseCircleTwoT
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PauseCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PauseCircleTwoTone: PauseCircleTwoToneIconType = (props, context) => {

@@ -6,7 +6,7 @@ import FieldTimeOutlinedSvg from '@ant-design/icons-svg/lib/asn/FieldTimeOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FieldTimeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FieldTimeOutlined: FieldTimeOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import SaveTwoToneSvg from '@ant-design/icons-svg/lib/asn/SaveTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SaveTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SaveTwoTone: SaveTwoToneIconType = (props, context) => {

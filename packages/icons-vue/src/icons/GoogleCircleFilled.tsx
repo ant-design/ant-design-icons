@@ -6,7 +6,7 @@ import GoogleCircleFilledSvg from '@ant-design/icons-svg/lib/asn/GoogleCircleFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface GoogleCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const GoogleCircleFilled: GoogleCircleFilledIconType = (props, context) => {

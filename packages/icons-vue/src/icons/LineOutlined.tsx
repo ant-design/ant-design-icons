@@ -6,7 +6,7 @@ import LineOutlinedSvg from '@ant-design/icons-svg/lib/asn/LineOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LineOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LineOutlined: LineOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import RetweetOutlinedSvg from '@ant-design/icons-svg/lib/asn/RetweetOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RetweetOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RetweetOutlined: RetweetOutlinedIconType = (props, context) => {

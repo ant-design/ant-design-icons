@@ -6,7 +6,7 @@ import ControlOutlinedSvg from '@ant-design/icons-svg/lib/asn/ControlOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ControlOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ControlOutlined: ControlOutlinedIconType = (props, context) => {

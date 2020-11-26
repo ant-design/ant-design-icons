@@ -6,7 +6,7 @@ import FileExcelOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileExcelOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileExcelOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileExcelOutlined: FileExcelOutlinedIconType = (props, context) => {

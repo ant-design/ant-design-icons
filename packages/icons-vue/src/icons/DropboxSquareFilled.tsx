@@ -6,7 +6,7 @@ import DropboxSquareFilledSvg from '@ant-design/icons-svg/lib/asn/DropboxSquareF
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DropboxSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DropboxSquareFilled: DropboxSquareFilledIconType = (props, context) => {

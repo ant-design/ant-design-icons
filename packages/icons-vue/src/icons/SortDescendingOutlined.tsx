@@ -6,7 +6,7 @@ import SortDescendingOutlinedSvg from '@ant-design/icons-svg/lib/asn/SortDescend
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SortDescendingOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SortDescendingOutlined: SortDescendingOutlinedIconType = (props, context) => {

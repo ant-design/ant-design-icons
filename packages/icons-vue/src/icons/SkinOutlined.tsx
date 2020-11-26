@@ -6,7 +6,7 @@ import SkinOutlinedSvg from '@ant-design/icons-svg/lib/asn/SkinOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SkinOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SkinOutlined: SkinOutlinedIconType = (props, context) => {

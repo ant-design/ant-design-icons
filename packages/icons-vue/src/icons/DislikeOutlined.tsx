@@ -6,7 +6,7 @@ import DislikeOutlinedSvg from '@ant-design/icons-svg/lib/asn/DislikeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DislikeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DislikeOutlined: DislikeOutlinedIconType = (props, context) => {

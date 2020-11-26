@@ -6,7 +6,7 @@ import FileZipFilledSvg from '@ant-design/icons-svg/lib/asn/FileZipFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileZipFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileZipFilled: FileZipFilledIconType = (props, context) => {

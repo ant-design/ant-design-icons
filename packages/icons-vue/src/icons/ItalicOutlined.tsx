@@ -6,7 +6,7 @@ import ItalicOutlinedSvg from '@ant-design/icons-svg/lib/asn/ItalicOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ItalicOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ItalicOutlined: ItalicOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import FileSearchOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileSearchOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileSearchOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileSearchOutlined: FileSearchOutlinedIconType = (props, context) => {

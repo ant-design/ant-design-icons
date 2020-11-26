@@ -6,7 +6,7 @@ import InsuranceTwoToneSvg from '@ant-design/icons-svg/lib/asn/InsuranceTwoTone'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface InsuranceTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const InsuranceTwoTone: InsuranceTwoToneIconType = (props, context) => {

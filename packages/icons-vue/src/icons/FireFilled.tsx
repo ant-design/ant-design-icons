@@ -6,7 +6,7 @@ import FireFilledSvg from '@ant-design/icons-svg/lib/asn/FireFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FireFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FireFilled: FireFilledIconType = (props, context) => {

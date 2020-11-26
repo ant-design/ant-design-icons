@@ -6,7 +6,7 @@ import PieChartTwoToneSvg from '@ant-design/icons-svg/lib/asn/PieChartTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PieChartTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PieChartTwoTone: PieChartTwoToneIconType = (props, context) => {

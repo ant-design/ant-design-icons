@@ -13,7 +13,7 @@ export interface IconFontProps extends IconBaseProps {
 }
 
 export interface IconFontType extends FunctionalComponent<IconFontProps> {
-  displayName: string,
+  displayName: string;
 }
 
 function isValidCustomScriptUrl(scriptUrl: string): boolean {

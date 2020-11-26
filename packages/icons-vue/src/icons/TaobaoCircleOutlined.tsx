@@ -6,7 +6,7 @@ import TaobaoCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/TaobaoCircleO
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TaobaoCircleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TaobaoCircleOutlined: TaobaoCircleOutlinedIconType = (props, context) => {

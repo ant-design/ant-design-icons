@@ -6,7 +6,7 @@ import WindowsOutlinedSvg from '@ant-design/icons-svg/lib/asn/WindowsOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WindowsOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WindowsOutlined: WindowsOutlinedIconType = (props, context) => {

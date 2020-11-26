@@ -6,7 +6,7 @@ import AliwangwangOutlinedSvg from '@ant-design/icons-svg/lib/asn/AliwangwangOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AliwangwangOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AliwangwangOutlined: AliwangwangOutlinedIconType = (props, context) => {

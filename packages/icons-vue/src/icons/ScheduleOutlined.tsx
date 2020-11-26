@@ -6,7 +6,7 @@ import ScheduleOutlinedSvg from '@ant-design/icons-svg/lib/asn/ScheduleOutlined'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ScheduleOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ScheduleOutlined: ScheduleOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import FilterFilledSvg from '@ant-design/icons-svg/lib/asn/FilterFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FilterFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FilterFilled: FilterFilledIconType = (props, context) => {

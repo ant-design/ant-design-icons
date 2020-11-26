@@ -6,7 +6,7 @@ import AmazonCircleFilledSvg from '@ant-design/icons-svg/lib/asn/AmazonCircleFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AmazonCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AmazonCircleFilled: AmazonCircleFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import MinusOutlinedSvg from '@ant-design/icons-svg/lib/asn/MinusOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MinusOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MinusOutlined: MinusOutlinedIconType = (props, context) => {

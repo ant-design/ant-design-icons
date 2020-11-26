@@ -6,7 +6,7 @@ import DesktopOutlinedSvg from '@ant-design/icons-svg/lib/asn/DesktopOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DesktopOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DesktopOutlined: DesktopOutlinedIconType = (props, context) => {

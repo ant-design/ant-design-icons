@@ -6,7 +6,7 @@ import ClearOutlinedSvg from '@ant-design/icons-svg/lib/asn/ClearOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ClearOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ClearOutlined: ClearOutlinedIconType = (props, context) => {

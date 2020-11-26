@@ -6,7 +6,7 @@ import WeiboSquareFilledSvg from '@ant-design/icons-svg/lib/asn/WeiboSquareFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WeiboSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WeiboSquareFilled: WeiboSquareFilledIconType = (props, context) => {

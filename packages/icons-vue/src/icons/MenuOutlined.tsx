@@ -6,7 +6,7 @@ import MenuOutlinedSvg from '@ant-design/icons-svg/lib/asn/MenuOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface MenuOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const MenuOutlined: MenuOutlinedIconType = (props, context) => {

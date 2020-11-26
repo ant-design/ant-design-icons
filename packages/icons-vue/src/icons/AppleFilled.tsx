@@ -6,7 +6,7 @@ import AppleFilledSvg from '@ant-design/icons-svg/lib/asn/AppleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AppleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AppleFilled: AppleFilledIconType = (props, context) => {

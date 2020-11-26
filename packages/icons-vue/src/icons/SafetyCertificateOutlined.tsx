@@ -6,7 +6,7 @@ import SafetyCertificateOutlinedSvg from '@ant-design/icons-svg/lib/asn/SafetyCe
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SafetyCertificateOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SafetyCertificateOutlined: SafetyCertificateOutlinedIconType = (props, context) => {

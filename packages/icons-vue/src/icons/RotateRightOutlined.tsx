@@ -6,7 +6,7 @@ import RotateRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/RotateRightOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RotateRightOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RotateRightOutlined: RotateRightOutlinedIconType = (props, context) => {

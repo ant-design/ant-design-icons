@@ -6,7 +6,7 @@ import DiffFilledSvg from '@ant-design/icons-svg/lib/asn/DiffFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DiffFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DiffFilled: DiffFilledIconType = (props, context) => {

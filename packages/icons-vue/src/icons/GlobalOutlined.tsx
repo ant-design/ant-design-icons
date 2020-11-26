@@ -6,7 +6,7 @@ import GlobalOutlinedSvg from '@ant-design/icons-svg/lib/asn/GlobalOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface GlobalOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const GlobalOutlined: GlobalOutlinedIconType = (props, context) => {

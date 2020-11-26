@@ -6,7 +6,7 @@ import FileMarkdownOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileMarkdownO
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileMarkdownOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileMarkdownOutlined: FileMarkdownOutlinedIconType = (props, context) => {

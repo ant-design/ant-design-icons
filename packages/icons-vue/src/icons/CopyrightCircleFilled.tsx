@@ -6,7 +6,7 @@ import CopyrightCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CopyrightCir
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CopyrightCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CopyrightCircleFilled: CopyrightCircleFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import WechatFilledSvg from '@ant-design/icons-svg/lib/asn/WechatFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WechatFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WechatFilled: WechatFilledIconType = (props, context) => {

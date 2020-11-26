@@ -6,7 +6,7 @@ import CrownTwoToneSvg from '@ant-design/icons-svg/lib/asn/CrownTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CrownTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CrownTwoTone: CrownTwoToneIconType = (props, context) => {

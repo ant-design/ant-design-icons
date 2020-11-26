@@ -6,7 +6,7 @@ import WeiboCircleFilledSvg from '@ant-design/icons-svg/lib/asn/WeiboCircleFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WeiboCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WeiboCircleFilled: WeiboCircleFilledIconType = (props, context) => {

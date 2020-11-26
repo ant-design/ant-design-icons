@@ -6,7 +6,7 @@ import TrophyOutlinedSvg from '@ant-design/icons-svg/lib/asn/TrophyOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TrophyOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TrophyOutlined: TrophyOutlinedIconType = (props, context) => {

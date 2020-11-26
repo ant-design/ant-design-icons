@@ -6,7 +6,7 @@ import ScheduleFilledSvg from '@ant-design/icons-svg/lib/asn/ScheduleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ScheduleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ScheduleFilled: ScheduleFilledIconType = (props, context) => {

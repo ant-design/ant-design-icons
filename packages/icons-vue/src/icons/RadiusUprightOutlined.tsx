@@ -6,7 +6,7 @@ import RadiusUprightOutlinedSvg from '@ant-design/icons-svg/lib/asn/RadiusUprigh
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RadiusUprightOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RadiusUprightOutlined: RadiusUprightOutlinedIconType = (props, context) => {

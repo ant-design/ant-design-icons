@@ -6,7 +6,7 @@ import FileExclamationOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileExclam
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileExclamationOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileExclamationOutlined: FileExclamationOutlinedIconType = (props, context) => {

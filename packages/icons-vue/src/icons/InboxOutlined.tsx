@@ -6,7 +6,7 @@ import InboxOutlinedSvg from '@ant-design/icons-svg/lib/asn/InboxOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface InboxOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const InboxOutlined: InboxOutlinedIconType = (props, context) => {

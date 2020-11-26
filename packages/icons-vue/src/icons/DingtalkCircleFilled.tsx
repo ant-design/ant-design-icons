@@ -6,7 +6,7 @@ import DingtalkCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DingtalkCircl
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DingtalkCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DingtalkCircleFilled: DingtalkCircleFilledIconType = (props, context) => {

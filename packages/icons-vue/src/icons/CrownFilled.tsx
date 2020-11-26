@@ -6,7 +6,7 @@ import CrownFilledSvg from '@ant-design/icons-svg/lib/asn/CrownFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CrownFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CrownFilled: CrownFilledIconType = (props, context) => {

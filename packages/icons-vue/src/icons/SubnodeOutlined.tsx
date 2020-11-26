@@ -6,7 +6,7 @@ import SubnodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/SubnodeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SubnodeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SubnodeOutlined: SubnodeOutlinedIconType = (props, context) => {

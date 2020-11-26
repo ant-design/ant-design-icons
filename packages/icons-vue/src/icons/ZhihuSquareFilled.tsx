@@ -6,7 +6,7 @@ import ZhihuSquareFilledSvg from '@ant-design/icons-svg/lib/asn/ZhihuSquareFille
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ZhihuSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ZhihuSquareFilled: ZhihuSquareFilledIconType = (props, context) => {

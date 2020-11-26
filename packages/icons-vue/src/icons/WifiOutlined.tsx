@@ -6,7 +6,7 @@ import WifiOutlinedSvg from '@ant-design/icons-svg/lib/asn/WifiOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface WifiOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const WifiOutlined: WifiOutlinedIconType = (props, context) => {

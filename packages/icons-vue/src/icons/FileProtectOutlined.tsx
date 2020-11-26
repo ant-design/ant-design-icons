@@ -6,7 +6,7 @@ import FileProtectOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileProtectOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FileProtectOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FileProtectOutlined: FileProtectOutlinedIconType = (props, context) => {

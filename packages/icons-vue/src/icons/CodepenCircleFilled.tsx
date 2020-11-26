@@ -6,7 +6,7 @@ import CodepenCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CodepenCircleF
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CodepenCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CodepenCircleFilled: CodepenCircleFilledIconType = (props, context) => {

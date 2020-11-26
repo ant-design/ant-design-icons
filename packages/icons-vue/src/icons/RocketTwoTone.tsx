@@ -6,7 +6,7 @@ import RocketTwoToneSvg from '@ant-design/icons-svg/lib/asn/RocketTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RocketTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RocketTwoTone: RocketTwoToneIconType = (props, context) => {

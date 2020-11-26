@@ -6,7 +6,7 @@ import FieldBinaryOutlinedSvg from '@ant-design/icons-svg/lib/asn/FieldBinaryOut
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FieldBinaryOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const FieldBinaryOutlined: FieldBinaryOutlinedIconType = (props, context) => {

@@ -6,7 +6,7 @@ import PercentageOutlinedSvg from '@ant-design/icons-svg/lib/asn/PercentageOutli
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface PercentageOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const PercentageOutlined: PercentageOutlinedIconType = (props, context) => {

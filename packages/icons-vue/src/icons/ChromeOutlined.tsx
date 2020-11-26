@@ -6,7 +6,7 @@ import ChromeOutlinedSvg from '@ant-design/icons-svg/lib/asn/ChromeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface ChromeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const ChromeOutlined: ChromeOutlinedIconType = (props, context) => {

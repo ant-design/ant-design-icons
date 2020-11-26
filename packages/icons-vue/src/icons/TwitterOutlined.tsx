@@ -6,7 +6,7 @@ import TwitterOutlinedSvg from '@ant-design/icons-svg/lib/asn/TwitterOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface TwitterOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const TwitterOutlined: TwitterOutlinedIconType = (props, context) => {

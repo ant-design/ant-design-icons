@@ -6,7 +6,7 @@ import LinkedinFilledSvg from '@ant-design/icons-svg/lib/asn/LinkedinFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface LinkedinFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const LinkedinFilled: LinkedinFilledIconType = (props, context) => {

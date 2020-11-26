@@ -6,7 +6,7 @@ import SafetyCertificateFilledSvg from '@ant-design/icons-svg/lib/asn/SafetyCert
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SafetyCertificateFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SafetyCertificateFilled: SafetyCertificateFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import CaretRightFilledSvg from '@ant-design/icons-svg/lib/asn/CaretRightFilled'
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CaretRightFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CaretRightFilled: CaretRightFilledIconType = (props, context) => {

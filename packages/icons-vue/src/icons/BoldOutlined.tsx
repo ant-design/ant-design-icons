@@ -6,7 +6,7 @@ import BoldOutlinedSvg from '@ant-design/icons-svg/lib/asn/BoldOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface BoldOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const BoldOutlined: BoldOutlinedIconType = (props, context) => {

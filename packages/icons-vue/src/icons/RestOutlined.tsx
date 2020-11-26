@@ -6,7 +6,7 @@ import RestOutlinedSvg from '@ant-design/icons-svg/lib/asn/RestOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface RestOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const RestOutlined: RestOutlinedIconType = (props, context) => {

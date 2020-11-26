@@ -6,7 +6,7 @@ import SkinFilledSvg from '@ant-design/icons-svg/lib/asn/SkinFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface SkinFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const SkinFilled: SkinFilledIconType = (props, context) => {

@@ -6,7 +6,7 @@ import DropboxCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DropboxCircleF
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DropboxCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DropboxCircleFilled: DropboxCircleFilledIconType = (props, context) => {

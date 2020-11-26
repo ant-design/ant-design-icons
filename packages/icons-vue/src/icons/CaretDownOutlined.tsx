@@ -6,7 +6,7 @@ import CaretDownOutlinedSvg from '@ant-design/icons-svg/lib/asn/CaretDownOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface CaretDownOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const CaretDownOutlined: CaretDownOutlinedIconType = (props, context) => {

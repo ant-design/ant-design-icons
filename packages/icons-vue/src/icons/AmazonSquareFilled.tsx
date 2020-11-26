@@ -6,7 +6,7 @@ import AmazonSquareFilledSvg from '@ant-design/icons-svg/lib/asn/AmazonSquareFil
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface AmazonSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const AmazonSquareFilled: AmazonSquareFilledIconType = (props, context) => {

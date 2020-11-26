@@ -6,7 +6,7 @@ import DashboardOutlinedSvg from '@ant-design/icons-svg/lib/asn/DashboardOutline
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface DashboardOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const DashboardOutlined: DashboardOutlinedIconType = (props, context) => {

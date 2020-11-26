@@ -6,7 +6,7 @@ import Loading3QuartersOutlinedSvg from '@ant-design/icons-svg/lib/asn/Loading3Q
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface Loading3QuartersOutlinedIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const Loading3QuartersOutlined: Loading3QuartersOutlinedIconType = (props, context) => {

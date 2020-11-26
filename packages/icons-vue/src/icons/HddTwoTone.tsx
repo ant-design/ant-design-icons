@@ -6,7 +6,7 @@ import HddTwoToneSvg from '@ant-design/icons-svg/lib/asn/HddTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface HddTwoToneIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const HddTwoTone: HddTwoToneIconType = (props, context) => {

@@ -6,7 +6,7 @@ import UpSquareFilledSvg from '@ant-design/icons-svg/lib/asn/UpSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface UpSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
-  displayName: string,
+  displayName: string;
 }
 
 const UpSquareFilled: UpSquareFilledIconType = (props, context) => {
