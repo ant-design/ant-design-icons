@@ -13,8 +13,8 @@ export interface IconComponentProps extends AntdIconProps {
   icon: IconDefinition;
 }
 interface Color {
-  getTwoToneColor: () => TwoToneColor,
-  setTwoToneColor: (twoToneColor: TwoToneColor)=> void
+  getTwoToneColor: () => TwoToneColor;
+  setTwoToneColor: (twoToneColor: TwoToneColor)=> void;
 }
 export interface AntdIconType extends Color, FunctionalComponent<IconComponentProps> {
   displayName: string;

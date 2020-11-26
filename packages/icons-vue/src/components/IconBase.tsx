@@ -40,8 +40,8 @@ function getTwoToneColors(): TwoToneColorPalette {
 }
 
 interface Color {
-  getTwoToneColors: () => TwoToneColorPalette,
-  setTwoToneColors: (twoToneColors: TwoToneColorPaletteSetter)=> void
+  getTwoToneColors: () => TwoToneColorPalette;
+  setTwoToneColors: (twoToneColors: TwoToneColorPaletteSetter)=> void;
 }
 
 export interface IconBaseType extends Color, FunctionalComponent<IconProps> {
