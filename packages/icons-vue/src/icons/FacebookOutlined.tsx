@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import FacebookOutlinedSvg from '@ant-design/icons-svg/lib/asn/FacebookOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FacebookOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface FacebookOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const FacebookOutlined: FacebookOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={FacebookOutlinedSvg}></AntdIcon>;
 };

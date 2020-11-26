@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import SkypeOutlinedSvg from '@ant-design/icons-svg/lib/asn/SkypeOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SkypeOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface SkypeOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const SkypeOutlined: SkypeOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={SkypeOutlinedSvg}></AntdIcon>;
 };

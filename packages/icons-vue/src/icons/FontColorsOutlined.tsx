@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import FontColorsOutlinedSvg from '@ant-design/icons-svg/lib/asn/FontColorsOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FontColorsOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface FontColorsOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const FontColorsOutlined: FontColorsOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={FontColorsOutlinedSvg}></AntdIcon>;
 };

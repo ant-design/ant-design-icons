@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import GiftFilledSvg from '@ant-design/icons-svg/lib/asn/GiftFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const GiftFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface GiftFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const GiftFilled: GiftFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={GiftFilledSvg}></AntdIcon>;
 };

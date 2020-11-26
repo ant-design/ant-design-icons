@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import FilePptOutlinedSvg from '@ant-design/icons-svg/lib/asn/FilePptOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FilePptOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface FilePptOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const FilePptOutlined: FilePptOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={FilePptOutlinedSvg}></AntdIcon>;
 };

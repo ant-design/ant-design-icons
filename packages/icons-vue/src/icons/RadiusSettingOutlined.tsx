@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import RadiusSettingOutlinedSvg from '@ant-design/icons-svg/lib/asn/RadiusSettingOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RadiusSettingOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface RadiusSettingOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const RadiusSettingOutlined: RadiusSettingOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={RadiusSettingOutlinedSvg}></AntdIcon>;
 };

@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import ChromeFilledSvg from '@ant-design/icons-svg/lib/asn/ChromeFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ChromeFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface ChromeFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const ChromeFilled: ChromeFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={ChromeFilledSvg}></AntdIcon>;
 };

@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import SkypeFilledSvg from '@ant-design/icons-svg/lib/asn/SkypeFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SkypeFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface SkypeFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const SkypeFilled: SkypeFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={SkypeFilledSvg}></AntdIcon>;
 };

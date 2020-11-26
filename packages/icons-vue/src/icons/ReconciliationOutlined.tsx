@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import ReconciliationOutlinedSvg from '@ant-design/icons-svg/lib/asn/ReconciliationOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ReconciliationOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface ReconciliationOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const ReconciliationOutlined: ReconciliationOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={ReconciliationOutlinedSvg}></AntdIcon>;
 };

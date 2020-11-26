@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import ForwardOutlinedSvg from '@ant-design/icons-svg/lib/asn/ForwardOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ForwardOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface ForwardOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const ForwardOutlined: ForwardOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={ForwardOutlinedSvg}></AntdIcon>;
 };

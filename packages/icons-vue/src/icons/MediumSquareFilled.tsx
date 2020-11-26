@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import MediumSquareFilledSvg from '@ant-design/icons-svg/lib/asn/MediumSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MediumSquareFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface MediumSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const MediumSquareFilled: MediumSquareFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={MediumSquareFilledSvg}></AntdIcon>;
 };

@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import FrownTwoToneSvg from '@ant-design/icons-svg/lib/asn/FrownTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FrownTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface FrownTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const FrownTwoTone: FrownTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={FrownTwoToneSvg}></AntdIcon>;
 };

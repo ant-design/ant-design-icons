@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import ScheduleTwoToneSvg from '@ant-design/icons-svg/lib/asn/ScheduleTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ScheduleTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface ScheduleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const ScheduleTwoTone: ScheduleTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={ScheduleTwoToneSvg}></AntdIcon>;
 };

@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import MobileTwoToneSvg from '@ant-design/icons-svg/lib/asn/MobileTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MobileTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface MobileTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const MobileTwoTone: MobileTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={MobileTwoToneSvg}></AntdIcon>;
 };

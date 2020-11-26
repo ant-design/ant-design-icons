@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import PoundCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/PoundCircleTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PoundCircleTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface PoundCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const PoundCircleTwoTone: PoundCircleTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={PoundCircleTwoToneSvg}></AntdIcon>;
 };

@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import BellTwoToneSvg from '@ant-design/icons-svg/lib/asn/BellTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BellTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface BellTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const BellTwoTone: BellTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={BellTwoToneSvg}></AntdIcon>;
 };

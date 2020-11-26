@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import UploadOutlinedSvg from '@ant-design/icons-svg/lib/asn/UploadOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const UploadOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface UploadOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const UploadOutlined: UploadOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={UploadOutlinedSvg}></AntdIcon>;
 };

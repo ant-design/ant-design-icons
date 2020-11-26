@@ -1,6 +1,6 @@
 import { generate, getSecondaryColor, isIconDefinition, warning, useInsertStyles } from '../utils';
 import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
-import { CSSProperties, SetupContext } from 'vue';
+import { CSSProperties, FunctionalComponent } from 'vue';
 
 export interface IconProps {
   icon: IconDefinition;
@@ -27,7 +27,7 @@ const twoToneColorPalette: TwoToneColorPalette = {
   calculated: false,
 };
 
-function setTwoToneColors({ primaryColor, secondaryColor }: TwoToneColorPaletteSetter) {
+function setTwoToneColors({ primaryColor, secondaryColor }: TwoToneColorPaletteSetter): void {
   twoToneColorPalette.primaryColor = primaryColor;
   twoToneColorPalette.secondaryColor = secondaryColor || getSecondaryColor(primaryColor);
   twoToneColorPalette.calculated = !!secondaryColor;
@@ -39,7 +39,15 @@ function getTwoToneColors(): TwoToneColorPalette {
   };
 }
 
-const IconBase = (props: IconProps, context: SetupContext) => {
+interface Color {
+  getTwoToneColors: () => TwoToneColorPalette,
+  setTwoToneColors: (twoToneColors: TwoToneColorPaletteSetter)=> void
+}
+
+export interface IconBaseType extends Color, FunctionalComponent<IconProps> {
+  displayName: string,
+}
+const IconBase: IconBaseType = (props, context) => {
   const { icon, primaryColor, secondaryColor, ...restProps } = {
     ...props,
     ...context.attrs,
@@ -81,6 +89,7 @@ const IconBase = (props: IconProps, context: SetupContext) => {
 };
 
 IconBase.inheritAttrs = false;
+IconBase.displayName = 'IconBase';
 IconBase.getTwoToneColors = getTwoToneColors;
 IconBase.setTwoToneColors = setTwoToneColors;
 

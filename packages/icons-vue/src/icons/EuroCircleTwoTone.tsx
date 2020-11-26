@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import EuroCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/EuroCircleTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const EuroCircleTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface EuroCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const EuroCircleTwoTone: EuroCircleTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={EuroCircleTwoToneSvg}></AntdIcon>;
 };

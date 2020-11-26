@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import CheckSquareFilledSvg from '@ant-design/icons-svg/lib/asn/CheckSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CheckSquareFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface CheckSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const CheckSquareFilled: CheckSquareFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={CheckSquareFilledSvg}></AntdIcon>;
 };

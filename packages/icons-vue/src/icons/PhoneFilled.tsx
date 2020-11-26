@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import PhoneFilledSvg from '@ant-design/icons-svg/lib/asn/PhoneFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PhoneFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface PhoneFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const PhoneFilled: PhoneFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={PhoneFilledSvg}></AntdIcon>;
 };

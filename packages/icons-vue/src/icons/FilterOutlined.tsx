@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import FilterOutlinedSvg from '@ant-design/icons-svg/lib/asn/FilterOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const FilterOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface FilterOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const FilterOutlined: FilterOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={FilterOutlinedSvg}></AntdIcon>;
 };

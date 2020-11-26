@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import AccountBookTwoToneSvg from '@ant-design/icons-svg/lib/asn/AccountBookTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AccountBookTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface AccountBookTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const AccountBookTwoTone: AccountBookTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={AccountBookTwoToneSvg}></AntdIcon>;
 };

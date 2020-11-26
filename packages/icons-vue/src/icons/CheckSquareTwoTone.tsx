@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import CheckSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/CheckSquareTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CheckSquareTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface CheckSquareTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const CheckSquareTwoTone: CheckSquareTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={CheckSquareTwoToneSvg}></AntdIcon>;
 };

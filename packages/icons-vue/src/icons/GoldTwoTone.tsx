@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import GoldTwoToneSvg from '@ant-design/icons-svg/lib/asn/GoldTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const GoldTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface GoldTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const GoldTwoTone: GoldTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={GoldTwoToneSvg}></AntdIcon>;
 };

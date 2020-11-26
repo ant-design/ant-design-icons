@@ -3,7 +3,6 @@ import { IconDefinition } from '@ant-design/icons-svg/es/types';
 import * as path from 'path';
 import * as fs from 'fs';
 import { promisify } from 'util';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { template } from 'lodash';
 
 const writeFile = promisify(fs.writeFile);
@@ -35,11 +34,15 @@ async function generateIcons() {
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import <%= svgIdentifier %>Svg from '@ant-design/icons-svg/lib/asn/<%= svgIdentifier %>';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const <%= svgIdentifier %> = (props: AntdIconProps, context: SetupContext) => {
+export interface <%= svgIdentifier %>IconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const <%= svgIdentifier %>: <%= svgIdentifier %>IconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={<%= svgIdentifier %>Svg}></AntdIcon>;
 };

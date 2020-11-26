@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import CloudTwoToneSvg from '@ant-design/icons-svg/lib/asn/CloudTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CloudTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface CloudTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const CloudTwoTone: CloudTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={CloudTwoToneSvg}></AntdIcon>;
 };

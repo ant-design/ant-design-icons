@@ -3,7 +3,7 @@ import { IconBaseProps } from './Icon';
 import { IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { getTwoToneColor, TwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
 import { normalizeTwoToneColors } from '../utils';
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 
 export interface AntdIconProps extends IconBaseProps {
   twoToneColor?: TwoToneColor;
@@ -12,11 +12,18 @@ export interface AntdIconProps extends IconBaseProps {
 export interface IconComponentProps extends AntdIconProps {
   icon: IconDefinition;
 }
+interface Color {
+  getTwoToneColor: () => TwoToneColor,
+  setTwoToneColor: (twoToneColor: TwoToneColor)=> void
+}
+export interface AntdIconType extends Color, FunctionalComponent<IconComponentProps> {
+  displayName: string,
+}
 
 // Initial setting
 setTwoToneColor('#1890ff');
 
-const Icon = (props: IconComponentProps, context: SetupContext) => {
+const Icon: AntdIconType = (props, context) => {
   const {
     class: cls,
     icon,

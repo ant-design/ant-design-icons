@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import RedEnvelopeTwoToneSvg from '@ant-design/icons-svg/lib/asn/RedEnvelopeTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RedEnvelopeTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface RedEnvelopeTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const RedEnvelopeTwoTone: RedEnvelopeTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={RedEnvelopeTwoToneSvg}></AntdIcon>;
 };

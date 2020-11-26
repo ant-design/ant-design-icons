@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import LikeFilledSvg from '@ant-design/icons-svg/lib/asn/LikeFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const LikeFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface LikeFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const LikeFilled: LikeFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={LikeFilledSvg}></AntdIcon>;
 };

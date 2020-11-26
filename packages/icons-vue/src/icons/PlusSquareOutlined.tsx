@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import PlusSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/PlusSquareOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const PlusSquareOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface PlusSquareOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const PlusSquareOutlined: PlusSquareOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={PlusSquareOutlinedSvg}></AntdIcon>;
 };

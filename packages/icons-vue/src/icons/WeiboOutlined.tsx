@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import WeiboOutlinedSvg from '@ant-design/icons-svg/lib/asn/WeiboOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const WeiboOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface WeiboOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const WeiboOutlined: WeiboOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={WeiboOutlinedSvg}></AntdIcon>;
 };

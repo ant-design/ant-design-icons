@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import RocketFilledSvg from '@ant-design/icons-svg/lib/asn/RocketFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const RocketFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface RocketFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const RocketFilled: RocketFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={RocketFilledSvg}></AntdIcon>;
 };

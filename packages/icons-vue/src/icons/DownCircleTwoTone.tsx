@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import DownCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/DownCircleTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DownCircleTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface DownCircleTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const DownCircleTwoTone: DownCircleTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={DownCircleTwoToneSvg}></AntdIcon>;
 };

@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import BorderRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderRightOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BorderRightOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface BorderRightOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const BorderRightOutlined: BorderRightOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={BorderRightOutlinedSvg}></AntdIcon>;
 };

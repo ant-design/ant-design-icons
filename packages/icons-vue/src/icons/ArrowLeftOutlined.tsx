@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import ArrowLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/ArrowLeftOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ArrowLeftOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface ArrowLeftOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const ArrowLeftOutlined: ArrowLeftOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={ArrowLeftOutlinedSvg}></AntdIcon>;
 };

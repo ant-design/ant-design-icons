@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import SaveFilledSvg from '@ant-design/icons-svg/lib/asn/SaveFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const SaveFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface SaveFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const SaveFilled: SaveFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={SaveFilledSvg}></AntdIcon>;
 };

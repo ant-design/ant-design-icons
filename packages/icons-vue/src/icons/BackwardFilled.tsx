@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import BackwardFilledSvg from '@ant-design/icons-svg/lib/asn/BackwardFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const BackwardFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface BackwardFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const BackwardFilled: BackwardFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={BackwardFilledSvg}></AntdIcon>;
 };

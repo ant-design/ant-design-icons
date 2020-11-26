@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import AmazonOutlinedSvg from '@ant-design/icons-svg/lib/asn/AmazonOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const AmazonOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface AmazonOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const AmazonOutlined: AmazonOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={AmazonOutlinedSvg}></AntdIcon>;
 };

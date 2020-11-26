@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import CompassOutlinedSvg from '@ant-design/icons-svg/lib/asn/CompassOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CompassOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface CompassOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const CompassOutlined: CompassOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={CompassOutlinedSvg}></AntdIcon>;
 };

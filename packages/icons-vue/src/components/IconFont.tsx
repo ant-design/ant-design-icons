@@ -1,5 +1,5 @@
+import { FunctionalComponent } from 'vue';
 import Icon, { IconBaseProps } from './Icon';
-import { SetupContext } from 'vue';
 
 const customCache = new Set<string>();
 
@@ -10,6 +10,10 @@ export interface CustomIconOptions {
 
 export interface IconFontProps extends IconBaseProps {
   type: string;
+}
+
+export interface IconFontType extends FunctionalComponent<IconFontProps> {
+  displayName: string,
 }
 
 function isValidCustomScriptUrl(scriptUrl: string): boolean {
@@ -57,7 +61,7 @@ export default function create(options: CustomIconOptions = {}): Function {
     }
   }
 
-  const Iconfont = (props: IconFontProps, context: SetupContext) => {
+  const Iconfont: IconFontType = (props, context) => {
     const { attrs, slots } = context;
     const { type, ...restProps } = { ...props, ...attrs } as any;
     const children = slots.default && slots.default();

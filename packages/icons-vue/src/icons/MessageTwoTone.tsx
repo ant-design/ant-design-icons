@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import MessageTwoToneSvg from '@ant-design/icons-svg/lib/asn/MessageTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MessageTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface MessageTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const MessageTwoTone: MessageTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={MessageTwoToneSvg}></AntdIcon>;
 };

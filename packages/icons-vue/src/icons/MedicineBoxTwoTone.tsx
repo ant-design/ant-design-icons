@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import MedicineBoxTwoToneSvg from '@ant-design/icons-svg/lib/asn/MedicineBoxTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MedicineBoxTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface MedicineBoxTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const MedicineBoxTwoTone: MedicineBoxTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={MedicineBoxTwoToneSvg}></AntdIcon>;
 };

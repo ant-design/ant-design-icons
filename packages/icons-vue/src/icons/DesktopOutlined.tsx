@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import DesktopOutlinedSvg from '@ant-design/icons-svg/lib/asn/DesktopOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DesktopOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface DesktopOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const DesktopOutlined: DesktopOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={DesktopOutlinedSvg}></AntdIcon>;
 };

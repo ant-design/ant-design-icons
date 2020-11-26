@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import ExclamationCircleFilledSvg from '@ant-design/icons-svg/lib/asn/ExclamationCircleFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ExclamationCircleFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface ExclamationCircleFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const ExclamationCircleFilled: ExclamationCircleFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={ExclamationCircleFilledSvg}></AntdIcon>;
 };

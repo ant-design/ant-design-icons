@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import ContactsFilledSvg from '@ant-design/icons-svg/lib/asn/ContactsFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const ContactsFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface ContactsFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const ContactsFilled: ContactsFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={ContactsFilledSvg}></AntdIcon>;
 };

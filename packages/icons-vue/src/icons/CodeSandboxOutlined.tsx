@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import CodeSandboxOutlinedSvg from '@ant-design/icons-svg/lib/asn/CodeSandboxOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const CodeSandboxOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface CodeSandboxOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const CodeSandboxOutlined: CodeSandboxOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={CodeSandboxOutlinedSvg}></AntdIcon>;
 };

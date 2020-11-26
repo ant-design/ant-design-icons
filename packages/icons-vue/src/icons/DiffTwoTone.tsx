@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import DiffTwoToneSvg from '@ant-design/icons-svg/lib/asn/DiffTwoTone';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DiffTwoTone = (props: AntdIconProps, context: SetupContext) => {
+export interface DiffTwoToneIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const DiffTwoTone: DiffTwoToneIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={DiffTwoToneSvg}></AntdIcon>;
 };

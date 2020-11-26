@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import DeploymentUnitOutlinedSvg from '@ant-design/icons-svg/lib/asn/DeploymentUnitOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const DeploymentUnitOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface DeploymentUnitOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const DeploymentUnitOutlined: DeploymentUnitOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={DeploymentUnitOutlinedSvg}></AntdIcon>;
 };

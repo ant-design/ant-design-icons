@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import LeftSquareFilledSvg from '@ant-design/icons-svg/lib/asn/LeftSquareFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const LeftSquareFilled = (props: AntdIconProps, context: SetupContext) => {
+export interface LeftSquareFilledIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const LeftSquareFilled: LeftSquareFilledIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={LeftSquareFilledSvg}></AntdIcon>;
 };

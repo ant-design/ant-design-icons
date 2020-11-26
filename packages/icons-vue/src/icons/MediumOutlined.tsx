@@ -1,11 +1,15 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import { SetupContext } from 'vue';
+import { FunctionalComponent } from 'vue';
 import MediumOutlinedSvg from '@ant-design/icons-svg/lib/asn/MediumOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
-const MediumOutlined = (props: AntdIconProps, context: SetupContext) => {
+export interface MediumOutlinedIconType extends FunctionalComponent<AntdIconProps> {
+  displayName: string,
+}
+
+const MediumOutlined: MediumOutlinedIconType = (props, context) => {
   const p = { ...props, ...context.attrs };
   return <AntdIcon {...p} icon={MediumOutlinedSvg}></AntdIcon>;
 };
