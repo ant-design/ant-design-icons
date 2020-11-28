@@ -34,6 +34,20 @@ describe('Icon', () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
+  it('should support kebab-case props', () => {
+    const wrapper = mount({
+      render() {
+        return (
+          <div>
+            <CheckCircleTwoTone twoToneColor="#000" />
+            <CheckCircleTwoTone two-tone-color="#000" />
+          </div>
+        );
+      },
+    });
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+
   it('should support two-tone icon', () => {
     const wrapper = mount(CheckCircleTwoTone, { props: { twoToneColor: '#f5222d' } });
     expect(wrapper.html()).toMatchSnapshot();

@@ -70,6 +70,10 @@ const Icon: AntdIconType = (props, context) => {
   );
 };
 
+Icon.props = {
+  icon: Object,
+  twoToneColor: String,
+};
 Icon.displayName = 'AntdIcon';
 Icon.inheritAttrs = false;
 Icon.getTwoToneColor = getTwoToneColor;
