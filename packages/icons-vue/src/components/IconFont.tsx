@@ -1,4 +1,4 @@
-import { FunctionalComponent } from 'vue';
+import { FunctionalComponent, PropType } from 'vue';
 import Icon, { IconBaseProps } from './Icon';
 
 const customCache = new Set<string>();
@@ -78,6 +78,11 @@ export default function create(options: CustomIconOptions = {}): Function {
       ...restProps,
     };
     return <Icon {...iconProps}>{content}</Icon>;
+  };
+  Iconfont.props = {
+    spin: Boolean as PropType<boolean>,
+    rotate: Number as PropType<number>,
+    type: String as PropType<string>,
   };
   Iconfont.inheritAttrs = false;
   Iconfont.displayName = 'Iconfont';

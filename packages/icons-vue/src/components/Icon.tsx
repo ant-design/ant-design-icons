@@ -1,5 +1,5 @@
 import { svgBaseProps, warning, useInsertStyles } from '../utils';
-import { Component, FunctionalComponent, HTMLAttributes } from 'vue';
+import { Component, FunctionalComponent, HTMLAttributes, PropType } from 'vue';
 
 export interface IconBaseProps extends HTMLAttributes {
   spin?: boolean;
@@ -95,7 +95,12 @@ const Icon: IconType = (props, context) => {
     </span>
   );
 };
-
+Icon.props = {
+  spin: Boolean as PropType<boolean>,
+  rotate: Number as PropType<number>,
+  viewBox: String as PropType<string>,
+  ariaLabel: String as PropType<string>,
+};
 Icon.inheritAttrs = false;
 Icon.displayName = 'Icon';
 

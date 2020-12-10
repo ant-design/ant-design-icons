@@ -71,6 +71,8 @@ const Icon: AntdIconType = (props, context) => {
 };
 
 Icon.props = {
+  spin: Boolean as PropType<boolean>,
+  rotate: Number as PropType<number>,
   icon: Object as PropType<IconDefinition>,
   twoToneColor: String as PropType<TwoToneColor>,
 };

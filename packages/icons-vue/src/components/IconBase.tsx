@@ -1,6 +1,6 @@
 import { generate, getSecondaryColor, isIconDefinition, warning, useInsertStyles } from '../utils';
 import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
-import { CSSProperties, FunctionalComponent } from 'vue';
+import { CSSProperties, FunctionalComponent, PropType } from 'vue';
 
 export interface IconProps {
   icon: IconDefinition;
@@ -88,6 +88,12 @@ const IconBase: IconBaseType = (props, context) => {
   // },
 };
 
+IconBase.props = {
+  icon: Object as PropType<IconDefinition>,
+  primaryColor: String as PropType<string>,
+  secondaryColor: String as PropType<string>,
+  focusable: String as PropType<string>,
+};
 IconBase.inheritAttrs = false;
 IconBase.displayName = 'IconBase';
 IconBase.getTwoToneColors = getTwoToneColors;
