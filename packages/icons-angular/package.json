@@ -37,7 +37,7 @@
     "@types/node": "^13.9.3",
     "classlist": "^2.0.0",
     "codelyzer": "^6.0.0",
-    "core-js": "^2.5.4",
+    "core-js": "^3.8.1",
     "cross-env": "^5.2.0",
     "fs-extra": "^7.0.0",
     "globby": "^8.0.1",
