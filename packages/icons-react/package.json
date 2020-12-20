@@ -67,5 +67,11 @@
     "insert-css": "^2.0.0",
     "rc-util": "^5.0.1"
   },
+  "resolutions": {
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0"
+  },
   "gitHead": "225d4d2189720ee3b7e4a4d7a6d80e076fa15cbc"
 }
