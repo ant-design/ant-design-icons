@@ -100,7 +100,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     }
 
     return null;
-  }
+  };
 
   let iconTabIndex = tabIndex;
   if (iconTabIndex === undefined && onClick) {
