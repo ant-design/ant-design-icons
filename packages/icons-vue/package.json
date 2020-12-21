@@ -48,7 +48,7 @@
     "eslint-plugin-vue": "^7.0.0-0",
     "jest": "^25.4.0",
     "jest-serializer-vue": "^2.0.2",
-    "prettier": "^1.19.1",
+    "prettier": "^2.2.1",
     "ts-node": "^8.10.2",
     "typescript": "~3.9.3",
     "vc-tools": "^3.0.0",
