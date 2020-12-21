@@ -102,7 +102,7 @@ const IconBase: IconBaseComponent<IconProps> = props => {
     'aria-hidden': 'true',
     ...restProps,
   });
-}
+};
 
 IconBase.displayName = 'IconReact';
 IconBase.getTwoToneColors = getTwoToneColors;

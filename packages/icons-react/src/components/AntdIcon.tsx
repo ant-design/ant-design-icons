@@ -1,8 +1,8 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { IconDefinition } from '@ant-design/icons-svg/lib/types';
+import type { IconDefinition } from '@ant-design/icons-svg/lib/types';
 
-import { IconBaseProps } from './Icon';
+import type { IconBaseProps } from './Icon';
 import ReactIcon from './IconBase';
 import { getTwoToneColor, TwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
 import { normalizeTwoToneColors } from '../utils';
