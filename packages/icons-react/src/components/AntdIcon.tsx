@@ -20,7 +20,7 @@ export interface IconComponentProps extends AntdIconProps {
 setTwoToneColor('#1890ff');
 
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757#issuecomment-488848720
-interface IconBaseComponent<Props> extends React.ForwardRefExoticComponent<
+export interface IconBaseComponent<Props> extends React.ForwardRefExoticComponent<
   Props & React.RefAttributes<HTMLSpanElement>
 > {
   getTwoToneColor: typeof getTwoToneColor;

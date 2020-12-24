@@ -1,5 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
+import { IconComponentProps as AntdIconComponentProps, IconBaseComponent as AntdIconBaseComponent } from './AntdIcon'
 
 import { svgBaseProps, warning, useInsertStyles } from '../utils';
 
@@ -19,7 +20,7 @@ export interface CustomIconComponentProps {
 
 export interface IconComponentProps extends IconBaseProps {
   viewBox?: string;
-  component?: React.ComponentType<CustomIconComponentProps | React.SVGProps<SVGSVGElement>>;
+  component?: React.ComponentType<CustomIconComponentProps | React.SVGProps<SVGSVGElement>> | AntdIconBaseComponent<AntdIconComponentProps>;
   ariaLabel?: React.AriaAttributes['aria-label'];
 }
 
