@@ -39,7 +39,9 @@ function createScriptUrlElements(scriptUrls: string[], index: number = 0): void 
   }
 }
 
-export default function create(options: CustomIconOptions = {}): Function {
+export default function create(
+  options: CustomIconOptions = {},
+): FunctionalComponent<IconFontProps> {
   const { scriptUrl, extraCommonProps = {} } = options;
 
   /**
