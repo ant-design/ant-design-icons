@@ -2,6 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import type { IconDefinition } from '@ant-design/icons-svg/lib/types';
 
+import Context from './Context';
 import type { IconBaseProps } from './Icon';
 import ReactIcon from './IconBase';
 import { getTwoToneColor, TwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
@@ -20,9 +21,8 @@ export interface IconComponentProps extends AntdIconProps {
 setTwoToneColor('#1890ff');
 
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757#issuecomment-488848720
-interface IconBaseComponent<Props> extends React.ForwardRefExoticComponent<
-  Props & React.RefAttributes<HTMLSpanElement>
-> {
+interface IconBaseComponent<Props>
+  extends React.ForwardRefExoticComponent<Props & React.RefAttributes<HTMLSpanElement>> {
   getTwoToneColor: typeof getTwoToneColor;
   setTwoToneColor: typeof setTwoToneColor;
 }
@@ -46,10 +46,14 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     ...restProps
   } = props;
 
+  const { prefixCls = 'anticon' } = React.useContext(Context);
+
   const classString = classNames(
-    'anticon',
-    { [`anticon-${icon.name}`]: Boolean(icon.name) },
-    { 'anticon-spin': !!spin || icon.name === 'loading' },
+    prefixCls,
+    {
+      [`${prefixCls}-${icon.name}`]: !!icon.name,
+      [`${prefixCls}-spin`]: !!spin || icon.name === 'loading',
+    },
     className,
   );
 
@@ -60,9 +64,9 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
 
   const svgStyle = rotate
     ? {
-      msTransform: `rotate(${rotate}deg)`,
-      transform: `rotate(${rotate}deg)`,
-    }
+        msTransform: `rotate(${rotate}deg)`,
+        transform: `rotate(${rotate}deg)`,
+      }
     : undefined;
 
   const [primaryColor, secondaryColor] = normalizeTwoToneColors(twoToneColor);
