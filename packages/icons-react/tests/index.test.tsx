@@ -2,9 +2,17 @@ import { Tooltip } from 'antd';
 import * as React from 'react';
 import { render, mount } from 'enzyme';
 import Icon, {
-  getTwoToneColor, setTwoToneColor, createFromIconfontCN,
-  HomeOutlined, SettingFilled, SmileOutlined, SyncOutlined,
-  LoadingOutlined, CheckCircleTwoTone, ClockCircleOutlined,
+  getTwoToneColor,
+  setTwoToneColor,
+  createFromIconfontCN,
+  HomeOutlined,
+  SettingFilled,
+  SmileOutlined,
+  SyncOutlined,
+  LoadingOutlined,
+  CheckCircleTwoTone,
+  ClockCircleOutlined,
+  IconProvider,
 } from '../lib';
 import { getSecondaryColor } from '../src/utils';
 
@@ -119,7 +127,8 @@ describe('Icon', () => {
         viewBox="0 0 24 24"
         onClick={onClickHandler}
         onKeyUp={onKeyUpHandler}
-        onMouseEnter={onMouseEnterHandler}>
+        onMouseEnter={onMouseEnterHandler}
+      >
         <title>Cool Home</title>
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
       </Icon>,
@@ -169,7 +178,7 @@ describe('Icon', () => {
     const renderSvg = () => (
       <svg viewBox="0 0 1024 1024" width="1em" height="1em" fill="currentColor" />
     );
-    const SvgIcon = props => <Icon component={renderSvg} {...props} />;
+    const SvgIcon = (props) => <Icon component={renderSvg} {...props} />;
 
     expect(mount(<SvgIcon />).render()).toMatchSnapshot();
   });
@@ -195,7 +204,7 @@ describe('Icon', () => {
       const wrapper = render(
         <Icon
           className="my-home-icon"
-          component={svgProps => (
+          component={(svgProps) => (
             <svg {...svgProps}>
               <defs>
                 <linearGradient id="gradient">
@@ -222,7 +231,7 @@ describe('Icon', () => {
 
   it('should support svg react component', () => {
     // children props would make no sense
-    const SvgComponent = props => (
+    const SvgComponent = (props) => (
       <svg viewBox="0 0 24 24" {...props}>
         <title>Custom Svg</title>
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
@@ -243,7 +252,7 @@ describe('Icon', () => {
     const onKeyUpHandler = jest.fn();
     const onMouseEnterHandler = jest.fn();
     // children props would make no sense
-    const SvgComponent = props => (
+    const SvgComponent = (props) => (
       <svg viewBox="0 0 24 24" {...props}>
         <title>Custom Svg</title>
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
@@ -256,7 +265,8 @@ describe('Icon', () => {
         component={SvgComponent}
         onClick={onClickHandler}
         onKeyUp={onKeyUpHandler}
-        onMouseEnter={onMouseEnterHandler}>
+        onMouseEnter={onMouseEnterHandler}
+      >
         <title>Cool Home</title>
         <path d="'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'" />
       </Icon>,
@@ -444,6 +454,14 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
   it('should support ignore load error', () => {
     const wrapper = render(<IconFont2 type="icon-facebook" />);
     expect(wrapper).toMatchSnapshot();
-  })
+  });
 
+  it('should support provider', () => {
+    const wrapper = render(
+      <IconProvider value={{ prefixCls: 'bamboo' }}>
+        <HomeOutlined className="light" />
+      </IconProvider>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });
