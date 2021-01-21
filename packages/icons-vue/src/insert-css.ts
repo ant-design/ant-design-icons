@@ -11,7 +11,9 @@ function createStyleElement() {
   styleElement.setAttribute('type', 'text/css');
   return styleElement;
 }
-function insertCss(css: any, options: any) {
+
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+function insertCss(css: any, options: any): any {
   options = options || {};
 
   if (css === undefined) {

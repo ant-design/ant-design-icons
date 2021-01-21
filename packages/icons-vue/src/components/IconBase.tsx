@@ -5,7 +5,7 @@ import { CSSProperties, FunctionalComponent, PropType } from 'vue';
 export interface IconProps {
   icon: IconDefinition;
   class?: string;
-  onClick?: Function;
+  onClick?: (e?: Event) => void;
   style?: CSSProperties;
   primaryColor?: string; // only for two-tone
   secondaryColor?: string; // only for two-tone

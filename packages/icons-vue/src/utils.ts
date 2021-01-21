@@ -3,17 +3,18 @@ import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
 import insertCss from './insert-css';
 
-export function warn(valid: boolean, message: string) {
+export function warn(valid: boolean, message: string): void {
   // Support uglify
   if (process.env.NODE_ENV !== 'production' && !valid && console !== undefined) {
     console.error(`Warning: ${message}`);
   }
 }
 
-export function warning(valid: boolean, message: string) {
+export function warning(valid: boolean, message: string): void {
   warn(valid, `[@ant-design/icons-vue] ${message}`);
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function isIconDefinition(target: any): target is IconDefinition {
   return (
     typeof target === 'object' &&
@@ -42,7 +43,7 @@ export interface Attrs {
 }
 export type StringKeyOf<T> = Extract<keyof T, string>;
 export type EventHandlers<E> = {
-  [K in StringKeyOf<E>]?: E[K] extends Function ? E[K] : (payload: E[K]) => void;
+  [K in StringKeyOf<E>]?: E[K] extends () => any ? E[K] : (payload: E[K]) => void;
 };
 export function generate(
   node: AbstractNode,
@@ -150,7 +151,7 @@ export const iconStyles = `
 
 let cssInjectedFlag = false;
 
-export const useInsertStyles = (styleStr: string = iconStyles) => {
+export const useInsertStyles = (styleStr: string = iconStyles): void => {
   nextTick(() => {
     if (!cssInjectedFlag) {
       if (typeof window !== 'undefined' && window.document && window.document.documentElement) {
