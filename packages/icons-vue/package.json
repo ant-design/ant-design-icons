@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-vue",
-  "version": "5.1.9",
+  "version": "6.0.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
@@ -58,7 +58,6 @@
   "dependencies": {
     "@ant-design/colors": "^5.0.0",
     "@ant-design/icons-svg": "^4.0.0",
-    "@babel/runtime": "^7.10.4",
     "@types/lodash": "^4.14.165",
     "lodash": "^4.17.15"
   },
