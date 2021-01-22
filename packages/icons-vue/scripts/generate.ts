@@ -80,23 +80,25 @@ ${entryText}
 }
 
 async function generateEntries() {
-  const render = template(
-    `
-'use strict';
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
+//   const render = template(
+//     `
+// 'use strict';
+//   Object.defineProperty(exports, "__esModule", {
+//     value: true
+//   });
+//   exports.default = void 0;
   
-  var _<%= svgIdentifier %> = _interopRequireDefault(require('./lib/icons/<%= svgIdentifier %>'));
+//   var _<%= svgIdentifier %> = _interopRequireDefault(require('./lib/icons/<%= svgIdentifier %>'));
   
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+//   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
   
-  var _default = _<%= svgIdentifier %>.default || _<%= svgIdentifier %>;
-  exports.default = _default;
-  module.exports = _default;
-`.trim(),
-  );
+//   var _default = _<%= svgIdentifier %>.default || _<%= svgIdentifier %>;
+//   exports.default = _default;
+//   module.exports = _default;
+// `.trim(),
+//   );
+
+  const render = template(`export { default } from './es/icons/<%= svgIdentifier %>';`.trim())
 
   await walk(async ({ svgIdentifier }) => {
     // generate `Icon.js` in root folder
