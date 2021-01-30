@@ -56,7 +56,7 @@ const PandaSvg = (_, { attrs }) => (
 );
 
 const HeartIcon = (_, { attrs }) => {
-  return <Icon component={HeartSvg} {...attrs} />;
+  return <Icon {...attrs} v-slots={{ component: HeartSvg }} />;
 };
 
 const PandaIcon = (_, { attrs }) => {

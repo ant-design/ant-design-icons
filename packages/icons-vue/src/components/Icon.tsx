@@ -34,7 +34,11 @@ const Icon: IconType = (props, context) => {
   } = { ...props, ...attrs } as any;
   const children = slots.default && slots.default();
   const hasChildren = children && children.length;
-  warning(Boolean(Component || hasChildren), 'Should have `component` prop or `children`.');
+  const slotsComponent = slots.component;
+  warning(
+    Boolean(Component || hasChildren || slotsComponent),
+    'Should have `component` prop/slot or `children`.',
+  );
 
   useInsertStyles();
 
@@ -66,6 +70,9 @@ const Icon: IconType = (props, context) => {
   const renderInnerNode = () => {
     if (Component) {
       return <Component {...innerSvgProps}>{children}</Component>;
+    }
+    if (slotsComponent) {
+      return slotsComponent(innerSvgProps);
     }
     if (hasChildren) {
       warning(
