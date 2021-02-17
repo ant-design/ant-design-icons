@@ -38,7 +38,7 @@
     "@types/react": "^16.4.12",
     "@types/react-dom": "^16.0.6",
     "@types/react-native": "^0.57.13",
-    "@types/react-test-renderer": "^16.0.1",
+    "@types/react-test-renderer": "^17.0.1",
     "cross-env": "^5.2.0",
     "jest": "^25.4.0",
     "patch-package": "^6.2.2",
