@@ -2,6 +2,7 @@ import { FunctionalComponent, PropType } from 'vue';
 import Icon, { IconBaseProps } from './Icon';
 
 const customCache = new Set<string>();
+const iconFontTypes = new Set<string>();
 
 export interface CustomIconOptions {
   scriptUrl?: string | string[];
@@ -14,10 +15,25 @@ export interface IconFontProps extends IconBaseProps {
 
 export interface IconFontType extends FunctionalComponent<IconFontProps> {
   displayName: string;
+  iconFontTypes: Set<string>;
 }
 
 function isValidCustomScriptUrl(scriptUrl: string): boolean {
   return typeof scriptUrl === 'string' && scriptUrl.length && !customCache.has(scriptUrl);
+}
+
+function getIconFontTypes(scriptUrl: string): void {
+  try {
+    // will load scriptUrl form disk cache
+    fetch(scriptUrl)
+      .then((r) => r.text())
+      .then((result) => {
+        const types = result.match(/(?<=<symbol id=")(\S*)(?=")/g) || [];
+        types.forEach((i) => iconFontTypes.add(i));
+      });
+  } catch (e) {
+    console.log("iconfont types load failed", e);
+  }
 }
 
 function createScriptUrlElements(scriptUrls: string[], index: number = 0): void {
@@ -28,6 +44,7 @@ function createScriptUrlElements(scriptUrls: string[], index: number = 0): void 
     script.setAttribute('data-namespace', currentScriptUrl);
     if (scriptUrls.length > index + 1) {
       script.onload = () => {
+        getIconFontTypes(currentScriptUrl);
         createScriptUrlElements(scriptUrls, index + 1);
       };
       script.onerror = () => {
@@ -88,5 +105,6 @@ export default function create(
   };
   Iconfont.inheritAttrs = false;
   Iconfont.displayName = 'Iconfont';
+  Iconfont.iconFontTypes = iconFontTypes;
   return Iconfont;
 }
