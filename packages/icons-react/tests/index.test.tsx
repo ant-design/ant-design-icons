@@ -472,6 +472,6 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
       </IconProvider>,
     );
 
-    expect(document.body.querySelector('style').nonce).toEqual('test');
+    expect(document.querySelector('style').nonce).toEqual('test');
   });
 });
