@@ -467,7 +467,7 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
 
   it('should support csp', () => {
     mount(
-      <IconProvider value={{ csp: 'test' }}>
+      <IconProvider value={{ csp: { nonce: 'test' } }}>
         <HomeOutlined />
       </IconProvider>,
     );
