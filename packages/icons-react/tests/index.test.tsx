@@ -464,4 +464,14 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should support csp', () => {
+    mount(
+      <IconProvider value={{ csp: 'test' }}>
+        <HomeOutlined />
+      </IconProvider>,
+    );
+
+    expect(document.querySelector('style').nonce).toEqual('test');
+  });
 });
