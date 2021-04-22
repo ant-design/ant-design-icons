@@ -41,7 +41,7 @@ async function generateIcons() {
 
 import * as React from 'react'
 import <%= svgIdentifier %>Svg from '@ant-design/icons-svg/lib/asn/<%= svgIdentifier %>';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const <%= svgIdentifier %> = (
   props: AntdIconProps,
@@ -49,7 +49,9 @@ const <%= svgIdentifier %> = (
 ) => <AntdIcon {...props} ref={ref} icon={<%= svgIdentifier %>Svg} />;
 
 <%= svgIdentifier %>.displayName = '<%= svgIdentifier %>';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(<%= svgIdentifier %>);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(<%= svgIdentifier %>);
+export default Comp;
 `.trim());
 
   await walk(async ({ svgIdentifier }) => {
