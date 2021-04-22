@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GooglePlusCircleFilledSvg from '@ant-design/icons-svg/lib/asn/GooglePlusCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const GooglePlusCircleFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const GooglePlusCircleFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={GooglePlusCircleFilledSvg} />;
 
 GooglePlusCircleFilled.displayName = 'GooglePlusCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GooglePlusCircleFilled);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GooglePlusCircleFilled);
+export default Comp;

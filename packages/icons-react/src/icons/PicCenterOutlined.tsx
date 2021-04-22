@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PicCenterOutlinedSvg from '@ant-design/icons-svg/lib/asn/PicCenterOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const PicCenterOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PicCenterOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={PicCenterOutlinedSvg} />;
 
 PicCenterOutlined.displayName = 'PicCenterOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PicCenterOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PicCenterOutlined);
+export default Comp;

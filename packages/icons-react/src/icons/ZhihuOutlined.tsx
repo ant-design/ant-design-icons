@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ZhihuOutlinedSvg from '@ant-design/icons-svg/lib/asn/ZhihuOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const ZhihuOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ZhihuOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ZhihuOutlinedSvg} />;
 
 ZhihuOutlined.displayName = 'ZhihuOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ZhihuOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ZhihuOutlined);
+export default Comp;

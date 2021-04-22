@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import IeSquareFilledSvg from '@ant-design/icons-svg/lib/asn/IeSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const IeSquareFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const IeSquareFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={IeSquareFilledSvg} />;
 
 IeSquareFilled.displayName = 'IeSquareFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(IeSquareFilled);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(IeSquareFilled);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CameraOutlinedSvg from '@ant-design/icons-svg/lib/asn/CameraOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const CameraOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CameraOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CameraOutlinedSvg} />;
 
 CameraOutlined.displayName = 'CameraOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CameraOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CameraOutlined);
+export default Comp;

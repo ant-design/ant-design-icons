@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import NotificationFilledSvg from '@ant-design/icons-svg/lib/asn/NotificationFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const NotificationFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const NotificationFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={NotificationFilledSvg} />;
 
 NotificationFilled.displayName = 'NotificationFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(NotificationFilled);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(NotificationFilled);
+export default Comp;

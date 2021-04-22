@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RollbackOutlinedSvg from '@ant-design/icons-svg/lib/asn/RollbackOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const RollbackOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const RollbackOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={RollbackOutlinedSvg} />;
 
 RollbackOutlined.displayName = 'RollbackOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RollbackOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(RollbackOutlined);
+export default Comp;

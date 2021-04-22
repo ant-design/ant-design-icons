@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import TrophyFilledSvg from '@ant-design/icons-svg/lib/asn/TrophyFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const TrophyFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const TrophyFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={TrophyFilledSvg} />;
 
 TrophyFilled.displayName = 'TrophyFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TrophyFilled);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(TrophyFilled);
+export default Comp;

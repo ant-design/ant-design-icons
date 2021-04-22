@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DashboardOutlinedSvg from '@ant-design/icons-svg/lib/asn/DashboardOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const DashboardOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DashboardOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={DashboardOutlinedSvg} />;
 
 DashboardOutlined.displayName = 'DashboardOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DashboardOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DashboardOutlined);
+export default Comp;

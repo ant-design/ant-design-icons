@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SisternodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/SisternodeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const SisternodeOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const SisternodeOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={SisternodeOutlinedSvg} />;
 
 SisternodeOutlined.displayName = 'SisternodeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SisternodeOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SisternodeOutlined);
+export default Comp;

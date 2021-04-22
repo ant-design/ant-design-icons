@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CloudFilledSvg from '@ant-design/icons-svg/lib/asn/CloudFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const CloudFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CloudFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={CloudFilledSvg} />;
 
 CloudFilled.displayName = 'CloudFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudFilled);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudFilled);
+export default Comp;
