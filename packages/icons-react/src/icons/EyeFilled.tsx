@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import EyeFilledSvg from '@ant-design/icons-svg/lib/asn/EyeFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const EyeFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const EyeFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={EyeFilledSvg} />;
 
 EyeFilled.displayName = 'EyeFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EyeFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(EyeFilled);
+export default Comp;

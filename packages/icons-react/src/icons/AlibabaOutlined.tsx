@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AlibabaOutlinedSvg from '@ant-design/icons-svg/lib/asn/AlibabaOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const AlibabaOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const AlibabaOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={AlibabaOutlinedSvg} />;
 
 AlibabaOutlined.displayName = 'AlibabaOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AlibabaOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AlibabaOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AmazonCircleFilledSvg from '@ant-design/icons-svg/lib/asn/AmazonCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const AmazonCircleFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const AmazonCircleFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={AmazonCircleFilledSvg} />;
 
 AmazonCircleFilled.displayName = 'AmazonCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AmazonCircleFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AmazonCircleFilled);
+export default Comp;

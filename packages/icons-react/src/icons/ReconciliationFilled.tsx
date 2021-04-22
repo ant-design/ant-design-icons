@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ReconciliationFilledSvg from '@ant-design/icons-svg/lib/asn/ReconciliationFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ReconciliationFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ReconciliationFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={ReconciliationFilledSvg} />;
 
 ReconciliationFilled.displayName = 'ReconciliationFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ReconciliationFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ReconciliationFilled);
+export default Comp;

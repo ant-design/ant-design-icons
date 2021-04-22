@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DeliveredProcedureOutlinedSvg from '@ant-design/icons-svg/lib/asn/DeliveredProcedureOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const DeliveredProcedureOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DeliveredProcedureOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={DeliveredProcedureOutlinedSvg} />;
 
 DeliveredProcedureOutlined.displayName = 'DeliveredProcedureOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeliveredProcedureOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DeliveredProcedureOutlined);
+export default Comp;

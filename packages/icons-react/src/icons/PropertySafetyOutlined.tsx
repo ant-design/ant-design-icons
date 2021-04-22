@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PropertySafetyOutlinedSvg from '@ant-design/icons-svg/lib/asn/PropertySafetyOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const PropertySafetyOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PropertySafetyOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={PropertySafetyOutlinedSvg} />;
 
 PropertySafetyOutlined.displayName = 'PropertySafetyOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PropertySafetyOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PropertySafetyOutlined);
+export default Comp;

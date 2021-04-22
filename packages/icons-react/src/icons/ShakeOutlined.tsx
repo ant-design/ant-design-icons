@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ShakeOutlinedSvg from '@ant-design/icons-svg/lib/asn/ShakeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ShakeOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ShakeOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ShakeOutlinedSvg} />;
 
 ShakeOutlined.displayName = 'ShakeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ShakeOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ShakeOutlined);
+export default Comp;

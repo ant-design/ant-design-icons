@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FundTwoToneSvg from '@ant-design/icons-svg/lib/asn/FundTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FundTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FundTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={FundTwoToneSvg} />;
 
 FundTwoTone.displayName = 'FundTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FundTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FundTwoTone);
+export default Comp;

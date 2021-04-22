@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ChromeOutlinedSvg from '@ant-design/icons-svg/lib/asn/ChromeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ChromeOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ChromeOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ChromeOutlinedSvg} />;
 
 ChromeOutlined.displayName = 'ChromeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ChromeOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ChromeOutlined);
+export default Comp;

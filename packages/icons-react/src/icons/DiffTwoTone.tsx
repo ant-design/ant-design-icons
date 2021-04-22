@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DiffTwoToneSvg from '@ant-design/icons-svg/lib/asn/DiffTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const DiffTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DiffTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={DiffTwoToneSvg} />;
 
 DiffTwoTone.displayName = 'DiffTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DiffTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DiffTwoTone);
+export default Comp;

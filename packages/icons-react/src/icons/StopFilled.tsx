@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import StopFilledSvg from '@ant-design/icons-svg/lib/asn/StopFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const StopFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const StopFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={StopFilledSvg} />;
 
 StopFilled.displayName = 'StopFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StopFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(StopFilled);
+export default Comp;

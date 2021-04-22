@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FormatPainterFilledSvg from '@ant-design/icons-svg/lib/asn/FormatPainterFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FormatPainterFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FormatPainterFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={FormatPainterFilledSvg} />;
 
 FormatPainterFilled.displayName = 'FormatPainterFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FormatPainterFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FormatPainterFilled);
+export default Comp;

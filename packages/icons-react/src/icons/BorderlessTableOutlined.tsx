@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BorderlessTableOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderlessTableOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const BorderlessTableOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const BorderlessTableOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={BorderlessTableOutlinedSvg} />;
 
 BorderlessTableOutlined.displayName = 'BorderlessTableOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BorderlessTableOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BorderlessTableOutlined);
+export default Comp;

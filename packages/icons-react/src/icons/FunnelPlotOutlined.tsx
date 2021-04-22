@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FunnelPlotOutlinedSvg from '@ant-design/icons-svg/lib/asn/FunnelPlotOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FunnelPlotOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FunnelPlotOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FunnelPlotOutlinedSvg} />;
 
 FunnelPlotOutlined.displayName = 'FunnelPlotOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FunnelPlotOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FunnelPlotOutlined);
+export default Comp;

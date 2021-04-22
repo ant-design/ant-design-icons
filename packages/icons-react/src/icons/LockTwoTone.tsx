@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import LockTwoToneSvg from '@ant-design/icons-svg/lib/asn/LockTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const LockTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const LockTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={LockTwoToneSvg} />;
 
 LockTwoTone.displayName = 'LockTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LockTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(LockTwoTone);
+export default Comp;

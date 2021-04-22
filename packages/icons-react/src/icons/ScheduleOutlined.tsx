@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ScheduleOutlinedSvg from '@ant-design/icons-svg/lib/asn/ScheduleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ScheduleOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ScheduleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ScheduleOutlinedSvg} />;
 
 ScheduleOutlined.displayName = 'ScheduleOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ScheduleOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ScheduleOutlined);
+export default Comp;

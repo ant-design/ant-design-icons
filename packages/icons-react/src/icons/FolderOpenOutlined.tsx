@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FolderOpenOutlinedSvg from '@ant-design/icons-svg/lib/asn/FolderOpenOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FolderOpenOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FolderOpenOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FolderOpenOutlinedSvg} />;
 
 FolderOpenOutlined.displayName = 'FolderOpenOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderOpenOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderOpenOutlined);
+export default Comp;

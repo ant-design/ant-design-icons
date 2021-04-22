@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ExclamationCircleFilledSvg from '@ant-design/icons-svg/lib/asn/ExclamationCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ExclamationCircleFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ExclamationCircleFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={ExclamationCircleFilledSvg} />;
 
 ExclamationCircleFilled.displayName = 'ExclamationCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ExclamationCircleFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ExclamationCircleFilled);
+export default Comp;

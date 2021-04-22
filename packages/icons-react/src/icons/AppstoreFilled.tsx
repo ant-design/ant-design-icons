@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AppstoreFilledSvg from '@ant-design/icons-svg/lib/asn/AppstoreFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const AppstoreFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const AppstoreFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={AppstoreFilledSvg} />;
 
 AppstoreFilled.displayName = 'AppstoreFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AppstoreFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AppstoreFilled);
+export default Comp;

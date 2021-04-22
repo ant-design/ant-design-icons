@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CopyrightCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/CopyrightCircleTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CopyrightCircleTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CopyrightCircleTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={CopyrightCircleTwoToneSvg} />;
 
 CopyrightCircleTwoTone.displayName = 'CopyrightCircleTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyrightCircleTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyrightCircleTwoTone);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PauseCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/PauseCircleTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const PauseCircleTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PauseCircleTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={PauseCircleTwoToneSvg} />;
 
 PauseCircleTwoTone.displayName = 'PauseCircleTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PauseCircleTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PauseCircleTwoTone);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import QuestionCircleFilledSvg from '@ant-design/icons-svg/lib/asn/QuestionCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const QuestionCircleFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const QuestionCircleFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={QuestionCircleFilledSvg} />;
 
 QuestionCircleFilled.displayName = 'QuestionCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(QuestionCircleFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(QuestionCircleFilled);
+export default Comp;

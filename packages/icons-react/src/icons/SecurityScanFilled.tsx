@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SecurityScanFilledSvg from '@ant-design/icons-svg/lib/asn/SecurityScanFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const SecurityScanFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const SecurityScanFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={SecurityScanFilledSvg} />;
 
 SecurityScanFilled.displayName = 'SecurityScanFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SecurityScanFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SecurityScanFilled);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CopyrightOutlinedSvg from '@ant-design/icons-svg/lib/asn/CopyrightOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CopyrightOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CopyrightOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CopyrightOutlinedSvg} />;
 
 CopyrightOutlined.displayName = 'CopyrightOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyrightOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyrightOutlined);
+export default Comp;

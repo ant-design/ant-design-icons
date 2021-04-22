@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import VerticalLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/VerticalLeftOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const VerticalLeftOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const VerticalLeftOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={VerticalLeftOutlinedSvg} />;
 
 VerticalLeftOutlined.displayName = 'VerticalLeftOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(VerticalLeftOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(VerticalLeftOutlined);
+export default Comp;

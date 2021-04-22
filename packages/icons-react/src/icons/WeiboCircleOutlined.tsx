@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import WeiboCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/WeiboCircleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const WeiboCircleOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const WeiboCircleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={WeiboCircleOutlinedSvg} />;
 
 WeiboCircleOutlined.displayName = 'WeiboCircleOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WeiboCircleOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(WeiboCircleOutlined);
+export default Comp;

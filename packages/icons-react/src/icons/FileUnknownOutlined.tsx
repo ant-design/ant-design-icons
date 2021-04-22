@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FileUnknownOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileUnknownOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FileUnknownOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FileUnknownOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FileUnknownOutlinedSvg} />;
 
 FileUnknownOutlined.displayName = 'FileUnknownOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileUnknownOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileUnknownOutlined);
+export default Comp;

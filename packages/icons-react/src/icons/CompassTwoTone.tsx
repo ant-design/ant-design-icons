@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CompassTwoToneSvg from '@ant-design/icons-svg/lib/asn/CompassTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CompassTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CompassTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={CompassTwoToneSvg} />;
 
 CompassTwoTone.displayName = 'CompassTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CompassTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CompassTwoTone);
+export default Comp;

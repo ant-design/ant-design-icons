@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import WeiboSquareFilledSvg from '@ant-design/icons-svg/lib/asn/WeiboSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const WeiboSquareFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const WeiboSquareFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={WeiboSquareFilledSvg} />;
 
 WeiboSquareFilled.displayName = 'WeiboSquareFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WeiboSquareFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(WeiboSquareFilled);
+export default Comp;

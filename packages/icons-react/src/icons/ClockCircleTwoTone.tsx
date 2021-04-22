@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ClockCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/ClockCircleTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ClockCircleTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ClockCircleTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={ClockCircleTwoToneSvg} />;
 
 ClockCircleTwoTone.displayName = 'ClockCircleTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ClockCircleTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ClockCircleTwoTone);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CaretLeftFilledSvg from '@ant-design/icons-svg/lib/asn/CaretLeftFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CaretLeftFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CaretLeftFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={CaretLeftFilledSvg} />;
 
 CaretLeftFilled.displayName = 'CaretLeftFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CaretLeftFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CaretLeftFilled);
+export default Comp;

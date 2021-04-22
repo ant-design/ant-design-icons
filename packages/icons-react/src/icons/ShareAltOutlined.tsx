@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ShareAltOutlinedSvg from '@ant-design/icons-svg/lib/asn/ShareAltOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ShareAltOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ShareAltOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ShareAltOutlinedSvg} />;
 
 ShareAltOutlined.displayName = 'ShareAltOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ShareAltOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ShareAltOutlined);
+export default Comp;

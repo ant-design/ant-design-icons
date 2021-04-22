@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SwitcherTwoToneSvg from '@ant-design/icons-svg/lib/asn/SwitcherTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const SwitcherTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const SwitcherTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={SwitcherTwoToneSvg} />;
 
 SwitcherTwoTone.displayName = 'SwitcherTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SwitcherTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SwitcherTwoTone);
+export default Comp;

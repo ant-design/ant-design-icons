@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import StarFilledSvg from '@ant-design/icons-svg/lib/asn/StarFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const StarFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const StarFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={StarFilledSvg} />;
 
 StarFilled.displayName = 'StarFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StarFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(StarFilled);
+export default Comp;

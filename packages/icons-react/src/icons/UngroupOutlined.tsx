@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import UngroupOutlinedSvg from '@ant-design/icons-svg/lib/asn/UngroupOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const UngroupOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const UngroupOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={UngroupOutlinedSvg} />;
 
 UngroupOutlined.displayName = 'UngroupOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UngroupOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(UngroupOutlined);
+export default Comp;

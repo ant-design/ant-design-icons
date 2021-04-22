@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PieChartFilledSvg from '@ant-design/icons-svg/lib/asn/PieChartFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const PieChartFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PieChartFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={PieChartFilledSvg} />;
 
 PieChartFilled.displayName = 'PieChartFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PieChartFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PieChartFilled);
+export default Comp;

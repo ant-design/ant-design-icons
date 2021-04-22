@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import UsbTwoToneSvg from '@ant-design/icons-svg/lib/asn/UsbTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const UsbTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const UsbTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={UsbTwoToneSvg} />;
 
 UsbTwoTone.displayName = 'UsbTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UsbTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(UsbTwoTone);
+export default Comp;

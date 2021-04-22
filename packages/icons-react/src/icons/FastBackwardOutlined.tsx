@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FastBackwardOutlinedSvg from '@ant-design/icons-svg/lib/asn/FastBackwardOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FastBackwardOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FastBackwardOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FastBackwardOutlinedSvg} />;
 
 FastBackwardOutlined.displayName = 'FastBackwardOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FastBackwardOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FastBackwardOutlined);
+export default Comp;

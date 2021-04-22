@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import YuqueOutlinedSvg from '@ant-design/icons-svg/lib/asn/YuqueOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const YuqueOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const YuqueOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={YuqueOutlinedSvg} />;
 
 YuqueOutlined.displayName = 'YuqueOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(YuqueOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(YuqueOutlined);
+export default Comp;

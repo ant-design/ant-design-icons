@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FormatPainterOutlinedSvg from '@ant-design/icons-svg/lib/asn/FormatPainterOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FormatPainterOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FormatPainterOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FormatPainterOutlinedSvg} />;
 
 FormatPainterOutlined.displayName = 'FormatPainterOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FormatPainterOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FormatPainterOutlined);
+export default Comp;

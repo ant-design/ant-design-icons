@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CloudDownloadOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloudDownloadOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CloudDownloadOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CloudDownloadOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CloudDownloadOutlinedSvg} />;
 
 CloudDownloadOutlined.displayName = 'CloudDownloadOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudDownloadOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudDownloadOutlined);
+export default Comp;

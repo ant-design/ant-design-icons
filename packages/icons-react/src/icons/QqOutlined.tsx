@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import QqOutlinedSvg from '@ant-design/icons-svg/lib/asn/QqOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const QqOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const QqOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={QqOutlinedSvg} />;
 
 QqOutlined.displayName = 'QqOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(QqOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(QqOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DragOutlinedSvg from '@ant-design/icons-svg/lib/asn/DragOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const DragOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DragOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={DragOutlinedSvg} />;
 
 DragOutlined.displayName = 'DragOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DragOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DragOutlined);
+export default Comp;

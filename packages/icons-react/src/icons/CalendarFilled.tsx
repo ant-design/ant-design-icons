@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CalendarFilledSvg from '@ant-design/icons-svg/lib/asn/CalendarFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CalendarFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CalendarFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={CalendarFilledSvg} />;
 
 CalendarFilled.displayName = 'CalendarFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CalendarFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CalendarFilled);
+export default Comp;

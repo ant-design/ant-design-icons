@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BranchesOutlinedSvg from '@ant-design/icons-svg/lib/asn/BranchesOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const BranchesOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const BranchesOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={BranchesOutlinedSvg} />;
 
 BranchesOutlined.displayName = 'BranchesOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BranchesOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BranchesOutlined);
+export default Comp;

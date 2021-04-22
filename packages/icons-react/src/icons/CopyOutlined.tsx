@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CopyOutlinedSvg from '@ant-design/icons-svg/lib/asn/CopyOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CopyOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CopyOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CopyOutlinedSvg} />;
 
 CopyOutlined.displayName = 'CopyOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyOutlined);
+export default Comp;

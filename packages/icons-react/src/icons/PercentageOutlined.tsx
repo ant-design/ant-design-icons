@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PercentageOutlinedSvg from '@ant-design/icons-svg/lib/asn/PercentageOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const PercentageOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PercentageOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={PercentageOutlinedSvg} />;
 
 PercentageOutlined.displayName = 'PercentageOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PercentageOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PercentageOutlined);
+export default Comp;

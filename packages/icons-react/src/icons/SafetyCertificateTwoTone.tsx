@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SafetyCertificateTwoToneSvg from '@ant-design/icons-svg/lib/asn/SafetyCertificateTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const SafetyCertificateTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const SafetyCertificateTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={SafetyCertificateTwoToneSvg} />;
 
 SafetyCertificateTwoTone.displayName = 'SafetyCertificateTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SafetyCertificateTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SafetyCertificateTwoTone);
+export default Comp;

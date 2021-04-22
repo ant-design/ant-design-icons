@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import EyeInvisibleOutlinedSvg from '@ant-design/icons-svg/lib/asn/EyeInvisibleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const EyeInvisibleOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const EyeInvisibleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={EyeInvisibleOutlinedSvg} />;
 
 EyeInvisibleOutlined.displayName = 'EyeInvisibleOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EyeInvisibleOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(EyeInvisibleOutlined);
+export default Comp;

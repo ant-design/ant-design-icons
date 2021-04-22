@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DeleteFilledSvg from '@ant-design/icons-svg/lib/asn/DeleteFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const DeleteFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DeleteFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={DeleteFilledSvg} />;
 
 DeleteFilled.displayName = 'DeleteFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteFilled);
+export default Comp;

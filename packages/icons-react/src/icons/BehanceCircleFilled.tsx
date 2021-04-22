@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BehanceCircleFilledSvg from '@ant-design/icons-svg/lib/asn/BehanceCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const BehanceCircleFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const BehanceCircleFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={BehanceCircleFilledSvg} />;
 
 BehanceCircleFilled.displayName = 'BehanceCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BehanceCircleFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BehanceCircleFilled);
+export default Comp;

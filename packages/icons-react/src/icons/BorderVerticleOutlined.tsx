@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BorderVerticleOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderVerticleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const BorderVerticleOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const BorderVerticleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={BorderVerticleOutlinedSvg} />;
 
 BorderVerticleOutlined.displayName = 'BorderVerticleOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BorderVerticleOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BorderVerticleOutlined);
+export default Comp;

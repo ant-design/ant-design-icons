@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AmazonSquareFilledSvg from '@ant-design/icons-svg/lib/asn/AmazonSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const AmazonSquareFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const AmazonSquareFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={AmazonSquareFilledSvg} />;
 
 AmazonSquareFilled.displayName = 'AmazonSquareFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AmazonSquareFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AmazonSquareFilled);
+export default Comp;

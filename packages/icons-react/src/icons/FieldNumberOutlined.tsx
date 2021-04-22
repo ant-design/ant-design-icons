@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FieldNumberOutlinedSvg from '@ant-design/icons-svg/lib/asn/FieldNumberOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FieldNumberOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FieldNumberOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FieldNumberOutlinedSvg} />;
 
 FieldNumberOutlined.displayName = 'FieldNumberOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldNumberOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldNumberOutlined);
+export default Comp;

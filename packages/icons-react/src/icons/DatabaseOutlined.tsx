@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DatabaseOutlinedSvg from '@ant-design/icons-svg/lib/asn/DatabaseOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const DatabaseOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DatabaseOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={DatabaseOutlinedSvg} />;
 
 DatabaseOutlined.displayName = 'DatabaseOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DatabaseOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DatabaseOutlined);
+export default Comp;

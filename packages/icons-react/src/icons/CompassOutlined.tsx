@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CompassOutlinedSvg from '@ant-design/icons-svg/lib/asn/CompassOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CompassOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CompassOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CompassOutlinedSvg} />;
 
 CompassOutlined.displayName = 'CompassOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CompassOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CompassOutlined);
+export default Comp;

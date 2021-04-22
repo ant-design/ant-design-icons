@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import VerifiedOutlinedSvg from '@ant-design/icons-svg/lib/asn/VerifiedOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const VerifiedOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const VerifiedOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={VerifiedOutlinedSvg} />;
 
 VerifiedOutlined.displayName = 'VerifiedOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(VerifiedOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(VerifiedOutlined);
+export default Comp;

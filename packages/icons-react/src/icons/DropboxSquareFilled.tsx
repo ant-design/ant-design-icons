@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DropboxSquareFilledSvg from '@ant-design/icons-svg/lib/asn/DropboxSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const DropboxSquareFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DropboxSquareFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={DropboxSquareFilledSvg} />;
 
 DropboxSquareFilled.displayName = 'DropboxSquareFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DropboxSquareFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DropboxSquareFilled);
+export default Comp;

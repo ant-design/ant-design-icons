@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SoundOutlinedSvg from '@ant-design/icons-svg/lib/asn/SoundOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const SoundOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const SoundOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={SoundOutlinedSvg} />;
 
 SoundOutlined.displayName = 'SoundOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SoundOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SoundOutlined);
+export default Comp;

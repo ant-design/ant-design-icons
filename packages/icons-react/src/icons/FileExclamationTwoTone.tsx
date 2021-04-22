@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FileExclamationTwoToneSvg from '@ant-design/icons-svg/lib/asn/FileExclamationTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FileExclamationTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FileExclamationTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={FileExclamationTwoToneSvg} />;
 
 FileExclamationTwoTone.displayName = 'FileExclamationTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileExclamationTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileExclamationTwoTone);
+export default Comp;

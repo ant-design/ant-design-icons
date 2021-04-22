@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import StepBackwardFilledSvg from '@ant-design/icons-svg/lib/asn/StepBackwardFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const StepBackwardFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const StepBackwardFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={StepBackwardFilledSvg} />;
 
 StepBackwardFilled.displayName = 'StepBackwardFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StepBackwardFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(StepBackwardFilled);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RadarChartOutlinedSvg from '@ant-design/icons-svg/lib/asn/RadarChartOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const RadarChartOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const RadarChartOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={RadarChartOutlinedSvg} />;
 
 RadarChartOutlined.displayName = 'RadarChartOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RadarChartOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(RadarChartOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GifOutlinedSvg from '@ant-design/icons-svg/lib/asn/GifOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const GifOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const GifOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={GifOutlinedSvg} />;
 
 GifOutlined.displayName = 'GifOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GifOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GifOutlined);
+export default Comp;

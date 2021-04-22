@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SwitcherOutlinedSvg from '@ant-design/icons-svg/lib/asn/SwitcherOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const SwitcherOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const SwitcherOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={SwitcherOutlinedSvg} />;
 
 SwitcherOutlined.displayName = 'SwitcherOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SwitcherOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SwitcherOutlined);
+export default Comp;

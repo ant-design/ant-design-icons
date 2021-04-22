@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FileWordFilledSvg from '@ant-design/icons-svg/lib/asn/FileWordFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FileWordFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FileWordFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={FileWordFilledSvg} />;
 
 FileWordFilled.displayName = 'FileWordFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileWordFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileWordFilled);
+export default Comp;

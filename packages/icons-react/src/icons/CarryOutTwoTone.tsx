@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CarryOutTwoToneSvg from '@ant-design/icons-svg/lib/asn/CarryOutTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CarryOutTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CarryOutTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={CarryOutTwoToneSvg} />;
 
 CarryOutTwoTone.displayName = 'CarryOutTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CarryOutTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CarryOutTwoTone);
+export default Comp;

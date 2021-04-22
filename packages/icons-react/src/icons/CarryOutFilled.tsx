@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CarryOutFilledSvg from '@ant-design/icons-svg/lib/asn/CarryOutFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CarryOutFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CarryOutFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={CarryOutFilledSvg} />;
 
 CarryOutFilled.displayName = 'CarryOutFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CarryOutFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CarryOutFilled);
+export default Comp;

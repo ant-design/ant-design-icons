@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GoogleSquareFilledSvg from '@ant-design/icons-svg/lib/asn/GoogleSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const GoogleSquareFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const GoogleSquareFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={GoogleSquareFilledSvg} />;
 
 GoogleSquareFilled.displayName = 'GoogleSquareFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GoogleSquareFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GoogleSquareFilled);
+export default Comp;

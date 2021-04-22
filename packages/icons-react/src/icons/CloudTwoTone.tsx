@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CloudTwoToneSvg from '@ant-design/icons-svg/lib/asn/CloudTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CloudTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CloudTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={CloudTwoToneSvg} />;
 
 CloudTwoTone.displayName = 'CloudTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudTwoTone);
+export default Comp;

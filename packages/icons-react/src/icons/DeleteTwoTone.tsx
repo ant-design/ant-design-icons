@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DeleteTwoToneSvg from '@ant-design/icons-svg/lib/asn/DeleteTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const DeleteTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DeleteTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={DeleteTwoToneSvg} />;
 
 DeleteTwoTone.displayName = 'DeleteTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteTwoTone);
+export default Comp;

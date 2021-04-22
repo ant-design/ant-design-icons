@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ExceptionOutlinedSvg from '@ant-design/icons-svg/lib/asn/ExceptionOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ExceptionOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ExceptionOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ExceptionOutlinedSvg} />;
 
 ExceptionOutlined.displayName = 'ExceptionOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ExceptionOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ExceptionOutlined);
+export default Comp;

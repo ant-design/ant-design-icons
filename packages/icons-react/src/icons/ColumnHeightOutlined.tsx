@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ColumnHeightOutlinedSvg from '@ant-design/icons-svg/lib/asn/ColumnHeightOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ColumnHeightOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ColumnHeightOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ColumnHeightOutlinedSvg} />;
 
 ColumnHeightOutlined.displayName = 'ColumnHeightOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ColumnHeightOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ColumnHeightOutlined);
+export default Comp;

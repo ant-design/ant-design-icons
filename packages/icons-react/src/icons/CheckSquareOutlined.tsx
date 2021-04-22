@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CheckSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/CheckSquareOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CheckSquareOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CheckSquareOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CheckSquareOutlinedSvg} />;
 
 CheckSquareOutlined.displayName = 'CheckSquareOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CheckSquareOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CheckSquareOutlined);
+export default Comp;

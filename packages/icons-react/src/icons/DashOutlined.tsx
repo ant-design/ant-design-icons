@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DashOutlinedSvg from '@ant-design/icons-svg/lib/asn/DashOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const DashOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DashOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={DashOutlinedSvg} />;
 
 DashOutlined.displayName = 'DashOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DashOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DashOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import TagTwoToneSvg from '@ant-design/icons-svg/lib/asn/TagTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const TagTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const TagTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={TagTwoToneSvg} />;
 
 TagTwoTone.displayName = 'TagTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TagTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(TagTwoTone);
+export default Comp;

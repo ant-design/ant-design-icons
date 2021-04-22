@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PoweroffOutlinedSvg from '@ant-design/icons-svg/lib/asn/PoweroffOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const PoweroffOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PoweroffOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={PoweroffOutlinedSvg} />;
 
 PoweroffOutlined.displayName = 'PoweroffOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PoweroffOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PoweroffOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import UnlockTwoToneSvg from '@ant-design/icons-svg/lib/asn/UnlockTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const UnlockTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const UnlockTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={UnlockTwoToneSvg} />;
 
 UnlockTwoTone.displayName = 'UnlockTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UnlockTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(UnlockTwoTone);
+export default Comp;

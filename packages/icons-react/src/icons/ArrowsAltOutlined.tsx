@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ArrowsAltOutlinedSvg from '@ant-design/icons-svg/lib/asn/ArrowsAltOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ArrowsAltOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ArrowsAltOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ArrowsAltOutlinedSvg} />;
 
 ArrowsAltOutlined.displayName = 'ArrowsAltOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ArrowsAltOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ArrowsAltOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FieldTimeOutlinedSvg from '@ant-design/icons-svg/lib/asn/FieldTimeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FieldTimeOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FieldTimeOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FieldTimeOutlinedSvg} />;
 
 FieldTimeOutlined.displayName = 'FieldTimeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldTimeOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldTimeOutlined);
+export default Comp;

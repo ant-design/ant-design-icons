@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import UpSquareFilledSvg from '@ant-design/icons-svg/lib/asn/UpSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const UpSquareFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const UpSquareFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={UpSquareFilledSvg} />;
 
 UpSquareFilled.displayName = 'UpSquareFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UpSquareFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(UpSquareFilled);
+export default Comp;

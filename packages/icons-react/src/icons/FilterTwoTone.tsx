@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FilterTwoToneSvg from '@ant-design/icons-svg/lib/asn/FilterTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FilterTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FilterTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={FilterTwoToneSvg} />;
 
 FilterTwoTone.displayName = 'FilterTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FilterTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FilterTwoTone);
+export default Comp;

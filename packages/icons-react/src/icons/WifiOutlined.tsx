@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import WifiOutlinedSvg from '@ant-design/icons-svg/lib/asn/WifiOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const WifiOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const WifiOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={WifiOutlinedSvg} />;
 
 WifiOutlined.displayName = 'WifiOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WifiOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(WifiOutlined);
+export default Comp;

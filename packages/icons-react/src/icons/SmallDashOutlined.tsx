@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SmallDashOutlinedSvg from '@ant-design/icons-svg/lib/asn/SmallDashOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const SmallDashOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const SmallDashOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={SmallDashOutlinedSvg} />;
 
 SmallDashOutlined.displayName = 'SmallDashOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SmallDashOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SmallDashOutlined);
+export default Comp;

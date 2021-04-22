@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DeploymentUnitOutlinedSvg from '@ant-design/icons-svg/lib/asn/DeploymentUnitOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const DeploymentUnitOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DeploymentUnitOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={DeploymentUnitOutlinedSvg} />;
 
 DeploymentUnitOutlined.displayName = 'DeploymentUnitOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeploymentUnitOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DeploymentUnitOutlined);
+export default Comp;

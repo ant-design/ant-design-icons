@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import VideoCameraFilledSvg from '@ant-design/icons-svg/lib/asn/VideoCameraFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const VideoCameraFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const VideoCameraFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={VideoCameraFilledSvg} />;
 
 VideoCameraFilled.displayName = 'VideoCameraFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(VideoCameraFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(VideoCameraFilled);
+export default Comp;
