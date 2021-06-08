@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-react-native",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
