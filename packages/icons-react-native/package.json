@@ -28,7 +28,8 @@
   "files": [
     "es",
     "lib",
-    "fonts"
+    "fonts",
+    "react-native.config.js"
   ],
   "peerDependencies": {
     "react": "16.x"
