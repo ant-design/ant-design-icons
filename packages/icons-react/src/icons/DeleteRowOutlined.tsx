@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DeleteRowOutlinedSvg from '@ant-design/icons-svg/lib/asn/DeleteRowOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const DeleteRowOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DeleteRowOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={DeleteRowOutlinedSvg} />;
 
 DeleteRowOutlined.displayName = 'DeleteRowOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteRowOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteRowOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CloudUploadOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloudUploadOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const CloudUploadOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CloudUploadOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CloudUploadOutlinedSvg} />;
 
 CloudUploadOutlined.displayName = 'CloudUploadOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudUploadOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudUploadOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ItalicOutlinedSvg from '@ant-design/icons-svg/lib/asn/ItalicOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const ItalicOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ItalicOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ItalicOutlinedSvg} />;
 
 ItalicOutlined.displayName = 'ItalicOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ItalicOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ItalicOutlined);
+export default Comp;

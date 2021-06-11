@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RotateRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/RotateRightOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const RotateRightOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const RotateRightOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={RotateRightOutlinedSvg} />;
 
 RotateRightOutlined.displayName = 'RotateRightOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RotateRightOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(RotateRightOutlined);
+export default Comp;

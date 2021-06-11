@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DiffOutlinedSvg from '@ant-design/icons-svg/lib/asn/DiffOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const DiffOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DiffOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={DiffOutlinedSvg} />;
 
 DiffOutlined.displayName = 'DiffOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DiffOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DiffOutlined);
+export default Comp;

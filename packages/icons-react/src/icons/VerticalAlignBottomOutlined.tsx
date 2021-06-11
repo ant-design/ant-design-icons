@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import VerticalAlignBottomOutlinedSvg from '@ant-design/icons-svg/lib/asn/VerticalAlignBottomOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const VerticalAlignBottomOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const VerticalAlignBottomOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={VerticalAlignBottomOutlinedSvg} />;
 
 VerticalAlignBottomOutlined.displayName = 'VerticalAlignBottomOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(VerticalAlignBottomOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(VerticalAlignBottomOutlined);
+export default Comp;

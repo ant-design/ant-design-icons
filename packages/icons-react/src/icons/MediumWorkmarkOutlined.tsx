@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MediumWorkmarkOutlinedSvg from '@ant-design/icons-svg/lib/asn/MediumWorkmarkOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const MediumWorkmarkOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const MediumWorkmarkOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={MediumWorkmarkOutlinedSvg} />;
 
 MediumWorkmarkOutlined.displayName = 'MediumWorkmarkOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MediumWorkmarkOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MediumWorkmarkOutlined);
+export default Comp;

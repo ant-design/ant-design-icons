@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import WeiboOutlinedSvg from '@ant-design/icons-svg/lib/asn/WeiboOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const WeiboOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const WeiboOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={WeiboOutlinedSvg} />;
 
 WeiboOutlined.displayName = 'WeiboOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WeiboOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(WeiboOutlined);
+export default Comp;

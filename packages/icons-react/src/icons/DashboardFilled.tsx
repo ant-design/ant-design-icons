@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DashboardFilledSvg from '@ant-design/icons-svg/lib/asn/DashboardFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const DashboardFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DashboardFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={DashboardFilledSvg} />;
 
 DashboardFilled.displayName = 'DashboardFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DashboardFilled);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DashboardFilled);
+export default Comp;

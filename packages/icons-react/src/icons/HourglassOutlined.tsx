@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import HourglassOutlinedSvg from '@ant-design/icons-svg/lib/asn/HourglassOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefComponentBase } from '../components/AntdIcon';
 
 const HourglassOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const HourglassOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={HourglassOutlinedSvg} />;
 
 HourglassOutlined.displayName = 'HourglassOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HourglassOutlined);
+
+const Comp: ForwardRefComponentBase<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(HourglassOutlined);
+export default Comp;
