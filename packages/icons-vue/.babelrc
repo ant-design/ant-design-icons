@@ -3,7 +3,7 @@
     "test": {
       "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]],
       "plugins": [
-        "@ant-design-vue/babel-plugin-jsx",
+        ["@vue/babel-plugin-jsx", { "mergeProps": false, "enableObjectSlots": false }],
         "@babel/plugin-transform-member-expression-literals",
         "@babel/plugin-transform-object-assign",
         "@babel/plugin-transform-property-literals",
