@@ -27,7 +27,15 @@
     "vue": ">=3.0.3"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-export-default-from": "^7.14.5",
+    "@babel/plugin-proposal-export-namespace-from": "^7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
+    "@babel/plugin-transform-member-expression-literals": "^7.14.5",
     "@babel/plugin-transform-object-assign": "^7.14.5",
+    "@babel/plugin-transform-property-literals": "^7.14.5",
+    "@babel/plugin-transform-spread": "^7.14.6",
+    "@babel/plugin-transform-template-literals": "^7.14.5",
     "@babel/runtime": "^7.11.2",
     "@types/jest": "^24.0.17",
     "@types/lodash": "^4.14.165",
@@ -65,8 +73,8 @@
   "config": {
     "port": 9528,
     "entry": {
-      "@ant-design/icons-vue": [
-        "./src/index.jsx"
+      "index": [
+        "./src/index.ts"
       ]
     }
   },
