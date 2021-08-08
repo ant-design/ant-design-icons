@@ -1,8 +1,13 @@
 module.exports = {
   root: true,
   env: {
+    browser: true,
     node: true,
+    jasmine: true,
+    jest: true,
+    es6: true,
   },
+  plugins: ['jest'],
   extends: [
     'plugin:vue/vue3-essential',
     'eslint:recommended',

@@ -12,8 +12,8 @@
     "experimentalDecorators": true,
     "noUnusedParameters": true,
     "noImplicitAny": false,
-    "lib": ["dom", "es2017"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["jest", "node"]
   },
   "include": ["./src", "./typings/"],
   "typings": "./typings/index.d.ts",
