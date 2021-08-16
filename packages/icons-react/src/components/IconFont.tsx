@@ -8,8 +8,8 @@ export interface CustomIconOptions {
   extraCommonProps?: { [key: string]: any };
 }
 
-export interface IconFontProps extends IconBaseProps {
-  type: string;
+export interface IconFontProps<T extends string = string> extends IconBaseProps {
+  type: T;
 }
 
 function isValidCustomScriptUrl(scriptUrl: string): boolean {
@@ -39,7 +39,9 @@ function createScriptUrlElements(scriptUrls: string[], index: number = 0): void 
   }
 }
 
-export default function create(options: CustomIconOptions = {}): React.SFC<IconFontProps> {
+export default function create<T extends string = string>(
+  options: CustomIconOptions = {}
+): React.FC<IconFontProps<T>> {
   const { scriptUrl, extraCommonProps = {} } = options;
 
   /**
@@ -62,7 +64,7 @@ export default function create(options: CustomIconOptions = {}): React.SFC<IconF
     }
   }
 
-  const Iconfont = React.forwardRef<HTMLSpanElement, IconFontProps>((props, ref) => {
+  const Iconfont = React.forwardRef<HTMLSpanElement, IconFontProps<T>>((props, ref) => {
     const { type, children, ...restProps } = props;
 
     // children > type
