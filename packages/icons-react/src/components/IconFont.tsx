@@ -13,9 +13,9 @@ export interface IconFontProps<T extends string = string> extends IconBaseProps 
   type: T;
 }
 
-interface CompoundedComponent
+interface CompoundedComponent<T extends string = string>
   extends React.ForwardRefExoticComponent<
-    IconFontProps & React.RefAttributes<HTMLSpanElement>
+    IconFontProps<T> & React.RefAttributes<HTMLSpanElement>
   > {
   iconFontTypes: Set<string>;
 }
@@ -88,7 +88,7 @@ export default function create<T extends string = string>(
     }
   }
 
-  const Iconfont = React.forwardRef<HTMLSpanElement, IconFontProps<T>>((props, ref) => {
+  const InternalIconfont: React.ForwardRefRenderFunction<HTMLSpanElement, IconFontProps<T>> = (props, ref) => {
     const { type, children, ...restProps } = props;
 
     // children > type
@@ -104,7 +104,9 @@ export default function create<T extends string = string>(
         {content}
       </Icon>
     );
-  }) as CompoundedComponent;
+  }
+
+  const Iconfont = React.forwardRef<HTMLSpanElement, IconFontProps<T>>(InternalIconfont) as CompoundedComponent<T>;
 
   Iconfont.displayName = 'Iconfont';
   Iconfont.iconFontTypes = iconFontTypes;
