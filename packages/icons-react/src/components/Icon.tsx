@@ -1,5 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
+import Context from './Context';
 
 import { svgBaseProps, warning, useInsertStyles } from '../utils';
 
@@ -48,13 +49,15 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
 
   useInsertStyles();
 
+  const { prefixCls = 'anticon' } = React.useContext(Context);
+
   const classString = classNames(
-    'anticon',
+    prefixCls,
     className,
   );
 
   const svgClassString = classNames({
-    'anticon-spin': !!spin,
+    [`${prefixCls}-spin`]: !!spin,
   });
 
   const svgStyle = rotate
