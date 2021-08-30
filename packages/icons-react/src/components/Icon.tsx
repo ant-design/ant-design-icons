@@ -5,7 +5,6 @@ import Context from './Context';
 import { svgBaseProps, warning, useInsertStyles } from '../utils';
 
 export interface IconBaseProps extends React.HTMLProps<HTMLSpanElement> {
-  color?: string;
   spin?: boolean;
   rotate?: number;
 }
@@ -16,9 +15,10 @@ export interface CustomIconComponentProps {
   fill: string;
   viewBox?: string;
   className?: string;
-  style?: React.CSSProperties;
   color?: string
+  style?: React.CSSProperties;
 }
+
 export interface IconComponentProps extends IconBaseProps {
   viewBox?: string;
   component?: React.ComponentType<CustomIconComponentProps | React.SVGProps<SVGSVGElement>> | React.ForwardRefExoticComponent<CustomIconComponentProps>;
