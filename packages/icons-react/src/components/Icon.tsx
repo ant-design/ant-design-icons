@@ -5,6 +5,7 @@ import Context from './Context';
 import { svgBaseProps, warning, useInsertStyles } from '../utils';
 
 export interface IconBaseProps extends React.HTMLProps<HTMLSpanElement> {
+  color?: string;
   spin?: boolean;
   rotate?: number;
 }
@@ -16,6 +17,7 @@ export interface CustomIconComponentProps {
   viewBox?: string;
   className?: string;
   style?: React.CSSProperties;
+  color?: string
 }
 export interface IconComponentProps extends IconBaseProps {
   viewBox?: string;
@@ -30,6 +32,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
 
     // affect inner <svg>...</svg>
     component: Component,
+    color,
     viewBox,
     spin,
     rotate,
@@ -69,6 +72,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
 
   const innerSvgProps: CustomIconComponentProps = {
     ...svgBaseProps,
+    color,
     className: svgClassString,
     style: svgStyle,
     viewBox,

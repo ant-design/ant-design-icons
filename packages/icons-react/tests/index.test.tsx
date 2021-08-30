@@ -300,6 +300,7 @@ describe('Icon.createFromIconfontCN()', () => {
         <IconFont type="icon-tuichu" />
         <IconFont type="icon-facebook" />
         <IconFont type="icon-twitter" />
+        <IconFont type="icon-twitter" color="blue" />
       </div>,
     );
     expect(wrapper).toMatchSnapshot();
