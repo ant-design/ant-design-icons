@@ -6,6 +6,7 @@ export interface IconProps {
   icon: IconDefinition;
   className?: string;
   onClick?: React.MouseEventHandler<SVGSVGElement>;
+  color?: string;
   style?: React.CSSProperties;
   primaryColor?: string; // only for two-tone
   secondaryColor?: string; // only for two-tone
