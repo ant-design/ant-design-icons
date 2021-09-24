@@ -395,6 +395,7 @@ highlight-filled
 highlight-outlined
 highlight-twotone
 history-outlined
+holder-outlined
 home-filled
 home-outlined
 home-twotone
