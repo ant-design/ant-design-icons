@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-react-native",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
@@ -32,7 +32,7 @@
     "react-native.config.js"
   ],
   "peerDependencies": {
-    "react": "16.x"
+    "react": ">=16.0.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.17",
