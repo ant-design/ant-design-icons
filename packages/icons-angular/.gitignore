@@ -7,6 +7,7 @@ node_modules/
 /coverage
 
 # misc
+/.angular/cache
 .DS_Store
 .env.local
 .env.development.local
