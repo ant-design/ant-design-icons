@@ -7,7 +7,7 @@ import { svgBaseProps, warning, useInsertStyles } from '../utils';
 export interface IconBaseProps extends React.HTMLProps<HTMLSpanElement> {
   spin?: boolean;
   rotate?: number;
-  translate?: string;
+  translate?: 'yes' | 'no' | undefined;
 }
 
 export interface CustomIconComponentProps {
