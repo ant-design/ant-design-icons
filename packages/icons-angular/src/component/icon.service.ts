@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { HttpBackend, HttpClient } from '@angular/common/http';
-import { Inject, Injectable, Optional, Renderer2, RendererFactory2, SecurityContext } from '@angular/core';
+import { Inject, Injectable, InjectionToken, Optional, Renderer2, RendererFactory2, SecurityContext } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { of as rxof, Observable, Subject } from 'rxjs';
 import {
@@ -62,6 +62,13 @@ export class IconService {
 
   protected _renderer: Renderer2;
   protected _http: HttpClient;
+
+  /**
+   * Disable dynamic loading (support static loading only).
+   */
+  protected get _disableDynamicLoading(): boolean {
+    return false;
+  }
 
   /**
    * All icon definitions would be registered here.
@@ -170,14 +177,18 @@ export class IconService {
     twoToneColor?: string
   ): Observable<SVGElement> {
     // If `icon` is a `IconDefinition`, go to the next step. If not, try to fetch it from cache.
-    const definitionOrNull: IconDefinition | null = isIconDefinition(icon)
+    const definition: IconDefinition | null = isIconDefinition(icon)
       ? (icon as IconDefinition)
       : this._svgDefinitions.get(icon) || null;
+    
+    if (!definition && this._disableDynamicLoading) {
+      throw IconNotFoundError(icon as string);
+    }
 
     // If `icon` is a `IconDefinition` of successfully fetch, wrap it in an `Observable`.
     // Otherwise try to fetch it from remote.
-    const $iconDefinition = definitionOrNull
-      ? rxof(definitionOrNull)
+    const $iconDefinition = definition
+      ? rxof(definition)
       : this._loadIconDynamically(icon as string);
 
     // If finally get an `IconDefinition`, render and return it. Otherwise throw an error.

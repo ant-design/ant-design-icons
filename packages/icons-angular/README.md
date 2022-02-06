@@ -9,8 +9,6 @@ Ant Design Icons for Angular
 
 </div>
 
-> With a better taste.
-
 ![](./demo.png)
 
 ## Installation
