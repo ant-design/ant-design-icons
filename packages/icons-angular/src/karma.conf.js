@@ -1,6 +1,8 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
+processENV.env.CHROME_BIN = require('puppeteer').executablePath();
+
 module.exports = function(config) {
   config.set({
     basePath: '',
@@ -30,6 +32,9 @@ module.exports = function(config) {
         { type: 'lcovonly' },
         { type: 'cobertura' }
       ]
+    },
+    junitReporter: {
+      outputDir: '../junit'
     },
     reporters: ['progress', 'kjhtml', 'spec', 'junit'],
     port: 9876,
