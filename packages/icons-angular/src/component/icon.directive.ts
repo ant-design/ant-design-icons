@@ -12,8 +12,8 @@ import { IconService } from './icon.service';
 
 interface RenderMeta {
   type: string | IconDefinition;
-  theme: ThemeType;
-  twoToneColor: string;
+  theme?: ThemeType;
+  twoToneColor?: string;
 }
 
 function checkMeta(prev: RenderMeta, after: RenderMeta): boolean {
@@ -81,7 +81,7 @@ export class IconDirective implements OnChanges {
    * @param type
    * @param theme
    */
-  protected _parseIconType(type: string | IconDefinition, theme: ThemeType): IconDefinition | string {
+  protected _parseIconType(type: string | IconDefinition, theme?: ThemeType): IconDefinition | string {
     if (isIconDefinition(type)) {
       return type;
     } else {
