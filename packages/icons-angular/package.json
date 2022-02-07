@@ -10,7 +10,7 @@
     "build:lib": "npm run generate && ng build ant-design-icons-angular --configuration production && npm run copy:assets",
     "generate": "cross-env TS_NODE_PROJECT=scripts/tsconfig.json node --require ts-node/register scripts/generate.ts",
     "copy:assets": "cross-env node --require ts-node/register scripts/copy.ts",
-    "ci": "npm run build:lib"
+    "ci": "npm run build:lib && npm run test"
   },
   "license": "MIT",
   "private": true,
