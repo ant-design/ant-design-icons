@@ -42,6 +42,8 @@ import {
 
 const JSONP_HANDLER_NAME = '__ant_icon_load';
 
+export const ANT_ICONS = new InjectionToken<IconDefinition[]>('ant_icons');
+
 @Injectable()
 export class IconService {
   defaultTheme: ThemeType = 'outline';
@@ -105,11 +107,18 @@ export class IconService {
     @Optional() protected _handler: HttpBackend,
     // tslint:disable-next-line:no-any
     @Optional() @Inject(DOCUMENT) protected _document: any,
-    protected sanitizer: DomSanitizer
+    protected sanitizer: DomSanitizer,
+
+    @Optional() @Inject(ANT_ICONS) protected _antIcons: IconDefinition[]
   ) {
     this._renderer = this._rendererFactory.createRenderer(null, null);
+
     if (this._handler) {
       this._http = new HttpClient(this._handler);
+    }
+
+    if (this._antIcons) {
+      this.addIcon(...this._antIcons);
     }
   }
 

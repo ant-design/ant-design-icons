@@ -4,7 +4,7 @@
 node_modules/
 
 # testing
-/coverage
+/coverage-report
 
 # misc
 /.angular/cache
