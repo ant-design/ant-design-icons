@@ -1,6 +1,7 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
+const processENV = require('process');
 processENV.env.CHROME_BIN = require('puppeteer').executablePath();
 
 module.exports = function(config) {
@@ -13,9 +14,7 @@ module.exports = function(config) {
       require('karma-spec-reporter'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
-      require('karma-junit-reporter'),
       require('@angular-devkit/build-angular/plugins/karma'),
-      require('karma-viewport')
     ],
     client: {
       jasmine: {
@@ -33,10 +32,7 @@ module.exports = function(config) {
         { type: 'cobertura' }
       ]
     },
-    junitReporter: {
-      outputDir: '../junit'
-    },
-    reporters: ['progress', 'kjhtml', 'spec', 'junit'],
+    reporters: ['progress', 'kjhtml', 'spec'],
     port: 9876,
     colors: true,
     specReporter: {
