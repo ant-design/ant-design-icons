@@ -12,8 +12,8 @@ import { IconService } from './icon.service';
 
 interface RenderMeta {
   type: string | IconDefinition;
-  theme: ThemeType;
-  twoToneColor: string;
+  theme?: ThemeType;
+  twoToneColor?: string;
 }
 
 function checkMeta(prev: RenderMeta, after: RenderMeta): boolean {
@@ -25,8 +25,9 @@ function checkMeta(prev: RenderMeta, after: RenderMeta): boolean {
 })
 export class IconDirective implements OnChanges {
   @Input() type: string | IconDefinition;
-  @Input() theme: ThemeType;
-  @Input() twoToneColor: string;
+
+  @Input() theme?: ThemeType;
+  @Input() twoToneColor?: string;
 
   constructor(protected _iconService: IconService, protected _elementRef: ElementRef, protected _renderer: Renderer2) {}
 
@@ -44,21 +45,24 @@ export class IconDirective implements OnChanges {
       if (!this.type) {
         this._clearSVGElement();
         resolve(null);
-      } else {
-        const preMeta = this._getSelfRenderMeta();
-        this._iconService.getRenderedContent(
-          this._parseIconType(this.type, this.theme),
-          this.twoToneColor
-        ).subscribe(svg => {
-          // avoid race condition, see https://github.com/ant-design/ant-design-icons/issues/315
-          if (checkMeta(preMeta, this._getSelfRenderMeta())) {
-            this._setSVGElement(svg);
-            resolve(svg);
-          } else {
-            resolve(null);
-          }
-        });
-      }
+        return;
+      } 
+
+      const beforeMeta = this._getSelfRenderMeta();
+      this._iconService.getRenderedContent(
+        this._parseIconType(this.type, this.theme),
+        this.twoToneColor
+      ).subscribe(svg => {
+        // avoid race condition
+        // see https://github.com/ant-design/ant-design-icons/issues/315
+        const afterMeta = this._getSelfRenderMeta()
+        if (checkMeta(beforeMeta, afterMeta)) {
+          this._setSVGElement(svg);
+          resolve(svg);
+        } else {
+          resolve(null);
+        }
+      });
     });
   }
 
@@ -77,7 +81,7 @@ export class IconDirective implements OnChanges {
    * @param type
    * @param theme
    */
-  protected _parseIconType(type: string | IconDefinition, theme: ThemeType): IconDefinition | string {
+  protected _parseIconType(type: string | IconDefinition, theme?: ThemeType): IconDefinition | string {
     if (isIconDefinition(type)) {
       return type;
     } else {

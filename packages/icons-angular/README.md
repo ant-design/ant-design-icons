@@ -9,8 +9,6 @@ Ant Design Icons for Angular
 
 </div>
 
-> With a better taste.
-
 ![](./demo.png)
 
 ## Installation
@@ -77,7 +75,7 @@ For icons provided by Ant Design, we provide **dynamic loading** strategy to red
 
 ### Jsonp-like Dynamic Loading
 
-If your static file server don't support cross origin XMLg requests, you can use jsonp-like dynamic loading by calling the `useJsonpLoading` method of `IconService`.
+If your static file server don't support cross origin XML requests, you can use jsonp-like dynamic loading by calling the `useJsonpLoading` method of `IconService`.
 
 ### Namespace
 
@@ -99,6 +97,10 @@ This package, unlike `@ant-design/icons-react`, does not list `@ant-design/icons
 ### Setup
 
 Install dependencies of `@ant-design/icons-angular`, and run `npm run generate`.
+
+### Test
+
+Run `ng test`.
 
 ### Demo
 

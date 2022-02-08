@@ -12,6 +12,9 @@
     "paths": {
       "@ant-design/icons-angular": [
         "./public_api.ts"
+      ],
+      "@ant-design/icons-angular/icons": [
+        "./icons/public_api.ts"
       ]
     }
   },
