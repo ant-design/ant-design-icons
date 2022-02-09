@@ -104,6 +104,7 @@ export const iconStyles = `
 }
 
 .anticon svg {
+  vertical-align: initial;
   display: inline-block;
 }
 
