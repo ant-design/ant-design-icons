@@ -3,7 +3,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
-    "bootstrap:china": "lerna bootstrap --registry=https://registry.npm.taobao.org",
+    "bootstrap:china": "lerna bootstrap --registry=https://registry.npmmirror.com",
     "rn:generate": "lerna run --scope @ant-design/icons-react-native generate",
     "icons:generate": "lerna run --scope @ant-design/icons-svg generate",
     "icons:build": "lerna run --scope @ant-design/icons-svg build",
