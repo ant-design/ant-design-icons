@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-vue",
-  "version": "6.0.1",
+  "version": "6.1.0",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "sideEffects": false,
@@ -69,8 +69,8 @@
     "vue-jest": "^5.0.0-alpha.10"
   },
   "dependencies": {
-    "@ant-design/colors": "^5.0.0",
-    "@ant-design/icons-svg": "^4.0.0"
+    "@ant-design/colors": "^6.0.0",
+    "@ant-design/icons-svg": "^4.2.1"
   },
   "config": {
     "port": 9528,

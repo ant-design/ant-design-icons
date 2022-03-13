@@ -397,6 +397,7 @@ export { default as HighlightFilled } from './HighlightFilled';
 export { default as HighlightOutlined } from './HighlightOutlined';
 export { default as HighlightTwoTone } from './HighlightTwoTone';
 export { default as HistoryOutlined } from './HistoryOutlined';
+export { default as HolderOutlined } from './HolderOutlined';
 export { default as HomeFilled } from './HomeFilled';
 export { default as HomeOutlined } from './HomeOutlined';
 export { default as HomeTwoTone } from './HomeTwoTone';
