@@ -193,7 +193,7 @@ describe('@ant-design/icons-angular', () => {
 @Component({
   selector: 'icon-test',
   template: `
-      <i antIcon [type]="type" [theme]="theme"></i>
+      <span antIcon [type]="type" [theme]="theme"></span>
   `
 })
 export class IconTestComponent {
