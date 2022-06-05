@@ -93,7 +93,7 @@ describe('icons-angular', () => {
 
 @Component({
   template: `
-    <i antIcon [type]="name" [theme]="theme" [twoToneColor]="twotoneColor"></i>
+    <span antIcon [type]="name" [theme]="theme" [twoToneColor]="twotoneColor"></span>
   `
 })
 export class TestIconComponent {
@@ -104,7 +104,7 @@ export class TestIconComponent {
 
 @Component({
   template: `
-    <i antIcon [type]="'animal:panda'"></i>
+    <span antIcon [type]="'animal:panda'"></span>
   `
 })
 export class TestIconNamespaceComponent {

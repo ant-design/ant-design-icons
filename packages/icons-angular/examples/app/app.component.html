@@ -12,13 +12,13 @@
 </p>
 
 <ng-container *ngFor="let name of icons;">
-  <i antIcon [type]="name" [theme]="currentTheme"></i>
+  <span antIcon [type]="name" [theme]="currentTheme"></span>
 </ng-container>
 
 <!-- To test `share` dynamic importing.  -->
 
 <ng-container *ngIf="currentTheme === 'fill'">
   <h2>With Namespace</h2>
-  <i antIcon [type]="'animal:panda'"></i>
-  <i antIcon [type]="'animal:panda'"></i>
+  <span antIcon [type]="'animal:panda'"></span>
+  <span antIcon [type]="'animal:panda'"></span>
 </ng-container>

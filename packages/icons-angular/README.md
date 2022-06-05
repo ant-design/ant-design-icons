@@ -66,7 +66,7 @@ export class AppComponent implements OnInit {
 When you want to render an icon:
 
 ```html
-<i antIcon type="ant-cloud" theme="outline"></i>
+<span antIcon type="ant-cloud" theme="outline"></span>
 ```
 
 Checkout the demo for more details.
@@ -81,7 +81,7 @@ If your static file server don't support cross origin XML requests, you can use 
 
 Namespace is a new feature first introduced in `2.0.0-beta.2`. It allows users to register their own icons with simple API, support both dynamic loading and static loading.
 
-Say you want to add a `panda` icon in `animal` namespace. For static loading, you should call `addIconLiteral('animal:panda', '<svg>...</svg>')`. For dynamic loading, just put `panda.svg` under `assets/animal`. And render a panda like: `<i antIcon type="animal:panda">`.
+Say you want to add a `panda` icon in `animal` namespace. For static loading, you should call `addIconLiteral('animal:panda', '<svg>...</svg>')`. For dynamic loading, just put `panda.svg` under `assets/animal`. And render a panda like: `<span antIcon type="animal:panda">`.
 
 Please checkout the demo for more details.
 
