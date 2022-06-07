@@ -93,7 +93,7 @@ jobs:
     needs: setup
 
   ################################ Framework Icons CI ################################
-  normal-test:
+  framework-test:
     name: test
     strategy:
       matrix:
