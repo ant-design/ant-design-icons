@@ -97,7 +97,42 @@ jobs:
     name: test
     strategy:
       matrix:
-        framework: ['angular', 'react', 'react-native', 'vue']
+        framework: ['angular', 'react', 'vue']
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: restore lerna
+        id: lerna_cache_node_modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-lerna-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-lerna-
+
+      - name: restore cache from icon-svg
+        uses: actions/cache@v3
+        with:
+          path: |
+            packages/icons-svg/es
+            packages/icons-svg/lib
+            packages/icons-svg/inline-svg
+          key: icon-svg-${{ github.sha }}
+
+      - name: icon-${{ matrix.framework }} ci
+        run: npm run ${{ matrix.framework }}:ci
+
+    needs: [setup, icon-svg]
+
+  rn-test:
+    name: test
+    strategy:
+      matrix:
+        framework: ['react-native']
     runs-on: ubuntu-latest
     steps:
       - name: checkout
