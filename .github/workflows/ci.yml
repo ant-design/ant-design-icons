@@ -24,15 +24,15 @@ jobs:
           path: |
             node_modules
             */*/node_modules
-          key: ${{ runner.os }}-lerna-${{ hashFiles('**/package.json') }}
+          key: lerna-${{ github.sha }}-package-json-${{ hashFiles('**/package.json') }}
           restore-keys: |
-            ${{ runner.os }}-lerna-
+            lerna-${{ github.sha }}-package-json-
 
       - name: install
         if: steps.lerna_cache_node_modules.outputs.cache-hit != 'true'
         run: |
-          npm install
-          npm run bootstrap
+          yarn
+          yarn bootstrap
 
   lint:
     runs-on: ubuntu-latest
@@ -47,12 +47,11 @@ jobs:
           path: |
             node_modules
             */*/node_modules
-          key: ${{ runner.os }}-lerna-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-lerna-
+          key: lerna-${{ github.sha }}-package-json-${{ hashFiles('**/package.json') }}
+          restore-keys: lerna-${{ github.sha }}-package-json-
 
       - name: lint
-        run: npm run lint
+        run: yarn lint
     needs: setup
 
   ################################ Icon Svg ################################
@@ -70,14 +69,13 @@ jobs:
           path: |
             node_modules
             */*/node_modules
-          key: ${{ runner.os }}-lerna-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-lerna-
+          key: lerna-${{ github.sha }}-package-json-${{ hashFiles('**/package.json') }}
+          restore-keys: lerna-${{ github.sha }}-package-json-
 
       - name: icon-svg build
         run: |
-          npm run icons:generate
-          npm run icons:build
+          yarn icons:generate
+          yarn icons:build
 
       - name: cache icon-svg
         uses: actions/cache@v3
@@ -89,7 +87,7 @@ jobs:
           key: icon-svg-${{ github.sha }}
 
       - name: icon-svg ci
-        run: npm run icons:test
+        run: yarn icons:test
     needs: setup
 
   ################################ Framework Icons CI ################################
@@ -110,9 +108,8 @@ jobs:
           path: |
             node_modules
             */*/node_modules
-          key: ${{ runner.os }}-lerna-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-lerna-
+          key: lerna-${{ github.sha }}-package-json-${{ hashFiles('**/package.json') }}
+          restore-keys: lerna-${{ github.sha }}-package-json-
 
       - name: restore cache from icon-svg
         uses: actions/cache@v3
@@ -124,7 +121,7 @@ jobs:
           key: icon-svg-${{ github.sha }}
 
       - name: icon-${{ matrix.framework }} ci
-        run: npm run ${{ matrix.framework }}:ci
+        run: yarn ${{ matrix.framework }}:ci
 
     needs: [setup, icon-svg]
 
@@ -145,9 +142,8 @@ jobs:
           path: |
             node_modules
             */*/node_modules
-          key: ${{ runner.os }}-lerna-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-lerna-
+          key: lerna-${{ github.sha }}-package-json-${{ hashFiles('**/package.json') }}
+          restore-keys: lerna-${{ github.sha }}-package-json-
 
       - name: restore cache from icon-svg
         uses: actions/cache@v3
@@ -159,6 +155,6 @@ jobs:
           key: icon-svg-${{ github.sha }}
 
       - name: icon-${{ matrix.framework }} ci
-        run: npm run ${{ matrix.framework }}:ci
+        run: yarn ${{ matrix.framework }}:ci
 
     needs: [setup, icon-svg]

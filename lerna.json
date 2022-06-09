@@ -3,5 +3,6 @@
   "bootstrap": {
     "npmClientArgs": []
   },
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "npmClient": "yarn"
 }

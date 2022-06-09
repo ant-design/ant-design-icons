@@ -29,7 +29,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     className,
 
     // affect inner <svg>...</svg>
-    component: Component,
+    component,
     viewBox,
     spin,
     rotate,
@@ -43,7 +43,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
   } = props;
 
   warning(
-    Boolean(Component || children),
+    Boolean(component || children),
     'Should have `component` prop or `children`.',
   );
 
@@ -80,8 +80,8 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
 
   // component > children
   const renderInnerNode = () => {
-    if (Component) {
-      return <Component {...innerSvgProps}>{children}</Component>;
+    if (component) {
+      return React.createElement(component, innerSvgProps, children);
     }
 
     if (children) {
