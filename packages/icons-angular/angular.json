@@ -122,7 +122,6 @@
       }
     }
   },
-  "defaultProject": "examples",
   "cli": {
     "analytics": false
   }
