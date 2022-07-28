@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-angular",
-  "version": "13.1.0",
+  "version": "14.1.0",
   "license": "MIT",
   "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-angular",
   "contributors": [
@@ -11,9 +11,9 @@
     "tslib": "^2.0.0"
 },
   "peerDependencies": {
-    "@angular/common": "^13.0.1",
-    "@angular/core": "^13.0.0",
-    "@angular/platform-browser": "^13.0.1",
+    "@angular/common": "^14.1.0",
+    "@angular/core": "^14.1.0",
+    "@angular/platform-browser": "^14.1.0",
     "rxjs": "^6.4.0 || ^7.4.0"
   }
 }
