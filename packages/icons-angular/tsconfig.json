@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "skipLibCheck": true,
-    "target": "es5",
+    "target": "es2020",
     "lib": [
       "esnext",
       "dom"
