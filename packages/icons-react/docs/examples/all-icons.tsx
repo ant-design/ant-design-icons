@@ -1,7 +1,7 @@
 import { ThemeType } from '@ant-design/icons-svg/lib/types';
 import * as React from 'react';
 import styled from 'styled-components';
-import * as AntdIcons from '../src/icons';
+import * as AntdIcons from '../../src/icons';
 
 const Container = styled.div`
   display: flex;

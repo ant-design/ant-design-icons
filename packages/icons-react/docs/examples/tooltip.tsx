@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Tooltip from 'antd/lib/tooltip';
 import 'antd/lib/tooltip/style/index.css';
-import { AntDesignOutlined, createFromIconfontCN } from '../src';
+import { AntDesignOutlined, createFromIconfontCN } from '../../src';
 
 const IconFont = createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',

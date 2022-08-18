@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { AntDesignOutlined, DashboardOutlined, TwitterOutlined } from '../src';
+import { AntDesignOutlined, DashboardOutlined, TwitterOutlined } from '../../src';
 
 const Div = styled.div`
   position: relative;

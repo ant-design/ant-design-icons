@@ -3,7 +3,7 @@ import {
   AntDesignOutlined, DashboardOutlined, SmileOutlined,
   SyncOutlined, TwitterOutlined, LoadingOutlined,
   HomeOutlined, SettingFilled,
-} from '../src';
+} from '../../src';
 
 const Basic = () => (
   <div>

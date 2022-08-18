@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { setTwoToneColor } from '../src';
-import * as AntdIcons from '../src/icons';
+import { setTwoToneColor } from '../../src';
+import * as AntdIcons from '../../src/icons';
 
 const allIcons: {
   [key: string]: any;

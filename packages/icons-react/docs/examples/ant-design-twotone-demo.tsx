@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AlertTwoTone, SmileTwoTone, HeartTwoTone, CheckCircleTwoTone } from '../src';
+import { AlertTwoTone, SmileTwoTone, HeartTwoTone, CheckCircleTwoTone } from '../../src';
 
 export default () => (
   <div className="icons-list">

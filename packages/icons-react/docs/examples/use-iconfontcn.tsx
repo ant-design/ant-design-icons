@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createFromIconfontCN } from '../src';
+import { createFromIconfontCN } from '../../src';
 
 const IconFont = createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
