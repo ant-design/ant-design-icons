@@ -15,6 +15,7 @@ import Icon, {
   IconProvider,
 } from '../src';
 import { getSecondaryColor } from '../src/utils';
+import {render as testingLibRender} from '@testing-library/react';
 
 function mountTest(Component) {
   describe('mount and unmount', () => {
@@ -476,12 +477,15 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
   });
 
   it('should support rootClassName', () => {
-    const wrapper = mount(
+    const {container} = testingLibRender(
       <IconProvider value={{ rootClassName: 'hashCls' }}>
         <HomeOutlined />
         <IconFont type="icon-tuichu" />
       </IconProvider>,
     );
-    expect(wrapper).toMatchSnapshot();
+
+    container.querySelectorAll('.anticon').forEach((node) => {
+      expect(node.className).toContain('hashCls');
+    })
   });
 });
