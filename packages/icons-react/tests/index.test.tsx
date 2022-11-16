@@ -13,7 +13,7 @@ import Icon, {
   CheckCircleTwoTone,
   ClockCircleOutlined,
   IconProvider,
-} from '../lib';
+} from '../src';
 import { getSecondaryColor } from '../src/utils';
 
 function mountTest(Component) {
@@ -473,5 +473,15 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
     );
 
     expect(document.querySelector('style').nonce).toEqual('test');
+  });
+
+  it('should support rootClassName', () => {
+    const wrapper = mount(
+      <IconProvider value={{ rootClassName: 'hashCls' }}>
+        <HomeOutlined />
+        <IconFont type="icon-tuichu" />
+      </IconProvider>,
+    );
+    expect(wrapper).toMatchSnapshot();
   });
 });

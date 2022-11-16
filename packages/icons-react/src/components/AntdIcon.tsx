@@ -46,9 +46,10 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     ...restProps
   } = props;
 
-  const { prefixCls = 'anticon' } = React.useContext(Context);
+  const { prefixCls = 'anticon', rootClassName } = React.useContext(Context);
 
   const classString = classNames(
+    rootClassName,
     prefixCls,
     {
       [`${prefixCls}-${icon.name}`]: !!icon.name,
