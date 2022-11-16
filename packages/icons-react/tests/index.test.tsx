@@ -13,8 +13,9 @@ import Icon, {
   CheckCircleTwoTone,
   ClockCircleOutlined,
   IconProvider,
-} from '../lib';
+} from '../src';
 import { getSecondaryColor } from '../src/utils';
+import {render as testingLibRender} from '@testing-library/react';
 
 function mountTest(Component) {
   describe('mount and unmount', () => {
@@ -473,5 +474,18 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
     );
 
     expect(document.querySelector('style').nonce).toEqual('test');
+  });
+
+  it('should support rootClassName', () => {
+    const {container} = testingLibRender(
+      <IconProvider value={{ rootClassName: 'hashCls' }}>
+        <HomeOutlined />
+        <IconFont type="icon-tuichu" />
+      </IconProvider>,
+    );
+
+    container.querySelectorAll('.anticon').forEach((node) => {
+      expect(node.className).toContain('hashCls');
+    })
   });
 });

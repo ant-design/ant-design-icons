@@ -49,9 +49,10 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
 
   useInsertStyles();
 
-  const { prefixCls = 'anticon' } = React.useContext(Context);
+  const { prefixCls = 'anticon', rootClassName } = React.useContext(Context);
 
   const classString = classNames(
+    rootClassName,
     prefixCls,
     className,
   );
