@@ -73,7 +73,7 @@ export default series(
       filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Outlined' })
     }),
 
-    // 2.3 generate abstract node with the theme "outlined"
+    // 2.3 generate abstract node with the theme "twotone"
     generateIcons({
       theme: 'twotone',
       from: ['svg/twotone/*.svg'],
