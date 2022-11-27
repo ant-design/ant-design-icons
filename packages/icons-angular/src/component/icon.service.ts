@@ -105,7 +105,7 @@ export class IconService {
   constructor(
     protected _rendererFactory: RendererFactory2,
     @Optional() protected _handler: HttpBackend,
-    // tslint:disable-next-line:no-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     @Optional() @Inject(DOCUMENT) protected _document: any,
     protected sanitizer: DomSanitizer,
 
