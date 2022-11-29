@@ -7,7 +7,8 @@
     "lint": "ng lint",
     "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI --code-coverage",
     "build": "ng build examples --configuration production",
-    "build:lib": "npm run generate && ng build ant-design-icons-angular --configuration production && npm run copy:assets",
+    "build:lib": "npm run clean && npm run generate && ng build ant-design-icons-angular --configuration production && npm run copy:assets",
+    "clean": "cross-env TS_NODE_PROJECT=scripts/tsconfig.json node --require ts-node/register scripts/clean.ts",
     "generate": "cross-env TS_NODE_PROJECT=scripts/tsconfig.json node --require ts-node/register scripts/generate.ts",
     "copy:assets": "cross-env node --require ts-node/register scripts/copy.ts",
     "ci": "npm run build:lib"
