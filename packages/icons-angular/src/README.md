@@ -9,7 +9,7 @@ Ant Design Icons for Angular
 
 </div>
 
-> With a better taste.
+![](./demo.png)
 
 ## Installation
 
@@ -83,12 +83,7 @@ Please checkout the demo for more details.
 
 ## Development
 
-This package, unlike `@ant-design/icons-react`, does not list `@ant-design/icons` as a dependency. It has its own build up tooling chain which brings benefits like:
-
-* **Tree shake**.
-* Providing dynamic and static loading.
-* Reduced bundle size (500KB less if you only use dynamic loading).
-* Better performance because of no `svg => abstract node => svg` process.
+You can find the source code [here](https://github.com/ant-design/ant-design-icons).
 
 ### Setup
 
@@ -96,15 +91,11 @@ Install dependencies of `@ant-design/icons-angular`, and run `npm run generate`.
 
 ### Demo
 
-Run `ng serve` after `npm run generate`.
+Run `npm run generate` and then `npm run start`.
 
 ### Build
 
-Build the library by running the script we provide.
-
-```bash
-$ ./build.sh
-```
+Run `npm run build:lib`.
 
 ### Extension
 
