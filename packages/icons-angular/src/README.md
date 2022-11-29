@@ -91,11 +91,11 @@ Install dependencies of `@ant-design/icons-angular`, and run `npm run generate`.
 
 ### Demo
 
-Run `npm run start` after `npm run generate`.
+Run `npm run generate` and then `npm run start`.
 
 ### Build
 
-Run `npm build lib`.
+Run `npm run build:lib`.
 
 ### Extension
 
