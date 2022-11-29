@@ -143,7 +143,7 @@ export function createComponentBed<T>(
   fixture.detectChanges();
 
   return {
-    bed,
+    bed: (bed as TestBedStatic),
     fixture,
     nativeElement: fixture.nativeElement,
     debugElement: fixture.debugElement,

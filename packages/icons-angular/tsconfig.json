@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "skipLibCheck": true,
-    "target": "es2020",
+    "target": "ES2022",
     "lib": [
       "esnext",
       "dom"
@@ -21,6 +21,7 @@
       "@ant-design/icons-angular/icons": [
         "src/icons/public_api"
       ]
-    }
+    },
+    "useDefineForClassFields": false
   }
 }
