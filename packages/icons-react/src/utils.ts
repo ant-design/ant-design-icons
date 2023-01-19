@@ -142,9 +142,9 @@ export const iconStyles = `
 `;
 
 export const useInsertStyles = (styleStr: string = iconStyles) => {
-  const { csp, prefixCls = 'anticon' } = useContext(IconContext);
+  const { csp, prefixCls } = useContext(IconContext);
 
-  if (typeof prefixCls === "string") {
+  if (prefixCls) {
     styleStr = styleStr.replace(/anticon/g, prefixCls);
   }
 
