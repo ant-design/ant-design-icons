@@ -142,7 +142,11 @@ export const iconStyles = `
 `;
 
 export const useInsertStyles = (styleStr: string = iconStyles) => {
-  const { csp } = useContext(IconContext);
+  const { csp, prefixCls = 'anticon' } = useContext(IconContext);
+
+  if (typeof prefixCls === "string") {
+    styleStr = styleStr.replace(/anticon/g, prefixCls);
+  }
 
   useEffect(() => {
     updateCSS(styleStr, '@ant-design-icons', {
