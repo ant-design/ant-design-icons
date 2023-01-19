@@ -488,4 +488,17 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
       expect(node.className).toContain('hashCls');
     })
   });
+
+  it('icon loading should working when use prefixCls', () => {
+    testingLibRender(
+      <IconProvider value={{ prefixCls: 'myicon' }}>
+       <SyncOutlined spin />
+      </IconProvider>,
+    );
+
+    const spin = document.querySelector('.myicon-spin')
+    if(spin !== null){
+      expect(getComputedStyle(spin,null).getPropertyValue('animation')).toEqual('loadingCircle 1s infinite linear')
+    }
+  });
 });
