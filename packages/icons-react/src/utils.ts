@@ -143,13 +143,14 @@ export const iconStyles = `
 
 export const useInsertStyles = (styleStr: string = iconStyles) => {
   const { csp, prefixCls } = useContext(IconContext);
+  let mergedStyleStr = styleStr;
 
   if (prefixCls) {
-    styleStr = styleStr.replace(/anticon/g, prefixCls);
+    mergedStyleStr = mergedStyleStr.replace(/anticon/g, prefixCls);
   }
 
   useEffect(() => {
-    updateCSS(styleStr, '@ant-design-icons', {
+    updateCSS(mergedStyleStr, '@ant-design-icons', {
       prepend: true,
       csp,
     });
