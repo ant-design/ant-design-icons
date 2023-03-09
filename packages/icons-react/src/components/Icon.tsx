@@ -54,6 +54,9 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
   const classString = classNames(
     rootClassName,
     prefixCls,
+    {
+      [`${prefixCls}-spin`]: !!spin && !!Component,
+    },
     className,
   );
 
