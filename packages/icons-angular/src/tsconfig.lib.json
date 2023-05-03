@@ -9,7 +9,7 @@
     "strictFunctionTypes": true,
     "importHelpers": true,
     "newLine": "lf",
-    "module": "es2015",
+    "module": "ESNext",
     "moduleResolution": "node",
     "outDir": "./dist/icons",
     "rootDir": ".",
@@ -17,7 +17,7 @@
     "inlineSources": true,
     "target": "ES2022",
     "lib": [
-      "es2015",
+      "ESNext",
       "dom"
     ],
     "skipLibCheck": true,
