@@ -24,7 +24,7 @@ function checkMeta(prev: RenderMeta, after: RenderMeta): boolean {
   selector: '[antIcon]'
 })
 export class IconDirective implements OnChanges {
-  @Input() type: string | IconDefinition;
+  @Input({ required: true }) type: string | IconDefinition;
 
   @Input() theme?: ThemeType;
   @Input() twoToneColor?: string;
