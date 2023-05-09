@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-angular",
-  "version": "15.0.0",
+  "version": "16.0.0",
   "license": "MIT",
   "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-angular",
   "contributors": [
@@ -8,13 +8,13 @@
     "Jørn Are Hatlelid <jornare@fronthouse.no>"
   ],
   "dependencies": {
-    "@ant-design/colors": "^5.0.0",
+    "@ant-design/colors": "^7.0.0",
     "tslib": "^2.0.0"
 },
   "peerDependencies": {
-    "@angular/common": "^15.0.0",
-    "@angular/core": "^15.0.0",
-    "@angular/platform-browser": "^15.0.0",
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0",
+    "@angular/platform-browser": "^16.0.0",
     "rxjs": "^6.4.0 || ^7.4.0"
   }
 }
