@@ -3,8 +3,8 @@
 exports[`IconOutline props exists 1`] = `
 <
   style={
-    Array [
-      Object {
+    [
+      {
         "color": "red",
         "fontFamily": "antoutline",
         "fontSize": 24,
@@ -22,8 +22,8 @@ exports[`IconOutline props exists 1`] = `
 exports[`IconOutline should create Icon element. 1`] = `
 <
   style={
-    Array [
-      Object {
+    [
+      {
         "color": "black",
         "fontFamily": "antoutline",
         "fontSize": 14,
@@ -39,7 +39,7 @@ exports[`IconOutline should create Icon element. 1`] = `
 `;
 
 exports[`IconOutline should create outlineGlyphMap 1`] = `
-Object {
+{
   "account-book": 59905,
   "aim": 59906,
   "alert": 59907,
