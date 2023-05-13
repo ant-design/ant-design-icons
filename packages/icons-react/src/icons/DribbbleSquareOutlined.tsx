@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DribbbleSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/DribbbleSquareOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const DribbbleSquareOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DribbbleSquareOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={DribbbleSquareOutlinedSvg} />;
 
 DribbbleSquareOutlined.displayName = 'DribbbleSquareOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DribbbleSquareOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DribbbleSquareOutlined);
+export default Comp;

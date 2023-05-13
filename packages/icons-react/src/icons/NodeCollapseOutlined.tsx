@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import NodeCollapseOutlinedSvg from '@ant-design/icons-svg/lib/asn/NodeCollapseOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const NodeCollapseOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const NodeCollapseOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={NodeCollapseOutlinedSvg} />;
 
 NodeCollapseOutlined.displayName = 'NodeCollapseOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(NodeCollapseOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(NodeCollapseOutlined);
+export default Comp;

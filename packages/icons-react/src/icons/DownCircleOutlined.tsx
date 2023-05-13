@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DownCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/DownCircleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const DownCircleOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DownCircleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={DownCircleOutlinedSvg} />;
 
 DownCircleOutlined.displayName = 'DownCircleOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DownCircleOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DownCircleOutlined);
+export default Comp;

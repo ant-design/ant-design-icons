@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ScissorOutlinedSvg from '@ant-design/icons-svg/lib/asn/ScissorOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ScissorOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ScissorOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ScissorOutlinedSvg} />;
 
 ScissorOutlined.displayName = 'ScissorOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ScissorOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ScissorOutlined);
+export default Comp;

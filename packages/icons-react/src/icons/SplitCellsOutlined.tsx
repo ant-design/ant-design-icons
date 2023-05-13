@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SplitCellsOutlinedSvg from '@ant-design/icons-svg/lib/asn/SplitCellsOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const SplitCellsOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const SplitCellsOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={SplitCellsOutlinedSvg} />;
 
 SplitCellsOutlined.displayName = 'SplitCellsOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SplitCellsOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SplitCellsOutlined);
+export default Comp;

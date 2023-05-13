@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FileProtectOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileProtectOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FileProtectOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FileProtectOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FileProtectOutlinedSvg} />;
 
 FileProtectOutlined.displayName = 'FileProtectOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileProtectOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileProtectOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ChromeFilledSvg from '@ant-design/icons-svg/lib/asn/ChromeFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ChromeFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ChromeFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={ChromeFilledSvg} />;
 
 ChromeFilled.displayName = 'ChromeFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ChromeFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ChromeFilled);
+export default Comp;

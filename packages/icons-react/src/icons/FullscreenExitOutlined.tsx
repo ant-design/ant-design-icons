@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FullscreenExitOutlinedSvg from '@ant-design/icons-svg/lib/asn/FullscreenExitOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FullscreenExitOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FullscreenExitOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FullscreenExitOutlinedSvg} />;
 
 FullscreenExitOutlined.displayName = 'FullscreenExitOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FullscreenExitOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FullscreenExitOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PartitionOutlinedSvg from '@ant-design/icons-svg/lib/asn/PartitionOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const PartitionOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PartitionOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={PartitionOutlinedSvg} />;
 
 PartitionOutlined.displayName = 'PartitionOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PartitionOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PartitionOutlined);
+export default Comp;

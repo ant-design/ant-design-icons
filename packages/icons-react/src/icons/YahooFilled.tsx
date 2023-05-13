@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import YahooFilledSvg from '@ant-design/icons-svg/lib/asn/YahooFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const YahooFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const YahooFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={YahooFilledSvg} />;
 
 YahooFilled.displayName = 'YahooFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(YahooFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(YahooFilled);
+export default Comp;

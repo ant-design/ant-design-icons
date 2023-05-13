@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RedEnvelopeFilledSvg from '@ant-design/icons-svg/lib/asn/RedEnvelopeFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const RedEnvelopeFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const RedEnvelopeFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={RedEnvelopeFilledSvg} />;
 
 RedEnvelopeFilled.displayName = 'RedEnvelopeFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RedEnvelopeFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(RedEnvelopeFilled);
+export default Comp;

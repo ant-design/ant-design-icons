@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CloseSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloseSquareOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CloseSquareOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CloseSquareOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CloseSquareOutlinedSvg} />;
 
 CloseSquareOutlined.displayName = 'CloseSquareOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloseSquareOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CloseSquareOutlined);
+export default Comp;

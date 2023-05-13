@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ClockCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/ClockCircleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ClockCircleOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ClockCircleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ClockCircleOutlinedSvg} />;
 
 ClockCircleOutlined.displayName = 'ClockCircleOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ClockCircleOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ClockCircleOutlined);
+export default Comp;

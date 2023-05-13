@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CalendarOutlinedSvg from '@ant-design/icons-svg/lib/asn/CalendarOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CalendarOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CalendarOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CalendarOutlinedSvg} />;
 
 CalendarOutlined.displayName = 'CalendarOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CalendarOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CalendarOutlined);
+export default Comp;

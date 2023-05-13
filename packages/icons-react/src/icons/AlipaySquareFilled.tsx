@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AlipaySquareFilledSvg from '@ant-design/icons-svg/lib/asn/AlipaySquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const AlipaySquareFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const AlipaySquareFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={AlipaySquareFilledSvg} />;
 
 AlipaySquareFilled.displayName = 'AlipaySquareFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AlipaySquareFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AlipaySquareFilled);
+export default Comp;

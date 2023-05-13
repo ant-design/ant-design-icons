@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MedicineBoxOutlinedSvg from '@ant-design/icons-svg/lib/asn/MedicineBoxOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const MedicineBoxOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const MedicineBoxOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={MedicineBoxOutlinedSvg} />;
 
 MedicineBoxOutlined.displayName = 'MedicineBoxOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MedicineBoxOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MedicineBoxOutlined);
+export default Comp;

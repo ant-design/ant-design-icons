@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BehanceOutlinedSvg from '@ant-design/icons-svg/lib/asn/BehanceOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const BehanceOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const BehanceOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={BehanceOutlinedSvg} />;
 
 BehanceOutlined.displayName = 'BehanceOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BehanceOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BehanceOutlined);
+export default Comp;

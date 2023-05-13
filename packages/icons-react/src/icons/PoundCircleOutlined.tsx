@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PoundCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/PoundCircleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const PoundCircleOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PoundCircleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={PoundCircleOutlinedSvg} />;
 
 PoundCircleOutlined.displayName = 'PoundCircleOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PoundCircleOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PoundCircleOutlined);
+export default Comp;

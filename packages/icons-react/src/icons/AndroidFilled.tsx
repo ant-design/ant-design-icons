@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AndroidFilledSvg from '@ant-design/icons-svg/lib/asn/AndroidFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const AndroidFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const AndroidFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={AndroidFilledSvg} />;
 
 AndroidFilled.displayName = 'AndroidFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AndroidFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AndroidFilled);
+export default Comp;

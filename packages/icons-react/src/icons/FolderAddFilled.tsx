@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FolderAddFilledSvg from '@ant-design/icons-svg/lib/asn/FolderAddFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FolderAddFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FolderAddFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={FolderAddFilledSvg} />;
 
 FolderAddFilled.displayName = 'FolderAddFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderAddFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderAddFilled);
+export default Comp;

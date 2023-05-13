@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MergeCellsOutlinedSvg from '@ant-design/icons-svg/lib/asn/MergeCellsOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const MergeCellsOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const MergeCellsOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={MergeCellsOutlinedSvg} />;
 
 MergeCellsOutlined.displayName = 'MergeCellsOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MergeCellsOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MergeCellsOutlined);
+export default Comp;

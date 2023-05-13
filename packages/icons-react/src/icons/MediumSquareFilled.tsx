@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MediumSquareFilledSvg from '@ant-design/icons-svg/lib/asn/MediumSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const MediumSquareFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const MediumSquareFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={MediumSquareFilledSvg} />;
 
 MediumSquareFilled.displayName = 'MediumSquareFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MediumSquareFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MediumSquareFilled);
+export default Comp;

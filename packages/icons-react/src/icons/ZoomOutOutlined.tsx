@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ZoomOutOutlinedSvg from '@ant-design/icons-svg/lib/asn/ZoomOutOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ZoomOutOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ZoomOutOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ZoomOutOutlinedSvg} />;
 
 ZoomOutOutlined.displayName = 'ZoomOutOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ZoomOutOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ZoomOutOutlined);
+export default Comp;

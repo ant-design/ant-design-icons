@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GoldTwoToneSvg from '@ant-design/icons-svg/lib/asn/GoldTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const GoldTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const GoldTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={GoldTwoToneSvg} />;
 
 GoldTwoTone.displayName = 'GoldTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GoldTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GoldTwoTone);
+export default Comp;

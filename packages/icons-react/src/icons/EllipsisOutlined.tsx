@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import EllipsisOutlinedSvg from '@ant-design/icons-svg/lib/asn/EllipsisOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const EllipsisOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const EllipsisOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={EllipsisOutlinedSvg} />;
 
 EllipsisOutlined.displayName = 'EllipsisOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EllipsisOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(EllipsisOutlined);
+export default Comp;

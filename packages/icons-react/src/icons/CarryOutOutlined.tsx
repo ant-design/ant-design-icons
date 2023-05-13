@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CarryOutOutlinedSvg from '@ant-design/icons-svg/lib/asn/CarryOutOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CarryOutOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CarryOutOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CarryOutOutlinedSvg} />;
 
 CarryOutOutlined.displayName = 'CarryOutOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CarryOutOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CarryOutOutlined);
+export default Comp;

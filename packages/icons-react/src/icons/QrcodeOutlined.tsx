@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import QrcodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/QrcodeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const QrcodeOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const QrcodeOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={QrcodeOutlinedSvg} />;
 
 QrcodeOutlined.displayName = 'QrcodeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(QrcodeOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(QrcodeOutlined);
+export default Comp;

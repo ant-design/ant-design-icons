@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BookTwoToneSvg from '@ant-design/icons-svg/lib/asn/BookTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const BookTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const BookTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={BookTwoToneSvg} />;
 
 BookTwoTone.displayName = 'BookTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BookTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BookTwoTone);
+export default Comp;

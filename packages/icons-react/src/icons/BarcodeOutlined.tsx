@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BarcodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/BarcodeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const BarcodeOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const BarcodeOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={BarcodeOutlinedSvg} />;
 
 BarcodeOutlined.displayName = 'BarcodeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BarcodeOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BarcodeOutlined);
+export default Comp;

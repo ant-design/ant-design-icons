@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PushpinFilledSvg from '@ant-design/icons-svg/lib/asn/PushpinFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const PushpinFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PushpinFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={PushpinFilledSvg} />;
 
 PushpinFilled.displayName = 'PushpinFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PushpinFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PushpinFilled);
+export default Comp;

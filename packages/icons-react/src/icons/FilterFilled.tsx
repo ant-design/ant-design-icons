@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FilterFilledSvg from '@ant-design/icons-svg/lib/asn/FilterFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FilterFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FilterFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={FilterFilledSvg} />;
 
 FilterFilled.displayName = 'FilterFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FilterFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FilterFilled);
+export default Comp;

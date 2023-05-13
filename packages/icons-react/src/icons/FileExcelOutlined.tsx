@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FileExcelOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileExcelOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FileExcelOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FileExcelOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FileExcelOutlinedSvg} />;
 
 FileExcelOutlined.displayName = 'FileExcelOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileExcelOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileExcelOutlined);
+export default Comp;

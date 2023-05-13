@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ControlTwoToneSvg from '@ant-design/icons-svg/lib/asn/ControlTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ControlTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ControlTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={ControlTwoToneSvg} />;
 
 ControlTwoTone.displayName = 'ControlTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ControlTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ControlTwoTone);
+export default Comp;

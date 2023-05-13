@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import UsbFilledSvg from '@ant-design/icons-svg/lib/asn/UsbFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const UsbFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const UsbFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={UsbFilledSvg} />;
 
 UsbFilled.displayName = 'UsbFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UsbFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(UsbFilled);
+export default Comp;

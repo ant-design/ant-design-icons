@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import UserDeleteOutlinedSvg from '@ant-design/icons-svg/lib/asn/UserDeleteOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const UserDeleteOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const UserDeleteOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={UserDeleteOutlinedSvg} />;
 
 UserDeleteOutlined.displayName = 'UserDeleteOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UserDeleteOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(UserDeleteOutlined);
+export default Comp;

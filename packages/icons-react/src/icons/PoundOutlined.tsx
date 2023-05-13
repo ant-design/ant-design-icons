@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PoundOutlinedSvg from '@ant-design/icons-svg/lib/asn/PoundOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const PoundOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PoundOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={PoundOutlinedSvg} />;
 
 PoundOutlined.displayName = 'PoundOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PoundOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PoundOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GroupOutlinedSvg from '@ant-design/icons-svg/lib/asn/GroupOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const GroupOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const GroupOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={GroupOutlinedSvg} />;
 
 GroupOutlined.displayName = 'GroupOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GroupOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GroupOutlined);
+export default Comp;

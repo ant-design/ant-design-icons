@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MacCommandFilledSvg from '@ant-design/icons-svg/lib/asn/MacCommandFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const MacCommandFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const MacCommandFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={MacCommandFilledSvg} />;
 
 MacCommandFilled.displayName = 'MacCommandFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MacCommandFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MacCommandFilled);
+export default Comp;

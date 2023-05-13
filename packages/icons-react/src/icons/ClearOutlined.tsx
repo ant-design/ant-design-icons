@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ClearOutlinedSvg from '@ant-design/icons-svg/lib/asn/ClearOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ClearOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ClearOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ClearOutlinedSvg} />;
 
 ClearOutlined.displayName = 'ClearOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ClearOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ClearOutlined);
+export default Comp;

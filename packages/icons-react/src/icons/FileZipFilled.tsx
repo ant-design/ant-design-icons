@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FileZipFilledSvg from '@ant-design/icons-svg/lib/asn/FileZipFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FileZipFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FileZipFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={FileZipFilledSvg} />;
 
 FileZipFilled.displayName = 'FileZipFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileZipFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileZipFilled);
+export default Comp;

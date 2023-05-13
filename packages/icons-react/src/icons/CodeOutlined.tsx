@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/CodeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CodeOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CodeOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CodeOutlinedSvg} />;
 
 CodeOutlined.displayName = 'CodeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CodeOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CodeOutlined);
+export default Comp;

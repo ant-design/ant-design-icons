@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CompressOutlinedSvg from '@ant-design/icons-svg/lib/asn/CompressOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CompressOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CompressOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CompressOutlinedSvg} />;
 
 CompressOutlined.displayName = 'CompressOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CompressOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CompressOutlined);
+export default Comp;

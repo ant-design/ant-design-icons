@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FieldStringOutlinedSvg from '@ant-design/icons-svg/lib/asn/FieldStringOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FieldStringOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FieldStringOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FieldStringOutlinedSvg} />;
 
 FieldStringOutlined.displayName = 'FieldStringOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldStringOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldStringOutlined);
+export default Comp;

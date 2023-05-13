@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ToolFilledSvg from '@ant-design/icons-svg/lib/asn/ToolFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ToolFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ToolFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={ToolFilledSvg} />;
 
 ToolFilled.displayName = 'ToolFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ToolFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ToolFilled);
+export default Comp;

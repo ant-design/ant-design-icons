@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PushpinTwoToneSvg from '@ant-design/icons-svg/lib/asn/PushpinTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const PushpinTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PushpinTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={PushpinTwoToneSvg} />;
 
 PushpinTwoTone.displayName = 'PushpinTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PushpinTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PushpinTwoTone);
+export default Comp;

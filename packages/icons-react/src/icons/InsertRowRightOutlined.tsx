@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import InsertRowRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/InsertRowRightOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const InsertRowRightOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const InsertRowRightOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={InsertRowRightOutlinedSvg} />;
 
 InsertRowRightOutlined.displayName = 'InsertRowRightOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(InsertRowRightOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(InsertRowRightOutlined);
+export default Comp;

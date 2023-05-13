@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import EnvironmentFilledSvg from '@ant-design/icons-svg/lib/asn/EnvironmentFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const EnvironmentFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const EnvironmentFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={EnvironmentFilledSvg} />;
 
 EnvironmentFilled.displayName = 'EnvironmentFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EnvironmentFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(EnvironmentFilled);
+export default Comp;

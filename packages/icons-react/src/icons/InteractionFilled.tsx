@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import InteractionFilledSvg from '@ant-design/icons-svg/lib/asn/InteractionFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const InteractionFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const InteractionFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={InteractionFilledSvg} />;
 
 InteractionFilled.displayName = 'InteractionFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(InteractionFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(InteractionFilled);
+export default Comp;

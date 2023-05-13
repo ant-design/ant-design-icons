@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ProfileFilledSvg from '@ant-design/icons-svg/lib/asn/ProfileFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ProfileFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ProfileFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={ProfileFilledSvg} />;
 
 ProfileFilled.displayName = 'ProfileFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ProfileFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ProfileFilled);
+export default Comp;

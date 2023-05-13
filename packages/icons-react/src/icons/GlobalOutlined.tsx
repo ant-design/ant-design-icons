@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GlobalOutlinedSvg from '@ant-design/icons-svg/lib/asn/GlobalOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const GlobalOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const GlobalOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={GlobalOutlinedSvg} />;
 
 GlobalOutlined.displayName = 'GlobalOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GlobalOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GlobalOutlined);
+export default Comp;

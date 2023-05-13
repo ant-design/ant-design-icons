@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import WechatOutlinedSvg from '@ant-design/icons-svg/lib/asn/WechatOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const WechatOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const WechatOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={WechatOutlinedSvg} />;
 
 WechatOutlined.displayName = 'WechatOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WechatOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(WechatOutlined);
+export default Comp;

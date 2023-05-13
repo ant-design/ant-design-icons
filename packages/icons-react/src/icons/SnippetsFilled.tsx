@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SnippetsFilledSvg from '@ant-design/icons-svg/lib/asn/SnippetsFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const SnippetsFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const SnippetsFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={SnippetsFilledSvg} />;
 
 SnippetsFilled.displayName = 'SnippetsFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SnippetsFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SnippetsFilled);
+export default Comp;

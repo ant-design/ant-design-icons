@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BoxPlotFilledSvg from '@ant-design/icons-svg/lib/asn/BoxPlotFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const BoxPlotFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const BoxPlotFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={BoxPlotFilledSvg} />;
 
 BoxPlotFilled.displayName = 'BoxPlotFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BoxPlotFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BoxPlotFilled);
+export default Comp;

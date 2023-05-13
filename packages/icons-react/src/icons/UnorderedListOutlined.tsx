@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import UnorderedListOutlinedSvg from '@ant-design/icons-svg/lib/asn/UnorderedListOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const UnorderedListOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const UnorderedListOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={UnorderedListOutlinedSvg} />;
 
 UnorderedListOutlined.displayName = 'UnorderedListOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UnorderedListOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(UnorderedListOutlined);
+export default Comp;

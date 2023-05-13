@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ArrowUpOutlinedSvg from '@ant-design/icons-svg/lib/asn/ArrowUpOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ArrowUpOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ArrowUpOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ArrowUpOutlinedSvg} />;
 
 ArrowUpOutlined.displayName = 'ArrowUpOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ArrowUpOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ArrowUpOutlined);
+export default Comp;

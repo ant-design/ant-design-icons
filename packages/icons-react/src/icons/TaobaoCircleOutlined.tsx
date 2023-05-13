@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import TaobaoCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/TaobaoCircleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const TaobaoCircleOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const TaobaoCircleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={TaobaoCircleOutlinedSvg} />;
 
 TaobaoCircleOutlined.displayName = 'TaobaoCircleOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TaobaoCircleOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(TaobaoCircleOutlined);
+export default Comp;

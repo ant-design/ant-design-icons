@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CreditCardOutlinedSvg from '@ant-design/icons-svg/lib/asn/CreditCardOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CreditCardOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CreditCardOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CreditCardOutlinedSvg} />;
 
 CreditCardOutlined.displayName = 'CreditCardOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CreditCardOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CreditCardOutlined);
+export default Comp;

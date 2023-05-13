@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DiffFilledSvg from '@ant-design/icons-svg/lib/asn/DiffFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const DiffFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const DiffFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={DiffFilledSvg} />;
 
 DiffFilled.displayName = 'DiffFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DiffFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DiffFilled);
+export default Comp;

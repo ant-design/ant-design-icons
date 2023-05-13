@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ToTopOutlinedSvg from '@ant-design/icons-svg/lib/asn/ToTopOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ToTopOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ToTopOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={ToTopOutlinedSvg} />;
 
 ToTopOutlined.displayName = 'ToTopOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ToTopOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ToTopOutlined);
+export default Comp;

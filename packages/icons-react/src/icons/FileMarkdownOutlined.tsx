@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FileMarkdownOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileMarkdownOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FileMarkdownOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FileMarkdownOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FileMarkdownOutlinedSvg} />;
 
 FileMarkdownOutlined.displayName = 'FileMarkdownOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileMarkdownOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileMarkdownOutlined);
+export default Comp;

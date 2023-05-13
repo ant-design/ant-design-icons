@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ThunderboltFilledSvg from '@ant-design/icons-svg/lib/asn/ThunderboltFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ThunderboltFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ThunderboltFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={ThunderboltFilledSvg} />;
 
 ThunderboltFilled.displayName = 'ThunderboltFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ThunderboltFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ThunderboltFilled);
+export default Comp;

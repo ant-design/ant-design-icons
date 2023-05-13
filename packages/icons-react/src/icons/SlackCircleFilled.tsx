@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SlackCircleFilledSvg from '@ant-design/icons-svg/lib/asn/SlackCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const SlackCircleFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const SlackCircleFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={SlackCircleFilledSvg} />;
 
 SlackCircleFilled.displayName = 'SlackCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SlackCircleFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SlackCircleFilled);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AppstoreTwoToneSvg from '@ant-design/icons-svg/lib/asn/AppstoreTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const AppstoreTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const AppstoreTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={AppstoreTwoToneSvg} />;
 
 AppstoreTwoTone.displayName = 'AppstoreTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AppstoreTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AppstoreTwoTone);
+export default Comp;

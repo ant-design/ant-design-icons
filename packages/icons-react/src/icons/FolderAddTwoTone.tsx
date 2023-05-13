@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FolderAddTwoToneSvg from '@ant-design/icons-svg/lib/asn/FolderAddTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FolderAddTwoTone = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FolderAddTwoTone = (
 ) => <AntdIcon {...props} ref={ref} icon={FolderAddTwoToneSvg} />;
 
 FolderAddTwoTone.displayName = 'FolderAddTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderAddTwoTone);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderAddTwoTone);
+export default Comp;

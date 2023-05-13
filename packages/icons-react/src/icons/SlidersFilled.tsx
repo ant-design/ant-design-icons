@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SlidersFilledSvg from '@ant-design/icons-svg/lib/asn/SlidersFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const SlidersFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const SlidersFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={SlidersFilledSvg} />;
 
 SlidersFilled.displayName = 'SlidersFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SlidersFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SlidersFilled);
+export default Comp;

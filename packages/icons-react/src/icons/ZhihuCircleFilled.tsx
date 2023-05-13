@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ZhihuCircleFilledSvg from '@ant-design/icons-svg/lib/asn/ZhihuCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const ZhihuCircleFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const ZhihuCircleFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={ZhihuCircleFilledSvg} />;
 
 ZhihuCircleFilled.displayName = 'ZhihuCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ZhihuCircleFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ZhihuCircleFilled);
+export default Comp;

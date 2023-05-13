@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AlipayCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/AlipayCircleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const AlipayCircleOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const AlipayCircleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={AlipayCircleOutlinedSvg} />;
 
 AlipayCircleOutlined.displayName = 'AlipayCircleOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AlipayCircleOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AlipayCircleOutlined);
+export default Comp;

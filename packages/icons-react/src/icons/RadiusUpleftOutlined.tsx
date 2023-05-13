@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RadiusUpleftOutlinedSvg from '@ant-design/icons-svg/lib/asn/RadiusUpleftOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const RadiusUpleftOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const RadiusUpleftOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={RadiusUpleftOutlinedSvg} />;
 
 RadiusUpleftOutlined.displayName = 'RadiusUpleftOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RadiusUpleftOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(RadiusUpleftOutlined);
+export default Comp;

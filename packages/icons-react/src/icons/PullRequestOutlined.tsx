@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PullRequestOutlinedSvg from '@ant-design/icons-svg/lib/asn/PullRequestOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const PullRequestOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PullRequestOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={PullRequestOutlinedSvg} />;
 
 PullRequestOutlined.displayName = 'PullRequestOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PullRequestOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PullRequestOutlined);
+export default Comp;

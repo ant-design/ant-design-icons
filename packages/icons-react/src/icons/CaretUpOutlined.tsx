@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CaretUpOutlinedSvg from '@ant-design/icons-svg/lib/asn/CaretUpOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CaretUpOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CaretUpOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={CaretUpOutlinedSvg} />;
 
 CaretUpOutlined.displayName = 'CaretUpOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CaretUpOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CaretUpOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import HeatMapOutlinedSvg from '@ant-design/icons-svg/lib/asn/HeatMapOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const HeatMapOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const HeatMapOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={HeatMapOutlinedSvg} />;
 
 HeatMapOutlined.displayName = 'HeatMapOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HeatMapOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(HeatMapOutlined);
+export default Comp;

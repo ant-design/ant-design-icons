@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import LineChartOutlinedSvg from '@ant-design/icons-svg/lib/asn/LineChartOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const LineChartOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const LineChartOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={LineChartOutlinedSvg} />;
 
 LineChartOutlined.displayName = 'LineChartOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LineChartOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(LineChartOutlined);
+export default Comp;

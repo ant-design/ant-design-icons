@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GithubFilledSvg from '@ant-design/icons-svg/lib/asn/GithubFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const GithubFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const GithubFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={GithubFilledSvg} />;
 
 GithubFilled.displayName = 'GithubFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GithubFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GithubFilled);
+export default Comp;

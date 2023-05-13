@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FieldBinaryOutlinedSvg from '@ant-design/icons-svg/lib/asn/FieldBinaryOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const FieldBinaryOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const FieldBinaryOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={FieldBinaryOutlinedSvg} />;
 
 FieldBinaryOutlined.displayName = 'FieldBinaryOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldBinaryOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldBinaryOutlined);
+export default Comp;

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CrownFilledSvg from '@ant-design/icons-svg/lib/asn/CrownFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const CrownFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const CrownFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={CrownFilledSvg} />;
 
 CrownFilled.displayName = 'CrownFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CrownFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CrownFilled);
+export default Comp;

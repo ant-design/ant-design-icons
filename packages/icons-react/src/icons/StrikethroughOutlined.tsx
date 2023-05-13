@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import StrikethroughOutlinedSvg from '@ant-design/icons-svg/lib/asn/StrikethroughOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const StrikethroughOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const StrikethroughOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={StrikethroughOutlinedSvg} />;
 
 StrikethroughOutlined.displayName = 'StrikethroughOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StrikethroughOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(StrikethroughOutlined);
+export default Comp;

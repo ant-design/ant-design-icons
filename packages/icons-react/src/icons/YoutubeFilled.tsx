@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import YoutubeFilledSvg from '@ant-design/icons-svg/lib/asn/YoutubeFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const YoutubeFilled = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const YoutubeFilled = (
 ) => <AntdIcon {...props} ref={ref} icon={YoutubeFilledSvg} />;
 
 YoutubeFilled.displayName = 'YoutubeFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(YoutubeFilled);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(YoutubeFilled);
+export default Comp;

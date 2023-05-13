@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GoldOutlinedSvg from '@ant-design/icons-svg/lib/asn/GoldOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const GoldOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const GoldOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={GoldOutlinedSvg} />;
 
 GoldOutlined.displayName = 'GoldOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GoldOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GoldOutlined);
+export default Comp;

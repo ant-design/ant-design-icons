@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import HolderOutlinedSvg from '@ant-design/icons-svg/lib/asn/HolderOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const HolderOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const HolderOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={HolderOutlinedSvg} />;
 
 HolderOutlined.displayName = 'HolderOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HolderOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(HolderOutlined);
+export default Comp;

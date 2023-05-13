@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PayCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/PayCircleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps, ForwardRefBaseComponent } from '../components/AntdIcon';
 
 const PayCircleOutlined = (
   props: AntdIconProps,
@@ -11,4 +11,6 @@ const PayCircleOutlined = (
 ) => <AntdIcon {...props} ref={ref} icon={PayCircleOutlinedSvg} />;
 
 PayCircleOutlined.displayName = 'PayCircleOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PayCircleOutlined);
+
+const Comp: ForwardRefBaseComponent<AntdIconProps> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PayCircleOutlined);
+export default Comp;
