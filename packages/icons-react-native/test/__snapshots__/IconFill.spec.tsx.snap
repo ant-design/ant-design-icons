@@ -3,8 +3,8 @@
 exports[`IconFill props exists 1`] = `
 <
   style={
-    Array [
-      Object {
+    [
+      {
         "color": "black",
         "fontFamily": "antfill",
         "fontSize": 24,
@@ -22,8 +22,8 @@ exports[`IconFill props exists 1`] = `
 exports[`IconFill should create Icon element. 1`] = `
 <
   style={
-    Array [
-      Object {
+    [
+      {
         "color": "black",
         "fontFamily": "antfill",
         "fontSize": 14,
@@ -39,7 +39,7 @@ exports[`IconFill should create Icon element. 1`] = `
 `;
 
 exports[`IconFill should create fillGlyphMap 1`] = `
-Object {
+{
   "account-book": 59905,
   "alert": 59906,
   "alipay-circle": 59907,
