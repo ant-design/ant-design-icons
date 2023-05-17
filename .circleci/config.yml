@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 references:
   container_config: &container_config
