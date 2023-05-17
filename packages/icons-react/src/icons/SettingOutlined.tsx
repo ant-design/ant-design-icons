@@ -10,5 +10,7 @@ const SettingOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SettingOutlinedSvg} />;
 
-SettingOutlined.displayName = 'SettingOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  SettingOutlined.displayName = 'SettingOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SettingOutlined);

@@ -10,5 +10,7 @@ const CloudTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CloudTwoToneSvg} />;
 
-CloudTwoTone.displayName = 'CloudTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  CloudTwoTone.displayName = 'CloudTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudTwoTone);

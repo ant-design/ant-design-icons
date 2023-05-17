@@ -10,5 +10,7 @@ const HolderOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={HolderOutlinedSvg} />;
 
-HolderOutlined.displayName = 'HolderOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  HolderOutlined.displayName = 'HolderOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HolderOutlined);

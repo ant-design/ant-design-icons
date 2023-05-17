@@ -10,5 +10,7 @@ const SignalFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SignalFilledSvg} />;
 
-SignalFilled.displayName = 'SignalFilled';
+if (process.env.NODE_ENV !== 'production') {
+  SignalFilled.displayName = 'SignalFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SignalFilled);

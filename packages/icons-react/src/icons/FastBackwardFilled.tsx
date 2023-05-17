@@ -10,5 +10,7 @@ const FastBackwardFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FastBackwardFilledSvg} />;
 
-FastBackwardFilled.displayName = 'FastBackwardFilled';
+if (process.env.NODE_ENV !== 'production') {
+  FastBackwardFilled.displayName = 'FastBackwardFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FastBackwardFilled);

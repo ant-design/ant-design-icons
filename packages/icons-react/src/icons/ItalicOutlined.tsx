@@ -10,5 +10,7 @@ const ItalicOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ItalicOutlinedSvg} />;
 
-ItalicOutlined.displayName = 'ItalicOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  ItalicOutlined.displayName = 'ItalicOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ItalicOutlined);

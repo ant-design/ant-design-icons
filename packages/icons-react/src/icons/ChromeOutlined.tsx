@@ -10,5 +10,7 @@ const ChromeOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ChromeOutlinedSvg} />;
 
-ChromeOutlined.displayName = 'ChromeOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  ChromeOutlined.displayName = 'ChromeOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ChromeOutlined);

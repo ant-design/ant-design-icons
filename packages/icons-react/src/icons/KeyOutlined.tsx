@@ -10,5 +10,7 @@ const KeyOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={KeyOutlinedSvg} />;
 
-KeyOutlined.displayName = 'KeyOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  KeyOutlined.displayName = 'KeyOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(KeyOutlined);

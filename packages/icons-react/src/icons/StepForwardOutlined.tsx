@@ -10,5 +10,7 @@ const StepForwardOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={StepForwardOutlinedSvg} />;
 
-StepForwardOutlined.displayName = 'StepForwardOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  StepForwardOutlined.displayName = 'StepForwardOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StepForwardOutlined);

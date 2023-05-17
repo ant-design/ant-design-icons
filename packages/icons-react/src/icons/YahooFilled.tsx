@@ -10,5 +10,7 @@ const YahooFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={YahooFilledSvg} />;
 
-YahooFilled.displayName = 'YahooFilled';
+if (process.env.NODE_ENV !== 'production') {
+  YahooFilled.displayName = 'YahooFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(YahooFilled);

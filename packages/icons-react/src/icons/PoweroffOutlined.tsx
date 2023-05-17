@@ -10,5 +10,7 @@ const PoweroffOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PoweroffOutlinedSvg} />;
 
-PoweroffOutlined.displayName = 'PoweroffOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  PoweroffOutlined.displayName = 'PoweroffOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PoweroffOutlined);

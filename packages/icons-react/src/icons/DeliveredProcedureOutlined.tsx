@@ -10,5 +10,7 @@ const DeliveredProcedureOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DeliveredProcedureOutlinedSvg} />;
 
-DeliveredProcedureOutlined.displayName = 'DeliveredProcedureOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  DeliveredProcedureOutlined.displayName = 'DeliveredProcedureOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeliveredProcedureOutlined);

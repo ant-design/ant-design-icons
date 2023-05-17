@@ -10,5 +10,7 @@ const CloudUploadOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CloudUploadOutlinedSvg} />;
 
-CloudUploadOutlined.displayName = 'CloudUploadOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  CloudUploadOutlined.displayName = 'CloudUploadOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudUploadOutlined);

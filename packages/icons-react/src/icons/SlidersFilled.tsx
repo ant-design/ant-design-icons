@@ -10,5 +10,7 @@ const SlidersFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SlidersFilledSvg} />;
 
-SlidersFilled.displayName = 'SlidersFilled';
+if (process.env.NODE_ENV !== 'production') {
+  SlidersFilled.displayName = 'SlidersFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SlidersFilled);

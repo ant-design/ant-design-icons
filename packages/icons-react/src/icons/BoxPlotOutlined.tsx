@@ -10,5 +10,7 @@ const BoxPlotOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BoxPlotOutlinedSvg} />;
 
-BoxPlotOutlined.displayName = 'BoxPlotOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  BoxPlotOutlined.displayName = 'BoxPlotOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BoxPlotOutlined);

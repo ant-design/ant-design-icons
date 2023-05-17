@@ -10,5 +10,7 @@ const UnderlineOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={UnderlineOutlinedSvg} />;
 
-UnderlineOutlined.displayName = 'UnderlineOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  UnderlineOutlined.displayName = 'UnderlineOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UnderlineOutlined);

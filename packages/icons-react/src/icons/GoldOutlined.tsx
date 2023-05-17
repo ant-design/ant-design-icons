@@ -10,5 +10,7 @@ const GoldOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GoldOutlinedSvg} />;
 
-GoldOutlined.displayName = 'GoldOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  GoldOutlined.displayName = 'GoldOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GoldOutlined);

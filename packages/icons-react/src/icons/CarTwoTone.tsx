@@ -10,5 +10,7 @@ const CarTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CarTwoToneSvg} />;
 
-CarTwoTone.displayName = 'CarTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  CarTwoTone.displayName = 'CarTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CarTwoTone);

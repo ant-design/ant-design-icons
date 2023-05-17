@@ -10,5 +10,7 @@ const AlipayCircleOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AlipayCircleOutlinedSvg} />;
 
-AlipayCircleOutlined.displayName = 'AlipayCircleOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  AlipayCircleOutlined.displayName = 'AlipayCircleOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AlipayCircleOutlined);

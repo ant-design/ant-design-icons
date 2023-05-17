@@ -10,5 +10,7 @@ const VerifiedOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={VerifiedOutlinedSvg} />;
 
-VerifiedOutlined.displayName = 'VerifiedOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  VerifiedOutlined.displayName = 'VerifiedOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(VerifiedOutlined);

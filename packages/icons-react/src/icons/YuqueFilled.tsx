@@ -10,5 +10,7 @@ const YuqueFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={YuqueFilledSvg} />;
 
-YuqueFilled.displayName = 'YuqueFilled';
+if (process.env.NODE_ENV !== 'production') {
+  YuqueFilled.displayName = 'YuqueFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(YuqueFilled);

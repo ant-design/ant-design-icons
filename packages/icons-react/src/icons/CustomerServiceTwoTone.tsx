@@ -10,5 +10,7 @@ const CustomerServiceTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CustomerServiceTwoToneSvg} />;
 
-CustomerServiceTwoTone.displayName = 'CustomerServiceTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  CustomerServiceTwoTone.displayName = 'CustomerServiceTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CustomerServiceTwoTone);

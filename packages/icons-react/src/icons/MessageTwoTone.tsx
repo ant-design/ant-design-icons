@@ -10,5 +10,7 @@ const MessageTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MessageTwoToneSvg} />;
 
-MessageTwoTone.displayName = 'MessageTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  MessageTwoTone.displayName = 'MessageTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MessageTwoTone);

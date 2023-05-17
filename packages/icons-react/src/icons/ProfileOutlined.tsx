@@ -10,5 +10,7 @@ const ProfileOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ProfileOutlinedSvg} />;
 
-ProfileOutlined.displayName = 'ProfileOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  ProfileOutlined.displayName = 'ProfileOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ProfileOutlined);

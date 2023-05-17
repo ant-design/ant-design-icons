@@ -10,5 +10,7 @@ const FileExclamationFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileExclamationFilledSvg} />;
 
-FileExclamationFilled.displayName = 'FileExclamationFilled';
+if (process.env.NODE_ENV !== 'production') {
+  FileExclamationFilled.displayName = 'FileExclamationFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileExclamationFilled);

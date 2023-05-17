@@ -10,5 +10,7 @@ const CreditCardOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CreditCardOutlinedSvg} />;
 
-CreditCardOutlined.displayName = 'CreditCardOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  CreditCardOutlined.displayName = 'CreditCardOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CreditCardOutlined);

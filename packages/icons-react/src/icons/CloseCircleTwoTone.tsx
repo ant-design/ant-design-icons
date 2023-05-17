@@ -10,5 +10,7 @@ const CloseCircleTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CloseCircleTwoToneSvg} />;
 
-CloseCircleTwoTone.displayName = 'CloseCircleTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  CloseCircleTwoTone.displayName = 'CloseCircleTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloseCircleTwoTone);

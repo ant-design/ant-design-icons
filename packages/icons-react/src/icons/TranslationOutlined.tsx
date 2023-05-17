@@ -10,5 +10,7 @@ const TranslationOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TranslationOutlinedSvg} />;
 
-TranslationOutlined.displayName = 'TranslationOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  TranslationOutlined.displayName = 'TranslationOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TranslationOutlined);

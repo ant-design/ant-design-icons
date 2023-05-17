@@ -10,5 +10,7 @@ const ArrowsAltOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ArrowsAltOutlinedSvg} />;
 
-ArrowsAltOutlined.displayName = 'ArrowsAltOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  ArrowsAltOutlined.displayName = 'ArrowsAltOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ArrowsAltOutlined);

@@ -10,5 +10,7 @@ const ClusterOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ClusterOutlinedSvg} />;
 
-ClusterOutlined.displayName = 'ClusterOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  ClusterOutlined.displayName = 'ClusterOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ClusterOutlined);

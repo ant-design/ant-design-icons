@@ -10,5 +10,7 @@ const BugOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BugOutlinedSvg} />;
 
-BugOutlined.displayName = 'BugOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  BugOutlined.displayName = 'BugOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BugOutlined);

@@ -10,5 +10,7 @@ const QqOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={QqOutlinedSvg} />;
 
-QqOutlined.displayName = 'QqOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  QqOutlined.displayName = 'QqOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(QqOutlined);

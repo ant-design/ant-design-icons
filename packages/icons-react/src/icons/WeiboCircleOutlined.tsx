@@ -10,5 +10,7 @@ const WeiboCircleOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={WeiboCircleOutlinedSvg} />;
 
-WeiboCircleOutlined.displayName = 'WeiboCircleOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  WeiboCircleOutlined.displayName = 'WeiboCircleOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WeiboCircleOutlined);

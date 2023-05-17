@@ -10,5 +10,7 @@ const FontColorsOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FontColorsOutlinedSvg} />;
 
-FontColorsOutlined.displayName = 'FontColorsOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  FontColorsOutlined.displayName = 'FontColorsOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FontColorsOutlined);

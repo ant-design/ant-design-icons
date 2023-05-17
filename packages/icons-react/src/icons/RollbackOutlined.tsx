@@ -10,5 +10,7 @@ const RollbackOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={RollbackOutlinedSvg} />;
 
-RollbackOutlined.displayName = 'RollbackOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  RollbackOutlined.displayName = 'RollbackOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RollbackOutlined);

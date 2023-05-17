@@ -10,5 +10,7 @@ const CodeSandboxOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CodeSandboxOutlinedSvg} />;
 
-CodeSandboxOutlined.displayName = 'CodeSandboxOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  CodeSandboxOutlined.displayName = 'CodeSandboxOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CodeSandboxOutlined);

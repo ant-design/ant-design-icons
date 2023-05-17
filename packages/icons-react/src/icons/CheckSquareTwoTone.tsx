@@ -10,5 +10,7 @@ const CheckSquareTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CheckSquareTwoToneSvg} />;
 
-CheckSquareTwoTone.displayName = 'CheckSquareTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  CheckSquareTwoTone.displayName = 'CheckSquareTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CheckSquareTwoTone);

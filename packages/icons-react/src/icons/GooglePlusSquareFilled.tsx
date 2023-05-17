@@ -10,5 +10,7 @@ const GooglePlusSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GooglePlusSquareFilledSvg} />;
 
-GooglePlusSquareFilled.displayName = 'GooglePlusSquareFilled';
+if (process.env.NODE_ENV !== 'production') {
+  GooglePlusSquareFilled.displayName = 'GooglePlusSquareFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GooglePlusSquareFilled);

@@ -10,5 +10,7 @@ const MergeCellsOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MergeCellsOutlinedSvg} />;
 
-MergeCellsOutlined.displayName = 'MergeCellsOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  MergeCellsOutlined.displayName = 'MergeCellsOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MergeCellsOutlined);

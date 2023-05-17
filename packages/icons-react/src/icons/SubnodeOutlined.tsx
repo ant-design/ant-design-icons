@@ -10,5 +10,7 @@ const SubnodeOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SubnodeOutlinedSvg} />;
 
-SubnodeOutlined.displayName = 'SubnodeOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  SubnodeOutlined.displayName = 'SubnodeOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SubnodeOutlined);
