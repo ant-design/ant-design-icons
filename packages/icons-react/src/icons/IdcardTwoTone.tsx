@@ -10,5 +10,7 @@ const IdcardTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={IdcardTwoToneSvg} />;
 
-IdcardTwoTone.displayName = 'IdcardTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  IdcardTwoTone.displayName = 'IdcardTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(IdcardTwoTone);

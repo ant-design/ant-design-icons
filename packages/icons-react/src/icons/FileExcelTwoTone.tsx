@@ -10,5 +10,7 @@ const FileExcelTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileExcelTwoToneSvg} />;
 
-FileExcelTwoTone.displayName = 'FileExcelTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  FileExcelTwoTone.displayName = 'FileExcelTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileExcelTwoTone);

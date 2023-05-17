@@ -10,5 +10,7 @@ const SkinFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SkinFilledSvg} />;
 
-SkinFilled.displayName = 'SkinFilled';
+if (process.env.NODE_ENV !== 'production') {
+  SkinFilled.displayName = 'SkinFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SkinFilled);

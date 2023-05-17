@@ -10,5 +10,7 @@ const SlackSquareOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SlackSquareOutlinedSvg} />;
 
-SlackSquareOutlined.displayName = 'SlackSquareOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  SlackSquareOutlined.displayName = 'SlackSquareOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SlackSquareOutlined);

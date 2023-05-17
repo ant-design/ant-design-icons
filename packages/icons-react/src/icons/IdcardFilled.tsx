@@ -10,5 +10,7 @@ const IdcardFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={IdcardFilledSvg} />;
 
-IdcardFilled.displayName = 'IdcardFilled';
+if (process.env.NODE_ENV !== 'production') {
+  IdcardFilled.displayName = 'IdcardFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(IdcardFilled);

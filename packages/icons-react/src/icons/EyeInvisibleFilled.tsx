@@ -10,5 +10,7 @@ const EyeInvisibleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={EyeInvisibleFilledSvg} />;
 
-EyeInvisibleFilled.displayName = 'EyeInvisibleFilled';
+if (process.env.NODE_ENV !== 'production') {
+  EyeInvisibleFilled.displayName = 'EyeInvisibleFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EyeInvisibleFilled);

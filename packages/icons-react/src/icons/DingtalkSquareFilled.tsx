@@ -10,5 +10,7 @@ const DingtalkSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DingtalkSquareFilledSvg} />;
 
-DingtalkSquareFilled.displayName = 'DingtalkSquareFilled';
+if (process.env.NODE_ENV !== 'production') {
+  DingtalkSquareFilled.displayName = 'DingtalkSquareFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DingtalkSquareFilled);

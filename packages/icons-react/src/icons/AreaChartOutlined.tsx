@@ -10,5 +10,7 @@ const AreaChartOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AreaChartOutlinedSvg} />;
 
-AreaChartOutlined.displayName = 'AreaChartOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  AreaChartOutlined.displayName = 'AreaChartOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AreaChartOutlined);

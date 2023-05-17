@@ -10,5 +10,7 @@ const LinkedinOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LinkedinOutlinedSvg} />;
 
-LinkedinOutlined.displayName = 'LinkedinOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  LinkedinOutlined.displayName = 'LinkedinOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LinkedinOutlined);

@@ -10,5 +10,7 @@ const UpSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={UpSquareFilledSvg} />;
 
-UpSquareFilled.displayName = 'UpSquareFilled';
+if (process.env.NODE_ENV !== 'production') {
+  UpSquareFilled.displayName = 'UpSquareFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UpSquareFilled);

@@ -10,5 +10,7 @@ const DiffTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DiffTwoToneSvg} />;
 
-DiffTwoTone.displayName = 'DiffTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  DiffTwoTone.displayName = 'DiffTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DiffTwoTone);

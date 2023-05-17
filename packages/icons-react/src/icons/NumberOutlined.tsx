@@ -10,5 +10,7 @@ const NumberOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={NumberOutlinedSvg} />;
 
-NumberOutlined.displayName = 'NumberOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  NumberOutlined.displayName = 'NumberOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(NumberOutlined);

@@ -10,5 +10,7 @@ const ScissorOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ScissorOutlinedSvg} />;
 
-ScissorOutlined.displayName = 'ScissorOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  ScissorOutlined.displayName = 'ScissorOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ScissorOutlined);

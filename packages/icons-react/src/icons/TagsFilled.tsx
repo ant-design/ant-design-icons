@@ -10,5 +10,7 @@ const TagsFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TagsFilledSvg} />;
 
-TagsFilled.displayName = 'TagsFilled';
+if (process.env.NODE_ENV !== 'production') {
+  TagsFilled.displayName = 'TagsFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TagsFilled);

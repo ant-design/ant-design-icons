@@ -10,5 +10,7 @@ const LikeTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LikeTwoToneSvg} />;
 
-LikeTwoTone.displayName = 'LikeTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  LikeTwoTone.displayName = 'LikeTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LikeTwoTone);

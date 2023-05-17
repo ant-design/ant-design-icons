@@ -10,5 +10,7 @@ const TwitterSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TwitterSquareFilledSvg} />;
 
-TwitterSquareFilled.displayName = 'TwitterSquareFilled';
+if (process.env.NODE_ENV !== 'production') {
+  TwitterSquareFilled.displayName = 'TwitterSquareFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TwitterSquareFilled);

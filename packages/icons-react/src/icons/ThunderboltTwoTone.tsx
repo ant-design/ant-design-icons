@@ -10,5 +10,7 @@ const ThunderboltTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ThunderboltTwoToneSvg} />;
 
-ThunderboltTwoTone.displayName = 'ThunderboltTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  ThunderboltTwoTone.displayName = 'ThunderboltTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ThunderboltTwoTone);

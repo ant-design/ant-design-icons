@@ -10,5 +10,7 @@ const FieldTimeOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FieldTimeOutlinedSvg} />;
 
-FieldTimeOutlined.displayName = 'FieldTimeOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  FieldTimeOutlined.displayName = 'FieldTimeOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldTimeOutlined);

@@ -10,5 +10,7 @@ const UngroupOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={UngroupOutlinedSvg} />;
 
-UngroupOutlined.displayName = 'UngroupOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  UngroupOutlined.displayName = 'UngroupOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UngroupOutlined);

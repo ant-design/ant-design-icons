@@ -10,5 +10,7 @@ const FacebookOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FacebookOutlinedSvg} />;
 
-FacebookOutlined.displayName = 'FacebookOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  FacebookOutlined.displayName = 'FacebookOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FacebookOutlined);

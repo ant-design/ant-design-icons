@@ -10,5 +10,7 @@ const PushpinFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PushpinFilledSvg} />;
 
-PushpinFilled.displayName = 'PushpinFilled';
+if (process.env.NODE_ENV !== 'production') {
+  PushpinFilled.displayName = 'PushpinFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PushpinFilled);

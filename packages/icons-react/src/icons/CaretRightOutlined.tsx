@@ -10,5 +10,7 @@ const CaretRightOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CaretRightOutlinedSvg} />;
 
-CaretRightOutlined.displayName = 'CaretRightOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  CaretRightOutlined.displayName = 'CaretRightOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CaretRightOutlined);

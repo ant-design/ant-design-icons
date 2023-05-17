@@ -10,5 +10,7 @@ const DashOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DashOutlinedSvg} />;
 
-DashOutlined.displayName = 'DashOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  DashOutlined.displayName = 'DashOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DashOutlined);

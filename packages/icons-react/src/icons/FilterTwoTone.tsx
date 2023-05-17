@@ -10,5 +10,7 @@ const FilterTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FilterTwoToneSvg} />;
 
-FilterTwoTone.displayName = 'FilterTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  FilterTwoTone.displayName = 'FilterTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FilterTwoTone);

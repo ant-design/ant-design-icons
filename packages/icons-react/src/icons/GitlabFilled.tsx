@@ -10,5 +10,7 @@ const GitlabFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GitlabFilledSvg} />;
 
-GitlabFilled.displayName = 'GitlabFilled';
+if (process.env.NODE_ENV !== 'production') {
+  GitlabFilled.displayName = 'GitlabFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GitlabFilled);

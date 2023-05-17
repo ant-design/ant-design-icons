@@ -10,5 +10,7 @@ const CalendarFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CalendarFilledSvg} />;
 
-CalendarFilled.displayName = 'CalendarFilled';
+if (process.env.NODE_ENV !== 'production') {
+  CalendarFilled.displayName = 'CalendarFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CalendarFilled);

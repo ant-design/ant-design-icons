@@ -10,5 +10,7 @@ const UpCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={UpCircleFilledSvg} />;
 
-UpCircleFilled.displayName = 'UpCircleFilled';
+if (process.env.NODE_ENV !== 'production') {
+  UpCircleFilled.displayName = 'UpCircleFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UpCircleFilled);

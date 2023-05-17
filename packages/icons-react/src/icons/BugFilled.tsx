@@ -10,5 +10,7 @@ const BugFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BugFilledSvg} />;
 
-BugFilled.displayName = 'BugFilled';
+if (process.env.NODE_ENV !== 'production') {
+  BugFilled.displayName = 'BugFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BugFilled);

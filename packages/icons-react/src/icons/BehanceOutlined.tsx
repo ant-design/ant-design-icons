@@ -10,5 +10,7 @@ const BehanceOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BehanceOutlinedSvg} />;
 
-BehanceOutlined.displayName = 'BehanceOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  BehanceOutlined.displayName = 'BehanceOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BehanceOutlined);

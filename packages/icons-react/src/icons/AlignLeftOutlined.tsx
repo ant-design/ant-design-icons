@@ -10,5 +10,7 @@ const AlignLeftOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AlignLeftOutlinedSvg} />;
 
-AlignLeftOutlined.displayName = 'AlignLeftOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  AlignLeftOutlined.displayName = 'AlignLeftOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AlignLeftOutlined);

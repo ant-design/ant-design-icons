@@ -10,5 +10,7 @@ const FolderOpenTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FolderOpenTwoToneSvg} />;
 
-FolderOpenTwoTone.displayName = 'FolderOpenTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  FolderOpenTwoTone.displayName = 'FolderOpenTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderOpenTwoTone);

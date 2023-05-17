@@ -10,5 +10,7 @@ const OrderedListOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={OrderedListOutlinedSvg} />;
 
-OrderedListOutlined.displayName = 'OrderedListOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  OrderedListOutlined.displayName = 'OrderedListOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(OrderedListOutlined);

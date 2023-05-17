@@ -10,5 +10,7 @@ const MobileTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MobileTwoToneSvg} />;
 
-MobileTwoTone.displayName = 'MobileTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  MobileTwoTone.displayName = 'MobileTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MobileTwoTone);

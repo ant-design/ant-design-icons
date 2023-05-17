@@ -10,5 +10,7 @@ const FunnelPlotOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FunnelPlotOutlinedSvg} />;
 
-FunnelPlotOutlined.displayName = 'FunnelPlotOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  FunnelPlotOutlined.displayName = 'FunnelPlotOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FunnelPlotOutlined);

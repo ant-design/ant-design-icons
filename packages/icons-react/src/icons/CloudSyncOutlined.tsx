@@ -10,5 +10,7 @@ const CloudSyncOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CloudSyncOutlinedSvg} />;
 
-CloudSyncOutlined.displayName = 'CloudSyncOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  CloudSyncOutlined.displayName = 'CloudSyncOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudSyncOutlined);

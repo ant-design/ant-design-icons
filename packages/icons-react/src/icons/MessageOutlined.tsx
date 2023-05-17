@@ -10,5 +10,7 @@ const MessageOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MessageOutlinedSvg} />;
 
-MessageOutlined.displayName = 'MessageOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  MessageOutlined.displayName = 'MessageOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MessageOutlined);

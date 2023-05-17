@@ -10,5 +10,7 @@ const PrinterFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PrinterFilledSvg} />;
 
-PrinterFilled.displayName = 'PrinterFilled';
+if (process.env.NODE_ENV !== 'production') {
+  PrinterFilled.displayName = 'PrinterFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PrinterFilled);

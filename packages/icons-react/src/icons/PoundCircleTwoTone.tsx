@@ -10,5 +10,7 @@ const PoundCircleTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PoundCircleTwoToneSvg} />;
 
-PoundCircleTwoTone.displayName = 'PoundCircleTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  PoundCircleTwoTone.displayName = 'PoundCircleTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PoundCircleTwoTone);

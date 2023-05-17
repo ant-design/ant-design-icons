@@ -10,5 +10,7 @@ const VerticalAlignBottomOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={VerticalAlignBottomOutlinedSvg} />;
 
-VerticalAlignBottomOutlined.displayName = 'VerticalAlignBottomOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  VerticalAlignBottomOutlined.displayName = 'VerticalAlignBottomOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(VerticalAlignBottomOutlined);

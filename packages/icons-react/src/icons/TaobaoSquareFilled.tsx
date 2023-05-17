@@ -10,5 +10,7 @@ const TaobaoSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TaobaoSquareFilledSvg} />;
 
-TaobaoSquareFilled.displayName = 'TaobaoSquareFilled';
+if (process.env.NODE_ENV !== 'production') {
+  TaobaoSquareFilled.displayName = 'TaobaoSquareFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TaobaoSquareFilled);
