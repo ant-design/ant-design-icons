@@ -10,5 +10,7 @@ const AlibabaOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AlibabaOutlinedSvg} />;
 
-AlibabaOutlined.displayName = 'AlibabaOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  AlibabaOutlined.displayName = 'AlibabaOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AlibabaOutlined);

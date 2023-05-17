@@ -10,5 +10,7 @@ const PoundCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PoundCircleFilledSvg} />;
 
-PoundCircleFilled.displayName = 'PoundCircleFilled';
+if (process.env.NODE_ENV !== 'production') {
+  PoundCircleFilled.displayName = 'PoundCircleFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PoundCircleFilled);

@@ -10,5 +10,7 @@ const TrademarkOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TrademarkOutlinedSvg} />;
 
-TrademarkOutlined.displayName = 'TrademarkOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  TrademarkOutlined.displayName = 'TrademarkOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TrademarkOutlined);

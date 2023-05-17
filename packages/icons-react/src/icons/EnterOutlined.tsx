@@ -10,5 +10,7 @@ const EnterOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={EnterOutlinedSvg} />;
 
-EnterOutlined.displayName = 'EnterOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  EnterOutlined.displayName = 'EnterOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EnterOutlined);

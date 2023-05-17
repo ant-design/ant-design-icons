@@ -10,5 +10,7 @@ const GatewayOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GatewayOutlinedSvg} />;
 
-GatewayOutlined.displayName = 'GatewayOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  GatewayOutlined.displayName = 'GatewayOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GatewayOutlined);

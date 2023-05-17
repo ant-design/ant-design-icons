@@ -10,5 +10,7 @@ const CarryOutOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CarryOutOutlinedSvg} />;
 
-CarryOutOutlined.displayName = 'CarryOutOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  CarryOutOutlined.displayName = 'CarryOutOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CarryOutOutlined);

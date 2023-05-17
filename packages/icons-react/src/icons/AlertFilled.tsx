@@ -10,5 +10,7 @@ const AlertFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AlertFilledSvg} />;
 
-AlertFilled.displayName = 'AlertFilled';
+if (process.env.NODE_ENV !== 'production') {
+  AlertFilled.displayName = 'AlertFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AlertFilled);

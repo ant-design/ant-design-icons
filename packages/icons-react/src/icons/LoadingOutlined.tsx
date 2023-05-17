@@ -10,5 +10,7 @@ const LoadingOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LoadingOutlinedSvg} />;
 
-LoadingOutlined.displayName = 'LoadingOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  LoadingOutlined.displayName = 'LoadingOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LoadingOutlined);

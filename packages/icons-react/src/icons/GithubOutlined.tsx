@@ -10,5 +10,7 @@ const GithubOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GithubOutlinedSvg} />;
 
-GithubOutlined.displayName = 'GithubOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  GithubOutlined.displayName = 'GithubOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GithubOutlined);

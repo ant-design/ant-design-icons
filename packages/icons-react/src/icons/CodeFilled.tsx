@@ -10,5 +10,7 @@ const CodeFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CodeFilledSvg} />;
 
-CodeFilled.displayName = 'CodeFilled';
+if (process.env.NODE_ENV !== 'production') {
+  CodeFilled.displayName = 'CodeFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CodeFilled);

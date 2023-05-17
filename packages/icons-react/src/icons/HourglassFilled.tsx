@@ -10,5 +10,7 @@ const HourglassFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={HourglassFilledSvg} />;
 
-HourglassFilled.displayName = 'HourglassFilled';
+if (process.env.NODE_ENV !== 'production') {
+  HourglassFilled.displayName = 'HourglassFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HourglassFilled);

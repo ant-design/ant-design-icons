@@ -10,5 +10,7 @@ const DisconnectOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DisconnectOutlinedSvg} />;
 
-DisconnectOutlined.displayName = 'DisconnectOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  DisconnectOutlined.displayName = 'DisconnectOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DisconnectOutlined);

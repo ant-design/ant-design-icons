@@ -10,5 +10,7 @@ const CarryOutTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CarryOutTwoToneSvg} />;
 
-CarryOutTwoTone.displayName = 'CarryOutTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  CarryOutTwoTone.displayName = 'CarryOutTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CarryOutTwoTone);

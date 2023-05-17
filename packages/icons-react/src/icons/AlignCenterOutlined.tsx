@@ -10,5 +10,7 @@ const AlignCenterOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AlignCenterOutlinedSvg} />;
 
-AlignCenterOutlined.displayName = 'AlignCenterOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  AlignCenterOutlined.displayName = 'AlignCenterOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AlignCenterOutlined);

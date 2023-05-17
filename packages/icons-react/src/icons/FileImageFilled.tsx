@@ -10,5 +10,7 @@ const FileImageFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileImageFilledSvg} />;
 
-FileImageFilled.displayName = 'FileImageFilled';
+if (process.env.NODE_ENV !== 'production') {
+  FileImageFilled.displayName = 'FileImageFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileImageFilled);

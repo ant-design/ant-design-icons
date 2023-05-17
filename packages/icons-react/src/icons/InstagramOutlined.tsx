@@ -10,5 +10,7 @@ const InstagramOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={InstagramOutlinedSvg} />;
 
-InstagramOutlined.displayName = 'InstagramOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  InstagramOutlined.displayName = 'InstagramOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(InstagramOutlined);

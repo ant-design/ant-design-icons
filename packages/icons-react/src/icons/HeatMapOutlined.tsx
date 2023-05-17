@@ -10,5 +10,7 @@ const HeatMapOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={HeatMapOutlinedSvg} />;
 
-HeatMapOutlined.displayName = 'HeatMapOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  HeatMapOutlined.displayName = 'HeatMapOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HeatMapOutlined);

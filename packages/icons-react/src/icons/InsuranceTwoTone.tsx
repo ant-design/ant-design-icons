@@ -10,5 +10,7 @@ const InsuranceTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={InsuranceTwoToneSvg} />;
 
-InsuranceTwoTone.displayName = 'InsuranceTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  InsuranceTwoTone.displayName = 'InsuranceTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(InsuranceTwoTone);

@@ -10,5 +10,7 @@ const PauseOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PauseOutlinedSvg} />;
 
-PauseOutlined.displayName = 'PauseOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  PauseOutlined.displayName = 'PauseOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PauseOutlined);

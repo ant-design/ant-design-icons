@@ -10,5 +10,7 @@ const ExceptionOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ExceptionOutlinedSvg} />;
 
-ExceptionOutlined.displayName = 'ExceptionOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  ExceptionOutlined.displayName = 'ExceptionOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ExceptionOutlined);

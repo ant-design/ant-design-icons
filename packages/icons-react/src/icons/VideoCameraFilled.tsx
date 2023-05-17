@@ -10,5 +10,7 @@ const VideoCameraFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={VideoCameraFilledSvg} />;
 
-VideoCameraFilled.displayName = 'VideoCameraFilled';
+if (process.env.NODE_ENV !== 'production') {
+  VideoCameraFilled.displayName = 'VideoCameraFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(VideoCameraFilled);

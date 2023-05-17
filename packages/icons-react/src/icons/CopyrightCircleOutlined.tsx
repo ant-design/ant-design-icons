@@ -10,5 +10,7 @@ const CopyrightCircleOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CopyrightCircleOutlinedSvg} />;
 
-CopyrightCircleOutlined.displayName = 'CopyrightCircleOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  CopyrightCircleOutlined.displayName = 'CopyrightCircleOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyrightCircleOutlined);

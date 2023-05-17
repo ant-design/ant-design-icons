@@ -10,5 +10,7 @@ const FilePptTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FilePptTwoToneSvg} />;
 
-FilePptTwoTone.displayName = 'FilePptTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  FilePptTwoTone.displayName = 'FilePptTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FilePptTwoTone);

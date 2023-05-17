@@ -10,5 +10,7 @@ const UsbFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={UsbFilledSvg} />;
 
-UsbFilled.displayName = 'UsbFilled';
+if (process.env.NODE_ENV !== 'production') {
+  UsbFilled.displayName = 'UsbFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UsbFilled);

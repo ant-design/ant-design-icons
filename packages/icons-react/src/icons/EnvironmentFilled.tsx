@@ -10,5 +10,7 @@ const EnvironmentFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={EnvironmentFilledSvg} />;
 
-EnvironmentFilled.displayName = 'EnvironmentFilled';
+if (process.env.NODE_ENV !== 'production') {
+  EnvironmentFilled.displayName = 'EnvironmentFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EnvironmentFilled);

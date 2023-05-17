@@ -10,5 +10,7 @@ const Html5Filled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={Html5FilledSvg} />;
 
-Html5Filled.displayName = 'Html5Filled';
+if (process.env.NODE_ENV !== 'production') {
+  Html5Filled.displayName = 'Html5Filled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(Html5Filled);

@@ -10,5 +10,7 @@ const AccountBookFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AccountBookFilledSvg} />;
 
-AccountBookFilled.displayName = 'AccountBookFilled';
+if (process.env.NODE_ENV !== 'production') {
+  AccountBookFilled.displayName = 'AccountBookFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AccountBookFilled);

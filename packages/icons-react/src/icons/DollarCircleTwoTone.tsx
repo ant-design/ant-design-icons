@@ -10,5 +10,7 @@ const DollarCircleTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DollarCircleTwoToneSvg} />;
 
-DollarCircleTwoTone.displayName = 'DollarCircleTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  DollarCircleTwoTone.displayName = 'DollarCircleTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DollarCircleTwoTone);

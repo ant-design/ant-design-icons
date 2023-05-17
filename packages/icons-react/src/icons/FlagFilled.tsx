@@ -10,5 +10,7 @@ const FlagFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FlagFilledSvg} />;
 
-FlagFilled.displayName = 'FlagFilled';
+if (process.env.NODE_ENV !== 'production') {
+  FlagFilled.displayName = 'FlagFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FlagFilled);

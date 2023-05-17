@@ -10,5 +10,7 @@ const FileExclamationTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileExclamationTwoToneSvg} />;
 
-FileExclamationTwoTone.displayName = 'FileExclamationTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  FileExclamationTwoTone.displayName = 'FileExclamationTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileExclamationTwoTone);

@@ -10,5 +10,7 @@ const MacCommandOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MacCommandOutlinedSvg} />;
 
-MacCommandOutlined.displayName = 'MacCommandOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  MacCommandOutlined.displayName = 'MacCommandOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MacCommandOutlined);

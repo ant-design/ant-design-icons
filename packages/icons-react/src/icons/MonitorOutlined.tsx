@@ -10,5 +10,7 @@ const MonitorOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MonitorOutlinedSvg} />;
 
-MonitorOutlined.displayName = 'MonitorOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  MonitorOutlined.displayName = 'MonitorOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MonitorOutlined);

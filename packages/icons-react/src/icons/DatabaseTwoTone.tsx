@@ -10,5 +10,7 @@ const DatabaseTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DatabaseTwoToneSvg} />;
 
-DatabaseTwoTone.displayName = 'DatabaseTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  DatabaseTwoTone.displayName = 'DatabaseTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DatabaseTwoTone);

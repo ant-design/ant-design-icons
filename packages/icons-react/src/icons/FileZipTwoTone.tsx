@@ -10,5 +10,7 @@ const FileZipTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileZipTwoToneSvg} />;
 
-FileZipTwoTone.displayName = 'FileZipTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  FileZipTwoTone.displayName = 'FileZipTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileZipTwoTone);

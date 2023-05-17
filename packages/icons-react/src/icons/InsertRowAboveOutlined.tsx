@@ -10,5 +10,7 @@ const InsertRowAboveOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={InsertRowAboveOutlinedSvg} />;
 
-InsertRowAboveOutlined.displayName = 'InsertRowAboveOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  InsertRowAboveOutlined.displayName = 'InsertRowAboveOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(InsertRowAboveOutlined);

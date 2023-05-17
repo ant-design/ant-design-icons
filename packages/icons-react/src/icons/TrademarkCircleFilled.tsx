@@ -10,5 +10,7 @@ const TrademarkCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TrademarkCircleFilledSvg} />;
 
-TrademarkCircleFilled.displayName = 'TrademarkCircleFilled';
+if (process.env.NODE_ENV !== 'production') {
+  TrademarkCircleFilled.displayName = 'TrademarkCircleFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TrademarkCircleFilled);

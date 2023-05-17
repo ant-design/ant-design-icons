@@ -10,5 +10,7 @@ const BorderTopOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BorderTopOutlinedSvg} />;
 
-BorderTopOutlined.displayName = 'BorderTopOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  BorderTopOutlined.displayName = 'BorderTopOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BorderTopOutlined);

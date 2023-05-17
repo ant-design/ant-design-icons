@@ -10,5 +10,7 @@ const ClockCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ClockCircleFilledSvg} />;
 
-ClockCircleFilled.displayName = 'ClockCircleFilled';
+if (process.env.NODE_ENV !== 'production') {
+  ClockCircleFilled.displayName = 'ClockCircleFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ClockCircleFilled);

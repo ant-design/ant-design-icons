@@ -10,5 +10,7 @@ const SafetyCertificateOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SafetyCertificateOutlinedSvg} />;
 
-SafetyCertificateOutlined.displayName = 'SafetyCertificateOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  SafetyCertificateOutlined.displayName = 'SafetyCertificateOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SafetyCertificateOutlined);
