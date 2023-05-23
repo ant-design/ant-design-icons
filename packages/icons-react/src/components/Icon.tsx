@@ -1,5 +1,7 @@
+// Seems this is used for iconFont
 import * as React from 'react';
 import classNames from 'classnames';
+import { useComposeRef } from 'rc-util/lib/ref'
 import Context from './Context';
 
 import { svgBaseProps, warning, useInsertStyles } from '../utils';
@@ -42,12 +44,15 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     ...restProps
   } = props;
 
+  const iconRef = React.useRef<HTMLElement>();
+  const mergedRef = useComposeRef(iconRef, ref);
+
   warning(
     Boolean(Component || children),
     'Should have `component` prop or `children`.',
   );
 
-  useInsertStyles();
+  useInsertStyles(iconRef);
 
   const { prefixCls = 'anticon', rootClassName } = React.useContext(Context);
 
@@ -114,7 +119,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     <span
       role="img"
       {...restProps}
-      ref={ref}
+      ref={mergedRef}
       tabIndex={iconTabIndex}
       onClick={onClick}
       className={classString}

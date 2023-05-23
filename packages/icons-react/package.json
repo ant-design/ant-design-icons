@@ -69,7 +69,7 @@
     "@ant-design/icons-svg": "^4.2.1",
     "@babel/runtime": "^7.11.2",
     "classnames": "^2.2.6",
-    "rc-util": "^5.9.4"
+    "rc-util": "^5.31.1"
   },
   "resolutions": {
     "@types/react": "^16.9.23",
