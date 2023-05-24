@@ -7,7 +7,7 @@ const config = {
 
 if (process.env.NODE_ENV !== 'ci') {
   config.umd = {
-    externals: { react: 'window.React' },
+    externals: { react: 'React' },
     sourcemap: false,
   };
 }
