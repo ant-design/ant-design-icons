@@ -154,7 +154,6 @@ export const useInsertStyles = (eleRef: React.RefObject<HTMLElement>) => {
   useEffect(() => {
     const ele = eleRef.current;
     const shadowRoot = getShadowRoot(ele);
-    console.log(shadowRoot);
 
     updateCSS(mergedStyleStr, '@ant-design-icons', {
       prepend: true,
