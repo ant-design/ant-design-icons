@@ -15,7 +15,7 @@ import Icon, {
   IconProvider,
 } from '../src';
 import { getSecondaryColor } from '../src/utils';
-import {render as testingLibRender} from '@testing-library/react';
+import { render as testingLibRender } from '@testing-library/react';
 
 function mountTest(Component) {
   describe('mount and unmount', () => {
@@ -471,13 +471,16 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
       <IconProvider value={{ csp: { nonce: 'test' } }}>
         <HomeOutlined />
       </IconProvider>,
+      {
+        attachTo: document.body,
+      },
     );
 
     expect(document.querySelector('style').nonce).toEqual('test');
   });
 
   it('should support rootClassName', () => {
-    const {container} = testingLibRender(
+    const { container } = testingLibRender(
       <IconProvider value={{ rootClassName: 'hashCls' }}>
         <HomeOutlined />
         <IconFont type="icon-tuichu" />
@@ -486,19 +489,21 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
 
     container.querySelectorAll('.anticon').forEach((node) => {
       expect(node.className).toContain('hashCls');
-    })
+    });
   });
 
   it('icon loading should working when use prefixCls', () => {
     testingLibRender(
       <IconProvider value={{ prefixCls: 'myicon' }}>
-       <SyncOutlined spin />
+        <SyncOutlined spin />
       </IconProvider>,
     );
 
-    const spin = document.querySelector('.myicon-spin')
-    if(spin !== null){
-      expect(getComputedStyle(spin,null).getPropertyValue('animation')).toEqual('loadingCircle 1s infinite linear')
+    const spin = document.querySelector('.myicon-spin');
+    if (spin !== null) {
+      expect(getComputedStyle(spin, null).getPropertyValue('animation')).toEqual(
+        'loadingCircle 1s infinite linear',
+      );
     }
   });
 });
