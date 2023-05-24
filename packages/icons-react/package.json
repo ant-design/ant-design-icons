@@ -35,7 +35,7 @@
     "react-dom": ">=16.0.0"
   },
   "devDependencies": {
-    "@rc-component/father-plugin": "^1.0.1",
+    "@rc-component/father-plugin": "^1.0.2",
     "@testing-library/react": "^12",
     "@types/classnames": "^2.2.9",
     "@types/enzyme": "^3.10.3",
@@ -51,7 +51,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.7",
     "enzyme-to-json": "^3.3.5",
-    "eslint": "^7.1.0",
+    "eslint": "^8.0.0",
     "father": "^4.0.0",
     "glob": "^7.1.6",
     "history": "^4.9.0",
@@ -76,9 +76,7 @@
   },
   "resolutions": {
     "@types/react": "^16.9.23",
-    "@types/react-dom": "^16.9.5",
-    "@typescript-eslint/eslint-plugin": "^4.10.0",
-    "@typescript-eslint/parser": "^4.10.0"
+    "@types/react-dom": "^16.9.5"
   },
   "gitHead": "225d4d2189720ee3b7e4a4d7a6d80e076fa15cbc"
 }
