@@ -1,38 +1,38 @@
 {
   "name": "@ant-design/icons",
   "version": "5.1.0",
-  "main": "./lib/index.js",
-  "module": "./es/index.js",
-  "unpkg": "./dist/index.umd.js",
-  "sideEffects": false,
   "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-react",
+  "license": "MIT",
   "contributors": [
     "HeskeyBaozi<hezhiyu233@foxmail.com>",
     "vagusX<vagusxl@gmail.com>"
   ],
-  "license": "MIT",
-  "engines": {
-    "node": ">=8"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  },
+  "sideEffects": false,
+  "main": "./lib/index.js",
+  "unpkg": "./dist/index.umd.js",
+  "module": "./es/index.js",
   "scripts": {
-    "clean": "./scripts/cleanup.sh",
-    "start": "dumi dev",
-    "lint": "eslint src/ --ext .tsx,.ts",
-    "compile": "father build",
-    "test": "rc-test",
     "ci": "NODE_ENV=ci npm run prepublishOnly",
-    "test:local": "npm run generate && npm run compile && npm run test",
-    "prepublishOnly": "npm run generate && npm run compile && npm run lint && npm run test",
+    "clean": "./scripts/cleanup.sh",
+    "compile": "father build",
+    "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry",
     "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
-    "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry"
+    "lint": "eslint src/ --ext .tsx,.ts",
+    "prepublishOnly": "npm run generate && npm run compile && npm run lint && npm run test",
+    "start": "dumi dev",
+    "test": "rc-test",
+    "test:local": "npm run generate && npm run compile && npm run test"
   },
-  "peerDependencies": {
-    "react": ">=16.0.0",
-    "react-dom": ">=16.0.0"
+  "resolutions": {
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5"
+  },
+  "dependencies": {
+    "@ant-design/colors": "^7.0.0",
+    "@ant-design/icons-svg": "^4.2.1",
+    "@babel/runtime": "^7.11.2",
+    "classnames": "^2.2.6",
+    "rc-util": "^5.31.1"
   },
   "devDependencies": {
     "@rc-component/father-plugin": "^1.0.2",
@@ -53,6 +53,10 @@
     "enzyme-adapter-react-16": "^1.15.7",
     "enzyme-to-json": "^3.3.5",
     "eslint": "^8.0.0",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-unicorn": "^47.0.0",
     "father": "^4.0.0",
     "glob": "^7.1.6",
     "history": "^4.9.0",
@@ -68,16 +72,16 @@
     "ts-node": "^8.0.0",
     "typescript": "^4.0.2"
   },
-  "dependencies": {
-    "@ant-design/colors": "^7.0.0",
-    "@ant-design/icons-svg": "^4.2.1",
-    "@babel/runtime": "^7.11.2",
-    "classnames": "^2.2.6",
-    "rc-util": "^5.31.1"
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
   },
-  "resolutions": {
-    "@types/react": "^16.9.23",
-    "@types/react-dom": "^16.9.5"
+  "engines": {
+    "node": ">=8"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "gitHead": "225d4d2189720ee3b7e4a4d7a6d80e076fa15cbc"
 }
