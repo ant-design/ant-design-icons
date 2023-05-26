@@ -7,6 +7,7 @@ const config = {
 
 if (process.env.NODE_ENV !== 'ci') {
   config.umd = {
+    name: 'icons',
     externals: { react: 'React' },
     sourcemap: false,
   };
