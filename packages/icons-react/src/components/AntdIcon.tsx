@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 import classNames from 'classnames';
 import type { IconDefinition } from '@ant-design/icons-svg/lib/types';
