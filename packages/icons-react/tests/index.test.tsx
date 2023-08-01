@@ -1,21 +1,22 @@
+import { render as testingLibRender } from '@testing-library/react';
 import { Tooltip } from 'antd';
+import { mount, render } from 'enzyme';
 import * as React from 'react';
-import { render, mount } from 'enzyme';
 import Icon, {
-  getTwoToneColor,
-  setTwoToneColor,
-  createFromIconfontCN,
-  HomeOutlined,
-  SettingFilled,
-  SmileOutlined,
-  SyncOutlined,
-  LoadingOutlined,
   CheckCircleTwoTone,
   ClockCircleOutlined,
+  CloseCircleFilled,
+  createFromIconfontCN,
+  getTwoToneColor,
+  HomeOutlined,
   IconProvider,
+  LoadingOutlined,
+  SettingFilled,
+  setTwoToneColor,
+  SmileOutlined,
+  SyncOutlined,
 } from '../src';
 import { getSecondaryColor } from '../src/utils';
-import { render as testingLibRender } from '@testing-library/react';
 
 function mountTest(Component) {
   describe('mount and unmount', () => {
@@ -505,5 +506,10 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
         'loadingCircle 1s infinite linear',
       );
     }
+  });
+
+  it('fillRule should convert', () => {
+    const wrapper = render(<CloseCircleFilled />);
+    expect(wrapper).toMatchSnapshot();
   });
 });
