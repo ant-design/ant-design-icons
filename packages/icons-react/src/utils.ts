@@ -29,8 +29,8 @@ export function normalizeAttrs(attrs: Attrs = {}): Attrs {
         delete acc.class;
         break;
       default:
-        acc[camelCase(key)] = val;
         delete acc[key];
+        acc[camelCase(key)] = val;
     }
     return acc;
   }, {});
