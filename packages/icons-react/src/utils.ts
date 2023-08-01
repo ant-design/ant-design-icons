@@ -1,9 +1,10 @@
-import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
-import React, { useContext, useEffect } from 'react';
-import warn from 'rc-util/lib/warning';
+import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
+import { camelCase } from 'lodash';
 import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 import { getShadowRoot } from 'rc-util/lib/Dom/shadow';
+import warn from 'rc-util/lib/warning';
+import React, { useContext, useEffect } from 'react';
 import IconContext from './components/Context';
 
 export function warning(valid: boolean, message: string) {
@@ -28,7 +29,8 @@ export function normalizeAttrs(attrs: Attrs = {}): Attrs {
         delete acc.class;
         break;
       default:
-        acc[key] = val;
+        acc[camelCase(key)] = val;
+        delete acc[key];
     }
     return acc;
   }, {});
