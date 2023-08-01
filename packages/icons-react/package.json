@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@ant-design/colors": "^7.0.0",
-    "@ant-design/icons-svg": "^4.2.1",
+    "@ant-design/icons-svg": "^4.3.0",
     "@babel/runtime": "^7.11.2",
     "classnames": "^2.2.6",
     "rc-util": "^5.31.1"
