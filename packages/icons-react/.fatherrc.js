@@ -1,17 +1,21 @@
 import { defineConfig } from 'father';
 
-
-
-
 const config = defineConfig({
   // Locked version only supports 1.0.0
   plugins: ['@rc-component/father-plugin'],
   esm: {
     transformer: 'swc',
+    platform: 'browser',
+    targets: {
+      ie: 11,
+    },
   },
   cjs: {
     transformer: 'swc',
-  }
+    targets: {
+      ie: 11,
+    },
+  },
 });
 
 if (process.env.NODE_ENV !== 'ci') {
