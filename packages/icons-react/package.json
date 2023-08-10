@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "@ant-design/colors": "^6.0.0",
-    "@ant-design/icons-svg": "^4.2.1",
+    "@ant-design/icons-svg": "^4.3.0",
     "@babel/runtime": "^7.11.2",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
