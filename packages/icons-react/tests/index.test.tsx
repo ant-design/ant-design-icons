@@ -13,6 +13,7 @@ import Icon, {
   CheckCircleTwoTone,
   ClockCircleOutlined,
   IconProvider,
+  CloseCircleFilled,
 } from '../src';
 import { getSecondaryColor } from '../src/utils';
 import {render as testingLibRender} from '@testing-library/react';
@@ -487,5 +488,10 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
     container.querySelectorAll('.anticon').forEach((node) => {
       expect(node.className).toContain('hashCls');
     })
+  });
+
+  it('fillRule should convert', () => {
+    const wrapper = render(<CloseCircleFilled />);
+    expect(wrapper).toMatchSnapshot();
   });
 });
