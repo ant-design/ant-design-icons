@@ -4,6 +4,7 @@ import React, { useContext, useEffect } from 'react';
 import warn from 'rc-util/lib/warning';
 import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 import IconContext from './components/Context';
+import camelCase from 'lodash/camelCase';
 
 export function warning(valid: boolean, message: string) {
   warn(valid, `[@ant-design/icons] ${message}`);
@@ -27,7 +28,8 @@ export function normalizeAttrs(attrs: Attrs = {}): Attrs {
         delete acc.class;
         break;
       default:
-        acc[key] = val;
+        delete acc[key];
+        acc[camelCase(key)] = val;
     }
     return acc;
   }, {});
