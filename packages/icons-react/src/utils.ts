@@ -1,11 +1,14 @@
 import { generate as generateColor } from '@ant-design/colors';
 import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
-import camelCase from 'lodash/camelCase';
 import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 import { getShadowRoot } from 'rc-util/lib/Dom/shadow';
 import warn from 'rc-util/lib/warning';
 import React, { useContext, useEffect } from 'react';
 import IconContext from './components/Context';
+
+function camelCase(input: string) {
+  return input.replace(/-(.)/g, (match, g) => g.toUpperCase());
+}
 
 export function warning(valid: boolean, message: string) {
   warn(valid, `[@ant-design/icons] ${message}`);
