@@ -39,14 +39,12 @@ export function normalizeAttrs(attrs: Attrs = {}): Attrs {
   }, {});
 }
 
-export interface Attrs {
-  [key: string]: string;
-}
+export type Attrs = Record<string, string>;
 
 export function generate(
   node: AbstractNode,
   key: string,
-  rootProps?: { [key: string]: any } | false,
+  rootProps?: Record<string, string> | false,
 ): any {
   if (!rootProps) {
     return React.createElement(

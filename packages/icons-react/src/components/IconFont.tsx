@@ -1,11 +1,12 @@
 import * as React from 'react';
-import Icon, { IconBaseProps } from './Icon';
+import Icon from './Icon';
+import type { IconBaseProps } from './Icon';
 
 const customCache = new Set<string>();
 
 export interface CustomIconOptions {
   scriptUrl?: string | string[];
-  extraCommonProps?: { [key: string]: any };
+  extraCommonProps?: Record<string, unknown>;
 }
 
 export interface IconFontProps<T extends string = string> extends IconBaseProps {

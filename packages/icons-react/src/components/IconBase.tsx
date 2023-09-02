@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
+import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { generate, getSecondaryColor, isIconDefinition, warning, useInsertStyles } from '../utils';
 
 export interface IconProps {
