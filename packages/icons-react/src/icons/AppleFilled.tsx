@@ -10,5 +10,7 @@ const AppleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AppleFilledSvg} />;
 
-AppleFilled.displayName = 'AppleFilled';
+if (process.env.NODE_ENV !== 'production') {
+  AppleFilled.displayName = 'AppleFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AppleFilled);

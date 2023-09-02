@@ -10,5 +10,7 @@ const HistoryOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={HistoryOutlinedSvg} />;
 
-HistoryOutlined.displayName = 'HistoryOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  HistoryOutlined.displayName = 'HistoryOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HistoryOutlined);

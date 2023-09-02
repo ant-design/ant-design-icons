@@ -10,5 +10,7 @@ const UnlockFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={UnlockFilledSvg} />;
 
-UnlockFilled.displayName = 'UnlockFilled';
+if (process.env.NODE_ENV !== 'production') {
+  UnlockFilled.displayName = 'UnlockFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UnlockFilled);

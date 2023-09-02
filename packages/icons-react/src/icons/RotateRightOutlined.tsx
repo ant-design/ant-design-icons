@@ -10,5 +10,7 @@ const RotateRightOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={RotateRightOutlinedSvg} />;
 
-RotateRightOutlined.displayName = 'RotateRightOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  RotateRightOutlined.displayName = 'RotateRightOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RotateRightOutlined);

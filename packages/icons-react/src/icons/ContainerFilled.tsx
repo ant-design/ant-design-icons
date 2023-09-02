@@ -10,5 +10,7 @@ const ContainerFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ContainerFilledSvg} />;
 
-ContainerFilled.displayName = 'ContainerFilled';
+if (process.env.NODE_ENV !== 'production') {
+  ContainerFilled.displayName = 'ContainerFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ContainerFilled);

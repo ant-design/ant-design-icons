@@ -48,7 +48,9 @@ const <%= svgIdentifier %> = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={<%= svgIdentifier %>Svg} />;
 
-<%= svgIdentifier %>.displayName = '<%= svgIdentifier %>';
+if (process.env.NODE_ENV !== 'production') {
+  <%= svgIdentifier %>.displayName = '<%= svgIdentifier %>';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(<%= svgIdentifier %>);
 `.trim());
 
@@ -80,18 +82,18 @@ ${entryText}
 async function generateEntries() {
   const render = template(`
 'use strict';
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = void 0;
-  
-  var _<%= svgIdentifier %> = _interopRequireDefault(require('./lib/icons/<%= svgIdentifier %>'));
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-  
-  var _default = _<%= svgIdentifier %>;
-  exports.default = _default;
-  module.exports = _default;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+const _<%= svgIdentifier %> = _interopRequireDefault(require('./lib/icons/<%= svgIdentifier %>'));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+const _default = _<%= svgIdentifier %>;
+exports.default = _default;
+module.exports = _default;
 `.trim());
 
   await walk(async ({ svgIdentifier }) => {

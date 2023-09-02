@@ -10,5 +10,7 @@ const GlobalOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GlobalOutlinedSvg} />;
 
-GlobalOutlined.displayName = 'GlobalOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  GlobalOutlined.displayName = 'GlobalOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GlobalOutlined);

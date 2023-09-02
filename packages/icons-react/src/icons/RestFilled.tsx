@@ -10,5 +10,7 @@ const RestFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={RestFilledSvg} />;
 
-RestFilled.displayName = 'RestFilled';
+if (process.env.NODE_ENV !== 'production') {
+  RestFilled.displayName = 'RestFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RestFilled);

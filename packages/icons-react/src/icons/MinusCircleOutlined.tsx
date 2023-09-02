@@ -10,5 +10,7 @@ const MinusCircleOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MinusCircleOutlinedSvg} />;
 
-MinusCircleOutlined.displayName = 'MinusCircleOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  MinusCircleOutlined.displayName = 'MinusCircleOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MinusCircleOutlined);

@@ -10,5 +10,7 @@ const ChromeFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ChromeFilledSvg} />;
 
-ChromeFilled.displayName = 'ChromeFilled';
+if (process.env.NODE_ENV !== 'production') {
+  ChromeFilled.displayName = 'ChromeFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ChromeFilled);

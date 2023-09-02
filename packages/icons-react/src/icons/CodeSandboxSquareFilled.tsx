@@ -10,5 +10,7 @@ const CodeSandboxSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CodeSandboxSquareFilledSvg} />;
 
-CodeSandboxSquareFilled.displayName = 'CodeSandboxSquareFilled';
+if (process.env.NODE_ENV !== 'production') {
+  CodeSandboxSquareFilled.displayName = 'CodeSandboxSquareFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CodeSandboxSquareFilled);

@@ -10,5 +10,7 @@ const MailFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MailFilledSvg} />;
 
-MailFilled.displayName = 'MailFilled';
+if (process.env.NODE_ENV !== 'production') {
+  MailFilled.displayName = 'MailFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MailFilled);

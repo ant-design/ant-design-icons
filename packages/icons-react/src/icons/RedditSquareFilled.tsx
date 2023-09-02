@@ -10,5 +10,7 @@ const RedditSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={RedditSquareFilledSvg} />;
 
-RedditSquareFilled.displayName = 'RedditSquareFilled';
+if (process.env.NODE_ENV !== 'production') {
+  RedditSquareFilled.displayName = 'RedditSquareFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RedditSquareFilled);

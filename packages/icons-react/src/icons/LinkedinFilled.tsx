@@ -10,5 +10,7 @@ const LinkedinFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LinkedinFilledSvg} />;
 
-LinkedinFilled.displayName = 'LinkedinFilled';
+if (process.env.NODE_ENV !== 'production') {
+  LinkedinFilled.displayName = 'LinkedinFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LinkedinFilled);

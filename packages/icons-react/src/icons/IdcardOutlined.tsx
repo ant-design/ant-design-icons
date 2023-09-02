@@ -10,5 +10,7 @@ const IdcardOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={IdcardOutlinedSvg} />;
 
-IdcardOutlined.displayName = 'IdcardOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  IdcardOutlined.displayName = 'IdcardOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(IdcardOutlined);

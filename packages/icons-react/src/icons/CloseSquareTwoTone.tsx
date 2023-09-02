@@ -10,5 +10,7 @@ const CloseSquareTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CloseSquareTwoToneSvg} />;
 
-CloseSquareTwoTone.displayName = 'CloseSquareTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  CloseSquareTwoTone.displayName = 'CloseSquareTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloseSquareTwoTone);

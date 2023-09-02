@@ -10,5 +10,7 @@ const TaobaoCircleOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TaobaoCircleOutlinedSvg} />;
 
-TaobaoCircleOutlined.displayName = 'TaobaoCircleOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  TaobaoCircleOutlined.displayName = 'TaobaoCircleOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TaobaoCircleOutlined);

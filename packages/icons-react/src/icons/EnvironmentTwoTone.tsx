@@ -10,5 +10,7 @@ const EnvironmentTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={EnvironmentTwoToneSvg} />;
 
-EnvironmentTwoTone.displayName = 'EnvironmentTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  EnvironmentTwoTone.displayName = 'EnvironmentTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EnvironmentTwoTone);

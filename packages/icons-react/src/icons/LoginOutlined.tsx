@@ -10,5 +10,7 @@ const LoginOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LoginOutlinedSvg} />;
 
-LoginOutlined.displayName = 'LoginOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  LoginOutlined.displayName = 'LoginOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LoginOutlined);

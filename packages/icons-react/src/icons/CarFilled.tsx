@@ -10,5 +10,7 @@ const CarFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CarFilledSvg} />;
 
-CarFilled.displayName = 'CarFilled';
+if (process.env.NODE_ENV !== 'production') {
+  CarFilled.displayName = 'CarFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CarFilled);

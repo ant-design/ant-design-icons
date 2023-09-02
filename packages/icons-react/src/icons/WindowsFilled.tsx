@@ -10,5 +10,7 @@ const WindowsFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={WindowsFilledSvg} />;
 
-WindowsFilled.displayName = 'WindowsFilled';
+if (process.env.NODE_ENV !== 'production') {
+  WindowsFilled.displayName = 'WindowsFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WindowsFilled);

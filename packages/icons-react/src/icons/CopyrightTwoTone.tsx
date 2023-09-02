@@ -10,5 +10,7 @@ const CopyrightTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CopyrightTwoToneSvg} />;
 
-CopyrightTwoTone.displayName = 'CopyrightTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  CopyrightTwoTone.displayName = 'CopyrightTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyrightTwoTone);

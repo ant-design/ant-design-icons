@@ -10,5 +10,7 @@ const TabletFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TabletFilledSvg} />;
 
-TabletFilled.displayName = 'TabletFilled';
+if (process.env.NODE_ENV !== 'production') {
+  TabletFilled.displayName = 'TabletFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TabletFilled);

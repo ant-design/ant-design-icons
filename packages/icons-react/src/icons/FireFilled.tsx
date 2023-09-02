@@ -10,5 +10,7 @@ const FireFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FireFilledSvg} />;
 
-FireFilled.displayName = 'FireFilled';
+if (process.env.NODE_ENV !== 'production') {
+  FireFilled.displayName = 'FireFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FireFilled);

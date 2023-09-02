@@ -10,5 +10,7 @@ const FormOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FormOutlinedSvg} />;
 
-FormOutlined.displayName = 'FormOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  FormOutlined.displayName = 'FormOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FormOutlined);

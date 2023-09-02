@@ -10,5 +10,7 @@ const ZhihuSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ZhihuSquareFilledSvg} />;
 
-ZhihuSquareFilled.displayName = 'ZhihuSquareFilled';
+if (process.env.NODE_ENV !== 'production') {
+  ZhihuSquareFilled.displayName = 'ZhihuSquareFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ZhihuSquareFilled);

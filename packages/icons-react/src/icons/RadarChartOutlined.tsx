@@ -10,5 +10,7 @@ const RadarChartOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={RadarChartOutlinedSvg} />;
 
-RadarChartOutlined.displayName = 'RadarChartOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  RadarChartOutlined.displayName = 'RadarChartOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RadarChartOutlined);

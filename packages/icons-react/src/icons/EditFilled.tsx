@@ -10,5 +10,7 @@ const EditFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={EditFilledSvg} />;
 
-EditFilled.displayName = 'EditFilled';
+if (process.env.NODE_ENV !== 'production') {
+  EditFilled.displayName = 'EditFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EditFilled);

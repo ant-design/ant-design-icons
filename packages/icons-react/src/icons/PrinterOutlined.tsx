@@ -10,5 +10,7 @@ const PrinterOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PrinterOutlinedSvg} />;
 
-PrinterOutlined.displayName = 'PrinterOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  PrinterOutlined.displayName = 'PrinterOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PrinterOutlined);

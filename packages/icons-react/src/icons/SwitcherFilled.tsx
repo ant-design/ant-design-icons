@@ -10,5 +10,7 @@ const SwitcherFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SwitcherFilledSvg} />;
 
-SwitcherFilled.displayName = 'SwitcherFilled';
+if (process.env.NODE_ENV !== 'production') {
+  SwitcherFilled.displayName = 'SwitcherFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SwitcherFilled);

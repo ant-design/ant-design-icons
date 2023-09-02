@@ -10,5 +10,7 @@ const StrikethroughOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={StrikethroughOutlinedSvg} />;
 
-StrikethroughOutlined.displayName = 'StrikethroughOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  StrikethroughOutlined.displayName = 'StrikethroughOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StrikethroughOutlined);

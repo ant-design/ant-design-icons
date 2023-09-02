@@ -10,5 +10,7 @@ const UsergroupDeleteOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={UsergroupDeleteOutlinedSvg} />;
 
-UsergroupDeleteOutlined.displayName = 'UsergroupDeleteOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  UsergroupDeleteOutlined.displayName = 'UsergroupDeleteOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UsergroupDeleteOutlined);

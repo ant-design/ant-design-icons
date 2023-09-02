@@ -10,5 +10,7 @@ const FileTextFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileTextFilledSvg} />;
 
-FileTextFilled.displayName = 'FileTextFilled';
+if (process.env.NODE_ENV !== 'production') {
+  FileTextFilled.displayName = 'FileTextFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileTextFilled);

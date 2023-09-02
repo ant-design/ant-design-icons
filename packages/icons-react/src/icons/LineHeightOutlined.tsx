@@ -10,5 +10,7 @@ const LineHeightOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LineHeightOutlinedSvg} />;
 
-LineHeightOutlined.displayName = 'LineHeightOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  LineHeightOutlined.displayName = 'LineHeightOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LineHeightOutlined);

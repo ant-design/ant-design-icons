@@ -10,5 +10,7 @@ const FileZipFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileZipFilledSvg} />;
 
-FileZipFilled.displayName = 'FileZipFilled';
+if (process.env.NODE_ENV !== 'production') {
+  FileZipFilled.displayName = 'FileZipFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileZipFilled);

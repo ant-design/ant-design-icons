@@ -1,9 +1,14 @@
-import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
-import React, { useContext, useEffect } from 'react';
-import warn from 'rc-util/lib/warning';
+import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
+import { getShadowRoot } from 'rc-util/lib/Dom/shadow';
+import warn from 'rc-util/lib/warning';
+import React, { useContext, useEffect } from 'react';
 import IconContext from './components/Context';
+
+function camelCase(input: string) {
+  return input.replace(/-(.)/g, (match, g) => g.toUpperCase());
+}
 
 export function warning(valid: boolean, message: string) {
   warn(valid, `[@ant-design/icons] ${message}`);
@@ -27,7 +32,8 @@ export function normalizeAttrs(attrs: Attrs = {}): Attrs {
         delete acc.class;
         break;
       default:
-        acc[key] = val;
+        delete acc[key];
+        acc[camelCase(key)] = val;
     }
     return acc;
   }, {});
@@ -49,6 +55,7 @@ export function generate(
       (node.children || []).map((child, index) => generate(child, `${key}-${node.tag}-${index}`)),
     );
   }
+
   return React.createElement(
     node.tag,
     {
@@ -141,18 +148,22 @@ export const iconStyles = `
 }
 `;
 
-export const useInsertStyles = (styleStr: string = iconStyles) => {
+export const useInsertStyles = (eleRef: React.RefObject<HTMLElement>) => {
   const { csp, prefixCls } = useContext(IconContext);
-  let mergedStyleStr = styleStr;
+  let mergedStyleStr = iconStyles;
 
   if (prefixCls) {
     mergedStyleStr = mergedStyleStr.replace(/anticon/g, prefixCls);
   }
 
   useEffect(() => {
+    const ele = eleRef.current;
+    const shadowRoot = getShadowRoot(ele);
+
     updateCSS(mergedStyleStr, '@ant-design-icons', {
       prepend: true,
       csp,
+      attachTo: shadowRoot,
     });
   }, []);
 };

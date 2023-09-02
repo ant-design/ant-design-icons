@@ -10,5 +10,7 @@ const ForkOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ForkOutlinedSvg} />;
 
-ForkOutlined.displayName = 'ForkOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  ForkOutlined.displayName = 'ForkOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ForkOutlined);

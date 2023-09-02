@@ -10,5 +10,7 @@ const LineChartOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LineChartOutlinedSvg} />;
 
-LineChartOutlined.displayName = 'LineChartOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  LineChartOutlined.displayName = 'LineChartOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LineChartOutlined);

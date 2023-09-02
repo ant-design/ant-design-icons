@@ -10,5 +10,7 @@ const EyeOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={EyeOutlinedSvg} />;
 
-EyeOutlined.displayName = 'EyeOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  EyeOutlined.displayName = 'EyeOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EyeOutlined);

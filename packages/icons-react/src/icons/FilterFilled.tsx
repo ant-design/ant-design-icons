@@ -10,5 +10,7 @@ const FilterFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FilterFilledSvg} />;
 
-FilterFilled.displayName = 'FilterFilled';
+if (process.env.NODE_ENV !== 'production') {
+  FilterFilled.displayName = 'FilterFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FilterFilled);

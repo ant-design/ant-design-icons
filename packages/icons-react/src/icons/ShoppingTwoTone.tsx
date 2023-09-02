@@ -10,5 +10,7 @@ const ShoppingTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ShoppingTwoToneSvg} />;
 
-ShoppingTwoTone.displayName = 'ShoppingTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  ShoppingTwoTone.displayName = 'ShoppingTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ShoppingTwoTone);

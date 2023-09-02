@@ -10,5 +10,7 @@ const FormatPainterFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FormatPainterFilledSvg} />;
 
-FormatPainterFilled.displayName = 'FormatPainterFilled';
+if (process.env.NODE_ENV !== 'production') {
+  FormatPainterFilled.displayName = 'FormatPainterFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FormatPainterFilled);

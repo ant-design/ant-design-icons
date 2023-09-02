@@ -10,5 +10,7 @@ const GoogleCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GoogleCircleFilledSvg} />;
 
-GoogleCircleFilled.displayName = 'GoogleCircleFilled';
+if (process.env.NODE_ENV !== 'production') {
+  GoogleCircleFilled.displayName = 'GoogleCircleFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GoogleCircleFilled);

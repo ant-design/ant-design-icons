@@ -10,5 +10,7 @@ const DashboardFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DashboardFilledSvg} />;
 
-DashboardFilled.displayName = 'DashboardFilled';
+if (process.env.NODE_ENV !== 'production') {
+  DashboardFilled.displayName = 'DashboardFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DashboardFilled);

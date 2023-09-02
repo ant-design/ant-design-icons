@@ -10,5 +10,7 @@ const ImportOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ImportOutlinedSvg} />;
 
-ImportOutlined.displayName = 'ImportOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  ImportOutlined.displayName = 'ImportOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ImportOutlined);

@@ -10,5 +10,7 @@ const CompassTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CompassTwoToneSvg} />;
 
-CompassTwoTone.displayName = 'CompassTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  CompassTwoTone.displayName = 'CompassTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CompassTwoTone);

@@ -10,5 +10,7 @@ const DeleteColumnOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DeleteColumnOutlinedSvg} />;
 
-DeleteColumnOutlined.displayName = 'DeleteColumnOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  DeleteColumnOutlined.displayName = 'DeleteColumnOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteColumnOutlined);

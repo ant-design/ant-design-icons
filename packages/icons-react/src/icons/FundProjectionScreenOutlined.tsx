@@ -10,5 +10,7 @@ const FundProjectionScreenOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FundProjectionScreenOutlinedSvg} />;
 
-FundProjectionScreenOutlined.displayName = 'FundProjectionScreenOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  FundProjectionScreenOutlined.displayName = 'FundProjectionScreenOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FundProjectionScreenOutlined);

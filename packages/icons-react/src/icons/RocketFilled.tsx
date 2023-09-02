@@ -10,5 +10,7 @@ const RocketFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={RocketFilledSvg} />;
 
-RocketFilled.displayName = 'RocketFilled';
+if (process.env.NODE_ENV !== 'production') {
+  RocketFilled.displayName = 'RocketFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RocketFilled);

@@ -31,9 +31,7 @@
                 "output": "/assets/"
               }
             ],
-            "styles": [
-              "examples/styles.css"
-            ],
+            "styles": ["examples/styles.css"],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -81,10 +79,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         },
         "extract-i18n": {
@@ -131,10 +126,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         }
       }
@@ -142,9 +134,6 @@
   },
   "cli": {
     "analytics": false,
-    "schematicCollections": [
-      "@angular-eslint/schematics",
-      "@angular-eslint/schematics"
-    ]
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

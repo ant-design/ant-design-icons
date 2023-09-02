@@ -10,5 +10,7 @@ const SettingFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SettingFilledSvg} />;
 
-SettingFilled.displayName = 'SettingFilled';
+if (process.env.NODE_ENV !== 'production') {
+  SettingFilled.displayName = 'SettingFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SettingFilled);

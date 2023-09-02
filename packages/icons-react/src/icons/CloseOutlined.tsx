@@ -10,5 +10,7 @@ const CloseOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CloseOutlinedSvg} />;
 
-CloseOutlined.displayName = 'CloseOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  CloseOutlined.displayName = 'CloseOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloseOutlined);

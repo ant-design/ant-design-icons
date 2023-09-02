@@ -10,5 +10,7 @@ const ToTopOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ToTopOutlinedSvg} />;
 
-ToTopOutlined.displayName = 'ToTopOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  ToTopOutlined.displayName = 'ToTopOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ToTopOutlined);

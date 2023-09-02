@@ -10,5 +10,7 @@ const GoogleOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GoogleOutlinedSvg} />;
 
-GoogleOutlined.displayName = 'GoogleOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  GoogleOutlined.displayName = 'GoogleOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GoogleOutlined);

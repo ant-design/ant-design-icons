@@ -10,5 +10,7 @@ const PropertySafetyTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PropertySafetyTwoToneSvg} />;
 
-PropertySafetyTwoTone.displayName = 'PropertySafetyTwoTone';
+if (process.env.NODE_ENV !== 'production') {
+  PropertySafetyTwoTone.displayName = 'PropertySafetyTwoTone';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PropertySafetyTwoTone);

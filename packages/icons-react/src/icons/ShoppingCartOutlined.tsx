@@ -10,5 +10,7 @@ const ShoppingCartOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ShoppingCartOutlinedSvg} />;
 
-ShoppingCartOutlined.displayName = 'ShoppingCartOutlined';
+if (process.env.NODE_ENV !== 'production') {
+  ShoppingCartOutlined.displayName = 'ShoppingCartOutlined';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ShoppingCartOutlined);

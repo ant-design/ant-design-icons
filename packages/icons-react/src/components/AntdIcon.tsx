@@ -1,6 +1,9 @@
+'use client';
+
 import * as React from 'react';
 import classNames from 'classnames';
 import type { IconDefinition } from '@ant-design/icons-svg/lib/types';
+import { blue } from '@ant-design/colors';
 
 import Context from './Context';
 import type { IconBaseProps } from './Icon';
@@ -18,7 +21,7 @@ export interface IconComponentProps extends AntdIconProps {
 
 // Initial setting
 // should move it to antd main repo?
-setTwoToneColor('#1890ff');
+setTwoToneColor(blue.primary);
 
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757#issuecomment-488848720
 interface IconBaseComponent<Props>

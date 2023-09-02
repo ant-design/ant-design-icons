@@ -10,5 +10,7 @@ const SecurityScanFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SecurityScanFilledSvg} />;
 
-SecurityScanFilled.displayName = 'SecurityScanFilled';
+if (process.env.NODE_ENV !== 'production') {
+  SecurityScanFilled.displayName = 'SecurityScanFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SecurityScanFilled);

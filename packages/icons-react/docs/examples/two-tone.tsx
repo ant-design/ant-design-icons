@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { blue } from '@ant-design/colors';
 
 import { setTwoToneColor } from '../../src';
 import * as AntdIcons from '../../src/icons';
@@ -39,7 +40,7 @@ const Text = styled.span`
 
 export default class AllIconDemo extends React.Component {
   state = {
-    primaryColor: '#1890ff',
+    primaryColor: blue.primary!,
   };
 
   componentWillMount() {

@@ -10,5 +10,7 @@ const HighlightFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={HighlightFilledSvg} />;
 
-HighlightFilled.displayName = 'HighlightFilled';
+if (process.env.NODE_ENV !== 'production') {
+  HighlightFilled.displayName = 'HighlightFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HighlightFilled);

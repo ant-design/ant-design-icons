@@ -10,5 +10,7 @@ const AlipaySquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AlipaySquareFilledSvg} />;
 
-AlipaySquareFilled.displayName = 'AlipaySquareFilled';
+if (process.env.NODE_ENV !== 'production') {
+  AlipaySquareFilled.displayName = 'AlipaySquareFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AlipaySquareFilled);

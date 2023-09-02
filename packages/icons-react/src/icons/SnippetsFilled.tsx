@@ -10,5 +10,7 @@ const SnippetsFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SnippetsFilledSvg} />;
 
-SnippetsFilled.displayName = 'SnippetsFilled';
+if (process.env.NODE_ENV !== 'production') {
+  SnippetsFilled.displayName = 'SnippetsFilled';
+}
 export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SnippetsFilled);
