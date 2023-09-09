@@ -40,11 +40,10 @@ const Icon: AntdIconType = (props, context) => {
   } = { ...props, ...context.attrs } as any;
   const { prefixCls, rootClassName } = useInjectIconContext();
   const classObj = {
-    [rootClassName.value]: true,
+    [rootClassName.value]: !!rootClassName.value,
     [prefixCls.value]: true,
     [`${prefixCls.value}-${icon.name}`]: Boolean(icon.name),
     [`${prefixCls.value}-spin`]: !!spin || icon.name === 'loading',
-    [cls]: cls,
   };
 
   let iconTabIndex = tabindex;
@@ -66,7 +65,7 @@ const Icon: AntdIconType = (props, context) => {
       aria-label={icon.name}
       {...restProps}
       onClick={onClick}
-      class={classObj}
+      class={[classObj, cls]}
       tabindex={iconTabIndex}
     >
       <VueIcon

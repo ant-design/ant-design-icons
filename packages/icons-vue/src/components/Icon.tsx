@@ -44,9 +44,8 @@ const Icon: IconType = (props, context) => {
   );
 
   const classString = {
-    [rootClassName.value]: true,
+    [rootClassName.value]: !!rootClassName.value,
     [prefixCls.value]: true,
-    [cls]: cls,
   };
 
   const svgClassString = {
@@ -99,7 +98,7 @@ const Icon: IconType = (props, context) => {
   }
 
   return (
-    <span role="img" {...restProps} onClick={onClick} class={classString}>
+    <span role="img" {...restProps} onClick={onClick} class={[classString, cls]}>
       {renderInnerNode()}
       <InsertStyles></InsertStyles>
     </span>

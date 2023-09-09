@@ -15,7 +15,7 @@ export const useProvideIconContext = (props: IconContextProps) => {
 export const useInjectIconContext = () => {
   return inject(contextKey, {
     prefixCls: ref('anticon'),
-    rootClassName: ref(),
+    rootClassName: ref(''),
     csp: ref(),
   });
 };
