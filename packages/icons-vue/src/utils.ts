@@ -1,7 +1,8 @@
-import { nextTick, h } from 'vue';
+import { nextTick, h, getCurrentInstance } from 'vue';
 import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
-import insertCss from './insert-css';
+import { useInjectIconContext } from './components/Context';
+import { updateCSS } from './dynamicCSS';
 
 export function warn(valid: boolean, message: string): void {
   // Support uglify
@@ -12,6 +13,10 @@ export function warn(valid: boolean, message: string): void {
 
 export function warning(valid: boolean, message: string): void {
   warn(valid, `[@ant-design/icons-vue] ${message}`);
+}
+
+function camelCase(input: string) {
+  return input.replace(/-(.)/g, (_match, g) => g.toUpperCase());
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -33,7 +38,8 @@ export function normalizeAttrs(attrs: Attrs = {}): Attrs {
         delete acc.class;
         break;
       default:
-        acc[key] = val;
+        delete acc[key];
+        acc[camelCase(key)] = val;
     }
     return acc;
   }, {});
@@ -149,17 +155,40 @@ export const iconStyles = `
 }
 `;
 
-let cssInjectedFlag = false;
+function getRoot(ele: Node) {
+  return ele && ele.getRootNode && ele.getRootNode();
+}
 
-export const useInsertStyles = (styleStr: string = iconStyles): void => {
+/**
+ * Check if is in shadowRoot
+ */
+function inShadow(ele: Node) {
+  return getRoot(ele) instanceof ShadowRoot;
+}
+
+/**
+ * Return shadowRoot if possible
+ */
+function getShadowRoot(ele: Node): ShadowRoot {
+  return inShadow(ele) ? (getRoot(ele) as ShadowRoot) : null;
+}
+
+export const useInsertStyles = (): void => {
+  const { prefixCls, csp } = useInjectIconContext();
+  const instance = getCurrentInstance();
+  let mergedStyleStr = iconStyles;
+
+  if (prefixCls) {
+    mergedStyleStr = mergedStyleStr.replace(/anticon/g, prefixCls.value);
+  }
+
   nextTick(() => {
-    if (!cssInjectedFlag) {
-      if (typeof window !== 'undefined' && window.document && window.document.documentElement) {
-        insertCss(styleStr, {
-          prepend: true,
-        });
-      }
-      cssInjectedFlag = true;
-    }
+    const ele = instance.vnode.el as any;
+    const shadowRoot = getShadowRoot(ele);
+    updateCSS(mergedStyleStr, '@ant-design-vue-icons', {
+      prepend: true,
+      csp: csp.value,
+      attachTo: shadowRoot,
+    });
   });
 };

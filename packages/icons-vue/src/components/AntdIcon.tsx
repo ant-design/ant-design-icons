@@ -4,6 +4,9 @@ import { IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { getTwoToneColor, TwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
 import { normalizeTwoToneColors } from '../utils';
 import { FunctionalComponent, PropType } from 'vue';
+import { blue } from '@ant-design/colors';
+import { useInjectIconContext } from './Context';
+import { InsertStyles } from './InsertStyle';
 
 export interface AntdIconProps extends IconBaseProps {
   twoToneColor?: TwoToneColor;
@@ -21,7 +24,7 @@ export interface AntdIconType extends Color, FunctionalComponent<IconComponentPr
 }
 
 // Initial setting
-setTwoToneColor('#1890ff');
+setTwoToneColor(blue.primary);
 
 const Icon: AntdIconType = (props, context) => {
   const {
@@ -35,18 +38,18 @@ const Icon: AntdIconType = (props, context) => {
     onClick,
     ...restProps
   } = { ...props, ...context.attrs } as any;
+  const { prefixCls, rootClassName } = useInjectIconContext();
   const classObj = {
-    anticon: true,
-    [`anticon-${icon.name}`]: Boolean(icon.name),
+    [rootClassName.value]: true,
+    [prefixCls.value]: true,
+    [`${prefixCls.value}-${icon.name}`]: Boolean(icon.name),
+    [`${prefixCls.value}-spin`]: !!spin || icon.name === 'loading',
     [cls]: cls,
   };
-
-  const svgClassString = spin === '' || !!spin || icon.name === 'loading' ? 'anticon-spin' : '';
 
   let iconTabIndex = tabindex;
   if (iconTabIndex === undefined && onClick) {
     iconTabIndex = -1;
-    restProps.tabindex = iconTabIndex;
   }
 
   const svgStyle = rotate
@@ -58,14 +61,21 @@ const Icon: AntdIconType = (props, context) => {
   const [primaryColor, secondaryColor] = normalizeTwoToneColors(twoToneColor);
 
   return (
-    <span role="img" aria-label={icon.name} {...restProps} onClick={onClick} class={classObj}>
+    <span
+      role="img"
+      aria-label={icon.name}
+      {...restProps}
+      onClick={onClick}
+      class={classObj}
+      tabindex={iconTabIndex}
+    >
       <VueIcon
-        class={svgClassString}
         icon={icon}
         primaryColor={primaryColor}
         secondaryColor={secondaryColor}
         style={svgStyle}
       />
+      <InsertStyles></InsertStyles>
     </span>
   );
 };
