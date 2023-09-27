@@ -4,6 +4,7 @@ import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 import { getShadowRoot } from 'rc-util/lib/Dom/shadow';
 import warn from 'rc-util/lib/warning';
 import React, { useContext, useEffect } from 'react';
+import type { CSSProperties, MouseEventHandler, MutableRefObject, ReactNode } from 'react'
 import IconContext from './components/Context';
 
 function camelCase(input: string) {
@@ -40,11 +41,17 @@ export function normalizeAttrs(attrs: Attrs = {}): Attrs {
 }
 
 export type Attrs = Record<string, string>;
+interface RootProps {
+  onClick: MouseEventHandler<Element>;
+  style: CSSProperties;
+  ref: MutableRefObject<any>
+  [props: string]: string | number | ReactNode | MouseEventHandler<Element> | CSSProperties | MutableRefObject<any>
+}
 
 export function generate(
   node: AbstractNode,
   key: string,
-  rootProps?: Record<string, string> | false,
+  rootProps?: RootProps | false,
 ): any {
   if (!rootProps) {
     return React.createElement(
