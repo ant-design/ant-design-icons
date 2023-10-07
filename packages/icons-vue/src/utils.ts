@@ -2,7 +2,7 @@ import { nextTick, h, getCurrentInstance } from 'vue';
 import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
 import { useInjectIconContext } from './components/Context';
-import { updateCSS } from './dynamicCSS';
+import { updateCSS, canUseDom } from './dynamicCSS';
 
 export function warn(valid: boolean, message: string): void {
   // Support uglify
@@ -163,6 +163,9 @@ function getRoot(ele: Node) {
  * Check if is in shadowRoot
  */
 function inShadow(ele: Node) {
+  if (!canUseDom()){
+    return false;
+  }
   return getRoot(ele) instanceof ShadowRoot;
 }
 
@@ -183,6 +186,9 @@ export const useInsertStyles = (): void => {
   }
 
   nextTick(() => {
+    if (!canUseDom()){
+      return ;
+    }
     const ele = instance.vnode.el as any;
     const shadowRoot = getShadowRoot(ele);
     updateCSS(mergedStyleStr, '@ant-design-vue-icons', {
