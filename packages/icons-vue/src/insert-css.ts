@@ -42,7 +42,7 @@ function insertCss(css: any, options: any): any {
   } else {
     styleElement = styleElements[containerId][position] = createStyleElement();
 
-    const referenceNode = position === 'prepend' ? container.childNodes[0] || null : null
+    const referenceNode = position === 'prepend' ? container.childNodes[0] || null : null;
     container.insertBefore(styleElement, referenceNode);
   }
 

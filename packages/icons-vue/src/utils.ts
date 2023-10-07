@@ -163,7 +163,7 @@ function getRoot(ele: Node) {
  * Check if is in shadowRoot
  */
 function inShadow(ele: Node) {
-  if (!canUseDom()){
+  if (!canUseDom()) {
     return false;
   }
   return getRoot(ele) instanceof ShadowRoot;
@@ -186,8 +186,8 @@ export const useInsertStyles = (): void => {
   }
 
   nextTick(() => {
-    if (!canUseDom()){
-      return ;
+    if (!canUseDom()) {
+      return;
     }
     const ele = instance.vnode.el as any;
     const shadowRoot = getShadowRoot(ele);
