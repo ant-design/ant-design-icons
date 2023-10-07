@@ -42,11 +42,8 @@ function insertCss(css: any, options: any): any {
   } else {
     styleElement = styleElements[containerId][position] = createStyleElement();
 
-    if (position === 'prepend') {
-      container.insertBefore(styleElement, container.childNodes[0]);
-    } else {
-      container.appendChild(styleElement);
-    }
+    const referenceNode = position === 'prepend' ? container.childNodes[0] || null : null
+    container.insertBefore(styleElement, referenceNode);
   }
 
   // strip potential UTF-8 BOM if css was read from a file
