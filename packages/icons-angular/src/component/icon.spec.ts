@@ -6,6 +6,7 @@ import { AccountBookFill, AccountBookOutline, AccountBookTwoTone } from '../icon
 import { IconDirective } from './icon.directive';
 import { IconModule } from './icon.module';
 import { IconService } from './icon.service';
+import { ThemeType } from '@ant-design/icons-angular'
 
 const staticImportIcons = [
   AccountBookFill, AccountBookOutline, AccountBookTwoTone
@@ -198,5 +199,5 @@ describe('@ant-design/icons-angular', () => {
 })
 export class IconTestComponent {
   type = 'account-book';
-  theme = 'fill';
+  theme: ThemeType = 'fill';
 }
