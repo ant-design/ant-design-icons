@@ -10,7 +10,12 @@ const InteractionFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={InteractionFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(InteractionFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  InteractionFilled.displayName = 'InteractionFilled';
+  RefIcon.displayName = 'InteractionFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(InteractionFilled);
+
+export default RefIcon;

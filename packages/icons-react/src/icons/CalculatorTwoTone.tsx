@@ -10,7 +10,12 @@ const CalculatorTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CalculatorTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CalculatorTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  CalculatorTwoTone.displayName = 'CalculatorTwoTone';
+  RefIcon.displayName = 'CalculatorTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CalculatorTwoTone);
+
+export default RefIcon;

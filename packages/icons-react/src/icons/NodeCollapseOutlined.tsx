@@ -10,7 +10,12 @@ const NodeCollapseOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={NodeCollapseOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(NodeCollapseOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  NodeCollapseOutlined.displayName = 'NodeCollapseOutlined';
+  RefIcon.displayName = 'NodeCollapseOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(NodeCollapseOutlined);
+
+export default RefIcon;

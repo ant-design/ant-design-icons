@@ -10,7 +10,12 @@ const DiffFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DiffFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DiffFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  DiffFilled.displayName = 'DiffFilled';
+  RefIcon.displayName = 'DiffFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DiffFilled);
+
+export default RefIcon;

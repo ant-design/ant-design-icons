@@ -10,7 +10,12 @@ const CalculatorOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CalculatorOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CalculatorOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  CalculatorOutlined.displayName = 'CalculatorOutlined';
+  RefIcon.displayName = 'CalculatorOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CalculatorOutlined);
+
+export default RefIcon;

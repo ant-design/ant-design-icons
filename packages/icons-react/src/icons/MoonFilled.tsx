@@ -10,7 +10,12 @@ const MoonFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MoonFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MoonFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  MoonFilled.displayName = 'MoonFilled';
+  RefIcon.displayName = 'MoonFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MoonFilled);
+
+export default RefIcon;

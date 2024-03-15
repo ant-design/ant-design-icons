@@ -10,7 +10,12 @@ const FacebookFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FacebookFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FacebookFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  FacebookFilled.displayName = 'FacebookFilled';
+  RefIcon.displayName = 'FacebookFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FacebookFilled);
+
+export default RefIcon;

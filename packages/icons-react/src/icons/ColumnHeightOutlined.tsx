@@ -10,7 +10,12 @@ const ColumnHeightOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ColumnHeightOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ColumnHeightOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  ColumnHeightOutlined.displayName = 'ColumnHeightOutlined';
+  RefIcon.displayName = 'ColumnHeightOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ColumnHeightOutlined);
+
+export default RefIcon;

@@ -10,7 +10,12 @@ const CreditCardFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CreditCardFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CreditCardFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  CreditCardFilled.displayName = 'CreditCardFilled';
+  RefIcon.displayName = 'CreditCardFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CreditCardFilled);
+
+export default RefIcon;

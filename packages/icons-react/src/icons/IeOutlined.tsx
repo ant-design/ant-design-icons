@@ -10,7 +10,12 @@ const IeOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={IeOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(IeOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  IeOutlined.displayName = 'IeOutlined';
+  RefIcon.displayName = 'IeOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(IeOutlined);
+
+export default RefIcon;

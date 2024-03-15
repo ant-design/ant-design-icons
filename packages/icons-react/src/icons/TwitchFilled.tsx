@@ -10,7 +10,12 @@ const TwitchFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TwitchFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(TwitchFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  TwitchFilled.displayName = 'TwitchFilled';
+  RefIcon.displayName = 'TwitchFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TwitchFilled);
+
+export default RefIcon;

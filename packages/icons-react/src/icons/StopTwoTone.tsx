@@ -10,7 +10,12 @@ const StopTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={StopTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(StopTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  StopTwoTone.displayName = 'StopTwoTone';
+  RefIcon.displayName = 'StopTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StopTwoTone);
+
+export default RefIcon;

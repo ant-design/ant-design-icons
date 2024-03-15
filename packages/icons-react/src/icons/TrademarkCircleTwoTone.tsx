@@ -10,7 +10,12 @@ const TrademarkCircleTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TrademarkCircleTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(TrademarkCircleTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  TrademarkCircleTwoTone.displayName = 'TrademarkCircleTwoTone';
+  RefIcon.displayName = 'TrademarkCircleTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TrademarkCircleTwoTone);
+
+export default RefIcon;

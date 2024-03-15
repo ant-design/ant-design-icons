@@ -10,7 +10,12 @@ const YoutubeFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={YoutubeFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(YoutubeFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  YoutubeFilled.displayName = 'YoutubeFilled';
+  RefIcon.displayName = 'YoutubeFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(YoutubeFilled);
+
+export default RefIcon;

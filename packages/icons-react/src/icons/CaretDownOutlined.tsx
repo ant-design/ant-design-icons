@@ -10,7 +10,12 @@ const CaretDownOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CaretDownOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CaretDownOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  CaretDownOutlined.displayName = 'CaretDownOutlined';
+  RefIcon.displayName = 'CaretDownOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CaretDownOutlined);
+
+export default RefIcon;

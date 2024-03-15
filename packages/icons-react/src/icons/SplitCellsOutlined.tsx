@@ -10,7 +10,12 @@ const SplitCellsOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SplitCellsOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SplitCellsOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  SplitCellsOutlined.displayName = 'SplitCellsOutlined';
+  RefIcon.displayName = 'SplitCellsOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SplitCellsOutlined);
+
+export default RefIcon;

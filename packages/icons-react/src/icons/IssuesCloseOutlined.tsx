@@ -10,7 +10,12 @@ const IssuesCloseOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={IssuesCloseOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(IssuesCloseOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  IssuesCloseOutlined.displayName = 'IssuesCloseOutlined';
+  RefIcon.displayName = 'IssuesCloseOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(IssuesCloseOutlined);
+
+export default RefIcon;

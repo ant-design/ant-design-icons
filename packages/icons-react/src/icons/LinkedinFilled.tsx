@@ -10,7 +10,12 @@ const LinkedinFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LinkedinFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(LinkedinFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  LinkedinFilled.displayName = 'LinkedinFilled';
+  RefIcon.displayName = 'LinkedinFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LinkedinFilled);
+
+export default RefIcon;

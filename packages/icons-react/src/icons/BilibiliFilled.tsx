@@ -10,7 +10,12 @@ const BilibiliFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BilibiliFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BilibiliFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  BilibiliFilled.displayName = 'BilibiliFilled';
+  RefIcon.displayName = 'BilibiliFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BilibiliFilled);
+
+export default RefIcon;

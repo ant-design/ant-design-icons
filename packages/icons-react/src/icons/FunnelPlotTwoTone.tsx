@@ -10,7 +10,12 @@ const FunnelPlotTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FunnelPlotTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FunnelPlotTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  FunnelPlotTwoTone.displayName = 'FunnelPlotTwoTone';
+  RefIcon.displayName = 'FunnelPlotTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FunnelPlotTwoTone);
+
+export default RefIcon;

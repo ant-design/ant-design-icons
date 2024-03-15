@@ -10,7 +10,12 @@ const InstagramFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={InstagramFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(InstagramFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  InstagramFilled.displayName = 'InstagramFilled';
+  RefIcon.displayName = 'InstagramFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(InstagramFilled);
+
+export default RefIcon;

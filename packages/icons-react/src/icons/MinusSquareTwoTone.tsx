@@ -10,7 +10,12 @@ const MinusSquareTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MinusSquareTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MinusSquareTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  MinusSquareTwoTone.displayName = 'MinusSquareTwoTone';
+  RefIcon.displayName = 'MinusSquareTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MinusSquareTwoTone);
+
+export default RefIcon;

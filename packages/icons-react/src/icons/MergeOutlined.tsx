@@ -10,7 +10,12 @@ const MergeOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MergeOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MergeOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  MergeOutlined.displayName = 'MergeOutlined';
+  RefIcon.displayName = 'MergeOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MergeOutlined);
+
+export default RefIcon;

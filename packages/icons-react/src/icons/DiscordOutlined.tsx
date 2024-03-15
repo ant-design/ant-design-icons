@@ -10,7 +10,12 @@ const DiscordOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DiscordOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DiscordOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  DiscordOutlined.displayName = 'DiscordOutlined';
+  RefIcon.displayName = 'DiscordOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DiscordOutlined);
+
+export default RefIcon;

@@ -10,7 +10,12 @@ const LockFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LockFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(LockFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  LockFilled.displayName = 'LockFilled';
+  RefIcon.displayName = 'LockFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LockFilled);
+
+export default RefIcon;

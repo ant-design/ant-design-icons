@@ -10,7 +10,12 @@ const CaretUpFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CaretUpFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CaretUpFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  CaretUpFilled.displayName = 'CaretUpFilled';
+  RefIcon.displayName = 'CaretUpFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CaretUpFilled);
+
+export default RefIcon;

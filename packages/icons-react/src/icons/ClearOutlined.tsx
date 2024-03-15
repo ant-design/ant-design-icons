@@ -10,7 +10,12 @@ const ClearOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ClearOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ClearOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  ClearOutlined.displayName = 'ClearOutlined';
+  RefIcon.displayName = 'ClearOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ClearOutlined);
+
+export default RefIcon;

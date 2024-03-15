@@ -10,7 +10,12 @@ const CodeSandboxCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CodeSandboxCircleFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CodeSandboxCircleFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  CodeSandboxCircleFilled.displayName = 'CodeSandboxCircleFilled';
+  RefIcon.displayName = 'CodeSandboxCircleFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CodeSandboxCircleFilled);
+
+export default RefIcon;

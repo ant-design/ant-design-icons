@@ -10,7 +10,12 @@ const EditFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={EditFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(EditFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  EditFilled.displayName = 'EditFilled';
+  RefIcon.displayName = 'EditFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EditFilled);
+
+export default RefIcon;

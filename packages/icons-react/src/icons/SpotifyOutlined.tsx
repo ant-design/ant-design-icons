@@ -10,7 +10,12 @@ const SpotifyOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SpotifyOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SpotifyOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  SpotifyOutlined.displayName = 'SpotifyOutlined';
+  RefIcon.displayName = 'SpotifyOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SpotifyOutlined);
+
+export default RefIcon;

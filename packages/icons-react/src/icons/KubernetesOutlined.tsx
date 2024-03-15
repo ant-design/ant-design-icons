@@ -10,7 +10,12 @@ const KubernetesOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={KubernetesOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(KubernetesOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  KubernetesOutlined.displayName = 'KubernetesOutlined';
+  RefIcon.displayName = 'KubernetesOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(KubernetesOutlined);
+
+export default RefIcon;

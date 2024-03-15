@@ -10,7 +10,12 @@ const DeploymentUnitOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DeploymentUnitOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DeploymentUnitOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  DeploymentUnitOutlined.displayName = 'DeploymentUnitOutlined';
+  RefIcon.displayName = 'DeploymentUnitOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeploymentUnitOutlined);
+
+export default RefIcon;

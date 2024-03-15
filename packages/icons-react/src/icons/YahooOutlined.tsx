@@ -10,7 +10,12 @@ const YahooOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={YahooOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(YahooOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  YahooOutlined.displayName = 'YahooOutlined';
+  RefIcon.displayName = 'YahooOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(YahooOutlined);
+
+export default RefIcon;

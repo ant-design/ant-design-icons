@@ -10,7 +10,12 @@ const FileSearchOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileSearchOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileSearchOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  FileSearchOutlined.displayName = 'FileSearchOutlined';
+  RefIcon.displayName = 'FileSearchOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileSearchOutlined);
+
+export default RefIcon;

@@ -10,7 +10,12 @@ const DotNetOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DotNetOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DotNetOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  DotNetOutlined.displayName = 'DotNetOutlined';
+  RefIcon.displayName = 'DotNetOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DotNetOutlined);
+
+export default RefIcon;

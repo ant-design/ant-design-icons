@@ -10,7 +10,12 @@ const RollbackOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={RollbackOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(RollbackOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  RollbackOutlined.displayName = 'RollbackOutlined';
+  RefIcon.displayName = 'RollbackOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RollbackOutlined);
+
+export default RefIcon;

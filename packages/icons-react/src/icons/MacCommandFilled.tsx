@@ -10,7 +10,12 @@ const MacCommandFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MacCommandFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MacCommandFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  MacCommandFilled.displayName = 'MacCommandFilled';
+  RefIcon.displayName = 'MacCommandFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MacCommandFilled);
+
+export default RefIcon;

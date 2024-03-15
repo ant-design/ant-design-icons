@@ -10,7 +10,12 @@ const ZoomInOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ZoomInOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ZoomInOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  ZoomInOutlined.displayName = 'ZoomInOutlined';
+  RefIcon.displayName = 'ZoomInOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ZoomInOutlined);
+
+export default RefIcon;

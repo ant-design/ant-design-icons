@@ -10,7 +10,12 @@ const FieldStringOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FieldStringOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldStringOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  FieldStringOutlined.displayName = 'FieldStringOutlined';
+  RefIcon.displayName = 'FieldStringOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldStringOutlined);
+
+export default RefIcon;

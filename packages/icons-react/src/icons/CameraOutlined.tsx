@@ -10,7 +10,12 @@ const CameraOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CameraOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CameraOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  CameraOutlined.displayName = 'CameraOutlined';
+  RefIcon.displayName = 'CameraOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CameraOutlined);
+
+export default RefIcon;

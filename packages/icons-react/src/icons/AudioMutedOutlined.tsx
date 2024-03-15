@@ -10,7 +10,12 @@ const AudioMutedOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AudioMutedOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AudioMutedOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  AudioMutedOutlined.displayName = 'AudioMutedOutlined';
+  RefIcon.displayName = 'AudioMutedOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AudioMutedOutlined);
+
+export default RefIcon;

@@ -10,7 +10,12 @@ const BarChartOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BarChartOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BarChartOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  BarChartOutlined.displayName = 'BarChartOutlined';
+  RefIcon.displayName = 'BarChartOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BarChartOutlined);
+
+export default RefIcon;

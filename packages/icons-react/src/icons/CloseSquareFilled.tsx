@@ -10,7 +10,12 @@ const CloseSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CloseSquareFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CloseSquareFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  CloseSquareFilled.displayName = 'CloseSquareFilled';
+  RefIcon.displayName = 'CloseSquareFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloseSquareFilled);
+
+export default RefIcon;

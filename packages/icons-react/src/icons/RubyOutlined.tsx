@@ -10,7 +10,12 @@ const RubyOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={RubyOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(RubyOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  RubyOutlined.displayName = 'RubyOutlined';
+  RefIcon.displayName = 'RubyOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RubyOutlined);
+
+export default RefIcon;

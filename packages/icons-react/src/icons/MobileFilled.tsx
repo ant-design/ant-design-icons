@@ -10,7 +10,12 @@ const MobileFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MobileFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MobileFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  MobileFilled.displayName = 'MobileFilled';
+  RefIcon.displayName = 'MobileFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MobileFilled);
+
+export default RefIcon;

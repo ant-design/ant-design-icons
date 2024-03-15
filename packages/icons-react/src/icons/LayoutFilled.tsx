@@ -10,7 +10,12 @@ const LayoutFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LayoutFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(LayoutFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  LayoutFilled.displayName = 'LayoutFilled';
+  RefIcon.displayName = 'LayoutFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LayoutFilled);
+
+export default RefIcon;

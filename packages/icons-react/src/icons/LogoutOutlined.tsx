@@ -10,7 +10,12 @@ const LogoutOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LogoutOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(LogoutOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  LogoutOutlined.displayName = 'LogoutOutlined';
+  RefIcon.displayName = 'LogoutOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LogoutOutlined);
+
+export default RefIcon;

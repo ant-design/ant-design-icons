@@ -10,7 +10,12 @@ const EllipsisOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={EllipsisOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(EllipsisOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  EllipsisOutlined.displayName = 'EllipsisOutlined';
+  RefIcon.displayName = 'EllipsisOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(EllipsisOutlined);
+
+export default RefIcon;

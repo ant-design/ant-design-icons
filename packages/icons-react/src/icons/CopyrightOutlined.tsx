@@ -10,7 +10,12 @@ const CopyrightOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CopyrightOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyrightOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  CopyrightOutlined.displayName = 'CopyrightOutlined';
+  RefIcon.displayName = 'CopyrightOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyrightOutlined);
+
+export default RefIcon;

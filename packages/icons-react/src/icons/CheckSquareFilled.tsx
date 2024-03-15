@@ -10,7 +10,12 @@ const CheckSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CheckSquareFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CheckSquareFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  CheckSquareFilled.displayName = 'CheckSquareFilled';
+  RefIcon.displayName = 'CheckSquareFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CheckSquareFilled);
+
+export default RefIcon;
