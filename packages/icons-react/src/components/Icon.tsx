@@ -4,7 +4,7 @@ import Context from './Context';
 
 import { svgBaseProps, warning, useInsertStyles } from '../utils';
 
-export interface IconBaseProps extends React.HTMLProps<HTMLSpanElement> {
+export interface IconBaseProps extends React.HTMLAttributes<HTMLSpanElement> {
   spin?: boolean;
   rotate?: number;
 }
