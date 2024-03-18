@@ -4,7 +4,7 @@ import Context from './Context';
 
 import { svgBaseProps, warning, useInsertStyles } from '../utils';
 
-export interface IconBaseProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface IconBaseProps extends React.HTMLProps<HTMLSpanElement> {
   spin?: boolean;
   rotate?: number;
 }
@@ -23,7 +23,9 @@ export interface IconComponentProps extends IconBaseProps {
   ariaLabel?: React.AriaAttributes['aria-label'];
 }
 
-const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) => {
+const Icon: React.ForwardRefExoticComponent<
+  Omit<IconComponentProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) => {
   const {
     // affect outter <i>...</i>
     className,
