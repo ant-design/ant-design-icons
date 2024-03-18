@@ -10,7 +10,12 @@ const PinterestFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PinterestFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PinterestFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  PinterestFilled.displayName = 'PinterestFilled';
+  RefIcon.displayName = 'PinterestFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PinterestFilled);
+
+export default RefIcon;

@@ -10,7 +10,12 @@ const OpenAIFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={OpenAIFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(OpenAIFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  OpenAIFilled.displayName = 'OpenAIFilled';
+  RefIcon.displayName = 'OpenAIFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(OpenAIFilled);
+
+export default RefIcon;

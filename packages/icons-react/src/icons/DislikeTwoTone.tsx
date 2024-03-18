@@ -10,7 +10,12 @@ const DislikeTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DislikeTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DislikeTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  DislikeTwoTone.displayName = 'DislikeTwoTone';
+  RefIcon.displayName = 'DislikeTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DislikeTwoTone);
+
+export default RefIcon;

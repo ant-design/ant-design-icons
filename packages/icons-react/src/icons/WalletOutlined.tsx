@@ -10,7 +10,12 @@ const WalletOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={WalletOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(WalletOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  WalletOutlined.displayName = 'WalletOutlined';
+  RefIcon.displayName = 'WalletOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WalletOutlined);
+
+export default RefIcon;

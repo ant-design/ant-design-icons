@@ -10,7 +10,12 @@ const AudioFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AudioFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AudioFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  AudioFilled.displayName = 'AudioFilled';
+  RefIcon.displayName = 'AudioFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AudioFilled);
+
+export default RefIcon;

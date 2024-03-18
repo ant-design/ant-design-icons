@@ -10,7 +10,12 @@ const CrownTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CrownTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CrownTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  CrownTwoTone.displayName = 'CrownTwoTone';
+  RefIcon.displayName = 'CrownTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CrownTwoTone);
+
+export default RefIcon;

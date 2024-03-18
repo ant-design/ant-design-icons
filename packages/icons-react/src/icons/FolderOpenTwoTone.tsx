@@ -10,7 +10,12 @@ const FolderOpenTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FolderOpenTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderOpenTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  FolderOpenTwoTone.displayName = 'FolderOpenTwoTone';
+  RefIcon.displayName = 'FolderOpenTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderOpenTwoTone);
+
+export default RefIcon;

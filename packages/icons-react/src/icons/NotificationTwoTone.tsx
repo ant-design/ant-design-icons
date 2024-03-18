@@ -10,7 +10,12 @@ const NotificationTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={NotificationTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(NotificationTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  NotificationTwoTone.displayName = 'NotificationTwoTone';
+  RefIcon.displayName = 'NotificationTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(NotificationTwoTone);
+
+export default RefIcon;

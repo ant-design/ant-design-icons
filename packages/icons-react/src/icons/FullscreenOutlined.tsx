@@ -10,7 +10,12 @@ const FullscreenOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FullscreenOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FullscreenOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  FullscreenOutlined.displayName = 'FullscreenOutlined';
+  RefIcon.displayName = 'FullscreenOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FullscreenOutlined);
+
+export default RefIcon;

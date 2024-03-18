@@ -10,7 +10,12 @@ const LinuxOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LinuxOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(LinuxOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  LinuxOutlined.displayName = 'LinuxOutlined';
+  RefIcon.displayName = 'LinuxOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LinuxOutlined);
+
+export default RefIcon;

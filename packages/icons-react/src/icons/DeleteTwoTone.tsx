@@ -10,7 +10,12 @@ const DeleteTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DeleteTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  DeleteTwoTone.displayName = 'DeleteTwoTone';
+  RefIcon.displayName = 'DeleteTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteTwoTone);
+
+export default RefIcon;

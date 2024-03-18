@@ -10,7 +10,12 @@ const MedicineBoxTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MedicineBoxTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MedicineBoxTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  MedicineBoxTwoTone.displayName = 'MedicineBoxTwoTone';
+  RefIcon.displayName = 'MedicineBoxTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MedicineBoxTwoTone);
+
+export default RefIcon;

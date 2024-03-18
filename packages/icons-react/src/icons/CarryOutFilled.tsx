@@ -10,7 +10,12 @@ const CarryOutFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CarryOutFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CarryOutFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  CarryOutFilled.displayName = 'CarryOutFilled';
+  RefIcon.displayName = 'CarryOutFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CarryOutFilled);
+
+export default RefIcon;

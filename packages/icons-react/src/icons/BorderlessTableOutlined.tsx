@@ -10,7 +10,12 @@ const BorderlessTableOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BorderlessTableOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BorderlessTableOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  BorderlessTableOutlined.displayName = 'BorderlessTableOutlined';
+  RefIcon.displayName = 'BorderlessTableOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BorderlessTableOutlined);
+
+export default RefIcon;

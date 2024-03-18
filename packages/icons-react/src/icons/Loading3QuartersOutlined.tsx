@@ -10,7 +10,12 @@ const Loading3QuartersOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={Loading3QuartersOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(Loading3QuartersOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  Loading3QuartersOutlined.displayName = 'Loading3QuartersOutlined';
+  RefIcon.displayName = 'Loading3QuartersOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(Loading3QuartersOutlined);
+
+export default RefIcon;

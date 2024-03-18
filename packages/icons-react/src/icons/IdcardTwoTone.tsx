@@ -10,7 +10,12 @@ const IdcardTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={IdcardTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(IdcardTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  IdcardTwoTone.displayName = 'IdcardTwoTone';
+  RefIcon.displayName = 'IdcardTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(IdcardTwoTone);
+
+export default RefIcon;

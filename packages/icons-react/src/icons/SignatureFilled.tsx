@@ -10,7 +10,12 @@ const SignatureFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SignatureFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SignatureFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  SignatureFilled.displayName = 'SignatureFilled';
+  RefIcon.displayName = 'SignatureFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SignatureFilled);
+
+export default RefIcon;

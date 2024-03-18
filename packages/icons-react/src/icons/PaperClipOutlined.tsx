@@ -10,7 +10,12 @@ const PaperClipOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PaperClipOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PaperClipOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  PaperClipOutlined.displayName = 'PaperClipOutlined';
+  RefIcon.displayName = 'PaperClipOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PaperClipOutlined);
+
+export default RefIcon;

@@ -10,7 +10,12 @@ const DesktopOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DesktopOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DesktopOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  DesktopOutlined.displayName = 'DesktopOutlined';
+  RefIcon.displayName = 'DesktopOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DesktopOutlined);
+
+export default RefIcon;

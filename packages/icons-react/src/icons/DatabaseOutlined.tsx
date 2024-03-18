@@ -10,7 +10,12 @@ const DatabaseOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DatabaseOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DatabaseOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  DatabaseOutlined.displayName = 'DatabaseOutlined';
+  RefIcon.displayName = 'DatabaseOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DatabaseOutlined);
+
+export default RefIcon;

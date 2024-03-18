@@ -10,7 +10,12 @@ const CopyOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CopyOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  CopyOutlined.displayName = 'CopyOutlined';
+  RefIcon.displayName = 'CopyOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyOutlined);
+
+export default RefIcon;

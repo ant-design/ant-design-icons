@@ -10,7 +10,12 @@ const HarmonyOSOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={HarmonyOSOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(HarmonyOSOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  HarmonyOSOutlined.displayName = 'HarmonyOSOutlined';
+  RefIcon.displayName = 'HarmonyOSOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HarmonyOSOutlined);
+
+export default RefIcon;

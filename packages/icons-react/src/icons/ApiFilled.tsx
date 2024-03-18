@@ -10,7 +10,12 @@ const ApiFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ApiFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ApiFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  ApiFilled.displayName = 'ApiFilled';
+  RefIcon.displayName = 'ApiFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ApiFilled);
+
+export default RefIcon;

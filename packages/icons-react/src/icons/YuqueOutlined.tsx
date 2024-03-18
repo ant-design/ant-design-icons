@@ -10,7 +10,12 @@ const YuqueOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={YuqueOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(YuqueOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  YuqueOutlined.displayName = 'YuqueOutlined';
+  RefIcon.displayName = 'YuqueOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(YuqueOutlined);
+
+export default RefIcon;

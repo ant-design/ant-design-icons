@@ -10,7 +10,12 @@ const ChromeFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ChromeFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ChromeFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  ChromeFilled.displayName = 'ChromeFilled';
+  RefIcon.displayName = 'ChromeFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ChromeFilled);
+
+export default RefIcon;

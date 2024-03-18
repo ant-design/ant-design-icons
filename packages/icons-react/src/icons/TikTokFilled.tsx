@@ -10,7 +10,12 @@ const TikTokFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TikTokFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(TikTokFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  TikTokFilled.displayName = 'TikTokFilled';
+  RefIcon.displayName = 'TikTokFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TikTokFilled);
+
+export default RefIcon;

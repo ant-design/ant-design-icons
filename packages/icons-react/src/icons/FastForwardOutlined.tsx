@@ -10,7 +10,12 @@ const FastForwardOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FastForwardOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FastForwardOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  FastForwardOutlined.displayName = 'FastForwardOutlined';
+  RefIcon.displayName = 'FastForwardOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FastForwardOutlined);
+
+export default RefIcon;

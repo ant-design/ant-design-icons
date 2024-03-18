@@ -10,7 +10,12 @@ const DownloadOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DownloadOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DownloadOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  DownloadOutlined.displayName = 'DownloadOutlined';
+  RefIcon.displayName = 'DownloadOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DownloadOutlined);
+
+export default RefIcon;

@@ -10,7 +10,12 @@ const MutedFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MutedFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MutedFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  MutedFilled.displayName = 'MutedFilled';
+  RefIcon.displayName = 'MutedFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MutedFilled);
+
+export default RefIcon;

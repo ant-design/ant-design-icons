@@ -10,7 +10,12 @@ const DislikeFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DislikeFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DislikeFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  DislikeFilled.displayName = 'DislikeFilled';
+  RefIcon.displayName = 'DislikeFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DislikeFilled);
+
+export default RefIcon;

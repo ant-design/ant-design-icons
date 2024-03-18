@@ -10,7 +10,12 @@ const CiCircleOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CiCircleOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CiCircleOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  CiCircleOutlined.displayName = 'CiCircleOutlined';
+  RefIcon.displayName = 'CiCircleOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CiCircleOutlined);
+
+export default RefIcon;

@@ -10,7 +10,12 @@ const AppstoreFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AppstoreFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AppstoreFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  AppstoreFilled.displayName = 'AppstoreFilled';
+  RefIcon.displayName = 'AppstoreFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AppstoreFilled);
+
+export default RefIcon;

@@ -10,7 +10,12 @@ const PercentageOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PercentageOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PercentageOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  PercentageOutlined.displayName = 'PercentageOutlined';
+  RefIcon.displayName = 'PercentageOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PercentageOutlined);
+
+export default RefIcon;

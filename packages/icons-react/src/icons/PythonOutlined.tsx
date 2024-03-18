@@ -10,7 +10,12 @@ const PythonOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PythonOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PythonOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  PythonOutlined.displayName = 'PythonOutlined';
+  RefIcon.displayName = 'PythonOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PythonOutlined);
+
+export default RefIcon;

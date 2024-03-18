@@ -10,7 +10,12 @@ const ConsoleSqlOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ConsoleSqlOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ConsoleSqlOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  ConsoleSqlOutlined.displayName = 'ConsoleSqlOutlined';
+  RefIcon.displayName = 'ConsoleSqlOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ConsoleSqlOutlined);
+
+export default RefIcon;

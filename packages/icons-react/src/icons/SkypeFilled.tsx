@@ -10,7 +10,12 @@ const SkypeFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SkypeFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SkypeFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  SkypeFilled.displayName = 'SkypeFilled';
+  RefIcon.displayName = 'SkypeFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SkypeFilled);
+
+export default RefIcon;

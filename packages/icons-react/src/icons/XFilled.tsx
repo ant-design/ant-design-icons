@@ -10,7 +10,12 @@ const XFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={XFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(XFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  XFilled.displayName = 'XFilled';
+  RefIcon.displayName = 'XFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(XFilled);
+
+export default RefIcon;

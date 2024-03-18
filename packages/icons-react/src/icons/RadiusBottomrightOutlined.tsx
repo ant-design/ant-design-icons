@@ -10,7 +10,12 @@ const RadiusBottomrightOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={RadiusBottomrightOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(RadiusBottomrightOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  RadiusBottomrightOutlined.displayName = 'RadiusBottomrightOutlined';
+  RefIcon.displayName = 'RadiusBottomrightOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RadiusBottomrightOutlined);
+
+export default RefIcon;

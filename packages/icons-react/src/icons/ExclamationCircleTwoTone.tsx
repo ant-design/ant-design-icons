@@ -10,7 +10,12 @@ const ExclamationCircleTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ExclamationCircleTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ExclamationCircleTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  ExclamationCircleTwoTone.displayName = 'ExclamationCircleTwoTone';
+  RefIcon.displayName = 'ExclamationCircleTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ExclamationCircleTwoTone);
+
+export default RefIcon;

@@ -10,7 +10,12 @@ const FileMarkdownFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileMarkdownFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileMarkdownFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  FileMarkdownFilled.displayName = 'FileMarkdownFilled';
+  RefIcon.displayName = 'FileMarkdownFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileMarkdownFilled);
+
+export default RefIcon;

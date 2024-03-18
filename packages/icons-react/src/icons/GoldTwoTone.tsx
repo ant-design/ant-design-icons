@@ -10,7 +10,12 @@ const GoldTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GoldTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GoldTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  GoldTwoTone.displayName = 'GoldTwoTone';
+  RefIcon.displayName = 'GoldTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GoldTwoTone);
+
+export default RefIcon;

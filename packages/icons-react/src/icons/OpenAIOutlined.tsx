@@ -10,7 +10,12 @@ const OpenAIOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={OpenAIOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(OpenAIOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  OpenAIOutlined.displayName = 'OpenAIOutlined';
+  RefIcon.displayName = 'OpenAIOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(OpenAIOutlined);
+
+export default RefIcon;

@@ -10,7 +10,12 @@ const AmazonOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AmazonOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AmazonOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  AmazonOutlined.displayName = 'AmazonOutlined';
+  RefIcon.displayName = 'AmazonOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AmazonOutlined);
+
+export default RefIcon;

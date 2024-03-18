@@ -10,7 +10,12 @@ const SpotifyFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SpotifyFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SpotifyFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  SpotifyFilled.displayName = 'SpotifyFilled';
+  RefIcon.displayName = 'SpotifyFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SpotifyFilled);
+
+export default RefIcon;

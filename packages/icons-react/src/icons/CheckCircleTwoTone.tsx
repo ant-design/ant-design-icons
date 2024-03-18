@@ -10,7 +10,12 @@ const CheckCircleTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CheckCircleTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CheckCircleTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  CheckCircleTwoTone.displayName = 'CheckCircleTwoTone';
+  RefIcon.displayName = 'CheckCircleTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CheckCircleTwoTone);
+
+export default RefIcon;

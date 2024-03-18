@@ -10,7 +10,12 @@ const TwitterSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TwitterSquareFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(TwitterSquareFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  TwitterSquareFilled.displayName = 'TwitterSquareFilled';
+  RefIcon.displayName = 'TwitterSquareFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TwitterSquareFilled);
+
+export default RefIcon;

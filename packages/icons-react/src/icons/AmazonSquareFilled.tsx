@@ -10,7 +10,12 @@ const AmazonSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AmazonSquareFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AmazonSquareFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  AmazonSquareFilled.displayName = 'AmazonSquareFilled';
+  RefIcon.displayName = 'AmazonSquareFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AmazonSquareFilled);
+
+export default RefIcon;

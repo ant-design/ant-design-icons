@@ -10,7 +10,12 @@ const MergeFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MergeFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MergeFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  MergeFilled.displayName = 'MergeFilled';
+  RefIcon.displayName = 'MergeFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MergeFilled);
+
+export default RefIcon;

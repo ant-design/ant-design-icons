@@ -10,7 +10,12 @@ const ReconciliationOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ReconciliationOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ReconciliationOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  ReconciliationOutlined.displayName = 'ReconciliationOutlined';
+  RefIcon.displayName = 'ReconciliationOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ReconciliationOutlined);
+
+export default RefIcon;

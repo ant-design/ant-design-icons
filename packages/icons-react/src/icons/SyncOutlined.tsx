@@ -10,7 +10,12 @@ const SyncOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SyncOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SyncOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  SyncOutlined.displayName = 'SyncOutlined';
+  RefIcon.displayName = 'SyncOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SyncOutlined);
+
+export default RefIcon;

@@ -10,7 +10,12 @@ const AppstoreTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AppstoreTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AppstoreTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  AppstoreTwoTone.displayName = 'AppstoreTwoTone';
+  RefIcon.displayName = 'AppstoreTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AppstoreTwoTone);
+
+export default RefIcon;

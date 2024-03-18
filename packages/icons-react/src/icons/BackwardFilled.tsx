@@ -10,7 +10,12 @@ const BackwardFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BackwardFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BackwardFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  BackwardFilled.displayName = 'BackwardFilled';
+  RefIcon.displayName = 'BackwardFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BackwardFilled);
+
+export default RefIcon;

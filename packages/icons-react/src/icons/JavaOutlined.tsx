@@ -10,7 +10,12 @@ const JavaOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={JavaOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(JavaOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  JavaOutlined.displayName = 'JavaOutlined';
+  RefIcon.displayName = 'JavaOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(JavaOutlined);
+
+export default RefIcon;

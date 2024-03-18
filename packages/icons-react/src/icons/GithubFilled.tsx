@@ -10,7 +10,12 @@ const GithubFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GithubFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GithubFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  GithubFilled.displayName = 'GithubFilled';
+  RefIcon.displayName = 'GithubFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GithubFilled);
+
+export default RefIcon;

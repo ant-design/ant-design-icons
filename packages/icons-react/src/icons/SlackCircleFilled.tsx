@@ -10,7 +10,12 @@ const SlackCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SlackCircleFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SlackCircleFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  SlackCircleFilled.displayName = 'SlackCircleFilled';
+  RefIcon.displayName = 'SlackCircleFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SlackCircleFilled);
+
+export default RefIcon;

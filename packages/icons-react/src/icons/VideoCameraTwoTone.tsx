@@ -10,7 +10,12 @@ const VideoCameraTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={VideoCameraTwoToneSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(VideoCameraTwoTone);
+
 if (process.env.NODE_ENV !== 'production') {
-  VideoCameraTwoTone.displayName = 'VideoCameraTwoTone';
+  RefIcon.displayName = 'VideoCameraTwoTone';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(VideoCameraTwoTone);
+
+export default RefIcon;

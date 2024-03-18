@@ -10,7 +10,12 @@ const DropboxSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DropboxSquareFilledSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DropboxSquareFilled);
+
 if (process.env.NODE_ENV !== 'production') {
-  DropboxSquareFilled.displayName = 'DropboxSquareFilled';
+  RefIcon.displayName = 'DropboxSquareFilled';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DropboxSquareFilled);
+
+export default RefIcon;

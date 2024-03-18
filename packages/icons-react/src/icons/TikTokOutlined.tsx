@@ -10,7 +10,12 @@ const TikTokOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TikTokOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(TikTokOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  TikTokOutlined.displayName = 'TikTokOutlined';
+  RefIcon.displayName = 'TikTokOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TikTokOutlined);
+
+export default RefIcon;

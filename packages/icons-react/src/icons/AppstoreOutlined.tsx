@@ -10,7 +10,12 @@ const AppstoreOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AppstoreOutlinedSvg} />;
 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AppstoreOutlined);
+
 if (process.env.NODE_ENV !== 'production') {
-  AppstoreOutlined.displayName = 'AppstoreOutlined';
+  RefIcon.displayName = 'AppstoreOutlined';
 }
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AppstoreOutlined);
+
+export default RefIcon;
