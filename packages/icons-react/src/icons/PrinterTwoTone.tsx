@@ -10,5 +10,10 @@ const PrinterTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PrinterTwoToneSvg} />;
 
-PrinterTwoTone.displayName = 'PrinterTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PrinterTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PrinterTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'PrinterTwoTone';
+}
+export default RefIcon;

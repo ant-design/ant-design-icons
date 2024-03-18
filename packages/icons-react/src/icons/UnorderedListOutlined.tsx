@@ -10,5 +10,10 @@ const UnorderedListOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={UnorderedListOutlinedSvg} />;
 
-UnorderedListOutlined.displayName = 'UnorderedListOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UnorderedListOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(UnorderedListOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'UnorderedListOutlined';
+}
+export default RefIcon;

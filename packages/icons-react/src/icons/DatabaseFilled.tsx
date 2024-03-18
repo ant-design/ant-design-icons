@@ -10,5 +10,10 @@ const DatabaseFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DatabaseFilledSvg} />;
 
-DatabaseFilled.displayName = 'DatabaseFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DatabaseFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DatabaseFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'DatabaseFilled';
+}
+export default RefIcon;

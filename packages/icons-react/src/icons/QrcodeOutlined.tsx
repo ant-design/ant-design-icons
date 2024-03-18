@@ -10,5 +10,10 @@ const QrcodeOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={QrcodeOutlinedSvg} />;
 
-QrcodeOutlined.displayName = 'QrcodeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(QrcodeOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(QrcodeOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'QrcodeOutlined';
+}
+export default RefIcon;

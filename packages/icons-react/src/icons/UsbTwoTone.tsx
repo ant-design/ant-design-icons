@@ -10,5 +10,10 @@ const UsbTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={UsbTwoToneSvg} />;
 
-UsbTwoTone.displayName = 'UsbTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UsbTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(UsbTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'UsbTwoTone';
+}
+export default RefIcon;

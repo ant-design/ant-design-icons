@@ -10,5 +10,10 @@ const TaobaoOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TaobaoOutlinedSvg} />;
 
-TaobaoOutlined.displayName = 'TaobaoOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TaobaoOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(TaobaoOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'TaobaoOutlined';
+}
+export default RefIcon;

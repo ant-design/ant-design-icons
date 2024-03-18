@@ -10,5 +10,10 @@ const WifiOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={WifiOutlinedSvg} />;
 
-WifiOutlined.displayName = 'WifiOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WifiOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(WifiOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'WifiOutlined';
+}
+export default RefIcon;

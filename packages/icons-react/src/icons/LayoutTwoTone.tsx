@@ -10,5 +10,10 @@ const LayoutTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LayoutTwoToneSvg} />;
 
-LayoutTwoTone.displayName = 'LayoutTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LayoutTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(LayoutTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'LayoutTwoTone';
+}
+export default RefIcon;

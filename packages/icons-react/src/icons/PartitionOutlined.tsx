@@ -10,5 +10,10 @@ const PartitionOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PartitionOutlinedSvg} />;
 
-PartitionOutlined.displayName = 'PartitionOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PartitionOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PartitionOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'PartitionOutlined';
+}
+export default RefIcon;

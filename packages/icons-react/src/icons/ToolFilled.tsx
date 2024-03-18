@@ -10,5 +10,10 @@ const ToolFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ToolFilledSvg} />;
 
-ToolFilled.displayName = 'ToolFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ToolFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ToolFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'ToolFilled';
+}
+export default RefIcon;

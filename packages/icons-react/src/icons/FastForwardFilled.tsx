@@ -10,5 +10,10 @@ const FastForwardFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FastForwardFilledSvg} />;
 
-FastForwardFilled.displayName = 'FastForwardFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FastForwardFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FastForwardFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'FastForwardFilled';
+}
+export default RefIcon;

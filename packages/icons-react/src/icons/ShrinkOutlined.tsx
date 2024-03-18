@@ -10,5 +10,10 @@ const ShrinkOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ShrinkOutlinedSvg} />;
 
-ShrinkOutlined.displayName = 'ShrinkOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ShrinkOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ShrinkOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'ShrinkOutlined';
+}
+export default RefIcon;

@@ -10,5 +10,10 @@ const ProfileFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ProfileFilledSvg} />;
 
-ProfileFilled.displayName = 'ProfileFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ProfileFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ProfileFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'ProfileFilled';
+}
+export default RefIcon;

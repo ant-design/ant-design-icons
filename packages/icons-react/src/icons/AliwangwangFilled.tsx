@@ -10,5 +10,10 @@ const AliwangwangFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AliwangwangFilledSvg} />;
 
-AliwangwangFilled.displayName = 'AliwangwangFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AliwangwangFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AliwangwangFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'AliwangwangFilled';
+}
+export default RefIcon;

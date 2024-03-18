@@ -10,5 +10,10 @@ const DeleteRowOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DeleteRowOutlinedSvg} />;
 
-DeleteRowOutlined.displayName = 'DeleteRowOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteRowOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteRowOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'DeleteRowOutlined';
+}
+export default RefIcon;

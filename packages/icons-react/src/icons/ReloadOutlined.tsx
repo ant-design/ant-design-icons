@@ -10,5 +10,10 @@ const ReloadOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ReloadOutlinedSvg} />;
 
-ReloadOutlined.displayName = 'ReloadOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ReloadOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ReloadOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'ReloadOutlined';
+}
+export default RefIcon;

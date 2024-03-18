@@ -10,5 +10,10 @@ const BorderOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BorderOutlinedSvg} />;
 
-BorderOutlined.displayName = 'BorderOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BorderOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BorderOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'BorderOutlined';
+}
+export default RefIcon;

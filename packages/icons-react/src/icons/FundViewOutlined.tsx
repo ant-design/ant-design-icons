@@ -10,5 +10,10 @@ const FundViewOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FundViewOutlinedSvg} />;
 
-FundViewOutlined.displayName = 'FundViewOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FundViewOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FundViewOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'FundViewOutlined';
+}
+export default RefIcon;

@@ -10,5 +10,10 @@ const NodeIndexOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={NodeIndexOutlinedSvg} />;
 
-NodeIndexOutlined.displayName = 'NodeIndexOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(NodeIndexOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(NodeIndexOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'NodeIndexOutlined';
+}
+export default RefIcon;

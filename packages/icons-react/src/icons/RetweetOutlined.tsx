@@ -10,5 +10,10 @@ const RetweetOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={RetweetOutlinedSvg} />;
 
-RetweetOutlined.displayName = 'RetweetOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RetweetOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(RetweetOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'RetweetOutlined';
+}
+export default RefIcon;

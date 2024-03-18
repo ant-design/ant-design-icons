@@ -48,8 +48,13 @@ const <%= svgIdentifier %> = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={<%= svgIdentifier %>Svg} />;
 
-<%= svgIdentifier %>.displayName = '<%= svgIdentifier %>';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(<%= svgIdentifier %>);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(<%= svgIdentifier %>);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = '<%= svgIdentifier %>';
+}
+export default RefIcon;
 `.trim());
 
   await walk(async ({ svgIdentifier }) => {

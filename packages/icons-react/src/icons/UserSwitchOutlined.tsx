@@ -10,5 +10,10 @@ const UserSwitchOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={UserSwitchOutlinedSvg} />;
 
-UserSwitchOutlined.displayName = 'UserSwitchOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UserSwitchOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(UserSwitchOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'UserSwitchOutlined';
+}
+export default RefIcon;

@@ -10,5 +10,10 @@ const CloudFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CloudFilledSvg} />;
 
-CloudFilled.displayName = 'CloudFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CloudFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'CloudFilled';
+}
+export default RefIcon;

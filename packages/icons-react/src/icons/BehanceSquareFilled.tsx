@@ -10,5 +10,10 @@ const BehanceSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BehanceSquareFilledSvg} />;
 
-BehanceSquareFilled.displayName = 'BehanceSquareFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BehanceSquareFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BehanceSquareFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'BehanceSquareFilled';
+}
+export default RefIcon;

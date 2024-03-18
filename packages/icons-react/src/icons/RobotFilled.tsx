@@ -10,5 +10,10 @@ const RobotFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={RobotFilledSvg} />;
 
-RobotFilled.displayName = 'RobotFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RobotFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(RobotFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'RobotFilled';
+}
+export default RefIcon;

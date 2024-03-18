@@ -10,5 +10,10 @@ const PlayCircleTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PlayCircleTwoToneSvg} />;
 
-PlayCircleTwoTone.displayName = 'PlayCircleTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PlayCircleTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PlayCircleTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'PlayCircleTwoTone';
+}
+export default RefIcon;

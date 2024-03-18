@@ -10,5 +10,10 @@ const RedditCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={RedditCircleFilledSvg} />;
 
-RedditCircleFilled.displayName = 'RedditCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(RedditCircleFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(RedditCircleFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'RedditCircleFilled';
+}
+export default RefIcon;

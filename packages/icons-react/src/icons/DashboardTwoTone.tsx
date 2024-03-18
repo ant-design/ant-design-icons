@@ -10,5 +10,10 @@ const DashboardTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DashboardTwoToneSvg} />;
 
-DashboardTwoTone.displayName = 'DashboardTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DashboardTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DashboardTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'DashboardTwoTone';
+}
+export default RefIcon;

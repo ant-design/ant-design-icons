@@ -10,5 +10,10 @@ const DeleteFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DeleteFilledSvg} />;
 
-DeleteFilled.displayName = 'DeleteFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DeleteFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'DeleteFilled';
+}
+export default RefIcon;

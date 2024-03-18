@@ -10,5 +10,10 @@ const PauseCircleTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PauseCircleTwoToneSvg} />;
 
-PauseCircleTwoTone.displayName = 'PauseCircleTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PauseCircleTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PauseCircleTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'PauseCircleTwoTone';
+}
+export default RefIcon;

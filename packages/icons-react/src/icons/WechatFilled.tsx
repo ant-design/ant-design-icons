@@ -10,5 +10,10 @@ const WechatFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={WechatFilledSvg} />;
 
-WechatFilled.displayName = 'WechatFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WechatFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(WechatFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'WechatFilled';
+}
+export default RefIcon;

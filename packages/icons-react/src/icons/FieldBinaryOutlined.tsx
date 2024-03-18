@@ -10,5 +10,10 @@ const FieldBinaryOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FieldBinaryOutlinedSvg} />;
 
-FieldBinaryOutlined.displayName = 'FieldBinaryOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldBinaryOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FieldBinaryOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'FieldBinaryOutlined';
+}
+export default RefIcon;

@@ -10,5 +10,10 @@ const PropertySafetyOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PropertySafetyOutlinedSvg} />;
 
-PropertySafetyOutlined.displayName = 'PropertySafetyOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PropertySafetyOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PropertySafetyOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'PropertySafetyOutlined';
+}
+export default RefIcon;

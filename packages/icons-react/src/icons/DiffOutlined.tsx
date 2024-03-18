@@ -10,5 +10,10 @@ const DiffOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DiffOutlinedSvg} />;
 
-DiffOutlined.displayName = 'DiffOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DiffOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DiffOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'DiffOutlined';
+}
+export default RefIcon;

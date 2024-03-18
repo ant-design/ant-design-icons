@@ -10,5 +10,10 @@ const FileTextOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileTextOutlinedSvg} />;
 
-FileTextOutlined.displayName = 'FileTextOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileTextOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileTextOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'FileTextOutlined';
+}
+export default RefIcon;

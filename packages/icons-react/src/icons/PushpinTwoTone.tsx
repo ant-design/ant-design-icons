@@ -10,5 +10,10 @@ const PushpinTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PushpinTwoToneSvg} />;
 
-PushpinTwoTone.displayName = 'PushpinTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PushpinTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PushpinTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'PushpinTwoTone';
+}
+export default RefIcon;

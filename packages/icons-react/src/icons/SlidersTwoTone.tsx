@@ -10,5 +10,10 @@ const SlidersTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SlidersTwoToneSvg} />;
 
-SlidersTwoTone.displayName = 'SlidersTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SlidersTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SlidersTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'SlidersTwoTone';
+}
+export default RefIcon;
