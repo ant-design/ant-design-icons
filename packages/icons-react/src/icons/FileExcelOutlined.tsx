@@ -10,5 +10,10 @@ const FileExcelOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileExcelOutlinedSvg} />;
 
-FileExcelOutlined.displayName = 'FileExcelOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileExcelOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileExcelOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'FileExcelOutlined';
+}
+export default RefIcon;

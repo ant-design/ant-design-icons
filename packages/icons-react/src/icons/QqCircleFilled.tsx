@@ -10,5 +10,10 @@ const QqCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={QqCircleFilledSvg} />;
 
-QqCircleFilled.displayName = 'QqCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(QqCircleFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(QqCircleFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'QqCircleFilled';
+}
+export default RefIcon;

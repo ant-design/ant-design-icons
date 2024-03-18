@@ -10,5 +10,10 @@ const StopFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={StopFilledSvg} />;
 
-StopFilled.displayName = 'StopFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StopFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(StopFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'StopFilled';
+}
+export default RefIcon;

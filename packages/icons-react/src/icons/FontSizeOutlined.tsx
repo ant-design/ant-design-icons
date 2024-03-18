@@ -10,5 +10,10 @@ const FontSizeOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FontSizeOutlinedSvg} />;
 
-FontSizeOutlined.displayName = 'FontSizeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FontSizeOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FontSizeOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'FontSizeOutlined';
+}
+export default RefIcon;

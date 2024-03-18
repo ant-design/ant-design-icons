@@ -10,5 +10,10 @@ const DingtalkCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DingtalkCircleFilledSvg} />;
 
-DingtalkCircleFilled.displayName = 'DingtalkCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DingtalkCircleFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DingtalkCircleFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'DingtalkCircleFilled';
+}
+export default RefIcon;

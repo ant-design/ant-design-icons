@@ -10,5 +10,10 @@ const FolderOpenFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FolderOpenFilledSvg} />;
 
-FolderOpenFilled.displayName = 'FolderOpenFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderOpenFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderOpenFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'FolderOpenFilled';
+}
+export default RefIcon;

@@ -10,5 +10,10 @@ const StepBackwardOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={StepBackwardOutlinedSvg} />;
 
-StepBackwardOutlined.displayName = 'StepBackwardOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StepBackwardOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(StepBackwardOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'StepBackwardOutlined';
+}
+export default RefIcon;

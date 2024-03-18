@@ -10,5 +10,10 @@ const DribbbleSquareOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DribbbleSquareOutlinedSvg} />;
 
-DribbbleSquareOutlined.displayName = 'DribbbleSquareOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DribbbleSquareOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DribbbleSquareOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'DribbbleSquareOutlined';
+}
+export default RefIcon;

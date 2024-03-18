@@ -10,5 +10,10 @@ const ItalicOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ItalicOutlinedSvg} />;
 
-ItalicOutlined.displayName = 'ItalicOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ItalicOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ItalicOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'ItalicOutlined';
+}
+export default RefIcon;

@@ -10,5 +10,10 @@ const DropboxOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={DropboxOutlinedSvg} />;
 
-DropboxOutlined.displayName = 'DropboxOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(DropboxOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(DropboxOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'DropboxOutlined';
+}
+export default RefIcon;

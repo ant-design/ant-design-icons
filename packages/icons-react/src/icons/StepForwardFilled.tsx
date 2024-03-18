@@ -10,5 +10,10 @@ const StepForwardFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={StepForwardFilledSvg} />;
 
-StepForwardFilled.displayName = 'StepForwardFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(StepForwardFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(StepForwardFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'StepForwardFilled';
+}
+export default RefIcon;

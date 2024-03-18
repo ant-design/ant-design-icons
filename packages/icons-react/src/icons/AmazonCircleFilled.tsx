@@ -10,5 +10,10 @@ const AmazonCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AmazonCircleFilledSvg} />;
 
-AmazonCircleFilled.displayName = 'AmazonCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AmazonCircleFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AmazonCircleFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'AmazonCircleFilled';
+}
+export default RefIcon;

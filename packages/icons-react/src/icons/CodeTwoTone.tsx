@@ -10,5 +10,10 @@ const CodeTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CodeTwoToneSvg} />;
 
-CodeTwoTone.displayName = 'CodeTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CodeTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CodeTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'CodeTwoTone';
+}
+export default RefIcon;

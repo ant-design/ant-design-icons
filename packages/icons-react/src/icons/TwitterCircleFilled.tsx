@@ -10,5 +10,10 @@ const TwitterCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TwitterCircleFilledSvg} />;
 
-TwitterCircleFilled.displayName = 'TwitterCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(TwitterCircleFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(TwitterCircleFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'TwitterCircleFilled';
+}
+export default RefIcon;

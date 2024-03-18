@@ -10,5 +10,10 @@ const WhatsAppOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={WhatsAppOutlinedSvg} />;
 
-WhatsAppOutlined.displayName = 'WhatsAppOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(WhatsAppOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(WhatsAppOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'WhatsAppOutlined';
+}
+export default RefIcon;

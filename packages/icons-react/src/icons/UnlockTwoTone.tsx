@@ -10,5 +10,10 @@ const UnlockTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={UnlockTwoToneSvg} />;
 
-UnlockTwoTone.displayName = 'UnlockTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(UnlockTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(UnlockTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'UnlockTwoTone';
+}
+export default RefIcon;

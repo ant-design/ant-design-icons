@@ -10,5 +10,10 @@ const CopyFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CopyFilledSvg} />;
 
-CopyFilled.displayName = 'CopyFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CopyFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'CopyFilled';
+}
+export default RefIcon;

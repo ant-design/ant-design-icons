@@ -10,5 +10,10 @@ const HourglassTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={HourglassTwoToneSvg} />;
 
-HourglassTwoTone.displayName = 'HourglassTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(HourglassTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(HourglassTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'HourglassTwoTone';
+}
+export default RefIcon;

@@ -10,5 +10,10 @@ const SkypeOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SkypeOutlinedSvg} />;
 
-SkypeOutlined.displayName = 'SkypeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SkypeOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SkypeOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'SkypeOutlined';
+}
+export default RefIcon;

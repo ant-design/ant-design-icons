@@ -10,5 +10,10 @@ const LockOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LockOutlinedSvg} />;
 
-LockOutlined.displayName = 'LockOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LockOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(LockOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'LockOutlined';
+}
+export default RefIcon;

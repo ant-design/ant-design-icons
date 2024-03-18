@@ -10,5 +10,10 @@ const FileZipOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileZipOutlinedSvg} />;
 
-FileZipOutlined.displayName = 'FileZipOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileZipOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileZipOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'FileZipOutlined';
+}
+export default RefIcon;

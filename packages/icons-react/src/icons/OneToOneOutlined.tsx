@@ -10,5 +10,10 @@ const OneToOneOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={OneToOneOutlinedSvg} />;
 
-OneToOneOutlined.displayName = 'OneToOneOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(OneToOneOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(OneToOneOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'OneToOneOutlined';
+}
+export default RefIcon;

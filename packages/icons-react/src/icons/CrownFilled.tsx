@@ -10,5 +10,10 @@ const CrownFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CrownFilledSvg} />;
 
-CrownFilled.displayName = 'CrownFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CrownFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CrownFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'CrownFilled';
+}
+export default RefIcon;

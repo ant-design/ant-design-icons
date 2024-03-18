@@ -10,5 +10,10 @@ const PictureFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PictureFilledSvg} />;
 
-PictureFilled.displayName = 'PictureFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PictureFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PictureFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'PictureFilled';
+}
+export default RefIcon;

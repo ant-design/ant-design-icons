@@ -10,5 +10,10 @@ const BarcodeOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BarcodeOutlinedSvg} />;
 
-BarcodeOutlined.displayName = 'BarcodeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BarcodeOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BarcodeOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'BarcodeOutlined';
+}
+export default RefIcon;

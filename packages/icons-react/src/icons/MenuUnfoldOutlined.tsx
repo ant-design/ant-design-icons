@@ -10,5 +10,10 @@ const MenuUnfoldOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={MenuUnfoldOutlinedSvg} />;
 
-MenuUnfoldOutlined.displayName = 'MenuUnfoldOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(MenuUnfoldOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(MenuUnfoldOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'MenuUnfoldOutlined';
+}
+export default RefIcon;

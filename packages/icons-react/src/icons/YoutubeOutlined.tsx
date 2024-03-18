@@ -10,5 +10,10 @@ const YoutubeOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={YoutubeOutlinedSvg} />;
 
-YoutubeOutlined.displayName = 'YoutubeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(YoutubeOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(YoutubeOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'YoutubeOutlined';
+}
+export default RefIcon;

@@ -10,5 +10,10 @@ const LineOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LineOutlinedSvg} />;
 
-LineOutlined.displayName = 'LineOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LineOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(LineOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'LineOutlined';
+}
+export default RefIcon;

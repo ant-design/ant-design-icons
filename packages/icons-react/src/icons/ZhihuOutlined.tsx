@@ -10,5 +10,10 @@ const ZhihuOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ZhihuOutlinedSvg} />;
 
-ZhihuOutlined.displayName = 'ZhihuOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ZhihuOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ZhihuOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'ZhihuOutlined';
+}
+export default RefIcon;

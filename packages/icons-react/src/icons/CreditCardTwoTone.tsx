@@ -10,5 +10,10 @@ const CreditCardTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CreditCardTwoToneSvg} />;
 
-CreditCardTwoTone.displayName = 'CreditCardTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CreditCardTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CreditCardTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'CreditCardTwoTone';
+}
+export default RefIcon;

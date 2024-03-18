@@ -10,5 +10,10 @@ const SwitcherTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SwitcherTwoToneSvg} />;
 
-SwitcherTwoTone.displayName = 'SwitcherTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SwitcherTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SwitcherTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'SwitcherTwoTone';
+}
+export default RefIcon;

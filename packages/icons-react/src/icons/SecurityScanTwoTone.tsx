@@ -10,5 +10,10 @@ const SecurityScanTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SecurityScanTwoToneSvg} />;
 
-SecurityScanTwoTone.displayName = 'SecurityScanTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SecurityScanTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SecurityScanTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'SecurityScanTwoTone';
+}
+export default RefIcon;

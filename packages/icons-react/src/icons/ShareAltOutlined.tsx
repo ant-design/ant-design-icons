@@ -10,5 +10,10 @@ const ShareAltOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ShareAltOutlinedSvg} />;
 
-ShareAltOutlined.displayName = 'ShareAltOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ShareAltOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ShareAltOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'ShareAltOutlined';
+}
+export default RefIcon;

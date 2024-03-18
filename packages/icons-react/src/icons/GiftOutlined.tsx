@@ -10,5 +10,10 @@ const GiftOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GiftOutlinedSvg} />;
 
-GiftOutlined.displayName = 'GiftOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GiftOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GiftOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'GiftOutlined';
+}
+export default RefIcon;

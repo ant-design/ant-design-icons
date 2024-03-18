@@ -10,5 +10,10 @@ const GoogleSquareFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GoogleSquareFilledSvg} />;
 
-GoogleSquareFilled.displayName = 'GoogleSquareFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GoogleSquareFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GoogleSquareFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'GoogleSquareFilled';
+}
+export default RefIcon;

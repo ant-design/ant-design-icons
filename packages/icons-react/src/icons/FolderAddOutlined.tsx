@@ -10,5 +10,10 @@ const FolderAddOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FolderAddOutlinedSvg} />;
 
-FolderAddOutlined.displayName = 'FolderAddOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderAddOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FolderAddOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'FolderAddOutlined';
+}
+export default RefIcon;

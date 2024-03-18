@@ -10,5 +10,10 @@ const AccountBookFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={AccountBookFilledSvg} />;
 
-AccountBookFilled.displayName = 'AccountBookFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(AccountBookFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(AccountBookFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'AccountBookFilled';
+}
+export default RefIcon;

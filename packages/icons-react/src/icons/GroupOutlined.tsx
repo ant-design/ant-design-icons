@@ -10,5 +10,10 @@ const GroupOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={GroupOutlinedSvg} />;
 
-GroupOutlined.displayName = 'GroupOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(GroupOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GroupOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'GroupOutlined';
+}
+export default RefIcon;

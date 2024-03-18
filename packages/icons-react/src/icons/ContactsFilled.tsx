@@ -10,5 +10,10 @@ const ContactsFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ContactsFilledSvg} />;
 
-ContactsFilled.displayName = 'ContactsFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ContactsFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ContactsFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'ContactsFilled';
+}
+export default RefIcon;

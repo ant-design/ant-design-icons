@@ -10,5 +10,10 @@ const ThunderboltOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ThunderboltOutlinedSvg} />;
 
-ThunderboltOutlined.displayName = 'ThunderboltOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ThunderboltOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ThunderboltOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'ThunderboltOutlined';
+}
+export default RefIcon;

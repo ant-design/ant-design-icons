@@ -10,5 +10,10 @@ const SortAscendingOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={SortAscendingOutlinedSvg} />;
 
-SortAscendingOutlined.displayName = 'SortAscendingOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(SortAscendingOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(SortAscendingOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'SortAscendingOutlined';
+}
+export default RefIcon;

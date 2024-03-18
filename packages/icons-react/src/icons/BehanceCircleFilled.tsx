@@ -10,5 +10,10 @@ const BehanceCircleFilled = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={BehanceCircleFilledSvg} />;
 
-BehanceCircleFilled.displayName = 'BehanceCircleFilled';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(BehanceCircleFilled);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(BehanceCircleFilled);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'BehanceCircleFilled';
+}
+export default RefIcon;

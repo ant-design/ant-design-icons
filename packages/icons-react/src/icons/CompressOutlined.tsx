@@ -10,5 +10,10 @@ const CompressOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CompressOutlinedSvg} />;
 
-CompressOutlined.displayName = 'CompressOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(CompressOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(CompressOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'CompressOutlined';
+}
+export default RefIcon;

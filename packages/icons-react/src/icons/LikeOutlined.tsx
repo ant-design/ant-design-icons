@@ -10,5 +10,10 @@ const LikeOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LikeOutlinedSvg} />;
 
-LikeOutlined.displayName = 'LikeOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(LikeOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(LikeOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'LikeOutlined';
+}
+export default RefIcon;

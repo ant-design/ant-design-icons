@@ -10,5 +10,10 @@ const ReconciliationTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ReconciliationTwoToneSvg} />;
 
-ReconciliationTwoTone.displayName = 'ReconciliationTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ReconciliationTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ReconciliationTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'ReconciliationTwoTone';
+}
+export default RefIcon;

@@ -10,5 +10,10 @@ const PullRequestOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={PullRequestOutlinedSvg} />;
 
-PullRequestOutlined.displayName = 'PullRequestOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(PullRequestOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(PullRequestOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'PullRequestOutlined';
+}
+export default RefIcon;

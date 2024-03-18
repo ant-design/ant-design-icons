@@ -10,5 +10,10 @@ const ColumnWidthOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ColumnWidthOutlinedSvg} />;
 
-ColumnWidthOutlined.displayName = 'ColumnWidthOutlined';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(ColumnWidthOutlined);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(ColumnWidthOutlined);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'ColumnWidthOutlined';
+}
+export default RefIcon;

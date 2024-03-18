@@ -10,5 +10,10 @@ const FileUnknownTwoTone = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FileUnknownTwoToneSvg} />;
 
-FileUnknownTwoTone.displayName = 'FileUnknownTwoTone';
-export default React.forwardRef<HTMLSpanElement, AntdIconProps>(FileUnknownTwoTone);
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(FileUnknownTwoTone);
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'FileUnknownTwoTone';
+}
+export default RefIcon;
