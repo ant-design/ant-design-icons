@@ -32,10 +32,11 @@ function detectRealPath(icon: IconDefinition) {
 
 function svg2base64(svgPath: string, size = 50) {
   const svg = fs.readFileSync(svgPath, 'utf-8');
-  const svgWithStyle = svg.replace(
-    /<svg/,
-    `<svg width="${size}" height="${size}" fill="#cacaca"`,
-  );
+  const svgWithStyle = svg
+    .replace(/<svg/, `<svg width="${size}" height="${size}" fill="#cacaca"`)
+    // https://github.com/ant-design/ant-design-icons/blob/a02cbf8/packages/icons-svg/templates/helpers.ts#L3-L6
+    .replace(/\#333/g, '#1677ff')
+    .replace(/\#E6E6E6/ig, '#e6f4ff');
 
   const base64 = Buffer.from(svgWithStyle).toString('base64');
   return `data:image/svg+xml;base64,${base64}`;
