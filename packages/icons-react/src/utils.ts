@@ -99,7 +99,8 @@ export const svgBaseProps = {
 
 export const iconStyles = `
 .anticon {
-  display: inline-block;
+  display: inline-flex;
+  alignItems: center;
   color: inherit;
   font-style: normal;
   line-height: 0;
