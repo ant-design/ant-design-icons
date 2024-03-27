@@ -4,12 +4,42 @@ import * as path from 'path';
 import * as fs from 'fs';
 import { promisify } from 'util';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { template } from 'lodash';
+import { template, isNil } from 'lodash';
+import pkgDir from 'pkg-dir';
 
 const writeFile = promisify(fs.writeFile);
 
 interface IconDefinitionWithIdentifier extends IconDefinition {
   svgIdentifier: string;
+  svgBase64: string | null;
+}
+
+const svgPkg = require.resolve('@ant-design/icons-svg');
+const svgPkgDir = pkgDir.sync(path.dirname(svgPkg));
+const inlineSvgDir = path.join(svgPkgDir, 'inline-namespaced-svg');
+
+function detectRealPath(icon: IconDefinition) {
+  try {
+    if ([icon, icon?.theme, icon?.name].some(isNil)) return null
+
+    const _path = path.join(inlineSvgDir, icon.theme, `${icon.name}.svg`);
+
+    return fs.existsSync(_path) ? _path : null;
+  } catch (e) {
+    return null
+  }
+}
+
+function svg2base64(svgPath: string, size = 50) {
+  const svg = fs.readFileSync(svgPath, 'utf-8');
+  const svgWithStyle = svg
+    .replace(/<svg/, `<svg width="${size}" height="${size}" fill="#cacaca"`)
+    // https://github.com/ant-design/ant-design-icons/blob/a02cbf8/packages/icons-svg/templates/helpers.ts#L3-L6
+    .replace(/\#333/g, '#1677ff')
+    .replace(/\#E6E6E6/ig, '#e6f4ff');
+
+  const base64 = Buffer.from(svgWithStyle).toString('base64');
+  return `data:image/svg+xml;base64,${base64}`;
 }
 
 function walk<T>(
@@ -18,12 +48,18 @@ function walk<T>(
   return Promise.all(
     Object.keys(allIconDefs)
       .map(svgIdentifier => {
-      const iconDef = (allIconDefs as { [id: string]: IconDefinition })[
-        svgIdentifier
-      ];
+        const iconDef = (allIconDefs as { [id: string]: IconDefinition })[
+          svgIdentifier
+        ];
 
-      return fn({ svgIdentifier, ...iconDef });
-    }),
+        const realSvgPath = detectRealPath(iconDef);
+        let svgBase64 = null;
+        if (realSvgPath) {
+          try { svgBase64 = svg2base64(realSvgPath) } catch (e) { /** nothing */ }
+        }
+
+        return fn({ svgIdentifier, svgBase64, ...iconDef });
+      }),
   );
 }
 
@@ -48,6 +84,7 @@ const <%= svgIdentifier %> = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={<%= svgIdentifier %>Svg} />;
 
+<% if (svgBase64) { %> /**![<%= name %>](<%= svgBase64 %>) */ <% } %>
 const RefIcon: React.ForwardRefExoticComponent<
   Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
 > = React.forwardRef<HTMLSpanElement, AntdIconProps>(<%= svgIdentifier %>);
@@ -59,11 +96,11 @@ if (process.env.NODE_ENV !== 'production') {
 export default RefIcon;
 `.trim());
 
-  await walk(async ({ svgIdentifier }) => {
+  await walk(async (item) => {
     // generate icon file
     await writeFile(
-      path.resolve(__dirname, `../src/icons/${svgIdentifier}.tsx`),
-      render({ svgIdentifier }),
+      path.resolve(__dirname, `../src/icons/${item.svgIdentifier}.tsx`),
+      render(item),
     );
   });
 
