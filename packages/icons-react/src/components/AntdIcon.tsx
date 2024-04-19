@@ -8,7 +8,8 @@ import { blue } from '@ant-design/colors';
 import Context from './Context';
 import type { IconBaseProps } from './Icon';
 import ReactIcon from './IconBase';
-import { getTwoToneColor, TwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
+import { getTwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
+import type { TwoToneColor } from './twoTonePrimaryColor';
 import { normalizeTwoToneColors } from '../utils';
 
 export interface AntdIconProps extends IconBaseProps {

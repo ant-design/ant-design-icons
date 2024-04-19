@@ -1,10 +1,15 @@
-import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
-import React, { useContext, useEffect } from 'react';
-import warn from 'rc-util/lib/warning';
+import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 import { getShadowRoot } from 'rc-util/lib/Dom/shadow';
+import warn from 'rc-util/lib/warning';
+import React, { useContext, useEffect } from 'react';
+import type { CSSProperties, MouseEventHandler, MutableRefObject, ReactNode } from 'react'
 import IconContext from './components/Context';
+
+function camelCase(input: string) {
+  return input.replace(/-(.)/g, (match, g) => g.toUpperCase());
+}
 
 export function warning(valid: boolean, message: string) {
   warn(valid, `[@ant-design/icons] ${message}`);
@@ -28,20 +33,25 @@ export function normalizeAttrs(attrs: Attrs = {}): Attrs {
         delete acc.class;
         break;
       default:
-        acc[key] = val;
+        delete acc[key];
+        acc[camelCase(key)] = val;
     }
     return acc;
   }, {});
 }
 
-export interface Attrs {
-  [key: string]: string;
+export type Attrs = Record<string, string>;
+interface RootProps {
+  onClick: MouseEventHandler<Element>;
+  style: CSSProperties;
+  ref: MutableRefObject<any>
+  [props: string]: string | number | ReactNode | MouseEventHandler<Element> | CSSProperties | MutableRefObject<any>
 }
 
 export function generate(
   node: AbstractNode,
   key: string,
-  rootProps?: { [key: string]: any } | false,
+  rootProps?: RootProps | false,
 ): any {
   if (!rootProps) {
     return React.createElement(

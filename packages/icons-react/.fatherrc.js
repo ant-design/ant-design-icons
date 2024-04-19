@@ -1,9 +1,15 @@
 import { defineConfig } from 'father';
 
-const config = {
+const config = defineConfig({
   // Locked version only supports 1.0.0
   plugins: ['@rc-component/father-plugin'],
-};
+  cjs: {
+    transformer: 'swc',
+    targets: {
+      ie: 11,
+    },
+  },
+});
 
 if (process.env.NODE_ENV !== 'ci') {
   config.umd = {
@@ -33,4 +39,4 @@ if (process.env.NODE_ENV !== 'ci') {
   };
 }
 
-export default defineConfig(config);
+export default config;

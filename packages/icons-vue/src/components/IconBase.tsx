@@ -1,6 +1,6 @@
-import { generate, getSecondaryColor, isIconDefinition, warning, useInsertStyles } from '../utils';
+import { generate, getSecondaryColor, isIconDefinition, warning } from '../utils';
 import { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
-import { CSSProperties, FunctionalComponent, PropType } from 'vue';
+import { CSSProperties, FunctionalComponent, PropType, reactive } from 'vue';
 
 export interface IconProps {
   icon: IconDefinition;
@@ -21,11 +21,11 @@ export interface TwoToneColorPalette extends TwoToneColorPaletteSetter {
   calculated?: boolean; // marker for calculation
 }
 
-const twoToneColorPalette: TwoToneColorPalette = {
+const twoToneColorPalette: TwoToneColorPalette = reactive({
   primaryColor: '#333',
   secondaryColor: '#E6E6E6',
   calculated: false,
-};
+});
 
 function setTwoToneColors({ primaryColor, secondaryColor }: TwoToneColorPaletteSetter): void {
   twoToneColorPalette.primaryColor = primaryColor;
@@ -60,9 +60,6 @@ const IconBase: IconBaseType = (props, context) => {
       secondaryColor: secondaryColor || getSecondaryColor(primaryColor),
     };
   }
-
-  useInsertStyles();
-
   warning(isIconDefinition(icon), `icon should be icon definiton, but got ${icon}`);
 
   if (!isIconDefinition(icon)) {
