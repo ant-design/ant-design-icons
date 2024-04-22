@@ -100,7 +100,7 @@ export const svgBaseProps = {
 export const iconStyles = `
 .anticon {
   display: inline-flex;
-  alignItems: center;
+  align-items: center;
   color: inherit;
   font-style: normal;
   line-height: 0;
