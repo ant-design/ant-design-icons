@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { fakeAsync, flush, inject, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -136,9 +136,10 @@ describe('@ant-design/icons-angular', () => {
   describe('dynamic loading', () => {
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports     : [ IconModule, HttpClientModule ],
-        declarations: [ IconTestComponent ]
-      });
+    declarations: [IconTestComponent],
+    imports: [IconModule],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+});
     });
 
     beforeEach(inject([ IconService ], (is: IconService) => {
