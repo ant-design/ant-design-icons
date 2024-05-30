@@ -17,8 +17,10 @@ export interface CustomIconComponentProps {
   fill: string;
   viewBox?: string;
   className?: string;
+  color?: string
   style?: React.CSSProperties;
 }
+
 export interface IconComponentProps extends IconBaseProps {
   viewBox?: string;
   component?: React.ComponentType<CustomIconComponentProps | React.SVGProps<SVGSVGElement>> | React.ForwardRefExoticComponent<CustomIconComponentProps>;
@@ -34,6 +36,7 @@ Omit<IconComponentProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
 
     // affect inner <svg>...</svg>
     component: Component,
+    color,
     viewBox,
     spin,
     rotate,
@@ -77,6 +80,7 @@ Omit<IconComponentProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
 
   const innerSvgProps: CustomIconComponentProps = {
     ...svgBaseProps,
+    color,
     className: svgClassString,
     style: svgStyle,
     viewBox,
