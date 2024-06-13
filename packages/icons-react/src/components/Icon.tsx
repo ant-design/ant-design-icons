@@ -61,6 +61,9 @@ Omit<IconComponentProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
   const classString = classNames(
     rootClassName,
     prefixCls,
+    {
+      [`${prefixCls}-spin`]: !!spin && !!Component,
+    },
     className,
   );
 
