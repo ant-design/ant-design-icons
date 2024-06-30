@@ -15,11 +15,37 @@ Ant Design Icons for React Native
 yarn add @ant-design/icons-react-native
 ```
 
+
 ## Linking
+
+<details>
+<summary>react-native version < 0.69.0</summary>
 
 ```bash
 react-native link @ant-design/icons-react-native
 ```
+</details>
+<br/>
+<details open>
+<summary><b>react-native version >= 0.69.0</b> <i>(recommend in all version)</i></summary>
+<br/>
+
+- Add assets to your `react-native.config.js` ( If not exist, please create in project’s root directory )
+
+```js
+module.exports = {
+  assets: ['node_modules/@ant-design/icons-react-native/fonts'],
+};
+```
+
+- Run the [`react-native-asset`](https://github.com/unimonkiez/react-native-asset)'s command and linking + unlinking is automatic
+
+```bash
+npx react-native-asset
+```
+<br/>
+</details>
+
 
 will copy fonts to `ios` and `android` assets folder.
 

@@ -262,7 +262,7 @@ exports[`Icon should support config global two-tone primary color 3`] = `
 
 exports[`Icon should support event listeners 1`] = `
 <div>
-  <ForwardRef(HomeOutlined)
+  <HomeOutlined
     onClick={[MockFunction]}
   >
     <AntdIcon
@@ -337,8 +337,8 @@ exports[`Icon should support event listeners 1`] = `
         </IconReact>
       </span>
     </AntdIcon>
-  </ForwardRef(HomeOutlined)>
-  <ForwardRef(SettingFilled)>
+  </HomeOutlined>
+  <SettingFilled>
     <AntdIcon
       icon={
         {
@@ -408,8 +408,8 @@ exports[`Icon should support event listeners 1`] = `
         </IconReact>
       </span>
     </AntdIcon>
-  </ForwardRef(SettingFilled)>
-  <ForwardRef(SmileOutlined)
+  </SettingFilled>
+  <SmileOutlined
     onMouseEnter={[MockFunction]}
   >
     <AntdIcon
@@ -483,8 +483,8 @@ exports[`Icon should support event listeners 1`] = `
         </IconReact>
       </span>
     </AntdIcon>
-  </ForwardRef(SmileOutlined)>
-  <ForwardRef(SyncOutlined)
+  </SmileOutlined>
+  <SyncOutlined
     onKeyUp={[MockFunction]}
     spin={true}
   >
@@ -560,7 +560,7 @@ exports[`Icon should support event listeners 1`] = `
         </IconReact>
       </span>
     </AntdIcon>
-  </ForwardRef(SyncOutlined)>
+  </SyncOutlined>
 </div>
 `;
 
