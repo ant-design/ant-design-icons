@@ -6,8 +6,10 @@ import { promisify } from 'util';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { template, isNil } from 'lodash';
 import pkgDir from 'pkg-dir';
+import { svg2png, initialize } from 'svg2png-wasm';
 
 const writeFile = promisify(fs.writeFile);
+const svg2pngWasmBgPath = path.resolve(__dirname, '../node_modules/svg2png-wasm/svg2png_wasm_bg.wasm');
 
 interface IconDefinitionWithIdentifier extends IconDefinition {
   svgIdentifier: string;
@@ -30,7 +32,7 @@ function detectRealPath(icon: IconDefinition) {
   }
 }
 
-function svg2base64(svgPath: string, size = 50) {
+async function svg2base64(svgPath: string, size = 50) {
   const svg = fs.readFileSync(svgPath, 'utf-8');
   const svgWithStyle = svg
     .replace(/<svg/, `<svg width="${size}" height="${size}" fill="#cacaca"`)
@@ -38,8 +40,17 @@ function svg2base64(svgPath: string, size = 50) {
     .replace(/\#333/g, '#1677ff')
     .replace(/\#E6E6E6/ig, '#e6f4ff');
 
-  const base64 = Buffer.from(svgWithStyle).toString('base64');
-  return `data:image/svg+xml;base64,${base64}`;
+  await initialize(fs.readFileSync(svg2pngWasmBgPath));
+  const png = await svg2png(
+    svgWithStyle,
+    {
+      width: size, // optional
+      height: size, // optional
+      backgroundColor: 'transparent'
+    },
+  );
+
+  return `data:image/png;base64,${Buffer.from(png).toString('base64')}`
 }
 
 function walk<T>(
@@ -47,7 +58,7 @@ function walk<T>(
 ) {
   return Promise.all(
     Object.keys(allIconDefs)
-      .map(svgIdentifier => {
+      .map(async (svgIdentifier) => {
         const iconDef = (allIconDefs as { [id: string]: IconDefinition })[
           svgIdentifier
         ];
@@ -55,7 +66,7 @@ function walk<T>(
         const realSvgPath = detectRealPath(iconDef);
         let svgBase64 = null;
         if (realSvgPath) {
-          try { svgBase64 = svg2base64(realSvgPath) } catch (e) { /** nothing */ }
+          try { svgBase64 = await svg2base64(realSvgPath) } catch (e) { /** nothing */ }
         }
 
         return fn({ svgIdentifier, svgBase64, ...iconDef });
