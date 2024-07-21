@@ -10,7 +10,7 @@ const LineOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={LineOutlinedSvg} />;
 
- /**![line](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABjElEQVR4Ae3gAZAkSZIkSRKLqpm7R0REZmZmVlVVVVV3d3d3d/fMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMdHd3d3dXV1VVVVVmZkZGRIS7m5kKz0xmV3d1d3dPz8zMzMxMovi/AfF/A+L/BsT/DYj/GxD/NyD+b0D834D4vwHxfwPi/wbE/w2I/xsQ/zcg/m9A/N+A+L8B8X8D4v8GxP8NiP8bEP83IP5vQDzTn/3Zn7227d/ifxFJr/MKr/AKvw0gnunP/uzPXtv2b/G/iKTXeYVXeIXfBhDP9Gd/9mevbfu3+F9E0uu8wiu8wm8DiGf6sz/7s9e2/Vv8LyLpdV7hFV7htwHE/w2I/xsQ/zcg/m9A/N+A+L8B8X8D4v8GxP8NiP8bEP83IP5vQPzfgPi/AfF/A+L/BsT/DYj/GxD/NyD+b0D834D4vwHxfwP/CKmXIDPEGFhdAAAAAElFTkSuQmCC) */ 
+ /**![line](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTkwNCA0NzZIMTIwYy00LjQgMC04IDMuNi04IDh2NTZjMCA0LjQgMy42IDggOCA4aDc4NGM0LjQgMCA4LTMuNiA4LTh2LTU2YzAtNC40LTMuNi04LTgtOHoiIC8+PC9zdmc+) */ 
 const RefIcon: React.ForwardRefExoticComponent<
   Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
 > = React.forwardRef<HTMLSpanElement, AntdIconProps>(LineOutlined);
