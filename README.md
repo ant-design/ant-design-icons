@@ -28,8 +28,7 @@
 
 ## Contribution Guides 贡献指南
 
-- @ant-design/icons-svg: [English](./packages/icons-svg/docs/ContributionGuide.md) ｜ [中文](./packages/icons-svg/docs/ContributionGuide.zh-CN.md)
-
+- @ant-design/icons-svg: [English](./packages/icons-svg/docs/ContributionGuide.md) ｜ [中文](./packages/icons-svg/docs/ContributionGuide.zh-CN.md) ｜ [日本語](./packages/icons-svg/docs/ContributionGuide.ja-JP.md)
 
 ## License
 
