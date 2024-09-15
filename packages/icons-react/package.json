@@ -79,7 +79,7 @@
     "cheerio": "1.0.0-rc.12"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=8"
   },
   "publishConfig": {
     "access": "public",
