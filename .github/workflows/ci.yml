@@ -15,11 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
-
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 16
       - name: restore lerna
         id: lerna_cache_node_modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             node_modules
@@ -38,11 +40,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: restore lerna
         id: lerna_cache_node_modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             node_modules
@@ -60,11 +62,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: restore lerna
         id: lerna_cache_node_modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             node_modules
@@ -78,7 +80,7 @@ jobs:
           yarn icons:build
 
       - name: cache icon-svg
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             packages/icons-svg/es
@@ -99,11 +101,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: restore lerna
         id: lerna_cache_node_modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             node_modules
@@ -112,7 +114,7 @@ jobs:
           restore-keys: lerna-${{ github.sha }}-package-json-
 
       - name: restore cache from icon-svg
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             packages/icons-svg/es
@@ -133,11 +135,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: restore lerna
         id: lerna_cache_node_modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             node_modules
@@ -146,7 +148,7 @@ jobs:
           restore-keys: lerna-${{ github.sha }}-package-json-
 
       - name: restore cache from icon-svg
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             packages/icons-svg/es
