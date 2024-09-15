@@ -30,7 +30,7 @@ jobs:
       - name: install
         if: steps.lerna_cache_node_modules.outputs.cache-hit != 'true'
         run: |
-          yarn
+          yarn --ignore-engines
           yarn config set ignore-engines true
           yarn bootstrap
 
