@@ -102,6 +102,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
       - name: restore lerna
         id: lerna_cache_node_modules
