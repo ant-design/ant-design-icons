@@ -4,9 +4,11 @@
 node_modules/
 
 # testing
-/coverage
+/coverage-report
+/junit
 
 # misc
+/.angular/cache
 .DS_Store
 .env.local
 .env.development.local

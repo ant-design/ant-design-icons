@@ -1,9 +1,9 @@
-version: 2
+version: 2.1
 
 references:
   container_config: &container_config
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:20.9.0-browsers
     working_directory: ~/ant-design-icons
 
   attach_workspace: &attach_workspace
@@ -44,6 +44,7 @@ jobs:
       - run: node -v
       - run: yarn -v
       - run: yarn
+      - run: yarn config set ignore-engines true
       - run: yarn bootstrap
       - run:
           command: |
@@ -77,7 +78,7 @@ jobs:
       - checkout
       - *attach_workspace
       - run: yarn react:ci
-  
+
   icons-angular:
     <<: *container_config
     steps:

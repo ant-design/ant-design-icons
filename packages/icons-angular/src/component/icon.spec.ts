@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { fakeAsync, flush, inject, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -6,6 +6,7 @@ import { AccountBookFill, AccountBookOutline, AccountBookTwoTone } from '../icon
 import { IconDirective } from './icon.directive';
 import { IconModule } from './icon.module';
 import { IconService } from './icon.service';
+import { ThemeType } from '@ant-design/icons-angular'
 
 const staticImportIcons = [
   AccountBookFill, AccountBookOutline, AccountBookTwoTone
@@ -135,9 +136,10 @@ describe('@ant-design/icons-angular', () => {
   describe('dynamic loading', () => {
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports     : [ IconModule, HttpClientModule ],
-        declarations: [ IconTestComponent ]
-      });
+    declarations: [IconTestComponent],
+    imports: [IconModule],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+});
     });
 
     beforeEach(inject([ IconService ], (is: IconService) => {
@@ -193,10 +195,10 @@ describe('@ant-design/icons-angular', () => {
 @Component({
   selector: 'icon-test',
   template: `
-      <i antIcon [type]="type" [theme]="theme"></i>
+      <span antIcon [type]="type" [theme]="theme"></span>
   `
 })
 export class IconTestComponent {
   type = 'account-book';
-  theme = 'fill';
+  theme: ThemeType = 'fill';
 }

@@ -9,7 +9,7 @@ Ant Design Icons for Angular
 
 </div>
 
-> With a better taste.
+![](./demo.png)
 
 ## Installation
 
@@ -66,7 +66,7 @@ export class AppComponent implements OnInit {
 When you want to render an icon:
 
 ```html
-<i antIcon type="ant-cloud" theme="outline"></i>
+<span antIcon type="ant-cloud" theme="outline"></span>
 ```
 
 Checkout the demo for more details.
@@ -77,18 +77,13 @@ For icons provided by Ant Design, we provide **dynamic loading** strategy to red
 
 Namespace is a new feature first introduced in `2.0.0-beta.2`. It allows users to register their own icons with simple API, support both dynamic loading and static loading.
 
-Say you want to add a `panda` icon in `animal` namespace. For static loading, you should call `addIconLiteral('animal:panda', '<svg>...</svg>')`. For dynamic loading, just put `panda.svg` under `assets/animal`. And render a panda like: `<i antIcon type="animal:panda">`.
+Say you want to add a `panda` icon in `animal` namespace. For static loading, you should call `addIconLiteral('animal:panda', '<svg>...</svg>')`. For dynamic loading, just put `panda.svg` under `assets/animal`. And render a panda like: `<span antIcon type="animal:panda">`.
 
 Please checkout the demo for more details.
 
 ## Development
 
-This package, unlike `@ant-design/icons-react`, does not list `@ant-design/icons` as a dependency. It has its own build up tooling chain which brings benefits like:
-
-* **Tree shake**.
-* Providing dynamic and static loading.
-* Reduced bundle size (500KB less if you only use dynamic loading).
-* Better performance because of no `svg => abstract node => svg` process.
+You can find the source code [here](https://github.com/ant-design/ant-design-icons).
 
 ### Setup
 
@@ -96,15 +91,11 @@ Install dependencies of `@ant-design/icons-angular`, and run `npm run generate`.
 
 ### Demo
 
-Run `ng serve` after `npm run generate`.
+Run `npm run generate` and then `npm run start`.
 
 ### Build
 
-Build the library by running the script we provide.
-
-```bash
-$ ./build.sh
-```
+Run `npm run build:lib`.
 
 ### Extension
 

@@ -1,5 +1,8 @@
+// Seems this is used for iconFont
 import * as React from 'react';
 import classNames from 'classnames';
+import { useComposeRef } from 'rc-util/lib/ref'
+import Context from './Context';
 
 import { svgBaseProps, warning, useInsertStyles } from '../utils';
 
@@ -22,7 +25,9 @@ export interface IconComponentProps extends IconBaseProps {
   ariaLabel?: React.AriaAttributes['aria-label'];
 }
 
-const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) => {
+const Icon: React.ForwardRefExoticComponent<
+Omit<IconComponentProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) => {
   const {
     // affect outter <i>...</i>
     className,
@@ -41,20 +46,29 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     ...restProps
   } = props;
 
+  const iconRef = React.useRef<HTMLElement>();
+  const mergedRef = useComposeRef(iconRef, ref);
+
   warning(
     Boolean(Component || children),
     'Should have `component` prop or `children`.',
   );
 
-  useInsertStyles();
+  useInsertStyles(iconRef);
+
+  const { prefixCls = 'anticon', rootClassName } = React.useContext(Context);
 
   const classString = classNames(
-    'anticon',
+    rootClassName,
+    prefixCls,
+    {
+      [`${prefixCls}-spin`]: !!spin && !!Component,
+    },
     className,
   );
 
   const svgClassString = classNames({
-    'anticon-spin': !!spin,
+    [`${prefixCls}-spin`]: !!spin,
   });
 
   const svgStyle = rotate
@@ -110,7 +124,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     <span
       role="img"
       {...restProps}
-      ref={ref}
+      ref={mergedRef}
       tabIndex={iconTabIndex}
       onClick={onClick}
       className={classString}

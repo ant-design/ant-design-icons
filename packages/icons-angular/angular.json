@@ -11,12 +11,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/examples",
+            "outputPath": {
+              "base": "dist/examples"
+            },
             "index": "examples/index.html",
-            "main": "examples/main.ts",
-            "polyfills": "examples/polyfills.ts",
+            "polyfills": [
+              "examples/polyfills.ts"
+            ],
             "tsConfig": "examples/tsconfig.app.json",
             "assets": [
               "examples/favicon.ico",
@@ -31,16 +34,13 @@
                 "output": "/assets/"
               }
             ],
-            "styles": [
-              "examples/styles.css"
-            ],
+            "styles": ["examples/styles.css"],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "examples/main.ts"
           },
           "configurations": {
             "production": {
@@ -60,9 +60,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "extractLicenses": true
             }
           },
           "defaultConfiguration": ""
@@ -70,18 +68,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "examples:build"
+            "buildTarget": "examples:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "examples:build:production"
+              "buildTarget": "examples:build:production"
             }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "examples:build"
+            "buildTarget": "examples:build"
           }
         }
       }
@@ -102,17 +106,6 @@
             }
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "src/tsconfig.lib.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -129,12 +122,18 @@
               }
             ]
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+          }
         }
       }
     }
   },
-  "defaultProject": "examples",
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

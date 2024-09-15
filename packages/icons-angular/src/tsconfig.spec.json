@@ -4,7 +4,6 @@
     "outDir": "../out-tsc/spec",
     "baseUrl": "./",
     "esModuleInterop": true,
-    "target": "es5",
     "types": [
       "jasmine",
       "node"
@@ -12,6 +11,9 @@
     "paths": {
       "@ant-design/icons-angular": [
         "./public_api.ts"
+      ],
+      "@ant-design/icons-angular/icons": [
+        "./icons/public_api.ts"
       ]
     }
   },

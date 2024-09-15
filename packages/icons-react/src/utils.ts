@@ -1,9 +1,15 @@
-import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { generate as generateColor } from '@ant-design/colors';
-import React, { useContext, useEffect } from 'react';
-import warn from 'rc-util/lib/warning';
+import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
+import { getShadowRoot } from 'rc-util/lib/Dom/shadow';
+import warn from 'rc-util/lib/warning';
+import React, { useContext, useEffect } from 'react';
+import type { CSSProperties, MouseEventHandler, MutableRefObject, ReactNode } from 'react'
 import IconContext from './components/Context';
+
+function camelCase(input: string) {
+  return input.replace(/-(.)/g, (match, g) => g.toUpperCase());
+}
 
 export function warning(valid: boolean, message: string) {
   warn(valid, `[@ant-design/icons] ${message}`);
@@ -27,20 +33,25 @@ export function normalizeAttrs(attrs: Attrs = {}): Attrs {
         delete acc.class;
         break;
       default:
-        acc[key] = val;
+        delete acc[key];
+        acc[camelCase(key)] = val;
     }
     return acc;
   }, {});
 }
 
-export interface Attrs {
-  [key: string]: string;
+export type Attrs = Record<string, string>;
+interface RootProps {
+  onClick: MouseEventHandler<Element>;
+  style: CSSProperties;
+  ref: MutableRefObject<any>
+  [props: string]: string | number | ReactNode | MouseEventHandler<Element> | CSSProperties | MutableRefObject<any>
 }
 
 export function generate(
   node: AbstractNode,
   key: string,
-  rootProps?: { [key: string]: any } | false,
+  rootProps?: RootProps | false,
 ): any {
   if (!rootProps) {
     return React.createElement(
@@ -49,6 +60,7 @@ export function generate(
       (node.children || []).map((child, index) => generate(child, `${key}-${node.tag}-${index}`)),
     );
   }
+
   return React.createElement(
     node.tag,
     {
@@ -87,7 +99,8 @@ export const svgBaseProps = {
 
 export const iconStyles = `
 .anticon {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   color: inherit;
   font-style: normal;
   line-height: 0;
@@ -141,13 +154,22 @@ export const iconStyles = `
 }
 `;
 
-export const useInsertStyles = (styleStr: string = iconStyles) => {
-  const { csp } = useContext(IconContext);
+export const useInsertStyles = (eleRef: React.RefObject<HTMLElement>) => {
+  const { csp, prefixCls } = useContext(IconContext);
+  let mergedStyleStr = iconStyles;
+
+  if (prefixCls) {
+    mergedStyleStr = mergedStyleStr.replace(/anticon/g, prefixCls);
+  }
 
   useEffect(() => {
-    updateCSS(styleStr, '@ant-design-icons', {
+    const ele = eleRef.current;
+    const shadowRoot = getShadowRoot(ele);
+
+    updateCSS(mergedStyleStr, '@ant-design-icons', {
       prepend: true,
       csp,
+      attachTo: shadowRoot,
     });
   }, []);
 };

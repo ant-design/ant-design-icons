@@ -46,6 +46,7 @@ audio-twotone
 audit-outlined
 backward-filled
 backward-outlined
+baidu-outlined
 bank-filled
 bank-outlined
 bank-twotone
@@ -60,6 +61,8 @@ bell-filled
 bell-outlined
 bell-twotone
 bg-colors-outlined
+bilibili-filled
+bilibili-outlined
 block-outlined
 bold-outlined
 book-filled
@@ -212,15 +215,19 @@ dingtalk-circle-filled
 dingtalk-outlined
 dingtalk-square-filled
 disconnect-outlined
+discord-filled
+discord-outlined
 dislike-filled
 dislike-outlined
 dislike-twotone
+docker-outlined
 dollar-circle-filled
 dollar-circle-outlined
 dollar-circle-twotone
 dollar-outlined
 dollar-twotone
 dot-chart-outlined
+dot-net-outlined
 double-left-outlined
 double-right-outlined
 down-circle-filled
@@ -384,6 +391,7 @@ google-plus-outlined
 google-plus-square-filled
 google-square-filled
 group-outlined
+harmony-o-s-outlined
 hdd-filled
 hdd-outlined
 hdd-twotone
@@ -395,6 +403,7 @@ highlight-filled
 highlight-outlined
 highlight-twotone
 history-outlined
+holder-outlined
 home-filled
 home-outlined
 home-twotone
@@ -430,7 +439,10 @@ interaction-outlined
 interaction-twotone
 issues-close-outlined
 italic-outlined
+java-outlined
+java-script-outlined
 key-outlined
+kubernetes-outlined
 laptop-outlined
 layout-filled
 layout-outlined
@@ -451,6 +463,7 @@ line-outlined
 link-outlined
 linkedin-filled
 linkedin-outlined
+linux-outlined
 loading-3-quarters-outlined
 loading-outlined
 lock-filled
@@ -478,6 +491,8 @@ menu-fold-outlined
 menu-outlined
 menu-unfold-outlined
 merge-cells-outlined
+merge-filled
+merge-outlined
 message-filled
 message-outlined
 message-twotone
@@ -495,7 +510,11 @@ money-collect-filled
 money-collect-outlined
 money-collect-twotone
 monitor-outlined
+moon-filled
+moon-outlined
 more-outlined
+muted-filled
+muted-outlined
 node-collapse-outlined
 node-expand-outlined
 node-index-outlined
@@ -504,6 +523,8 @@ notification-outlined
 notification-twotone
 number-outlined
 one-to-one-outlined
+open-a-i-filled
+open-a-i-outlined
 ordered-list-outlined
 paper-clip-outlined
 partition-outlined
@@ -526,6 +547,8 @@ picture-twotone
 pie-chart-filled
 pie-chart-outlined
 pie-chart-twotone
+pinterest-filled
+pinterest-outlined
 play-circle-filled
 play-circle-outlined
 play-circle-twotone
@@ -547,6 +570,8 @@ poweroff-outlined
 printer-filled
 printer-outlined
 printer-twotone
+product-filled
+product-outlined
 profile-filled
 profile-outlined
 profile-twotone
@@ -560,6 +585,7 @@ pull-request-outlined
 pushpin-filled
 pushpin-outlined
 pushpin-twotone
+python-outlined
 qq-circle-filled
 qq-outlined
 qq-square-filled
@@ -607,6 +633,7 @@ rocket-twotone
 rollback-outlined
 rotate-left-outlined
 rotate-right-outlined
+ruby-outlined
 safety-certificate-filled
 safety-certificate-outlined
 safety-certificate-twotone
@@ -639,6 +666,8 @@ shopping-outlined
 shopping-twotone
 shrink-outlined
 signal-filled
+signature-filled
+signature-outlined
 sisternode-outlined
 sketch-circle-filled
 sketch-outlined
@@ -669,6 +698,8 @@ sound-filled
 sound-outlined
 sound-twotone
 split-cells-outlined
+spotify-filled
+spotify-outlined
 star-filled
 star-outlined
 star-twotone
@@ -682,6 +713,8 @@ stop-outlined
 stop-twotone
 strikethrough-outlined
 subnode-outlined
+sun-filled
+sun-outlined
 swap-left-outlined
 swap-outlined
 swap-right-outlined
@@ -707,6 +740,8 @@ team-outlined
 thunderbolt-filled
 thunderbolt-outlined
 thunderbolt-twotone
+tik-tok-filled
+tik-tok-outlined
 to-top-outlined
 tool-filled
 tool-outlined
@@ -720,6 +755,10 @@ translation-outlined
 trophy-filled
 trophy-outlined
 trophy-twotone
+truck-filled
+truck-outlined
+twitch-filled
+twitch-outlined
 twitter-circle-filled
 twitter-outlined
 twitter-square-filled
@@ -765,6 +804,8 @@ warning-outlined
 warning-twotone
 wechat-filled
 wechat-outlined
+wechat-work-filled
+wechat-work-outlined
 weibo-circle-filled
 weibo-circle-outlined
 weibo-outlined
@@ -775,6 +816,8 @@ wifi-outlined
 windows-filled
 windows-outlined
 woman-outlined
+x-filled
+x-outlined
 yahoo-filled
 yahoo-outlined
 youtube-filled
