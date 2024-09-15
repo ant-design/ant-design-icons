@@ -1,0 +1,115 @@
+version: 2.1
+
+references:
+  container_config: &container_config
+    docker:
+      - image: cimg/node:20.9.0-browsers
+    working_directory: ~/ant-design-icons
+
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: ~/ant-design-icons
+
+  workflow: &workflow
+    jobs:
+      - setup:
+          filters:
+            branches:
+              ignore: gh-pages
+      - icons-svg:
+          requires:
+          - setup
+      - icons-react:
+          requires:
+          - setup
+          - icons-svg
+      - icons-angular:
+          requires:
+          - setup
+          - icons-svg
+      - icons-vue:
+          requires:
+          - setup
+          - icons-svg
+      - icons-react-native:
+          requires:
+          - setup
+          - icons-svg
+
+jobs:
+  setup:
+    <<: *container_config
+    steps:
+      - checkout
+      - run: node -v
+      - run: yarn -v
+      - run: yarn
+      - run: yarn config set ignore-engines true
+      - run: yarn bootstrap
+      - run:
+          command: |
+            set +eo
+            yarn list
+            true
+      - persist_to_workspace:
+          root: ~/ant-design-icons
+          paths:
+            - node_modules
+            - packages/icons-*/node_modules
+
+  icons-svg:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: yarn icons:generate
+      - run: yarn icons:build
+      - run: yarn icons:test
+      - persist_to_workspace:
+          root: ~/ant-design-icons
+          paths:
+            - packages/icons-svg/es
+            - packages/icons-svg/lib
+            - packages/icons-svg/inline-svg
+
+  icons-react:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: yarn react:ci
+
+  icons-angular:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: yarn angular:ci
+
+  icons-vue:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: yarn vue:ci
+
+  icons-react-native:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: yarn react-native:ci
+
+workflows:
+  version: 2
+  build_test:
+    <<: *workflow
+  nightly:
+    <<: *workflow
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
