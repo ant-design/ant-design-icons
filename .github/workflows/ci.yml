@@ -16,9 +16,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 16
       - name: restore lerna
         id: lerna_cache_node_modules
         uses: actions/cache@v4
@@ -33,7 +30,8 @@ jobs:
       - name: install
         if: steps.lerna_cache_node_modules.outputs.cache-hit != 'true'
         run: |
-          yarn --ignore-engines
+          yarn
+          yarn config set ignore-engines true
           yarn bootstrap
 
   lint:
