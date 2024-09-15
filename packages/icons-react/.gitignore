@@ -37,3 +37,4 @@ build/
 !.eslintrc.js
 !.fatherrc.js
 !jest.config.js
+.umi

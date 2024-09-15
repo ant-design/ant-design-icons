@@ -2,7 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { HttpBackend, HttpClient } from '@angular/common/http';
 import { Inject, Injectable, InjectionToken, Optional, Renderer2, RendererFactory2, SecurityContext } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { of as rxof, Observable, Subject } from 'rxjs';
+import { of, Observable, Subject } from 'rxjs';
 import {
   catchError,
   filter,
@@ -105,7 +105,6 @@ export class IconService {
   constructor(
     protected _rendererFactory: RendererFactory2,
     @Optional() protected _handler: HttpBackend,
-    // tslint:disable-next-line:no-any
     @Optional() @Inject(DOCUMENT) protected _document: any,
     protected sanitizer: DomSanitizer,
 
@@ -197,7 +196,7 @@ export class IconService {
     // If `icon` is a `IconDefinition` of successfully fetch, wrap it in an `Observable`.
     // Otherwise try to fetch it from remote.
     const $iconDefinition = definition
-      ? rxof(definition)
+      ? of(definition)
       : this._loadIconDynamically(icon as string);
 
     // If finally get an `IconDefinition`, render and return it. Otherwise throw an error.
@@ -224,7 +223,7 @@ export class IconService {
   ): Observable<IconDefinition | null> {
     // If developer doesn't provide HTTP module nor enable jsonp loading, just throw an error.
     if (!this._http && !this._enableJsonpLoading) {
-      return rxof(HttpModuleNotImport());
+      return of(HttpModuleNotImport());
     }
 
     // If multi directive ask for the same icon at the same time,
@@ -260,7 +259,7 @@ export class IconService {
       inProgress = source.pipe(
         tap(definition => this.addIcon(definition)),
         finalize(() => this._inProgressFetches.delete(type)),
-        catchError(() => rxof(null)),
+        catchError(() => of(null)),
         share()
       );
 

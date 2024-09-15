@@ -3,13 +3,14 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "esModuleInterop": true,
     "sourceMap": false,
     "declaration": true,
     "module": "esnext",
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "skipLibCheck": true,
-    "target": "es5",
+    "target": "ES2022",
     "lib": [
       "esnext",
       "dom"
@@ -21,6 +22,7 @@
       "@ant-design/icons-angular/icons": [
         "src/icons/public_api"
       ]
-    }
+    },
+    "useDefineForClassFields": false
   }
 }

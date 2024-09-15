@@ -1,11 +1,15 @@
+'use client';
+
 import * as React from 'react';
 import classNames from 'classnames';
 import type { IconDefinition } from '@ant-design/icons-svg/lib/types';
+import { blue } from '@ant-design/colors';
 
 import Context from './Context';
 import type { IconBaseProps } from './Icon';
 import ReactIcon from './IconBase';
-import { getTwoToneColor, TwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
+import { getTwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
+import type { TwoToneColor } from './twoTonePrimaryColor';
 import { normalizeTwoToneColors } from '../utils';
 
 export interface AntdIconProps extends IconBaseProps {
@@ -18,7 +22,7 @@ export interface IconComponentProps extends AntdIconProps {
 
 // Initial setting
 // should move it to antd main repo?
-setTwoToneColor('#1890ff');
+setTwoToneColor(blue.primary);
 
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757#issuecomment-488848720
 interface IconBaseComponent<Props>
@@ -46,9 +50,10 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     ...restProps
   } = props;
 
-  const { prefixCls = 'anticon' } = React.useContext(Context);
+  const { prefixCls = 'anticon', rootClassName } = React.useContext(Context);
 
   const classString = classNames(
+    rootClassName,
     prefixCls,
     {
       [`${prefixCls}-${icon.name}`]: !!icon.name,

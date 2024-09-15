@@ -1,5 +1,7 @@
-import { svgBaseProps, warning, useInsertStyles } from '../utils';
+import { svgBaseProps, warning } from '../utils';
 import { Component, FunctionalComponent, HTMLAttributes, PropType } from 'vue';
+import { useInjectIconContext } from './Context';
+import { InsertStyles } from './InsertStyle';
 
 export interface IconBaseProps extends HTMLAttributes {
   spin?: boolean;
@@ -32,6 +34,7 @@ const Icon: IconType = (props, context) => {
     onClick,
     ...restProps
   } = { ...props, ...attrs } as any;
+  const { prefixCls, rootClassName } = useInjectIconContext();
   const children = slots.default && slots.default();
   const hasChildren = children && children.length;
   const slotsComponent = slots.component;
@@ -40,15 +43,13 @@ const Icon: IconType = (props, context) => {
     'Should have `component` prop/slot or `children`.',
   );
 
-  useInsertStyles();
-
   const classString = {
-    anticon: true,
-    [cls]: cls,
+    [rootClassName.value]: !!rootClassName.value,
+    [prefixCls.value]: true,
   };
 
   const svgClassString = {
-    'anticon-spin': spin === '' || !!spin,
+    [`${prefixCls.value}-spin`]: spin === '' || !!spin,
   };
   const svgStyle = rotate
     ? {
@@ -97,8 +98,9 @@ const Icon: IconType = (props, context) => {
   }
 
   return (
-    <span role="img" {...restProps} onClick={onClick} class={classString}>
+    <span role="img" {...restProps} onClick={onClick} class={[classString, cls]}>
       {renderInnerNode()}
+      <InsertStyles></InsertStyles>
     </span>
   );
 };
