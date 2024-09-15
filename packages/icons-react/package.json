@@ -44,7 +44,7 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@umijs/fabric": "^3.0.0",
-    "antd": "^5.20.6",
+    "antd": "^4.8.2",
     "cross-env": "^5.2.0",
     "dumi": "^1.1.4",
     "enzyme": "^3.10.0",
