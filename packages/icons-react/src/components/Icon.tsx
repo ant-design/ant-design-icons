@@ -17,7 +17,7 @@ export interface CustomIconComponentProps {
   fill?: string;
   viewBox?: string;
   className?: string;
-  color?: string
+  color?: string;
   style?: React.CSSProperties;
 }
 

@@ -1051,7 +1051,6 @@ exports[`Icon.createFromIconfontCN() should support iconfont.cn 1`] = `
       aria-hidden="true"
       class=""
       color="blue"
-      fill="currentColor"
       focusable="false"
       height="1em"
       width="1em"
