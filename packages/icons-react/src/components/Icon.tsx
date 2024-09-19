@@ -14,7 +14,7 @@ export interface IconBaseProps extends React.HTMLProps<HTMLSpanElement> {
 export interface CustomIconComponentProps {
   width: string | number;
   height: string | number;
-  fill?: string;
+  fill: string;
   viewBox?: string;
   className?: string;
   style?: React.CSSProperties;
