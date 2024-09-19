@@ -3,6 +3,7 @@
 exports[`React AntdIcon Component should create SVG element. 1`] = `
 <IconReact
   className="my-icon"
+  color="red"
   extraProps={
     {
       "hello": "world",
