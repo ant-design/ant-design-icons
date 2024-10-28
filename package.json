@@ -1,5 +1,8 @@
 {
+  "name": "ant-design-icons",
+  "version": "0.0.1",
   "private": true,
+  "workspaces": ["packages/*"],
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
