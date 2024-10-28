@@ -1,4 +1,4 @@
-import { createTrasformStream } from '../creator';
+import { createTransformStream } from '../creator';
 import { ThemeType, AbstractNode } from '../../templates/types';
 import {
   pipe,
@@ -54,7 +54,7 @@ export const svg2Definition = ({
   extraNodeTransformFactories,
   stringify
 }: SVG2DefinitionOptions) =>
-  createTrasformStream((SVGString, { stem: name }) =>
+  createTransformStream((SVGString, { stem: name }) =>
     applyTo(SVGString)(
       pipe(
         // 0. The SVG string is like that:
