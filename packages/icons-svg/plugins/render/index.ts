@@ -1,4 +1,4 @@
-import { createTrasformStream } from '../creator';
+import { createTransformStream } from '../creator';
 import {
   renderIconDefinitionToSVGElement,
   HelperRenderOptions
@@ -18,7 +18,7 @@ export const useRender = ({
   getIconDefinitionFromSource,
   renderOptions
 }: RenderOptions) =>
-  createTrasformStream((content, file) => {
+  createTransformStream((content, file) => {
     const def = getIconDefinitionFromSource(content);
     file.extname = '.svg';
     file.stem = def.name;
