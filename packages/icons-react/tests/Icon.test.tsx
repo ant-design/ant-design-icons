@@ -9,6 +9,7 @@ describe('React AntdIcon Component', () => {
       style: {
         fontSize: '3rem',
       },
+      color: 'red',
       className: 'my-icon',
       extraProps: { hello: 'world' },
     } as any;
