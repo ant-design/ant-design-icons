@@ -44,7 +44,9 @@ const JSONP_HANDLER_NAME = '__ant_icon_load';
 
 export const ANT_ICONS = new InjectionToken<IconDefinition[]>('ant_icons');
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class IconService {
   defaultTheme: ThemeType = 'outline';
 

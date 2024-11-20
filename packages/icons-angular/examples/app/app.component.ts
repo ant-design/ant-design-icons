@@ -13,9 +13,10 @@ import { manifest, IconService, Manifest, ThemeType } from '@ant-design/icons-an
 // </svg>`;
 
 @Component({
-  selector   : 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls  : [ './app.component.css' ]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    standalone: false
 })
 export class AppComponent implements OnInit {
   currentTheme: ThemeType = 'fill';
