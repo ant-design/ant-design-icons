@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { IconDirective } from './icon.directive';
-import { IconService } from './icon.service';
 
+
+/**
+ * @deprecated Please use `IconDirective` instead, will be removed in v20.
+ */
 @NgModule({
-  exports: [IconDirective],
-  declarations: [IconDirective],
-  providers: [IconService]
+  imports: [IconDirective],
+  exports: [IconDirective]
 })
-export class IconModule { }
+export class IconModule {}

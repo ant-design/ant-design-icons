@@ -1,10 +1,9 @@
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { Component } from '@angular/core';
-import { fakeAsync, flush, inject, TestBed } from '@angular/core/testing';
+import { Component, DebugElement } from '@angular/core';
+import { ComponentFixture, fakeAsync, flush, inject, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { AccountBookFill, AccountBookOutline, AccountBookTwoTone } from '../icons/public_api';
 import { IconDirective } from './icon.directive';
-import { IconModule } from './icon.module';
 import { IconService } from './icon.service';
 import { ThemeType } from '@ant-design/icons-angular'
 
@@ -25,18 +24,11 @@ const pandaLiteral = `<svg viewBox="0 0 1024 1024">
 
 describe('@ant-design/icons-angular', () => {
   let iconService: IconService;
-  let testComponent;
-  let fixture;
-  let icons;
+  let testComponent: IconTestComponent;
+  let fixture: ComponentFixture<IconTestComponent>;
+  let icons: DebugElement[];
 
   describe('static loading', () => {
-    beforeEach(() => {
-      TestBed.configureTestingModule({
-        imports     : [ IconModule ],
-        declarations: [ IconTestComponent ]
-      });
-    });
-
     beforeEach(inject([ IconService ], (is: IconService) => {
       iconService = is;
       iconService.addIcon(...staticImportIcons);
@@ -136,10 +128,8 @@ describe('@ant-design/icons-angular', () => {
   describe('dynamic loading', () => {
     beforeEach(() => {
       TestBed.configureTestingModule({
-    declarations: [IconTestComponent],
-    imports: [IconModule],
-    providers: [provideHttpClient(withInterceptorsFromDi())]
-});
+        providers: [provideHttpClient(withInterceptorsFromDi())]
+      });
     });
 
     beforeEach(inject([ IconService ], (is: IconService) => {
@@ -194,9 +184,8 @@ describe('@ant-design/icons-angular', () => {
 
 @Component({
   selector: 'icon-test',
-  template: `
-      <span antIcon [type]="type" [theme]="theme"></span>
-  `
+  imports: [IconDirective],
+  template: `<span antIcon [type]="type" [theme]="theme"></span>`
 })
 export class IconTestComponent {
   type = 'account-book';
