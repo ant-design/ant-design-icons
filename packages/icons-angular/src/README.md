@@ -21,17 +21,15 @@ ng add @ant-design/icons-angular
 
 ## Usage
 
-You should import `IconModule` in your application's root module.
+You should import `IconDirective` in your component.
 
 ```ts
-import { IconModule } from '@ant-design/icons-angular';
+import { IconDirective } from '@ant-design/icons-angular';
 
-@NgModule({
-  imports: [
-    IconModule
-  ]
+@Component({
+  imports: [ IconDirective ]
 })
-export class AppModule { }
+export class AppComponent {}
 ```
 
 And register the icons that you need to `IconService` (all or explicitly, we call it **static loading**):
@@ -39,28 +37,41 @@ And register the icons that you need to `IconService` (all or explicitly, we cal
 > ATTENTION! We strongly suggest you not to register all icons. That would increase your bundle's size dramatically.
 
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { IconDefinition, IconService } from '@ant-design/icons-angular';
+import { Component } from '@angular/core';
+import { IconService } from '@ant-design/icons-angular';
 import { AccountBookFill } from '@ant-design/icons-angular/icons'
 // import * as AllIcons from 'ant-icons-angular/icons';
 
 @Component({
-  selector   : 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls  : ['./app.component.css']
+  // ...
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   constructor(private _iconService: IconService) {
     // Import all. NOT RECOMMENDED. ❌
     // const antDesignIcons = AllIcons as {
       // [key: string]: IconDefinition;
     // };
     // this._iconService.addIcon(...Object.keys(antDesignIcons).map(key => antDesignIcons[key]));
+
     // Import what you need! ✔️
     this._iconService.addIcon(...[ AccountBookFill ]);
     this._iconService.twoToneColor = { primaryColor: '#1890ff' };
   }
 }
+```
+
+You can also provide icons you need in the `app.config.ts`:
+
+```ts
+import { ApplicationConfig } from '@angular/core';
+import { provideAntIcons } from '@ant-design/icons-angular';
+import { AccountBookFill } from '@ant-design/icons-angular/icons';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideAntIcons([ AccountBookFill ])
+  ]
+};
 ```
 
 When you want to render an icon:
@@ -75,7 +86,7 @@ For icons provided by Ant Design, we provide **dynamic loading** strategy to red
 
 ### Namespace
 
-Namespace is a new feature first introduced in `2.0.0-beta.2`. It allows users to register their own icons with simple API, support both dynamic loading and static loading.
+Namespace is first introduced in `2.0.0-beta.2`. It allows users to register their own icons with simple API, support both dynamic loading and static loading.
 
 Say you want to add a `panda` icon in `animal` namespace. For static loading, you should call `addIconLiteral('animal:panda', '<svg>...</svg>')`. For dynamic loading, just put `panda.svg` under `assets/animal`. And render a panda like: `<span antIcon type="animal:panda">`.
 
@@ -99,4 +110,6 @@ Run `npm run build:lib`.
 
 ### Extension
 
-You can simply extend this package by creating directives or services that extends `IconDirective` and `IconService`. And it is worth mentioning that `_changeIcon` method returns a `Promise<svg>` using which you could add extra modifications. [ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/icon) is a good example of extending this package.
+You can simply extend this package by creating directives or services that extends `IconDirective` and `IconService`. And it is worth mentioning that `_changeIcon` method returns a `Promise<svg>` using which you could add extra modifications.
+
+[ng-zorro-antd](https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/components/icon) is a good example of extending this package.

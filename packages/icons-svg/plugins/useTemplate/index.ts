@@ -1,4 +1,4 @@
-import { createTrasformStream } from '../creator';
+import { createTransformStream } from '../creator';
 import template from 'lodash.template';
 
 export interface UseTemplatePluginOptions {
@@ -15,7 +15,7 @@ export const useTemplate = ({
   mapToInterpolate
 }: UseTemplatePluginOptions) => {
   const executor = template(tplContent);
-  return createTrasformStream((content, { stem: name, path }) =>
+  return createTransformStream((content, { stem: name, path }) =>
     executor(mapToInterpolate({ name, content, path }))
   );
 };

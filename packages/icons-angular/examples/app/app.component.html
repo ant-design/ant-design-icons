@@ -11,14 +11,14 @@
   </select>
 </p>
 
-<ng-container *ngFor="let name of icons;">
+@for (name of icons; track name) {
   <span antIcon [type]="name" [theme]="currentTheme"></span>
-</ng-container>
+}
 
 <!-- To test `share` dynamic importing.  -->
 
-<ng-container *ngIf="currentTheme === 'fill'">
+@if (currentTheme === 'fill') {
   <h2>With Namespace</h2>
   <span antIcon [type]="'animal:panda'"></span>
   <span antIcon [type]="'animal:panda'"></span>
-</ng-container>
+}

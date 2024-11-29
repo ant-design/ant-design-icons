@@ -1,7 +1,7 @@
 import through from 'through2';
 import File from 'vinyl';
 
-export const createTrasformStream = (fn: (raw: string, file: File) => string) =>
+export const createTransformStream = (fn: (raw: string, file: File) => string) =>
   through.obj((file: File, encoding, done) => {
     if (file.isBuffer()) {
       const before = file.contents.toString(encoding);
@@ -17,7 +17,7 @@ export const createTrasformStream = (fn: (raw: string, file: File) => string) =>
     }
   });
 
-export const createTrasformStreamAsync = (
+export const createTransformStreamAsync = (
   fn: (raw: string, file: File) => Promise<string>
 ) =>
   through.obj((file: File, encoding, done) => {

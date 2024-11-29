@@ -1,6 +1,7 @@
 import {
   Directive,
   ElementRef,
+  inject,
   Input,
   OnChanges,
   Renderer2,
@@ -25,11 +26,12 @@ function checkMeta(prev: RenderMeta, after: RenderMeta): boolean {
 })
 export class IconDirective implements OnChanges {
   @Input() type: string | IconDefinition;
-
   @Input() theme?: ThemeType;
   @Input() twoToneColor?: string;
 
-  constructor(protected _iconService: IconService, protected _elementRef: ElementRef, protected _renderer: Renderer2) {}
+  protected _elementRef = inject(ElementRef);
+  protected _renderer = inject(Renderer2);
+  constructor(protected _iconService: IconService) {}
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.type || changes.theme || changes.twoToneColor) {
