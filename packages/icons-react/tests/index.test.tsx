@@ -512,4 +512,15 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
     const wrapper = render(<CloseCircleFilled />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should support layer', () => {
+    testingLibRender(
+      <IconProvider value={{ layer: 'test' }}>
+        <HomeOutlined />
+      </IconProvider>,
+    );
+
+    const styleEle = document.querySelector('style')!;
+    expect(styleEle.innerHTML).toContain('@layer test');
+  });
 });
