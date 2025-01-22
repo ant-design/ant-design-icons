@@ -155,11 +155,15 @@ export const iconStyles = `
 `;
 
 export const useInsertStyles = (eleRef: React.RefObject<HTMLElement>) => {
-  const { csp, prefixCls } = useContext(IconContext);
+  const { csp, prefixCls, layer } = useContext(IconContext);
   let mergedStyleStr = iconStyles;
 
   if (prefixCls) {
     mergedStyleStr = mergedStyleStr.replace(/anticon/g, prefixCls);
+  }
+
+  if (layer) {
+    mergedStyleStr = `@layer ${layer} {\n${mergedStyleStr}\n}`;
   }
 
   useEffect(() => {
