@@ -375,6 +375,10 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
     },
   });
 
+  beforeEach(() => {
+    document.head.innerHTML = '';
+  });
+
   mountTest(() => <IconFont type="icon-facebook" />);
 
   it('should support iconfont.cn', () => {
@@ -477,7 +481,7 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
       },
     );
 
-    expect(document.querySelector('style').nonce).toEqual('test');
+    expect(document.querySelector('style')!.nonce).toEqual('test');
   });
 
   it('should support rootClassName', () => {
@@ -514,13 +518,17 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
   });
 
   it('should support layer', () => {
+    const presetStyle = document.createElement('style');
+    document.head.appendChild(presetStyle);
+
     testingLibRender(
       <IconProvider value={{ layer: 'test' }}>
         <HomeOutlined />
       </IconProvider>,
     );
 
-    const styleEle = document.querySelector('style')!;
-    expect(styleEle.innerHTML).toContain('@layer test');
+    const styleList = Array.from(document.querySelectorAll('style'));
+    expect(styleList[0]).toBe(presetStyle);
+    expect(styleList[1].innerHTML).toContain('@layer test');
   });
 });
