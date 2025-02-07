@@ -3,8 +3,8 @@ import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/typ
 import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 import { getShadowRoot } from 'rc-util/lib/Dom/shadow';
 import warn from 'rc-util/lib/warning';
+import type { CSSProperties, MouseEventHandler, MutableRefObject, ReactNode } from 'react';
 import React, { useContext, useEffect } from 'react';
-import type { CSSProperties, MouseEventHandler, MutableRefObject, ReactNode } from 'react'
 import IconContext from './components/Context';
 
 function camelCase(input: string) {
@@ -44,15 +44,17 @@ export type Attrs = Record<string, string>;
 interface RootProps {
   onClick: MouseEventHandler<Element>;
   style: CSSProperties;
-  ref: MutableRefObject<any>
-  [props: string]: string | number | ReactNode | MouseEventHandler<Element> | CSSProperties | MutableRefObject<any>
+  ref: MutableRefObject<any>;
+  [props: string]:
+    | string
+    | number
+    | ReactNode
+    | MouseEventHandler<Element>
+    | CSSProperties
+    | MutableRefObject<any>;
 }
 
-export function generate(
-  node: AbstractNode,
-  key: string,
-  rootProps?: RootProps | false,
-): any {
+export function generate(node: AbstractNode, key: string, rootProps?: RootProps | false): any {
   if (!rootProps) {
     return React.createElement(
       node.tag,
@@ -171,7 +173,7 @@ export const useInsertStyles = (eleRef: React.RefObject<HTMLElement>) => {
     const shadowRoot = getShadowRoot(ele);
 
     updateCSS(mergedStyleStr, '@ant-design-icons', {
-      prepend: true,
+      prepend: !layer,
       csp,
       attachTo: shadowRoot,
     });
