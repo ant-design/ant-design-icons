@@ -1,7 +1,7 @@
 // Seems this is used for iconFont
 import * as React from 'react';
 import classNames from 'classnames';
-import { useComposeRef } from 'rc-util/lib/ref'
+import { useComposeRef } from '@rc-component/util/lib/ref'
 import Context from './Context';
 
 import { svgBaseProps, warning, useInsertStyles } from '../utils';
