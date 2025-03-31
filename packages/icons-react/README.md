@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-yarn add @ant-design/icons@4.0.0
+yarn add @ant-design/icons
 ```
 
 ## Basic Usage
