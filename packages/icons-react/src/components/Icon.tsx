@@ -33,7 +33,7 @@ Omit<IconComponentProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
     className,
 
     // affect inner <svg>...</svg>
-    component: Component,
+    component,
     viewBox,
     spin,
     rotate,
@@ -50,7 +50,7 @@ Omit<IconComponentProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
   const mergedRef = useComposeRef(iconRef, ref);
 
   warning(
-    Boolean(Component || children),
+    Boolean(component || children),
     'Should have `component` prop or `children`.',
   );
 
@@ -91,8 +91,8 @@ Omit<IconComponentProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
 
   // component > children
   const renderInnerNode = () => {
-    if (Component) {
-      return <Component {...innerSvgProps}>{children}</Component>;
+    if (component) {
+      return React.createElement(component, innerSvgProps, children);
     }
 
     if (children) {
