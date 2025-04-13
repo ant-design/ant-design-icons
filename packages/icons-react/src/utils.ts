@@ -12,7 +12,9 @@ function camelCase(input: string) {
 }
 
 export function warning(valid: boolean, message: string) {
-  warn(valid, `[@ant-design/icons] ${message}`);
+  if (typeof warn === 'function') {
+    warn(valid, `[@ant-design/icons] ${message}`);
+  }
 }
 
 export function isIconDefinition(target: any): target is IconDefinition {
