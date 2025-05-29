@@ -10,24 +10,19 @@
     "importHelpers": true,
     "newLine": "lf",
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "outDir": "./dist/icons",
     "rootDir": ".",
     "sourceMap": true,
     "inlineSources": true,
     "target": "ES2022",
-    "lib": [
-      "ESNext",
-      "dom"
-    ],
+    "lib": ["ESNext", "dom"],
     "skipLibCheck": true,
     "types": [],
     "baseUrl": ".",
     "useDefineForClassFields": false
   },
-  "files": [
-    "public_api.ts"
-  ],
+  "files": ["public_api.ts"],
   "angularCompilerOptions": {
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true

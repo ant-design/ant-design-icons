@@ -1,6 +1,6 @@
-import { DOCUMENT } from '@angular/common';
+
 import { HttpBackend, HttpClient } from '@angular/common/http';
-import { Inject, Injectable, InjectionToken, Optional, Renderer2, RendererFactory2, SecurityContext } from '@angular/core';
+import { Inject, Injectable, InjectionToken, Optional, Renderer2, RendererFactory2, SecurityContext, DOCUMENT } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { of, Observable, Subject } from 'rxjs';
 import {

@@ -4,16 +4,9 @@
     "outDir": "../out-tsc/app",
     "types": []
   },
-  "files": [
-    "main.ts",
-    "polyfills.ts"
-  ],
+  "files": ["main.ts"],
   "paths": {
-    "@ant-design/icons-angular": [
-      "../lib/public_api"
-    ],
-    "@ant-design/icons-angular/icons": [
-      "../lib/icons/public_api"
-    ]
+    "@ant-design/icons-angular": ["../lib/public_api"],
+    "@ant-design/icons-angular/icons": ["../lib/icons/public_api"]
   }
 }
