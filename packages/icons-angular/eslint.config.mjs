@@ -8,7 +8,7 @@ import prettier from 'eslint-plugin-prettier';
 
 export default tseslint.config(
   {
-    ignores: ['.*/', 'src/icons/', 'publish/', 'coverage-report/', 'dist/']
+    ignores: ['.*/', 'src/icons/', 'src/manifest.ts', 'coverage-report/', 'dist/']
   },
   {
     files: ['**/*.ts'],
