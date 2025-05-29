@@ -100,7 +100,7 @@ export class IconService {
 
   protected _rendererFactory = inject(RendererFactory2);
   protected _handler = inject(HttpBackend, { optional: true });
-  protected _document = inject(DOCUMENT, { optional: true });
+  protected _document = inject(DOCUMENT);
   protected sanitizer = inject(DomSanitizer);
 
   constructor(@Optional() @Inject(ANT_ICONS) protected _antIcons: IconDefinition[]) {
@@ -263,7 +263,7 @@ export class IconService {
       loader.src = url;
 
       function clean(): void {
-        loader.parentNode.removeChild(loader);
+        loader.parentNode!.removeChild(loader);
         clearTimeout(timer);
       }
 
@@ -325,7 +325,7 @@ export class IconService {
   protected _createSVGElementFromString(str: string): SVGElement {
     const div = this._document.createElement('div');
     div.innerHTML = str;
-    const svg: SVGElement = div.querySelector('svg');
+    const svg: SVGElement | null = div.querySelector('svg');
     if (!svg) {
       throw SVGTagNotFoundError;
     }

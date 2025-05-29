@@ -3,8 +3,7 @@
   "compilerOptions": {
     "outDir": "../out-tsc/spec",
     "baseUrl": "./",
-    "esModuleInterop": true,
-    "types": ["jasmine", "node"],
+    "types": ["jasmine"],
     "paths": {
       "@ant-design/icons-angular": ["./public_api.ts"],
       "@ant-design/icons-angular/icons": ["./icons/public_api.ts"]

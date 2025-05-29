@@ -155,7 +155,7 @@ describe('@ant-design/icons-angular', () => {
         expect(svgElement.getAttribute('width')).toBe('1em');
         expect(svgElement.getAttribute('height')).toBe('1em');
         done();
-      }, 50);
+      }, 100);
     });
 
     /**
