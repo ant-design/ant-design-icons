@@ -1,12 +1,4 @@
-import {
-  Directive,
-  ElementRef,
-  inject,
-  Input,
-  OnChanges,
-  Renderer2,
-  SimpleChanges
-} from '@angular/core';
+import { Directive, ElementRef, inject, Input, OnChanges, Renderer2, SimpleChanges } from '@angular/core';
 import { IconDefinition, ThemeType } from '../types';
 import { alreadyHasAThemeSuffix, getNameAndNamespace, isIconDefinition, warn, withSuffix } from '../utils';
 import { IconService } from './icon.service';
@@ -48,23 +40,22 @@ export class IconDirective implements OnChanges {
         this._clearSVGElement();
         resolve(null);
         return;
-      } 
+      }
 
       const beforeMeta = this._getSelfRenderMeta();
-      this._iconService.getRenderedContent(
-        this._parseIconType(this.type, this.theme),
-        this.twoToneColor
-      ).subscribe(svg => {
-        // avoid race condition
-        // see https://github.com/ant-design/ant-design-icons/issues/315
-        const afterMeta = this._getSelfRenderMeta()
-        if (checkMeta(beforeMeta, afterMeta)) {
-          this._setSVGElement(svg);
-          resolve(svg);
-        } else {
-          resolve(null);
-        }
-      });
+      this._iconService
+        .getRenderedContent(this._parseIconType(this.type, this.theme), this.twoToneColor)
+        .subscribe(svg => {
+          // avoid race condition
+          // see https://github.com/ant-design/ant-design-icons/issues/315
+          const afterMeta = this._getSelfRenderMeta();
+          if (checkMeta(beforeMeta, afterMeta)) {
+            this._setSVGElement(svg);
+            resolve(svg);
+          } else {
+            resolve(null);
+          }
+        });
     });
   }
 
@@ -87,12 +78,12 @@ export class IconDirective implements OnChanges {
     if (isIconDefinition(type)) {
       return type;
     } else {
-      const [ name, namespace ] = getNameAndNamespace(type);
+      const [name, namespace] = getNameAndNamespace(type);
       if (namespace) {
         return type;
       }
       if (alreadyHasAThemeSuffix(name)) {
-        if (!!theme) {
+        if (theme) {
           warn(`'type' ${name} already gets a theme inside so 'theme' ${theme} would be ignored`);
         }
         return name;
@@ -112,7 +103,8 @@ export class IconDirective implements OnChanges {
     const children = el.childNodes;
     const length = children.length;
     for (let i = length - 1; i >= 0; i--) {
-      const child = children[ i ] as any;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const child = children[i] as any;
       if (child.tagName?.toLowerCase() === 'svg') {
         this._renderer.removeChild(el, child);
       }
