@@ -3,7 +3,7 @@ version: 2.1
 references:
   container_config: &container_config
     docker:
-      - image: cimg/node:20.9.0-browsers
+      - image: cimg/node:20.19.0-browsers
     working_directory: ~/ant-design-icons
 
   attach_workspace: &attach_workspace
