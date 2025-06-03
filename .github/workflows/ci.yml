@@ -1,0 +1,160 @@
+name: ✅ test
+
+on: [push, pull_request]
+
+# Cancel prev CI if new commit come
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: restore lerna
+        id: lerna_cache_node_modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: lerna-${{ github.sha }}-package-json-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            lerna-${{ github.sha }}-package-json-
+
+      - name: install
+        if: steps.lerna_cache_node_modules.outputs.cache-hit != 'true'
+        run: |
+          yarn --ignore-engines
+          yarn config set ignore-engines true
+          yarn bootstrap
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: restore lerna
+        id: lerna_cache_node_modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: lerna-${{ github.sha }}-package-json-${{ hashFiles('**/package.json') }}
+          restore-keys: lerna-${{ github.sha }}-package-json-
+
+      - name: lint
+        run: yarn lint
+    needs: setup
+
+  ################################ Icon Svg ################################
+  icon-svg:
+    name: icon-svg
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: restore lerna
+        id: lerna_cache_node_modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: lerna-${{ github.sha }}-package-json-${{ hashFiles('**/package.json') }}
+          restore-keys: lerna-${{ github.sha }}-package-json-
+
+      - name: icon-svg build
+        run: |
+          yarn icons:generate
+          yarn icons:build
+
+      - name: cache icon-svg
+        uses: actions/cache@v4
+        with:
+          path: |
+            packages/icons-svg/es
+            packages/icons-svg/lib
+            packages/icons-svg/inline-svg
+          key: icon-svg-${{ github.sha }}
+
+      - name: icon-svg ci
+        run: yarn icons:test
+    needs: setup
+
+  ################################ Framework Icons CI ################################
+  framework-test:
+    name: test
+    strategy:
+      matrix:
+        framework: ['angular', 'react', 'vue']
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: restore lerna
+        id: lerna_cache_node_modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: lerna-${{ github.sha }}-package-json-${{ hashFiles('**/package.json') }}
+          restore-keys: lerna-${{ github.sha }}-package-json-
+
+      - name: restore cache from icon-svg
+        uses: actions/cache@v4
+        with:
+          path: |
+            packages/icons-svg/es
+            packages/icons-svg/lib
+            packages/icons-svg/inline-svg
+          key: icon-svg-${{ github.sha }}
+
+      - name: icon-${{ matrix.framework }} ci
+        run: yarn ${{ matrix.framework }}:ci
+
+    needs: [setup, icon-svg]
+
+  rn-test:
+    name: test
+    strategy:
+      matrix:
+        framework: ['react-native']
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: restore lerna
+        id: lerna_cache_node_modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: lerna-${{ github.sha }}-package-json-${{ hashFiles('**/package.json') }}
+          restore-keys: lerna-${{ github.sha }}-package-json-
+
+      - name: restore cache from icon-svg
+        uses: actions/cache@v4
+        with:
+          path: |
+            packages/icons-svg/es
+            packages/icons-svg/lib
+            packages/icons-svg/inline-svg
+          key: icon-svg-${{ github.sha }}
+
+      - name: icon-${{ matrix.framework }} ci
+        run: yarn ${{ matrix.framework }}:ci
+
+    needs: [setup, icon-svg]
