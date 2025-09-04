@@ -120,6 +120,7 @@ export const iconStyles = `
 
 .anticon svg {
   display: inline-block;
+  vertical-align: inherit;
 }
 
 .anticon::before {
