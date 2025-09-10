@@ -10,7 +10,7 @@
 <div align="center">
 
 [![CircleCI status][circleci-image]][circleci-url]
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org)
 
 [circleci-image]: https://img.shields.io/circleci/build/github/ant-design/ant-design-icons/master?style=flat-square
 [circleci-url]: https://circleci.com/gh/ant-design/ant-design-icons
