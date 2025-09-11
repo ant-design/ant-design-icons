@@ -2,7 +2,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "target": "es5",
-    "declaration": true
+    "declaration": true,
+    "skipLibCheck": true,
+    "types": []
   },
   "include": ["src/**/*"]
 }

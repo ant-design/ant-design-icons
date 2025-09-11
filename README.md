@@ -9,22 +9,19 @@
 
 <div align="center">
 
-[![CircleCI status][circleci-image]][circleci-url]
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
-
-[circleci-image]: https://img.shields.io/circleci/build/github/ant-design/ant-design-icons/master?style=flat-square
-[circleci-url]: https://circleci.com/gh/ant-design/ant-design-icons
+[![CI](https://github.com/ant-design/ant-design-icons/actions/workflows/ci.yml/badge.svg)](https://github.com/ant-design/ant-design-icons/actions/workflows/ci.yml)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org)
 </div>
 
 ## Packages
 
-| Framework | Package name | Latest Version | Download stats |
-| --- | --- | --- | --- |
-| Vanilla | [@ant-design/icons-svg](./packages/icons-svg) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-svg.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-svg) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-svg.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-svg) |
-| React | [@ant-design/icons](./packages/icons-react) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons.svg?style=flat)](https://npmjs.org/package/@ant-design/icons) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons.svg?style=flat)](https://npmjs.org/package/@ant-design/icons) |
-| React Native | [@ant-design/icons-react-native](./packages/icons-react-native) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-react-native.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-react-native) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-react-native.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-react-native) |
-| Angular | [@ant-design/icons-angular](./packages/icons-angular) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-angular.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-angular) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-angular.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-angular) |
-| Vue | [@ant-design/icons-vue](./packages/icons-vue) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-vue.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-vue) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-vue.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-vue) |
+| Framework | Package name | Latest Version | Download stats | Bundle Size | Package Size |
+| --- | --- | --- | --- | --- | --- |
+| Vanilla | [@ant-design/icons-svg](./packages/icons-svg) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-svg.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-svg) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-svg.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-svg) | [![bundlephobia](https://img.shields.io/bundlephobia/minzip/@ant-design/icons-svg.svg?style=flat)](https://bundlephobia.com/result?p=@ant-design/icons-svg) | [![install size](https://packagephobia.com/badge?p=@ant-design/icons-svg)](https://packagephobia.com/result?p=@ant-design/icons-svg) |
+| React | [@ant-design/icons](./packages/icons-react) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons.svg?style=flat)](https://npmjs.org/package/@ant-design/icons) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons.svg?style=flat)](https://npmjs.org/package/@ant-design/icons) | [![bundlephobia](https://img.shields.io/bundlephobia/minzip/@ant-design/icons.svg?style=flat)](https://bundlephobia.com/result?p=@ant-design/icons) | [![install size](https://packagephobia.com/badge?p=@ant-design/icons)](https://packagephobia.com/result?p=@ant-design/icons) |
+| React Native | [@ant-design/icons-react-native](./packages/icons-react-native) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-react-native.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-react-native) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-react-native.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-react-native) | [![bundlephobia](https://img.shields.io/bundlephobia/minzip/@ant-design/icons-react-native.svg?style=flat)](https://bundlephobia.com/result?p=@ant-design/icons-react-native) | [![install size](https://packagephobia.com/badge?p=@ant-design/icons-react-native)](https://packagephobia.com/result?p=@ant-design/icons-react-native) |
+| Angular | [@ant-design/icons-angular](./packages/icons-angular) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-angular.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-angular) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-angular.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-angular) | [![bundlephobia](https://img.shields.io/bundlephobia/minzip/@ant-design/icons-angular.svg?style=flat)](https://bundlephobia.com/result?p=@ant-design/icons-angular) | [![install size](https://packagephobia.com/badge?p=@ant-design/icons-angular)](https://packagephobia.com/result?p=@ant-design/icons-angular) |
+| Vue | [@ant-design/icons-vue](./packages/icons-vue) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-vue.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-vue) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-vue.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-vue) | [![bundlephobia](https://img.shields.io/bundlephobia/minzip/@ant-design/icons-vue.svg?style=flat)](https://bundlephobia.com/result?p=@ant-design/icons-vue) | [![install size](https://packagephobia.com/badge?p=@ant-design/icons-vue)](https://packagephobia.com/result?p=@ant-design/icons-vue) |
 
 ## Contribution Guides 贡献指南
 

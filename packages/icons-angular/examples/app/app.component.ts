@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   icons: string[] = [];
 
   changeIcons(): void {
-    this.icons = this.names[ this.currentTheme ];
+    this.icons = this.names[this.currentTheme];
   }
 
   constructor(private _iconService: IconService) {

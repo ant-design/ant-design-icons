@@ -40,7 +40,6 @@
     "@types/react-test-renderer": "^16.0.1",
     "@umijs/fabric": "^2.14.1",
     "@umijs/test": "^4.0.68",
-    "cross-env": "^5.2.0",
     "father": "^4.1.9",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",

@@ -21,11 +21,16 @@ export function getSecondaryColor(primaryColor: string): string {
 
 export function withSuffix(name: string, theme: ThemeType | undefined): string {
   switch (theme) {
-    case 'fill': return `${name}-fill`;
-    case 'outline': return `${name}-o`;
-    case 'twotone': return `${name}-twotone`;
-    case undefined: return name;
-    default: throw new Error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}Theme "${theme}" is not a recognized theme!`);
+    case 'fill':
+      return `${name}-fill`;
+    case 'outline':
+      return `${name}-o`;
+    case 'twotone':
+      return `${name}-twotone`;
+    case undefined:
+      return name;
+    default:
+      throw new Error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}Theme "${theme}" is not a recognized theme!`);
   }
 }
 
@@ -34,7 +39,7 @@ export function withSuffixAndColor(name: string, theme: ThemeType, pri: string, 
 }
 
 export function mapAbbrToTheme(abbr: string): ThemeType {
-  return abbr === 'o' ? 'outline' : abbr as ThemeType;
+  return abbr === 'o' ? 'outline' : (abbr as ThemeType);
 }
 
 export function alreadyHasAThemeSuffix(name: string): boolean {
@@ -87,9 +92,12 @@ export function replaceFillColor(raw: string): string {
 export function getNameAndNamespace(type: string): [string, string] {
   const split = type.split(':');
   switch (split.length) {
-    case 1: return [type, ''];
-    case 2: return [split[1], split[0]];
-    default: throw new Error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}The icon type ${type} is not valid!`);
+    case 1:
+      return [type, ''];
+    case 2:
+      return [split[1], split[0]];
+    default:
+      throw new Error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}The icon type ${type} is not valid!`);
   }
 }
 

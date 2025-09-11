@@ -1,10 +1,10 @@
 import { generate as generateColor } from '@ant-design/colors';
 import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
-import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
-import { getShadowRoot } from 'rc-util/lib/Dom/shadow';
-import warn from 'rc-util/lib/warning';
+import { updateCSS } from '@rc-component/util/lib/Dom/dynamicCSS';
+import { getShadowRoot } from '@rc-component/util/lib/Dom/shadow';
+import warn from '@rc-component/util/lib/warning';
+import type { CSSProperties, MouseEventHandler, MutableRefObject, ReactNode } from 'react';
 import React, { useContext, useEffect } from 'react';
-import type { CSSProperties, MouseEventHandler, MutableRefObject, ReactNode } from 'react'
 import IconContext from './components/Context';
 
 function camelCase(input: string) {
@@ -44,15 +44,17 @@ export type Attrs = Record<string, string>;
 interface RootProps {
   onClick: MouseEventHandler<Element>;
   style: CSSProperties;
-  ref: MutableRefObject<any>
-  [props: string]: string | number | ReactNode | MouseEventHandler<Element> | CSSProperties | MutableRefObject<any>
+  ref: MutableRefObject<any>;
+  [props: string]:
+    | string
+    | number
+    | ReactNode
+    | MouseEventHandler<Element>
+    | CSSProperties
+    | MutableRefObject<any>;
 }
 
-export function generate(
-  node: AbstractNode,
-  key: string,
-  rootProps?: RootProps | false,
-): any {
+export function generate(node: AbstractNode, key: string, rootProps?: RootProps | false): any {
   if (!rootProps) {
     return React.createElement(
       node.tag,
@@ -118,6 +120,7 @@ export const iconStyles = `
 
 .anticon svg {
   display: inline-block;
+  vertical-align: inherit;
 }
 
 .anticon::before {
@@ -155,11 +158,15 @@ export const iconStyles = `
 `;
 
 export const useInsertStyles = (eleRef: React.RefObject<HTMLElement>) => {
-  const { csp, prefixCls } = useContext(IconContext);
+  const { csp, prefixCls, layer } = useContext(IconContext);
   let mergedStyleStr = iconStyles;
 
   if (prefixCls) {
     mergedStyleStr = mergedStyleStr.replace(/anticon/g, prefixCls);
+  }
+
+  if (layer) {
+    mergedStyleStr = `@layer ${layer} {\n${mergedStyleStr}\n}`;
   }
 
   useEffect(() => {
@@ -167,7 +174,7 @@ export const useInsertStyles = (eleRef: React.RefObject<HTMLElement>) => {
     const shadowRoot = getShadowRoot(ele);
 
     updateCSS(mergedStyleStr, '@ant-design-icons', {
-      prepend: true,
+      prepend: !layer,
       csp,
       attachTo: shadowRoot,
     });
