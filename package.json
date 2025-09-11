@@ -15,7 +15,7 @@
     "vue:ci": "lerna run --scope @ant-design/icons-vue ci",
     "react-native:ci": "lerna run --scope @ant-design/icons-react-native ci",
     "lint": "lerna run lint",
-    "preclean": "npm run patch-package",
+    "prepare": "bun run patch-package",
     "patch-package": "patch-package"
   },
   "devDependencies": {
