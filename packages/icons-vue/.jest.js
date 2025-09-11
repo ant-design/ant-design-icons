@@ -11,14 +11,14 @@ module.exports = {
   modulePathIgnorePatterns: ['/_site/'],
   testPathIgnorePatterns: ['/node_modules/', 'node'],
   transform: {
-    '.*\\.(vue)$': '<rootDir>/node_modules/vue-jest',
-    '^.+\\.(ts|tsx)$': '<rootDir>/node_modules/babel-jest',
+    '.*\\.(vue)$': 'vue-jest',
+    '^.+\\.(ts|tsx)$': 'babel-jest',
   },
   testRegex: libDir === 'dist' ? 'demo\\.test\\.ts$' : '.*\\.test\\.tsx$',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
-  snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
+  snapshotSerializers: ['jest-serializer-vue'],
   collectCoverage: process.env.COVERAGE === 'true',
   collectCoverageFrom: ['src/**/*.{ts,tsx,vue}'],
   transformIgnorePatterns,
