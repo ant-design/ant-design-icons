@@ -30,7 +30,6 @@ jobs:
       - name: Install dependencies for ${{ matrix.target }}
         run: |
           if [ "${{ matrix.target }}" = "react-native" ]; then
-            cd packages/icons-react-native
-            bun install --frozen-lockfile
+            npm run patch-package
           fi
       - run: bun run ${{ matrix.target }}:ci
