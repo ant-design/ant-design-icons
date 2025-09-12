@@ -6,7 +6,7 @@
 
 ```bash
 .
-├── ReadMe.md
+├── README.md
 ├── babel.config.cjs      # babel config used by jest
 ├── docs
 ├── es                    # the output directory of typescript compiler (--module esnext)

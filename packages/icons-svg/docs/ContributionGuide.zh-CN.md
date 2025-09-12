@@ -6,7 +6,7 @@
 
 ```bash
 .
-├── ReadMe.md
+├── README.md
 ├── babel.config.cjs      # 用于测试环境的 babel 配置
 ├── docs                  # 项目文档
 ├── es                    # tsc 输出目录，使用 ES Modules
