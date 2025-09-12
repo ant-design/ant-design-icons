@@ -8,12 +8,8 @@
 </p>
 
 <div align="center">
-
-[![CircleCI status][circleci-image]][circleci-url]
+[![CI](https://github.com/ant-design/ant-design-icons/actions/workflows/ci.yml/badge.svg)](https://github.com/ant-design/ant-design-icons/actions/workflows/ci.yml)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org)
-
-[circleci-image]: https://img.shields.io/circleci/build/github/ant-design/ant-design-icons/master?style=flat-square
-[circleci-url]: https://circleci.com/gh/ant-design/ant-design-icons
 </div>
 
 ## Packages
