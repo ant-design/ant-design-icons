@@ -1,9 +1,11 @@
 {
   "private": true,
+  "workspaces": {
+    "packages": ["packages/*"]
+  },
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "bun install",
     "clean": "lerna clean",
-    "bootstrap:china": "lerna bootstrap --registry=https://registry.npmmirror.com",
     "rn:generate": "lerna run --scope @ant-design/icons-react-native generate",
     "icons:generate": "lerna run --scope @ant-design/icons-svg generate",
     "icons:build": "lerna run --scope @ant-design/icons-svg build",
@@ -15,8 +17,14 @@
     "lint": "lerna run lint"
   },
   "devDependencies": {
-    "lerna": "^3.4.0"
+    "lerna": "^8.2.3"
   },
   "license": "MIT",
-  "repository": "git@github.com:ant-design/ant-design-icons.git"
+  "repository": "git@github.com:ant-design/ant-design-icons.git",
+  "resolutions": {
+    "cheerio": "1.0.0-rc.12"
+  },
+  "overrides": {
+    "cheerio": "1.0.0-rc.12"
+  }
 }
