@@ -2,7 +2,7 @@ import { generate as generateColor } from '@ant-design/colors';
 import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
 import { updateCSS } from '@rc-component/util/lib/Dom/dynamicCSS';
 import { getShadowRoot } from '@rc-component/util/lib/Dom/shadow';
-import warn from '@rc-component/util/lib/warning';
+import { warningOnce } from '@rc-component/util/lib/warning';
 import type { CSSProperties, MouseEventHandler, MutableRefObject, ReactNode } from 'react';
 import React, { useContext, useEffect } from 'react';
 import IconContext from './components/Context';
@@ -12,9 +12,7 @@ function camelCase(input: string) {
 }
 
 export function warning(valid: boolean, message: string) {
-  if (typeof warn === 'function') {
-    warn(valid, `[@ant-design/icons] ${message}`);
-  }
+  warningOnce(valid, `[@ant-design/icons] ${message}`);
 }
 
 export function isIconDefinition(target: any): target is IconDefinition {
