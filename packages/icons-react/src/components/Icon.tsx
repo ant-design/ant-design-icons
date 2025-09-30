@@ -1,10 +1,10 @@
 // Seems this is used for iconFont
-import * as React from 'react';
-import classNames from 'classnames';
-import { useComposeRef } from '@rc-component/util/lib/ref'
-import Context from './Context';
+import * as React from "react";
+import { clsx } from "clsx";
+import { useComposeRef } from "@rc-component/util/lib/ref";
+import Context from "./Context";
 
-import { svgBaseProps, warning, useInsertStyles } from '../utils';
+import { svgBaseProps, warning, useInsertStyles } from "../utils";
 
 export interface IconBaseProps extends React.HTMLProps<HTMLSpanElement> {
   spin?: boolean;
@@ -21,12 +21,16 @@ export interface CustomIconComponentProps {
 }
 export interface IconComponentProps extends IconBaseProps {
   viewBox?: string;
-  component?: React.ComponentType<CustomIconComponentProps | React.SVGProps<SVGSVGElement>> | React.ForwardRefExoticComponent<CustomIconComponentProps>;
-  ariaLabel?: React.AriaAttributes['aria-label'];
+  component?:
+    | React.ComponentType<
+        CustomIconComponentProps | React.SVGProps<SVGSVGElement>
+      >
+    | React.ForwardRefExoticComponent<CustomIconComponentProps>;
+  ariaLabel?: React.AriaAttributes["aria-label"];
 }
 
 const Icon: React.ForwardRefExoticComponent<
-Omit<IconComponentProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+  Omit<IconComponentProps, "ref"> & React.RefAttributes<HTMLSpanElement>
 > = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) => {
   const {
     // affect outter <i>...</i>
@@ -51,27 +55,25 @@ Omit<IconComponentProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
 
   warning(
     Boolean(Component || children),
-    'Should have `component` prop or `children`.',
+    "Should have `component` prop or `children`."
   );
 
   useInsertStyles(iconRef);
 
-  const { prefixCls = 'anticon', rootClassName } = React.useContext(Context);
+  const { prefixCls = "anticon", rootClassName } = React.useContext(Context);
 
-  const classString = classNames(
+  const classString = clsx(
     rootClassName,
     prefixCls,
     {
       [`${prefixCls}-spin`]: !!spin && !!Component,
     },
-    className,
+    className
   );
 
-  const svgClassString = classNames({
-    [`${prefixCls}-spin`]: !!spin,
-  });
+  const svgClassString = clsx({ [`${prefixCls}-spin`]: !!spin });
 
-  const svgStyle = rotate
+  const svgStyle: React.CSSProperties = rotate
     ? {
         msTransform: `rotate(${rotate}deg)`,
         transform: `rotate(${rotate}deg)`,
@@ -100,9 +102,9 @@ Omit<IconComponentProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
         Boolean(viewBox) ||
           (React.Children.count(children) === 1 &&
             React.isValidElement(children) &&
-            React.Children.only(children).type === 'use'),
-        'Make sure that you provide correct `viewBox`' +
-        ' prop (default `0 0 1024 1024`) to the icon.',
+            React.Children.only(children).type === "use"),
+        "Make sure that you provide correct `viewBox`" +
+          " prop (default `0 0 1024 1024`) to the icon."
       );
 
       return (
@@ -134,6 +136,8 @@ Omit<IconComponentProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
   );
 });
 
-Icon.displayName = 'AntdIcon';
+if (process.env.NODE_ENV !== "production") {
+  Icon.displayName = "AntdIcon";
+}
 
 export default Icon;
