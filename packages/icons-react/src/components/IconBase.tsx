@@ -44,10 +44,10 @@ interface IconBaseComponent<P> extends React.FC<P> {
   setTwoToneColors: typeof setTwoToneColors;
 }
 
-const IconBase: IconBaseComponent<IconProps> = (props) => {
+const IconBase: IconBaseComponent<IconProps> = props => {
   const { icon, className, onClick, style, primaryColor, secondaryColor, ...restProps } = props;
 
-  const svgRef = React.useRef<HTMLElement>();
+  const svgRef = React.useRef<HTMLElement>(null);
 
   let colors: TwoToneColorPalette = twoToneColorPalette;
   if (primaryColor) {
