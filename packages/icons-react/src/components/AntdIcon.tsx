@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { clsx } from "clsx";
-import type { IconDefinition } from "@ant-design/icons-svg/lib/types";
-import { blue } from "@ant-design/colors";
+import * as React from 'react';
+import { clsx } from 'clsx';
+import type { IconDefinition } from '@ant-design/icons-svg/lib/types';
+import { blue } from '@ant-design/colors';
 
-import Context from "./Context";
-import type { IconBaseProps } from "./Icon";
-import ReactIcon from "./IconBase";
-import { getTwoToneColor, setTwoToneColor } from "./twoTonePrimaryColor";
-import type { TwoToneColor } from "./twoTonePrimaryColor";
-import { normalizeTwoToneColors } from "../utils";
+import Context from './Context';
+import type { IconBaseProps } from './Icon';
+import ReactIcon from './IconBase';
+import { getTwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
+import type { TwoToneColor } from './twoTonePrimaryColor';
+import { normalizeTwoToneColors } from '../utils';
 
 export interface AntdIconProps extends IconBaseProps {
   twoToneColor?: TwoToneColor;
@@ -26,85 +26,81 @@ setTwoToneColor(blue.primary);
 
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757#issuecomment-488848720
 interface IconBaseComponent<Props>
-  extends React.ForwardRefExoticComponent<
-    Props & React.RefAttributes<HTMLSpanElement>
-  > {
+  extends React.ForwardRefExoticComponent<Props & React.RefAttributes<HTMLSpanElement>> {
   getTwoToneColor: typeof getTwoToneColor;
   setTwoToneColor: typeof setTwoToneColor;
 }
 
-const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>(
-  (props, ref) => {
-    const {
-      // affect outter <i>...</i>
-      className,
+const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) => {
+  const {
+    // affect outter <i>...</i>
+    className,
 
-      // affect inner <svg>...</svg>
-      icon,
-      spin,
-      rotate,
+    // affect inner <svg>...</svg>
+    icon,
+    spin,
+    rotate,
 
-      tabIndex,
-      onClick,
+    tabIndex,
+    onClick,
 
-      // other
-      twoToneColor,
+    // other
+    twoToneColor,
 
-      ...restProps
-    } = props;
+    ...restProps
+  } = props;
 
-    const { prefixCls = "anticon", rootClassName } = React.useContext(Context);
+  const { prefixCls = 'anticon', rootClassName } = React.useContext(Context);
 
-    const classString = clsx(
-      rootClassName,
-      prefixCls,
-      {
-        [`${prefixCls}-${icon.name}`]: !!icon.name,
-        [`${prefixCls}-spin`]: !!spin || icon.name === "loading",
-      },
-      className
-    );
+  const classString = clsx(
+    rootClassName,
+    prefixCls,
+    {
+      [`${prefixCls}-${icon.name}`]: !!icon.name,
+      [`${prefixCls}-spin`]: !!spin || icon.name === 'loading',
+    },
+    className,
+  );
 
-    let iconTabIndex = tabIndex;
-    if (iconTabIndex === undefined && onClick) {
-      iconTabIndex = -1;
-    }
-
-    const svgStyle: React.CSSProperties = rotate
-      ? {
-          msTransform: `rotate(${rotate}deg)`,
-          transform: `rotate(${rotate}deg)`,
-        }
-      : undefined;
-
-    const [primaryColor, secondaryColor] = normalizeTwoToneColors(twoToneColor);
-
-    return (
-      <span
-        role="img"
-        aria-label={icon.name}
-        {...restProps}
-        ref={ref}
-        tabIndex={iconTabIndex}
-        onClick={onClick}
-        className={classString}
-      >
-        <ReactIcon
-          icon={icon}
-          primaryColor={primaryColor}
-          secondaryColor={secondaryColor}
-          style={svgStyle}
-        />
-      </span>
-    );
+  let iconTabIndex = tabIndex;
+  if (iconTabIndex === undefined && onClick) {
+    iconTabIndex = -1;
   }
-) as IconBaseComponent<IconComponentProps>;
+
+  const svgStyle: React.CSSProperties = rotate
+    ? {
+        msTransform: `rotate(${rotate}deg)`,
+        transform: `rotate(${rotate}deg)`,
+      }
+    : undefined;
+
+  const [primaryColor, secondaryColor] = normalizeTwoToneColors(twoToneColor);
+
+  return (
+    <span
+      role="img"
+      aria-label={icon.name}
+      {...restProps}
+      ref={ref}
+      tabIndex={iconTabIndex}
+      onClick={onClick}
+      className={classString}
+    >
+      <ReactIcon
+        icon={icon}
+        primaryColor={primaryColor}
+        secondaryColor={secondaryColor}
+        style={svgStyle}
+      />
+    </span>
+  );
+}) as IconBaseComponent<IconComponentProps>;
 
 Icon.getTwoToneColor = getTwoToneColor;
 Icon.setTwoToneColor = setTwoToneColor;
 
-if (process.env.NODE_ENV !== "production") {
-  Icon.displayName = "AntdIcon";
+if (process.env.NODE_ENV !== 'production') {
+  Icon.displayName = 'AntdIcon';
 }
 
 export default Icon;
