@@ -23,8 +23,8 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 20
-      - uses: oven-sh/setup-bun@v2
-      - run: bun install --frozen-lockfile
-      - run: bun run icons:generate && bun run icons:build
-      - run: bun run icons:test
-      - run: bun run ${{ matrix.target }}:ci
+      - uses: utooland/setup-utoo@v1
+      - run: ut install
+      - run: ut icons:generate && ut icons:build
+      - run: ut icons:test
+      - run: ut ${{ matrix.target }}:ci

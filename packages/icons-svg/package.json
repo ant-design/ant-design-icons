@@ -21,15 +21,15 @@
     "url": "git+https://github.com/ant-design/ant-design-icons.git"
   },
   "scripts": {
-    "g": "bun run generate",
+    "g": "ut generate",
     "generate": "cross-env NODE_ENV=production gulp --require ts-node/register/transpile-only",
     "type-check": "tsc --noEmit",
     "build:es": "tsc --project tsconfig.build.json --module esnext --outDir es",
     "build:lib": "tsc --project tsconfig.build.json --module commonjs --outDir lib",
-    "build": "cross-env NODE_ENV=production bun run build:es && cross-env NODE_ENV=production bun run build:lib",
-    "test": "cross-env NODE_ENV=test bun run test:unit",
+    "build": "cross-env NODE_ENV=production ut build:es && cross-env NODE_ENV=production ut build:lib",
+    "test": "cross-env NODE_ENV=test ut test:unit",
     "test:unit": "jest",
-    "prepublishOnly": "bun run test && bun run g && bun run build && bun run type-check && bun run digest",
+    "prepublishOnly": "ut test && ut g && ut build && ut type-check && ut digest",
     "digest": "node scripts/digest.js"
   },
   "bugs": {
