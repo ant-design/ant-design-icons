@@ -19,7 +19,7 @@
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
     "eslint": "^8",
-    "utoo": "latest",
+    "utoo": "*",
     "@types/minimatch": "^3"
   },
   "license": "MIT",
