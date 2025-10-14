@@ -23,8 +23,32 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 20
-      - uses: oven-sh/setup-bun@v2
-      - run: bun install --frozen-lockfile
-      - run: bun run icons:generate && bun run icons:build
-      - run: bun run icons:test
-      - run: bun run ${{ matrix.target }}:ci
+      - uses: utooland/setup-utoo@v1
+      - name: Run ut install
+        id: ut_install
+        run: ut install --ignore-scripts
+        # continue-on-error: true
+      # - name: Upload utoo logs on failure
+      #   if: steps.ut_install.outcome == 'failure'
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: utoo-logs
+      #     path: /tmp/utoo-*.log
+      #     if-no-files-found: warn
+      # - name: Fail job if ut install failed
+      #   if: steps.ut_install.outcome == 'failure'
+      #   run: |
+      #     echo "ut install failed — failing job after uploading logs"
+      #     exit 1
+      - run: ut icons:generate && ut icons:build
+      - run: ut icons:test
+      - id: ut_ci
+        run: ut ${{ matrix.target }}:ci
+
+      # - name: Upload package-lock.json on ut ci failure
+      #   if: failure() && steps.ut_ci.outcome == 'failure'
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: package-lock-${{ matrix.target }}
+      #     path: '**/package-lock.json'
+      #     if-no-files-found: warn

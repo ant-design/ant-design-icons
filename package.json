@@ -1,31 +1,30 @@
 {
   "private": true,
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "bootstrap": "bun install",
-    "clean": "lerna clean",
-    "rn:generate": "lerna run --scope @ant-design/icons-react-native generate",
-    "icons:generate": "lerna run --scope @ant-design/icons-svg generate",
-    "icons:build": "lerna run --scope @ant-design/icons-svg build",
-    "icons:test": "lerna run --scope @ant-design/icons-svg test",
-    "react:ci": "lerna run --scope @ant-design/icons ci",
-    "angular:ci": "lerna run --scope @ant-design/icons-angular-workspace ci",
-    "vue:ci": "lerna run --scope @ant-design/icons-vue ci",
-    "react-native:ci": "lerna run --scope @ant-design/icons-react-native ci",
-    "lint": "lerna run lint"
+    "clean": "ut clean --workspaces",
+    "rn:generate": "ut generate --workspace @ant-design/icons-react-native",
+    "icons:generate": "ut generate --workspace @ant-design/icons-svg",
+    "icons:build": "ut build --workspace @ant-design/icons-svg",
+    "icons:test": "ut test --workspace @ant-design/icons-svg",
+    "react:ci": "ut ci --workspace @ant-design/icons",
+    "angular:ci": "ut ci --workspace @ant-design/icons-angular-workspace",
+    "vue:ci": "ut ci --workspace @ant-design/icons-vue",
+    "react-native:ci": "ut ci --workspace @ant-design/icons-react-native",
+    "lint": "ut lint --workspaces"
   },
   "devDependencies": {
-    "lerna": "^8.2.3"
+    "@eslint/js": "^9.17.0",
+    "typescript-eslint": "^8.18.2",
+    "eslint-plugin-jest": "^28.10.0",
+    "eslint": "^9.17.0",
+    "@types/minimatch": "^3",
+    "typescript": "^5"
   },
   "license": "MIT",
   "repository": "git@github.com:ant-design/ant-design-icons.git",
-  "resolutions": {
-    "cheerio": "1.0.0-rc.12"
-  },
   "overrides": {
     "cheerio": "1.0.0-rc.12"
   }

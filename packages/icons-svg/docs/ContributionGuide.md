@@ -34,7 +34,7 @@
 Run the command
 
 ```bash
-yarn generate # or `yarn g`
+ut generate
 ```
 
 to start `gulp` workflow. See the workflow below.
@@ -57,7 +57,7 @@ to start `gulp` workflow. See the workflow below.
 Run the command
 
 ```bash
-yarn build
+ut build
 ```
 
 and it will use `tsc` to compile files in "src" to the output dirctories `es`、`lib`.
@@ -80,10 +80,10 @@ Run the workflow commands.
 
 ```bash
 # generate ".ts" files into "src" dir
-yarn generate
+ut generate
 
 # compile files in "src" dir
-yarn build
+ut build
 ```
 
 ### How to modify/delete icons

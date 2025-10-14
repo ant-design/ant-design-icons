@@ -34,7 +34,7 @@ After that, you can use antd icons in your Vue components as simply as this:
 ## Build project
 
 ```bash
-npm run generate # Generate files to ./src
-npm run compile # Build library
-npm run test # Runing Test
+ut generate # Generate files to ./src
+ut build # Build library
+ut test # Running Test
 ```
