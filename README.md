@@ -8,7 +8,7 @@
 </p>
 
 <div align="center">
- 
+
 [![CI](https://github.com/ant-design/ant-design-icons/actions/workflows/ci.yml/badge.svg)](https://github.com/ant-design/ant-design-icons/actions/workflows/ci.yml)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org)
 
@@ -23,6 +23,57 @@
 | React Native | [@ant-design/icons-react-native](./packages/icons-react-native) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-react-native.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-react-native) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-react-native.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-react-native) | [![bundlephobia](https://img.shields.io/bundlephobia/minzip/@ant-design/icons-react-native.svg?style=flat)](https://bundlephobia.com/result?p=@ant-design/icons-react-native) | [![install size](https://packagephobia.com/badge?p=@ant-design/icons-react-native)](https://packagephobia.com/result?p=@ant-design/icons-react-native) |
 | Angular | [@ant-design/icons-angular](./packages/icons-angular) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-angular.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-angular) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-angular.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-angular) | [![bundlephobia](https://img.shields.io/bundlephobia/minzip/@ant-design/icons-angular.svg?style=flat)](https://bundlephobia.com/result?p=@ant-design/icons-angular) | [![install size](https://packagephobia.com/badge?p=@ant-design/icons-angular)](https://packagephobia.com/result?p=@ant-design/icons-angular) |
 | Vue | [@ant-design/icons-vue](./packages/icons-vue) | [![NPM version](https://img.shields.io/npm/v/@ant-design/icons-vue.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-vue) | [![NPM downloads](http://img.shields.io/npm/dm/@ant-design/icons-vue.svg?style=flat)](https://npmjs.org/package/@ant-design/icons-vue) | [![bundlephobia](https://img.shields.io/bundlephobia/minzip/@ant-design/icons-vue.svg?style=flat)](https://bundlephobia.com/result?p=@ant-design/icons-vue) | [![install size](https://packagephobia.com/badge?p=@ant-design/icons-vue)](https://packagephobia.com/result?p=@ant-design/icons-vue) |
+
+## Development
+
+### Prerequisites
+
+- Node.js >= 16
+- Install utoo globally: `npm i -g utoo`
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/ant-design/ant-design-icons.git
+cd ant-design-icons
+
+# Install dependencies
+ut install
+```
+
+### Common Commands
+
+```bash
+# Clean all workspaces
+ut clean
+
+# Lint all workspaces
+ut lint
+
+# Generate icons for a specific package
+ut generate --workspace @ant-design/icons-svg
+
+# Build a specific package
+ut build --workspace @ant-design/icons-svg
+
+# Test a specific package
+ut test --workspace @ant-design/icons-svg
+
+# Run CI for a specific package
+ut ci --workspace @ant-design/icons
+```
+
+### Package-Specific Commands
+
+See available commands in root `package.json`:
+
+- `ut icons:generate` - Generate icons-svg
+- `ut icons:build` - Build icons-svg
+- `ut react:ci` - Run React icons CI
+- `ut vue:ci` - Run Vue icons CI
+- `ut angular:ci` - Run Angular icons CI
+- `ut rn:generate` - Generate React Native icons
 
 ## Contribution Guides 贡献指南
 

@@ -6,12 +6,17 @@ const transformIgnorePatterns = [
 ];
 
 module.exports = {
-  testURL: 'http://localhost/',
+  testEnvironment: 'jsdom',
+  testEnvironmentOptions: {
+    url: 'http://localhost/',
+    customExportConditions: ['node', 'node-addons'],
+  },
+  setupFilesAfterEnv: ['<rootDir>/test/setup.js'],
   moduleFileExtensions: ['js', 'ts', 'tsx', 'json', 'vue'],
   modulePathIgnorePatterns: ['/_site/'],
   testPathIgnorePatterns: ['/node_modules/', 'node'],
   transform: {
-    '.*\\.(vue)$': 'vue-jest',
+    '.*\\.(vue)$': '@vue/vue3-jest',
     '^.+\\.(ts|tsx)$': 'babel-jest',
   },
   testRegex: libDir === 'dist' ? 'demo\\.test\\.ts$' : '.*\\.test\\.tsx$',

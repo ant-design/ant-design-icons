@@ -34,7 +34,7 @@
 次のコマンドを実行します
 
 ```bash
-yarn generate # または `yarn g`
+ut generate
 ```
 
 `gulp` ワークフローを開始します。以下のワークフローを参照してください。
@@ -57,7 +57,7 @@ yarn generate # または `yarn g`
 次のコマンドを実行します
 
 ```bash
-yarn build
+ut build
 ```
 
 `tsc` を使用してファイルを "src" から `es`、`lib` ディレクトリにコンパイルします。
@@ -80,10 +80,10 @@ yarn build
 
 ```bash
 # ".ts" ファイルを "src" ディレクトリに生成します
-yarn generate
+ut generate
 
 # "src" ディレクトリ内のファイルをコンパイルします
-yarn build
+ut build
 ```
 
 ### アイコンの変更/削除方法
