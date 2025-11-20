@@ -119,7 +119,11 @@ describe('@ant-design/icons-angular', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        providers: [provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+        providers: [
+          provideZonelessChangeDetection(),
+          provideHttpClient(withInterceptorsFromDi()),
+          provideHttpClientTesting()
+        ]
       });
     });
 
@@ -141,15 +145,15 @@ describe('@ant-design/icons-angular', () => {
       expect(req.request.method).toBe('GET');
       req.flush(AccountBookFill.icon);
 
-      setTimeout(() => {
-        const iconElement = icons[0].nativeElement;
-        const svgElement = iconElement.firstElementChild;
-        expect(svgElement.tagName).toBe('svg');
-        expect(svgElement.getAttribute('viewBox')).toBe('64 64 896 896');
-        expect(svgElement.getAttribute('fill')).toBe('currentColor');
-        expect(svgElement.getAttribute('width')).toBe('1em');
-        expect(svgElement.getAttribute('height')).toBe('1em');
-      }, 100);
+      await fixture.whenStable();
+
+      const iconElement = icons[0].nativeElement;
+      const svgElement = iconElement.firstElementChild;
+      expect(svgElement.tagName).toBe('svg');
+      expect(svgElement.getAttribute('viewBox')).toBe('64 64 896 896');
+      expect(svgElement.getAttribute('fill')).toBe('currentColor');
+      expect(svgElement.getAttribute('width')).toBe('1em');
+      expect(svgElement.getAttribute('height')).toBe('1em');
     });
 
     /**
@@ -166,11 +170,11 @@ describe('@ant-design/icons-angular', () => {
       expect(req.request.method).toBe('GET');
       req.flush(pandaLiteral);
 
-      setTimeout(() => {
-        const iconElement = icons[0].nativeElement;
-        const svgElement = iconElement.firstElementChild;
-        expect(svgElement.tagName).toBe('svg');
-      }, 50);
+      await fixture.whenStable();
+
+      const iconElement = icons[0].nativeElement;
+      const svgElement = iconElement.firstElementChild;
+      expect(svgElement.tagName).toBe('svg');
     });
   });
 });
