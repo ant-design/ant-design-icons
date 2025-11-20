@@ -17,9 +17,6 @@
               "base": "dist/examples"
             },
             "index": "examples/index.html",
-            "polyfills": [
-              "zone.js"
-            ],
             "tsConfig": "examples/tsconfig.app.json",
             "assets": [
               "examples/favicon.ico",
@@ -91,6 +88,7 @@
     },
     "ant-design-icons-angular": {
       "root": "src",
+      "sourceRoot": "src",
       "projectType": "library",
       "architect": {
         "build": {
@@ -102,27 +100,17 @@
           "configurations": {
             "production": {
               "tsConfig": "src/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "src/tsconfig.lib.json"
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
-            "main": "src/test.ts",
-            "karmaConfig": "src/karma.conf.js",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "src/tsconfig.spec.json",
-            "scripts": [],
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "src/inline-svg",
-                "output": "/assets/"
-              }
-            ]
+            "tsConfig": "src/tsconfig.spec.json"
           }
         },
         "lint": {
