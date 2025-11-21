@@ -1,6 +1,6 @@
-import * as allIconDefs from '@ant-design/icons-svg';
-import { IconDefinition } from '@ant-design/icons-svg/es/types';
-import { renderIconDefinitionToSVGElement } from '@ant-design/icons-svg/lib/helpers';
+import * as allIconDefs from '@ant-design/icons-svg/src/index';
+import { IconDefinition } from '@ant-design/icons-svg/src/types';
+import { renderIconDefinitionToSVGElement } from '@ant-design/icons-svg/templates/helpers';
 import { promises as fsPromises } from 'fs';
 import { template } from 'lodash';
 import * as path from 'path';
@@ -65,7 +65,7 @@ export const manifest: Manifest = {
     twotone: []
   };
 
-  const staicFileRender = template(
+  const staticFileRender = template(
     `
 import { IconDefinition } from '@ant-design/icons-angular';
 
@@ -100,7 +100,7 @@ export const <%= svgIdentifier %>: IconDefinition = {
     // Generate static loading resources.
     await fsPromises.writeFile(
       path.resolve(__dirname, `../src/icons/${_theme}/${svgIdentifier}.ts`),
-      staicFileRender({ svgIdentifier, name, theme: _theme, inlineIcon })
+      staticFileRender({ svgIdentifier, name, theme: _theme, inlineIcon })
     );
 
     await fsPromises.writeFile(

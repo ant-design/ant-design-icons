@@ -19,15 +19,7 @@
     "lib": ["ESNext", "dom"],
     "skipLibCheck": true,
     "types": [],
-    "baseUrl": ".",
-    "useDefineForClassFields": false
+    "baseUrl": "."
   },
-  "files": ["public_api.ts"],
-  "angularCompilerOptions": {
-    "strictMetadataEmit": true,
-    "skipTemplateCodegen": true
-  },
-  "bazelOptions": {
-    "suppressTsconfigOverrideWarnings": true
-  }
+  "files": ["public_api.ts"]
 }

@@ -1,4 +1,4 @@
-import { Component, DebugElement } from '@angular/core';
+import { Component, DebugElement, provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
@@ -22,7 +22,10 @@ describe('icons-angular', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        providers: [provideAntIcons([DownSquareFill, DownSquareOutline, DownSquareTwoTone])]
+        providers: [
+          provideZonelessChangeDetection(),
+          provideAntIcons([DownSquareFill, DownSquareOutline, DownSquareTwoTone])
+        ]
       });
     });
 
@@ -57,7 +60,7 @@ describe('icons-angular', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        providers: [provideAntIcons([PandaIcon])]
+        providers: [provideZonelessChangeDetection(), provideAntIcons([PandaIcon])]
       });
 
       fixture = TestBed.createComponent(TestIconNamespaceComponent);
@@ -75,7 +78,7 @@ describe('icons-angular', () => {
   imports: [IconDirective],
   template: `<span antIcon [type]="name" [theme]="theme" [twoToneColor]="twotoneColor"></span>`
 })
-export class TestIconComponent {
+class TestIconComponent {
   public name = 'down-square';
   public theme: ThemeType | string = '';
   public twotoneColor = '';
@@ -85,4 +88,4 @@ export class TestIconComponent {
   imports: [IconDirective],
   template: `<span antIcon [type]="'animal:panda'"></span>`
 })
-export class TestIconNamespaceComponent {}
+class TestIconNamespaceComponent {}

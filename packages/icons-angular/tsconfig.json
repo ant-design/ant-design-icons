@@ -22,7 +22,6 @@
       "@ant-design/icons-angular/icons": [
         "src/icons/public_api"
       ]
-    },
-    "useDefineForClassFields": false
+    }
   }
 }
