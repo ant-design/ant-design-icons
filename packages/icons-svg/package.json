@@ -39,7 +39,7 @@
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.8.6",
     "@babel/preset-typescript": "^7.8.3",
-    "@rgrove/parse-xml": "^2.0.2",
+    "@rgrove/parse-xml": "^4.2.0",
     "@types/gulp": "^4.0.6",
     "@types/gulp-concat": "^0.0.32",
     "@types/gulp-rename": "^0.0.33",
