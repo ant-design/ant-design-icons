@@ -11,7 +11,7 @@
     "clean": "ts-node scripts/clean.ts",
     "generate": "ts-node scripts/generate.ts",
     "copy:assets": "ts-node scripts/copy.ts",
-    "ci": "npm run build:lib"
+    "ci": "npm run build:lib && npm run test"
   },
   "license": "MIT",
   "private": true,
