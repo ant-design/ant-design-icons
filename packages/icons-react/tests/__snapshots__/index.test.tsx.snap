@@ -1043,6 +1043,23 @@ exports[`Icon.createFromIconfontCN() should support iconfont.cn 1`] = `
       />
     </svg>
   </span>
+  <span
+    class="anticon abc"
+    role="img"
+  >
+    <svg
+      aria-hidden="true"
+      class=""
+      color="blue"
+      focusable="false"
+      height="1em"
+      width="1em"
+    >
+      <use
+        href="#icon-twitter"
+      />
+    </svg>
+  </span>
 </div>
 `;
 
