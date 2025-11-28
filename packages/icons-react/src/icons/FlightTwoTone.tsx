@@ -1,5 +1,5 @@
 // GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
+// DO NOT EDIT IT MANUALLY
 
 import * as React from 'react'
 import FlightTwoToneSvg from '@ant-design/icons-svg/lib/asn/FlightTwoTone';
