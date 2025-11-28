@@ -2,7 +2,7 @@
 // DON NOT EDIT IT MANUALLY
 
 import { FunctionalComponent } from 'vue';
-import FlightFilledSvg from '@ant-design/icons-svg/lib/asn/FlightFilledSvg';
+import FlightFilledSvg from '@ant-design/icons-svg/lib/asn/FlightFilled';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
 export interface FlightFilledIconType extends FunctionalComponent<AntdIconProps> {
