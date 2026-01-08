@@ -30,7 +30,6 @@
     "react": ">=16.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.17.0",
     "@rc-component/father-plugin": "^1.0.1",
     "@types/jest": "^24.0.17",
     "@types/react": "^16.4.12",
