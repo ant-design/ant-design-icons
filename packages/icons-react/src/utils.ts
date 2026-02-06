@@ -158,7 +158,7 @@ export const iconStyles = `
 `;
 
 export const useInsertStyles = (eleRef: React.RefObject<HTMLElement>) => {
-  const { csp, prefixCls, layer } = useContext(IconContext);
+  const { csp, prefixCls, layer, zeroRuntime } = useContext(IconContext);
   let mergedStyleStr = iconStyles;
 
   if (prefixCls) {
@@ -170,6 +170,10 @@ export const useInsertStyles = (eleRef: React.RefObject<HTMLElement>) => {
   }
 
   useEffect(() => {
+    if (zeroRuntime) {
+      return;
+    }
+
     const ele = eleRef.current;
     const shadowRoot = getShadowRoot(ele);
 

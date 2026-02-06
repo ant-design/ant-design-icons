@@ -5,6 +5,7 @@ export interface IconContextProps {
   rootClassName?: string;
   csp?: { nonce?: string };
   layer?: string;
+  zeroRuntime?: boolean;
 }
 
 const IconContext = createContext<IconContextProps>({});
