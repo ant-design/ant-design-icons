@@ -11,6 +11,17 @@
   "main": "./lib/index.js",
   "unpkg": "./dist/index.umd.js",
   "module": "./es/index.js",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "node": {
+        "import": "./index.mjs"
+      },
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./*": "./*"
+  },
   "typings": "./lib/index.d.ts",
   "scripts": {
     "ci": "NODE_ENV=ci npm run prepublishOnly",
