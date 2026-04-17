@@ -12,11 +12,23 @@
   "unpkg": "./dist/index.umd.js",
   "module": "./es/index.js",
   "typings": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./*": {
+      "types": "./lib/icons/*.d.ts",
+      "import": "./es/icons/*.js",
+      "require": "./lib/icons/*.js"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "ci": "NODE_ENV=ci npm run prepublishOnly",
     "clean": "./scripts/cleanup.sh",
     "compile": "father build",
-    "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry",
     "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
     "lint": "eslint src/ --ext .tsx,.ts",
     "prepublishOnly": "npm run generate && npm run compile && npm run lint && npm run test",
