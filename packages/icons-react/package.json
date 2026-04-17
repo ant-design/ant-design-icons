@@ -23,6 +23,8 @@
       "import": "./es/icons/*.js",
       "require": "./lib/icons/*.js"
     },
+    "./es/*": "./es/*",
+    "./lib/*": "./lib/*",
     "./package.json": "./package.json"
   },
   "scripts": {
