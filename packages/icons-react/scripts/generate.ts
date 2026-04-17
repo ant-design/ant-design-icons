@@ -121,44 +121,4 @@ ${entryText}
   );
 }
 
-async function generateEntries() {
-  const render = template(`
-'use strict';
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-const _<%= svgIdentifier %> = _interopRequireDefault(require('./lib/icons/<%= svgIdentifier %>'));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-const _default = _<%= svgIdentifier %>;
-exports.default = _default;
-module.exports = _default;
-`.trim());
-
-  await walk(async ({ svgIdentifier }) => {
-    // generate `Icon.js` in root folder
-    await writeFile(
-      path.resolve(__dirname, `../${svgIdentifier}.js`),
-      render({
-        svgIdentifier,
-      }),
-    );
-
-    // generate `Icon.d.ts` in root folder
-    await writeFile(
-      path.resolve(__dirname, `../${svgIdentifier}.d.ts`),
-      `export { default } from './lib/icons/${svgIdentifier}';`,
-    );
-  });
-}
-
-if (process.argv[2] === '--target=icon') {
-  generateIcons();
-}
-
-if (process.argv[2] === '--target=entry') {
-  generateEntries();
-}
+generateIcons();
