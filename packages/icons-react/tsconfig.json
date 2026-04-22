@@ -7,6 +7,7 @@
     "moduleResolution": "bundler",
     "jsx": "react",
     "types": ["vitest/globals"],
+    "noEmit": true
   },
   "typings": "./typings/index.d.ts",
 }
