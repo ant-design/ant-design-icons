@@ -50,7 +50,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "father": "^4.6.19",
     "glob": "^7.2.3",
-    "happy-dom": "^20.9.0",
+    "jsdom": "^25.0.1",
     "history": "^4.10.1",
     "lodash": "^4.18.1",
     "pkg-dir": "4.0.0",
