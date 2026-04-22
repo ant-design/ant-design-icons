@@ -326,7 +326,6 @@ describe('Icon', () => {
       </Icon>,
     );
     expect(snapshotOf(wrapper)).toMatchSnapshot();
-    expect(snapshotOf(wrapper)).toMatchSnapshot();
 
     const icon = wrapper.find('span').at(0);
     icon.simulate('click');
