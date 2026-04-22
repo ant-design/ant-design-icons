@@ -21,7 +21,8 @@
     "lint": "eslint src/ --ext .tsx,.ts",
     "prepublishOnly": "npm run generate && npm run compile && npm run lint && npm run test",
     "start": "dumi dev",
-    "test": "rc-test",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "test:local": "npm run generate && npm run compile && npm run test"
   },
   "dependencies": {
@@ -58,13 +59,14 @@
     "lodash": "^4.17.21",
     "pkg-dir": "4.0.0",
     "prettier": "^3.6.2",
-    "rc-test": "^7.0.15",
+    "jsdom": "^25.0.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "rimraf": "^3.0.0",
     "styled-components": "^3.3.3",
     "ts-node": "^8.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "vitest": "^2.1.8"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
@@ -76,5 +78,10 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
+  },
+  "pnpm": {
+    "overrides": {
+      "cheerio": "1.0.0-rc.12"
+    }
   }
 }
