@@ -367,31 +367,6 @@ exports[`Icon > should support event listeners 2`] = `
 </span>
 `;
 
-exports[`Icon > should support event listeners 3`] = `
-<span
-  class="anticon my-home-icon"
-  role="img"
-  tabindex="-1"
->
-  <svg
-    aria-hidden="true"
-    class=""
-    fill="currentColor"
-    focusable="false"
-    height="1em"
-    viewBox="0 0 24 24"
-    width="1em"
-  >
-    <title>
-      Custom Svg
-    </title>
-    <path
-      d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
-    />
-  </svg>
-</span>
-`;
-
 exports[`Icon > should support event listeners when passing svg paths as children 1`] = `
 <span
   class="anticon"
