@@ -1,44 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`IconFill props exists 1`] = `
-<
-  style={
-    [
-      {
-        "color": "black",
-        "fontFamily": "antfill",
-        "fontSize": 24,
-        "fontStyle": "normal",
-        "fontWeight": "normal",
-      },
-      undefined,
-    ]
-  }
->
-  啌
-</>
-`;
+exports[`IconFill > props exists 1`] = `null`;
 
-exports[`IconFill should create Icon element. 1`] = `
-<
-  style={
-    [
-      {
-        "color": "black",
-        "fontFamily": "antfill",
-        "fontSize": 14,
-        "fontStyle": "normal",
-        "fontWeight": "normal",
-      },
-      undefined,
-    ]
-  }
->
-  啊
-</>
-`;
+exports[`IconFill > should create Icon element. 1`] = `null`;
 
-exports[`IconFill should create fillGlyphMap 1`] = `
+exports[`IconFill > should create fillGlyphMap 1`] = `
 {
   "account-book": 21834,
   "alert": 21835,

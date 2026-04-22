@@ -10,7 +10,7 @@ import Icon, {
   LoadingOutlined,
   CheckCircleTwoTone,
   ClockCircleOutlined,
-} from '../lib';
+} from '../src';
 describe('Icon', () => {
   it('should render to a <span class="xxx"><svg>...</svg></span>', () => {
     const wrapper = mount(HomeOutlined, { props: { class: 'my-icon-class' } });
@@ -104,7 +104,7 @@ describe('Icon', () => {
   describe('warning on conflicting theme', () => {
     let errorSpy;
     beforeEach(() => {
-      errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
     });
 
     afterEach(() => {
