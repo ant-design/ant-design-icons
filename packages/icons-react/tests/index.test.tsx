@@ -1,6 +1,5 @@
-import { render as testingLibRender } from '@testing-library/react';
+import { fireEvent, render as testingLibRender } from '@testing-library/react';
 import { Tooltip } from 'antd';
-import { mount, render } from 'enzyme';
 import * as React from 'react';
 import Icon, {
   CheckCircleTwoTone,
@@ -17,6 +16,59 @@ import Icon, {
   SyncOutlined,
 } from '../src';
 import { getSecondaryColor } from '../src/utils';
+
+const simulate = (node: Element, event: string) => {
+  switch (event) {
+    case 'click':
+      fireEvent.click(node);
+      break;
+    case 'mouseenter':
+      fireEvent.mouseEnter(node);
+      break;
+    case 'mouseleave':
+      fireEvent.mouseLeave(node);
+      break;
+    case 'keyup':
+      fireEvent.keyUp(node);
+      break;
+    default:
+      fireEvent(node, new Event(event));
+  }
+};
+
+function render(node: React.ReactElement) {
+  const { container } = testingLibRender(node);
+  return container.firstElementChild ?? container;
+}
+
+function snapshotOf(value: any) {
+  if (value && typeof value.render === 'function') {
+    return value.render();
+  }
+  return value;
+}
+
+function mount(node: React.ReactElement, options?: { attachTo?: HTMLElement }) {
+  const container = options?.attachTo;
+  const view = testingLibRender(node, container ? { container } : undefined);
+
+  return {
+    ...view,
+    setProps: (nextProps: any) => {
+      view.rerender(React.cloneElement(node, nextProps));
+    },
+    find: (selector: string) => {
+      const nodes = Array.from(view.container.querySelectorAll(selector));
+      return {
+        length: nodes.length,
+        at: (index: number) => ({
+          simulate: (event: string) => simulate(nodes[index], event),
+        }),
+      };
+    },
+    render: () => view.container.firstElementChild ?? view.container,
+  };
+}
 
 function mountTest(Component) {
   describe('mount and unmount', () => {
@@ -37,7 +89,7 @@ describe('Icon', () => {
 
   it('should render to a <span class="xxx"><svg>...</svg></span>', () => {
     const wrapper = render(<HomeOutlined className="my-icon-classname" />);
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support basic usage', () => {
@@ -50,7 +102,7 @@ describe('Icon', () => {
         <LoadingOutlined />
       </div>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support event listeners', () => {
@@ -65,7 +117,7 @@ describe('Icon', () => {
         <SyncOutlined spin onKeyUp={onKeyUpHandler} />
       </div>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
 
     const icon1 = wrapper.find('span').at(0);
     icon1.simulate('click');
@@ -82,10 +134,10 @@ describe('Icon', () => {
 
   it('should support two-tone icon', () => {
     let wrapper = render(<CheckCircleTwoTone twoToneColor="#f5222d" />);
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
 
     wrapper = render(<CheckCircleTwoTone twoToneColor={['#f5222d', '#eb2f96']} />);
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support config global two-tone primary color', () => {
@@ -94,19 +146,19 @@ describe('Icon', () => {
     setTwoToneColor('#1890ff');
     expect(getTwoToneColor()).toBe('#1890ff');
     let wrapper = render(<CheckCircleTwoTone />);
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
 
     setTwoToneColor(['#1890ff', '#eb2f96']);
     expect(getTwoToneColor()).toEqual(['#1890ff', '#eb2f96']);
 
     wrapper = render(<CheckCircleTwoTone />);
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
 
     setTwoToneColor(['#1890ff', getSecondaryColor('#1890ff')]);
     expect(getTwoToneColor()).toEqual(['#1890ff', getSecondaryColor('#1890ff')]);
 
     wrapper = render(<CheckCircleTwoTone />);
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support pass svg paths as children', () => {
@@ -116,7 +168,7 @@ describe('Icon', () => {
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
       </Icon>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support event listeners when passing svg paths as children', () => {
@@ -135,7 +187,7 @@ describe('Icon', () => {
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
       </Icon>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
     const icon = wrapper.find('span').at(0);
     icon.simulate('click');
     expect(onClickHandler).toBeCalledTimes(1);
@@ -147,7 +199,7 @@ describe('Icon', () => {
 
   it('should give warning and render <i>{null}</i>', () => {
     const wrapper = render(<Icon viewBox="0 0 24 24" />);
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support wrapped by Tooltip', () => {
@@ -227,7 +279,7 @@ describe('Icon', () => {
           <path d="'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'" />
         </Icon>,
       );
-      expect(wrapper).toMatchSnapshot();
+      expect(snapshotOf(wrapper)).toMatchSnapshot();
     });
   });
 
@@ -246,7 +298,7 @@ describe('Icon', () => {
         <path d="'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'" />
       </Icon>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support event listeners', () => {
@@ -273,8 +325,8 @@ describe('Icon', () => {
         <path d="'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'" />
       </Icon>,
     );
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
 
     const icon = wrapper.find('span').at(0);
     icon.simulate('click');
@@ -304,7 +356,7 @@ describe('Icon.createFromIconfontCN()', () => {
         <IconFont type="icon-twitter" />
       </div>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support event listeners', () => {
@@ -319,7 +371,7 @@ describe('Icon.createFromIconfontCN()', () => {
         <IconFont type="icon-twitter" spin onKeyUp={onKeyUpHandler} />
       </div>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
 
     const icon1 = wrapper.find('span').at(0);
     icon1.simulate('click');
@@ -342,7 +394,7 @@ describe('Icon.createFromIconfontCN()', () => {
         <IconFont type="icon-twitter" className="efg" />
       </div>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support wrapped by Tooltip', () => {
@@ -389,7 +441,7 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
         <IconFont type="icon-twitter" />
       </div>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support event listeners', () => {
@@ -404,7 +456,7 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
         <IconFont type="icon-twitter" spin onKeyUp={onKeyUpHandler} />
       </div>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
 
     const icon1 = wrapper.find('span').at(0);
     icon1.simulate('click');
@@ -427,7 +479,7 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
         <IconFont type="icon-twitter" className="efg" />
       </div>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support wrapped by Tooltip', () => {
@@ -459,7 +511,7 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
 
   it('should support ignore load error', () => {
     const wrapper = render(<IconFont2 type="icon-facebook" />);
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support provider', () => {
@@ -468,7 +520,7 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
         <HomeOutlined className="light" />
       </IconProvider>,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support csp', () => {
@@ -514,7 +566,7 @@ describe('Icon.createFromIconfontCN({scriptUrl:[]})', () => {
 
   it('fillRule should convert', () => {
     const wrapper = render(<CloseCircleFilled />);
-    expect(wrapper).toMatchSnapshot();
+    expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
   it('should support layer', () => {
