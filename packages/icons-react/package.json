@@ -18,14 +18,14 @@
       "import": "./es/index.js",
       "require": "./lib/index.js"
     },
+    "./es/*": "./es/*",
+    "./lib/*": "./lib/*",
+    "./package.json": "./package.json",
     "./*": {
       "types": "./lib/icons/*.d.ts",
       "import": "./es/icons/*.js",
       "require": "./lib/icons/*.js"
-    },
-    "./es/*": "./es/*",
-    "./lib/*": "./lib/*",
-    "./package.json": "./package.json"
+    }
   },
   "scripts": {
     "ci": "NODE_ENV=ci npm run prepublishOnly",
