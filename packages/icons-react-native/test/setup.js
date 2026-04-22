@@ -1,4 +1,4 @@
-jest.mock(
+vi.mock(
     'react-native',
     () => {
       /*
@@ -6,7 +6,7 @@ jest.mock(
        * like a generated module or a native module in react-native.
        */
       return {
-        Text: ''
+        Text: 'Text'
       }
     },
     {virtual: true},
