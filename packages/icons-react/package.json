@@ -31,7 +31,7 @@
     "ci": "NODE_ENV=ci npm run prepublishOnly",
     "clean": "./scripts/cleanup.sh",
     "compile": "father build",
-    "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
+    "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts",
     "lint": "eslint src/ --ext .tsx,.ts",
     "prepublishOnly": "npm run generate && npm run compile && npm run lint && npm run test",
     "start": "dumi dev",
