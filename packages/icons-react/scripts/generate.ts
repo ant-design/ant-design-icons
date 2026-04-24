@@ -20,13 +20,13 @@ const inlineSvgDir = path.join(svgPkgDir, 'inline-namespaced-svg');
 
 function detectRealPath(icon: IconDefinition) {
   try {
-    if ([icon, icon?.theme, icon?.name].some(isNil)) return null
+    if ([icon, icon?.theme, icon?.name].some(isNil)) return null;
 
     const _path = path.join(inlineSvgDir, icon.theme, `${icon.name}.svg`);
 
     return fs.existsSync(_path) ? _path : null;
   } catch (e) {
-    return null
+    return null;
   }
 }
 
@@ -36,30 +36,29 @@ function svg2base64(svgPath: string, size = 50) {
     .replace(/<svg/, `<svg width="${size}" height="${size}" fill="#cacaca"`)
     // https://github.com/ant-design/ant-design-icons/blob/a02cbf8/packages/icons-svg/templates/helpers.ts#L3-L6
     .replace(/\#333/g, '#1677ff')
-    .replace(/\#E6E6E6/ig, '#e6f4ff');
+    .replace(/\#E6E6E6/gi, '#e6f4ff');
 
   const base64 = Buffer.from(svgWithStyle).toString('base64');
   return `data:image/svg+xml;base64,${base64}`;
 }
 
-function walk<T>(
-  fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>,
-) {
+function walk<T>(fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>) {
   return Promise.all(
-    Object.keys(allIconDefs)
-      .map(svgIdentifier => {
-        const iconDef = (allIconDefs as { [id: string]: IconDefinition })[
-          svgIdentifier
-        ];
+    Object.keys(allIconDefs).map((svgIdentifier) => {
+      const iconDef = (allIconDefs as { [id: string]: IconDefinition })[svgIdentifier];
 
-        const realSvgPath = detectRealPath(iconDef);
-        let svgBase64 = null;
-        if (realSvgPath) {
-          try { svgBase64 = svg2base64(realSvgPath) } catch (e) { /** nothing */ }
+      const realSvgPath = detectRealPath(iconDef);
+      let svgBase64 = null;
+      if (realSvgPath) {
+        try {
+          svgBase64 = svg2base64(realSvgPath);
+        } catch (e) {
+          /** nothing */
         }
+      }
 
-        return fn({ svgIdentifier, svgBase64, ...iconDef });
-      }),
+      return fn({ svgIdentifier, svgBase64, ...iconDef });
+    }),
   );
 }
 
@@ -71,7 +70,8 @@ async function generateIcons() {
     await promisify(fs.mkdir)(iconsDir);
   }
 
-  const render = template(`
+  const render = template(
+    `
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
@@ -94,7 +94,8 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 export default RefIcon;
-`.trim());
+`.trim(),
+  );
 
   await walk(async (item) => {
     // generate icon file
@@ -107,7 +108,7 @@ export default RefIcon;
   // generate icon index
   const entryText = Object.keys(allIconDefs)
     .sort()
-    .map(svgIdentifier => `export { default as ${svgIdentifier} } from './${svgIdentifier}';`)
+    .map((svgIdentifier) => `export { default as ${svgIdentifier} } from './${svgIdentifier}';`)
     .join('\n');
 
   await promisify(fs.appendFile)(
@@ -121,4 +122,44 @@ ${entryText}
   );
 }
 
+// Compitible with Webpack 4 which doesn't support `exports` field in package.json, we need to generate entry files for each icon in root folder.
+// Will be removed in Ant Design v7 when Webpack 4 is no longer supported.
+async function generateEntries() {
+  const render = template(
+    `
+'use strict';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+const _<%= svgIdentifier %> = _interopRequireDefault(require('./lib/icons/<%= svgIdentifier %>'));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+const _default = _<%= svgIdentifier %>;
+exports.default = _default;
+module.exports = _default;
+`.trim(),
+  );
+
+  await walk(async ({ svgIdentifier }) => {
+    // generate `Icon.js` in root folder
+    await writeFile(
+      path.resolve(__dirname, `../${svgIdentifier}.js`),
+      render({
+        svgIdentifier,
+      }),
+    );
+
+    // generate `Icon.d.ts` in root folder
+    await writeFile(
+      path.resolve(__dirname, `../${svgIdentifier}.d.ts`),
+      `export { default } from './lib/icons/${svgIdentifier}';`,
+    );
+  });
+}
+
 generateIcons();
+
+generateEntries();
