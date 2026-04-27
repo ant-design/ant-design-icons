@@ -18,8 +18,26 @@
       "import": "./es/index.js",
       "require": "./lib/index.js"
     },
-    "./es/*": "./es/*",
-    "./lib/*": "./lib/*",
+    "./es/*": {
+      "types": "./lib/*.d.ts",
+      "import": "./es/*.js",
+      "require": "./lib/*.js"
+    },
+    "./es/components/*": {
+      "types": "./lib/components/*.d.ts",
+      "import": "./es/components/*.js",
+      "require": "./lib/components/*.js"
+    },
+    "./lib/*": {
+      "types": "./lib/*.d.ts",
+      "import": "./es/*.js",
+      "require": "./lib/*.js"
+    },
+    "./lib/components/*": {
+      "types": "./lib/components/*.d.ts",
+      "import": "./es/components/*.js",
+      "require": "./lib/components/*.js"
+    },
     "./package.json": "./package.json",
     "./*": {
       "types": "./lib/icons/*.d.ts",
