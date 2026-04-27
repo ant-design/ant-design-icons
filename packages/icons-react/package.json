@@ -28,6 +28,11 @@
       "import": "./es/components/*.js",
       "require": "./lib/components/*.js"
     },
+    "./es/icons": {
+      "types": "./lib/icons/index.d.ts",
+      "import": "./es/icons/index.js",
+      "require": "./lib/icons/index.js"
+    },
     "./lib/*": {
       "types": "./lib/*.d.ts",
       "import": "./es/*.js",
@@ -37,6 +42,11 @@
       "types": "./lib/components/*.d.ts",
       "import": "./es/components/*.js",
       "require": "./lib/components/*.js"
+    },
+    "./lib/icons": {
+      "types": "./lib/icons/index.d.ts",
+      "import": "./es/icons/index.js",
+      "require": "./lib/icons/index.js"
     },
     "./package.json": "./package.json",
     "./*": {
