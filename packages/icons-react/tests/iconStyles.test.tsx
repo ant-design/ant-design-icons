@@ -40,7 +40,7 @@ describe('zeroRuntime', () => {
   });
 
   it('should not inject styles when zeroRuntime is true', () => {
-    mount(
+    render(
       <IconProvider value={{ zeroRuntime: true }}>
         <Icon icon={'Antd' as any} />
       </IconProvider>,
@@ -50,7 +50,7 @@ describe('zeroRuntime', () => {
   });
 
   it('should still inject styles when zeroRuntime is false', () => {
-    mount(
+    render(
       <IconProvider value={{ zeroRuntime: false }}>
         <Icon icon={'Antd' as any} />
       </IconProvider>,
@@ -60,7 +60,7 @@ describe('zeroRuntime', () => {
   });
 
   it('should still inject styles when zeroRuntime is not set', () => {
-    mount(<Icon icon={'Antd' as any} />);
+    render(<Icon icon={'Antd' as any} />);
 
     expect(document.querySelector('style')).toBeTruthy();
   });
@@ -73,11 +73,11 @@ describe('zeroRuntime', () => {
     const reactRoot = document.createElement('div');
     shadow.appendChild(reactRoot);
 
-    mount(
+    render(
       <IconProvider value={{ zeroRuntime: true }}>
         <SmileOutlined />
       </IconProvider>,
-      { attachTo: reactRoot },
+      { container: reactRoot },
     );
 
     expect(document.querySelector('style')).toBeFalsy();
