@@ -46,7 +46,7 @@ describe('zeroRuntime', () => {
       </IconProvider>,
     );
 
-    expect(document.querySelector('style')).toBeFalsy();
+    expect(document.head.querySelector('style')).toBeFalsy();
   });
 
   it('should still inject styles when zeroRuntime is false', () => {
@@ -56,13 +56,13 @@ describe('zeroRuntime', () => {
       </IconProvider>,
     );
 
-    expect(document.querySelector('style')).toBeTruthy();
+    expect(document.head.querySelector('style')).toBeTruthy();
   });
 
   it('should still inject styles when zeroRuntime is not set', () => {
     render(<Icon icon={'Antd' as any} />);
 
-    expect(document.querySelector('style')).toBeTruthy();
+    expect(document.head.querySelector('style')).toBeTruthy();
   });
 
   it('should not inject styles into shadow root when zeroRuntime is true', () => {
@@ -80,7 +80,7 @@ describe('zeroRuntime', () => {
       { container: reactRoot },
     );
 
-    expect(document.querySelector('style')).toBeFalsy();
+    expect(document.head.querySelector('style')).toBeFalsy();
     expect(shadow.querySelector('style')).toBeFalsy();
   });
 });
