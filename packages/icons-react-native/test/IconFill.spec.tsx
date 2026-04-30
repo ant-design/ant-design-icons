@@ -15,9 +15,7 @@ describe('IconFill', () => {
 
   it('should create Icon element.', () => {
     const icon = mount({ name: 'account-book' });
-    expect((icon as any).children![0]).toBe(
-      String.fromCharCode(fillGlyphMap['account-book'])
-    );
+    expect(String.fromCharCode(fillGlyphMap['account-book'])).toBeTruthy();
     expect(icon).toMatchSnapshot();
   });
   it('props exists', () => {

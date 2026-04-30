@@ -1,4 +1,4 @@
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 import * as React from 'react';
 import { SmileOutlined } from '../src';
 import Icon from '../src/components/IconBase';
@@ -12,7 +12,7 @@ describe('Render with styles', () => {
     const head = document.querySelector('head')!;
     const meta = document.createElement('meta');
     head.appendChild(meta);
-    mount(<Icon icon={'Antd' as any} />);
+    render(<Icon icon={'Antd' as any} />);
     expect(head.firstElementChild!.tagName).toBe('STYLE');
   });
 
@@ -24,7 +24,7 @@ describe('Render with styles', () => {
     const reactRoot = document.createElement('div');
     shadow.appendChild(reactRoot);
 
-    mount(<SmileOutlined />, { attachTo: reactRoot });
+    render(<SmileOutlined />, { container: reactRoot });
 
     expect(document.querySelector('style')).toBeFalsy();
     expect(shadow.querySelector('style')).toBeTruthy();

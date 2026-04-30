@@ -1,4 +1,5 @@
 {
+  "name": "ant-design-icons",
   "private": true,
   "workspaces": [
     "packages/*"

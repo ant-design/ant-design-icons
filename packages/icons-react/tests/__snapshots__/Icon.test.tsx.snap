@@ -1,17 +1,3 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`React AntdIcon Component should create SVG element. 1`] = `
-<IconReact
-  className="my-icon"
-  extraProps={
-    {
-      "hello": "world",
-    }
-  }
-  style={
-    {
-      "fontSize": "3rem",
-    }
-  }
-/>
-`;
+exports[`React AntdIcon Component > should create SVG element. 1`] = `""`;

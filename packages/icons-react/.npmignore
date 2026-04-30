@@ -8,6 +8,6 @@ scripts/
 .eslintrc.js
 .fatherrc.js
 .gitignore
-jest.config.js
+vitest.config.ts
 tsconfig.json
 tslint.json

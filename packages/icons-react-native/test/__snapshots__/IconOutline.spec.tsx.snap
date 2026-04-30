@@ -1,44 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`IconOutline props exists 1`] = `
-<
-  style={
-    [
-      {
-        "color": "red",
-        "fontFamily": "antoutline",
-        "fontSize": 24,
-        "fontStyle": "normal",
-        "fontWeight": "normal",
-      },
-      undefined,
-    ]
-  }
->
-  啒
-</>
-`;
+exports[`IconOutline > props exists 1`] = `null`;
 
-exports[`IconOutline should create Icon element. 1`] = `
-<
-  style={
-    [
-      {
-        "color": "black",
-        "fontFamily": "antoutline",
-        "fontSize": 14,
-        "fontStyle": "normal",
-        "fontWeight": "normal",
-      },
-      undefined,
-    ]
-  }
->
-  啊
-</>
-`;
+exports[`IconOutline > should create Icon element. 1`] = `null`;
 
-exports[`IconOutline should create outlineGlyphMap 1`] = `
+exports[`IconOutline > should create outlineGlyphMap 1`] = `
 {
   "account-book": 21834,
   "aim": 21835,

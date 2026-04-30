@@ -1,6 +1,6 @@
 import { TwitterOutlined } from '@ant-design/icons-svg';
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 import Icon from '../src/components/IconBase';
 
 describe('React AntdIcon Component', () => {
@@ -12,23 +12,21 @@ describe('React AntdIcon Component', () => {
       className: 'my-icon',
       extraProps: { hello: 'world' },
     } as any;
-    const icon = mount(
-      <Icon {...props} />,
-    );
+    const icon = render(<Icon {...props} />);
 
-    expect(icon).toMatchSnapshot();
+    expect(icon.container.innerHTML).toMatchSnapshot();
   });
 
   it('should allow explicit import.', () => {
-    const icon = mount(<Icon icon={TwitterOutlined} />);
-    expect(typeof icon.find('path').first().prop('d')).toBe('string');
+    const icon = render(<Icon icon={TwitterOutlined} />);
+    expect(typeof icon.container.querySelector('path')?.getAttribute('d')).toBe('string');
   });
 
   it('should render null, when the type is invalid.', () => {
-    const iconWithObjectTypeProp = mount(<Icon icon={{ invalid: true } as any} />);
-    expect(iconWithObjectTypeProp.isEmptyRender()).toBeTruthy();
+    const iconWithObjectTypeProp = render(<Icon icon={{ invalid: true } as any} />);
+    expect(iconWithObjectTypeProp.container.innerHTML).toBe('');
 
-    const iconWithStringTypeProp = mount(<Icon icon={'Later is better than never.' as any} />);
-    expect(iconWithStringTypeProp.isEmptyRender()).toBeTruthy();
+    const iconWithStringTypeProp = render(<Icon icon={'Later is better than never.' as any} />);
+    expect(iconWithStringTypeProp.container.innerHTML).toBe('');
   });
 });

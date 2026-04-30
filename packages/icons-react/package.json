@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons",
-  "version": "6.1.1",
+  "version": "6.2.2",
   "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-react",
   "license": "MIT",
   "contributors": [
@@ -23,59 +23,100 @@
     "./*": "./*"
   },
   "typings": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./es/*": {
+      "types": "./lib/*.d.ts",
+      "import": "./es/*.js",
+      "require": "./lib/*.js"
+    },
+    "./es/components/*": {
+      "types": "./lib/components/*.d.ts",
+      "import": "./es/components/*.js",
+      "require": "./lib/components/*.js"
+    },
+    "./es/icons": {
+      "types": "./lib/icons/index.d.ts",
+      "import": "./es/icons/index.js",
+      "require": "./lib/icons/index.js"
+    },
+    "./lib/*": {
+      "types": "./lib/*.d.ts",
+      "import": "./es/*.js",
+      "require": "./lib/*.js"
+    },
+    "./lib/components/*": {
+      "types": "./lib/components/*.d.ts",
+      "import": "./es/components/*.js",
+      "require": "./lib/components/*.js"
+    },
+    "./lib/icons": {
+      "types": "./lib/icons/index.d.ts",
+      "import": "./es/icons/index.js",
+      "require": "./lib/icons/index.js"
+    },
+    "./package.json": "./package.json",
+    "./*": {
+      "types": "./lib/icons/*.d.ts",
+      "import": "./es/icons/*.js",
+      "require": "./lib/icons/*.js"
+    }
+  },
   "scripts": {
     "ci": "NODE_ENV=ci npm run prepublishOnly",
     "clean": "./scripts/cleanup.sh",
     "compile": "father build",
-    "postcompile": "npm run clean && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=entry",
-    "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts --target=icon",
+    "generate": "rimraf src/icons && TS_NODE_PROJECT=scripts/tsconfig.json node -r ts-node/register scripts/generate.ts",
     "lint": "eslint src/ --ext .tsx,.ts",
     "prepublishOnly": "npm run generate && npm run compile && npm run lint && npm run test",
     "start": "dumi dev",
-    "test": "rc-test",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "test:local": "npm run generate && npm run compile && npm run test"
   },
   "dependencies": {
-    "@ant-design/colors": "^8.0.0",
-    "@ant-design/icons-svg": "^4.4.0",
-    "@rc-component/util": "^1.3.0",
+    "@ant-design/colors": "^8.0.1",
+    "@ant-design/icons-svg": "^4.4.2",
+    "@rc-component/util": "^1.10.1",
     "clsx": "^2.1.1"
   },
   "devDependencies": {
-    "@rc-component/father-plugin": "^2.0.4",
-    "@rc-component/np": "^1.0.0",
-    "@swc/core": "^1.3.53",
-    "@testing-library/react": "^12",
-    "@types/enzyme": "^3.10.3",
-    "@types/jest": "^24.9.1",
-    "@types/lodash": "^4.14.136",
-    "@types/node": "^24.6.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@eslint/js": "^9.17.0",
-    "typescript-eslint": "^8.18.2",
-    "antd": "^4.8.2",
-    "dumi": "^1.1.4",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.7",
-    "enzyme-to-json": "^3.3.5",
-    "eslint": "^9.17.0",
-    "eslint-plugin-jest": "^28.10.0",
-    "eslint-plugin-react": "^7.37.3",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "father": "^4.0.0",
-    "glob": "^7.1.6",
-    "history": "^4.9.0",
-    "lodash": "^4.17.21",
+    "@eslint/js": "^9.39.4",
+    "@rc-component/father-plugin": "^2.1.3",
+    "@rc-component/np": "^1.0.4",
+    "@swc/core": "^1.15.30",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/lodash": "^4.17.24",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "antd": "^4.24.16",
+    "dumi": "^1.1.54",
+    "eslint": "^9.39.4",
+    "eslint-plugin-jest": "^28.14.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "father": "^4.6.19",
+    "glob": "^7.2.3",
+    "jsdom": "^25.0.1",
+    "history": "^4.10.1",
+    "lodash": "^4.18.1",
     "pkg-dir": "4.0.0",
-    "prettier": "^3.6.2",
-    "rc-test": "^7.0.15",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "rimraf": "^3.0.0",
-    "styled-components": "^3.3.3",
-    "ts-node": "^8.0.0",
-    "typescript": "^5.0.0"
+    "prettier": "^3.8.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "rimraf": "^3.0.2",
+    "styled-components": "^3.4.10",
+    "ts-node": "^8.10.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.59.0",
+    "vite": "^8.0.9",
+    "vitest": "^4.1.5"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
