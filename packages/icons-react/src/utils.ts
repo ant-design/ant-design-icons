@@ -135,9 +135,7 @@ export const iconStyles = `
   cursor: pointer;
 }
 
-.anticon-spin::before,
 .anticon-spin {
-  display: inline-block;
   -webkit-animation: loadingCircle 1s infinite linear;
   animation: loadingCircle 1s infinite linear;
 }
