@@ -9,6 +9,7 @@ const IconProvider = IconContext.Provider;
 describe('Render with styles', () => {
   beforeEach(() => {
     document.head.innerHTML = '';
+    document.body.innerHTML = '';
   });
 
   it('icon style will inset top of head', () => {
@@ -37,6 +38,7 @@ describe('Render with styles', () => {
 describe('zeroRuntime', () => {
   beforeEach(() => {
     document.head.innerHTML = '';
+    document.body.innerHTML = '';
   });
 
   it('should not inject styles when zeroRuntime is true', () => {
