@@ -27,6 +27,7 @@
     "build:es": "tsc --project tsconfig.build.json --module esnext --outDir es",
     "build:lib": "tsc --project tsconfig.build.json --module commonjs --outDir lib",
     "build": "cross-env NODE_ENV=production ut build:es && cross-env NODE_ENV=production ut build:lib",
+    "prepare": "npm run generate && npm run build",
     "test": "cross-env NODE_ENV=test vitest run",
     "test:unit": "vitest run",
     "prepublishOnly": "ut test && ut g && ut build && ut type-check && ut digest",
