@@ -15,6 +15,9 @@
   "exports": {
     ".": {
       "types": "./lib/index.d.ts",
+      "node": {
+        "import": "./index.mjs"
+      },
       "import": "./es/index.js",
       "require": "./lib/index.js"
     },
