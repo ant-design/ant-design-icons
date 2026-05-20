@@ -1,8 +1,6 @@
 import { generate as generateColor } from '@ant-design/colors';
 import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
-import { updateCSS } from '@rc-component/util/lib/Dom/dynamicCSS';
-import { getShadowRoot } from '@rc-component/util/lib/Dom/shadow';
-import { warningOnce } from '@rc-component/util/lib/warning';
+import { updateCSS, getShadowRoot, warning as warningOnce } from '@rc-component/util';
 import type { CSSProperties, MouseEventHandler, MutableRefObject, ReactNode } from 'react';
 import React, { useContext, useEffect } from 'react';
 import IconContext from './components/Context';
