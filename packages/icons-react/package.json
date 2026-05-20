@@ -73,7 +73,7 @@
   "dependencies": {
     "@ant-design/colors": "^8.0.1",
     "@ant-design/icons-svg": "^4.4.2",
-    "@rc-component/util": "^1.10.1",
+    "@rc-component/util": "^1.11.0",
     "clsx": "^2.1.1"
   },
   "devDependencies": {
