@@ -21,6 +21,16 @@
       "import": "./es/index.js",
       "require": "./lib/index.js"
     },
+    "./es": {
+      "types": "./lib/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./lib": {
+      "types": "./lib/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
     "./es/*": {
       "types": "./lib/*.d.ts",
       "import": "./es/*.js",
