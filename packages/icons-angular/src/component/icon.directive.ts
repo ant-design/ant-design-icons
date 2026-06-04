@@ -44,7 +44,7 @@ export class IconDirective {
    */
   protected _changeIcon(): Promise<SVGElement | null> {
     return new Promise<SVGElement | null>(resolve => {
-      if (!this.type) {
+      if (!this.type()) {
         this._clearSVGElement();
         resolve(null);
         return;

@@ -22,8 +22,7 @@
     "eslint-plugin-jest": "^28.10.0",
     "eslint": "^9.17.0",
     "@types/minimatch": "^3",
-    "typescript": "^6",
-    "angular-eslint": "^21.4.0"
+    "typescript": "^5"
   },
   "license": "MIT",
   "repository": "git@github.com:ant-design/ant-design-icons.git",

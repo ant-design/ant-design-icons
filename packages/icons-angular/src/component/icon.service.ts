@@ -1,15 +1,5 @@
 import { HttpBackend, HttpClient } from '@angular/common/http';
-import {
-  Injectable,
-  InjectionToken,
-  Renderer2,
-  RendererFactory2,
-  SecurityContext,
-  DOCUMENT,
-  inject,
-  Optional,
-  Inject
-} from '@angular/core';
+import { Injectable, InjectionToken, RendererFactory2, SecurityContext, DOCUMENT, inject } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { of, Observable, Subject } from 'rxjs';
 import { catchError, filter, finalize, map, share, take, tap } from 'rxjs/operators';
@@ -49,6 +39,12 @@ export const ANT_ICONS = new InjectionToken<IconDefinition[]>('ant_icons');
   providedIn: 'root'
 })
 export class IconService {
+  protected readonly sanitizer = inject(DomSanitizer);
+  protected readonly _handler = inject(HttpBackend, { optional: true });
+  protected readonly _document = inject(DOCUMENT);
+  protected readonly _renderer = inject(RendererFactory2).createRenderer(null, null);
+  protected _http?: HttpClient;
+
   defaultTheme: ThemeType = 'outline';
 
   set twoToneColor({ primaryColor, secondaryColor }: TwoToneColorPaletteSetter) {
@@ -60,9 +56,6 @@ export class IconService {
     // Make a copy to avoid unexpected changes.
     return { ...this._twoToneColorPalette } as TwoToneColorPalette;
   }
-
-  protected _renderer: Renderer2;
-  protected _http?: HttpClient;
 
   /**
    * Disable dynamic loading (support static loading only).
@@ -98,20 +91,15 @@ export class IconService {
   private _enableJsonpLoading = false;
   private readonly _jsonpIconLoad$ = new Subject<IconDefinition>();
 
-  protected _rendererFactory = inject(RendererFactory2);
-  protected _handler = inject(HttpBackend, { optional: true });
-  protected _document = inject(DOCUMENT);
-  protected sanitizer = inject(DomSanitizer);
-
-  constructor(@Optional() @Inject(ANT_ICONS) protected _antIcons: IconDefinition[]) {
-    this._renderer = this._rendererFactory.createRenderer(null, null);
-
+  constructor() {
     if (this._handler) {
       this._http = new HttpClient(this._handler);
     }
 
-    if (this._antIcons) {
-      this.addIcon(...this._antIcons);
+    const _antIcons = inject(ANT_ICONS, { optional: true });
+
+    if (_antIcons) {
+      this.addIcon(..._antIcons);
     }
   }
 
