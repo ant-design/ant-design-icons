@@ -62,7 +62,7 @@ export class IconService {
   }
 
   protected _renderer: Renderer2;
-  protected _http: HttpClient;
+  protected _http?: HttpClient;
 
   /**
    * Disable dynamic loading (support static loading only).
@@ -122,7 +122,8 @@ export class IconService {
     if (!this._enableJsonpLoading) {
       this._enableJsonpLoading = true;
 
-      window[JSONP_HANDLER_NAME] = (icon: IconDefinition) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any)[JSONP_HANDLER_NAME] = (icon: IconDefinition) => {
         this._jsonpIconLoad$.next(icon);
       };
     } else {
@@ -236,7 +237,7 @@ export class IconService {
       }
 
       const source = !this._enableJsonpLoading
-        ? this._http.get(safeUrl, { responseType: 'text' }).pipe(map(literal => ({ ...icon, icon: literal })))
+        ? this._http!.get(safeUrl, { responseType: 'text' }).pipe(map(literal => ({ ...icon, icon: literal })))
         : this._loadIconDynamicallyWithJsonp(icon, safeUrl);
 
       inProgress = source.pipe(

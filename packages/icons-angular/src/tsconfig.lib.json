@@ -18,8 +18,6 @@
     "target": "ES2022",
     "lib": ["ESNext", "dom"],
     "skipLibCheck": true,
-    "types": [],
-    "baseUrl": "."
   },
   "files": ["public_api.ts"]
 }

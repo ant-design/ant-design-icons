@@ -1,4 +1,4 @@
-import { Directive, ElementRef, inject, Input, OnChanges, Renderer2, SimpleChanges } from '@angular/core';
+import { computed, Directive, effect, ElementRef, inject, input, Renderer2 } from '@angular/core';
 import { IconDefinition, ThemeType } from '../types';
 import { alreadyHasAThemeSuffix, getNameAndNamespace, isIconDefinition, warn, withSuffix } from '../utils';
 import { IconService } from './icon.service';
@@ -16,19 +16,27 @@ function checkMeta(prev: RenderMeta, after: RenderMeta): boolean {
 @Directive({
   selector: '[antIcon]'
 })
-export class IconDirective implements OnChanges {
-  @Input() type: string | IconDefinition;
-  @Input() theme?: ThemeType;
-  @Input() twoToneColor?: string;
-
-  protected _elementRef = inject(ElementRef);
+export class IconDirective {
+  protected _el = inject(ElementRef).nativeElement as HTMLElement;
   protected _renderer = inject(Renderer2);
-  constructor(protected _iconService: IconService) {}
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes.type || changes.theme || changes.twoToneColor) {
+  readonly type = input.required<string | IconDefinition>();
+  readonly theme = input<ThemeType>();
+  readonly twoToneColor = input<string>();
+
+  private _selfRenderMeta = computed<RenderMeta>(() => {
+    return {
+      type: this.type(),
+      theme: this.theme(),
+      twoToneColor: this.twoToneColor()
+    };
+  });
+
+  constructor(protected _iconService: IconService) {
+    effect(() => {
+      void this._selfRenderMeta();
       this._changeIcon();
-    }
+    });
   }
 
   /**
@@ -42,13 +50,13 @@ export class IconDirective implements OnChanges {
         return;
       }
 
-      const beforeMeta = this._getSelfRenderMeta();
+      const beforeMeta = this._selfRenderMeta();
       this._iconService
-        .getRenderedContent(this._parseIconType(this.type, this.theme), this.twoToneColor)
+        .getRenderedContent(this._parseIconType(this.type(), this.theme()), this.twoToneColor())
         .subscribe(svg => {
           // avoid race condition
           // see https://github.com/ant-design/ant-design-icons/issues/315
-          const afterMeta = this._getSelfRenderMeta();
+          const afterMeta = this._selfRenderMeta();
           if (checkMeta(beforeMeta, afterMeta)) {
             this._setSVGElement(svg);
             resolve(svg);
@@ -57,14 +65,6 @@ export class IconDirective implements OnChanges {
           }
         });
     });
-  }
-
-  protected _getSelfRenderMeta(): RenderMeta {
-    return {
-      type: this.type,
-      theme: this.theme,
-      twoToneColor: this.twoToneColor
-    };
   }
 
   /**
@@ -95,18 +95,17 @@ export class IconDirective implements OnChanges {
 
   protected _setSVGElement(svg: SVGElement): void {
     this._clearSVGElement();
-    this._renderer.appendChild(this._elementRef.nativeElement, svg);
+    this._renderer.appendChild(this._el, svg);
   }
 
   protected _clearSVGElement(): void {
-    const el: HTMLElement = this._elementRef.nativeElement;
-    const children = el.childNodes;
+    const children = this._el.childNodes;
     const length = children.length;
     for (let i = length - 1; i >= 0; i--) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const child = children[i] as any;
       if (child.tagName?.toLowerCase() === 'svg') {
-        this._renderer.removeChild(el, child);
+        this._renderer.removeChild(this._el, child);
       }
     }
   }
