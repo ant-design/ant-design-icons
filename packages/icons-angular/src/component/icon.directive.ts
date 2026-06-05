@@ -3,7 +3,7 @@ import { IconDefinition, ThemeType } from '../types';
 import { parseIconType } from '../utils';
 import { IconService } from './icon.service';
 
-interface RenderMeta {
+export interface RenderMeta {
   type: string | IconDefinition;
   theme?: ThemeType;
   twoToneColor?: string;
@@ -14,17 +14,17 @@ function checkMeta(prev: RenderMeta, after: RenderMeta): boolean {
 }
 
 export abstract class IconBase {
-  protected abstract readonly _el: HTMLElement;
-  protected abstract readonly _renderer: Renderer2;
-  protected abstract readonly _iconService: IconService;
-  protected abstract get _selfRenderMeta(): RenderMeta;
+  protected abstract readonly el: HTMLElement;
+  protected abstract readonly renderer: Renderer2;
+  protected abstract readonly iconService: IconService;
+  protected abstract get selfRenderMeta(): RenderMeta;
 
   /**
    * Render a new icon in the current element. Remove the icon when `type` is falsy.
    */
   protected _changeIcon(): Promise<SVGElement | null> {
     return new Promise<SVGElement | null>(resolve => {
-      const beforeMeta = this._selfRenderMeta;
+      const beforeMeta = this.selfRenderMeta;
       const { type, theme, twoToneColor } = beforeMeta;
       if (!type) {
         this._clearSVGElement();
@@ -32,12 +32,12 @@ export abstract class IconBase {
         return;
       }
 
-      const mergedType = parseIconType(type, theme, this._iconService.defaultTheme);
+      const mergedType = parseIconType(type, theme, this.iconService.defaultTheme);
 
-      this._iconService.getRenderedContent(mergedType, twoToneColor).subscribe(svg => {
+      this.iconService.getRenderedContent(mergedType, twoToneColor).subscribe(svg => {
         // avoid race condition
         // see https://github.com/ant-design/ant-design-icons/issues/315
-        const afterMeta = this._selfRenderMeta;
+        const afterMeta = this.selfRenderMeta;
         if (checkMeta(beforeMeta, afterMeta)) {
           this._setSVGElement(svg);
           resolve(svg);
@@ -50,17 +50,17 @@ export abstract class IconBase {
 
   protected _setSVGElement(svg: SVGElement): void {
     this._clearSVGElement();
-    this._renderer.appendChild(this._el, svg);
+    this.renderer.appendChild(this.el, svg);
   }
 
   protected _clearSVGElement(): void {
-    const children = this._el.childNodes;
+    const children = this.el.childNodes;
     const length = children.length;
     for (let i = length - 1; i >= 0; i--) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const child = children[i] as any;
       if (child.tagName?.toLowerCase() === 'svg') {
-        this._renderer.removeChild(this._el, child);
+        this.renderer.removeChild(this.el, child);
       }
     }
   }
@@ -70,15 +70,15 @@ export abstract class IconBase {
   selector: '[antIcon]'
 })
 export class IconDirective extends IconBase {
-  protected readonly _el = inject(ElementRef).nativeElement as HTMLElement;
-  protected readonly _renderer = inject(Renderer2);
-  protected readonly _iconService = inject(IconService);
+  protected readonly el = inject(ElementRef).nativeElement as HTMLElement;
+  protected readonly renderer = inject(Renderer2);
+  protected readonly iconService = inject(IconService);
 
   readonly type = input.required<string | IconDefinition>();
   readonly theme = input<ThemeType>();
   readonly twoToneColor = input<string>();
 
-  protected get _selfRenderMeta(): RenderMeta {
+  protected get selfRenderMeta(): RenderMeta {
     return {
       type: this.type(),
       theme: this.theme(),

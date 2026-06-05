@@ -38,9 +38,9 @@ export const ANT_ICONS = new InjectionToken<IconDefinition[]>('ant_icons');
 @Service()
 export class IconService {
   protected readonly sanitizer = inject(DomSanitizer);
-  protected readonly _handler = inject(HttpBackend, { optional: true });
-  protected readonly _document = inject(DOCUMENT);
-  protected readonly _renderer = inject(RendererFactory2).createRenderer(null, null);
+  protected readonly handler = inject(HttpBackend, { optional: true });
+  protected readonly document = inject(DOCUMENT);
+  protected readonly renderer = inject(RendererFactory2).createRenderer(null, null);
   protected _http?: HttpClient;
 
   defaultTheme: ThemeType = 'outline';
@@ -90,8 +90,8 @@ export class IconService {
   private readonly _jsonpIconLoad$ = new Subject<IconDefinition>();
 
   constructor() {
-    if (this._handler) {
-      this._http = new HttpClient(this._handler);
+    if (this.handler) {
+      this._http = new HttpClient(this.handler);
     }
 
     const _antIcons = inject(ANT_ICONS, { optional: true });
@@ -241,7 +241,7 @@ export class IconService {
 
   protected _loadIconDynamicallyWithJsonp(icon: IconDefinition, url: string): Observable<IconDefinition> {
     return new Observable<IconDefinition>(subscriber => {
-      const loader = this._document.createElement('script');
+      const loader = this.document.createElement('script');
       const timer = setTimeout(() => {
         clean();
         subscriber.error(DynamicLoadingTimeoutError());
@@ -254,7 +254,7 @@ export class IconService {
         clearTimeout(timer);
       }
 
-      this._document.body.appendChild(loader);
+      this.document.body.appendChild(loader);
       this._jsonpIconLoad$
         .pipe(
           filter(i => i.name === icon.name && i.theme === icon.theme),
@@ -310,7 +310,7 @@ export class IconService {
   }
 
   protected _createSVGElementFromString(str: string): SVGElement {
-    const div = this._document.createElement('div');
+    const div = this.document.createElement('div');
     div.innerHTML = str;
     const svg: SVGElement | null = div.querySelector('svg');
     if (!svg) {
@@ -320,8 +320,8 @@ export class IconService {
   }
 
   protected _setSVGAttribute(svg: SVGElement): SVGElement {
-    this._renderer.setAttribute(svg, 'width', '1em');
-    this._renderer.setAttribute(svg, 'height', '1em');
+    this.renderer.setAttribute(svg, 'width', '1em');
+    this.renderer.setAttribute(svg, 'height', '1em');
     return svg;
   }
 
@@ -332,13 +332,13 @@ export class IconService {
       for (let i = 0; i < length; i++) {
         const child: HTMLElement = children[i] as HTMLElement;
         if (child.getAttribute('fill') === 'secondaryColor') {
-          this._renderer.setAttribute(child, 'fill', sec);
+          this.renderer.setAttribute(child, 'fill', sec);
         } else {
-          this._renderer.setAttribute(child, 'fill', pri);
+          this.renderer.setAttribute(child, 'fill', pri);
         }
       }
     }
-    this._renderer.setAttribute(svg, 'fill', 'currentColor');
+    this.renderer.setAttribute(svg, 'fill', 'currentColor');
     return svg;
   }
 }
