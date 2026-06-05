@@ -104,3 +104,34 @@ export function getNameAndNamespace(type: string): [string, string] {
 export function hasNamespace(type: string): boolean {
   return getNameAndNamespace(type)[1] !== '';
 }
+
+/**
+ * Parse a icon to the standard form, an `IconDefinition` or a string like 'account-book-fill` (with a theme suffixed).
+ * If namespace is specified, ignore theme because it meaningless for users' icons.
+ *
+ * @param type
+ * @param theme
+ * @param defaultTheme if `theme` is not specified, use this as the default theme
+ */
+export function parseIconType(
+  type: string | IconDefinition,
+  theme: ThemeType | undefined,
+  defaultTheme: ThemeType
+): IconDefinition | string {
+  if (isIconDefinition(type)) {
+    return type;
+  } else {
+    const [name, namespace] = getNameAndNamespace(type);
+    if (namespace) {
+      return type;
+    }
+    if (alreadyHasAThemeSuffix(name)) {
+      if (theme) {
+        warn(`'type' ${name} already gets a theme inside so 'theme' ${theme} would be ignored`);
+      }
+      return name;
+    } else {
+      return withSuffix(name, theme || defaultTheme);
+    }
+  }
+}

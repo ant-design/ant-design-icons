@@ -1,15 +1,5 @@
 import { HttpBackend, HttpClient } from '@angular/common/http';
-import {
-  Injectable,
-  InjectionToken,
-  Renderer2,
-  RendererFactory2,
-  SecurityContext,
-  DOCUMENT,
-  inject,
-  Optional,
-  Inject
-} from '@angular/core';
+import { InjectionToken, RendererFactory2, SecurityContext, DOCUMENT, inject, Service } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { of, Observable, Subject } from 'rxjs';
 import { catchError, filter, finalize, map, share, take, tap } from 'rxjs/operators';
@@ -45,10 +35,14 @@ const JSONP_HANDLER_NAME = '__ant_icon_load';
 
 export const ANT_ICONS = new InjectionToken<IconDefinition[]>('ant_icons');
 
-@Injectable({
-  providedIn: 'root'
-})
+@Service()
 export class IconService {
+  protected readonly sanitizer = inject(DomSanitizer);
+  protected readonly handler = inject(HttpBackend, { optional: true });
+  protected readonly document = inject(DOCUMENT);
+  protected readonly renderer = inject(RendererFactory2).createRenderer(null, null);
+  protected _http?: HttpClient;
+
   defaultTheme: ThemeType = 'outline';
 
   set twoToneColor({ primaryColor, secondaryColor }: TwoToneColorPaletteSetter) {
@@ -60,9 +54,6 @@ export class IconService {
     // Make a copy to avoid unexpected changes.
     return { ...this._twoToneColorPalette } as TwoToneColorPalette;
   }
-
-  protected _renderer: Renderer2;
-  protected _http: HttpClient;
 
   /**
    * Disable dynamic loading (support static loading only).
@@ -98,20 +89,15 @@ export class IconService {
   private _enableJsonpLoading = false;
   private readonly _jsonpIconLoad$ = new Subject<IconDefinition>();
 
-  protected _rendererFactory = inject(RendererFactory2);
-  protected _handler = inject(HttpBackend, { optional: true });
-  protected _document = inject(DOCUMENT);
-  protected sanitizer = inject(DomSanitizer);
-
-  constructor(@Optional() @Inject(ANT_ICONS) protected _antIcons: IconDefinition[]) {
-    this._renderer = this._rendererFactory.createRenderer(null, null);
-
-    if (this._handler) {
-      this._http = new HttpClient(this._handler);
+  constructor() {
+    if (this.handler) {
+      this._http = new HttpClient(this.handler);
     }
 
-    if (this._antIcons) {
-      this.addIcon(...this._antIcons);
+    const _antIcons = inject(ANT_ICONS, { optional: true });
+
+    if (_antIcons) {
+      this.addIcon(..._antIcons);
     }
   }
 
@@ -122,7 +108,8 @@ export class IconService {
     if (!this._enableJsonpLoading) {
       this._enableJsonpLoading = true;
 
-      window[JSONP_HANDLER_NAME] = (icon: IconDefinition) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any)[JSONP_HANDLER_NAME] = (icon: IconDefinition) => {
         this._jsonpIconLoad$.next(icon);
       };
     } else {
@@ -236,7 +223,7 @@ export class IconService {
       }
 
       const source = !this._enableJsonpLoading
-        ? this._http.get(safeUrl, { responseType: 'text' }).pipe(map(literal => ({ ...icon, icon: literal })))
+        ? this._http!.get(safeUrl, { responseType: 'text' }).pipe(map(literal => ({ ...icon, icon: literal })))
         : this._loadIconDynamicallyWithJsonp(icon, safeUrl);
 
       inProgress = source.pipe(
@@ -254,7 +241,7 @@ export class IconService {
 
   protected _loadIconDynamicallyWithJsonp(icon: IconDefinition, url: string): Observable<IconDefinition> {
     return new Observable<IconDefinition>(subscriber => {
-      const loader = this._document.createElement('script');
+      const loader = this.document.createElement('script');
       const timer = setTimeout(() => {
         clean();
         subscriber.error(DynamicLoadingTimeoutError());
@@ -267,7 +254,7 @@ export class IconService {
         clearTimeout(timer);
       }
 
-      this._document.body.appendChild(loader);
+      this.document.body.appendChild(loader);
       this._jsonpIconLoad$
         .pipe(
           filter(i => i.name === icon.name && i.theme === icon.theme),
@@ -323,7 +310,7 @@ export class IconService {
   }
 
   protected _createSVGElementFromString(str: string): SVGElement {
-    const div = this._document.createElement('div');
+    const div = this.document.createElement('div');
     div.innerHTML = str;
     const svg: SVGElement | null = div.querySelector('svg');
     if (!svg) {
@@ -333,8 +320,8 @@ export class IconService {
   }
 
   protected _setSVGAttribute(svg: SVGElement): SVGElement {
-    this._renderer.setAttribute(svg, 'width', '1em');
-    this._renderer.setAttribute(svg, 'height', '1em');
+    this.renderer.setAttribute(svg, 'width', '1em');
+    this.renderer.setAttribute(svg, 'height', '1em');
     return svg;
   }
 
@@ -345,13 +332,13 @@ export class IconService {
       for (let i = 0; i < length; i++) {
         const child: HTMLElement = children[i] as HTMLElement;
         if (child.getAttribute('fill') === 'secondaryColor') {
-          this._renderer.setAttribute(child, 'fill', sec);
+          this.renderer.setAttribute(child, 'fill', sec);
         } else {
-          this._renderer.setAttribute(child, 'fill', pri);
+          this.renderer.setAttribute(child, 'fill', pri);
         }
       }
     }
-    this._renderer.setAttribute(svg, 'fill', 'currentColor');
+    this.renderer.setAttribute(svg, 'fill', 'currentColor');
     return svg;
   }
 }

@@ -1,9 +1,9 @@
-import { Directive, ElementRef, inject, Input, OnChanges, Renderer2, SimpleChanges } from '@angular/core';
+import { Directive, effect, ElementRef, inject, input, Renderer2 } from '@angular/core';
 import { IconDefinition, ThemeType } from '../types';
-import { alreadyHasAThemeSuffix, getNameAndNamespace, isIconDefinition, warn, withSuffix } from '../utils';
+import { parseIconType } from '../utils';
 import { IconService } from './icon.service';
 
-interface RenderMeta {
+export interface RenderMeta {
   type: string | IconDefinition;
   theme?: ThemeType;
   twoToneColor?: string;
@@ -13,101 +13,86 @@ function checkMeta(prev: RenderMeta, after: RenderMeta): boolean {
   return prev.type === after.type && prev.theme === after.theme && prev.twoToneColor === after.twoToneColor;
 }
 
-@Directive({
-  selector: '[antIcon]'
-})
-export class IconDirective implements OnChanges {
-  @Input() type: string | IconDefinition;
-  @Input() theme?: ThemeType;
-  @Input() twoToneColor?: string;
-
-  protected _elementRef = inject(ElementRef);
-  protected _renderer = inject(Renderer2);
-  constructor(protected _iconService: IconService) {}
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes.type || changes.theme || changes.twoToneColor) {
-      this._changeIcon();
-    }
-  }
+export abstract class IconBase {
+  protected abstract readonly el: HTMLElement;
+  protected abstract readonly renderer: Renderer2;
+  protected abstract readonly iconService: IconService;
+  protected abstract get selfRenderMeta(): RenderMeta;
 
   /**
    * Render a new icon in the current element. Remove the icon when `type` is falsy.
    */
   protected _changeIcon(): Promise<SVGElement | null> {
     return new Promise<SVGElement | null>(resolve => {
-      if (!this.type) {
+      const beforeMeta = this.selfRenderMeta;
+      const { type, theme, twoToneColor } = beforeMeta;
+      if (!type) {
         this._clearSVGElement();
         resolve(null);
         return;
       }
 
-      const beforeMeta = this._getSelfRenderMeta();
-      this._iconService
-        .getRenderedContent(this._parseIconType(this.type, this.theme), this.twoToneColor)
-        .subscribe(svg => {
-          // avoid race condition
-          // see https://github.com/ant-design/ant-design-icons/issues/315
-          const afterMeta = this._getSelfRenderMeta();
-          if (checkMeta(beforeMeta, afterMeta)) {
-            this._setSVGElement(svg);
-            resolve(svg);
-          } else {
-            resolve(null);
-          }
-        });
-    });
-  }
+      const mergedType = parseIconType(type, theme, this.iconService.defaultTheme);
 
-  protected _getSelfRenderMeta(): RenderMeta {
-    return {
-      type: this.type,
-      theme: this.theme,
-      twoToneColor: this.twoToneColor
-    };
-  }
-
-  /**
-   * Parse a icon to the standard form, an `IconDefinition` or a string like 'account-book-fill` (with a theme suffixed).
-   * If namespace is specified, ignore theme because it meaningless for users' icons.
-   *
-   * @param type
-   * @param theme
-   */
-  protected _parseIconType(type: string | IconDefinition, theme?: ThemeType): IconDefinition | string {
-    if (isIconDefinition(type)) {
-      return type;
-    } else {
-      const [name, namespace] = getNameAndNamespace(type);
-      if (namespace) {
-        return type;
-      }
-      if (alreadyHasAThemeSuffix(name)) {
-        if (theme) {
-          warn(`'type' ${name} already gets a theme inside so 'theme' ${theme} would be ignored`);
+      this.iconService.getRenderedContent(mergedType, twoToneColor).subscribe(svg => {
+        // avoid race condition
+        // see https://github.com/ant-design/ant-design-icons/issues/315
+        const afterMeta = this.selfRenderMeta;
+        if (checkMeta(beforeMeta, afterMeta)) {
+          this._setSVGElement(svg);
+          resolve(svg);
+        } else {
+          resolve(null);
         }
-        return name;
-      } else {
-        return withSuffix(name, theme || this._iconService.defaultTheme);
-      }
-    }
+      });
+    });
   }
 
   protected _setSVGElement(svg: SVGElement): void {
     this._clearSVGElement();
-    this._renderer.appendChild(this._elementRef.nativeElement, svg);
+    this.renderer.appendChild(this.el, svg);
   }
 
   protected _clearSVGElement(): void {
-    const el: HTMLElement = this._elementRef.nativeElement;
-    const children = el.childNodes;
+    const children = this.el.childNodes;
     const length = children.length;
     for (let i = length - 1; i >= 0; i--) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const child = children[i] as any;
       if (child.tagName?.toLowerCase() === 'svg') {
-        this._renderer.removeChild(el, child);
+        this.renderer.removeChild(this.el, child);
       }
     }
+  }
+}
+
+@Directive({
+  selector: '[antIcon]'
+})
+export class IconDirective extends IconBase {
+  protected readonly el = inject(ElementRef).nativeElement as HTMLElement;
+  protected readonly renderer = inject(Renderer2);
+  protected readonly iconService = inject(IconService);
+
+  readonly type = input.required<string | IconDefinition>();
+  readonly theme = input<ThemeType>();
+  readonly twoToneColor = input<string>();
+
+  protected get selfRenderMeta(): RenderMeta {
+    return {
+      type: this.type(),
+      theme: this.theme(),
+      twoToneColor: this.twoToneColor()
+    };
+  }
+
+  constructor() {
+    super();
+    effect(() => {
+      void this.type();
+      void this.theme();
+      void this.twoToneColor();
+      this._changeIcon();
+    });
   }
 }

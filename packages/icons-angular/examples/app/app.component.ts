@@ -1,5 +1,5 @@
 import { FormsModule } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { manifest, IconService, Manifest, ThemeType, IconDirective } from '@ant-design/icons-angular';
 
 @Component({
@@ -9,6 +9,8 @@ import { manifest, IconService, Manifest, ThemeType, IconDirective } from '@ant-
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
+  readonly iconService = inject(IconService);
+
   currentTheme: ThemeType = 'fill';
   names: Manifest = manifest;
   icons: string[] = [];
@@ -17,10 +19,10 @@ export class AppComponent implements OnInit {
     this.icons = this.names[this.currentTheme];
   }
 
-  constructor(private _iconService: IconService) {
-    this._iconService.twoToneColor = { primaryColor: '#1890ff' };
-    this._iconService.useJsonpLoading();
-    // this._iconService.addIconLiteral('animal:panda', pandaLiteral);
+  constructor() {
+    this.iconService.twoToneColor = { primaryColor: '#1890ff' };
+    this.iconService.useJsonpLoading();
+    // this.iconService.addIconLiteral('animal:panda', pandaLiteral);
   }
 
   ngOnInit(): void {
