@@ -1,6 +1,6 @@
-import { computed, Directive, effect, ElementRef, inject, input, Renderer2 } from '@angular/core';
+import { Directive, effect, ElementRef, inject, input, Renderer2 } from '@angular/core';
 import { IconDefinition, ThemeType } from '../types';
-import { alreadyHasAThemeSuffix, getNameAndNamespace, isIconDefinition, warn, withSuffix } from '../utils';
+import { parseIconType } from '../utils';
 import { IconService } from './icon.service';
 
 interface RenderMeta {
@@ -13,84 +13,39 @@ function checkMeta(prev: RenderMeta, after: RenderMeta): boolean {
   return prev.type === after.type && prev.theme === after.theme && prev.twoToneColor === after.twoToneColor;
 }
 
-@Directive({
-  selector: '[antIcon]'
-})
-export class IconDirective {
-  protected _el = inject(ElementRef).nativeElement as HTMLElement;
-  protected _renderer = inject(Renderer2);
-
-  readonly type = input.required<string | IconDefinition>();
-  readonly theme = input<ThemeType>();
-  readonly twoToneColor = input<string>();
-
-  private _selfRenderMeta = computed<RenderMeta>(() => {
-    return {
-      type: this.type(),
-      theme: this.theme(),
-      twoToneColor: this.twoToneColor()
-    };
-  });
-
-  constructor(protected _iconService: IconService) {
-    effect(() => {
-      void this._selfRenderMeta();
-      this._changeIcon();
-    });
-  }
+export abstract class IconBase {
+  protected abstract readonly _el: HTMLElement;
+  protected abstract readonly _renderer: Renderer2;
+  protected abstract readonly _iconService: IconService;
+  protected abstract get _selfRenderMeta(): RenderMeta;
 
   /**
    * Render a new icon in the current element. Remove the icon when `type` is falsy.
    */
   protected _changeIcon(): Promise<SVGElement | null> {
     return new Promise<SVGElement | null>(resolve => {
-      if (!this.type()) {
+      const beforeMeta = this._selfRenderMeta;
+      const { type, theme, twoToneColor } = beforeMeta;
+      if (!type) {
         this._clearSVGElement();
         resolve(null);
         return;
       }
 
-      const beforeMeta = this._selfRenderMeta();
-      this._iconService
-        .getRenderedContent(this._parseIconType(this.type(), this.theme()), this.twoToneColor())
-        .subscribe(svg => {
-          // avoid race condition
-          // see https://github.com/ant-design/ant-design-icons/issues/315
-          const afterMeta = this._selfRenderMeta();
-          if (checkMeta(beforeMeta, afterMeta)) {
-            this._setSVGElement(svg);
-            resolve(svg);
-          } else {
-            resolve(null);
-          }
-        });
-    });
-  }
+      const mergedType = parseIconType(type, theme, this._iconService.defaultTheme);
 
-  /**
-   * Parse a icon to the standard form, an `IconDefinition` or a string like 'account-book-fill` (with a theme suffixed).
-   * If namespace is specified, ignore theme because it meaningless for users' icons.
-   *
-   * @param type
-   * @param theme
-   */
-  protected _parseIconType(type: string | IconDefinition, theme?: ThemeType): IconDefinition | string {
-    if (isIconDefinition(type)) {
-      return type;
-    } else {
-      const [name, namespace] = getNameAndNamespace(type);
-      if (namespace) {
-        return type;
-      }
-      if (alreadyHasAThemeSuffix(name)) {
-        if (theme) {
-          warn(`'type' ${name} already gets a theme inside so 'theme' ${theme} would be ignored`);
+      this._iconService.getRenderedContent(mergedType, twoToneColor).subscribe(svg => {
+        // avoid race condition
+        // see https://github.com/ant-design/ant-design-icons/issues/315
+        const afterMeta = this._selfRenderMeta;
+        if (checkMeta(beforeMeta, afterMeta)) {
+          this._setSVGElement(svg);
+          resolve(svg);
+        } else {
+          resolve(null);
         }
-        return name;
-      } else {
-        return withSuffix(name, theme || this._iconService.defaultTheme);
-      }
-    }
+      });
+    });
   }
 
   protected _setSVGElement(svg: SVGElement): void {
@@ -108,5 +63,36 @@ export class IconDirective {
         this._renderer.removeChild(this._el, child);
       }
     }
+  }
+}
+
+@Directive({
+  selector: '[antIcon]'
+})
+export class IconDirective extends IconBase {
+  protected readonly _el = inject(ElementRef).nativeElement as HTMLElement;
+  protected readonly _renderer = inject(Renderer2);
+  protected readonly _iconService = inject(IconService);
+
+  readonly type = input.required<string | IconDefinition>();
+  readonly theme = input<ThemeType>();
+  readonly twoToneColor = input<string>();
+
+  protected get _selfRenderMeta(): RenderMeta {
+    return {
+      type: this.type(),
+      theme: this.theme(),
+      twoToneColor: this.twoToneColor()
+    };
+  }
+
+  constructor() {
+    super();
+    effect(() => {
+      void this.type();
+      void this.theme();
+      void this.twoToneColor();
+      this._changeIcon();
+    });
   }
 }

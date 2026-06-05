@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "clean": "ut clean --workspaces",
+    "start": "ut start --workspace @ant-design/icons-angular-workspace",
     "rn:generate": "ut generate --workspace @ant-design/icons-react-native",
     "icons:generate": "ut generate --workspace @ant-design/icons-svg",
     "icons:build": "ut build --workspace @ant-design/icons-svg",

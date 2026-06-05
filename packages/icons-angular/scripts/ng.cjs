@@ -5,8 +5,9 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const localTypescriptHook = require.resolve('./use-local-typescript.cjs');
+const localTypescriptLoaderRegister = path.resolve(__dirname, 'register-local-typescript-loader.mjs');
 const requireHookOption = `--require=${localTypescriptHook}`;
-const preserveSymlinksOption = '--preserve-symlinks';
+const loaderOption = `--import=${localTypescriptLoaderRegister}`;
 const workspaceRoot = path.resolve(__dirname, '..');
 const repoRoot = path.resolve(workspaceRoot, '../..');
 
@@ -38,17 +39,17 @@ function ensureLocalToolchainPackage(packageName) {
 
 const nodeOptions = prependNodeOption(
   requireHookOption,
-  prependNodeOption(preserveSymlinksOption, process.env.NODE_OPTIONS),
+  prependNodeOption(loaderOption, process.env.NODE_OPTIONS),
 );
 
-if (!process.execArgv.includes(preserveSymlinksOption)) {
+if (!process.execArgv.includes(loaderOption) && !process.execArgv.includes(localTypescriptLoaderRegister)) {
   const result = spawnSync(
     process.execPath,
-    [preserveSymlinksOption, '--require', localTypescriptHook, __filename, ...process.argv.slice(2)],
+    ['--import', localTypescriptLoaderRegister, '--require', localTypescriptHook, __filename, ...process.argv.slice(2)],
     {
       env: {
         ...process.env,
-        NODE_OPTIONS: nodeOptions,
+        NODE_OPTIONS: process.env.NODE_OPTIONS,
       },
       stdio: 'inherit',
     },

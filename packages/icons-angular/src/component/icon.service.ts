@@ -1,5 +1,5 @@
 import { HttpBackend, HttpClient } from '@angular/common/http';
-import { Injectable, InjectionToken, RendererFactory2, SecurityContext, DOCUMENT, inject } from '@angular/core';
+import { InjectionToken, RendererFactory2, SecurityContext, DOCUMENT, inject, Service } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { of, Observable, Subject } from 'rxjs';
 import { catchError, filter, finalize, map, share, take, tap } from 'rxjs/operators';
@@ -35,9 +35,7 @@ const JSONP_HANDLER_NAME = '__ant_icon_load';
 
 export const ANT_ICONS = new InjectionToken<IconDefinition[]>('ant_icons');
 
-@Injectable({
-  providedIn: 'root'
-})
+@Service()
 export class IconService {
   protected readonly sanitizer = inject(DomSanitizer);
   protected readonly _handler = inject(HttpBackend, { optional: true });
