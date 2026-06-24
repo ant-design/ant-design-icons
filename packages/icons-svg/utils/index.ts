@@ -1,7 +1,7 @@
 import upperFirst from 'lodash.upperfirst';
 import camelCase from 'lodash.camelcase';
-import { ThemeTypeUpperCase } from '../templates/types';
 import { pipe } from 'ramda';
+import type { ThemeTypeUpperCase } from '../templates/types';
 
 export interface IdentifierMeta {
   name: string;
