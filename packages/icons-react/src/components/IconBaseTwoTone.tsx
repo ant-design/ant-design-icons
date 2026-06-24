@@ -2,7 +2,7 @@ import * as React from 'react';
 import type { AbstractNode } from '@ant-design/icons-svg/lib/types';
 import type { IconProps } from './IconBase';
 import { getSecondaryColor } from '../colorUtils';
-import { generate, isIconDefinition, warning, useInsertStyles } from '../utils';
+import { generate, isIconDefinition, warning, useInsertStyles } from '../renderUtils';
 
 export interface TwoToneColorPaletteSetter {
   primaryColor: string;
