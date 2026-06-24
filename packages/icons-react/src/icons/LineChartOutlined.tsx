@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import LineChartOutlinedSvg from '@ant-design/icons-svg/lib/asn/LineChartOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const LineChartOutlined = (
   props: AntdIconProps,

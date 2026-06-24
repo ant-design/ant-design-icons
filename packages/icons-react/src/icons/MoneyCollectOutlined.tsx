@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import MoneyCollectOutlinedSvg from '@ant-design/icons-svg/lib/asn/MoneyCollectOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const MoneyCollectOutlined = (
   props: AntdIconProps,

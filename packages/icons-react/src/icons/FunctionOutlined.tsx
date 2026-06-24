@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import FunctionOutlinedSvg from '@ant-design/icons-svg/lib/asn/FunctionOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const FunctionOutlined = (
   props: AntdIconProps,

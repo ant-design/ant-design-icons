@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import ToTopOutlinedSvg from '@ant-design/icons-svg/lib/asn/ToTopOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const ToTopOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import MergeFilledSvg from '@ant-design/icons-svg/lib/asn/MergeFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const MergeFilled = (
   props: AntdIconProps,

@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import RestFilledSvg from '@ant-design/icons-svg/lib/asn/RestFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const RestFilled = (
   props: AntdIconProps,

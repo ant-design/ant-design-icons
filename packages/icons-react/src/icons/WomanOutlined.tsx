@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import WomanOutlinedSvg from '@ant-design/icons-svg/lib/asn/WomanOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const WomanOutlined = (
   props: AntdIconProps,

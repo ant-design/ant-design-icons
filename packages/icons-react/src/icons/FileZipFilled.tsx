@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import FileZipFilledSvg from '@ant-design/icons-svg/lib/asn/FileZipFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const FileZipFilled = (
   props: AntdIconProps,

@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import CloseCircleTwoToneSvg from '@ant-design/icons-svg/lib/asn/CloseCircleTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon from '../components/AntdIcon';
+import type { AntdIconProps } from '../components/AntdIcon';
 
 const CloseCircleTwoTone = (
   props: AntdIconProps,

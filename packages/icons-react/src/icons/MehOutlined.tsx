@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import MehOutlinedSvg from '@ant-design/icons-svg/lib/asn/MehOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const MehOutlined = (
   props: AntdIconProps,

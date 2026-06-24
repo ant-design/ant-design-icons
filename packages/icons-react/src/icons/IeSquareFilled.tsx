@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import IeSquareFilledSvg from '@ant-design/icons-svg/lib/asn/IeSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const IeSquareFilled = (
   props: AntdIconProps,

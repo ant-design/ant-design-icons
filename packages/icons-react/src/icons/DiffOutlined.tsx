@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import DiffOutlinedSvg from '@ant-design/icons-svg/lib/asn/DiffOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const DiffOutlined = (
   props: AntdIconProps,

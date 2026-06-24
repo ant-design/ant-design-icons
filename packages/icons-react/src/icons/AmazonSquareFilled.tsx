@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import AmazonSquareFilledSvg from '@ant-design/icons-svg/lib/asn/AmazonSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const AmazonSquareFilled = (
   props: AntdIconProps,

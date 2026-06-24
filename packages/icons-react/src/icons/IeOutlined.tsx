@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import IeOutlinedSvg from '@ant-design/icons-svg/lib/asn/IeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const IeOutlined = (
   props: AntdIconProps,

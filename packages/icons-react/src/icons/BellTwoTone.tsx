@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import BellTwoToneSvg from '@ant-design/icons-svg/lib/asn/BellTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon from '../components/AntdIcon';
+import type { AntdIconProps } from '../components/AntdIcon';
 
 const BellTwoTone = (
   props: AntdIconProps,

@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import AuditOutlinedSvg from '@ant-design/icons-svg/lib/asn/AuditOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const AuditOutlined = (
   props: AntdIconProps,

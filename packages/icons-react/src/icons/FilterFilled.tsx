@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import FilterFilledSvg from '@ant-design/icons-svg/lib/asn/FilterFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const FilterFilled = (
   props: AntdIconProps,

@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import FolderAddTwoToneSvg from '@ant-design/icons-svg/lib/asn/FolderAddTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon from '../components/AntdIcon';
+import type { AntdIconProps } from '../components/AntdIcon';
 
 const FolderAddTwoTone = (
   props: AntdIconProps,

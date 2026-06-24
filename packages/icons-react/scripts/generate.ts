@@ -81,7 +81,8 @@ async function generateIcons() {
 
 import * as React from 'react'
 import <%= svgIdentifier %>Svg from '@ant-design/icons-svg/lib/asn/<%= svgIdentifier %>';
-import AntdIcon, { AntdIconProps } from '../components/<%= runtimeComponent %>';
+import AntdIcon from '../components/<%= runtimeComponent %>';
+import type { AntdIconProps } from '../components/<%= runtimeComponent %>';
 
 const <%= svgIdentifier %> = (
   props: AntdIconProps,

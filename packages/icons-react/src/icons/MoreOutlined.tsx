@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import MoreOutlinedSvg from '@ant-design/icons-svg/lib/asn/MoreOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const MoreOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import DeleteTwoToneSvg from '@ant-design/icons-svg/lib/asn/DeleteTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon from '../components/AntdIcon';
+import type { AntdIconProps } from '../components/AntdIcon';
 
 const DeleteTwoTone = (
   props: AntdIconProps,
