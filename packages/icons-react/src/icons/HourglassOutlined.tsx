@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import HourglassOutlinedSvg from '@ant-design/icons-svg/lib/asn/HourglassOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const HourglassOutlined = (
   props: AntdIconProps,

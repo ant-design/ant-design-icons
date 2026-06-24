@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BehanceOutlinedSvg from '@ant-design/icons-svg/lib/asn/BehanceOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const BehanceOutlined = (
   props: AntdIconProps,

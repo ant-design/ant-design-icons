@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ThunderboltOutlinedSvg from '@ant-design/icons-svg/lib/asn/ThunderboltOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ThunderboltOutlined = (
   props: AntdIconProps,

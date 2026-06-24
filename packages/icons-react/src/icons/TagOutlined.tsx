@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import TagOutlinedSvg from '@ant-design/icons-svg/lib/asn/TagOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const TagOutlined = (
   props: AntdIconProps,

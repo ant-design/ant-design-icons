@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FullscreenOutlinedSvg from '@ant-design/icons-svg/lib/asn/FullscreenOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FullscreenOutlined = (
   props: AntdIconProps,

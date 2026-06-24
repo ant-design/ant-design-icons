@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import OrderedListOutlinedSvg from '@ant-design/icons-svg/lib/asn/OrderedListOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const OrderedListOutlined = (
   props: AntdIconProps,

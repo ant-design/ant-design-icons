@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PlayCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/PlayCircleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const PlayCircleOutlined = (
   props: AntdIconProps,

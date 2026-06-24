@@ -1,4 +1,4 @@
-import { IconDefinition, AbstractNode } from './types';
+import type { IconDefinition, AbstractNode } from './types';
 
 const defaultColors = {
   primaryColor: '#333',

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RotateRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/RotateRightOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const RotateRightOutlined = (
   props: AntdIconProps,

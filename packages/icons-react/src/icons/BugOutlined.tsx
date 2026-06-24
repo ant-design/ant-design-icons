@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BugOutlinedSvg from '@ant-design/icons-svg/lib/asn/BugOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const BugOutlined = (
   props: AntdIconProps,

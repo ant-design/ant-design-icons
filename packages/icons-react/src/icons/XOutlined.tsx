@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import XOutlinedSvg from '@ant-design/icons-svg/lib/asn/XOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const XOutlined = (
   props: AntdIconProps,

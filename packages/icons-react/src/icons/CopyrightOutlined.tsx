@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CopyrightOutlinedSvg from '@ant-design/icons-svg/lib/asn/CopyrightOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CopyrightOutlined = (
   props: AntdIconProps,

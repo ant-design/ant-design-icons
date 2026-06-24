@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AppstoreAddOutlinedSvg from '@ant-design/icons-svg/lib/asn/AppstoreAddOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const AppstoreAddOutlined = (
   props: AntdIconProps,

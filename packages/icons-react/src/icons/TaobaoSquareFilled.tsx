@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import TaobaoSquareFilledSvg from '@ant-design/icons-svg/lib/asn/TaobaoSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const TaobaoSquareFilled = (
   props: AntdIconProps,

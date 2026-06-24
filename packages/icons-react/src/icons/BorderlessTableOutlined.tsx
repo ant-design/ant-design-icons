@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BorderlessTableOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderlessTableOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const BorderlessTableOutlined = (
   props: AntdIconProps,

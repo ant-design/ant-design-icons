@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PlusSquareFilledSvg from '@ant-design/icons-svg/lib/asn/PlusSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const PlusSquareFilled = (
   props: AntdIconProps,

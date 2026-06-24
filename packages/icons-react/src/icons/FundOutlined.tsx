@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FundOutlinedSvg from '@ant-design/icons-svg/lib/asn/FundOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FundOutlined = (
   props: AntdIconProps,

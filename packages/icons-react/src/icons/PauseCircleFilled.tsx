@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PauseCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PauseCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const PauseCircleFilled = (
   props: AntdIconProps,

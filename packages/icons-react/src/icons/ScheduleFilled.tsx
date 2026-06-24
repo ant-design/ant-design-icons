@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ScheduleFilledSvg from '@ant-design/icons-svg/lib/asn/ScheduleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ScheduleFilled = (
   props: AntdIconProps,

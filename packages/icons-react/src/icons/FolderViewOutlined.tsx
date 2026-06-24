@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FolderViewOutlinedSvg from '@ant-design/icons-svg/lib/asn/FolderViewOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FolderViewOutlined = (
   props: AntdIconProps,

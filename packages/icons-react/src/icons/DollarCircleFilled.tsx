@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DollarCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DollarCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const DollarCircleFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ChromeFilledSvg from '@ant-design/icons-svg/lib/asn/ChromeFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ChromeFilled = (
   props: AntdIconProps,

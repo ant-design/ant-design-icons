@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GiftOutlinedSvg from '@ant-design/icons-svg/lib/asn/GiftOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const GiftOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FunnelPlotOutlinedSvg from '@ant-design/icons-svg/lib/asn/FunnelPlotOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FunnelPlotOutlined = (
   props: AntdIconProps,

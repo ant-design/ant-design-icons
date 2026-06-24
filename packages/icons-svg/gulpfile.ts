@@ -16,8 +16,8 @@ import { twotoneStringify } from './plugins/svg2Definition/stringify';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { getIdentifier } from './utils';
-import { IconDefinition } from './templates/types';
 import { ExtractRegExp } from './tasks/creators/generateInline';
+import type { IconDefinition } from './templates/types';
 
 const iconTemplate = readFileSync(
   resolve(__dirname, './templates/icon.ts.ejs'),

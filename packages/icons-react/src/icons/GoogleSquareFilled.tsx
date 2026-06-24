@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GoogleSquareFilledSvg from '@ant-design/icons-svg/lib/asn/GoogleSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const GoogleSquareFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ThunderboltFilledSvg from '@ant-design/icons-svg/lib/asn/ThunderboltFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ThunderboltFilled = (
   props: AntdIconProps,

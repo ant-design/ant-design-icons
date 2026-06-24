@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ItalicOutlinedSvg from '@ant-design/icons-svg/lib/asn/ItalicOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ItalicOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ShakeOutlinedSvg from '@ant-design/icons-svg/lib/asn/ShakeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ShakeOutlined = (
   props: AntdIconProps,

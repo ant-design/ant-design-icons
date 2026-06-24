@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CrownOutlinedSvg from '@ant-design/icons-svg/lib/asn/CrownOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CrownOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import HighlightFilledSvg from '@ant-design/icons-svg/lib/asn/HighlightFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const HighlightFilled = (
   props: AntdIconProps,

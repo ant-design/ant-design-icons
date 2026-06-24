@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MinusSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/MinusSquareOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const MinusSquareOutlined = (
   props: AntdIconProps,

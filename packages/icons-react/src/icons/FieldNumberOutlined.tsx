@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FieldNumberOutlinedSvg from '@ant-design/icons-svg/lib/asn/FieldNumberOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FieldNumberOutlined = (
   props: AntdIconProps,

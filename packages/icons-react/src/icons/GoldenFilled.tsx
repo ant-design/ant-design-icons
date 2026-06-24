@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GoldenFilledSvg from '@ant-design/icons-svg/lib/asn/GoldenFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const GoldenFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import TwitchOutlinedSvg from '@ant-design/icons-svg/lib/asn/TwitchOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const TwitchOutlined = (
   props: AntdIconProps,

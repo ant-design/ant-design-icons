@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import QqSquareFilledSvg from '@ant-design/icons-svg/lib/asn/QqSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const QqSquareFilled = (
   props: AntdIconProps,

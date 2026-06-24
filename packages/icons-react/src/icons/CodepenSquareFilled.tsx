@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CodepenSquareFilledSvg from '@ant-design/icons-svg/lib/asn/CodepenSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CodepenSquareFilled = (
   props: AntdIconProps,

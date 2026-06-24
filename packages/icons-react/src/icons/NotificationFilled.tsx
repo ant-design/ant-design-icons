@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import NotificationFilledSvg from '@ant-design/icons-svg/lib/asn/NotificationFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const NotificationFilled = (
   props: AntdIconProps,

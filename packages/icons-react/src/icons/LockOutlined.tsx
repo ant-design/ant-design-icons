@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import LockOutlinedSvg from '@ant-design/icons-svg/lib/asn/LockOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const LockOutlined = (
   props: AntdIconProps,

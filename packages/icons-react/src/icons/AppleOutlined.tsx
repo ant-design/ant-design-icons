@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AppleOutlinedSvg from '@ant-design/icons-svg/lib/asn/AppleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const AppleOutlined = (
   props: AntdIconProps,

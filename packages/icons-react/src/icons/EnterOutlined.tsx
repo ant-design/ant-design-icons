@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import EnterOutlinedSvg from '@ant-design/icons-svg/lib/asn/EnterOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const EnterOutlined = (
   props: AntdIconProps,

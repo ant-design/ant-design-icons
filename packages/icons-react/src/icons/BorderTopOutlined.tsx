@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BorderTopOutlinedSvg from '@ant-design/icons-svg/lib/asn/BorderTopOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const BorderTopOutlined = (
   props: AntdIconProps,

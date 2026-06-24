@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import EditFilledSvg from '@ant-design/icons-svg/lib/asn/EditFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const EditFilled = (
   props: AntdIconProps,

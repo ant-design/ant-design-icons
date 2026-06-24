@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import UsbFilledSvg from '@ant-design/icons-svg/lib/asn/UsbFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const UsbFilled = (
   props: AntdIconProps,

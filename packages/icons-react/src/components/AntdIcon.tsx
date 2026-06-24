@@ -3,13 +3,13 @@
 import * as React from 'react';
 import { clsx } from 'clsx';
 import type { IconDefinition } from '@ant-design/icons-svg/lib/types';
-import { blue } from '@ant-design/colors';
 
 import Context from './Context';
 import type { IconBaseProps } from './Icon';
-import ReactIcon from './IconBase';
+import ReactIcon from './IconBaseTwoTone';
 import { getTwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
 import type { TwoToneColor } from './twoTonePrimaryColor';
+import { DEFAULT_TWOTONE_COLOR } from '../colorUtils';
 import { normalizeTwoToneColors } from '../utils';
 
 export interface AntdIconProps extends IconBaseProps {
@@ -22,7 +22,7 @@ export interface IconComponentProps extends AntdIconProps {
 
 // Initial setting
 // should move it to antd main repo?
-setTwoToneColor(blue.primary);
+setTwoToneColor(DEFAULT_TWOTONE_COLOR);
 
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757#issuecomment-488848720
 interface IconBaseComponent<Props>

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import WechatWorkOutlinedSvg from '@ant-design/icons-svg/lib/asn/WechatWorkOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const WechatWorkOutlined = (
   props: AntdIconProps,

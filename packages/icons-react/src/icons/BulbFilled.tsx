@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BulbFilledSvg from '@ant-design/icons-svg/lib/asn/BulbFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const BulbFilled = (
   props: AntdIconProps,

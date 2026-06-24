@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ProfileOutlinedSvg from '@ant-design/icons-svg/lib/asn/ProfileOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ProfileOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MergeOutlinedSvg from '@ant-design/icons-svg/lib/asn/MergeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const MergeOutlined = (
   props: AntdIconProps,

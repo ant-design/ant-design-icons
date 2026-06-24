@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ExclamationCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/ExclamationCircleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ExclamationCircleOutlined = (
   props: AntdIconProps,

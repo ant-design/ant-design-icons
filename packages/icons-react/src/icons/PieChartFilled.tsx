@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PieChartFilledSvg from '@ant-design/icons-svg/lib/asn/PieChartFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const PieChartFilled = (
   props: AntdIconProps,

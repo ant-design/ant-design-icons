@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MobileOutlinedSvg from '@ant-design/icons-svg/lib/asn/MobileOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const MobileOutlined = (
   props: AntdIconProps,

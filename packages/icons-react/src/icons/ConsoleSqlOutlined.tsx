@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ConsoleSqlOutlinedSvg from '@ant-design/icons-svg/lib/asn/ConsoleSqlOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ConsoleSqlOutlined = (
   props: AntdIconProps,

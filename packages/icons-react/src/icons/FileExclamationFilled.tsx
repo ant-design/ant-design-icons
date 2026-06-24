@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FileExclamationFilledSvg from '@ant-design/icons-svg/lib/asn/FileExclamationFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FileExclamationFilled = (
   props: AntdIconProps,

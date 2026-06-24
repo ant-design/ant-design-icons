@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CodeSandboxCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CodeSandboxCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CodeSandboxCircleFilled = (
   props: AntdIconProps,

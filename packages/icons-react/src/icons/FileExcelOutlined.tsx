@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FileExcelOutlinedSvg from '@ant-design/icons-svg/lib/asn/FileExcelOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FileExcelOutlined = (
   props: AntdIconProps,

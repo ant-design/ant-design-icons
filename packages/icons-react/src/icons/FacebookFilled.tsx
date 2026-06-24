@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FacebookFilledSvg from '@ant-design/icons-svg/lib/asn/FacebookFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FacebookFilled = (
   props: AntdIconProps,

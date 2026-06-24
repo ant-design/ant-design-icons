@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ArrowRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/ArrowRightOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ArrowRightOutlined = (
   props: AntdIconProps,

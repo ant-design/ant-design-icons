@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MacCommandOutlinedSvg from '@ant-design/icons-svg/lib/asn/MacCommandOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const MacCommandOutlined = (
   props: AntdIconProps,

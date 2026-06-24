@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MoonFilledSvg from '@ant-design/icons-svg/lib/asn/MoonFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const MoonFilled = (
   props: AntdIconProps,

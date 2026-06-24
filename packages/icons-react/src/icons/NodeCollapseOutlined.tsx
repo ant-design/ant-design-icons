@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import NodeCollapseOutlinedSvg from '@ant-design/icons-svg/lib/asn/NodeCollapseOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const NodeCollapseOutlined = (
   props: AntdIconProps,

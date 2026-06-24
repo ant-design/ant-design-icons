@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SunFilledSvg from '@ant-design/icons-svg/lib/asn/SunFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const SunFilled = (
   props: AntdIconProps,

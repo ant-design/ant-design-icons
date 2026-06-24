@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ReloadOutlinedSvg from '@ant-design/icons-svg/lib/asn/ReloadOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ReloadOutlined = (
   props: AntdIconProps,

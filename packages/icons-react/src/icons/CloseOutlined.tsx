@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CloseOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloseOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CloseOutlined = (
   props: AntdIconProps,

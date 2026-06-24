@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import JavaOutlinedSvg from '@ant-design/icons-svg/lib/asn/JavaOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const JavaOutlined = (
   props: AntdIconProps,

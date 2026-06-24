@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CodeSandboxOutlinedSvg from '@ant-design/icons-svg/lib/asn/CodeSandboxOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CodeSandboxOutlined = (
   props: AntdIconProps,

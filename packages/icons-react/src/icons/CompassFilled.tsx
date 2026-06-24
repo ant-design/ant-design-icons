@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CompassFilledSvg from '@ant-design/icons-svg/lib/asn/CompassFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CompassFilled = (
   props: AntdIconProps,

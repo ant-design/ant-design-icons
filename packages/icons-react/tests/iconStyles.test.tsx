@@ -1,9 +1,15 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
+import { vi } from 'vitest';
 import { SmileOutlined } from '../src';
 import Icon from '../src/components/IconBase';
+import { updateCSS } from '../src/cssUtils';
 
 describe('Render with styles', () => {
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
   beforeEach(() => {
     document.head.innerHTML = '';
   });
@@ -28,5 +34,11 @@ describe('Render with styles', () => {
 
     expect(document.querySelector('style')).toBeFalsy();
     expect(shadow.querySelector('style')).toBeTruthy();
+  });
+
+  it('updateCSS should do nothing without DOM', () => {
+    vi.stubGlobal('window', undefined);
+
+    expect(updateCSS('.anticon {}', 'ssr-test')).toBeNull();
   });
 });

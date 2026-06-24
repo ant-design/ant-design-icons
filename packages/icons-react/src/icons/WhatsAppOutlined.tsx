@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import WhatsAppOutlinedSvg from '@ant-design/icons-svg/lib/asn/WhatsAppOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const WhatsAppOutlined = (
   props: AntdIconProps,

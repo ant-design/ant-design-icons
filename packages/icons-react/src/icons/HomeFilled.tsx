@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import HomeFilledSvg from '@ant-design/icons-svg/lib/asn/HomeFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const HomeFilled = (
   props: AntdIconProps,

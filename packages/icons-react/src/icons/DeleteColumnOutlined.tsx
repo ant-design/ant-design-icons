@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DeleteColumnOutlinedSvg from '@ant-design/icons-svg/lib/asn/DeleteColumnOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const DeleteColumnOutlined = (
   props: AntdIconProps,

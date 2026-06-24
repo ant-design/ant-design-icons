@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MonitorOutlinedSvg from '@ant-design/icons-svg/lib/asn/MonitorOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const MonitorOutlined = (
   props: AntdIconProps,

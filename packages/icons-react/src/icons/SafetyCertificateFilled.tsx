@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SafetyCertificateFilledSvg from '@ant-design/icons-svg/lib/asn/SafetyCertificateFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const SafetyCertificateFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ControlOutlinedSvg from '@ant-design/icons-svg/lib/asn/ControlOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ControlOutlined = (
   props: AntdIconProps,

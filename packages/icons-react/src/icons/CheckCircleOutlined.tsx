@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CheckCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/CheckCircleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CheckCircleOutlined = (
   props: AntdIconProps,

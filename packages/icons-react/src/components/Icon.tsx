@@ -1,10 +1,10 @@
 // Seems this is used for iconFont
 import * as React from 'react';
 import { clsx } from 'clsx';
-import { useComposeRef } from '@rc-component/util';
 import Context from './Context';
 
-import { svgBaseProps, warning, useInsertStyles } from '../utils';
+import { svgBaseProps, warning, useInsertStyles } from '../renderUtils';
+import { useComposeRef } from '../refUtils';
 
 export interface IconBaseProps extends React.HTMLProps<HTMLSpanElement> {
   spin?: boolean;

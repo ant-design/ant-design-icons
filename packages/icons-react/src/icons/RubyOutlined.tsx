@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RubyOutlinedSvg from '@ant-design/icons-svg/lib/asn/RubyOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const RubyOutlined = (
   props: AntdIconProps,

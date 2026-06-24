@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CaretRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/CaretRightOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CaretRightOutlined = (
   props: AntdIconProps,

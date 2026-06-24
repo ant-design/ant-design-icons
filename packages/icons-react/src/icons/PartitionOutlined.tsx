@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PartitionOutlinedSvg from '@ant-design/icons-svg/lib/asn/PartitionOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const PartitionOutlined = (
   props: AntdIconProps,

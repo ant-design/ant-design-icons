@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CreditCardFilledSvg from '@ant-design/icons-svg/lib/asn/CreditCardFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CreditCardFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import HeartOutlinedSvg from '@ant-design/icons-svg/lib/asn/HeartOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const HeartOutlined = (
   props: AntdIconProps,

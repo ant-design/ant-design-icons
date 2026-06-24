@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import UpSquareFilledSvg from '@ant-design/icons-svg/lib/asn/UpSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const UpSquareFilled = (
   props: AntdIconProps,

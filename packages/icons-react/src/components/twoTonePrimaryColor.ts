@@ -1,4 +1,4 @@
-import ReactIcon from './IconBase';
+import ReactIcon from './IconBaseTwoTone';
 import { normalizeTwoToneColors } from '../utils';
 
 export type TwoToneColor = string | [string, string];

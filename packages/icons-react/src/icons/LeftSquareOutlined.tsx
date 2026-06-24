@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import LeftSquareOutlinedSvg from '@ant-design/icons-svg/lib/asn/LeftSquareOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const LeftSquareOutlined = (
   props: AntdIconProps,

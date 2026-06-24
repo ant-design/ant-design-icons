@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CheckOutlinedSvg from '@ant-design/icons-svg/lib/asn/CheckOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CheckOutlined = (
   props: AntdIconProps,

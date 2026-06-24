@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SignatureFilledSvg from '@ant-design/icons-svg/lib/asn/SignatureFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const SignatureFilled = (
   props: AntdIconProps,

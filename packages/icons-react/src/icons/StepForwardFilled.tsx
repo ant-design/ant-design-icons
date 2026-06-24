@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import StepForwardFilledSvg from '@ant-design/icons-svg/lib/asn/StepForwardFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const StepForwardFilled = (
   props: AntdIconProps,

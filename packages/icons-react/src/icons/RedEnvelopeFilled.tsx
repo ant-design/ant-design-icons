@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RedEnvelopeFilledSvg from '@ant-design/icons-svg/lib/asn/RedEnvelopeFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const RedEnvelopeFilled = (
   props: AntdIconProps,

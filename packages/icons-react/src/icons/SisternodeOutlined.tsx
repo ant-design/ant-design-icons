@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SisternodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/SisternodeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const SisternodeOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CalendarOutlinedSvg from '@ant-design/icons-svg/lib/asn/CalendarOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CalendarOutlined = (
   props: AntdIconProps,

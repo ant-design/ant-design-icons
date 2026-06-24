@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ReconciliationOutlinedSvg from '@ant-design/icons-svg/lib/asn/ReconciliationOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ReconciliationOutlined = (
   props: AntdIconProps,

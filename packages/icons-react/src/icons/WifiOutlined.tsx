@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import WifiOutlinedSvg from '@ant-design/icons-svg/lib/asn/WifiOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const WifiOutlined = (
   props: AntdIconProps,

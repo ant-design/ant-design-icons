@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GithubFilledSvg from '@ant-design/icons-svg/lib/asn/GithubFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const GithubFilled = (
   props: AntdIconProps,

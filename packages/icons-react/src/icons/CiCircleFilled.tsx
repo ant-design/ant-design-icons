@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CiCircleFilledSvg from '@ant-design/icons-svg/lib/asn/CiCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CiCircleFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CaretLeftFilledSvg from '@ant-design/icons-svg/lib/asn/CaretLeftFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CaretLeftFilled = (
   props: AntdIconProps,

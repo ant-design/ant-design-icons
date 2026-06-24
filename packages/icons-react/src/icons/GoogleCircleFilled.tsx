@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GoogleCircleFilledSvg from '@ant-design/icons-svg/lib/asn/GoogleCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const GoogleCircleFilled = (
   props: AntdIconProps,

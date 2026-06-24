@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ToolOutlinedSvg from '@ant-design/icons-svg/lib/asn/ToolOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ToolOutlined = (
   props: AntdIconProps,

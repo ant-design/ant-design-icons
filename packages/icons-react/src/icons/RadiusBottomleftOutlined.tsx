@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RadiusBottomleftOutlinedSvg from '@ant-design/icons-svg/lib/asn/RadiusBottomleftOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const RadiusBottomleftOutlined = (
   props: AntdIconProps,

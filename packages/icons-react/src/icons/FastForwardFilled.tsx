@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FastForwardFilledSvg from '@ant-design/icons-svg/lib/asn/FastForwardFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FastForwardFilled = (
   props: AntdIconProps,

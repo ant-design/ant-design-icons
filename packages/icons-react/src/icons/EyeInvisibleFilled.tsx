@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import EyeInvisibleFilledSvg from '@ant-design/icons-svg/lib/asn/EyeInvisibleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const EyeInvisibleFilled = (
   props: AntdIconProps,
