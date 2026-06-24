@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import Html5FilledSvg from '@ant-design/icons-svg/lib/asn/Html5Filled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const Html5Filled = (
   props: AntdIconProps,

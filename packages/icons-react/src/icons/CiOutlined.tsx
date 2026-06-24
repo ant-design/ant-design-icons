@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import CiOutlinedSvg from '@ant-design/icons-svg/lib/asn/CiOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const CiOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import HomeOutlinedSvg from '@ant-design/icons-svg/lib/asn/HomeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const HomeOutlined = (
   props: AntdIconProps,

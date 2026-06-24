@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import Loading3QuartersOutlinedSvg from '@ant-design/icons-svg/lib/asn/Loading3QuartersOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const Loading3QuartersOutlined = (
   props: AntdIconProps,

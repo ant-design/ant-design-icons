@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import AmazonOutlinedSvg from '@ant-design/icons-svg/lib/asn/AmazonOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const AmazonOutlined = (
   props: AntdIconProps,

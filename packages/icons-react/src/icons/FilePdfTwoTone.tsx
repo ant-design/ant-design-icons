@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import FilePdfTwoToneSvg from '@ant-design/icons-svg/lib/asn/FilePdfTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon from '../components/AntdIcon';
+import type { AntdIconProps } from '../components/AntdIcon';
 
 const FilePdfTwoTone = (
   props: AntdIconProps,

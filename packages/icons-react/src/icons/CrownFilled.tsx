@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import CrownFilledSvg from '@ant-design/icons-svg/lib/asn/CrownFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const CrownFilled = (
   props: AntdIconProps,

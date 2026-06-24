@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import HeartFilledSvg from '@ant-design/icons-svg/lib/asn/HeartFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const HeartFilled = (
   props: AntdIconProps,

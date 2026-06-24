@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import IssuesCloseOutlinedSvg from '@ant-design/icons-svg/lib/asn/IssuesCloseOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const IssuesCloseOutlined = (
   props: AntdIconProps,

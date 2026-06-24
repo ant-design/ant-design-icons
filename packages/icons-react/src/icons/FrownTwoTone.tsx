@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import FrownTwoToneSvg from '@ant-design/icons-svg/lib/asn/FrownTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon from '../components/AntdIcon';
+import type { AntdIconProps } from '../components/AntdIcon';
 
 const FrownTwoTone = (
   props: AntdIconProps,

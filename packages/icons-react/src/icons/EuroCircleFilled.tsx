@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import EuroCircleFilledSvg from '@ant-design/icons-svg/lib/asn/EuroCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const EuroCircleFilled = (
   props: AntdIconProps,

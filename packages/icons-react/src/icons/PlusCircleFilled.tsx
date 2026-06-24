@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import PlusCircleFilledSvg from '@ant-design/icons-svg/lib/asn/PlusCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const PlusCircleFilled = (
   props: AntdIconProps,

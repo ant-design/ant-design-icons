@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import Html5TwoToneSvg from '@ant-design/icons-svg/lib/asn/Html5TwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon from '../components/AntdIcon';
+import type { AntdIconProps } from '../components/AntdIcon';
 
 const Html5TwoTone = (
   props: AntdIconProps,

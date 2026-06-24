@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import AudioOutlinedSvg from '@ant-design/icons-svg/lib/asn/AudioOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const AudioOutlined = (
   props: AntdIconProps,

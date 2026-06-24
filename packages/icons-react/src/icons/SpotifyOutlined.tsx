@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import SpotifyOutlinedSvg from '@ant-design/icons-svg/lib/asn/SpotifyOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const SpotifyOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import GlobalOutlinedSvg from '@ant-design/icons-svg/lib/asn/GlobalOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const GlobalOutlined = (
   props: AntdIconProps,

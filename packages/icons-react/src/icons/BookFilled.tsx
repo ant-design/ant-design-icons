@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import BookFilledSvg from '@ant-design/icons-svg/lib/asn/BookFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const BookFilled = (
   props: AntdIconProps,

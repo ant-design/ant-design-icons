@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import GoldOutlinedSvg from '@ant-design/icons-svg/lib/asn/GoldOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const GoldOutlined = (
   props: AntdIconProps,

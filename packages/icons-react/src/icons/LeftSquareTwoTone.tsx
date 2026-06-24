@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import LeftSquareTwoToneSvg from '@ant-design/icons-svg/lib/asn/LeftSquareTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon from '../components/AntdIcon';
+import type { AntdIconProps } from '../components/AntdIcon';
 
 const LeftSquareTwoTone = (
   props: AntdIconProps,

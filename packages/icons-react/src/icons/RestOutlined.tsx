@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import RestOutlinedSvg from '@ant-design/icons-svg/lib/asn/RestOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const RestOutlined = (
   props: AntdIconProps,

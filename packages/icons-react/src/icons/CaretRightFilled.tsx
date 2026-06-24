@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import CaretRightFilledSvg from '@ant-design/icons-svg/lib/asn/CaretRightFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const CaretRightFilled = (
   props: AntdIconProps,

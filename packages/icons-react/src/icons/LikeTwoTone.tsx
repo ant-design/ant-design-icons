@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import LikeTwoToneSvg from '@ant-design/icons-svg/lib/asn/LikeTwoTone';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon from '../components/AntdIcon';
+import type { AntdIconProps } from '../components/AntdIcon';
 
 const LikeTwoTone = (
   props: AntdIconProps,

@@ -3,7 +3,8 @@
 
 import * as React from 'react'
 import CameraFilledSvg from '@ant-design/icons-svg/lib/asn/CameraFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
 
 const CameraFilled = (
   props: AntdIconProps,
