@@ -166,6 +166,10 @@ export function updateCSS(
     priority?: number;
   } = {},
 ) {
+  if (!canUseDom()) {
+    return null;
+  }
+
   const container = getContainer(originOption);
   const styles = findStyles(container);
   const option = {

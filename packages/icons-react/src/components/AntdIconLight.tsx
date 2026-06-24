@@ -30,11 +30,11 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     tabIndex,
     onClick,
 
+    twoToneColor: _twoToneColor,
+
     // other
     ...restProps
   } = props;
-
-  delete restProps.twoToneColor;
 
   const { prefixCls = 'anticon', rootClassName } = React.useContext(Context);
 

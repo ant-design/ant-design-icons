@@ -13,12 +13,17 @@ export interface IconProps {
 }
 
 const IconBase: React.FC<IconProps> = props => {
-  const { icon, className, onClick, style, ...restProps } = props;
+  const {
+    icon,
+    className,
+    onClick,
+    style,
+    primaryColor: _primaryColor,
+    secondaryColor: _secondaryColor,
+    ...restProps
+  } = props;
 
   const svgRef = React.useRef<HTMLElement>(null);
-
-  delete restProps.primaryColor;
-  delete restProps.secondaryColor;
 
   useInsertStyles(svgRef);
 
