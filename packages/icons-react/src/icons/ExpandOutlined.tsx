@@ -1,7 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import React from 'react'
 import ExpandOutlinedSvg from '@ant-design/icons-svg/lib/asn/ExpandOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
@@ -10,7 +10,6 @@ const ExpandOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={ExpandOutlinedSvg} />;
 
- /**![expand](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTM0MiA4OEgxMjBjLTE3LjcgMC0zMiAxNC4zLTMyIDMydjIyNGMwIDguOCA3LjIgMTYgMTYgMTZoNDhjOC44IDAgMTYtNy4yIDE2LTE2VjE2OGgxNzRjOC44IDAgMTYtNy4yIDE2LTE2di00OGMwLTguOC03LjItMTYtMTYtMTZ6bTU3OCA1NzZoLTQ4Yy04LjggMC0xNiA3LjItMTYgMTZ2MTc2SDY4MmMtOC44IDAtMTYgNy4yLTE2IDE2djQ4YzAgOC44IDcuMiAxNiAxNiAxNmgyMjJjMTcuNyAwIDMyLTE0LjMgMzItMzJWNjgwYzAtOC44LTcuMi0xNi0xNi0xNnpNMzQyIDg1NkgxNjhWNjgwYzAtOC44LTcuMi0xNi0xNi0xNmgtNDhjLTguOCAwLTE2IDcuMi0xNiAxNnYyMjRjMCAxNy43IDE0LjMgMzIgMzIgMzJoMjIyYzguOCAwIDE2LTcuMiAxNi0xNnYtNDhjMC04LjgtNy4yLTE2LTE2LTE2ek05MDQgODhINjgyYy04LjggMC0xNiA3LjItMTYgMTZ2NDhjMCA4LjggNy4yIDE2IDE2IDE2aDE3NHYxNzZjMCA4LjggNy4yIDE2IDE2IDE2aDQ4YzguOCAwIDE2LTcuMiAxNi0xNlYxMjBjMC0xNy43LTE0LjMtMzItMzItMzJ6IiAvPjwvc3ZnPg==) */ 
 const RefIcon: React.ForwardRefExoticComponent<
   Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
 > = React.forwardRef<HTMLSpanElement, AntdIconProps>(ExpandOutlined);

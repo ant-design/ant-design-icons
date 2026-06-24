@@ -1,7 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import React from 'react'
 import CompressOutlinedSvg from '@ant-design/icons-svg/lib/asn/CompressOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
@@ -10,7 +10,6 @@ const CompressOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={CompressOutlinedSvg} />;
 
- /**![compress](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTMyNiA2NjRIMTA0Yy04LjggMC0xNiA3LjItMTYgMTZ2NDhjMCA4LjggNy4yIDE2IDE2IDE2aDE3NHYxNzZjMCA4LjggNy4yIDE2IDE2IDE2aDQ4YzguOCAwIDE2LTcuMiAxNi0xNlY2OTZjMC0xNy43LTE0LjMtMzItMzItMzJ6bTE2LTU3NmgtNDhjLTguOCAwLTE2IDcuMi0xNiAxNnYxNzZIMTA0Yy04LjggMC0xNiA3LjItMTYgMTZ2NDhjMCA4LjggNy4yIDE2IDE2IDE2aDIyMmMxNy43IDAgMzItMTQuMyAzMi0zMlYxMDRjMC04LjgtNy4yLTE2LTE2LTE2em01NzggNTc2SDY5OGMtMTcuNyAwLTMyIDE0LjMtMzIgMzJ2MjI0YzAgOC44IDcuMiAxNiAxNiAxNmg0OGM4LjggMCAxNi03LjIgMTYtMTZWNzQ0aDE3NGM4LjggMCAxNi03LjIgMTYtMTZ2LTQ4YzAtOC44LTcuMi0xNi0xNi0xNnptMC0zODRINzQ2VjEwNGMwLTguOC03LjItMTYtMTYtMTZoLTQ4Yy04LjggMC0xNiA3LjItMTYgMTZ2MjI0YzAgMTcuNyAxNC4zIDMyIDMyIDMyaDIyMmM4LjggMCAxNi03LjIgMTYtMTZ2LTQ4YzAtOC44LTcuMi0xNi0xNi0xNnoiIC8+PC9zdmc+) */ 
 const RefIcon: React.ForwardRefExoticComponent<
   Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
 > = React.forwardRef<HTMLSpanElement, AntdIconProps>(CompressOutlined);

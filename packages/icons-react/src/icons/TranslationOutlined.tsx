@@ -1,7 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import React from 'react'
 import TranslationOutlinedSvg from '@ant-design/icons-svg/lib/asn/TranslationOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
@@ -10,7 +10,6 @@ const TranslationOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={TranslationOutlinedSvg} />;
 
- /**![translation](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0MCAxODhoNTg0djE2NGg3NlYxNDRjMC0xNy43LTE0LjMtMzItMzItMzJIOTZjLTE3LjcgMC0zMiAxNC4zLTMyIDMydjczNmMwIDE3LjcgMTQuMyAzMiAzMiAzMmg1NDR2LTc2SDE0MFYxODh6IiAvPjxwYXRoIGQ9Ik00MTQuMyAyNTZoLTYwLjZjLTMuNCAwLTYuNCAyLjItNy42IDUuNEwyMTkgNjI5LjRjLS4zLjgtLjQgMS43LS40IDIuNiAwIDQuNCAzLjYgOCA4IDhoNTUuMWMzLjQgMCA2LjQtMi4yIDcuNi01LjRMMzIyIDU0MGgxOTYuMkw0MjIgMjYxLjRhOC40MiA4LjQyIDAgMDAtNy43LTUuNHptMTIuNCAyMjhoLTg1LjVMMzg0IDM2MC4yIDQyNi43IDQ4NHpNOTM2IDUyOEg4MDB2LTkzYzAtNC40LTMuNi04LTgtOGgtNTZjLTQuNCAwLTggMy42LTggOHY5M0g1OTJjLTEzLjMgMC0yNCAxMC43LTI0IDI0djE3NmMwIDEzLjMgMTAuNyAyNCAyNCAyNGgxMzZ2MTUyYzAgNC40IDMuNiA4IDggOGg1NmM0LjQgMCA4LTMuNiA4LThWNzUyaDEzNmMxMy4zIDAgMjQtMTAuNyAyNC0yNFY1NTJjMC0xMy4zLTEwLjctMjQtMjQtMjR6TTcyOCA2ODBoLTg4di04MGg4OHY4MHptMTYwIDBoLTg4di04MGg4OHY4MHoiIC8+PC9zdmc+) */ 
 const RefIcon: React.ForwardRefExoticComponent<
   Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
 > = React.forwardRef<HTMLSpanElement, AntdIconProps>(TranslationOutlined);

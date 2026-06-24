@@ -1,7 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import React from 'react'
 import FundViewOutlinedSvg from '@ant-design/icons-svg/lib/asn/FundViewOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
@@ -10,7 +10,6 @@ const FundViewOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FundViewOutlinedSvg} />;
 
- /**![fund-view](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTk1NiA2ODYuNWwtLjEtLjEtLjEtLjFDOTExLjcgNTkzIDg0My40IDU0NSA3NTIuNSA1NDVzLTE1OS4yIDQ4LjEtMjAzLjQgMTQxLjN2LjFhNDIuOTIgNDIuOTIgMCAwMDAgMzYuNEM1OTMuMyA4MTYgNjYxLjYgODY0IDc1Mi41IDg2NHMxNTkuMi00OC4xIDIwMy40LTE0MS4zYzUuNC0xMS41IDUuNC0yNC44LjEtMzYuMnpNNzUyLjUgODAwYy02Mi4xIDAtMTA3LjQtMzAtMTQxLjEtOTUuNUM2NDUgNjM5IDY5MC40IDYwOSA3NTIuNSA2MDljNjIuMSAwIDEwNy40IDMwIDE0MS4xIDk1LjVDODYwIDc3MCA4MTQuNiA4MDAgNzUyLjUgODAweiIgLz48cGF0aCBkPSJNNjk3IDcwNWE1NiA1NiAwIDEwMTEyIDAgNTYgNTYgMCAxMC0xMTIgMHpNMTM2IDIzMmg3MDR2MjUzaDcyVjE5MmMwLTE3LjctMTQuMy0zMi0zMi0zMkg5NmMtMTcuNyAwLTMyIDE0LjMtMzIgMzJ2NTIwYzAgMTcuNyAxNC4zIDMyIDMyIDMyaDM1MnYtNzJIMTM2VjIzMnoiIC8+PHBhdGggZD0iTTcyNC45IDMzOC4xbC0zNi44LTM2LjhhOC4wMyA4LjAzIDAgMDAtMTEuMyAwTDQ5MyA0ODUuM2wtODYuMS04Ni4yYTguMDMgOC4wMyAwIDAwLTExLjMgMEwyNTEuMyA1NDMuNGE4LjAzIDguMDMgMCAwMDAgMTEuM2wzNi44IDM2LjhjMy4xIDMuMSA4LjIgMy4xIDExLjMgMGwxMDEuOC0xMDEuOCA4Ni4xIDg2LjJjMy4xIDMuMSA4LjIgMy4xIDExLjMgMGwyMjYuMy0yMjYuNWMzLjItMy4xIDMuMi04LjIgMC0xMS4zeiIgLz48L3N2Zz4=) */ 
 const RefIcon: React.ForwardRefExoticComponent<
   Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
 > = React.forwardRef<HTMLSpanElement, AntdIconProps>(FundViewOutlined);

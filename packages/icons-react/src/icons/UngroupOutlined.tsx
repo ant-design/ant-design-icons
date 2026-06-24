@@ -1,7 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import React from 'react'
 import UngroupOutlinedSvg from '@ant-design/icons-svg/lib/asn/UngroupOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
@@ -10,7 +10,6 @@ const UngroupOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={UngroupOutlinedSvg} />;
 
- /**![ungroup](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTczNiA1NTBIMjg4Yy04LjggMC0xNiA3LjItMTYgMTZ2MTc2YzAgOC44IDcuMiAxNiAxNiAxNmg0NDhjOC44IDAgMTYtNy4yIDE2LTE2VjU2NmMwLTguOC03LjItMTYtMTYtMTZ6bS01NiAxMzZIMzQ0di02NGgzMzZ2NjR6bTIwOCAxMzBjLTM5LjggMC03MiAzMi4yLTcyIDcyczMyLjIgNzIgNzIgNzIgNzItMzIuMiA3Mi03Mi0zMi4yLTcyLTcyLTcyem0wIDk2Yy0xMy4zIDAtMjQtMTAuNy0yNC0yNHMxMC43LTI0IDI0LTI0IDI0IDEwLjcgMjQgMjQtMTAuNyAyNC0yNCAyNHpNNzM2IDI2NkgyODhjLTguOCAwLTE2IDcuMi0xNiAxNnYxNzZjMCA4LjggNy4yIDE2IDE2IDE2aDQ0OGM4LjggMCAxNi03LjIgMTYtMTZWMjgyYzAtOC44LTcuMi0xNi0xNi0xNnptLTU2IDEzNkgzNDR2LTY0aDMzNnY2NHptMjA4LTE5NGMzOS44IDAgNzItMzIuMiA3Mi03MnMtMzIuMi03Mi03Mi03Mi03MiAzMi4yLTcyIDcyIDMyLjIgNzIgNzIgNzJ6bTAtOTZjMTMuMyAwIDI0IDEwLjcgMjQgMjRzLTEwLjcgMjQtMjQgMjQtMjQtMTAuNy0yNC0yNCAxMC43LTI0IDI0LTI0ek0xMzYgNjRjLTM5LjggMC03MiAzMi4yLTcyIDcyczMyLjIgNzIgNzIgNzIgNzItMzIuMiA3Mi03Mi0zMi4yLTcyLTcyLTcyem0wIDk2Yy0xMy4zIDAtMjQtMTAuNy0yNC0yNHMxMC43LTI0IDI0LTI0IDI0IDEwLjcgMjQgMjQtMTAuNyAyNC0yNCAyNHptMCA2NTZjLTM5LjggMC03MiAzMi4yLTcyIDcyczMyLjIgNzIgNzIgNzIgNzItMzIuMiA3Mi03Mi0zMi4yLTcyLTcyLTcyem0wIDk2Yy0xMy4zIDAtMjQtMTAuNy0yNC0yNHMxMC43LTI0IDI0LTI0IDI0IDEwLjcgMjQgMjQtMTAuNyAyNC0yNCAyNHoiIC8+PC9zdmc+) */ 
 const RefIcon: React.ForwardRefExoticComponent<
   Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
 > = React.forwardRef<HTMLSpanElement, AntdIconProps>(UngroupOutlined);

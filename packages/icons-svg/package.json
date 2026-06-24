@@ -13,6 +13,7 @@
   "files": [
     "lib",
     "es",
+    "!es/**/*.d.ts",
     "inline-svg",
     "inline-namespaced-svg"
   ],

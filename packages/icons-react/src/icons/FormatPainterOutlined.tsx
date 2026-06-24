@@ -1,7 +1,7 @@
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
-import * as React from 'react'
+import React from 'react'
 import FormatPainterOutlinedSvg from '@ant-design/icons-svg/lib/asn/FormatPainterOutlined';
 import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
 
@@ -10,7 +10,6 @@ const FormatPainterOutlined = (
   ref: React.MutableRefObject<HTMLSpanElement>,
 ) => <AntdIcon {...props} ref={ref} icon={FormatPainterOutlinedSvg} />;
 
- /**![format-painter](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTg0MCAxOTJoLTU2di03MmMwLTEzLjMtMTAuNy0yNC0yNC0yNEgxNjhjLTEzLjMgMC0yNCAxMC43LTI0IDI0djI3MmMwIDEzLjMgMTAuNyAyNCAyNCAyNGg1OTJjMTMuMyAwIDI0LTEwLjcgMjQtMjRWMjU2aDMydjIwMEg0NjVjLTIyLjEgMC00MCAxNy45LTQwIDQwdjEzNmgtNDRjLTQuNCAwLTggMy42LTggOHYyMjhjMCAuNi4xIDEuMy4yIDEuOUE4My45OSA4My45OSAwIDAwNDU3IDk2MGM0Ni40IDAgODQtMzcuNiA4NC04NCAwLTIuMS0uMS00LjEtLjItNi4xLjEtLjYuMi0xLjIuMi0xLjlWNjQwYzAtNC40LTMuNi04LTgtOGgtNDRWNTIwaDM1MWMyMi4xIDAgNDAtMTcuOSA0MC00MFYyMzJjMC0yMi4xLTE3LjktNDAtNDAtNDB6TTcyMCAzNTJIMjA4VjE2MGg1MTJ2MTkyek00NzcgODc2YzAgMTEtOSAyMC0yMCAyMHMtMjAtOS0yMC0yMFY2OTZoNDB2MTgweiIgLz48L3N2Zz4=) */ 
 const RefIcon: React.ForwardRefExoticComponent<
   Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
 > = React.forwardRef<HTMLSpanElement, AntdIconProps>(FormatPainterOutlined);
