@@ -9,6 +9,7 @@ import type { IconBaseProps } from './Icon';
 import ReactIcon from './IconBaseTwoTone';
 import { getTwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
 import type { TwoToneColor } from './twoTonePrimaryColor';
+import { DEFAULT_TWOTONE_COLOR } from '../colorUtils';
 import { normalizeTwoToneColors } from '../utils';
 
 export interface AntdIconProps extends IconBaseProps {
@@ -21,7 +22,7 @@ export interface IconComponentProps extends AntdIconProps {
 
 // Initial setting
 // should move it to antd main repo?
-setTwoToneColor('#1677ff');
+setTwoToneColor(DEFAULT_TWOTONE_COLOR);
 
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757#issuecomment-488848720
 interface IconBaseComponent<Props>
