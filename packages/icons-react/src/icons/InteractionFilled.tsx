@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import InteractionFilledSvg from '@ant-design/icons-svg/lib/asn/InteractionFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const InteractionFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AppleFilledSvg from '@ant-design/icons-svg/lib/asn/AppleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const AppleFilled = (
   props: AntdIconProps,

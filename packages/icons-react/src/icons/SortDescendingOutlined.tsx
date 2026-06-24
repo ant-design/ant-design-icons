@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SortDescendingOutlinedSvg from '@ant-design/icons-svg/lib/asn/SortDescendingOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const SortDescendingOutlined = (
   props: AntdIconProps,

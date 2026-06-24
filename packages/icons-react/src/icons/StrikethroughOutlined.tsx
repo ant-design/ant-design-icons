@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import StrikethroughOutlinedSvg from '@ant-design/icons-svg/lib/asn/StrikethroughOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const StrikethroughOutlined = (
   props: AntdIconProps,

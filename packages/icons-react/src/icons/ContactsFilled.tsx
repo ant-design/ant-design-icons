@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ContactsFilledSvg from '@ant-design/icons-svg/lib/asn/ContactsFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ContactsFilled = (
   props: AntdIconProps,

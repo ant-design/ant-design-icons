@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import InsertRowLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/InsertRowLeftOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const InsertRowLeftOutlined = (
   props: AntdIconProps,

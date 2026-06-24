@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ManOutlinedSvg from '@ant-design/icons-svg/lib/asn/ManOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ManOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BellFilledSvg from '@ant-design/icons-svg/lib/asn/BellFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const BellFilled = (
   props: AntdIconProps,

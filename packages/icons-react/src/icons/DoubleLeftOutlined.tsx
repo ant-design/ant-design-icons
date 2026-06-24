@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DoubleLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/DoubleLeftOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const DoubleLeftOutlined = (
   props: AntdIconProps,

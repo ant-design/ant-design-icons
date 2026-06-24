@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SyncOutlinedSvg from '@ant-design/icons-svg/lib/asn/SyncOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const SyncOutlined = (
   props: AntdIconProps,

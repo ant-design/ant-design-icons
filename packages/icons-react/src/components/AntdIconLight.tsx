@@ -6,10 +6,8 @@ import type { IconDefinition } from '@ant-design/icons-svg/lib/types';
 
 import Context from './Context';
 import type { IconBaseProps } from './Icon';
-import ReactIcon from './IconBaseTwoTone';
-import { getTwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
+import ReactIcon from './IconBase';
 import type { TwoToneColor } from './twoTonePrimaryColor';
-import { normalizeTwoToneColors } from '../utils';
 
 export interface AntdIconProps extends IconBaseProps {
   twoToneColor?: TwoToneColor;
@@ -17,17 +15,6 @@ export interface AntdIconProps extends IconBaseProps {
 
 export interface IconComponentProps extends AntdIconProps {
   icon: IconDefinition;
-}
-
-// Initial setting
-// should move it to antd main repo?
-setTwoToneColor('#1677ff');
-
-// https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757#issuecomment-488848720
-interface IconBaseComponent<Props>
-  extends React.ForwardRefExoticComponent<Props & React.RefAttributes<HTMLSpanElement>> {
-  getTwoToneColor: typeof getTwoToneColor;
-  setTwoToneColor: typeof setTwoToneColor;
 }
 
 const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) => {
@@ -44,10 +31,10 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     onClick,
 
     // other
-    twoToneColor,
-
     ...restProps
   } = props;
+
+  delete restProps.twoToneColor;
 
   const { prefixCls = 'anticon', rootClassName } = React.useContext(Context);
 
@@ -73,8 +60,6 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
       }
     : undefined;
 
-  const [primaryColor, secondaryColor] = normalizeTwoToneColors(twoToneColor);
-
   return (
     <span
       role="img"
@@ -85,18 +70,10 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
       onClick={onClick}
       className={classString}
     >
-      <ReactIcon
-        icon={icon}
-        primaryColor={primaryColor}
-        secondaryColor={secondaryColor}
-        style={svgStyle}
-      />
+      <ReactIcon icon={icon} style={svgStyle} />
     </span>
   );
-}) as IconBaseComponent<IconComponentProps>;
-
-Icon.getTwoToneColor = getTwoToneColor;
-Icon.setTwoToneColor = setTwoToneColor;
+});
 
 if (process.env.NODE_ENV !== 'production') {
   Icon.displayName = 'AntdIcon';

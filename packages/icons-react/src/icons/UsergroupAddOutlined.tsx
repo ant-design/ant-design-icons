@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import UsergroupAddOutlinedSvg from '@ant-design/icons-svg/lib/asn/UsergroupAddOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const UsergroupAddOutlined = (
   props: AntdIconProps,

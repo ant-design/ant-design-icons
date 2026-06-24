@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RedditOutlinedSvg from '@ant-design/icons-svg/lib/asn/RedditOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const RedditOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CheckSquareFilledSvg from '@ant-design/icons-svg/lib/asn/CheckSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CheckSquareFilled = (
   props: AntdIconProps,

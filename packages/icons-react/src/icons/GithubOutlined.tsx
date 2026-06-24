@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GithubOutlinedSvg from '@ant-design/icons-svg/lib/asn/GithubOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const GithubOutlined = (
   props: AntdIconProps,

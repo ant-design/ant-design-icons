@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DiscordFilledSvg from '@ant-design/icons-svg/lib/asn/DiscordFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const DiscordFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FlagOutlinedSvg from '@ant-design/icons-svg/lib/asn/FlagOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FlagOutlined = (
   props: AntdIconProps,

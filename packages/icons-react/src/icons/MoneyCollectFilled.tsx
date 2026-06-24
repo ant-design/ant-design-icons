@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MoneyCollectFilledSvg from '@ant-design/icons-svg/lib/asn/MoneyCollectFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const MoneyCollectFilled = (
   props: AntdIconProps,

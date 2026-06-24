@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SubnodeOutlinedSvg from '@ant-design/icons-svg/lib/asn/SubnodeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const SubnodeOutlined = (
   props: AntdIconProps,

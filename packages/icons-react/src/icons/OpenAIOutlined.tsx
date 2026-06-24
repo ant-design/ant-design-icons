@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import OpenAIOutlinedSvg from '@ant-design/icons-svg/lib/asn/OpenAIOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const OpenAIOutlined = (
   props: AntdIconProps,

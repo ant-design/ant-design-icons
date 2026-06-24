@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import TikTokFilledSvg from '@ant-design/icons-svg/lib/asn/TikTokFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const TikTokFilled = (
   props: AntdIconProps,

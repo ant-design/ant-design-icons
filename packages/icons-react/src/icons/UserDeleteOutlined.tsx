@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import UserDeleteOutlinedSvg from '@ant-design/icons-svg/lib/asn/UserDeleteOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const UserDeleteOutlined = (
   props: AntdIconProps,

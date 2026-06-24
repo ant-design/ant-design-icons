@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ReadOutlinedSvg from '@ant-design/icons-svg/lib/asn/ReadOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ReadOutlined = (
   props: AntdIconProps,

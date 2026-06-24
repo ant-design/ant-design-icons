@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import TabletFilledSvg from '@ant-design/icons-svg/lib/asn/TabletFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const TabletFilled = (
   props: AntdIconProps,

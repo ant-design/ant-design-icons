@@ -30,6 +30,10 @@ function detectRealPath(icon: IconDefinition) {
   }
 }
 
+function getRuntimeComponent(svgIdentifier: string) {
+  return svgIdentifier.endsWith('TwoTone') ? 'AntdIcon' : 'AntdIconLight';
+}
+
 function svg2base64(svgPath: string, size = 50) {
   const svg = fs.readFileSync(svgPath, 'utf-8');
   const svgWithStyle = svg
@@ -77,7 +81,7 @@ async function generateIcons() {
 
 import * as React from 'react'
 import <%= svgIdentifier %>Svg from '@ant-design/icons-svg/lib/asn/<%= svgIdentifier %>';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/<%= runtimeComponent %>';
 
 const <%= svgIdentifier %> = (
   props: AntdIconProps,
@@ -101,7 +105,10 @@ export default RefIcon;
     // generate icon file
     await writeFile(
       path.resolve(__dirname, `../src/icons/${item.svgIdentifier}.tsx`),
-      render(item),
+      render({
+        runtimeComponent: getRuntimeComponent(item.svgIdentifier),
+        ...item,
+      }),
     );
   });
 

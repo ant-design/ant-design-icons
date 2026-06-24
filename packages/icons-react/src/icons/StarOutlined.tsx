@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import StarOutlinedSvg from '@ant-design/icons-svg/lib/asn/StarOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const StarOutlined = (
   props: AntdIconProps,

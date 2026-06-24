@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import TrophyFilledSvg from '@ant-design/icons-svg/lib/asn/TrophyFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const TrophyFilled = (
   props: AntdIconProps,

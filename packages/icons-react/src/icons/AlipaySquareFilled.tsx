@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AlipaySquareFilledSvg from '@ant-design/icons-svg/lib/asn/AlipaySquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const AlipaySquareFilled = (
   props: AntdIconProps,

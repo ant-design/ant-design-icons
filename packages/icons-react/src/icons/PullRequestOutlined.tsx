@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PullRequestOutlinedSvg from '@ant-design/icons-svg/lib/asn/PullRequestOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const PullRequestOutlined = (
   props: AntdIconProps,

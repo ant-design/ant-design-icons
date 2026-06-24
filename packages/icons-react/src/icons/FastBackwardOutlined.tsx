@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FastBackwardOutlinedSvg from '@ant-design/icons-svg/lib/asn/FastBackwardOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FastBackwardOutlined = (
   props: AntdIconProps,

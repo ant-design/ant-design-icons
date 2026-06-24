@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RedditSquareFilledSvg from '@ant-design/icons-svg/lib/asn/RedditSquareFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const RedditSquareFilled = (
   props: AntdIconProps,

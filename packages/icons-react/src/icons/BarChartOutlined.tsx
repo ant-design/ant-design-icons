@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BarChartOutlinedSvg from '@ant-design/icons-svg/lib/asn/BarChartOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const BarChartOutlined = (
   props: AntdIconProps,

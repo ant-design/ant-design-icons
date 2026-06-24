@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PicLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/PicLeftOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const PicLeftOutlined = (
   props: AntdIconProps,

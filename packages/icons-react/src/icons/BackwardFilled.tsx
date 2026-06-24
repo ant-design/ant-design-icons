@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BackwardFilledSvg from '@ant-design/icons-svg/lib/asn/BackwardFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const BackwardFilled = (
   props: AntdIconProps,

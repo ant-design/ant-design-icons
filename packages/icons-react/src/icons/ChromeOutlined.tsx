@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ChromeOutlinedSvg from '@ant-design/icons-svg/lib/asn/ChromeOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ChromeOutlined = (
   props: AntdIconProps,

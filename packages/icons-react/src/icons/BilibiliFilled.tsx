@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BilibiliFilledSvg from '@ant-design/icons-svg/lib/asn/BilibiliFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const BilibiliFilled = (
   props: AntdIconProps,

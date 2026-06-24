@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PushpinFilledSvg from '@ant-design/icons-svg/lib/asn/PushpinFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const PushpinFilled = (
   props: AntdIconProps,

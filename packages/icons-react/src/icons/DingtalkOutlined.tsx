@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DingtalkOutlinedSvg from '@ant-design/icons-svg/lib/asn/DingtalkOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const DingtalkOutlined = (
   props: AntdIconProps,

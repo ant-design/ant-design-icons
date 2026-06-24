@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FormOutlinedSvg from '@ant-design/icons-svg/lib/asn/FormOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FormOutlined = (
   props: AntdIconProps,

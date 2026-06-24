@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import InsuranceFilledSvg from '@ant-design/icons-svg/lib/asn/InsuranceFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const InsuranceFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DingtalkCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DingtalkCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const DingtalkCircleFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DropboxCircleFilledSvg from '@ant-design/icons-svg/lib/asn/DropboxCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const DropboxCircleFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import WalletOutlinedSvg from '@ant-design/icons-svg/lib/asn/WalletOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const WalletOutlined = (
   props: AntdIconProps,

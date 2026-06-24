@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CloudSyncOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloudSyncOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CloudSyncOutlined = (
   props: AntdIconProps,

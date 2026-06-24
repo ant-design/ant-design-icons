@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FilterOutlinedSvg from '@ant-design/icons-svg/lib/asn/FilterOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FilterOutlined = (
   props: AntdIconProps,

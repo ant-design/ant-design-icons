@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RocketFilledSvg from '@ant-design/icons-svg/lib/asn/RocketFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const RocketFilled = (
   props: AntdIconProps,

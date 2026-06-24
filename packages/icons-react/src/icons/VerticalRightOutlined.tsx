@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import VerticalRightOutlinedSvg from '@ant-design/icons-svg/lib/asn/VerticalRightOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const VerticalRightOutlined = (
   props: AntdIconProps,

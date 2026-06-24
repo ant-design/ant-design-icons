@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import AlipayCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/AlipayCircleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const AlipayCircleOutlined = (
   props: AntdIconProps,

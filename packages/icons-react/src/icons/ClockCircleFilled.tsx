@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ClockCircleFilledSvg from '@ant-design/icons-svg/lib/asn/ClockCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ClockCircleFilled = (
   props: AntdIconProps,

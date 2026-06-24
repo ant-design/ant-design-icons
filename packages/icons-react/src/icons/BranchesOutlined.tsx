@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import BranchesOutlinedSvg from '@ant-design/icons-svg/lib/asn/BranchesOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const BranchesOutlined = (
   props: AntdIconProps,

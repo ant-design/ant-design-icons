@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import WeiboCircleFilledSvg from '@ant-design/icons-svg/lib/asn/WeiboCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const WeiboCircleFilled = (
   props: AntdIconProps,

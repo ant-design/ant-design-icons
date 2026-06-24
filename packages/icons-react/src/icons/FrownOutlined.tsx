@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FrownOutlinedSvg from '@ant-design/icons-svg/lib/asn/FrownOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FrownOutlined = (
   props: AntdIconProps,

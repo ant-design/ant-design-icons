@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PoundOutlinedSvg from '@ant-design/icons-svg/lib/asn/PoundOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const PoundOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import DashOutlinedSvg from '@ant-design/icons-svg/lib/asn/DashOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const DashOutlined = (
   props: AntdIconProps,

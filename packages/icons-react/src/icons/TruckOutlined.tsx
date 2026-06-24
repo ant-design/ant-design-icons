@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import TruckOutlinedSvg from '@ant-design/icons-svg/lib/asn/TruckOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const TruckOutlined = (
   props: AntdIconProps,

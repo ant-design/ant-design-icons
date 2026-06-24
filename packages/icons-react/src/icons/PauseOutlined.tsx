@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PauseOutlinedSvg from '@ant-design/icons-svg/lib/asn/PauseOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const PauseOutlined = (
   props: AntdIconProps,

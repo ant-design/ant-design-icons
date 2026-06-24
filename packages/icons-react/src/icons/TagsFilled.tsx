@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import TagsFilledSvg from '@ant-design/icons-svg/lib/asn/TagsFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const TagsFilled = (
   props: AntdIconProps,

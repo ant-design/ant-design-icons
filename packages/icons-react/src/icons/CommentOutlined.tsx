@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CommentOutlinedSvg from '@ant-design/icons-svg/lib/asn/CommentOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CommentOutlined = (
   props: AntdIconProps,

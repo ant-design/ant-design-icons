@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import PinterestOutlinedSvg from '@ant-design/icons-svg/lib/asn/PinterestOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const PinterestOutlined = (
   props: AntdIconProps,

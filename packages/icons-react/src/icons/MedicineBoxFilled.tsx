@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import MedicineBoxFilledSvg from '@ant-design/icons-svg/lib/asn/MedicineBoxFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const MedicineBoxFilled = (
   props: AntdIconProps,

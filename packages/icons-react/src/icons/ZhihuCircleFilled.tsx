@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ZhihuCircleFilledSvg from '@ant-design/icons-svg/lib/asn/ZhihuCircleFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ZhihuCircleFilled = (
   props: AntdIconProps,

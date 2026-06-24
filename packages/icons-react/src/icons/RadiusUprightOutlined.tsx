@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import RadiusUprightOutlinedSvg from '@ant-design/icons-svg/lib/asn/RadiusUprightOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const RadiusUprightOutlined = (
   props: AntdIconProps,

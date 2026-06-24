@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FieldBinaryOutlinedSvg from '@ant-design/icons-svg/lib/asn/FieldBinaryOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FieldBinaryOutlined = (
   props: AntdIconProps,

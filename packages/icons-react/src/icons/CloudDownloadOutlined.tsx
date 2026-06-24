@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CloudDownloadOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloudDownloadOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CloudDownloadOutlined = (
   props: AntdIconProps,

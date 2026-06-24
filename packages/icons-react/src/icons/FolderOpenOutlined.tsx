@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FolderOpenOutlinedSvg from '@ant-design/icons-svg/lib/asn/FolderOpenOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FolderOpenOutlined = (
   props: AntdIconProps,

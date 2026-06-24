@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import CloseCircleOutlinedSvg from '@ant-design/icons-svg/lib/asn/CloseCircleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const CloseCircleOutlined = (
   props: AntdIconProps,

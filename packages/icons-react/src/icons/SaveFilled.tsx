@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SaveFilledSvg from '@ant-design/icons-svg/lib/asn/SaveFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const SaveFilled = (
   props: AntdIconProps,

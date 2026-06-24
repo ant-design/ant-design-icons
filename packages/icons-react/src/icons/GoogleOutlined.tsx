@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import GoogleOutlinedSvg from '@ant-design/icons-svg/lib/asn/GoogleOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const GoogleOutlined = (
   props: AntdIconProps,

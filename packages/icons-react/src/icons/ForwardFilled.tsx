@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ForwardFilledSvg from '@ant-design/icons-svg/lib/asn/ForwardFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ForwardFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import FrownFilledSvg from '@ant-design/icons-svg/lib/asn/FrownFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const FrownFilled = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import TikTokOutlinedSvg from '@ant-design/icons-svg/lib/asn/TikTokOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const TikTokOutlined = (
   props: AntdIconProps,

@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import LoginOutlinedSvg from '@ant-design/icons-svg/lib/asn/LoginOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const LoginOutlined = (
   props: AntdIconProps,

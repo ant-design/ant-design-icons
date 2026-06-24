@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import UnlockFilledSvg from '@ant-design/icons-svg/lib/asn/UnlockFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const UnlockFilled = (
   props: AntdIconProps,

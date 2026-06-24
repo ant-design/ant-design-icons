@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import ShareAltOutlinedSvg from '@ant-design/icons-svg/lib/asn/ShareAltOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const ShareAltOutlined = (
   props: AntdIconProps,

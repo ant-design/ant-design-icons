@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SkypeFilledSvg from '@ant-design/icons-svg/lib/asn/SkypeFilled';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const SkypeFilled = (
   props: AntdIconProps,

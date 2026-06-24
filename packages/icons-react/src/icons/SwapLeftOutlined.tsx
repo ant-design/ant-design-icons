@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SwapLeftOutlinedSvg from '@ant-design/icons-svg/lib/asn/SwapLeftOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const SwapLeftOutlined = (
   props: AntdIconProps,

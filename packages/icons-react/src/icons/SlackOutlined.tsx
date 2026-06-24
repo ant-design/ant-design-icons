@@ -3,7 +3,7 @@
 
 import * as React from 'react'
 import SlackOutlinedSvg from '@ant-design/icons-svg/lib/asn/SlackOutlined';
-import AntdIcon, { AntdIconProps } from '../components/AntdIcon';
+import AntdIcon, { AntdIconProps } from '../components/AntdIconLight';
 
 const SlackOutlined = (
   props: AntdIconProps,
