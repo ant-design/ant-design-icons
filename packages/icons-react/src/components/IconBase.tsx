@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { AbstractNode, IconDefinition } from '@ant-design/icons-svg/lib/types';
-import { generate, getSecondaryColor, isIconDefinition, warning, useInsertStyles } from '../utils';
+import { generate, isIconDefinition, warning, useInsertStyles } from '../utils';
 
 export interface IconProps {
   icon: IconDefinition;
@@ -12,50 +12,13 @@ export interface IconProps {
   focusable?: string;
 }
 
-export interface TwoToneColorPaletteSetter {
-  primaryColor: string;
-  secondaryColor?: string;
-}
-
-export interface TwoToneColorPalette extends TwoToneColorPaletteSetter {
-  calculated?: boolean; // marker for calculation
-}
-
-const twoToneColorPalette: TwoToneColorPalette = {
-  primaryColor: '#333',
-  secondaryColor: '#E6E6E6',
-  calculated: false,
-};
-
-function setTwoToneColors({ primaryColor, secondaryColor }: TwoToneColorPaletteSetter) {
-  twoToneColorPalette.primaryColor = primaryColor;
-  twoToneColorPalette.secondaryColor = secondaryColor || getSecondaryColor(primaryColor);
-  twoToneColorPalette.calculated = !!secondaryColor;
-}
-
-function getTwoToneColors(): TwoToneColorPalette {
-  return {
-    ...twoToneColorPalette,
-  };
-}
-
-interface IconBaseComponent<P> extends React.FC<P> {
-  getTwoToneColors: typeof getTwoToneColors;
-  setTwoToneColors: typeof setTwoToneColors;
-}
-
-const IconBase: IconBaseComponent<IconProps> = props => {
-  const { icon, className, onClick, style, primaryColor, secondaryColor, ...restProps } = props;
+const IconBase: React.FC<IconProps> = props => {
+  const { icon, className, onClick, style, ...restProps } = props;
 
   const svgRef = React.useRef<HTMLElement>(null);
 
-  let colors: TwoToneColorPalette = twoToneColorPalette;
-  if (primaryColor) {
-    colors = {
-      primaryColor,
-      secondaryColor: secondaryColor || getSecondaryColor(primaryColor),
-    };
-  }
+  delete restProps.primaryColor;
+  delete restProps.secondaryColor;
 
   useInsertStyles(svgRef);
 
@@ -65,13 +28,8 @@ const IconBase: IconBaseComponent<IconProps> = props => {
     return null;
   }
 
-  let target = icon;
-  if (target && typeof target.icon === 'function') {
-    target = {
-      ...target,
-      icon: target.icon(colors.primaryColor, colors.secondaryColor),
-    };
-  }
+  const target = icon;
+
   return generate(target.icon as AbstractNode, `svg-${target.name}`, {
     className,
     onClick,
@@ -87,7 +45,5 @@ const IconBase: IconBaseComponent<IconProps> = props => {
 };
 
 IconBase.displayName = 'IconReact';
-IconBase.getTwoToneColors = getTwoToneColors;
-IconBase.setTwoToneColors = setTwoToneColors;
 
 export default IconBase;

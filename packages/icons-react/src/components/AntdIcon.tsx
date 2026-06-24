@@ -7,7 +7,7 @@ import { blue } from '@ant-design/colors';
 
 import Context from './Context';
 import type { IconBaseProps } from './Icon';
-import ReactIcon from './IconBase';
+import ReactIcon from './IconBaseTwoTone';
 import { getTwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
 import type { TwoToneColor } from './twoTonePrimaryColor';
 import { normalizeTwoToneColors } from '../utils';
