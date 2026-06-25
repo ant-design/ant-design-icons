@@ -1,0 +1,23 @@
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+import * as React from 'react'
+import GeminiFilledSvg from '@ant-design/icons-svg/lib/asn/GeminiFilled';
+import AntdIcon from '../components/AntdIconLight';
+import type { AntdIconProps } from '../components/AntdIconLight';
+
+const GeminiFilled = (
+  props: AntdIconProps,
+  ref: React.MutableRefObject<HTMLSpanElement>,
+) => <AntdIcon {...props} ref={ref} icon={GeminiFilledSvg} />;
+
+ /**![gemini](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTQ3Ni4xNiA3ODUuMjhRNTEyIDg2Ny4wNCA1MTIgOTYwcTAtOTIuOTYgMzQuNzItMTc0LjcyIDM1Ljg0LTgxLjc2IDk2LjMyLTE0Mi4yNHQxNDIuMjQtOTUuMlE4NjcuMDQgNTEyIDk2MCA1MTJxLTkyLjk2IDAtMTc0LjcyLTM0LjcyYTQ1OS4yIDQ1OS4yIDAgMDEtMTQyLjI0LTk2LjMyIDQ1OS4yIDQ1OS4yIDAgMDEtOTYuMzItMTQyLjI0UTUxMiAxNTYuOTYgNTEyIDY0cTAgOTIuOTYtMzUuODQgMTc0LjcyLTM0LjcyIDgxLjc2LTk1LjIgMTQyLjI0YTQ1OS4yIDQ1OS4yIDAgMDEtMTQyLjI0IDk2LjMyUTE1Ni45NiA1MTIgNjQgNTEycTkyLjk2IDAgMTc0LjcyIDM1Ljg0IDgxLjc2IDM0LjcyIDE0Mi4yNCA5NS4ydDk1LjIgMTQyLjI0IiAvPjwvc3ZnPg==) */ 
+const RefIcon: React.ForwardRefExoticComponent<
+  Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>
+> = React.forwardRef<HTMLSpanElement, AntdIconProps>(GeminiFilled);
+
+if (process.env.NODE_ENV !== 'production') {
+  RefIcon.displayName = 'GeminiFilled';
+}
+
+export default RefIcon;
