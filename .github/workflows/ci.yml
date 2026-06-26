@@ -40,6 +40,7 @@ jobs:
       #   run: |
       #     echo "ut install failed — failing job after uploading logs"
       #     exit 1
+      - run: ut icons:type-check
       - run: ut icons:generate && ut icons:build
       - run: ut icons:test
       - id: ut_ci
