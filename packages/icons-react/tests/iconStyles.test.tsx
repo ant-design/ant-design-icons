@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+import { TwitterOutlined } from '@ant-design/icons-svg';
 import * as React from 'react';
 import { vi } from 'vitest';
 import { SmileOutlined } from '../src';
@@ -22,7 +23,7 @@ describe('Render with styles', () => {
     const head = document.querySelector('head')!;
     const meta = document.createElement('meta');
     head.appendChild(meta);
-    render(<Icon icon={'Antd' as any} />);
+    render(<Icon icon={TwitterOutlined} />);
     expect(head.firstElementChild!.tagName).toBe('STYLE');
   });
 
@@ -56,7 +57,7 @@ describe('zeroRuntime', () => {
   it('should not inject styles when zeroRuntime is true', () => {
     render(
       <IconProvider value={{ zeroRuntime: true }}>
-        <Icon icon={'Antd' as any} />
+        <Icon icon={TwitterOutlined} />
       </IconProvider>,
     );
 
@@ -66,7 +67,7 @@ describe('zeroRuntime', () => {
   it('should still inject styles when zeroRuntime is false', () => {
     render(
       <IconProvider value={{ zeroRuntime: false }}>
-        <Icon icon={'Antd' as any} />
+        <Icon icon={TwitterOutlined} />
       </IconProvider>,
     );
 
@@ -74,7 +75,7 @@ describe('zeroRuntime', () => {
   });
 
   it('should still inject styles when zeroRuntime is not set', () => {
-    render(<Icon icon={'Antd' as any} />);
+    render(<Icon icon={TwitterOutlined} />);
 
     expect(document.head.querySelector('style')).toBeTruthy();
   });
