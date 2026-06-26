@@ -19,7 +19,6 @@ function camelCase(input: string) {
   return input.replace(/-(.)/g, (_match, g) => g.toUpperCase());
 }
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function isIconDefinition(target: any): target is IconDefinition {
   return (
     typeof target === 'object' &&
@@ -185,7 +184,7 @@ export const useInsertStyles = (): void => {
     mergedStyleStr = mergedStyleStr.replace(/anticon/g, prefixCls.value);
   }
 
-  nextTick(() => {
+  void nextTick(() => {
     if (!canUseDom()) {
       return;
     }

@@ -34,7 +34,7 @@ interface AntdIconProps {
 ## Release
 
 ```bash
-npm run generate
-npm run compile
+ut generate
+ut build
 npm publish
 ```

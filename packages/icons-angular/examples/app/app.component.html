@@ -5,9 +5,9 @@
 <p>
   With 3 themes&nbsp;
   <select [(ngModel)]="currentTheme" (change)="changeIcons()">
-    <option value='fill'>fill</option>
-    <option value='outline'>outline</option>
-    <option value='twotone'>twotone</option>
+    <option value="fill">fill</option>
+    <option value="outline">outline</option>
+    <option value="twotone">twotone</option>
   </select>
 </p>
 
@@ -19,6 +19,6 @@
 
 @if (currentTheme === 'fill') {
   <h2>With Namespace</h2>
-  <span antIcon [type]="'animal:panda'"></span>
-  <span antIcon [type]="'animal:panda'"></span>
+  <span antIcon type="animal:panda"></span>
+  <span antIcon type="animal:panda"></span>
 }

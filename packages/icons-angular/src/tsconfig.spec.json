@@ -2,27 +2,11 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/spec",
-    "baseUrl": "./",
-    "esModuleInterop": true,
-    "types": [
-      "jasmine",
-      "node"
-    ],
+    "types": ["*", "vitest/globals"],
     "paths": {
-      "@ant-design/icons-angular": [
-        "./public_api.ts"
-      ],
-      "@ant-design/icons-angular/icons": [
-        "./icons/public_api.ts"
-      ]
+      "@ant-design/icons-angular": ["./public_api.ts"],
+      "@ant-design/icons-angular/icons": ["./icons/public_api.ts"]
     }
   },
-  "files": [
-    "test.ts",
-    "polyfills.ts"
-  ],
-  "include": [
-    "**/*.spec.ts",
-    "**/*.d.ts"
-  ]
+  "include": ["**/*.spec.ts", "**/*.d.ts"]
 }

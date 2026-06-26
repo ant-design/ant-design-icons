@@ -34,7 +34,7 @@
 通过运行命令
 
 ```bash
-yarn generate # or `yarn g`
+ut generate
 ```
 
 开始 `gulp` 构建，整个构建流程如下
@@ -57,7 +57,7 @@ yarn generate # or `yarn g`
 通过运行命令
 
 ```bash
-yarn build
+ut build
 ```
 
 使用 `tsc` 编译输出至 `es`、`lib` 目录
@@ -80,10 +80,10 @@ yarn build
 
 ```bash
 # 生成 ts 源文件至 src
-yarn generate
+ut generate
 
 # 编译 src 文件至 es、lib
-yarn build
+ut build
 ```
 
 ### 修改/删除

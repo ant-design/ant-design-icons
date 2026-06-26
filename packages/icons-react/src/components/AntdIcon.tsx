@@ -1,15 +1,15 @@
 'use client';
 
 import * as React from 'react';
-import classNames from 'classnames';
+import { clsx } from 'clsx';
 import type { IconDefinition } from '@ant-design/icons-svg/lib/types';
-import { blue } from '@ant-design/colors';
 
 import Context from './Context';
 import type { IconBaseProps } from './Icon';
-import ReactIcon from './IconBase';
+import ReactIcon from './IconBaseTwoTone';
 import { getTwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
 import type { TwoToneColor } from './twoTonePrimaryColor';
+import { DEFAULT_TWOTONE_COLOR } from '../colorUtils';
 import { normalizeTwoToneColors } from '../utils';
 
 export interface AntdIconProps extends IconBaseProps {
@@ -22,7 +22,7 @@ export interface IconComponentProps extends AntdIconProps {
 
 // Initial setting
 // should move it to antd main repo?
-setTwoToneColor(blue.primary);
+setTwoToneColor(DEFAULT_TWOTONE_COLOR);
 
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757#issuecomment-488848720
 interface IconBaseComponent<Props>
@@ -52,7 +52,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
 
   const { prefixCls = 'anticon', rootClassName } = React.useContext(Context);
 
-  const classString = classNames(
+  const classString = clsx(
     rootClassName,
     prefixCls,
     {
@@ -67,7 +67,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
     iconTabIndex = -1;
   }
 
-  const svgStyle = rotate
+  const svgStyle: React.CSSProperties = rotate
     ? {
         msTransform: `rotate(${rotate}deg)`,
         transform: `rotate(${rotate}deg)`,
@@ -96,8 +96,11 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
   );
 }) as IconBaseComponent<IconComponentProps>;
 
-Icon.displayName = 'AntdIcon';
 Icon.getTwoToneColor = getTwoToneColor;
 Icon.setTwoToneColor = setTwoToneColor;
+
+if (process.env.NODE_ENV !== 'production') {
+  Icon.displayName = 'AntdIcon';
+}
 
 export default Icon;

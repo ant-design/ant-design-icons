@@ -1,4 +1,4 @@
-import { TransformFactory, TransformOptions } from '..';
+import type { TransformFactory, TransformOptions } from '..';
 import {
   evolve,
   clone,
@@ -9,7 +9,7 @@ import {
   where,
   mergeRight
 } from 'ramda';
-import { AbstractNode } from '../../../templates/types';
+import type { AbstractNode } from '../../../templates/types';
 
 type Dictionary = Record<string, string>;
 

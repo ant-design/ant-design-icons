@@ -2,18 +2,10 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "types": []
+    "paths": {
+      "@ant-design/icons-angular": ["../src/public_api"],
+      "@ant-design/icons-angular/icons": ["../src/icons/public_api"]
+    }
   },
-  "files": [
-    "main.ts",
-    "polyfills.ts"
-  ],
-  "paths": {
-    "@ant-design/icons-angular": [
-      "../lib/public_api"
-    ],
-    "@ant-design/icons-angular/icons": [
-      "../lib/icons/public_api"
-    ]
-  }
+  "files": ["main.ts"]
 }

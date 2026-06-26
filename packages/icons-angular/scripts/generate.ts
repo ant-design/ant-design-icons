@@ -1,6 +1,6 @@
-import * as allIconDefs from '@ant-design/icons-svg';
-import { IconDefinition, ThemeType } from '@ant-design/icons-svg/es/types';
-import { renderIconDefinitionToSVGElement } from '@ant-design/icons-svg/lib/helpers';
+import * as allIconDefs from '@ant-design/icons-svg/src/index';
+import { IconDefinition } from '@ant-design/icons-svg/src/types';
+import { renderIconDefinitionToSVGElement } from '@ant-design/icons-svg/templates/helpers';
 import { promises as fsPromises } from 'fs';
 import { template } from 'lodash';
 import * as path from 'path';
@@ -14,10 +14,7 @@ interface IconDefinitionWithIdentifier extends IconDefinition {
 function walk<T>(fn: (iconDef: IconDefinitionWithIdentifier) => Promise<T>) {
   return Promise.all(
     Object.keys(allIconDefs).map(svgIdentifier => {
-      const iconDef = (allIconDefs as { [id: string]: IconDefinition })[
-        svgIdentifier
-      ];
-
+      const iconDef = (allIconDefs as Record<string, IconDefinition>)[svgIdentifier];
       return fn({ svgIdentifier, ...iconDef });
     })
   );
@@ -68,7 +65,7 @@ export const manifest: Manifest = {
     twotone: []
   };
 
-  const staicFileRender = template(
+  const staticFileRender = template(
     `
 import { IconDefinition } from '@ant-design/icons-angular';
 
@@ -103,7 +100,7 @@ export const <%= svgIdentifier %>: IconDefinition = {
     // Generate static loading resources.
     await fsPromises.writeFile(
       path.resolve(__dirname, `../src/icons/${_theme}/${svgIdentifier}.ts`),
-      staicFileRender({ svgIdentifier, name, theme: _theme, inlineIcon })
+      staticFileRender({ svgIdentifier, name, theme: _theme, inlineIcon })
     );
 
     await fsPromises.writeFile(
@@ -116,9 +113,7 @@ export const <%= svgIdentifier %>: IconDefinition = {
       jsonpRender({ name, theme: _theme, inlineIcon })
     );
 
-    indexContent.push(
-      `export { ${svgIdentifier} } from './${_theme}/${svgIdentifier}';`
-    );
+    indexContent.push(`export { ${svgIdentifier} } from './${_theme}/${svgIdentifier}';`);
 
     manifestContent[_theme].push(`'${name}'`);
   });

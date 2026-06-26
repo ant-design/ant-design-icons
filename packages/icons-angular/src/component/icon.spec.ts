@@ -1,15 +1,14 @@
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { Component, DebugElement } from '@angular/core';
-import { ComponentFixture, fakeAsync, flush, inject, TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
+import { Component, DebugElement, signal } from '@angular/core';
+import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { AccountBookFill, AccountBookOutline, AccountBookTwoTone } from '../icons/public_api';
+import { ThemeType } from '../types';
 import { IconDirective } from './icon.directive';
 import { IconService } from './icon.service';
-import { ThemeType } from '@ant-design/icons-angular'
 
-const staticImportIcons = [
-  AccountBookFill, AccountBookOutline, AccountBookTwoTone
-];
+const staticImportIcons = [AccountBookFill, AccountBookOutline, AccountBookTwoTone];
 
 const pandaLiteral = `<svg viewBox="0 0 1024 1024">
 <path d="M99.096 315.634s-82.58-64.032-82.58-132.13c0-66.064 33.032-165.162 148.646-148.646 83.37 11.91 99.096 165.162 99.096 165.162l-165.162 115.614zM924.906 315.634s82.58-64.032 82.58-132.13c0-66.064-33.032-165.162-148.646-148.646-83.37 11.91-99.096 165.162-99.096 165.162l165.162 115.614z" fill="#6B676E" p-id="1143" />
@@ -29,7 +28,7 @@ describe('@ant-design/icons-angular', () => {
   let icons: DebugElement[];
 
   describe('static loading', () => {
-    beforeEach(inject([ IconService ], (is: IconService) => {
+    beforeEach(inject([IconService], (is: IconService) => {
       iconService = is;
       iconService.addIcon(...staticImportIcons);
       iconService.twoToneColor = { primaryColor: '#1890ff' };
@@ -45,149 +44,135 @@ describe('@ant-design/icons-angular', () => {
       iconService.clear();
     });
 
-    it('should render SVG elements with attributes set', fakeAsync(() => {
-      fixture.detectChanges();
-      flush();
-      fixture.detectChanges();
+    it('should render SVG elements with attributes set', async () => {
+      await fixture.whenStable();
 
-      const iconElement = icons[ 0 ].nativeElement;
+      const iconElement = icons[0].nativeElement;
       const svgElement = iconElement.firstElementChild;
       expect(svgElement.tagName).toBe('svg');
       expect(svgElement.getAttribute('viewBox')).toBe('64 64 896 896');
       expect(svgElement.getAttribute('fill')).toBe('currentColor');
       expect(svgElement.getAttribute('width')).toBe('1em');
       expect(svgElement.getAttribute('height')).toBe('1em');
-    }));
+    });
 
-    it('should render twotone icons', fakeAsync(() => {
-      testComponent.theme = 'twotone';
+    it('should render twotone icons', async () => {
+      testComponent.theme.set('twotone');
+      await fixture.whenStable();
 
-      fixture.detectChanges();
-      flush();
-      fixture.detectChanges();
+      const iconElement = icons[0].nativeElement as HTMLElement;
+      const svgElement = iconElement.firstElementChild!;
+      expect(svgElement.children[0].getAttribute('fill')).toBe('#e6f7ff');
+      expect(svgElement.children[1].getAttribute('fill')).toBe('#1890ff');
+      expect(svgElement.children[2].getAttribute('fill')).toBe('#1890ff');
+    });
 
-      const iconElement = icons[ 0 ].nativeElement as HTMLElement;
-      const svgElement = iconElement.firstElementChild;
-      expect(svgElement.children[ 0 ].getAttribute('fill')).toBe('#e6f7ff');
-      expect(svgElement.children[ 1 ].getAttribute('fill')).toBe('#1890ff');
-      expect(svgElement.children[ 2 ].getAttribute('fill')).toBe('#1890ff');
-    }));
+    it('should remove all when type if falsy', async () => {
+      await fixture.whenStable();
 
-    it('should remove all when type if falsy', fakeAsync(() => {
-      fixture.detectChanges();
-      flush();
-      fixture.detectChanges();
+      const iconElement = icons[0].nativeElement as HTMLElement;
+      expect(iconElement.firstElementChild!.tagName).toBe('svg');
 
-      const iconElement = icons[ 0 ].nativeElement as HTMLElement;
-      expect(iconElement.firstElementChild.tagName).toBe('svg');
+      testComponent.type.set('');
+      await fixture.whenStable();
 
-      testComponent.type = '';
+      expect(iconElement.firstElementChild).toBeNull();
+    });
 
-      fixture.detectChanges();
-      flush();
-      fixture.detectChanges();
+    it('should ignore theme if specified in type', async () => {
+      testComponent.type.set('account-book-twotone');
+      testComponent.theme.set('fill');
+      await fixture.whenStable();
 
-      expect(iconElement.firstElementChild).toBe(null);
-    }));
+      const iconElement = icons[0].nativeElement as HTMLElement;
+      const svgElement = iconElement.firstElementChild!;
+      expect(svgElement.children[0].getAttribute('fill')).toBe('#e6f7ff');
+      expect(svgElement.children[1].getAttribute('fill')).toBe('#1890ff');
+      expect(svgElement.children[2].getAttribute('fill')).toBe('#1890ff');
+    });
 
-    it('should ignore theme when it\' specified in type', fakeAsync(() => {
-      testComponent.type = 'account-book-twotone';
-      testComponent.theme = 'fill';
-
-      fixture.detectChanges();
-      flush();
-      fixture.detectChanges();
-
-      const iconElement = icons[ 0 ].nativeElement as HTMLElement;
-      const svgElement = iconElement.firstElementChild;
-      expect(svgElement.children[ 0 ].getAttribute('fill')).toBe('#e6f7ff');
-      expect(svgElement.children[ 1 ].getAttribute('fill')).toBe('#1890ff');
-      expect(svgElement.children[ 2 ].getAttribute('fill')).toBe('#1890ff');
-    }));
-
-    it('should support namespace', fakeAsync(() => {
+    it('should support namespace', async () => {
       iconService.addIconLiteral('animal:panda', pandaLiteral);
+      testComponent.type.set('animal:panda');
+      await fixture.whenStable();
 
-      testComponent.type = 'animal:panda';
-
-      fixture.detectChanges();
-      flush();
-      fixture.detectChanges();
-
-      const iconElement = icons[ 0 ].nativeElement as HTMLElement;
-      expect(iconElement.firstElementChild.tagName).toBe('svg');
-    }));
+      const iconElement = icons[0].nativeElement as HTMLElement;
+      expect(iconElement.firstElementChild!.tagName).toBe('svg');
+    });
 
     it('addIconLiteral should require a namespace', () => {
       expect(() => {
         iconService.addIconLiteral('no-name-space', 'whatever');
-      }).toThrowError();
+      }).toThrow();
     });
   });
 
   describe('dynamic loading', () => {
+    let httpMock: HttpTestingController;
+
     beforeEach(() => {
       TestBed.configureTestingModule({
-        providers: [provideHttpClient(withInterceptorsFromDi())]
+        providers: [provideHttpClient(), provideHttpClientTesting()]
       });
     });
 
-    beforeEach(inject([ IconService ], (is: IconService) => {
+    beforeEach(inject([IconService], (is: IconService) => {
       iconService = is;
       iconService.twoToneColor = { primaryColor: '#1890ff' };
     }));
 
     beforeEach(() => {
       fixture = TestBed.createComponent(IconTestComponent);
+      httpMock = TestBed.inject(HttpTestingController);
       testComponent = fixture.debugElement.componentInstance;
       icons = fixture.debugElement.queryAll(By.directive(IconDirective));
     });
 
-    it('should fire http request if icon is not statically imported', (done) => {
-      fixture.detectChanges();
+    it('should fire http request if icon is not statically imported', async () => {
+      await fixture.whenStable();
+      const req = httpMock.expectOne('assets/fill/account-book.svg');
+      expect(req.request.method).toBe('GET');
+      req.flush(AccountBookFill.icon);
 
-      setTimeout(() => {
-        fixture.detectChanges();
+      await fixture.whenStable();
 
-        const iconElement = icons[ 0 ].nativeElement;
-        const svgElement = iconElement.firstElementChild;
-        expect(svgElement.tagName).toBe('svg');
-        expect(svgElement.getAttribute('viewBox')).toBe('64 64 896 896');
-        expect(svgElement.getAttribute('fill')).toBe('currentColor');
-        expect(svgElement.getAttribute('width')).toBe('1em');
-        expect(svgElement.getAttribute('height')).toBe('1em');
-        done();
-      }, 50);
+      const iconElement = icons[0].nativeElement;
+      const svgElement = iconElement.firstElementChild;
+      expect(svgElement.tagName).toBe('svg');
+      expect(svgElement.getAttribute('viewBox')).toBe('64 64 896 896');
+      expect(svgElement.getAttribute('fill')).toBe('currentColor');
+      expect(svgElement.getAttribute('width')).toBe('1em');
+      expect(svgElement.getAttribute('height')).toBe('1em');
     });
 
     /**
      * This is untestable!
      */
-    xit('should report icon missing when dynamic importing fails', async () => {
+    it.skip('should report icon missing when dynamic importing fails', async () => {
+      // noop
     });
 
-    it('should support namespace',  (done) => {
-      testComponent.type = 'animal:panda';
-      fixture.detectChanges();
+    it('should support namespace', async () => {
+      testComponent.type.set('animal:panda');
+      await fixture.whenStable();
+      const req = httpMock.expectOne('assets/animal/panda.svg');
+      expect(req.request.method).toBe('GET');
+      req.flush(pandaLiteral);
 
-      setTimeout(() => {
-        fixture.detectChanges();
+      await fixture.whenStable();
 
-        const iconElement = icons[ 0 ].nativeElement;
-        const svgElement = iconElement.firstElementChild;
-        expect(svgElement.tagName).toBe('svg');
-        done();
-      }, 50);
+      const iconElement = icons[0].nativeElement;
+      const svgElement = iconElement.firstElementChild;
+      expect(svgElement.tagName).toBe('svg');
     });
   });
 });
 
 @Component({
-  selector: 'icon-test',
   imports: [IconDirective],
-  template: `<span antIcon [type]="type" [theme]="theme"></span>`
+  template: `<span antIcon [type]="type()" [theme]="theme()"></span>`
 })
-export class IconTestComponent {
-  type = 'account-book';
-  theme: ThemeType = 'fill';
+class IconTestComponent {
+  type = signal('account-book');
+  theme = signal<ThemeType>('fill');
 }

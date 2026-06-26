@@ -1,5 +1,5 @@
-import { TransformFactory } from '../..';
 import { assignAttrsAtTag } from '..';
+import type { TransformFactory } from '../..';
 
 export const setDefaultColorAtPathTag: (
   defaultColor: string

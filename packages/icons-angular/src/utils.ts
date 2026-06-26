@@ -21,11 +21,16 @@ export function getSecondaryColor(primaryColor: string): string {
 
 export function withSuffix(name: string, theme: ThemeType | undefined): string {
   switch (theme) {
-    case 'fill': return `${name}-fill`;
-    case 'outline': return `${name}-o`;
-    case 'twotone': return `${name}-twotone`;
-    case undefined: return name;
-    default: throw new Error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}Theme "${theme}" is not a recognized theme!`);
+    case 'fill':
+      return `${name}-fill`;
+    case 'outline':
+      return `${name}-o`;
+    case 'twotone':
+      return `${name}-twotone`;
+    case undefined:
+      return name;
+    default:
+      throw new Error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}Theme "${theme}" is not a recognized theme!`);
   }
 }
 
@@ -34,7 +39,7 @@ export function withSuffixAndColor(name: string, theme: ThemeType, pri: string, 
 }
 
 export function mapAbbrToTheme(abbr: string): ThemeType {
-  return abbr === 'o' ? 'outline' : abbr as ThemeType;
+  return abbr === 'o' ? 'outline' : (abbr as ThemeType);
 }
 
 export function alreadyHasAThemeSuffix(name: string): boolean {
@@ -87,12 +92,46 @@ export function replaceFillColor(raw: string): string {
 export function getNameAndNamespace(type: string): [string, string] {
   const split = type.split(':');
   switch (split.length) {
-    case 1: return [type, ''];
-    case 2: return [split[1], split[0]];
-    default: throw new Error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}The icon type ${type} is not valid!`);
+    case 1:
+      return [type, ''];
+    case 2:
+      return [split[1], split[0]];
+    default:
+      throw new Error(`${ANT_ICON_ANGULAR_CONSOLE_PREFIX}The icon type ${type} is not valid!`);
   }
 }
 
 export function hasNamespace(type: string): boolean {
   return getNameAndNamespace(type)[1] !== '';
+}
+
+/**
+ * Parse a icon to the standard form, an `IconDefinition` or a string like 'account-book-fill` (with a theme suffixed).
+ * If namespace is specified, ignore theme because it meaningless for users' icons.
+ *
+ * @param type
+ * @param theme
+ * @param defaultTheme if `theme` is not specified, use this as the default theme
+ */
+export function parseIconType(
+  type: string | IconDefinition,
+  theme: ThemeType | undefined,
+  defaultTheme: ThemeType
+): IconDefinition | string {
+  if (isIconDefinition(type)) {
+    return type;
+  } else {
+    const [name, namespace] = getNameAndNamespace(type);
+    if (namespace) {
+      return type;
+    }
+    if (alreadyHasAThemeSuffix(name)) {
+      if (theme) {
+        warn(`'type' ${name} already gets a theme inside so 'theme' ${theme} would be ignored`);
+      }
+      return name;
+    } else {
+      return withSuffix(name, theme || defaultTheme);
+    }
+  }
 }
