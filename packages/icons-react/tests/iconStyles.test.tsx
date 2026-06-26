@@ -1,9 +1,13 @@
 import { render } from '@testing-library/react';
+import { TwitterOutlined } from '@ant-design/icons-svg';
 import * as React from 'react';
 import { vi } from 'vitest';
 import { SmileOutlined } from '../src';
 import Icon from '../src/components/IconBase';
+import IconContext from '../src/components/Context';
 import { updateCSS } from '../src/cssUtils';
+
+const IconProvider = IconContext.Provider;
 
 describe('Render with styles', () => {
   afterEach(() => {
@@ -12,13 +16,14 @@ describe('Render with styles', () => {
 
   beforeEach(() => {
     document.head.innerHTML = '';
+    document.body.innerHTML = '';
   });
 
   it('icon style will inset top of head', () => {
     const head = document.querySelector('head')!;
     const meta = document.createElement('meta');
     head.appendChild(meta);
-    render(<Icon icon={'Antd' as any} />);
+    render(<Icon icon={TwitterOutlined} />);
     expect(head.firstElementChild!.tagName).toBe('STYLE');
   });
 
@@ -40,5 +45,57 @@ describe('Render with styles', () => {
     vi.stubGlobal('window', undefined);
 
     expect(updateCSS('.anticon {}', 'ssr-test')).toBeNull();
+  });
+});
+
+describe('zeroRuntime', () => {
+  beforeEach(() => {
+    document.head.innerHTML = '';
+    document.body.innerHTML = '';
+  });
+
+  it('should not inject styles when zeroRuntime is true', () => {
+    render(
+      <IconProvider value={{ zeroRuntime: true }}>
+        <Icon icon={TwitterOutlined} />
+      </IconProvider>,
+    );
+
+    expect(document.head.querySelector('style')).toBeFalsy();
+  });
+
+  it('should still inject styles when zeroRuntime is false', () => {
+    render(
+      <IconProvider value={{ zeroRuntime: false }}>
+        <Icon icon={TwitterOutlined} />
+      </IconProvider>,
+    );
+
+    expect(document.head.querySelector('style')).toBeTruthy();
+  });
+
+  it('should still inject styles when zeroRuntime is not set', () => {
+    render(<Icon icon={TwitterOutlined} />);
+
+    expect(document.head.querySelector('style')).toBeTruthy();
+  });
+
+  it('should not inject styles into shadow root when zeroRuntime is true', () => {
+    const container = document.createElement('div');
+    document.body.appendChild(container);
+
+    const shadow = container.attachShadow({ mode: 'open' });
+    const reactRoot = document.createElement('div');
+    shadow.appendChild(reactRoot);
+
+    render(
+      <IconProvider value={{ zeroRuntime: true }}>
+        <SmileOutlined />
+      </IconProvider>,
+      { container: reactRoot },
+    );
+
+    expect(document.head.querySelector('style')).toBeFalsy();
+    expect(shadow.querySelector('style')).toBeFalsy();
   });
 });
