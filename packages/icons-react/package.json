@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons",
-  "version": "6.3.0",
+  "version": "6.3.1",
   "repository": "https://github.com/ant-design/ant-design-icons/tree/master/packages/icons-react",
   "license": "MIT",
   "contributors": [
@@ -83,7 +83,7 @@
   },
   "dependencies": {
     "@ant-design/colors": "^8.0.1",
-    "@ant-design/icons-svg": "^4.4.2",
+    "@ant-design/icons-svg": "^4.5.0",
     "@rc-component/util": "^1.11.0",
     "clsx": "^2.1.1"
   },
