@@ -40,6 +40,7 @@ export default tseslint.config(
       '@angular-eslint/directive-selector': [
         'error',
         {
+          prefix: 'ant',
           style: 'camelCase',
           type: 'attribute'
         }

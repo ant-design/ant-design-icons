@@ -23,6 +23,7 @@ android-filled
 android-outlined
 ant-cloud-outlined
 ant-design-outlined
+anthropic-filled
 apartment-outlined
 api-filled
 api-outlined
@@ -128,6 +129,7 @@ ci-circle-outlined
 ci-circle-twotone
 ci-outlined
 ci-twotone
+claude-filled
 clear-outlined
 clock-circle-filled
 clock-circle-outlined
@@ -199,6 +201,7 @@ dashboard-twotone
 database-filled
 database-outlined
 database-twotone
+deep-seek-filled
 delete-column-outlined
 delete-filled
 delete-outlined
@@ -249,6 +252,7 @@ dropbox-square-filled
 edit-filled
 edit-outlined
 edit-twotone
+eleven-labs-filled
 ellipsis-outlined
 enter-outlined
 environment-filled
@@ -371,6 +375,7 @@ funnel-plot-filled
 funnel-plot-outlined
 funnel-plot-twotone
 gateway-outlined
+gemini-filled
 gif-outlined
 gift-filled
 gift-outlined
@@ -413,6 +418,7 @@ hourglass-twotone
 html5-filled
 html5-outlined
 html5-twotone
+hugging-face-filled
 idcard-filled
 idcard-outlined
 idcard-twotone
@@ -477,6 +483,7 @@ mail-filled
 mail-outlined
 mail-twotone
 man-outlined
+mastodon-filled
 medicine-box-filled
 medicine-box-outlined
 medicine-box-twotone
@@ -503,6 +510,7 @@ minus-outlined
 minus-square-filled
 minus-square-outlined
 minus-square-twotone
+mistral-filled
 mobile-filled
 mobile-outlined
 mobile-twotone
@@ -522,6 +530,7 @@ notification-filled
 notification-outlined
 notification-twotone
 number-outlined
+ollama-filled
 one-to-one-outlined
 open-a-i-filled
 open-a-i-outlined
@@ -535,6 +544,7 @@ pause-outlined
 pay-circle-filled
 pay-circle-outlined
 percentage-outlined
+perplexity-filled
 phone-filled
 phone-outlined
 phone-twotone
@@ -594,6 +604,7 @@ question-circle-filled
 question-circle-outlined
 question-circle-twotone
 question-outlined
+qwen-filled
 radar-chart-outlined
 radius-bottomleft-outlined
 radius-bottomright-outlined
@@ -613,6 +624,7 @@ reddit-outlined
 reddit-square-filled
 redo-outlined
 reload-outlined
+replicate-filled
 rest-filled
 rest-outlined
 rest-twotone
@@ -688,6 +700,7 @@ small-dash-outlined
 smile-filled
 smile-outlined
 smile-twotone
+snapchat-filled
 snippets-filled
 snippets-outlined
 snippets-twotone
@@ -737,6 +750,8 @@ taobao-circle-outlined
 taobao-outlined
 taobao-square-filled
 team-outlined
+telegram-filled
+threads-filled
 thunderbolt-filled
 thunderbolt-outlined
 thunderbolt-twotone

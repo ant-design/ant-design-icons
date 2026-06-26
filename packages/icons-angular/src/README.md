@@ -11,7 +11,7 @@ Ant Design Icons for Angular
 
 ![](./demo.png)
 
-## Installation
+## Install
 
 ```bash
 ng add @ant-design/icons-angular
@@ -32,12 +32,12 @@ import { IconDirective } from '@ant-design/icons-angular';
 export class AppComponent {}
 ```
 
-And register the icons that you need to `IconService` (all or explicitly, we call it **static loading**):
+And register the icons you need to `IconService` (all or explicitly, we call it **static loading**):
 
-> ATTENTION! We strongly suggest you not to register all icons. That would increase your bundle's size dramatically.
+> ATTENTION! We strongly suggest you not to register all icons, which would increase the bundle size dramatically.
 
 ```ts
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IconService } from '@ant-design/icons-angular';
 import { AccountBookFill } from '@ant-design/icons-angular/icons'
 // import * as AllIcons from 'ant-icons-angular/icons';
@@ -46,16 +46,18 @@ import { AccountBookFill } from '@ant-design/icons-angular/icons'
   // ...
 })
 export class AppComponent {
-  constructor(private _iconService: IconService) {
+  readonly iconService = inject(IconService);
+  
+  constructor() {
     // Import all. NOT RECOMMENDED. ❌
     // const antDesignIcons = AllIcons as {
       // [key: string]: IconDefinition;
     // };
-    // this._iconService.addIcon(...Object.keys(antDesignIcons).map(key => antDesignIcons[key]));
+    // this.iconService.addIcon(...Object.keys(antDesignIcons).map(key => antDesignIcons[key]));
 
     // Import what you need! ✔️
-    this._iconService.addIcon(...[ AccountBookFill ]);
-    this._iconService.twoToneColor = { primaryColor: '#1890ff' };
+    this.iconService.addIcon(...[ AccountBookFill ]);
+    this.iconService.twoToneColor = { primaryColor: '#1890ff' };
   }
 }
 ```
@@ -80,15 +82,19 @@ When you want to render an icon:
 <span antIcon type="ant-cloud" theme="outline"></span>
 ```
 
-Checkout the demo for more details.
+Please checkout the demo for more details.
 
-For icons provided by Ant Design, we provide **dynamic loading** strategy to reduce bundle's size. Just config your `angular.json` and you even don't need to register the icons! Checkout our `examples` dir and `angular.json` file for more details.
+For icons provided by Ant Design, we provide **dynamic loading** strategy to reduce bundle's size. 
+Just config your `angular.json` and even don't need to register the icons! Checkout the `examples` folder and `angular.json` for more details.
 
 ### Namespace
 
-Namespace is first introduced in `2.0.0-beta.2`. It allows users to register their own icons with simple API, support both dynamic loading and static loading.
+Namespace allows users to register their own icons with simple API, support both dynamic loading and static loading.
 
-Say you want to add a `panda` icon in `animal` namespace. For static loading, you should call `addIconLiteral('animal:panda', '<svg>...</svg>')`. For dynamic loading, just put `panda.svg` under `assets/animal`. And render a panda like: `<span antIcon type="animal:panda">`.
+If you want to add a `panda` icon in `animal` namespace:
+
+- for static loading, you can call `addIconLiteral('animal:panda', '<svg>...</svg>')`;
+- for dynamic loading, just put `panda.svg` under `assets/animal`. And render a panda like: `<span antIcon type="animal:panda">`.
 
 Please checkout the demo for more details.
 

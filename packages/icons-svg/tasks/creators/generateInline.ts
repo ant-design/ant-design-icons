@@ -1,9 +1,9 @@
 import { src, dest } from 'gulp';
 import * as File from 'vinyl';
 import { useRender } from '../../plugins';
-import { RenderCustomData } from '../../plugins/render';
-import { IconDefinition } from '../../templates/types';
-import { HelperRenderOptions } from '../../templates/helpers';
+import type { RenderCustomData } from '../../plugins/render';
+import type { IconDefinition } from '../../templates/types';
+import type { HelperRenderOptions } from '../../templates/helpers';
 
 export interface GenerateInlineOptions {
   from: string[];

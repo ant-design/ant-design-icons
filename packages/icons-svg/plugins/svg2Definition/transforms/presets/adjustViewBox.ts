@@ -1,6 +1,6 @@
 import { assignAttrsAtTag } from '..';
-import { TransformFactory } from '../..';
 import { includes } from 'ramda';
+import type { TransformFactory } from '../..';
 
 // version < antd@3.9
 const OLD_ICON_NAMES = [

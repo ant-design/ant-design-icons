@@ -1,5 +1,5 @@
 import { createTransformStream } from '../creator';
-import { ThemeType, AbstractNode } from '../../templates/types';
+import type { ThemeType, AbstractNode } from '../../templates/types';
 import {
   pipe,
   clone,

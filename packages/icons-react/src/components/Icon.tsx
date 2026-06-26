@@ -1,10 +1,10 @@
 // Seems this is used for iconFont
 import * as React from 'react';
 import { clsx } from 'clsx';
-import { useComposeRef } from '@rc-component/util';
 import Context from './Context';
 
-import { svgBaseProps, warning, useInsertStyles } from '../utils';
+import { svgBaseProps, warning, useInsertStyles } from '../renderUtils';
+import { useComposeRef } from '../refUtils';
 
 export interface IconBaseProps extends React.HTMLProps<HTMLSpanElement> {
   spin?: boolean;
@@ -17,8 +17,10 @@ export interface CustomIconComponentProps {
   fill?: string;
   viewBox?: string;
   className?: string;
+  color?: string;
   style?: React.CSSProperties;
 }
+
 export interface IconComponentProps extends IconBaseProps {
   viewBox?: string;
   component?:
@@ -36,6 +38,7 @@ const Icon: React.ForwardRefExoticComponent<
 
     // affect inner <svg>...</svg>
     component: Component,
+    color,
     viewBox,
     spin,
     rotate,
@@ -78,6 +81,7 @@ const Icon: React.ForwardRefExoticComponent<
 
   const innerSvgProps: CustomIconComponentProps = {
     ...svgBaseProps,
+    color,
     className: svgClassString,
     style: svgStyle,
     viewBox,
