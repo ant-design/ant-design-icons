@@ -358,6 +358,12 @@ describe('Icon.createFromIconfontCN()', () => {
     expect(snapshotOf(wrapper)).toMatchSnapshot();
   });
 
+  it('should apply color prop to svg', () => {
+    const { container } = testingLibRender(<IconFont type="icon-twitter" color="blue" />);
+
+    expect(container.querySelector('svg')?.getAttribute('color')).toBe('blue');
+  });
+
   it('should support event listeners', () => {
     const onClickHandler = jest.fn();
     const onKeyUpHandler = jest.fn();
