@@ -483,6 +483,7 @@ mail-filled
 mail-outlined
 mail-twotone
 man-outlined
+mastodon-filled
 medicine-box-filled
 medicine-box-outlined
 medicine-box-twotone
@@ -699,6 +700,7 @@ small-dash-outlined
 smile-filled
 smile-outlined
 smile-twotone
+snapchat-filled
 snippets-filled
 snippets-outlined
 snippets-twotone
@@ -748,6 +750,8 @@ taobao-circle-outlined
 taobao-outlined
 taobao-square-filled
 team-outlined
+telegram-filled
+threads-filled
 thunderbolt-filled
 thunderbolt-outlined
 thunderbolt-twotone
