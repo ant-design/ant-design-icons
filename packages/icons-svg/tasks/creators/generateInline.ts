@@ -1,13 +1,15 @@
 import { src, dest } from 'gulp';
-import * as File from 'vinyl';
+import File from 'vinyl';
 import { useRender } from '../../plugins';
 import type { RenderCustomData } from '../../plugins/render';
 import type { IconDefinition } from '../../templates/types';
 import type { HelperRenderOptions } from '../../templates/helpers';
 
+type RenderedFile = File & { _meta?: RenderCustomData };
+
 export interface GenerateInlineOptions {
   from: string[];
-  toDir: (file: File & { _renderData?: RenderCustomData }) => string;
+  toDir: (file: RenderedFile) => string;
   getIconDefinitionFromSource: (raw: string) => IconDefinition;
   renderOptions?: HelperRenderOptions;
 }
