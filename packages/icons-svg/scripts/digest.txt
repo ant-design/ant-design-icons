@@ -294,6 +294,9 @@ field-time-outlined
 file-add-filled
 file-add-outlined
 file-add-twotone
+file-audio-filled
+file-audio-outlined
+file-audio-twotone
 file-done-outlined
 file-excel-filled
 file-excel-outlined
@@ -327,6 +330,9 @@ file-twotone
 file-unknown-filled
 file-unknown-outlined
 file-unknown-twotone
+file-video-filled
+file-video-outlined
+file-video-twotone
 file-word-filled
 file-word-outlined
 file-word-twotone
