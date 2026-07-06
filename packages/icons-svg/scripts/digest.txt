@@ -507,6 +507,7 @@ merge-outlined
 message-filled
 message-outlined
 message-twotone
+meta-filled
 minus-circle-filled
 minus-circle-outlined
 minus-circle-twotone
@@ -527,6 +528,7 @@ moon-outlined
 more-outlined
 muted-filled
 muted-outlined
+netflix-filled
 node-collapse-outlined
 node-expand-outlined
 node-index-outlined
