@@ -191,6 +191,7 @@ credit-card-twotone
 crown-filled
 crown-outlined
 crown-twotone
+css-filled
 customer-service-filled
 customer-service-outlined
 customer-service-twotone
@@ -395,6 +396,7 @@ google-plus-circle-filled
 google-plus-outlined
 google-plus-square-filled
 google-square-filled
+graph-q-l-filled
 group-outlined
 harmony-o-s-outlined
 hdd-filled
@@ -447,6 +449,7 @@ issues-close-outlined
 italic-outlined
 java-outlined
 java-script-outlined
+json-filled
 key-outlined
 kubernetes-outlined
 laptop-outlined
@@ -460,6 +463,7 @@ left-outlined
 left-square-filled
 left-square-outlined
 left-square-twotone
+less-filled
 like-filled
 like-outlined
 like-twotone
@@ -483,6 +487,7 @@ mail-filled
 mail-outlined
 mail-twotone
 man-outlined
+markdown-filled
 mastodon-filled
 medicine-box-filled
 medicine-box-outlined
@@ -652,6 +657,7 @@ safety-certificate-filled
 safety-certificate-outlined
 safety-certificate-twotone
 safety-outlined
+sass-filled
 save-filled
 save-outlined
 save-twotone
@@ -837,6 +843,7 @@ x-filled
 x-outlined
 yahoo-filled
 yahoo-outlined
+yaml-filled
 youtube-filled
 youtube-outlined
 yuque-filled
