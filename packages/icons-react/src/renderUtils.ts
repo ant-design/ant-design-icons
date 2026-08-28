@@ -14,6 +14,7 @@ export function warning(valid: boolean, message: string) {
 
 export function isIconDefinition(target: any): target is IconDefinition {
   return (
+    target !== null &&
     typeof target === 'object' &&
     typeof target.name === 'string' &&
     typeof target.theme === 'string' &&

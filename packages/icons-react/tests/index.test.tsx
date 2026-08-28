@@ -16,6 +16,8 @@ import Icon, {
   SyncOutlined,
 } from '../src';
 import { getSecondaryColor } from '../src/utils';
+import AntdIcon from '../src/components/AntdIcon';
+import AntdIconLight from '../src/components/AntdIconLight';
 
 const simulate = (node: Element, event: string) => {
   switch (event) {
@@ -86,6 +88,19 @@ function mountTest(Component) {
 describe('Icon', () => {
   mountTest(HomeOutlined);
   mountTest(CheckCircleTwoTone);
+
+  it.each([
+    ['undefined single-tone', AntdIconLight, undefined],
+    ['null single-tone', AntdIconLight, null],
+    ['symbol single-tone', AntdIconLight, Symbol('icon')],
+    ['undefined two-tone', AntdIcon, undefined],
+    ['null two-tone', AntdIcon, null],
+    ['symbol two-tone', AntdIcon, Symbol('icon')],
+  ])('should render null for an invalid %s icon definition', (_, IconComponent, icon) => {
+    const { container } = testingLibRender(<IconComponent icon={icon as any} />);
+
+    expect(container.innerHTML).toBe('');
+  });
 
   it('should render to a <span class="xxx"><svg>...</svg></span>', () => {
     const wrapper = render(<HomeOutlined className="my-icon-classname" />);
