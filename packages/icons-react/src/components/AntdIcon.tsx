@@ -53,7 +53,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
 
   const { prefixCls = 'anticon', rootClassName } = React.useContext(Context);
 
-  warning(isIconDefinition(icon), `icon should be icon definiton, but got ${icon}`);
+  warning(isIconDefinition(icon), `icon should be icon definiton, but got ${typeof icon}`);
 
   if (!isIconDefinition(icon)) {
     return null;

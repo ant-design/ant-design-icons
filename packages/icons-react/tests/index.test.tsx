@@ -90,10 +90,14 @@ describe('Icon', () => {
   mountTest(CheckCircleTwoTone);
 
   it.each([
-    ['single-tone', AntdIconLight],
-    ['two-tone', AntdIcon],
-  ])('should render null for an invalid %s icon definition', (_, IconComponent) => {
-    const { container } = testingLibRender(<IconComponent icon={undefined as any} />);
+    ['undefined single-tone', AntdIconLight, undefined],
+    ['null single-tone', AntdIconLight, null],
+    ['symbol single-tone', AntdIconLight, Symbol('icon')],
+    ['undefined two-tone', AntdIcon, undefined],
+    ['null two-tone', AntdIcon, null],
+    ['symbol two-tone', AntdIcon, Symbol('icon')],
+  ])('should render null for an invalid %s icon definition', (_, IconComponent, icon) => {
+    const { container } = testingLibRender(<IconComponent icon={icon as any} />);
 
     expect(container.innerHTML).toBe('');
   });
