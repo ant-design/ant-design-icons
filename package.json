@@ -18,6 +18,9 @@
     "lint": "ut lint --workspaces"
   },
   "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/react-test-renderer": "^19.1.0",
     "@eslint/js": "^9.17.0",
     "typescript-eslint": "^8.18.2",
     "eslint-plugin-jest": "^28.10.0",
@@ -28,6 +31,9 @@
   "license": "MIT",
   "repository": "git@github.com:ant-design/ant-design-icons.git",
   "overrides": {
-    "cheerio": "1.0.0-rc.12"
+    "cheerio": "1.0.0-rc.12",
+    "@types/react": "$@types/react",
+    "@types/react-dom": "$@types/react-dom",
+    "@types/react-test-renderer": "$@types/react-test-renderer"
   }
 }
