@@ -3,12 +3,6 @@ import { defineConfig } from 'father';
 const config = defineConfig({
   // Locked version only supports 1.0.0
   plugins: ['@rc-component/father-plugin'],
-  esm: {
-    alias: {
-      // Keep the ESM build from importing CommonJS icon definitions.
-      '@ant-design/icons-svg/lib': '@ant-design/icons-svg/es',
-    },
-  },
 });
 
 if (process.env.NODE_ENV !== 'ci') {
