@@ -99,7 +99,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "antd": "^4.24.16",
-    "dumi": "^1.1.54",
+    "dumi": "^2.4.38",
     "eslint": "^9.39.4",
     "eslint-plugin-jest": "^28.14.0",
     "eslint-plugin-react": "^7.37.5",
