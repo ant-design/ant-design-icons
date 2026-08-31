@@ -10,6 +10,7 @@ import ReactIcon from './IconBaseTwoTone';
 import { getTwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
 import type { TwoToneColor } from './twoTonePrimaryColor';
 import { DEFAULT_TWOTONE_COLOR } from '../colorUtils';
+import { isIconDefinition, warning } from '../renderUtils';
 import { normalizeTwoToneColors } from '../utils';
 
 export interface AntdIconProps extends IconBaseProps {
@@ -51,6 +52,12 @@ const Icon = React.forwardRef<HTMLSpanElement, IconComponentProps>((props, ref) 
   } = props;
 
   const { prefixCls = 'anticon', rootClassName } = React.useContext(Context);
+
+  warning(isIconDefinition(icon), `icon should be icon definiton, but got ${typeof icon}`);
+
+  if (!isIconDefinition(icon)) {
+    return null;
+  }
 
   const classString = clsx(
     rootClassName,
