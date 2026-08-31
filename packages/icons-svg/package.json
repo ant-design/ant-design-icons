@@ -1,6 +1,6 @@
 {
   "name": "@ant-design/icons-svg",
-  "version": "4.5.0",
+  "version": "4.6.0",
   "sideEffects": false,
   "description": "Abstract nodes for ant design icons.",
   "contributors": [
@@ -30,7 +30,7 @@
     "prepare": "npm run generate && npm run build",
     "test": "cross-env NODE_ENV=test vitest run",
     "test:unit": "vitest run",
-    "prepublishOnly": "ut test && ut g && ut build && ut type-check && ut digest",
+    "prepublishOnly": "npm run test && npm run generate && npm run build:es && npm run build:lib && npm run type-check && npm run digest",
     "digest": "node scripts/digest.js"
   },
   "bugs": {
