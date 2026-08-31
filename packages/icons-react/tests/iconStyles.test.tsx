@@ -41,6 +41,25 @@ describe('Render with styles', () => {
     expect(shadow.querySelector('style')).toBeTruthy();
   });
 
+  it('isolates styles for multiple custom prefixes', () => {
+    render(
+      <>
+        <IconProvider value={{ prefixCls: 'plugin-a-icon' }}>
+          <Icon icon={TwitterOutlined} />
+        </IconProvider>
+        <IconProvider value={{ prefixCls: 'plugin-b-icon' }}>
+          <Icon icon={TwitterOutlined} />
+        </IconProvider>
+      </>,
+    );
+
+    const styles = Array.from(document.head.querySelectorAll('style'));
+
+    expect(styles).toHaveLength(2);
+    expect(styles.some((style) => style.textContent?.includes('.plugin-a-icon {'))).toBe(true);
+    expect(styles.some((style) => style.textContent?.includes('.plugin-b-icon {'))).toBe(true);
+  });
+
   it('updateCSS should do nothing without DOM', () => {
     vi.stubGlobal('window', undefined);
 
