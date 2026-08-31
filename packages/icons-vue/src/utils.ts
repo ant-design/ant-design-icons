@@ -165,7 +165,7 @@ function inShadow(ele: Node) {
   if (!canUseDom()) {
     return false;
   }
-  return getRoot(ele) instanceof ShadowRoot;
+  return typeof ShadowRoot !== 'undefined' && getRoot(ele) instanceof ShadowRoot;
 }
 
 /**

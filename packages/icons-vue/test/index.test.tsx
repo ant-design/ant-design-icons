@@ -1,4 +1,5 @@
 import { mount } from '@vue/test-utils';
+import { nextTick } from 'vue';
 import Icon, {
   getTwoToneColor,
   setTwoToneColor,
@@ -12,6 +13,17 @@ import Icon, {
   ClockCircleOutlined,
 } from '../src';
 describe('Icon', () => {
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
+  it('should render when ShadowRoot is unavailable', async () => {
+    vi.stubGlobal('ShadowRoot', undefined);
+
+    expect(() => mount(HomeOutlined)).not.toThrow();
+    await nextTick();
+  });
+
   it('should render to a <span class="xxx"><svg>...</svg></span>', () => {
     const wrapper = mount(HomeOutlined, { props: { class: 'my-icon-class' } });
     expect(wrapper.html()).toMatchSnapshot();
