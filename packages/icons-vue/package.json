@@ -54,7 +54,7 @@
     "eslint": "^9.17.0",
     "eslint-plugin-jest": "^28.10.0",
     "eslint-plugin-vue": "^9.31.0",
-    "vue-eslint-parser": "^9.4.3",
+    "vue-eslint-parser": "^10.4.1",
     "prettier": "^3.4.2",
     "gulp-less": "^5.0.0",
     "@vitejs/plugin-vue": "^6.0.1",
