@@ -92,6 +92,8 @@ build-twotone
 bulb-filled
 bulb-outlined
 bulb-twotone
+c-filled
+c-plus-plus-filled
 calculator-filled
 calculator-outlined
 calculator-twotone
@@ -385,6 +387,7 @@ github-outlined
 gitlab-filled
 gitlab-outlined
 global-outlined
+go-filled
 gold-filled
 gold-outlined
 gold-twotone
@@ -448,6 +451,7 @@ italic-outlined
 java-outlined
 java-script-outlined
 key-outlined
+kotlin-filled
 kubernetes-outlined
 laptop-outlined
 layout-filled
@@ -550,6 +554,7 @@ perplexity-filled
 phone-filled
 phone-outlined
 phone-twotone
+php-filled
 pic-center-outlined
 pic-left-outlined
 pic-right-outlined
@@ -648,6 +653,7 @@ rollback-outlined
 rotate-left-outlined
 rotate-right-outlined
 ruby-outlined
+rust-filled
 safety-certificate-filled
 safety-certificate-outlined
 safety-certificate-twotone
@@ -733,6 +739,7 @@ sun-outlined
 swap-left-outlined
 swap-outlined
 swap-right-outlined
+swift-filled
 switcher-filled
 switcher-outlined
 switcher-twotone
@@ -779,6 +786,7 @@ twitch-outlined
 twitter-circle-filled
 twitter-outlined
 twitter-square-filled
+type-script-filled
 underline-outlined
 undo-outlined
 ungroup-outlined
