@@ -2,7 +2,7 @@ const APPEND_ORDER = 'data-rc-order';
 const APPEND_PRIORITY = 'data-rc-priority';
 const MARK_KEY = 'rc-util-key';
 
-const containerCache = new Map<Element | ShadowRoot, Element | ShadowRoot>();
+const containerCache = new WeakMap<Element | ShadowRoot, Element | ShadowRoot>();
 
 function canUseDom() {
   return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
