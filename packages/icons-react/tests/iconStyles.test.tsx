@@ -41,6 +41,21 @@ describe('Render with styles', () => {
     expect(shadow.querySelector('style')).toBeTruthy();
   });
 
+  it('updates styles in shadow root without creating duplicate style tags', () => {
+    const container = document.createElement('div');
+    document.body.appendChild(container);
+
+    const shadow = container.attachShadow({ mode: 'open' });
+    const reactRoot = document.createElement('div');
+    shadow.appendChild(reactRoot);
+
+    const { rerender } = render(<SmileOutlined />, { container: reactRoot });
+    expect(shadow.querySelectorAll('style')).toHaveLength(1);
+
+    rerender(<Icon icon={TwitterOutlined} />);
+    expect(shadow.querySelectorAll('style')).toHaveLength(1);
+  });
+
   it('updateCSS should do nothing without DOM', () => {
     vi.stubGlobal('window', undefined);
 
