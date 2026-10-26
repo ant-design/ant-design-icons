@@ -23,4 +23,18 @@ describe('build output', () => {
     expect(esIcon).toContain('@ant-design/icons-svg/es/asn/SmileOutlined');
     expect(libIcon).toContain('@ant-design/icons-svg/lib/asn/SmileOutlined');
   });
+
+  it('marks package entry points as client modules', () => {
+    const esEntry = fs.readFileSync(
+      path.resolve(process.cwd(), 'es/index.js'),
+      'utf8',
+    );
+    const libEntry = fs.readFileSync(
+      path.resolve(process.cwd(), 'lib/index.js'),
+      'utf8',
+    );
+
+    expect(esEntry).toMatch(/^['"]use client['"];?$/m);
+    expect(libEntry).toMatch(/^['"]use client['"];?$/m);
+  });
 });

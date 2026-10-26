@@ -1,3 +1,5 @@
+"use client";
+
 import Context from './components/Context';
 
 export * from './icons';
